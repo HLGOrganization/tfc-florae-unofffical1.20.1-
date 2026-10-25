@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/wood/connection",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/joshua",
+    "particle": "tfcflorae:block/wood/sheet/joshua"
+  }
+}

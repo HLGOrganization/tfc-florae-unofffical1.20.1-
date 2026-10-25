@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/chiseled/red_granite",
+    "top": "tfcflorae:block/rock/chiseled/red_granite",
+    "side": "tfcflorae:block/rock/chiseled/red_granite"
+  }
+}

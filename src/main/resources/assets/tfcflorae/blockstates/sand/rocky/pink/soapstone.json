@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/pink/soapstone"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/pink/soapstone"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/pink/soapstone"
+      }
+    ]
+  }
+}

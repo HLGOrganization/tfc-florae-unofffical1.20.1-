@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/orange/conglomerate"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/orange/conglomerate"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/orange/conglomerate"
+      }
+    ]
+  }
+}

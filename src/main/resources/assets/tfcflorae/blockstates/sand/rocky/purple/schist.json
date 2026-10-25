@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/purple/schist"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/purple/schist"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/purple/schist"
+      }
+    ]
+  }
+}

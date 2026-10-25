@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/maclura",
+    "tfcflorae:wood/stripped_log/maclura",
+    "tfcflorae:wood/stripped_wood/maclura",
+    "tfcflorae:wood/wood/maclura"
+  ]
+}

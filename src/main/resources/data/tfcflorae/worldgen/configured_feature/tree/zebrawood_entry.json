@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 23,
+      "max_temperature": 50,
+      "min_rainfall": 280,
+      "max_rainfall": 500
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/zebrawood"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/zebrawood"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/zebrawood",
+    "dead_tree": "tfcflorae:tree/zebrawood_dead",
+    "old_growth_tree": "tfcflorae:tree/zebrawood_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/zebrawood"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/zebrawood",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/zebrawood"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 16,
+      "max_temperature": 35,
+      "min_rainfall": 210,
+      "max_rainfall": 550
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/rubber_fig"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/rubber_fig"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/rubber_fig",
+    "dead_tree": "tfcflorae:tree/rubber_fig_dead",
+    "old_growth_tree": "tfcflorae:tree/rubber_fig_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/rubber_fig"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/rubber_fig",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/rubber_fig"
+    }
+  }
+}

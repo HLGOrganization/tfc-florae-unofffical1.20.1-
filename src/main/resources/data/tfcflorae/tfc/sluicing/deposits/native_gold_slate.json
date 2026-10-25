@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfc:deposit/native_gold/slate"
+  },
+  "loot_table": "tfcflorae:panning/deposits/native_gold_slate"
+}

@@ -1,0 +1,34 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:cocobolo/1",
+      "tfcflorae:cocobolo/2",
+      "tfcflorae:cocobolo/3",
+      "tfcflorae:cocobolo/4",
+      "tfcflorae:cocobolo/5",
+      "tfcflorae:cocobolo/6",
+      "tfcflorae:cocobolo/7",
+      "tfcflorae:cocobolo/8",
+      "tfcflorae:cocobolo/9",
+      "tfcflorae:cocobolo/10",
+      "tfcflorae:cocobolo/11",
+      "tfcflorae:cocobolo/12",
+      "tfcflorae:cocobolo/13",
+      "tfcflorae:cocobolo/14",
+      "tfcflorae:cocobolo/15",
+      "tfcflorae:cocobolo/16",
+      "tfcflorae:cocobolo/17",
+      "tfcflorae:cocobolo/18",
+      "tfcflorae:cocobolo/19",
+      "tfcflorae:cocobolo/20",
+      "tfcflorae:cocobolo/21"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "ground_type": "shallow_water"
+    }
+  }
+}

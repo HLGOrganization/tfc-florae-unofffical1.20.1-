@@ -1,0 +1,18 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:kaolinite_clay_knapping",
+  "outside_slot_required": true,
+  "pattern": [
+    "  XXX",
+    "   XX",
+    "X   X",
+    "X    ",
+    "XXX  "
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/kaolinite/unfired/mold/saw_blade"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:kaolinite_clay_knapping"
+  }
+}

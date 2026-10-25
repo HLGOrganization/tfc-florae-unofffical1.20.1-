@@ -1,0 +1,34 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:african_padauk/1",
+      "tfcflorae:african_padauk/2",
+      "tfcflorae:african_padauk/3",
+      "tfcflorae:african_padauk/4",
+      "tfcflorae:african_padauk/5",
+      "tfcflorae:african_padauk/6",
+      "tfcflorae:african_padauk/7",
+      "tfcflorae:african_padauk/8",
+      "tfcflorae:african_padauk/9",
+      "tfcflorae:african_padauk/10",
+      "tfcflorae:african_padauk/11",
+      "tfcflorae:african_padauk/12",
+      "tfcflorae:african_padauk/13",
+      "tfcflorae:african_padauk/14",
+      "tfcflorae:african_padauk/15",
+      "tfcflorae:african_padauk/16",
+      "tfcflorae:african_padauk/17",
+      "tfcflorae:african_padauk/18",
+      "tfcflorae:african_padauk/19",
+      "tfcflorae:african_padauk/20",
+      "tfcflorae:african_padauk/21"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "ground_type": "shallow_water"
+    }
+  }
+}

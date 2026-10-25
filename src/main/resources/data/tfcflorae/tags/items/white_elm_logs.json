@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/white_elm",
+    "tfcflorae:wood/stripped_log/white_elm",
+    "tfcflorae:wood/stripped_wood/white_elm",
+    "tfcflorae:wood/wood/white_elm"
+  ]
+}

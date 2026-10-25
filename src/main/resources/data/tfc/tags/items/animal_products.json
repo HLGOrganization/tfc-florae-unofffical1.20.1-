@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:animal/product/silk_moth_egg",
+    "tfcflorae:animal/product/silk_moth_hatchery",
+    "tfcflorae:animal/product/silk_worm",
+    "tfcflorae:animal/product/silk_worm_cocoon",
+    "tfcflorae:animal/product/silk_worm_cocoon_boiled"
+  ]
+}

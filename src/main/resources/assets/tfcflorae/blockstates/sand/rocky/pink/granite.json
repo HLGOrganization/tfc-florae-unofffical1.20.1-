@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/pink/granite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/pink/granite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/pink/granite"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/black/dacite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/black/dacite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/black/dacite"
+      }
+    ]
+  }
+}

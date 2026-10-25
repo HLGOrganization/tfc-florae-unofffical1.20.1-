@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/mulberry",
+    "tfcflorae:wood/stripped_log/mulberry",
+    "tfcflorae:wood/stripped_wood/mulberry",
+    "tfcflorae:wood/wood/mulberry"
+  ]
+}

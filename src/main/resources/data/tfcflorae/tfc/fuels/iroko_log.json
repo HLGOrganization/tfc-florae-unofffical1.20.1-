@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/iroko"
+    },
+    {
+      "item": "tfcflorae:wood/wood/iroko"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/iroko"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/iroko"
+    }
+  ],
+  "duration": 2000,
+  "temperature": 745,
+  "purity": 0.95
+}

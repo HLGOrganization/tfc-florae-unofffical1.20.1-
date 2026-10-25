@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 21,
+      "max_temperature": 50,
+      "min_rainfall": 260,
+      "max_rainfall": 500
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/yellow_meranti"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/yellow_meranti"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/yellow_meranti",
+    "dead_tree": "tfcflorae:tree/yellow_meranti_dead",
+    "old_growth_tree": "tfcflorae:tree/yellow_meranti_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/yellow_meranti"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/yellow_meranti",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/yellow_meranti"
+    }
+  }
+}

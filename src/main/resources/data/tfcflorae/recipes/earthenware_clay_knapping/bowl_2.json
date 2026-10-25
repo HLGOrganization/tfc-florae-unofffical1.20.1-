@@ -1,0 +1,16 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:earthenware_clay_knapping",
+  "outside_slot_required": false,
+  "pattern": [
+    "X   X",
+    " XXX "
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/earthenware/unfired/bowl",
+    "count": 2
+  },
+  "ingredient": {
+    "tag": "tfcflorae:earthenware_clay_knapping"
+  }
+}

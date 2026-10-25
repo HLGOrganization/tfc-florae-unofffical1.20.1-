@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": -8,
+      "max_temperature": 14,
+      "min_rainfall": 180,
+      "max_rainfall": 400
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/hawthorn"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/hawthorn"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/hawthorn",
+    "dead_tree": "tfcflorae:tree/hawthorn_dead",
+    "old_growth_tree": "tfcflorae:tree/hawthorn_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/hawthorn"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/hawthorn",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/hawthorn"
+    }
+  }
+}

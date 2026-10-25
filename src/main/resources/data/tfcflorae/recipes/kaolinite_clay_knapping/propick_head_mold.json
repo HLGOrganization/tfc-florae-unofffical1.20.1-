@@ -1,0 +1,18 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:kaolinite_clay_knapping",
+  "outside_slot_required": true,
+  "pattern": [
+    "XXXXX",
+    "    X",
+    " XXX ",
+    " XXXX",
+    "XXXXX"
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/kaolinite/unfired/mold/propick_head"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:kaolinite_clay_knapping"
+  }
+}

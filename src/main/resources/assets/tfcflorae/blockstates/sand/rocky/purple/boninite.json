@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/purple/boninite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/purple/boninite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/purple/boninite"
+      }
+    ]
+  }
+}

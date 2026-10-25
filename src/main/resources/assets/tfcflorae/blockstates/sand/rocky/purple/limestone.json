@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/purple/limestone"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/purple/limestone"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/purple/limestone"
+      }
+    ]
+  }
+}

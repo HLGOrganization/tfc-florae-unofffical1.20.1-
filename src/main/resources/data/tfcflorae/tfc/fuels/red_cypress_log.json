@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/red_cypress"
+    },
+    {
+      "item": "tfcflorae:wood/wood/red_cypress"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/red_cypress"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/red_cypress"
+    }
+  ],
+  "duration": 1500,
+  "temperature": 640,
+  "purity": 0.75
+}

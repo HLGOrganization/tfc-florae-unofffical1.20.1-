@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/blue/rhyolite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/blue/rhyolite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/blue/rhyolite"
+      }
+    ]
+  }
+}

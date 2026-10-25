@@ -1,0 +1,23 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:black_willow/1",
+      "tfcflorae:black_willow/2",
+      "tfcflorae:black_willow/3",
+      "tfcflorae:black_willow/4",
+      "tfcflorae:black_willow/5",
+      "tfcflorae:black_willow/6",
+      "tfcflorae:black_willow/7",
+      "tfcflorae:black_willow/8",
+      "tfcflorae:black_willow/9",
+      "tfcflorae:black_willow/10"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 4,
+      "ground_type": "shallow_water"
+    }
+  }
+}

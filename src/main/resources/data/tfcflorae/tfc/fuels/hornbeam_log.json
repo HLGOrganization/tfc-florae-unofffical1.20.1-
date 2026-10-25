@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/hornbeam"
+    },
+    {
+      "item": "tfcflorae:wood/wood/hornbeam"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/hornbeam"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/hornbeam"
+    }
+  ],
+  "duration": 2000,
+  "temperature": 745,
+  "purity": 0.95
+}

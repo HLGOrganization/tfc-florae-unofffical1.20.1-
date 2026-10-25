@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/angelim"
+    },
+    {
+      "item": "tfcflorae:wood/wood/angelim"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/angelim"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/angelim"
+    }
+  ],
+  "duration": 2000,
+  "temperature": 745,
+  "purity": 0.95
+}

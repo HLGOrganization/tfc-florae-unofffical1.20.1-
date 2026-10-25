@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfc:deposit/native_gold/quartzite",
+  "model_stages": [
+    "tfc:item/pan/native_gold/quartzite_full",
+    "tfc:item/pan/native_gold/quartzite_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_gold_quartzite"
+}

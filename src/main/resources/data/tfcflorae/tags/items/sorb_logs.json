@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/sorb",
+    "tfcflorae:wood/stripped_log/sorb",
+    "tfcflorae:wood/stripped_wood/sorb",
+    "tfcflorae:wood/wood/sorb"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/orange/phyllite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/orange/phyllite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/orange/phyllite"
+      }
+    ]
+  }
+}

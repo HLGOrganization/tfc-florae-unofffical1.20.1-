@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/ghaf",
+    "tfcflorae:wood/stripped_log/ghaf",
+    "tfcflorae:wood/stripped_wood/ghaf",
+    "tfcflorae:wood/wood/ghaf"
+  ]
+}

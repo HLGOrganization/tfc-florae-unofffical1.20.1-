@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfc:deposit/cassiterite/gabbro",
+  "model_stages": [
+    "tfc:item/pan/cassiterite/gabbro_full",
+    "tfc:item/pan/cassiterite/gabbro_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_gabbro"
+}

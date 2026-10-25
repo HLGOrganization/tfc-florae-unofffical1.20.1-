@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/cyan/laterite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/cyan/laterite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/cyan/laterite"
+      }
+    ]
+  }
+}

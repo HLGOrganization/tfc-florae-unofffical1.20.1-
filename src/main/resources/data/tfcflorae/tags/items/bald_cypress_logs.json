@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/bald_cypress",
+    "tfcflorae:wood/stripped_log/bald_cypress",
+    "tfcflorae:wood/stripped_wood/bald_cypress",
+    "tfcflorae:wood/wood/bald_cypress"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/carbonatite",
+  "model_stages": [
+    "tfc:item/pan/empty",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper_carbonatite"
+}

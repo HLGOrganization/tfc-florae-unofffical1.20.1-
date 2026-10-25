@@ -1,0 +1,621 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 60,
+    "density": 0.4,
+    "min_y": -10,
+    "max_y": 60,
+    "size": 20,
+    "random_name": "normal_garnierite",
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/andesite"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/andesite"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/arkose"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/arkose"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/arkose"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/basalt"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/basalt"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/boninite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/boninite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/boninite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/boninite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/carbonatite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/carbonatite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/carbonatite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/carbonatite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/cataclasite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/cataclasite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/cataclasite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/cataclasite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/chalk"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/chalk"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/chert"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/chert"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/claystone"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/claystone"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/conglomerate"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/conglomerate"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/dacite"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/dacite"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/diorite"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/diorite"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/dolomite"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/dolomite"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/gabbro"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/gabbro"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/gneiss"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/gneiss"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/granite"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/granite"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/jaspillite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/jaspillite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/jaspillite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/jaspillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/laterite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/laterite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/laterite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/laterite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/limestone"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/limestone"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/marble"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/marble"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mudstone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/mudstone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/mudstone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/mudstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/phyllite"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/phyllite"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/porphyry"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/porphyry"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/porphyry"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/porphyry"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/quartzite"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/quartzite"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/red_granite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/red_granite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/red_granite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/red_granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/rhyolite"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/rhyolite"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/sandstone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/sandstone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/sandstone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/schist"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/schist"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/shale"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/shale"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfc:ore/poor_garnierite/slate"
+          },
+          {
+            "weight": 40,
+            "block": "tfc:ore/normal_garnierite/slate"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/rich_garnierite/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/soapstone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/soapstone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/soapstone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/wackestone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_garnierite/wackestone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_garnierite/wackestone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_garnierite/wackestone"
+          }
+        ]
+      }
+    ]
+  }
+}

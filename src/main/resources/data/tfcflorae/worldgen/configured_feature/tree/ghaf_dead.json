@@ -1,0 +1,18 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:ghaf_dead/1",
+      "tfcflorae:ghaf_dead/2",
+      "tfcflorae:ghaf_dead/3",
+      "tfcflorae:ghaf_dead/4",
+      "tfcflorae:ghaf_dead/5",
+      "tfcflorae:ghaf_dead/6"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:food/sky_fruit"
+  },
+  "hunger": 4,
+  "saturation": 0.2,
+  "water": 1,
+  "decay_modifier": 1.6,
+  "fruit": 1
+}

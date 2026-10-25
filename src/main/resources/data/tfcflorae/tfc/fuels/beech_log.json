@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/beech"
+    },
+    {
+      "item": "tfcflorae:wood/wood/beech"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/beech"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/beech"
+    }
+  ],
+  "duration": 2000,
+  "temperature": 745,
+  "purity": 0.95
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/purpleheart",
+    "tfcflorae:wood/stripped_log/purpleheart",
+    "tfcflorae:wood/stripped_wood/purpleheart",
+    "tfcflorae:wood/wood/purpleheart"
+  ]
+}

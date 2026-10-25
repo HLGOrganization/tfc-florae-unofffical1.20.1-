@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/gray/shale"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/gray/shale"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/gray/shale"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 13,
+      "max_temperature": 32,
+      "min_rainfall": 180,
+      "max_rainfall": 350
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/mahoe"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/mahoe"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/mahoe",
+    "dead_tree": "tfcflorae:tree/mahoe_dead",
+    "old_growth_tree": "tfcflorae:tree/mahoe_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/mahoe"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/mahoe",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/mahoe"
+    }
+  }
+}

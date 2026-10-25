@@ -1,0 +1,10 @@
+{
+  "parent": "tfc:block/ore_column",
+  "textures": {
+    "side": "tfcflorae:block/wood/stripped_log/nordmann_fir",
+    "end": "tfcflorae:block/wood/planks/nordmann_fir",
+    "overlay": "tfc:block/axle_casing_powered",
+    "overlay_end": "tfc:block/axle_casing_front",
+    "particle": "tfcflorae:block/wood/stripped_log/nordmann_fir"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "input": {
+    "ingredient": {
+      "tag": "tfcflorae:stoneware_clay_knapping"
+    },
+    "count": 5
+  },
+  "amount_to_consume": 1,
+  "click_sound": "tfc:item.knapping.clay",
+  "consume_after_complete": true,
+  "use_disabled_texture": true,
+  "spawns_particles": false,
+  "jei_icon_item": {
+    "item": "tfcflorae:ceramic/stoneware/clay"
+  }
+}

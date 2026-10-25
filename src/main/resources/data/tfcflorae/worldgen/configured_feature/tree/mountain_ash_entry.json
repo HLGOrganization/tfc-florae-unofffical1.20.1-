@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 9,
+      "max_temperature": 33,
+      "min_rainfall": 80,
+      "max_rainfall": 270
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/mountain_ash"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/mountain_ash"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/mountain_ash",
+    "dead_tree": "tfcflorae:tree/mountain_ash_dead",
+    "old_growth_tree": "tfcflorae:tree/mountain_ash_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/mountain_ash"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/mountain_ash",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/mountain_ash"
+    }
+  }
+}

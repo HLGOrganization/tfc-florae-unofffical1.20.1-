@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/magenta/quartzite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/magenta/quartzite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/magenta/quartzite"
+      }
+    ]
+  }
+}

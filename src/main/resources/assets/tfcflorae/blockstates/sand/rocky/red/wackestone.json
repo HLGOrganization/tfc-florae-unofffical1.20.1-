@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/red/wackestone"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/red/wackestone"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/red/wackestone"
+      }
+    ]
+  }
+}

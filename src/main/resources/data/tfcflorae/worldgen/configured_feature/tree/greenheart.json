@@ -1,0 +1,34 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:greenheart/1",
+      "tfcflorae:greenheart/2",
+      "tfcflorae:greenheart/3",
+      "tfcflorae:greenheart/4",
+      "tfcflorae:greenheart/5",
+      "tfcflorae:greenheart/6",
+      "tfcflorae:greenheart/7",
+      "tfcflorae:greenheart/8",
+      "tfcflorae:greenheart/9",
+      "tfcflorae:greenheart/10",
+      "tfcflorae:greenheart/11",
+      "tfcflorae:greenheart/12",
+      "tfcflorae:greenheart/13",
+      "tfcflorae:greenheart/14",
+      "tfcflorae:greenheart/15",
+      "tfcflorae:greenheart/16",
+      "tfcflorae:greenheart/17",
+      "tfcflorae:greenheart/18",
+      "tfcflorae:greenheart/19",
+      "tfcflorae:greenheart/20",
+      "tfcflorae:greenheart/21"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "ground_type": "shallow_water"
+    }
+  }
+}

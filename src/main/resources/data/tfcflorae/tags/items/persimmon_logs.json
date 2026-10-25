@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/persimmon",
+    "tfcflorae:wood/stripped_log/persimmon",
+    "tfcflorae:wood/stripped_wood/persimmon",
+    "tfcflorae:wood/wood/persimmon"
+  ]
+}

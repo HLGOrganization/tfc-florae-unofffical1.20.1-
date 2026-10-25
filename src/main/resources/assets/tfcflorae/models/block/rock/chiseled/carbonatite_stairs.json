@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/chiseled/carbonatite",
+    "top": "tfcflorae:block/rock/chiseled/carbonatite",
+    "side": "tfcflorae:block/rock/chiseled/carbonatite"
+  }
+}

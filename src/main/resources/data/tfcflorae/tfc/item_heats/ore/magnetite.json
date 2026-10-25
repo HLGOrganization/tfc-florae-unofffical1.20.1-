@@ -1,0 +1,307 @@
+{
+  "ingredient": [
+    {
+      "item": "tfc:ore/normal_magnetite"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/arkose"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/chalk"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/chert"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/claystone"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/dacite"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/diorite"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/dolomite"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/gabbro"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/gneiss"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/laterite"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/limestone"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/mudstone"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/porphyry"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/red_granite"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/sandstone"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/schist"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/shale"
+    },
+    {
+      "item": "tfc:ore/normal_magnetite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_magnetite/wackestone"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/arkose"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/chalk"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/chert"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/claystone"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/dacite"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/diorite"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/dolomite"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/gabbro"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/gneiss"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/laterite"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/limestone"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/mudstone"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/porphyry"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/red_granite"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/sandstone"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/schist"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/shale"
+    },
+    {
+      "item": "tfc:ore/poor_magnetite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_magnetite/wackestone"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/arkose"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/chalk"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/chert"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/claystone"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/dacite"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/diorite"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/dolomite"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/gabbro"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/gneiss"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/laterite"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/limestone"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/mudstone"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/porphyry"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/red_granite"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/sandstone"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/schist"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/shale"
+    },
+    {
+      "item": "tfc:ore/rich_magnetite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_magnetite/wackestone"
+    },
+    {
+      "item": "tfc:ore/small_magnetite"
+    }
+  ],
+  "heat_capacity": 1.143,
+  "forging_temperature": 921,
+  "welding_temperature": 1228
+}

@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/rowan"
+    },
+    {
+      "item": "tfcflorae:wood/wood/rowan"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/rowan"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/rowan"
+    }
+  ],
+  "duration": 1500,
+  "temperature": 660,
+  "purity": 0.95
+}

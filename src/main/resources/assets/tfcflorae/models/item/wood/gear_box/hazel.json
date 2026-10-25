@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/wood/planks/hazel",
+    "overlay": "tfc:block/axle_casing_front"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/buxus",
+    "tfcflorae:wood/stripped_log/buxus",
+    "tfcflorae:wood/stripped_wood/buxus",
+    "tfcflorae:wood/wood/buxus"
+  ]
+}

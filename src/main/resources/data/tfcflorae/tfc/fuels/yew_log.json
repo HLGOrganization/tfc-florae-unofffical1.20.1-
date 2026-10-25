@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/yew"
+    },
+    {
+      "item": "tfcflorae:wood/wood/yew"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/yew"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/yew"
+    }
+  ],
+  "duration": 1500,
+  "temperature": 640,
+  "purity": 0.75
+}

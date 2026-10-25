@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": -10,
+      "max_temperature": 12,
+      "min_rainfall": 140,
+      "max_rainfall": 430
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/hornbeam"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/hornbeam"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/hornbeam",
+    "dead_tree": "tfcflorae:tree/hornbeam_dead",
+    "old_growth_tree": "tfcflorae:tree/hornbeam_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/hornbeam"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/hornbeam",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/hornbeam"
+    }
+  }
+}

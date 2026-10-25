@@ -1,0 +1,8 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/mudstone",
+  "model_stages": [
+    "tfc:item/pan/empty",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_mudstone"
+}

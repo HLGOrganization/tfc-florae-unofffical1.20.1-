@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfc:deposit/native_silver/phyllite",
+  "model_stages": [
+    "tfc:item/pan/native_silver/phyllite_full",
+    "tfc:item/pan/native_silver/phyllite_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver_phyllite"
+}

@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 21,
+      "max_temperature": 50,
+      "min_rainfall": 300,
+      "max_rainfall": 500
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/iroko"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/iroko"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/iroko",
+    "dead_tree": "tfcflorae:tree/iroko_dead",
+    "old_growth_tree": "tfcflorae:tree/iroko_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/iroko"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/iroko",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/iroko"
+    }
+  }
+}

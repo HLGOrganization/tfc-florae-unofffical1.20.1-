@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/juniper"
+    },
+    {
+      "item": "tfcflorae:wood/wood/juniper"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/juniper"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/juniper"
+    }
+  ],
+  "duration": 1500,
+  "temperature": 640,
+  "purity": 0.75
+}

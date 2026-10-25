@@ -1,0 +1,18 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:kaolinite_clay_knapping",
+  "pattern": [
+    "XXXX",
+    "X  X",
+    "X  X",
+    "X  X",
+    "XXXX"
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/kaolinite/unfired/mold/ingot",
+    "count": 2
+  },
+  "ingredient": {
+    "tag": "tfcflorae:kaolinite_clay_knapping"
+  }
+}

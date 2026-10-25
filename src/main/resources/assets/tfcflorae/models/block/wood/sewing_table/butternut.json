@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/sewing_table",
+  "textures": {
+    "0": "tfcflorae:block/wood/log/butternut",
+    "1": "tfcflorae:block/wood/planks/butternut"
+  }
+}

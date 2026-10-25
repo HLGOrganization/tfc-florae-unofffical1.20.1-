@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/grass_snowy_side",
+  "textures": {
+    "texture": "tfcflorae:block/sand/magenta"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfc:deposit/cassiterite/marble"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_marble"
+}

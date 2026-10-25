@@ -1,0 +1,17 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:kaolinite_clay_knapping",
+  "pattern": [
+    "XX XX",
+    "X   X",
+    "X   X",
+    "XX XX",
+    "XXXXX"
+  ],
+  "result": {
+    "item": "firmalife:oven_bottom"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:kaolinite_clay_knapping"
+  }
+}

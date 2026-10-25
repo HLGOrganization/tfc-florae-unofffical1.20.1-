@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/orange/gabbro"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/orange/gabbro"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/orange/gabbro"
+      }
+    ]
+  }
+}

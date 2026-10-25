@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "tfc:block/rock/chiseled/diorite",
+    "top": "tfc:block/rock/chiseled/diorite",
+    "side": "tfc:block/rock/chiseled/diorite"
+  }
+}

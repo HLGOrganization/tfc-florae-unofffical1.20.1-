@@ -1,0 +1,8 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/wackestone",
+  "model_stages": [
+    "tfc:item/pan/empty",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver_wackestone"
+}

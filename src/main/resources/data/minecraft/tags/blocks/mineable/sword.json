@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:spider_cave/creeping_webs",
+    "tfcflorae:spider_cave/hanging_spider_web_slender",
+    "tfcflorae:spider_cave/hanging_spider_web_thick",
+    "tfcflorae:spider_cave/spider_egg",
+    "tfcflorae:spider_cave/spider_egg_large",
+    "tfcflorae:spider_cave/spider_eggs",
+    "tfcflorae:spider_cave/webbed_chest",
+    "tfcflorae:spider_cave/webbed_glow",
+    "tfcflorae:spider_cave/webbed_torch"
+  ]
+}

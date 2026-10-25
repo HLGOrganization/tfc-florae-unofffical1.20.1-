@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/wood/vertical",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/locust",
+    "particle": "tfcflorae:block/wood/sheet/locust"
+  }
+}

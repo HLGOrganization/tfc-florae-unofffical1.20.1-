@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/orange/basalt"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/orange/basalt"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/orange/basalt"
+      }
+    ]
+  }
+}

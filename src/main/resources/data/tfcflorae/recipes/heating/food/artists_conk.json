@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tfcflorae:plant/artists_conk"
+  },
+  "result_item": {
+    "item": "tfcflorae:food/roasted_artists_conk"
+  },
+  "temperature": 200
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:food/acorn_squash",
+    "tfcflorae:food/aehobak",
+    "tfcflorae:food/butternut",
+    "tfcflorae:food/crookneck",
+    "tfcflorae:food/cucumber",
+    "tfcflorae:food/fresh_seaweed",
+    "tfcflorae:food/scallopini",
+    "tfcflorae:food/tromboncino",
+    "tfcflorae:food/zucchini",
+    "tfcflorae:food/eucalyptus_leaves"
+  ]
+}

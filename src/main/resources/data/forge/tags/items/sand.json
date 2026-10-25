@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:sand",
+    "tfcflorae:sand/sand/blue",
+    "tfcflorae:sand/sand/cyan",
+    "tfcflorae:sand/sand/gray",
+    "tfcflorae:sand/sand/light_blue",
+    "tfcflorae:sand/sand/light_gray",
+    "tfcflorae:sand/sand/light_green",
+    "tfcflorae:sand/sand/magenta",
+    "tfcflorae:sand/sand/orange",
+    "tfcflorae:sand/sand/purple"
+  ]
+}

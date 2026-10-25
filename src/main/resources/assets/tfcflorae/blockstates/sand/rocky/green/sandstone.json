@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/green/sandstone"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/green/sandstone"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/green/sandstone"
+      }
+    ]
+  }
+}

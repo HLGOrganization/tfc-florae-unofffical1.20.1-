@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/gray/arkose"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/gray/arkose"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/gray/arkose"
+      }
+    ]
+  }
+}

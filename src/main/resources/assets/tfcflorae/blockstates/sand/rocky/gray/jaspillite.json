@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/gray/jaspillite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/gray/jaspillite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/gray/jaspillite"
+      }
+    ]
+  }
+}

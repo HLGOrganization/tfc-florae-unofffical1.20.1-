@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/cocobolo",
+    "tfcflorae:wood/stripped_log/cocobolo",
+    "tfcflorae:wood/stripped_wood/cocobolo",
+    "tfcflorae:wood/wood/cocobolo"
+  ]
+}

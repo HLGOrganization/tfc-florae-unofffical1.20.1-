@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/magenta/boninite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/magenta/boninite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/magenta/boninite"
+      }
+    ]
+  }
+}

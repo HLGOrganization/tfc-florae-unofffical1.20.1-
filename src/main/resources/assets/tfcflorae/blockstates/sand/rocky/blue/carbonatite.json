@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/blue/carbonatite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/blue/carbonatite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/blue/carbonatite"
+      }
+    ]
+  }
+}

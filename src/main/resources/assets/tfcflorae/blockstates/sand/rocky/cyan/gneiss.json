@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/cyan/gneiss"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/cyan/gneiss"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/cyan/gneiss"
+      }
+    ]
+  }
+}

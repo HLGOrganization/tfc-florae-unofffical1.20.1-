@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/magenta/dacite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/magenta/dacite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/magenta/dacite"
+      }
+    ]
+  }
+}

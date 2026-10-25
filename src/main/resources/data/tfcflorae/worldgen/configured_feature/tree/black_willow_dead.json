@@ -1,0 +1,16 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:black_willow_dead/1",
+      "tfcflorae:black_willow_dead/2",
+      "tfcflorae:black_willow_dead/3"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 4,
+      "ground_type": "submerged"
+    }
+  }
+}

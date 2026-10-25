@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfc:deposit/cassiterite/chalk",
+  "model_stages": [
+    "tfc:item/pan/cassiterite/chalk_full",
+    "tfc:item/pan/cassiterite/chalk_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_chalk"
+}

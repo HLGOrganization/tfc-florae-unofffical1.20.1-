@@ -1,0 +1,17 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:kaolinite_clay_knapping",
+  "outside_slot_required": true,
+  "pattern": [
+    "XXXXX",
+    "X   X",
+    " XXX ",
+    "XXXXX"
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/kaolinite/unfired/mold/pickaxe_head"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:kaolinite_clay_knapping"
+  }
+}

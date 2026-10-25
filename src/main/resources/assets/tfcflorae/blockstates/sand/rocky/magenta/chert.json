@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/magenta/chert"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/magenta/chert"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/magenta/chert"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:stoneware_clay_knapping",
+  "pattern": [
+    " X   ",
+    "XXXX ",
+    "XXX X",
+    "XXXX ",
+    "XXX  "
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/stoneware/unfired/jug"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:stoneware_clay_knapping"
+  }
+}

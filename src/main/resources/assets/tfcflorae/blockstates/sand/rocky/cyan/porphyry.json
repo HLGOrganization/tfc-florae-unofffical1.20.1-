@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/cyan/porphyry"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/cyan/porphyry"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/cyan/porphyry"
+      }
+    ]
+  }
+}

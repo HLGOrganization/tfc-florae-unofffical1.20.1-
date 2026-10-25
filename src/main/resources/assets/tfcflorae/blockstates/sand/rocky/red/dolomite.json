@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/red/dolomite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/red/dolomite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/red/dolomite"
+      }
+    ]
+  }
+}
