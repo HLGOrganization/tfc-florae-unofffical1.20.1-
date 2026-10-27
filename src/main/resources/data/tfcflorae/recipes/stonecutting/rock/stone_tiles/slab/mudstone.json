@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/stone_tiles/mudstone"
-  },
-  "result": "tfcflorae:rock/stone_tiles/slab/mudstone",
-  "count": 2
-}

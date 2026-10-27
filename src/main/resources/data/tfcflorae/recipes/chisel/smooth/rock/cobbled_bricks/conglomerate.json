@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfc:rock/cobble/conglomerate",
-  "result": "tfcflorae:rock/cobbled_bricks/conglomerate",
-  "mode": "smooth"
-}

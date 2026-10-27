@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/stone_tiles/carbonatite"
-  },
-  "result": "tfcflorae:rock/stone_tiles/stairs/carbonatite",
-  "count": 1
-}

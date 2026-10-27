@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/cobbled_bricks/tuff",
-  "result": "tfcflorae:rock/cobbled_bricks/stairs/tuff",
-  "mode": "stair"
-}

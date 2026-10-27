@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/stone_tiles/sandstone",
-  "result": "tfcflorae:rock/stone_tiles/stairs/sandstone",
-  "mode": "stair"
-}

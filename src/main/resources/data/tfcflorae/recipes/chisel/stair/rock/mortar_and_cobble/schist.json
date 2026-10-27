@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/mortar_and_cobble/schist",
-  "result": "tfcflorae:rock/mortar_and_cobble/stairs/schist",
-  "mode": "stair"
-}

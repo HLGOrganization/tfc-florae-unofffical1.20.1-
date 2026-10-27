@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/polished_cobbled_bricks/wackestone"
-  },
-  "result": "tfcflorae:rock/polished_cobbled_bricks/slab/wackestone",
-  "count": 2
-}

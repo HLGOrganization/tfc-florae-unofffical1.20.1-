@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfc:rock/cobble/basalt",
-  "result": "tfcflorae:rock/cobbled_bricks/basalt",
-  "mode": "smooth"
-}

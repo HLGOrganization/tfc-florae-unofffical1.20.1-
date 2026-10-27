@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/stone_tiles/shale",
-  "result": "tfcflorae:rock/stone_tiles/stairs/shale",
-  "mode": "stair"
-}

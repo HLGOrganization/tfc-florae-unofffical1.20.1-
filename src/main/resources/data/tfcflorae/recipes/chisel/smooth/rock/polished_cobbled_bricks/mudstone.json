@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/cobbled_bricks/mudstone",
-  "result": "tfcflorae:rock/polished_cobbled_bricks/mudstone",
-  "mode": "smooth"
-}

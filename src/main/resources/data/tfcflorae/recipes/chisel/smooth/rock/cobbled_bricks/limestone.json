@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfc:rock/cobble/limestone",
-  "result": "tfcflorae:rock/cobbled_bricks/limestone",
-  "mode": "smooth"
-}

@@ -331,10 +331,18 @@ public enum TFCFRock implements TFCFRegistryRock {
       }
 
       public BiFunction<RegistryRock, TFCFRock.TFCFBlockType, Block> getTFCFactory() {
+      // 本模组的多余岩石工艺品已废弃（资源已删除）：返回 null 后 rockTypeMapper / RockTypeDecoMapper 会跳过，不再注册任何方块。
+      if (this == STONE_TILES || this == COBBLED_BRICKS || this == POLISHED_COBBLED_BRICKS || this == FLAGSTONE_BRICKS || this == MOSSY_COBBLED_BRICKS || this == MOSSY_FLAGSTONE_BRICKS || this == CRACKED_FLAGSTONE_BRICKS || this == MORTAR_AND_COBBLE || this == MOSSY_MORTAR_AND_COBBLE) {
+         return null;
+      }
          return this.TFCFactory;
       }
 
       public BiFunction<TFCFRegistryRock, TFCFRock.TFCFBlockType, Block> getTFCFFactory() {
+      // 本模组的多余岩石工艺品已废弃（资源已删除）：返回 null 后 rockTypeMapper / RockTypeDecoMapper 会跳过，不再注册任何方块。
+      if (this == STONE_TILES || this == COBBLED_BRICKS || this == POLISHED_COBBLED_BRICKS || this == FLAGSTONE_BRICKS || this == MOSSY_COBBLED_BRICKS || this == MOSSY_FLAGSTONE_BRICKS || this == CRACKED_FLAGSTONE_BRICKS || this == MORTAR_AND_COBBLE || this == MOSSY_MORTAR_AND_COBBLE) {
+         return null;
+      }
          return this.TFCFFactory;
       }
 

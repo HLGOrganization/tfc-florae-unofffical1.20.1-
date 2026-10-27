@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfc:rock/cobble/chert",
-  "result": "tfcflorae:rock/cobbled_bricks/chert",
-  "mode": "smooth"
-}

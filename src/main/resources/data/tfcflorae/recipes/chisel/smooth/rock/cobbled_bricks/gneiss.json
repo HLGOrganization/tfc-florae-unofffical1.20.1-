@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfc:rock/cobble/gneiss",
-  "result": "tfcflorae:rock/cobbled_bricks/gneiss",
-  "mode": "smooth"
-}

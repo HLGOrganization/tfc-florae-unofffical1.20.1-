@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/mossy_mortar_and_cobble/tuff"
-  },
-  "result": "tfcflorae:rock/mossy_mortar_and_cobble/stairs/tuff",
-  "count": 1
-}

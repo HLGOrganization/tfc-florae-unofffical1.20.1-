@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/stone_tiles/dolomite",
-  "result": "tfcflorae:rock/stone_tiles/stairs/dolomite",
-  "mode": "stair"
-}

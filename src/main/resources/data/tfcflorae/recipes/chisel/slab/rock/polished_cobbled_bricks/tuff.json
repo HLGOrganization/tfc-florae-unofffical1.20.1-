@@ -1,9 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/polished_cobbled_bricks/tuff",
-  "result": "tfcflorae:rock/polished_cobbled_bricks/slab/tuff",
-  "mode": "slab",
-  "extra_drop": {
-    "item": "tfcflorae:rock/polished_cobbled_bricks/slab/tuff"
-  }
-}

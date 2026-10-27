@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/cobbled_bricks/andesite",
-  "result": "tfcflorae:rock/cobbled_bricks/stairs/andesite",
-  "mode": "stair"
-}

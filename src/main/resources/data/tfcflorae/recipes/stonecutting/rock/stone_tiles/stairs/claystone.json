@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/stone_tiles/claystone"
-  },
-  "result": "tfcflorae:rock/stone_tiles/stairs/claystone",
-  "count": 1
-}
