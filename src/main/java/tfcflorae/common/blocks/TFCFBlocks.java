@@ -640,78 +640,14 @@ public final class TFCFBlocks {
             TFCCreativeTabs.ROCKS
          )
    );
-   public static final Map<Rock, RegistryObject<Block>> TFC_FLAGSTONE = Helpers.mapOfKeys(
-      Rock.class,
-      rock -> register(
-            "rock/flagstone/" + rock.name(),
-            () -> new RotatedPillarBlock(
-                  net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(rock.color()).requiresCorrectToolForDrops()
-                     .sound(SoundType.BASALT)
-                     .strength(rock.category().hardness(9.0F), 15.0F)
-                     .requiresCorrectToolForDrops()
-               ),
-            TFCCreativeTabs.ROCKS
-         )
-   );
-   public static final Map<TFCFRock, RegistryObject<Block>> TFCF_FLAGSTONE = Helpers.mapOfKeys(
-      TFCFRock.class,
-      rock -> register(
-            "rock/flagstone/" + rock.name(),
-            () -> new RotatedPillarBlock(
-                  net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(rock.color()).requiresCorrectToolForDrops()
-                     .sound(SoundType.BASALT)
-                     .strength(rock.category().hardness(9.0F), 15.0F)
-                     .requiresCorrectToolForDrops()
-               ),
-            TFCCreativeTabs.ROCKS
-         )
-   );
-   public static final Map<Rock, DecorationBlockRegistryObject> TFC_FLAGSTONE_DECORATIONS = Helpers.mapOfKeys(
-      Rock.class,
-      rock -> new DecorationBlockRegistryObject(
-            register(
-               "rock/flagstone/slab/" + rock.name(),
-               () -> new SlabBlock(net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)TFC_FLAGSTONE.get(rock).get())),
-               TFCCreativeTabs.ROCKS
-            ),
-            register(
-               "rock/flagstone/stairs/" + rock.name(),
-               () -> new StairBlock(
-                     () -> ((Block)TFC_FLAGSTONE.get(rock).get()).defaultBlockState(),
-                     net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)TFC_FLAGSTONE.get(rock).get())
-                  ),
-               TFCCreativeTabs.ROCKS
-            ),
-            register(
-               "rock/flagstone/wall/" + rock.name(),
-               () -> new WallBlock(net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)TFC_FLAGSTONE.get(rock).get())),
-               TFCCreativeTabs.ROCKS
-            )
-         )
-   );
-   public static final Map<TFCFRock, DecorationBlockRegistryObject> TFCF_FLAGSTONE_DECORATIONS = Helpers.mapOfKeys(
-      TFCFRock.class,
-      rock -> new DecorationBlockRegistryObject(
-            register(
-               "rock/flagstone/slab/" + rock.name(),
-               () -> new SlabBlock(net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)TFCF_FLAGSTONE.get(rock).get())),
-               TFCCreativeTabs.ROCKS
-            ),
-            register(
-               "rock/flagstone/stairs/" + rock.name(),
-               () -> new StairBlock(
-                     () -> ((Block)TFCF_FLAGSTONE.get(rock).get()).defaultBlockState(),
-                     net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)TFCF_FLAGSTONE.get(rock).get())
-                  ),
-               TFCCreativeTabs.ROCKS
-            ),
-            register(
-               "rock/flagstone/wall/" + rock.name(),
-               () -> new WallBlock(net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)TFCF_FLAGSTONE.get(rock).get())),
-               TFCCreativeTabs.ROCKS
-            )
-         )
-   );
+   // 板石（flagstone）整套已废弃：资源已删除，这里不再注册任何方块
+   public static final Map<Rock, RegistryObject<Block>> TFC_FLAGSTONE = Map.of();
+   // 板石（flagstone）整套已废弃：资源已删除，这里不再注册任何方块
+   public static final Map<TFCFRock, RegistryObject<Block>> TFCF_FLAGSTONE = Map.of();
+   // 板石（flagstone）整套已废弃：资源已删除，这里不再注册任何方块
+   public static final Map<Rock, DecorationBlockRegistryObject> TFC_FLAGSTONE_DECORATIONS = Map.of();
+   // 板石（flagstone）整套已废弃：资源已删除，这里不再注册任何方块
+   public static final Map<TFCFRock, DecorationBlockRegistryObject> TFCF_FLAGSTONE_DECORATIONS = Map.of();
    public static final Map<Rock, RegistryObject<Block>> TFC_SMOKE_BLOCK = Helpers.mapOfKeys(
       Rock.class,
       rock -> register(
