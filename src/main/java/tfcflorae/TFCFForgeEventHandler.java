@@ -192,7 +192,7 @@ public class TFCFForgeEventHandler {
             if (block == net.minecraft.world.level.block.Blocks.AIR
                && Helpers.isItem(event.getItemStack(), (Item)TFCFItems.SOIL_PILE_TFC.get(variantx).get())) {
                event.getItemStack().shrink(1);
-               BlockState placedBlock = ((Block)TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variantx).get(rockTFC).get()).defaultBlockState();
+               BlockState placedBlock = ((Block)TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.ROCKIER_COMPACT_DIRT).get(variantx).get(rockTFC).get()).defaultBlockState();
                level.setBlockAndUpdate(pos, placedBlock);
                Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                event.setCancellationResult(InteractionResult.SUCCESS);
@@ -216,7 +216,7 @@ public class TFCFForgeEventHandler {
             if (block == net.minecraft.world.level.block.Blocks.AIR
                && Helpers.isItem(event.getItemStack(), (Item)TFCFItems.SOIL_PILE_TFCF.get(variantx).get())) {
                event.getItemStack().shrink(1);
-               BlockState placedBlock = ((Block)TFCFBlocks.TFCFROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variantx).get(rockTFC).get()).defaultBlockState();
+               BlockState placedBlock = ((Block)TFCFBlocks.TFCFROCKSOIL.get(TFCFRockSoil.ROCKIER_COMPACT_DIRT).get(variantx).get(rockTFC).get()).defaultBlockState();
                level.setBlockAndUpdate(pos, placedBlock);
                Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                event.setCancellationResult(InteractionResult.SUCCESS);
@@ -263,7 +263,7 @@ public class TFCFForgeEventHandler {
             if (block == net.minecraft.world.level.block.Blocks.AIR
                && Helpers.isItem(event.getItemStack(), (Item)TFCFItems.SOIL_PILE_TFC.get(variantx).get())) {
                event.getItemStack().shrink(1);
-               BlockState placedBlock = ((Block)TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variantx).get(rockTFCF).get()).defaultBlockState();
+               BlockState placedBlock = ((Block)TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.ROCKIER_COMPACT_DIRT).get(variantx).get(rockTFCF).get()).defaultBlockState();
                level.setBlockAndUpdate(pos, placedBlock);
                Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                event.setCancellationResult(InteractionResult.SUCCESS);
@@ -285,7 +285,7 @@ public class TFCFForgeEventHandler {
             if (block == net.minecraft.world.level.block.Blocks.AIR
                && Helpers.isItem(event.getItemStack(), (Item)TFCFItems.SOIL_PILE_TFCF.get(variantx).get())) {
                event.getItemStack().shrink(1);
-               BlockState placedBlock = ((Block)TFCFBlocks.TFCFROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variantx).get(rockTFCF).get()).defaultBlockState();
+               BlockState placedBlock = ((Block)TFCFBlocks.TFCFROCKSOIL2.get(TFCFRockSoil.ROCKIER_COMPACT_DIRT).get(variantx).get(rockTFCF).get()).defaultBlockState();
                level.setBlockAndUpdate(pos, placedBlock);
                Helpers.playSound(level, pos, SoundType.ROOTS.getPlaceSound());
                event.setCancellationResult(InteractionResult.SUCCESS);

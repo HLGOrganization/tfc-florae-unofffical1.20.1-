@@ -2809,6 +2809,12 @@ public final class TFCFBlocks {
       Map<TFCFRockSoil, Map<Variant, Map<Rock, RegistryObject<Block>>>> Map = new HashMap<>();
 
       for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants()) {
+            // 掺泥/渍泥弹石三族已废弃（资源已删），不再注册
+            if (soilBlockType == TFCFRockSoil.DIRTY_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIER_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIEST_STONE_TILES) {
+               continue;
+            }
          if (soilBlockType.getTFCFFactory() != null && soilBlockType.getTFCFactory() != null) {
             Map<Variant, Map<Rock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
 
@@ -2841,6 +2847,12 @@ public final class TFCFBlocks {
       Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, RegistryObject<Block>>>> Map = new HashMap<>();
 
       for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants()) {
+            // 掺泥/渍泥弹石三族已废弃（资源已删），不再注册
+            if (soilBlockType == TFCFRockSoil.DIRTY_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIER_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIEST_STONE_TILES) {
+               continue;
+            }
          if (soilBlockType.getTFCFFactory() != null && soilBlockType.getTFCFactory() != null) {
             Map<TFCFSoil.TFCFVariant, Map<Rock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
 
@@ -2872,6 +2884,12 @@ public final class TFCFBlocks {
       Map<TFCFRockSoil, Map<Variant, Map<TFCFRock, RegistryObject<Block>>>> Map = new HashMap<>();
 
       for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants()) {
+            // 掺泥/渍泥弹石三族已废弃（资源已删），不再注册
+            if (soilBlockType == TFCFRockSoil.DIRTY_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIER_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIEST_STONE_TILES) {
+               continue;
+            }
          if (soilBlockType.getTFCFFactory2() != null && soilBlockType.getTFCFactory2() != null) {
             Map<Variant, Map<TFCFRock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
 
@@ -2904,6 +2922,12 @@ public final class TFCFBlocks {
       Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<TFCFRock, RegistryObject<Block>>>> Map = new HashMap<>();
 
       for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants()) {
+            // 掺泥/渍泥弹石三族已废弃（资源已删），不再注册
+            if (soilBlockType == TFCFRockSoil.DIRTY_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIER_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIEST_STONE_TILES) {
+               continue;
+            }
          if (soilBlockType.getTFCFFactory2() != null && soilBlockType.getTFCFactory2() != null) {
             Map<TFCFSoil.TFCFVariant, Map<TFCFRock, RegistryObject<Block>>> soilVariantMap = new HashMap<>();
 
@@ -2935,6 +2959,12 @@ public final class TFCFBlocks {
       Map<TFCFRockSoil, Map<Variant, Map<Rock, DecorationBlockRegistryObject>>> Map = new HashMap<>();
 
       for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants()) {
+            // 掺泥/渍泥弹石三族已废弃（资源已删），不再注册
+            if (soilBlockType == TFCFRockSoil.DIRTY_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIER_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIEST_STONE_TILES) {
+               continue;
+            }
          if (soilBlockType.name().contains("COMPACT_DIRT")) {
             continue; // compact-dirt derived products removed
          }
@@ -2995,6 +3025,12 @@ public final class TFCFBlocks {
       Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<Rock, DecorationBlockRegistryObject>>> Map = new HashMap<>();
 
       for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants()) {
+            // 掺泥/渍泥弹石三族已废弃（资源已删），不再注册
+            if (soilBlockType == TFCFRockSoil.DIRTY_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIER_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIEST_STONE_TILES) {
+               continue;
+            }
          if (soilBlockType.name().contains("COMPACT_DIRT")) {
             continue; // compact-dirt derived products removed
          }
@@ -3054,6 +3090,12 @@ public final class TFCFBlocks {
       Map<TFCFRockSoil, Map<Variant, Map<TFCFRock, DecorationBlockRegistryObject>>> Map = new HashMap<>();
 
       for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants()) {
+            // 掺泥/渍泥弹石三族已废弃（资源已删），不再注册
+            if (soilBlockType == TFCFRockSoil.DIRTY_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIER_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIEST_STONE_TILES) {
+               continue;
+            }
          if (soilBlockType.name().contains("COMPACT_DIRT")) {
             continue; // compact-dirt derived products removed
          }
@@ -3116,6 +3158,12 @@ public final class TFCFBlocks {
       Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<TFCFRock, DecorationBlockRegistryObject>>> Map = new HashMap<>();
 
       for (TFCFRockSoil soilBlockType : enumClass.getEnumConstants()) {
+            // 掺泥/渍泥弹石三族已废弃（资源已删），不再注册
+            if (soilBlockType == TFCFRockSoil.DIRTY_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIER_STONE_TILES
+               || soilBlockType == TFCFRockSoil.DIRTIEST_STONE_TILES) {
+               continue;
+            }
          if (soilBlockType.name().contains("COMPACT_DIRT")) {
             continue; // compact-dirt derived products removed
          }
