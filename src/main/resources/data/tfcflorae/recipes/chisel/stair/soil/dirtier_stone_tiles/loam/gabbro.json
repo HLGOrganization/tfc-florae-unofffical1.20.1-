@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:dirtier_stone_tiles/loam/gabbro",
-  "result": "tfcflorae:dirtier_stone_tiles/loam/stairs/gabbro",
-  "mode": "stair"
-}

@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/flagstone/dacite"
-  },
-  "result": "tfcflorae:rock/flagstone/slab/dacite",
-  "count": 2
-}

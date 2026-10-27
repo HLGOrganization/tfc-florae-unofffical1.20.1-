@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:dirtier_stone_tiles/silt/diorite",
-  "result": "tfcflorae:dirtier_stone_tiles/silt/stairs/diorite",
-  "mode": "stair"
-}

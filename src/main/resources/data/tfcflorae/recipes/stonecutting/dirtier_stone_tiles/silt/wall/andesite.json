@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:dirtier_stone_tiles/silt/andesite"
-  },
-  "result": "tfcflorae:dirtier_stone_tiles/silt/wall/andesite",
-  "count": 1
-}
