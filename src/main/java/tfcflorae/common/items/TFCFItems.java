@@ -386,26 +386,6 @@ public final class TFCFItems {
                         ))
                   )
                );
-            } else if (food == TFCFFood.ROASTED_ARTISTS_CONK) {
-               Map.put(
-                  food,
-                  register(
-                     "food/" + food.name(),
-                     (Supplier<Item>)(() -> new Item(
-                           new Properties()
-                              .food(
-                                 new Builder()
-                                    .nutrition(4)
-                                    .saturationMod(0.3F)
-                                    .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 0.5F)
-                                    .effect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 0), 0.25F)
-                                    .alwaysEat()
-                                    .build()
-                              )
-                              
-                        ))
-                  )
-               );
             } else if (food == TFCFFood.ROASTED_SULPHUR_SHELF) {
                Map.put(
                   food,

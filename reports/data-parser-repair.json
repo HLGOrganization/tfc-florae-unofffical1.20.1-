@@ -1,0 +1,3538 @@
+{
+  "source_probe": "reports/runtime-data-parsers.json (TFC 3.2.20 full runtime probe, 2026-10-24 22:17)",
+  "TFC_jar": "D:\\线框的服务器\\versions\\TFC_Wild_Fire\\mods\\[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar",
+  "files_changed": 186,
+  "file_counts": {
+    "collapse_kaolinite_reference": 12,
+    "item_heats": 12,
+    "item_sizes": 2,
+    "panning_namespace": 80,
+    "sluicing_namespace": 80
+  },
+  "reference_counts": {
+    "panning_native_remapped": 80,
+    "panning_custom_unchanged": 48,
+    "sluicing_native_remapped": 80,
+    "sluicing_custom_unchanged": 48,
+    "item_heats_tfc_ids_remapped": 768,
+    "item_heats_unregistered_dripstone_removed": 36,
+    "item_sizes_tfc_ids_remapped": 768,
+    "item_sizes_unregistered_dripstone_removed": 36,
+    "kaolinite_collapse_references_removed": 12
+  },
+  "firmalife": {
+    "recipes": 9,
+    "changed": false,
+    "reason": "Firmalife is present in the target integration pack but absent from the minimal runtime harness; its oven IDs are externally supplied."
+  },
+  "validation": "All remaining manager item references and deposit IDs exist in the full runtime registries. Each mapped TFC ID also has a matching TFC 3.2.20 blockstate or item model.",
+  "files": [
+    {
+      "file": "data/tfcflorae/recipes/collapse/arkose_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\arkose_cobble.json",
+      "backup_sha256": "560bebda5342d0e7fca1860dcdff60e419d459c528abaf6d5d48e7391570848c",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/arkose"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/boninite_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\boninite_cobble.json",
+      "backup_sha256": "1fdc901995b630b5d8c3e5150f8310e4a75e3985bf4ede3195888dbce4b1a6d2",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/boninite"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/carbonatite_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\carbonatite_cobble.json",
+      "backup_sha256": "06b6eee83ceb285f3f2133b8e37afdf63c22e7b8ad6e5e70e98eca89f39d4188",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/carbonatite"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/cataclasite_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\cataclasite_cobble.json",
+      "backup_sha256": "ee1b7dd1bfb62867e910f6781ceafee48a7935aa3989eeab510fcd9bc1b20ea3",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/cataclasite"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/jaspillite_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\jaspillite_cobble.json",
+      "backup_sha256": "1c4e552b311ba98b84d6301353617a705c847202f4a5d79ef273217f54d6c56c",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/jaspillite"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/laterite_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\laterite_cobble.json",
+      "backup_sha256": "cd7e66f5442fe6480e1fe5e6c1df7db63ad76af39cdee3a17fce055930d8595f",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/laterite"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/mudstone_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\mudstone_cobble.json",
+      "backup_sha256": "8b122f99a762d16fc52b962188addc4544eaf5fabc57ae952bbfa3c404f8939f",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/mudstone"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/porphyry_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\porphyry_cobble.json",
+      "backup_sha256": "c97f4e1f223d3ca3be236cdf13b74b3e28a55ba28804bd3e9bd597f8d1a9d349",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/porphyry"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/red_granite_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\red_granite_cobble.json",
+      "backup_sha256": "e6781bd560962954f3e14cd8b0344fecf872f3eddc7a07c55e6f87c4aeaf18f7",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/red_granite"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/sandstone_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\sandstone_cobble.json",
+      "backup_sha256": "8cd6f740a6f7421297a5ea69bd67cfc2dafa7347a9cf64ef971b5b9d9af4b709",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/sandstone"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/soapstone_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\soapstone_cobble.json",
+      "backup_sha256": "2c8321f06ec6efea65be39a076decc2230b430fe080e2a1c13f3a74ec19aff45",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/soapstone"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/wackestone_cobble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\recipes\\collapse\\wackestone_cobble.json",
+      "backup_sha256": "76ef1e5334d5c701eadfcd9606ee1a2fb78c7ae53d6f09a28441b9c38345c7f8",
+      "kind": "recipes/collapse",
+      "changes": {
+        "removed_invalid_reference": [
+          "tfcflorae:ore/kaolinite/wackestone"
+        ]
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/bismuthinite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\bismuthinite.json",
+      "backup_sha256": "f6cfd72720b20c24253363653c99d5a09d5042157d7c1cb9e74cad6c6f042fb8",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_bismuthinite": 1,
+          "tfc:ore/normal_bismuthinite/andesite": 1,
+          "tfc:ore/normal_bismuthinite/basalt": 1,
+          "tfc:ore/normal_bismuthinite/chalk": 1,
+          "tfc:ore/normal_bismuthinite/chert": 1,
+          "tfc:ore/normal_bismuthinite/claystone": 1,
+          "tfc:ore/normal_bismuthinite/conglomerate": 1,
+          "tfc:ore/normal_bismuthinite/dacite": 1,
+          "tfc:ore/normal_bismuthinite/diorite": 1,
+          "tfc:ore/normal_bismuthinite/dolomite": 1,
+          "tfc:ore/normal_bismuthinite/gabbro": 1,
+          "tfc:ore/normal_bismuthinite/gneiss": 1,
+          "tfc:ore/normal_bismuthinite/granite": 1,
+          "tfc:ore/normal_bismuthinite/limestone": 1,
+          "tfc:ore/normal_bismuthinite/marble": 1,
+          "tfc:ore/normal_bismuthinite/phyllite": 1,
+          "tfc:ore/normal_bismuthinite/quartzite": 1,
+          "tfc:ore/normal_bismuthinite/rhyolite": 1,
+          "tfc:ore/normal_bismuthinite/schist": 1,
+          "tfc:ore/normal_bismuthinite/shale": 1,
+          "tfc:ore/normal_bismuthinite/slate": 1,
+          "tfc:ore/poor_bismuthinite": 1,
+          "tfc:ore/poor_bismuthinite/andesite": 1,
+          "tfc:ore/poor_bismuthinite/basalt": 1,
+          "tfc:ore/poor_bismuthinite/chalk": 1,
+          "tfc:ore/poor_bismuthinite/chert": 1,
+          "tfc:ore/poor_bismuthinite/claystone": 1,
+          "tfc:ore/poor_bismuthinite/conglomerate": 1,
+          "tfc:ore/poor_bismuthinite/dacite": 1,
+          "tfc:ore/poor_bismuthinite/diorite": 1,
+          "tfc:ore/poor_bismuthinite/dolomite": 1,
+          "tfc:ore/poor_bismuthinite/gabbro": 1,
+          "tfc:ore/poor_bismuthinite/gneiss": 1,
+          "tfc:ore/poor_bismuthinite/granite": 1,
+          "tfc:ore/poor_bismuthinite/limestone": 1,
+          "tfc:ore/poor_bismuthinite/marble": 1,
+          "tfc:ore/poor_bismuthinite/phyllite": 1,
+          "tfc:ore/poor_bismuthinite/quartzite": 1,
+          "tfc:ore/poor_bismuthinite/rhyolite": 1,
+          "tfc:ore/poor_bismuthinite/schist": 1,
+          "tfc:ore/poor_bismuthinite/shale": 1,
+          "tfc:ore/poor_bismuthinite/slate": 1,
+          "tfc:ore/rich_bismuthinite": 1,
+          "tfc:ore/rich_bismuthinite/andesite": 1,
+          "tfc:ore/rich_bismuthinite/basalt": 1,
+          "tfc:ore/rich_bismuthinite/chalk": 1,
+          "tfc:ore/rich_bismuthinite/chert": 1,
+          "tfc:ore/rich_bismuthinite/claystone": 1,
+          "tfc:ore/rich_bismuthinite/conglomerate": 1,
+          "tfc:ore/rich_bismuthinite/dacite": 1,
+          "tfc:ore/rich_bismuthinite/diorite": 1,
+          "tfc:ore/rich_bismuthinite/dolomite": 1,
+          "tfc:ore/rich_bismuthinite/gabbro": 1,
+          "tfc:ore/rich_bismuthinite/gneiss": 1,
+          "tfc:ore/rich_bismuthinite/granite": 1,
+          "tfc:ore/rich_bismuthinite/limestone": 1,
+          "tfc:ore/rich_bismuthinite/marble": 1,
+          "tfc:ore/rich_bismuthinite/phyllite": 1,
+          "tfc:ore/rich_bismuthinite/quartzite": 1,
+          "tfc:ore/rich_bismuthinite/rhyolite": 1,
+          "tfc:ore/rich_bismuthinite/schist": 1,
+          "tfc:ore/rich_bismuthinite/shale": 1,
+          "tfc:ore/rich_bismuthinite/slate": 1,
+          "tfc:ore/small_bismuthinite": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_bismuthinite/dripstone": 1,
+          "tfcflorae:ore/poor_bismuthinite/dripstone": 1,
+          "tfcflorae:ore/rich_bismuthinite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/cassiterite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\cassiterite.json",
+      "backup_sha256": "c2799b50841b8dc527a444ae549023bbf76716f7f37eb9992f0ed1ffb5ec73c7",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_cassiterite": 1,
+          "tfc:ore/normal_cassiterite/andesite": 1,
+          "tfc:ore/normal_cassiterite/basalt": 1,
+          "tfc:ore/normal_cassiterite/chalk": 1,
+          "tfc:ore/normal_cassiterite/chert": 1,
+          "tfc:ore/normal_cassiterite/claystone": 1,
+          "tfc:ore/normal_cassiterite/conglomerate": 1,
+          "tfc:ore/normal_cassiterite/dacite": 1,
+          "tfc:ore/normal_cassiterite/diorite": 1,
+          "tfc:ore/normal_cassiterite/dolomite": 1,
+          "tfc:ore/normal_cassiterite/gabbro": 1,
+          "tfc:ore/normal_cassiterite/gneiss": 1,
+          "tfc:ore/normal_cassiterite/granite": 1,
+          "tfc:ore/normal_cassiterite/limestone": 1,
+          "tfc:ore/normal_cassiterite/marble": 1,
+          "tfc:ore/normal_cassiterite/phyllite": 1,
+          "tfc:ore/normal_cassiterite/quartzite": 1,
+          "tfc:ore/normal_cassiterite/rhyolite": 1,
+          "tfc:ore/normal_cassiterite/schist": 1,
+          "tfc:ore/normal_cassiterite/shale": 1,
+          "tfc:ore/normal_cassiterite/slate": 1,
+          "tfc:ore/poor_cassiterite": 1,
+          "tfc:ore/poor_cassiterite/andesite": 1,
+          "tfc:ore/poor_cassiterite/basalt": 1,
+          "tfc:ore/poor_cassiterite/chalk": 1,
+          "tfc:ore/poor_cassiterite/chert": 1,
+          "tfc:ore/poor_cassiterite/claystone": 1,
+          "tfc:ore/poor_cassiterite/conglomerate": 1,
+          "tfc:ore/poor_cassiterite/dacite": 1,
+          "tfc:ore/poor_cassiterite/diorite": 1,
+          "tfc:ore/poor_cassiterite/dolomite": 1,
+          "tfc:ore/poor_cassiterite/gabbro": 1,
+          "tfc:ore/poor_cassiterite/gneiss": 1,
+          "tfc:ore/poor_cassiterite/granite": 1,
+          "tfc:ore/poor_cassiterite/limestone": 1,
+          "tfc:ore/poor_cassiterite/marble": 1,
+          "tfc:ore/poor_cassiterite/phyllite": 1,
+          "tfc:ore/poor_cassiterite/quartzite": 1,
+          "tfc:ore/poor_cassiterite/rhyolite": 1,
+          "tfc:ore/poor_cassiterite/schist": 1,
+          "tfc:ore/poor_cassiterite/shale": 1,
+          "tfc:ore/poor_cassiterite/slate": 1,
+          "tfc:ore/rich_cassiterite": 1,
+          "tfc:ore/rich_cassiterite/andesite": 1,
+          "tfc:ore/rich_cassiterite/basalt": 1,
+          "tfc:ore/rich_cassiterite/chalk": 1,
+          "tfc:ore/rich_cassiterite/chert": 1,
+          "tfc:ore/rich_cassiterite/claystone": 1,
+          "tfc:ore/rich_cassiterite/conglomerate": 1,
+          "tfc:ore/rich_cassiterite/dacite": 1,
+          "tfc:ore/rich_cassiterite/diorite": 1,
+          "tfc:ore/rich_cassiterite/dolomite": 1,
+          "tfc:ore/rich_cassiterite/gabbro": 1,
+          "tfc:ore/rich_cassiterite/gneiss": 1,
+          "tfc:ore/rich_cassiterite/granite": 1,
+          "tfc:ore/rich_cassiterite/limestone": 1,
+          "tfc:ore/rich_cassiterite/marble": 1,
+          "tfc:ore/rich_cassiterite/phyllite": 1,
+          "tfc:ore/rich_cassiterite/quartzite": 1,
+          "tfc:ore/rich_cassiterite/rhyolite": 1,
+          "tfc:ore/rich_cassiterite/schist": 1,
+          "tfc:ore/rich_cassiterite/shale": 1,
+          "tfc:ore/rich_cassiterite/slate": 1,
+          "tfc:ore/small_cassiterite": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_cassiterite/dripstone": 1,
+          "tfcflorae:ore/poor_cassiterite/dripstone": 1,
+          "tfcflorae:ore/rich_cassiterite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/garnierite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\garnierite.json",
+      "backup_sha256": "955b97392b9d032b702c25d70e97a35fb8df9c364ec88a6acc0bef13758eeec2",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_garnierite": 1,
+          "tfc:ore/normal_garnierite/andesite": 1,
+          "tfc:ore/normal_garnierite/basalt": 1,
+          "tfc:ore/normal_garnierite/chalk": 1,
+          "tfc:ore/normal_garnierite/chert": 1,
+          "tfc:ore/normal_garnierite/claystone": 1,
+          "tfc:ore/normal_garnierite/conglomerate": 1,
+          "tfc:ore/normal_garnierite/dacite": 1,
+          "tfc:ore/normal_garnierite/diorite": 1,
+          "tfc:ore/normal_garnierite/dolomite": 1,
+          "tfc:ore/normal_garnierite/gabbro": 1,
+          "tfc:ore/normal_garnierite/gneiss": 1,
+          "tfc:ore/normal_garnierite/granite": 1,
+          "tfc:ore/normal_garnierite/limestone": 1,
+          "tfc:ore/normal_garnierite/marble": 1,
+          "tfc:ore/normal_garnierite/phyllite": 1,
+          "tfc:ore/normal_garnierite/quartzite": 1,
+          "tfc:ore/normal_garnierite/rhyolite": 1,
+          "tfc:ore/normal_garnierite/schist": 1,
+          "tfc:ore/normal_garnierite/shale": 1,
+          "tfc:ore/normal_garnierite/slate": 1,
+          "tfc:ore/poor_garnierite": 1,
+          "tfc:ore/poor_garnierite/andesite": 1,
+          "tfc:ore/poor_garnierite/basalt": 1,
+          "tfc:ore/poor_garnierite/chalk": 1,
+          "tfc:ore/poor_garnierite/chert": 1,
+          "tfc:ore/poor_garnierite/claystone": 1,
+          "tfc:ore/poor_garnierite/conglomerate": 1,
+          "tfc:ore/poor_garnierite/dacite": 1,
+          "tfc:ore/poor_garnierite/diorite": 1,
+          "tfc:ore/poor_garnierite/dolomite": 1,
+          "tfc:ore/poor_garnierite/gabbro": 1,
+          "tfc:ore/poor_garnierite/gneiss": 1,
+          "tfc:ore/poor_garnierite/granite": 1,
+          "tfc:ore/poor_garnierite/limestone": 1,
+          "tfc:ore/poor_garnierite/marble": 1,
+          "tfc:ore/poor_garnierite/phyllite": 1,
+          "tfc:ore/poor_garnierite/quartzite": 1,
+          "tfc:ore/poor_garnierite/rhyolite": 1,
+          "tfc:ore/poor_garnierite/schist": 1,
+          "tfc:ore/poor_garnierite/shale": 1,
+          "tfc:ore/poor_garnierite/slate": 1,
+          "tfc:ore/rich_garnierite": 1,
+          "tfc:ore/rich_garnierite/andesite": 1,
+          "tfc:ore/rich_garnierite/basalt": 1,
+          "tfc:ore/rich_garnierite/chalk": 1,
+          "tfc:ore/rich_garnierite/chert": 1,
+          "tfc:ore/rich_garnierite/claystone": 1,
+          "tfc:ore/rich_garnierite/conglomerate": 1,
+          "tfc:ore/rich_garnierite/dacite": 1,
+          "tfc:ore/rich_garnierite/diorite": 1,
+          "tfc:ore/rich_garnierite/dolomite": 1,
+          "tfc:ore/rich_garnierite/gabbro": 1,
+          "tfc:ore/rich_garnierite/gneiss": 1,
+          "tfc:ore/rich_garnierite/granite": 1,
+          "tfc:ore/rich_garnierite/limestone": 1,
+          "tfc:ore/rich_garnierite/marble": 1,
+          "tfc:ore/rich_garnierite/phyllite": 1,
+          "tfc:ore/rich_garnierite/quartzite": 1,
+          "tfc:ore/rich_garnierite/rhyolite": 1,
+          "tfc:ore/rich_garnierite/schist": 1,
+          "tfc:ore/rich_garnierite/shale": 1,
+          "tfc:ore/rich_garnierite/slate": 1,
+          "tfc:ore/small_garnierite": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_garnierite/dripstone": 1,
+          "tfcflorae:ore/poor_garnierite/dripstone": 1,
+          "tfcflorae:ore/rich_garnierite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/hematite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\hematite.json",
+      "backup_sha256": "3a8af990590ceec8b930d78b2ab0a428487fc4b0835cda7441de31bb28e335c4",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_hematite": 1,
+          "tfc:ore/normal_hematite/andesite": 1,
+          "tfc:ore/normal_hematite/basalt": 1,
+          "tfc:ore/normal_hematite/chalk": 1,
+          "tfc:ore/normal_hematite/chert": 1,
+          "tfc:ore/normal_hematite/claystone": 1,
+          "tfc:ore/normal_hematite/conglomerate": 1,
+          "tfc:ore/normal_hematite/dacite": 1,
+          "tfc:ore/normal_hematite/diorite": 1,
+          "tfc:ore/normal_hematite/dolomite": 1,
+          "tfc:ore/normal_hematite/gabbro": 1,
+          "tfc:ore/normal_hematite/gneiss": 1,
+          "tfc:ore/normal_hematite/granite": 1,
+          "tfc:ore/normal_hematite/limestone": 1,
+          "tfc:ore/normal_hematite/marble": 1,
+          "tfc:ore/normal_hematite/phyllite": 1,
+          "tfc:ore/normal_hematite/quartzite": 1,
+          "tfc:ore/normal_hematite/rhyolite": 1,
+          "tfc:ore/normal_hematite/schist": 1,
+          "tfc:ore/normal_hematite/shale": 1,
+          "tfc:ore/normal_hematite/slate": 1,
+          "tfc:ore/poor_hematite": 1,
+          "tfc:ore/poor_hematite/andesite": 1,
+          "tfc:ore/poor_hematite/basalt": 1,
+          "tfc:ore/poor_hematite/chalk": 1,
+          "tfc:ore/poor_hematite/chert": 1,
+          "tfc:ore/poor_hematite/claystone": 1,
+          "tfc:ore/poor_hematite/conglomerate": 1,
+          "tfc:ore/poor_hematite/dacite": 1,
+          "tfc:ore/poor_hematite/diorite": 1,
+          "tfc:ore/poor_hematite/dolomite": 1,
+          "tfc:ore/poor_hematite/gabbro": 1,
+          "tfc:ore/poor_hematite/gneiss": 1,
+          "tfc:ore/poor_hematite/granite": 1,
+          "tfc:ore/poor_hematite/limestone": 1,
+          "tfc:ore/poor_hematite/marble": 1,
+          "tfc:ore/poor_hematite/phyllite": 1,
+          "tfc:ore/poor_hematite/quartzite": 1,
+          "tfc:ore/poor_hematite/rhyolite": 1,
+          "tfc:ore/poor_hematite/schist": 1,
+          "tfc:ore/poor_hematite/shale": 1,
+          "tfc:ore/poor_hematite/slate": 1,
+          "tfc:ore/rich_hematite": 1,
+          "tfc:ore/rich_hematite/andesite": 1,
+          "tfc:ore/rich_hematite/basalt": 1,
+          "tfc:ore/rich_hematite/chalk": 1,
+          "tfc:ore/rich_hematite/chert": 1,
+          "tfc:ore/rich_hematite/claystone": 1,
+          "tfc:ore/rich_hematite/conglomerate": 1,
+          "tfc:ore/rich_hematite/dacite": 1,
+          "tfc:ore/rich_hematite/diorite": 1,
+          "tfc:ore/rich_hematite/dolomite": 1,
+          "tfc:ore/rich_hematite/gabbro": 1,
+          "tfc:ore/rich_hematite/gneiss": 1,
+          "tfc:ore/rich_hematite/granite": 1,
+          "tfc:ore/rich_hematite/limestone": 1,
+          "tfc:ore/rich_hematite/marble": 1,
+          "tfc:ore/rich_hematite/phyllite": 1,
+          "tfc:ore/rich_hematite/quartzite": 1,
+          "tfc:ore/rich_hematite/rhyolite": 1,
+          "tfc:ore/rich_hematite/schist": 1,
+          "tfc:ore/rich_hematite/shale": 1,
+          "tfc:ore/rich_hematite/slate": 1,
+          "tfc:ore/small_hematite": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_hematite/dripstone": 1,
+          "tfcflorae:ore/poor_hematite/dripstone": 1,
+          "tfcflorae:ore/rich_hematite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/limonite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\limonite.json",
+      "backup_sha256": "f34dd85e9897137de3099cf7d64e04d085aa4be13068f066baf55e24f55e966f",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_limonite": 1,
+          "tfc:ore/normal_limonite/andesite": 1,
+          "tfc:ore/normal_limonite/basalt": 1,
+          "tfc:ore/normal_limonite/chalk": 1,
+          "tfc:ore/normal_limonite/chert": 1,
+          "tfc:ore/normal_limonite/claystone": 1,
+          "tfc:ore/normal_limonite/conglomerate": 1,
+          "tfc:ore/normal_limonite/dacite": 1,
+          "tfc:ore/normal_limonite/diorite": 1,
+          "tfc:ore/normal_limonite/dolomite": 1,
+          "tfc:ore/normal_limonite/gabbro": 1,
+          "tfc:ore/normal_limonite/gneiss": 1,
+          "tfc:ore/normal_limonite/granite": 1,
+          "tfc:ore/normal_limonite/limestone": 1,
+          "tfc:ore/normal_limonite/marble": 1,
+          "tfc:ore/normal_limonite/phyllite": 1,
+          "tfc:ore/normal_limonite/quartzite": 1,
+          "tfc:ore/normal_limonite/rhyolite": 1,
+          "tfc:ore/normal_limonite/schist": 1,
+          "tfc:ore/normal_limonite/shale": 1,
+          "tfc:ore/normal_limonite/slate": 1,
+          "tfc:ore/poor_limonite": 1,
+          "tfc:ore/poor_limonite/andesite": 1,
+          "tfc:ore/poor_limonite/basalt": 1,
+          "tfc:ore/poor_limonite/chalk": 1,
+          "tfc:ore/poor_limonite/chert": 1,
+          "tfc:ore/poor_limonite/claystone": 1,
+          "tfc:ore/poor_limonite/conglomerate": 1,
+          "tfc:ore/poor_limonite/dacite": 1,
+          "tfc:ore/poor_limonite/diorite": 1,
+          "tfc:ore/poor_limonite/dolomite": 1,
+          "tfc:ore/poor_limonite/gabbro": 1,
+          "tfc:ore/poor_limonite/gneiss": 1,
+          "tfc:ore/poor_limonite/granite": 1,
+          "tfc:ore/poor_limonite/limestone": 1,
+          "tfc:ore/poor_limonite/marble": 1,
+          "tfc:ore/poor_limonite/phyllite": 1,
+          "tfc:ore/poor_limonite/quartzite": 1,
+          "tfc:ore/poor_limonite/rhyolite": 1,
+          "tfc:ore/poor_limonite/schist": 1,
+          "tfc:ore/poor_limonite/shale": 1,
+          "tfc:ore/poor_limonite/slate": 1,
+          "tfc:ore/rich_limonite": 1,
+          "tfc:ore/rich_limonite/andesite": 1,
+          "tfc:ore/rich_limonite/basalt": 1,
+          "tfc:ore/rich_limonite/chalk": 1,
+          "tfc:ore/rich_limonite/chert": 1,
+          "tfc:ore/rich_limonite/claystone": 1,
+          "tfc:ore/rich_limonite/conglomerate": 1,
+          "tfc:ore/rich_limonite/dacite": 1,
+          "tfc:ore/rich_limonite/diorite": 1,
+          "tfc:ore/rich_limonite/dolomite": 1,
+          "tfc:ore/rich_limonite/gabbro": 1,
+          "tfc:ore/rich_limonite/gneiss": 1,
+          "tfc:ore/rich_limonite/granite": 1,
+          "tfc:ore/rich_limonite/limestone": 1,
+          "tfc:ore/rich_limonite/marble": 1,
+          "tfc:ore/rich_limonite/phyllite": 1,
+          "tfc:ore/rich_limonite/quartzite": 1,
+          "tfc:ore/rich_limonite/rhyolite": 1,
+          "tfc:ore/rich_limonite/schist": 1,
+          "tfc:ore/rich_limonite/shale": 1,
+          "tfc:ore/rich_limonite/slate": 1,
+          "tfc:ore/small_limonite": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_limonite/dripstone": 1,
+          "tfcflorae:ore/poor_limonite/dripstone": 1,
+          "tfcflorae:ore/rich_limonite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/magnetite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\magnetite.json",
+      "backup_sha256": "45d8d334e50a60abed890cb65e47ecfe2376b340fad811634d774d587d79b536",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_magnetite": 1,
+          "tfc:ore/normal_magnetite/andesite": 1,
+          "tfc:ore/normal_magnetite/basalt": 1,
+          "tfc:ore/normal_magnetite/chalk": 1,
+          "tfc:ore/normal_magnetite/chert": 1,
+          "tfc:ore/normal_magnetite/claystone": 1,
+          "tfc:ore/normal_magnetite/conglomerate": 1,
+          "tfc:ore/normal_magnetite/dacite": 1,
+          "tfc:ore/normal_magnetite/diorite": 1,
+          "tfc:ore/normal_magnetite/dolomite": 1,
+          "tfc:ore/normal_magnetite/gabbro": 1,
+          "tfc:ore/normal_magnetite/gneiss": 1,
+          "tfc:ore/normal_magnetite/granite": 1,
+          "tfc:ore/normal_magnetite/limestone": 1,
+          "tfc:ore/normal_magnetite/marble": 1,
+          "tfc:ore/normal_magnetite/phyllite": 1,
+          "tfc:ore/normal_magnetite/quartzite": 1,
+          "tfc:ore/normal_magnetite/rhyolite": 1,
+          "tfc:ore/normal_magnetite/schist": 1,
+          "tfc:ore/normal_magnetite/shale": 1,
+          "tfc:ore/normal_magnetite/slate": 1,
+          "tfc:ore/poor_magnetite": 1,
+          "tfc:ore/poor_magnetite/andesite": 1,
+          "tfc:ore/poor_magnetite/basalt": 1,
+          "tfc:ore/poor_magnetite/chalk": 1,
+          "tfc:ore/poor_magnetite/chert": 1,
+          "tfc:ore/poor_magnetite/claystone": 1,
+          "tfc:ore/poor_magnetite/conglomerate": 1,
+          "tfc:ore/poor_magnetite/dacite": 1,
+          "tfc:ore/poor_magnetite/diorite": 1,
+          "tfc:ore/poor_magnetite/dolomite": 1,
+          "tfc:ore/poor_magnetite/gabbro": 1,
+          "tfc:ore/poor_magnetite/gneiss": 1,
+          "tfc:ore/poor_magnetite/granite": 1,
+          "tfc:ore/poor_magnetite/limestone": 1,
+          "tfc:ore/poor_magnetite/marble": 1,
+          "tfc:ore/poor_magnetite/phyllite": 1,
+          "tfc:ore/poor_magnetite/quartzite": 1,
+          "tfc:ore/poor_magnetite/rhyolite": 1,
+          "tfc:ore/poor_magnetite/schist": 1,
+          "tfc:ore/poor_magnetite/shale": 1,
+          "tfc:ore/poor_magnetite/slate": 1,
+          "tfc:ore/rich_magnetite": 1,
+          "tfc:ore/rich_magnetite/andesite": 1,
+          "tfc:ore/rich_magnetite/basalt": 1,
+          "tfc:ore/rich_magnetite/chalk": 1,
+          "tfc:ore/rich_magnetite/chert": 1,
+          "tfc:ore/rich_magnetite/claystone": 1,
+          "tfc:ore/rich_magnetite/conglomerate": 1,
+          "tfc:ore/rich_magnetite/dacite": 1,
+          "tfc:ore/rich_magnetite/diorite": 1,
+          "tfc:ore/rich_magnetite/dolomite": 1,
+          "tfc:ore/rich_magnetite/gabbro": 1,
+          "tfc:ore/rich_magnetite/gneiss": 1,
+          "tfc:ore/rich_magnetite/granite": 1,
+          "tfc:ore/rich_magnetite/limestone": 1,
+          "tfc:ore/rich_magnetite/marble": 1,
+          "tfc:ore/rich_magnetite/phyllite": 1,
+          "tfc:ore/rich_magnetite/quartzite": 1,
+          "tfc:ore/rich_magnetite/rhyolite": 1,
+          "tfc:ore/rich_magnetite/schist": 1,
+          "tfc:ore/rich_magnetite/shale": 1,
+          "tfc:ore/rich_magnetite/slate": 1,
+          "tfc:ore/small_magnetite": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_magnetite/dripstone": 1,
+          "tfcflorae:ore/poor_magnetite/dripstone": 1,
+          "tfcflorae:ore/rich_magnetite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/malachite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\malachite.json",
+      "backup_sha256": "7f7bbeecd92430fd5a5e0aacad140b0c17a62a42f5119ad39816696096ec56d0",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_malachite": 1,
+          "tfc:ore/normal_malachite/andesite": 1,
+          "tfc:ore/normal_malachite/basalt": 1,
+          "tfc:ore/normal_malachite/chalk": 1,
+          "tfc:ore/normal_malachite/chert": 1,
+          "tfc:ore/normal_malachite/claystone": 1,
+          "tfc:ore/normal_malachite/conglomerate": 1,
+          "tfc:ore/normal_malachite/dacite": 1,
+          "tfc:ore/normal_malachite/diorite": 1,
+          "tfc:ore/normal_malachite/dolomite": 1,
+          "tfc:ore/normal_malachite/gabbro": 1,
+          "tfc:ore/normal_malachite/gneiss": 1,
+          "tfc:ore/normal_malachite/granite": 1,
+          "tfc:ore/normal_malachite/limestone": 1,
+          "tfc:ore/normal_malachite/marble": 1,
+          "tfc:ore/normal_malachite/phyllite": 1,
+          "tfc:ore/normal_malachite/quartzite": 1,
+          "tfc:ore/normal_malachite/rhyolite": 1,
+          "tfc:ore/normal_malachite/schist": 1,
+          "tfc:ore/normal_malachite/shale": 1,
+          "tfc:ore/normal_malachite/slate": 1,
+          "tfc:ore/poor_malachite": 1,
+          "tfc:ore/poor_malachite/andesite": 1,
+          "tfc:ore/poor_malachite/basalt": 1,
+          "tfc:ore/poor_malachite/chalk": 1,
+          "tfc:ore/poor_malachite/chert": 1,
+          "tfc:ore/poor_malachite/claystone": 1,
+          "tfc:ore/poor_malachite/conglomerate": 1,
+          "tfc:ore/poor_malachite/dacite": 1,
+          "tfc:ore/poor_malachite/diorite": 1,
+          "tfc:ore/poor_malachite/dolomite": 1,
+          "tfc:ore/poor_malachite/gabbro": 1,
+          "tfc:ore/poor_malachite/gneiss": 1,
+          "tfc:ore/poor_malachite/granite": 1,
+          "tfc:ore/poor_malachite/limestone": 1,
+          "tfc:ore/poor_malachite/marble": 1,
+          "tfc:ore/poor_malachite/phyllite": 1,
+          "tfc:ore/poor_malachite/quartzite": 1,
+          "tfc:ore/poor_malachite/rhyolite": 1,
+          "tfc:ore/poor_malachite/schist": 1,
+          "tfc:ore/poor_malachite/shale": 1,
+          "tfc:ore/poor_malachite/slate": 1,
+          "tfc:ore/rich_malachite": 1,
+          "tfc:ore/rich_malachite/andesite": 1,
+          "tfc:ore/rich_malachite/basalt": 1,
+          "tfc:ore/rich_malachite/chalk": 1,
+          "tfc:ore/rich_malachite/chert": 1,
+          "tfc:ore/rich_malachite/claystone": 1,
+          "tfc:ore/rich_malachite/conglomerate": 1,
+          "tfc:ore/rich_malachite/dacite": 1,
+          "tfc:ore/rich_malachite/diorite": 1,
+          "tfc:ore/rich_malachite/dolomite": 1,
+          "tfc:ore/rich_malachite/gabbro": 1,
+          "tfc:ore/rich_malachite/gneiss": 1,
+          "tfc:ore/rich_malachite/granite": 1,
+          "tfc:ore/rich_malachite/limestone": 1,
+          "tfc:ore/rich_malachite/marble": 1,
+          "tfc:ore/rich_malachite/phyllite": 1,
+          "tfc:ore/rich_malachite/quartzite": 1,
+          "tfc:ore/rich_malachite/rhyolite": 1,
+          "tfc:ore/rich_malachite/schist": 1,
+          "tfc:ore/rich_malachite/shale": 1,
+          "tfc:ore/rich_malachite/slate": 1,
+          "tfc:ore/small_malachite": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_malachite/dripstone": 1,
+          "tfcflorae:ore/poor_malachite/dripstone": 1,
+          "tfcflorae:ore/rich_malachite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/native_copper.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\native_copper.json",
+      "backup_sha256": "442afcd35bf79f4608afce88c4535b2721fd062015c6202f6e2ef2b35b429785",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_native_copper": 1,
+          "tfc:ore/normal_native_copper/andesite": 1,
+          "tfc:ore/normal_native_copper/basalt": 1,
+          "tfc:ore/normal_native_copper/chalk": 1,
+          "tfc:ore/normal_native_copper/chert": 1,
+          "tfc:ore/normal_native_copper/claystone": 1,
+          "tfc:ore/normal_native_copper/conglomerate": 1,
+          "tfc:ore/normal_native_copper/dacite": 1,
+          "tfc:ore/normal_native_copper/diorite": 1,
+          "tfc:ore/normal_native_copper/dolomite": 1,
+          "tfc:ore/normal_native_copper/gabbro": 1,
+          "tfc:ore/normal_native_copper/gneiss": 1,
+          "tfc:ore/normal_native_copper/granite": 1,
+          "tfc:ore/normal_native_copper/limestone": 1,
+          "tfc:ore/normal_native_copper/marble": 1,
+          "tfc:ore/normal_native_copper/phyllite": 1,
+          "tfc:ore/normal_native_copper/quartzite": 1,
+          "tfc:ore/normal_native_copper/rhyolite": 1,
+          "tfc:ore/normal_native_copper/schist": 1,
+          "tfc:ore/normal_native_copper/shale": 1,
+          "tfc:ore/normal_native_copper/slate": 1,
+          "tfc:ore/poor_native_copper": 1,
+          "tfc:ore/poor_native_copper/andesite": 1,
+          "tfc:ore/poor_native_copper/basalt": 1,
+          "tfc:ore/poor_native_copper/chalk": 1,
+          "tfc:ore/poor_native_copper/chert": 1,
+          "tfc:ore/poor_native_copper/claystone": 1,
+          "tfc:ore/poor_native_copper/conglomerate": 1,
+          "tfc:ore/poor_native_copper/dacite": 1,
+          "tfc:ore/poor_native_copper/diorite": 1,
+          "tfc:ore/poor_native_copper/dolomite": 1,
+          "tfc:ore/poor_native_copper/gabbro": 1,
+          "tfc:ore/poor_native_copper/gneiss": 1,
+          "tfc:ore/poor_native_copper/granite": 1,
+          "tfc:ore/poor_native_copper/limestone": 1,
+          "tfc:ore/poor_native_copper/marble": 1,
+          "tfc:ore/poor_native_copper/phyllite": 1,
+          "tfc:ore/poor_native_copper/quartzite": 1,
+          "tfc:ore/poor_native_copper/rhyolite": 1,
+          "tfc:ore/poor_native_copper/schist": 1,
+          "tfc:ore/poor_native_copper/shale": 1,
+          "tfc:ore/poor_native_copper/slate": 1,
+          "tfc:ore/rich_native_copper": 1,
+          "tfc:ore/rich_native_copper/andesite": 1,
+          "tfc:ore/rich_native_copper/basalt": 1,
+          "tfc:ore/rich_native_copper/chalk": 1,
+          "tfc:ore/rich_native_copper/chert": 1,
+          "tfc:ore/rich_native_copper/claystone": 1,
+          "tfc:ore/rich_native_copper/conglomerate": 1,
+          "tfc:ore/rich_native_copper/dacite": 1,
+          "tfc:ore/rich_native_copper/diorite": 1,
+          "tfc:ore/rich_native_copper/dolomite": 1,
+          "tfc:ore/rich_native_copper/gabbro": 1,
+          "tfc:ore/rich_native_copper/gneiss": 1,
+          "tfc:ore/rich_native_copper/granite": 1,
+          "tfc:ore/rich_native_copper/limestone": 1,
+          "tfc:ore/rich_native_copper/marble": 1,
+          "tfc:ore/rich_native_copper/phyllite": 1,
+          "tfc:ore/rich_native_copper/quartzite": 1,
+          "tfc:ore/rich_native_copper/rhyolite": 1,
+          "tfc:ore/rich_native_copper/schist": 1,
+          "tfc:ore/rich_native_copper/shale": 1,
+          "tfc:ore/rich_native_copper/slate": 1,
+          "tfc:ore/small_native_copper": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_native_copper/dripstone": 1,
+          "tfcflorae:ore/poor_native_copper/dripstone": 1,
+          "tfcflorae:ore/rich_native_copper/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/native_gold.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\native_gold.json",
+      "backup_sha256": "cc8b7ea70db3d7a11306599afd25a9a0e76b320912a75b094ab79ec1063d1dd8",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_native_gold": 1,
+          "tfc:ore/normal_native_gold/andesite": 1,
+          "tfc:ore/normal_native_gold/basalt": 1,
+          "tfc:ore/normal_native_gold/chalk": 1,
+          "tfc:ore/normal_native_gold/chert": 1,
+          "tfc:ore/normal_native_gold/claystone": 1,
+          "tfc:ore/normal_native_gold/conglomerate": 1,
+          "tfc:ore/normal_native_gold/dacite": 1,
+          "tfc:ore/normal_native_gold/diorite": 1,
+          "tfc:ore/normal_native_gold/dolomite": 1,
+          "tfc:ore/normal_native_gold/gabbro": 1,
+          "tfc:ore/normal_native_gold/gneiss": 1,
+          "tfc:ore/normal_native_gold/granite": 1,
+          "tfc:ore/normal_native_gold/limestone": 1,
+          "tfc:ore/normal_native_gold/marble": 1,
+          "tfc:ore/normal_native_gold/phyllite": 1,
+          "tfc:ore/normal_native_gold/quartzite": 1,
+          "tfc:ore/normal_native_gold/rhyolite": 1,
+          "tfc:ore/normal_native_gold/schist": 1,
+          "tfc:ore/normal_native_gold/shale": 1,
+          "tfc:ore/normal_native_gold/slate": 1,
+          "tfc:ore/poor_native_gold": 1,
+          "tfc:ore/poor_native_gold/andesite": 1,
+          "tfc:ore/poor_native_gold/basalt": 1,
+          "tfc:ore/poor_native_gold/chalk": 1,
+          "tfc:ore/poor_native_gold/chert": 1,
+          "tfc:ore/poor_native_gold/claystone": 1,
+          "tfc:ore/poor_native_gold/conglomerate": 1,
+          "tfc:ore/poor_native_gold/dacite": 1,
+          "tfc:ore/poor_native_gold/diorite": 1,
+          "tfc:ore/poor_native_gold/dolomite": 1,
+          "tfc:ore/poor_native_gold/gabbro": 1,
+          "tfc:ore/poor_native_gold/gneiss": 1,
+          "tfc:ore/poor_native_gold/granite": 1,
+          "tfc:ore/poor_native_gold/limestone": 1,
+          "tfc:ore/poor_native_gold/marble": 1,
+          "tfc:ore/poor_native_gold/phyllite": 1,
+          "tfc:ore/poor_native_gold/quartzite": 1,
+          "tfc:ore/poor_native_gold/rhyolite": 1,
+          "tfc:ore/poor_native_gold/schist": 1,
+          "tfc:ore/poor_native_gold/shale": 1,
+          "tfc:ore/poor_native_gold/slate": 1,
+          "tfc:ore/rich_native_gold": 1,
+          "tfc:ore/rich_native_gold/andesite": 1,
+          "tfc:ore/rich_native_gold/basalt": 1,
+          "tfc:ore/rich_native_gold/chalk": 1,
+          "tfc:ore/rich_native_gold/chert": 1,
+          "tfc:ore/rich_native_gold/claystone": 1,
+          "tfc:ore/rich_native_gold/conglomerate": 1,
+          "tfc:ore/rich_native_gold/dacite": 1,
+          "tfc:ore/rich_native_gold/diorite": 1,
+          "tfc:ore/rich_native_gold/dolomite": 1,
+          "tfc:ore/rich_native_gold/gabbro": 1,
+          "tfc:ore/rich_native_gold/gneiss": 1,
+          "tfc:ore/rich_native_gold/granite": 1,
+          "tfc:ore/rich_native_gold/limestone": 1,
+          "tfc:ore/rich_native_gold/marble": 1,
+          "tfc:ore/rich_native_gold/phyllite": 1,
+          "tfc:ore/rich_native_gold/quartzite": 1,
+          "tfc:ore/rich_native_gold/rhyolite": 1,
+          "tfc:ore/rich_native_gold/schist": 1,
+          "tfc:ore/rich_native_gold/shale": 1,
+          "tfc:ore/rich_native_gold/slate": 1,
+          "tfc:ore/small_native_gold": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_native_gold/dripstone": 1,
+          "tfcflorae:ore/poor_native_gold/dripstone": 1,
+          "tfcflorae:ore/rich_native_gold/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/native_silver.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\native_silver.json",
+      "backup_sha256": "a63a23d37a9693af0efa7ada5e03e2b33e6a25ed63ec9b4d6daba1de9e71634d",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_native_silver": 1,
+          "tfc:ore/normal_native_silver/andesite": 1,
+          "tfc:ore/normal_native_silver/basalt": 1,
+          "tfc:ore/normal_native_silver/chalk": 1,
+          "tfc:ore/normal_native_silver/chert": 1,
+          "tfc:ore/normal_native_silver/claystone": 1,
+          "tfc:ore/normal_native_silver/conglomerate": 1,
+          "tfc:ore/normal_native_silver/dacite": 1,
+          "tfc:ore/normal_native_silver/diorite": 1,
+          "tfc:ore/normal_native_silver/dolomite": 1,
+          "tfc:ore/normal_native_silver/gabbro": 1,
+          "tfc:ore/normal_native_silver/gneiss": 1,
+          "tfc:ore/normal_native_silver/granite": 1,
+          "tfc:ore/normal_native_silver/limestone": 1,
+          "tfc:ore/normal_native_silver/marble": 1,
+          "tfc:ore/normal_native_silver/phyllite": 1,
+          "tfc:ore/normal_native_silver/quartzite": 1,
+          "tfc:ore/normal_native_silver/rhyolite": 1,
+          "tfc:ore/normal_native_silver/schist": 1,
+          "tfc:ore/normal_native_silver/shale": 1,
+          "tfc:ore/normal_native_silver/slate": 1,
+          "tfc:ore/poor_native_silver": 1,
+          "tfc:ore/poor_native_silver/andesite": 1,
+          "tfc:ore/poor_native_silver/basalt": 1,
+          "tfc:ore/poor_native_silver/chalk": 1,
+          "tfc:ore/poor_native_silver/chert": 1,
+          "tfc:ore/poor_native_silver/claystone": 1,
+          "tfc:ore/poor_native_silver/conglomerate": 1,
+          "tfc:ore/poor_native_silver/dacite": 1,
+          "tfc:ore/poor_native_silver/diorite": 1,
+          "tfc:ore/poor_native_silver/dolomite": 1,
+          "tfc:ore/poor_native_silver/gabbro": 1,
+          "tfc:ore/poor_native_silver/gneiss": 1,
+          "tfc:ore/poor_native_silver/granite": 1,
+          "tfc:ore/poor_native_silver/limestone": 1,
+          "tfc:ore/poor_native_silver/marble": 1,
+          "tfc:ore/poor_native_silver/phyllite": 1,
+          "tfc:ore/poor_native_silver/quartzite": 1,
+          "tfc:ore/poor_native_silver/rhyolite": 1,
+          "tfc:ore/poor_native_silver/schist": 1,
+          "tfc:ore/poor_native_silver/shale": 1,
+          "tfc:ore/poor_native_silver/slate": 1,
+          "tfc:ore/rich_native_silver": 1,
+          "tfc:ore/rich_native_silver/andesite": 1,
+          "tfc:ore/rich_native_silver/basalt": 1,
+          "tfc:ore/rich_native_silver/chalk": 1,
+          "tfc:ore/rich_native_silver/chert": 1,
+          "tfc:ore/rich_native_silver/claystone": 1,
+          "tfc:ore/rich_native_silver/conglomerate": 1,
+          "tfc:ore/rich_native_silver/dacite": 1,
+          "tfc:ore/rich_native_silver/diorite": 1,
+          "tfc:ore/rich_native_silver/dolomite": 1,
+          "tfc:ore/rich_native_silver/gabbro": 1,
+          "tfc:ore/rich_native_silver/gneiss": 1,
+          "tfc:ore/rich_native_silver/granite": 1,
+          "tfc:ore/rich_native_silver/limestone": 1,
+          "tfc:ore/rich_native_silver/marble": 1,
+          "tfc:ore/rich_native_silver/phyllite": 1,
+          "tfc:ore/rich_native_silver/quartzite": 1,
+          "tfc:ore/rich_native_silver/rhyolite": 1,
+          "tfc:ore/rich_native_silver/schist": 1,
+          "tfc:ore/rich_native_silver/shale": 1,
+          "tfc:ore/rich_native_silver/slate": 1,
+          "tfc:ore/small_native_silver": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_native_silver/dripstone": 1,
+          "tfcflorae:ore/poor_native_silver/dripstone": 1,
+          "tfcflorae:ore/rich_native_silver/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/sphalerite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\sphalerite.json",
+      "backup_sha256": "9d63ab26a53d26d3065a1cfc585b856cbfab17ec8472b562ba112db3ae301e01",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_sphalerite": 1,
+          "tfc:ore/normal_sphalerite/andesite": 1,
+          "tfc:ore/normal_sphalerite/basalt": 1,
+          "tfc:ore/normal_sphalerite/chalk": 1,
+          "tfc:ore/normal_sphalerite/chert": 1,
+          "tfc:ore/normal_sphalerite/claystone": 1,
+          "tfc:ore/normal_sphalerite/conglomerate": 1,
+          "tfc:ore/normal_sphalerite/dacite": 1,
+          "tfc:ore/normal_sphalerite/diorite": 1,
+          "tfc:ore/normal_sphalerite/dolomite": 1,
+          "tfc:ore/normal_sphalerite/gabbro": 1,
+          "tfc:ore/normal_sphalerite/gneiss": 1,
+          "tfc:ore/normal_sphalerite/granite": 1,
+          "tfc:ore/normal_sphalerite/limestone": 1,
+          "tfc:ore/normal_sphalerite/marble": 1,
+          "tfc:ore/normal_sphalerite/phyllite": 1,
+          "tfc:ore/normal_sphalerite/quartzite": 1,
+          "tfc:ore/normal_sphalerite/rhyolite": 1,
+          "tfc:ore/normal_sphalerite/schist": 1,
+          "tfc:ore/normal_sphalerite/shale": 1,
+          "tfc:ore/normal_sphalerite/slate": 1,
+          "tfc:ore/poor_sphalerite": 1,
+          "tfc:ore/poor_sphalerite/andesite": 1,
+          "tfc:ore/poor_sphalerite/basalt": 1,
+          "tfc:ore/poor_sphalerite/chalk": 1,
+          "tfc:ore/poor_sphalerite/chert": 1,
+          "tfc:ore/poor_sphalerite/claystone": 1,
+          "tfc:ore/poor_sphalerite/conglomerate": 1,
+          "tfc:ore/poor_sphalerite/dacite": 1,
+          "tfc:ore/poor_sphalerite/diorite": 1,
+          "tfc:ore/poor_sphalerite/dolomite": 1,
+          "tfc:ore/poor_sphalerite/gabbro": 1,
+          "tfc:ore/poor_sphalerite/gneiss": 1,
+          "tfc:ore/poor_sphalerite/granite": 1,
+          "tfc:ore/poor_sphalerite/limestone": 1,
+          "tfc:ore/poor_sphalerite/marble": 1,
+          "tfc:ore/poor_sphalerite/phyllite": 1,
+          "tfc:ore/poor_sphalerite/quartzite": 1,
+          "tfc:ore/poor_sphalerite/rhyolite": 1,
+          "tfc:ore/poor_sphalerite/schist": 1,
+          "tfc:ore/poor_sphalerite/shale": 1,
+          "tfc:ore/poor_sphalerite/slate": 1,
+          "tfc:ore/rich_sphalerite": 1,
+          "tfc:ore/rich_sphalerite/andesite": 1,
+          "tfc:ore/rich_sphalerite/basalt": 1,
+          "tfc:ore/rich_sphalerite/chalk": 1,
+          "tfc:ore/rich_sphalerite/chert": 1,
+          "tfc:ore/rich_sphalerite/claystone": 1,
+          "tfc:ore/rich_sphalerite/conglomerate": 1,
+          "tfc:ore/rich_sphalerite/dacite": 1,
+          "tfc:ore/rich_sphalerite/diorite": 1,
+          "tfc:ore/rich_sphalerite/dolomite": 1,
+          "tfc:ore/rich_sphalerite/gabbro": 1,
+          "tfc:ore/rich_sphalerite/gneiss": 1,
+          "tfc:ore/rich_sphalerite/granite": 1,
+          "tfc:ore/rich_sphalerite/limestone": 1,
+          "tfc:ore/rich_sphalerite/marble": 1,
+          "tfc:ore/rich_sphalerite/phyllite": 1,
+          "tfc:ore/rich_sphalerite/quartzite": 1,
+          "tfc:ore/rich_sphalerite/rhyolite": 1,
+          "tfc:ore/rich_sphalerite/schist": 1,
+          "tfc:ore/rich_sphalerite/shale": 1,
+          "tfc:ore/rich_sphalerite/slate": 1,
+          "tfc:ore/small_sphalerite": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_sphalerite/dripstone": 1,
+          "tfcflorae:ore/poor_sphalerite/dripstone": 1,
+          "tfcflorae:ore/rich_sphalerite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_heats/ore/tetrahedrite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_heats\\ore\\tetrahedrite.json",
+      "backup_sha256": "be32bedd11cff9e536c53dc147ae6e28a085074de9837cd8a64b01b4d953715a",
+      "kind": "tfc/item_heats",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_tetrahedrite": 1,
+          "tfc:ore/normal_tetrahedrite/andesite": 1,
+          "tfc:ore/normal_tetrahedrite/basalt": 1,
+          "tfc:ore/normal_tetrahedrite/chalk": 1,
+          "tfc:ore/normal_tetrahedrite/chert": 1,
+          "tfc:ore/normal_tetrahedrite/claystone": 1,
+          "tfc:ore/normal_tetrahedrite/conglomerate": 1,
+          "tfc:ore/normal_tetrahedrite/dacite": 1,
+          "tfc:ore/normal_tetrahedrite/diorite": 1,
+          "tfc:ore/normal_tetrahedrite/dolomite": 1,
+          "tfc:ore/normal_tetrahedrite/gabbro": 1,
+          "tfc:ore/normal_tetrahedrite/gneiss": 1,
+          "tfc:ore/normal_tetrahedrite/granite": 1,
+          "tfc:ore/normal_tetrahedrite/limestone": 1,
+          "tfc:ore/normal_tetrahedrite/marble": 1,
+          "tfc:ore/normal_tetrahedrite/phyllite": 1,
+          "tfc:ore/normal_tetrahedrite/quartzite": 1,
+          "tfc:ore/normal_tetrahedrite/rhyolite": 1,
+          "tfc:ore/normal_tetrahedrite/schist": 1,
+          "tfc:ore/normal_tetrahedrite/shale": 1,
+          "tfc:ore/normal_tetrahedrite/slate": 1,
+          "tfc:ore/poor_tetrahedrite": 1,
+          "tfc:ore/poor_tetrahedrite/andesite": 1,
+          "tfc:ore/poor_tetrahedrite/basalt": 1,
+          "tfc:ore/poor_tetrahedrite/chalk": 1,
+          "tfc:ore/poor_tetrahedrite/chert": 1,
+          "tfc:ore/poor_tetrahedrite/claystone": 1,
+          "tfc:ore/poor_tetrahedrite/conglomerate": 1,
+          "tfc:ore/poor_tetrahedrite/dacite": 1,
+          "tfc:ore/poor_tetrahedrite/diorite": 1,
+          "tfc:ore/poor_tetrahedrite/dolomite": 1,
+          "tfc:ore/poor_tetrahedrite/gabbro": 1,
+          "tfc:ore/poor_tetrahedrite/gneiss": 1,
+          "tfc:ore/poor_tetrahedrite/granite": 1,
+          "tfc:ore/poor_tetrahedrite/limestone": 1,
+          "tfc:ore/poor_tetrahedrite/marble": 1,
+          "tfc:ore/poor_tetrahedrite/phyllite": 1,
+          "tfc:ore/poor_tetrahedrite/quartzite": 1,
+          "tfc:ore/poor_tetrahedrite/rhyolite": 1,
+          "tfc:ore/poor_tetrahedrite/schist": 1,
+          "tfc:ore/poor_tetrahedrite/shale": 1,
+          "tfc:ore/poor_tetrahedrite/slate": 1,
+          "tfc:ore/rich_tetrahedrite": 1,
+          "tfc:ore/rich_tetrahedrite/andesite": 1,
+          "tfc:ore/rich_tetrahedrite/basalt": 1,
+          "tfc:ore/rich_tetrahedrite/chalk": 1,
+          "tfc:ore/rich_tetrahedrite/chert": 1,
+          "tfc:ore/rich_tetrahedrite/claystone": 1,
+          "tfc:ore/rich_tetrahedrite/conglomerate": 1,
+          "tfc:ore/rich_tetrahedrite/dacite": 1,
+          "tfc:ore/rich_tetrahedrite/diorite": 1,
+          "tfc:ore/rich_tetrahedrite/dolomite": 1,
+          "tfc:ore/rich_tetrahedrite/gabbro": 1,
+          "tfc:ore/rich_tetrahedrite/gneiss": 1,
+          "tfc:ore/rich_tetrahedrite/granite": 1,
+          "tfc:ore/rich_tetrahedrite/limestone": 1,
+          "tfc:ore/rich_tetrahedrite/marble": 1,
+          "tfc:ore/rich_tetrahedrite/phyllite": 1,
+          "tfc:ore/rich_tetrahedrite/quartzite": 1,
+          "tfc:ore/rich_tetrahedrite/rhyolite": 1,
+          "tfc:ore/rich_tetrahedrite/schist": 1,
+          "tfc:ore/rich_tetrahedrite/shale": 1,
+          "tfc:ore/rich_tetrahedrite/slate": 1,
+          "tfc:ore/small_tetrahedrite": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_tetrahedrite/dripstone": 1,
+          "tfcflorae:ore/poor_tetrahedrite/dripstone": 1,
+          "tfcflorae:ore/rich_tetrahedrite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_sizes/ores_small.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_sizes\\ores_small.json",
+      "backup_sha256": "6177dfdb870a95ce87d7a5f3da16cd08b485354b3a2c0d639a4ba15a45921f4f",
+      "kind": "tfc/item_sizes",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/normal_bismuthinite": 1,
+          "tfc:ore/normal_bismuthinite/andesite": 1,
+          "tfc:ore/normal_bismuthinite/basalt": 1,
+          "tfc:ore/normal_bismuthinite/chalk": 1,
+          "tfc:ore/normal_bismuthinite/chert": 1,
+          "tfc:ore/normal_bismuthinite/claystone": 1,
+          "tfc:ore/normal_bismuthinite/conglomerate": 1,
+          "tfc:ore/normal_bismuthinite/dacite": 1,
+          "tfc:ore/normal_bismuthinite/diorite": 1,
+          "tfc:ore/normal_bismuthinite/dolomite": 1,
+          "tfc:ore/normal_bismuthinite/gabbro": 1,
+          "tfc:ore/normal_bismuthinite/gneiss": 1,
+          "tfc:ore/normal_bismuthinite/granite": 1,
+          "tfc:ore/normal_bismuthinite/limestone": 1,
+          "tfc:ore/normal_bismuthinite/marble": 1,
+          "tfc:ore/normal_bismuthinite/phyllite": 1,
+          "tfc:ore/normal_bismuthinite/quartzite": 1,
+          "tfc:ore/normal_bismuthinite/rhyolite": 1,
+          "tfc:ore/normal_bismuthinite/schist": 1,
+          "tfc:ore/normal_bismuthinite/shale": 1,
+          "tfc:ore/normal_bismuthinite/slate": 1,
+          "tfc:ore/poor_bismuthinite": 1,
+          "tfc:ore/poor_bismuthinite/andesite": 1,
+          "tfc:ore/poor_bismuthinite/basalt": 1,
+          "tfc:ore/poor_bismuthinite/chalk": 1,
+          "tfc:ore/poor_bismuthinite/chert": 1,
+          "tfc:ore/poor_bismuthinite/claystone": 1,
+          "tfc:ore/poor_bismuthinite/conglomerate": 1,
+          "tfc:ore/poor_bismuthinite/dacite": 1,
+          "tfc:ore/poor_bismuthinite/diorite": 1,
+          "tfc:ore/poor_bismuthinite/dolomite": 1,
+          "tfc:ore/poor_bismuthinite/gabbro": 1,
+          "tfc:ore/poor_bismuthinite/gneiss": 1,
+          "tfc:ore/poor_bismuthinite/granite": 1,
+          "tfc:ore/poor_bismuthinite/limestone": 1,
+          "tfc:ore/poor_bismuthinite/marble": 1,
+          "tfc:ore/poor_bismuthinite/phyllite": 1,
+          "tfc:ore/poor_bismuthinite/quartzite": 1,
+          "tfc:ore/poor_bismuthinite/rhyolite": 1,
+          "tfc:ore/poor_bismuthinite/schist": 1,
+          "tfc:ore/poor_bismuthinite/shale": 1,
+          "tfc:ore/poor_bismuthinite/slate": 1,
+          "tfc:ore/rich_bismuthinite": 1,
+          "tfc:ore/rich_bismuthinite/andesite": 1,
+          "tfc:ore/rich_bismuthinite/basalt": 1,
+          "tfc:ore/rich_bismuthinite/chalk": 1,
+          "tfc:ore/rich_bismuthinite/chert": 1,
+          "tfc:ore/rich_bismuthinite/claystone": 1,
+          "tfc:ore/rich_bismuthinite/conglomerate": 1,
+          "tfc:ore/rich_bismuthinite/dacite": 1,
+          "tfc:ore/rich_bismuthinite/diorite": 1,
+          "tfc:ore/rich_bismuthinite/dolomite": 1,
+          "tfc:ore/rich_bismuthinite/gabbro": 1,
+          "tfc:ore/rich_bismuthinite/gneiss": 1,
+          "tfc:ore/rich_bismuthinite/granite": 1,
+          "tfc:ore/rich_bismuthinite/limestone": 1,
+          "tfc:ore/rich_bismuthinite/marble": 1,
+          "tfc:ore/rich_bismuthinite/phyllite": 1,
+          "tfc:ore/rich_bismuthinite/quartzite": 1,
+          "tfc:ore/rich_bismuthinite/rhyolite": 1,
+          "tfc:ore/rich_bismuthinite/schist": 1,
+          "tfc:ore/rich_bismuthinite/shale": 1,
+          "tfc:ore/rich_bismuthinite/slate": 1,
+          "tfc:ore/normal_cassiterite": 1,
+          "tfc:ore/normal_cassiterite/andesite": 1,
+          "tfc:ore/normal_cassiterite/basalt": 1,
+          "tfc:ore/normal_cassiterite/chalk": 1,
+          "tfc:ore/normal_cassiterite/chert": 1,
+          "tfc:ore/normal_cassiterite/claystone": 1,
+          "tfc:ore/normal_cassiterite/conglomerate": 1,
+          "tfc:ore/normal_cassiterite/dacite": 1,
+          "tfc:ore/normal_cassiterite/diorite": 1,
+          "tfc:ore/normal_cassiterite/dolomite": 1,
+          "tfc:ore/normal_cassiterite/gabbro": 1,
+          "tfc:ore/normal_cassiterite/gneiss": 1,
+          "tfc:ore/normal_cassiterite/granite": 1,
+          "tfc:ore/normal_cassiterite/limestone": 1,
+          "tfc:ore/normal_cassiterite/marble": 1,
+          "tfc:ore/normal_cassiterite/phyllite": 1,
+          "tfc:ore/normal_cassiterite/quartzite": 1,
+          "tfc:ore/normal_cassiterite/rhyolite": 1,
+          "tfc:ore/normal_cassiterite/schist": 1,
+          "tfc:ore/normal_cassiterite/shale": 1,
+          "tfc:ore/normal_cassiterite/slate": 1,
+          "tfc:ore/poor_cassiterite": 1,
+          "tfc:ore/poor_cassiterite/andesite": 1,
+          "tfc:ore/poor_cassiterite/basalt": 1,
+          "tfc:ore/poor_cassiterite/chalk": 1,
+          "tfc:ore/poor_cassiterite/chert": 1,
+          "tfc:ore/poor_cassiterite/claystone": 1,
+          "tfc:ore/poor_cassiterite/conglomerate": 1,
+          "tfc:ore/poor_cassiterite/dacite": 1,
+          "tfc:ore/poor_cassiterite/diorite": 1,
+          "tfc:ore/poor_cassiterite/dolomite": 1,
+          "tfc:ore/poor_cassiterite/gabbro": 1,
+          "tfc:ore/poor_cassiterite/gneiss": 1,
+          "tfc:ore/poor_cassiterite/granite": 1,
+          "tfc:ore/poor_cassiterite/limestone": 1,
+          "tfc:ore/poor_cassiterite/marble": 1,
+          "tfc:ore/poor_cassiterite/phyllite": 1,
+          "tfc:ore/poor_cassiterite/quartzite": 1,
+          "tfc:ore/poor_cassiterite/rhyolite": 1,
+          "tfc:ore/poor_cassiterite/schist": 1,
+          "tfc:ore/poor_cassiterite/shale": 1,
+          "tfc:ore/poor_cassiterite/slate": 1,
+          "tfc:ore/rich_cassiterite": 1,
+          "tfc:ore/rich_cassiterite/andesite": 1,
+          "tfc:ore/rich_cassiterite/basalt": 1,
+          "tfc:ore/rich_cassiterite/chalk": 1,
+          "tfc:ore/rich_cassiterite/chert": 1,
+          "tfc:ore/rich_cassiterite/claystone": 1,
+          "tfc:ore/rich_cassiterite/conglomerate": 1,
+          "tfc:ore/rich_cassiterite/dacite": 1,
+          "tfc:ore/rich_cassiterite/diorite": 1,
+          "tfc:ore/rich_cassiterite/dolomite": 1,
+          "tfc:ore/rich_cassiterite/gabbro": 1,
+          "tfc:ore/rich_cassiterite/gneiss": 1,
+          "tfc:ore/rich_cassiterite/granite": 1,
+          "tfc:ore/rich_cassiterite/limestone": 1,
+          "tfc:ore/rich_cassiterite/marble": 1,
+          "tfc:ore/rich_cassiterite/phyllite": 1,
+          "tfc:ore/rich_cassiterite/quartzite": 1,
+          "tfc:ore/rich_cassiterite/rhyolite": 1,
+          "tfc:ore/rich_cassiterite/schist": 1,
+          "tfc:ore/rich_cassiterite/shale": 1,
+          "tfc:ore/rich_cassiterite/slate": 1,
+          "tfc:ore/normal_garnierite": 1,
+          "tfc:ore/normal_garnierite/andesite": 1,
+          "tfc:ore/normal_garnierite/basalt": 1,
+          "tfc:ore/normal_garnierite/chalk": 1,
+          "tfc:ore/normal_garnierite/chert": 1,
+          "tfc:ore/normal_garnierite/claystone": 1,
+          "tfc:ore/normal_garnierite/conglomerate": 1,
+          "tfc:ore/normal_garnierite/dacite": 1,
+          "tfc:ore/normal_garnierite/diorite": 1,
+          "tfc:ore/normal_garnierite/dolomite": 1,
+          "tfc:ore/normal_garnierite/gabbro": 1,
+          "tfc:ore/normal_garnierite/gneiss": 1,
+          "tfc:ore/normal_garnierite/granite": 1,
+          "tfc:ore/normal_garnierite/limestone": 1,
+          "tfc:ore/normal_garnierite/marble": 1,
+          "tfc:ore/normal_garnierite/phyllite": 1,
+          "tfc:ore/normal_garnierite/quartzite": 1,
+          "tfc:ore/normal_garnierite/rhyolite": 1,
+          "tfc:ore/normal_garnierite/schist": 1,
+          "tfc:ore/normal_garnierite/shale": 1,
+          "tfc:ore/normal_garnierite/slate": 1,
+          "tfc:ore/poor_garnierite": 1,
+          "tfc:ore/poor_garnierite/andesite": 1,
+          "tfc:ore/poor_garnierite/basalt": 1,
+          "tfc:ore/poor_garnierite/chalk": 1,
+          "tfc:ore/poor_garnierite/chert": 1,
+          "tfc:ore/poor_garnierite/claystone": 1,
+          "tfc:ore/poor_garnierite/conglomerate": 1,
+          "tfc:ore/poor_garnierite/dacite": 1,
+          "tfc:ore/poor_garnierite/diorite": 1,
+          "tfc:ore/poor_garnierite/dolomite": 1,
+          "tfc:ore/poor_garnierite/gabbro": 1,
+          "tfc:ore/poor_garnierite/gneiss": 1,
+          "tfc:ore/poor_garnierite/granite": 1,
+          "tfc:ore/poor_garnierite/limestone": 1,
+          "tfc:ore/poor_garnierite/marble": 1,
+          "tfc:ore/poor_garnierite/phyllite": 1,
+          "tfc:ore/poor_garnierite/quartzite": 1,
+          "tfc:ore/poor_garnierite/rhyolite": 1,
+          "tfc:ore/poor_garnierite/schist": 1,
+          "tfc:ore/poor_garnierite/shale": 1,
+          "tfc:ore/poor_garnierite/slate": 1,
+          "tfc:ore/rich_garnierite": 1,
+          "tfc:ore/rich_garnierite/andesite": 1,
+          "tfc:ore/rich_garnierite/basalt": 1,
+          "tfc:ore/rich_garnierite/chalk": 1,
+          "tfc:ore/rich_garnierite/chert": 1,
+          "tfc:ore/rich_garnierite/claystone": 1,
+          "tfc:ore/rich_garnierite/conglomerate": 1,
+          "tfc:ore/rich_garnierite/dacite": 1,
+          "tfc:ore/rich_garnierite/diorite": 1,
+          "tfc:ore/rich_garnierite/dolomite": 1,
+          "tfc:ore/rich_garnierite/gabbro": 1,
+          "tfc:ore/rich_garnierite/gneiss": 1,
+          "tfc:ore/rich_garnierite/granite": 1,
+          "tfc:ore/rich_garnierite/limestone": 1,
+          "tfc:ore/rich_garnierite/marble": 1,
+          "tfc:ore/rich_garnierite/phyllite": 1,
+          "tfc:ore/rich_garnierite/quartzite": 1,
+          "tfc:ore/rich_garnierite/rhyolite": 1,
+          "tfc:ore/rich_garnierite/schist": 1,
+          "tfc:ore/rich_garnierite/shale": 1,
+          "tfc:ore/rich_garnierite/slate": 1,
+          "tfc:ore/normal_hematite": 1,
+          "tfc:ore/normal_hematite/andesite": 1,
+          "tfc:ore/normal_hematite/basalt": 1,
+          "tfc:ore/normal_hematite/chalk": 1,
+          "tfc:ore/normal_hematite/chert": 1,
+          "tfc:ore/normal_hematite/claystone": 1,
+          "tfc:ore/normal_hematite/conglomerate": 1,
+          "tfc:ore/normal_hematite/dacite": 1,
+          "tfc:ore/normal_hematite/diorite": 1,
+          "tfc:ore/normal_hematite/dolomite": 1,
+          "tfc:ore/normal_hematite/gabbro": 1,
+          "tfc:ore/normal_hematite/gneiss": 1,
+          "tfc:ore/normal_hematite/granite": 1,
+          "tfc:ore/normal_hematite/limestone": 1,
+          "tfc:ore/normal_hematite/marble": 1,
+          "tfc:ore/normal_hematite/phyllite": 1,
+          "tfc:ore/normal_hematite/quartzite": 1,
+          "tfc:ore/normal_hematite/rhyolite": 1,
+          "tfc:ore/normal_hematite/schist": 1,
+          "tfc:ore/normal_hematite/shale": 1,
+          "tfc:ore/normal_hematite/slate": 1,
+          "tfc:ore/poor_hematite": 1,
+          "tfc:ore/poor_hematite/andesite": 1,
+          "tfc:ore/poor_hematite/basalt": 1,
+          "tfc:ore/poor_hematite/chalk": 1,
+          "tfc:ore/poor_hematite/chert": 1,
+          "tfc:ore/poor_hematite/claystone": 1,
+          "tfc:ore/poor_hematite/conglomerate": 1,
+          "tfc:ore/poor_hematite/dacite": 1,
+          "tfc:ore/poor_hematite/diorite": 1,
+          "tfc:ore/poor_hematite/dolomite": 1,
+          "tfc:ore/poor_hematite/gabbro": 1,
+          "tfc:ore/poor_hematite/gneiss": 1,
+          "tfc:ore/poor_hematite/granite": 1,
+          "tfc:ore/poor_hematite/limestone": 1,
+          "tfc:ore/poor_hematite/marble": 1,
+          "tfc:ore/poor_hematite/phyllite": 1,
+          "tfc:ore/poor_hematite/quartzite": 1,
+          "tfc:ore/poor_hematite/rhyolite": 1,
+          "tfc:ore/poor_hematite/schist": 1,
+          "tfc:ore/poor_hematite/shale": 1,
+          "tfc:ore/poor_hematite/slate": 1,
+          "tfc:ore/rich_hematite": 1,
+          "tfc:ore/rich_hematite/andesite": 1,
+          "tfc:ore/rich_hematite/basalt": 1,
+          "tfc:ore/rich_hematite/chalk": 1,
+          "tfc:ore/rich_hematite/chert": 1,
+          "tfc:ore/rich_hematite/claystone": 1,
+          "tfc:ore/rich_hematite/conglomerate": 1,
+          "tfc:ore/rich_hematite/dacite": 1,
+          "tfc:ore/rich_hematite/diorite": 1,
+          "tfc:ore/rich_hematite/dolomite": 1,
+          "tfc:ore/rich_hematite/gabbro": 1,
+          "tfc:ore/rich_hematite/gneiss": 1,
+          "tfc:ore/rich_hematite/granite": 1,
+          "tfc:ore/rich_hematite/limestone": 1,
+          "tfc:ore/rich_hematite/marble": 1,
+          "tfc:ore/rich_hematite/phyllite": 1,
+          "tfc:ore/rich_hematite/quartzite": 1,
+          "tfc:ore/rich_hematite/rhyolite": 1,
+          "tfc:ore/rich_hematite/schist": 1,
+          "tfc:ore/rich_hematite/shale": 1,
+          "tfc:ore/rich_hematite/slate": 1,
+          "tfc:ore/normal_limonite": 1,
+          "tfc:ore/normal_limonite/andesite": 1,
+          "tfc:ore/normal_limonite/basalt": 1,
+          "tfc:ore/normal_limonite/chalk": 1,
+          "tfc:ore/normal_limonite/chert": 1,
+          "tfc:ore/normal_limonite/claystone": 1,
+          "tfc:ore/normal_limonite/conglomerate": 1,
+          "tfc:ore/normal_limonite/dacite": 1,
+          "tfc:ore/normal_limonite/diorite": 1,
+          "tfc:ore/normal_limonite/dolomite": 1,
+          "tfc:ore/normal_limonite/gabbro": 1,
+          "tfc:ore/normal_limonite/gneiss": 1,
+          "tfc:ore/normal_limonite/granite": 1,
+          "tfc:ore/normal_limonite/limestone": 1,
+          "tfc:ore/normal_limonite/marble": 1,
+          "tfc:ore/normal_limonite/phyllite": 1,
+          "tfc:ore/normal_limonite/quartzite": 1,
+          "tfc:ore/normal_limonite/rhyolite": 1,
+          "tfc:ore/normal_limonite/schist": 1,
+          "tfc:ore/normal_limonite/shale": 1,
+          "tfc:ore/normal_limonite/slate": 1,
+          "tfc:ore/poor_limonite": 1,
+          "tfc:ore/poor_limonite/andesite": 1,
+          "tfc:ore/poor_limonite/basalt": 1,
+          "tfc:ore/poor_limonite/chalk": 1,
+          "tfc:ore/poor_limonite/chert": 1,
+          "tfc:ore/poor_limonite/claystone": 1,
+          "tfc:ore/poor_limonite/conglomerate": 1,
+          "tfc:ore/poor_limonite/dacite": 1,
+          "tfc:ore/poor_limonite/diorite": 1,
+          "tfc:ore/poor_limonite/dolomite": 1,
+          "tfc:ore/poor_limonite/gabbro": 1,
+          "tfc:ore/poor_limonite/gneiss": 1,
+          "tfc:ore/poor_limonite/granite": 1,
+          "tfc:ore/poor_limonite/limestone": 1,
+          "tfc:ore/poor_limonite/marble": 1,
+          "tfc:ore/poor_limonite/phyllite": 1,
+          "tfc:ore/poor_limonite/quartzite": 1,
+          "tfc:ore/poor_limonite/rhyolite": 1,
+          "tfc:ore/poor_limonite/schist": 1,
+          "tfc:ore/poor_limonite/shale": 1,
+          "tfc:ore/poor_limonite/slate": 1,
+          "tfc:ore/rich_limonite": 1,
+          "tfc:ore/rich_limonite/andesite": 1,
+          "tfc:ore/rich_limonite/basalt": 1,
+          "tfc:ore/rich_limonite/chalk": 1,
+          "tfc:ore/rich_limonite/chert": 1,
+          "tfc:ore/rich_limonite/claystone": 1,
+          "tfc:ore/rich_limonite/conglomerate": 1,
+          "tfc:ore/rich_limonite/dacite": 1,
+          "tfc:ore/rich_limonite/diorite": 1,
+          "tfc:ore/rich_limonite/dolomite": 1,
+          "tfc:ore/rich_limonite/gabbro": 1,
+          "tfc:ore/rich_limonite/gneiss": 1,
+          "tfc:ore/rich_limonite/granite": 1,
+          "tfc:ore/rich_limonite/limestone": 1,
+          "tfc:ore/rich_limonite/marble": 1,
+          "tfc:ore/rich_limonite/phyllite": 1,
+          "tfc:ore/rich_limonite/quartzite": 1,
+          "tfc:ore/rich_limonite/rhyolite": 1,
+          "tfc:ore/rich_limonite/schist": 1,
+          "tfc:ore/rich_limonite/shale": 1,
+          "tfc:ore/rich_limonite/slate": 1,
+          "tfc:ore/normal_magnetite": 1,
+          "tfc:ore/normal_magnetite/andesite": 1,
+          "tfc:ore/normal_magnetite/basalt": 1,
+          "tfc:ore/normal_magnetite/chalk": 1,
+          "tfc:ore/normal_magnetite/chert": 1,
+          "tfc:ore/normal_magnetite/claystone": 1,
+          "tfc:ore/normal_magnetite/conglomerate": 1,
+          "tfc:ore/normal_magnetite/dacite": 1,
+          "tfc:ore/normal_magnetite/diorite": 1,
+          "tfc:ore/normal_magnetite/dolomite": 1,
+          "tfc:ore/normal_magnetite/gabbro": 1,
+          "tfc:ore/normal_magnetite/gneiss": 1,
+          "tfc:ore/normal_magnetite/granite": 1,
+          "tfc:ore/normal_magnetite/limestone": 1,
+          "tfc:ore/normal_magnetite/marble": 1,
+          "tfc:ore/normal_magnetite/phyllite": 1,
+          "tfc:ore/normal_magnetite/quartzite": 1,
+          "tfc:ore/normal_magnetite/rhyolite": 1,
+          "tfc:ore/normal_magnetite/schist": 1,
+          "tfc:ore/normal_magnetite/shale": 1,
+          "tfc:ore/normal_magnetite/slate": 1,
+          "tfc:ore/poor_magnetite": 1,
+          "tfc:ore/poor_magnetite/andesite": 1,
+          "tfc:ore/poor_magnetite/basalt": 1,
+          "tfc:ore/poor_magnetite/chalk": 1,
+          "tfc:ore/poor_magnetite/chert": 1,
+          "tfc:ore/poor_magnetite/claystone": 1,
+          "tfc:ore/poor_magnetite/conglomerate": 1,
+          "tfc:ore/poor_magnetite/dacite": 1,
+          "tfc:ore/poor_magnetite/diorite": 1,
+          "tfc:ore/poor_magnetite/dolomite": 1,
+          "tfc:ore/poor_magnetite/gabbro": 1,
+          "tfc:ore/poor_magnetite/gneiss": 1,
+          "tfc:ore/poor_magnetite/granite": 1,
+          "tfc:ore/poor_magnetite/limestone": 1,
+          "tfc:ore/poor_magnetite/marble": 1,
+          "tfc:ore/poor_magnetite/phyllite": 1,
+          "tfc:ore/poor_magnetite/quartzite": 1,
+          "tfc:ore/poor_magnetite/rhyolite": 1,
+          "tfc:ore/poor_magnetite/schist": 1,
+          "tfc:ore/poor_magnetite/shale": 1,
+          "tfc:ore/poor_magnetite/slate": 1,
+          "tfc:ore/rich_magnetite": 1,
+          "tfc:ore/rich_magnetite/andesite": 1,
+          "tfc:ore/rich_magnetite/basalt": 1,
+          "tfc:ore/rich_magnetite/chalk": 1,
+          "tfc:ore/rich_magnetite/chert": 1,
+          "tfc:ore/rich_magnetite/claystone": 1,
+          "tfc:ore/rich_magnetite/conglomerate": 1,
+          "tfc:ore/rich_magnetite/dacite": 1,
+          "tfc:ore/rich_magnetite/diorite": 1,
+          "tfc:ore/rich_magnetite/dolomite": 1,
+          "tfc:ore/rich_magnetite/gabbro": 1,
+          "tfc:ore/rich_magnetite/gneiss": 1,
+          "tfc:ore/rich_magnetite/granite": 1,
+          "tfc:ore/rich_magnetite/limestone": 1,
+          "tfc:ore/rich_magnetite/marble": 1,
+          "tfc:ore/rich_magnetite/phyllite": 1,
+          "tfc:ore/rich_magnetite/quartzite": 1,
+          "tfc:ore/rich_magnetite/rhyolite": 1,
+          "tfc:ore/rich_magnetite/schist": 1,
+          "tfc:ore/rich_magnetite/shale": 1,
+          "tfc:ore/rich_magnetite/slate": 1,
+          "tfc:ore/normal_malachite": 1,
+          "tfc:ore/normal_malachite/andesite": 1,
+          "tfc:ore/normal_malachite/basalt": 1,
+          "tfc:ore/normal_malachite/chalk": 1,
+          "tfc:ore/normal_malachite/chert": 1,
+          "tfc:ore/normal_malachite/claystone": 1,
+          "tfc:ore/normal_malachite/conglomerate": 1,
+          "tfc:ore/normal_malachite/dacite": 1,
+          "tfc:ore/normal_malachite/diorite": 1,
+          "tfc:ore/normal_malachite/dolomite": 1,
+          "tfc:ore/normal_malachite/gabbro": 1,
+          "tfc:ore/normal_malachite/gneiss": 1,
+          "tfc:ore/normal_malachite/granite": 1,
+          "tfc:ore/normal_malachite/limestone": 1,
+          "tfc:ore/normal_malachite/marble": 1,
+          "tfc:ore/normal_malachite/phyllite": 1,
+          "tfc:ore/normal_malachite/quartzite": 1,
+          "tfc:ore/normal_malachite/rhyolite": 1,
+          "tfc:ore/normal_malachite/schist": 1,
+          "tfc:ore/normal_malachite/shale": 1,
+          "tfc:ore/normal_malachite/slate": 1,
+          "tfc:ore/poor_malachite": 1,
+          "tfc:ore/poor_malachite/andesite": 1,
+          "tfc:ore/poor_malachite/basalt": 1,
+          "tfc:ore/poor_malachite/chalk": 1,
+          "tfc:ore/poor_malachite/chert": 1,
+          "tfc:ore/poor_malachite/claystone": 1,
+          "tfc:ore/poor_malachite/conglomerate": 1,
+          "tfc:ore/poor_malachite/dacite": 1,
+          "tfc:ore/poor_malachite/diorite": 1,
+          "tfc:ore/poor_malachite/dolomite": 1,
+          "tfc:ore/poor_malachite/gabbro": 1,
+          "tfc:ore/poor_malachite/gneiss": 1,
+          "tfc:ore/poor_malachite/granite": 1,
+          "tfc:ore/poor_malachite/limestone": 1,
+          "tfc:ore/poor_malachite/marble": 1,
+          "tfc:ore/poor_malachite/phyllite": 1,
+          "tfc:ore/poor_malachite/quartzite": 1,
+          "tfc:ore/poor_malachite/rhyolite": 1,
+          "tfc:ore/poor_malachite/schist": 1,
+          "tfc:ore/poor_malachite/shale": 1,
+          "tfc:ore/poor_malachite/slate": 1,
+          "tfc:ore/rich_malachite": 1,
+          "tfc:ore/rich_malachite/andesite": 1,
+          "tfc:ore/rich_malachite/basalt": 1,
+          "tfc:ore/rich_malachite/chalk": 1,
+          "tfc:ore/rich_malachite/chert": 1,
+          "tfc:ore/rich_malachite/claystone": 1,
+          "tfc:ore/rich_malachite/conglomerate": 1,
+          "tfc:ore/rich_malachite/dacite": 1,
+          "tfc:ore/rich_malachite/diorite": 1,
+          "tfc:ore/rich_malachite/dolomite": 1,
+          "tfc:ore/rich_malachite/gabbro": 1,
+          "tfc:ore/rich_malachite/gneiss": 1,
+          "tfc:ore/rich_malachite/granite": 1,
+          "tfc:ore/rich_malachite/limestone": 1,
+          "tfc:ore/rich_malachite/marble": 1,
+          "tfc:ore/rich_malachite/phyllite": 1,
+          "tfc:ore/rich_malachite/quartzite": 1,
+          "tfc:ore/rich_malachite/rhyolite": 1,
+          "tfc:ore/rich_malachite/schist": 1,
+          "tfc:ore/rich_malachite/shale": 1,
+          "tfc:ore/rich_malachite/slate": 1,
+          "tfc:ore/normal_native_copper": 1,
+          "tfc:ore/normal_native_copper/andesite": 1,
+          "tfc:ore/normal_native_copper/basalt": 1,
+          "tfc:ore/normal_native_copper/chalk": 1,
+          "tfc:ore/normal_native_copper/chert": 1,
+          "tfc:ore/normal_native_copper/claystone": 1,
+          "tfc:ore/normal_native_copper/conglomerate": 1,
+          "tfc:ore/normal_native_copper/dacite": 1,
+          "tfc:ore/normal_native_copper/diorite": 1,
+          "tfc:ore/normal_native_copper/dolomite": 1,
+          "tfc:ore/normal_native_copper/gabbro": 1,
+          "tfc:ore/normal_native_copper/gneiss": 1,
+          "tfc:ore/normal_native_copper/granite": 1,
+          "tfc:ore/normal_native_copper/limestone": 1,
+          "tfc:ore/normal_native_copper/marble": 1,
+          "tfc:ore/normal_native_copper/phyllite": 1,
+          "tfc:ore/normal_native_copper/quartzite": 1,
+          "tfc:ore/normal_native_copper/rhyolite": 1,
+          "tfc:ore/normal_native_copper/schist": 1,
+          "tfc:ore/normal_native_copper/shale": 1,
+          "tfc:ore/normal_native_copper/slate": 1,
+          "tfc:ore/poor_native_copper": 1,
+          "tfc:ore/poor_native_copper/andesite": 1,
+          "tfc:ore/poor_native_copper/basalt": 1,
+          "tfc:ore/poor_native_copper/chalk": 1,
+          "tfc:ore/poor_native_copper/chert": 1,
+          "tfc:ore/poor_native_copper/claystone": 1,
+          "tfc:ore/poor_native_copper/conglomerate": 1,
+          "tfc:ore/poor_native_copper/dacite": 1,
+          "tfc:ore/poor_native_copper/diorite": 1,
+          "tfc:ore/poor_native_copper/dolomite": 1,
+          "tfc:ore/poor_native_copper/gabbro": 1,
+          "tfc:ore/poor_native_copper/gneiss": 1,
+          "tfc:ore/poor_native_copper/granite": 1,
+          "tfc:ore/poor_native_copper/limestone": 1,
+          "tfc:ore/poor_native_copper/marble": 1,
+          "tfc:ore/poor_native_copper/phyllite": 1,
+          "tfc:ore/poor_native_copper/quartzite": 1,
+          "tfc:ore/poor_native_copper/rhyolite": 1,
+          "tfc:ore/poor_native_copper/schist": 1,
+          "tfc:ore/poor_native_copper/shale": 1,
+          "tfc:ore/poor_native_copper/slate": 1,
+          "tfc:ore/rich_native_copper": 1,
+          "tfc:ore/rich_native_copper/andesite": 1,
+          "tfc:ore/rich_native_copper/basalt": 1,
+          "tfc:ore/rich_native_copper/chalk": 1,
+          "tfc:ore/rich_native_copper/chert": 1,
+          "tfc:ore/rich_native_copper/claystone": 1,
+          "tfc:ore/rich_native_copper/conglomerate": 1,
+          "tfc:ore/rich_native_copper/dacite": 1,
+          "tfc:ore/rich_native_copper/diorite": 1,
+          "tfc:ore/rich_native_copper/dolomite": 1,
+          "tfc:ore/rich_native_copper/gabbro": 1,
+          "tfc:ore/rich_native_copper/gneiss": 1,
+          "tfc:ore/rich_native_copper/granite": 1,
+          "tfc:ore/rich_native_copper/limestone": 1,
+          "tfc:ore/rich_native_copper/marble": 1,
+          "tfc:ore/rich_native_copper/phyllite": 1,
+          "tfc:ore/rich_native_copper/quartzite": 1,
+          "tfc:ore/rich_native_copper/rhyolite": 1,
+          "tfc:ore/rich_native_copper/schist": 1,
+          "tfc:ore/rich_native_copper/shale": 1,
+          "tfc:ore/rich_native_copper/slate": 1,
+          "tfc:ore/normal_native_gold": 1,
+          "tfc:ore/normal_native_gold/andesite": 1,
+          "tfc:ore/normal_native_gold/basalt": 1,
+          "tfc:ore/normal_native_gold/chalk": 1,
+          "tfc:ore/normal_native_gold/chert": 1,
+          "tfc:ore/normal_native_gold/claystone": 1,
+          "tfc:ore/normal_native_gold/conglomerate": 1,
+          "tfc:ore/normal_native_gold/dacite": 1,
+          "tfc:ore/normal_native_gold/diorite": 1,
+          "tfc:ore/normal_native_gold/dolomite": 1,
+          "tfc:ore/normal_native_gold/gabbro": 1,
+          "tfc:ore/normal_native_gold/gneiss": 1,
+          "tfc:ore/normal_native_gold/granite": 1,
+          "tfc:ore/normal_native_gold/limestone": 1,
+          "tfc:ore/normal_native_gold/marble": 1,
+          "tfc:ore/normal_native_gold/phyllite": 1,
+          "tfc:ore/normal_native_gold/quartzite": 1,
+          "tfc:ore/normal_native_gold/rhyolite": 1,
+          "tfc:ore/normal_native_gold/schist": 1,
+          "tfc:ore/normal_native_gold/shale": 1,
+          "tfc:ore/normal_native_gold/slate": 1,
+          "tfc:ore/poor_native_gold": 1,
+          "tfc:ore/poor_native_gold/andesite": 1,
+          "tfc:ore/poor_native_gold/basalt": 1,
+          "tfc:ore/poor_native_gold/chalk": 1,
+          "tfc:ore/poor_native_gold/chert": 1,
+          "tfc:ore/poor_native_gold/claystone": 1,
+          "tfc:ore/poor_native_gold/conglomerate": 1,
+          "tfc:ore/poor_native_gold/dacite": 1,
+          "tfc:ore/poor_native_gold/diorite": 1,
+          "tfc:ore/poor_native_gold/dolomite": 1,
+          "tfc:ore/poor_native_gold/gabbro": 1,
+          "tfc:ore/poor_native_gold/gneiss": 1,
+          "tfc:ore/poor_native_gold/granite": 1,
+          "tfc:ore/poor_native_gold/limestone": 1,
+          "tfc:ore/poor_native_gold/marble": 1,
+          "tfc:ore/poor_native_gold/phyllite": 1,
+          "tfc:ore/poor_native_gold/quartzite": 1,
+          "tfc:ore/poor_native_gold/rhyolite": 1,
+          "tfc:ore/poor_native_gold/schist": 1,
+          "tfc:ore/poor_native_gold/shale": 1,
+          "tfc:ore/poor_native_gold/slate": 1,
+          "tfc:ore/rich_native_gold": 1,
+          "tfc:ore/rich_native_gold/andesite": 1,
+          "tfc:ore/rich_native_gold/basalt": 1,
+          "tfc:ore/rich_native_gold/chalk": 1,
+          "tfc:ore/rich_native_gold/chert": 1,
+          "tfc:ore/rich_native_gold/claystone": 1,
+          "tfc:ore/rich_native_gold/conglomerate": 1,
+          "tfc:ore/rich_native_gold/dacite": 1,
+          "tfc:ore/rich_native_gold/diorite": 1,
+          "tfc:ore/rich_native_gold/dolomite": 1,
+          "tfc:ore/rich_native_gold/gabbro": 1,
+          "tfc:ore/rich_native_gold/gneiss": 1,
+          "tfc:ore/rich_native_gold/granite": 1,
+          "tfc:ore/rich_native_gold/limestone": 1,
+          "tfc:ore/rich_native_gold/marble": 1,
+          "tfc:ore/rich_native_gold/phyllite": 1,
+          "tfc:ore/rich_native_gold/quartzite": 1,
+          "tfc:ore/rich_native_gold/rhyolite": 1,
+          "tfc:ore/rich_native_gold/schist": 1,
+          "tfc:ore/rich_native_gold/shale": 1,
+          "tfc:ore/rich_native_gold/slate": 1,
+          "tfc:ore/normal_native_silver": 1,
+          "tfc:ore/normal_native_silver/andesite": 1,
+          "tfc:ore/normal_native_silver/basalt": 1,
+          "tfc:ore/normal_native_silver/chalk": 1,
+          "tfc:ore/normal_native_silver/chert": 1,
+          "tfc:ore/normal_native_silver/claystone": 1,
+          "tfc:ore/normal_native_silver/conglomerate": 1,
+          "tfc:ore/normal_native_silver/dacite": 1,
+          "tfc:ore/normal_native_silver/diorite": 1,
+          "tfc:ore/normal_native_silver/dolomite": 1,
+          "tfc:ore/normal_native_silver/gabbro": 1,
+          "tfc:ore/normal_native_silver/gneiss": 1,
+          "tfc:ore/normal_native_silver/granite": 1,
+          "tfc:ore/normal_native_silver/limestone": 1,
+          "tfc:ore/normal_native_silver/marble": 1,
+          "tfc:ore/normal_native_silver/phyllite": 1,
+          "tfc:ore/normal_native_silver/quartzite": 1,
+          "tfc:ore/normal_native_silver/rhyolite": 1,
+          "tfc:ore/normal_native_silver/schist": 1,
+          "tfc:ore/normal_native_silver/shale": 1,
+          "tfc:ore/normal_native_silver/slate": 1,
+          "tfc:ore/poor_native_silver": 1,
+          "tfc:ore/poor_native_silver/andesite": 1,
+          "tfc:ore/poor_native_silver/basalt": 1,
+          "tfc:ore/poor_native_silver/chalk": 1,
+          "tfc:ore/poor_native_silver/chert": 1,
+          "tfc:ore/poor_native_silver/claystone": 1,
+          "tfc:ore/poor_native_silver/conglomerate": 1,
+          "tfc:ore/poor_native_silver/dacite": 1,
+          "tfc:ore/poor_native_silver/diorite": 1,
+          "tfc:ore/poor_native_silver/dolomite": 1,
+          "tfc:ore/poor_native_silver/gabbro": 1,
+          "tfc:ore/poor_native_silver/gneiss": 1,
+          "tfc:ore/poor_native_silver/granite": 1,
+          "tfc:ore/poor_native_silver/limestone": 1,
+          "tfc:ore/poor_native_silver/marble": 1,
+          "tfc:ore/poor_native_silver/phyllite": 1,
+          "tfc:ore/poor_native_silver/quartzite": 1,
+          "tfc:ore/poor_native_silver/rhyolite": 1,
+          "tfc:ore/poor_native_silver/schist": 1,
+          "tfc:ore/poor_native_silver/shale": 1,
+          "tfc:ore/poor_native_silver/slate": 1,
+          "tfc:ore/rich_native_silver": 1,
+          "tfc:ore/rich_native_silver/andesite": 1,
+          "tfc:ore/rich_native_silver/basalt": 1,
+          "tfc:ore/rich_native_silver/chalk": 1,
+          "tfc:ore/rich_native_silver/chert": 1,
+          "tfc:ore/rich_native_silver/claystone": 1,
+          "tfc:ore/rich_native_silver/conglomerate": 1,
+          "tfc:ore/rich_native_silver/dacite": 1,
+          "tfc:ore/rich_native_silver/diorite": 1,
+          "tfc:ore/rich_native_silver/dolomite": 1,
+          "tfc:ore/rich_native_silver/gabbro": 1,
+          "tfc:ore/rich_native_silver/gneiss": 1,
+          "tfc:ore/rich_native_silver/granite": 1,
+          "tfc:ore/rich_native_silver/limestone": 1,
+          "tfc:ore/rich_native_silver/marble": 1,
+          "tfc:ore/rich_native_silver/phyllite": 1,
+          "tfc:ore/rich_native_silver/quartzite": 1,
+          "tfc:ore/rich_native_silver/rhyolite": 1,
+          "tfc:ore/rich_native_silver/schist": 1,
+          "tfc:ore/rich_native_silver/shale": 1,
+          "tfc:ore/rich_native_silver/slate": 1,
+          "tfc:ore/normal_sphalerite": 1,
+          "tfc:ore/normal_sphalerite/andesite": 1,
+          "tfc:ore/normal_sphalerite/basalt": 1,
+          "tfc:ore/normal_sphalerite/chalk": 1,
+          "tfc:ore/normal_sphalerite/chert": 1,
+          "tfc:ore/normal_sphalerite/claystone": 1,
+          "tfc:ore/normal_sphalerite/conglomerate": 1,
+          "tfc:ore/normal_sphalerite/dacite": 1,
+          "tfc:ore/normal_sphalerite/diorite": 1,
+          "tfc:ore/normal_sphalerite/dolomite": 1,
+          "tfc:ore/normal_sphalerite/gabbro": 1,
+          "tfc:ore/normal_sphalerite/gneiss": 1,
+          "tfc:ore/normal_sphalerite/granite": 1,
+          "tfc:ore/normal_sphalerite/limestone": 1,
+          "tfc:ore/normal_sphalerite/marble": 1,
+          "tfc:ore/normal_sphalerite/phyllite": 1,
+          "tfc:ore/normal_sphalerite/quartzite": 1,
+          "tfc:ore/normal_sphalerite/rhyolite": 1,
+          "tfc:ore/normal_sphalerite/schist": 1,
+          "tfc:ore/normal_sphalerite/shale": 1,
+          "tfc:ore/normal_sphalerite/slate": 1,
+          "tfc:ore/poor_sphalerite": 1,
+          "tfc:ore/poor_sphalerite/andesite": 1,
+          "tfc:ore/poor_sphalerite/basalt": 1,
+          "tfc:ore/poor_sphalerite/chalk": 1,
+          "tfc:ore/poor_sphalerite/chert": 1,
+          "tfc:ore/poor_sphalerite/claystone": 1,
+          "tfc:ore/poor_sphalerite/conglomerate": 1,
+          "tfc:ore/poor_sphalerite/dacite": 1,
+          "tfc:ore/poor_sphalerite/diorite": 1,
+          "tfc:ore/poor_sphalerite/dolomite": 1,
+          "tfc:ore/poor_sphalerite/gabbro": 1,
+          "tfc:ore/poor_sphalerite/gneiss": 1,
+          "tfc:ore/poor_sphalerite/granite": 1,
+          "tfc:ore/poor_sphalerite/limestone": 1,
+          "tfc:ore/poor_sphalerite/marble": 1,
+          "tfc:ore/poor_sphalerite/phyllite": 1,
+          "tfc:ore/poor_sphalerite/quartzite": 1,
+          "tfc:ore/poor_sphalerite/rhyolite": 1,
+          "tfc:ore/poor_sphalerite/schist": 1,
+          "tfc:ore/poor_sphalerite/shale": 1,
+          "tfc:ore/poor_sphalerite/slate": 1,
+          "tfc:ore/rich_sphalerite": 1,
+          "tfc:ore/rich_sphalerite/andesite": 1,
+          "tfc:ore/rich_sphalerite/basalt": 1,
+          "tfc:ore/rich_sphalerite/chalk": 1,
+          "tfc:ore/rich_sphalerite/chert": 1,
+          "tfc:ore/rich_sphalerite/claystone": 1,
+          "tfc:ore/rich_sphalerite/conglomerate": 1,
+          "tfc:ore/rich_sphalerite/dacite": 1,
+          "tfc:ore/rich_sphalerite/diorite": 1,
+          "tfc:ore/rich_sphalerite/dolomite": 1,
+          "tfc:ore/rich_sphalerite/gabbro": 1,
+          "tfc:ore/rich_sphalerite/gneiss": 1,
+          "tfc:ore/rich_sphalerite/granite": 1,
+          "tfc:ore/rich_sphalerite/limestone": 1,
+          "tfc:ore/rich_sphalerite/marble": 1,
+          "tfc:ore/rich_sphalerite/phyllite": 1,
+          "tfc:ore/rich_sphalerite/quartzite": 1,
+          "tfc:ore/rich_sphalerite/rhyolite": 1,
+          "tfc:ore/rich_sphalerite/schist": 1,
+          "tfc:ore/rich_sphalerite/shale": 1,
+          "tfc:ore/rich_sphalerite/slate": 1,
+          "tfc:ore/normal_tetrahedrite": 1,
+          "tfc:ore/normal_tetrahedrite/andesite": 1,
+          "tfc:ore/normal_tetrahedrite/basalt": 1,
+          "tfc:ore/normal_tetrahedrite/chalk": 1,
+          "tfc:ore/normal_tetrahedrite/chert": 1,
+          "tfc:ore/normal_tetrahedrite/claystone": 1,
+          "tfc:ore/normal_tetrahedrite/conglomerate": 1,
+          "tfc:ore/normal_tetrahedrite/dacite": 1,
+          "tfc:ore/normal_tetrahedrite/diorite": 1,
+          "tfc:ore/normal_tetrahedrite/dolomite": 1,
+          "tfc:ore/normal_tetrahedrite/gabbro": 1,
+          "tfc:ore/normal_tetrahedrite/gneiss": 1,
+          "tfc:ore/normal_tetrahedrite/granite": 1,
+          "tfc:ore/normal_tetrahedrite/limestone": 1,
+          "tfc:ore/normal_tetrahedrite/marble": 1,
+          "tfc:ore/normal_tetrahedrite/phyllite": 1,
+          "tfc:ore/normal_tetrahedrite/quartzite": 1,
+          "tfc:ore/normal_tetrahedrite/rhyolite": 1,
+          "tfc:ore/normal_tetrahedrite/schist": 1,
+          "tfc:ore/normal_tetrahedrite/shale": 1,
+          "tfc:ore/normal_tetrahedrite/slate": 1,
+          "tfc:ore/poor_tetrahedrite": 1,
+          "tfc:ore/poor_tetrahedrite/andesite": 1,
+          "tfc:ore/poor_tetrahedrite/basalt": 1,
+          "tfc:ore/poor_tetrahedrite/chalk": 1,
+          "tfc:ore/poor_tetrahedrite/chert": 1,
+          "tfc:ore/poor_tetrahedrite/claystone": 1,
+          "tfc:ore/poor_tetrahedrite/conglomerate": 1,
+          "tfc:ore/poor_tetrahedrite/dacite": 1,
+          "tfc:ore/poor_tetrahedrite/diorite": 1,
+          "tfc:ore/poor_tetrahedrite/dolomite": 1,
+          "tfc:ore/poor_tetrahedrite/gabbro": 1,
+          "tfc:ore/poor_tetrahedrite/gneiss": 1,
+          "tfc:ore/poor_tetrahedrite/granite": 1,
+          "tfc:ore/poor_tetrahedrite/limestone": 1,
+          "tfc:ore/poor_tetrahedrite/marble": 1,
+          "tfc:ore/poor_tetrahedrite/phyllite": 1,
+          "tfc:ore/poor_tetrahedrite/quartzite": 1,
+          "tfc:ore/poor_tetrahedrite/rhyolite": 1,
+          "tfc:ore/poor_tetrahedrite/schist": 1,
+          "tfc:ore/poor_tetrahedrite/shale": 1,
+          "tfc:ore/poor_tetrahedrite/slate": 1,
+          "tfc:ore/rich_tetrahedrite": 1,
+          "tfc:ore/rich_tetrahedrite/andesite": 1,
+          "tfc:ore/rich_tetrahedrite/basalt": 1,
+          "tfc:ore/rich_tetrahedrite/chalk": 1,
+          "tfc:ore/rich_tetrahedrite/chert": 1,
+          "tfc:ore/rich_tetrahedrite/claystone": 1,
+          "tfc:ore/rich_tetrahedrite/conglomerate": 1,
+          "tfc:ore/rich_tetrahedrite/dacite": 1,
+          "tfc:ore/rich_tetrahedrite/diorite": 1,
+          "tfc:ore/rich_tetrahedrite/dolomite": 1,
+          "tfc:ore/rich_tetrahedrite/gabbro": 1,
+          "tfc:ore/rich_tetrahedrite/gneiss": 1,
+          "tfc:ore/rich_tetrahedrite/granite": 1,
+          "tfc:ore/rich_tetrahedrite/limestone": 1,
+          "tfc:ore/rich_tetrahedrite/marble": 1,
+          "tfc:ore/rich_tetrahedrite/phyllite": 1,
+          "tfc:ore/rich_tetrahedrite/quartzite": 1,
+          "tfc:ore/rich_tetrahedrite/rhyolite": 1,
+          "tfc:ore/rich_tetrahedrite/schist": 1,
+          "tfc:ore/rich_tetrahedrite/shale": 1,
+          "tfc:ore/rich_tetrahedrite/slate": 1
+        },
+        "removed_unregistered_dripstone": {
+          "tfcflorae:ore/normal_bismuthinite/dripstone": 1,
+          "tfcflorae:ore/poor_bismuthinite/dripstone": 1,
+          "tfcflorae:ore/rich_bismuthinite/dripstone": 1,
+          "tfcflorae:ore/normal_cassiterite/dripstone": 1,
+          "tfcflorae:ore/poor_cassiterite/dripstone": 1,
+          "tfcflorae:ore/rich_cassiterite/dripstone": 1,
+          "tfcflorae:ore/normal_garnierite/dripstone": 1,
+          "tfcflorae:ore/poor_garnierite/dripstone": 1,
+          "tfcflorae:ore/rich_garnierite/dripstone": 1,
+          "tfcflorae:ore/normal_hematite/dripstone": 1,
+          "tfcflorae:ore/poor_hematite/dripstone": 1,
+          "tfcflorae:ore/rich_hematite/dripstone": 1,
+          "tfcflorae:ore/normal_limonite/dripstone": 1,
+          "tfcflorae:ore/poor_limonite/dripstone": 1,
+          "tfcflorae:ore/rich_limonite/dripstone": 1,
+          "tfcflorae:ore/normal_magnetite/dripstone": 1,
+          "tfcflorae:ore/poor_magnetite/dripstone": 1,
+          "tfcflorae:ore/rich_magnetite/dripstone": 1,
+          "tfcflorae:ore/normal_malachite/dripstone": 1,
+          "tfcflorae:ore/poor_malachite/dripstone": 1,
+          "tfcflorae:ore/rich_malachite/dripstone": 1,
+          "tfcflorae:ore/normal_native_copper/dripstone": 1,
+          "tfcflorae:ore/poor_native_copper/dripstone": 1,
+          "tfcflorae:ore/rich_native_copper/dripstone": 1,
+          "tfcflorae:ore/normal_native_gold/dripstone": 1,
+          "tfcflorae:ore/poor_native_gold/dripstone": 1,
+          "tfcflorae:ore/rich_native_gold/dripstone": 1,
+          "tfcflorae:ore/normal_native_silver/dripstone": 1,
+          "tfcflorae:ore/poor_native_silver/dripstone": 1,
+          "tfcflorae:ore/rich_native_silver/dripstone": 1,
+          "tfcflorae:ore/normal_sphalerite/dripstone": 1,
+          "tfcflorae:ore/poor_sphalerite/dripstone": 1,
+          "tfcflorae:ore/rich_sphalerite/dripstone": 1,
+          "tfcflorae:ore/normal_tetrahedrite/dripstone": 1,
+          "tfcflorae:ore/poor_tetrahedrite/dripstone": 1,
+          "tfcflorae:ore/rich_tetrahedrite/dripstone": 1
+        }
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/item_sizes/ores_tiny.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\item_sizes\\ores_tiny.json",
+      "backup_sha256": "758c7d99dd6dbcb7167c92d69f979edcdafb2c56d23f98cc1f2877d233c37348",
+      "kind": "tfc/item_sizes",
+      "changes": {
+        "remapped_to_tfc": {
+          "tfc:ore/small_bismuthinite": 1,
+          "tfc:ore/small_cassiterite": 1,
+          "tfc:ore/small_garnierite": 1,
+          "tfc:ore/small_hematite": 1,
+          "tfc:ore/small_limonite": 1,
+          "tfc:ore/small_magnetite": 1,
+          "tfc:ore/small_malachite": 1,
+          "tfc:ore/small_native_copper": 1,
+          "tfc:ore/small_native_gold": 1,
+          "tfc:ore/small_native_silver": 1,
+          "tfc:ore/small_sphalerite": 1,
+          "tfc:ore/small_tetrahedrite": 1
+        },
+        "removed_unregistered_dripstone": {}
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_andesite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_andesite.json",
+      "backup_sha256": "64a22632eda62436d75153bb04d80af1f39d1e79ed5a2eaf9972d71cf6bcd70b",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/andesite",
+        "id_to": "tfc:deposit/cassiterite/andesite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_basalt.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_basalt.json",
+      "backup_sha256": "8ae194b9a33edb92928b72e9d0903dc3e7f140d3aea1b4ba81667e02c079b27b",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/basalt",
+        "id_to": "tfc:deposit/cassiterite/basalt"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_chalk.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_chalk.json",
+      "backup_sha256": "f7fbf767b2c1d2a82fec903e2a67eb4db110c0424ded9ab77ca2375339230494",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/chalk",
+        "id_to": "tfc:deposit/cassiterite/chalk"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_chert.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_chert.json",
+      "backup_sha256": "0e630fdf61eb1898da65a960664665da0d8da68295704dd91a72a9a3a7b28c6d",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/chert",
+        "id_to": "tfc:deposit/cassiterite/chert"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_claystone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_claystone.json",
+      "backup_sha256": "9f7e768982987203d525c928a5838f372ea02d5c7e6478c58aa99adb3985120e",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/claystone",
+        "id_to": "tfc:deposit/cassiterite/claystone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_conglomerate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_conglomerate.json",
+      "backup_sha256": "2844a44160dbdc303df5f7dde70b9d204d5083d63286a21cf07a288550817b78",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/conglomerate",
+        "id_to": "tfc:deposit/cassiterite/conglomerate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_dacite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_dacite.json",
+      "backup_sha256": "0f6499349b6745df63616b5ef72bf107b000512d9f920d7ad853ce84a48389c1",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/dacite",
+        "id_to": "tfc:deposit/cassiterite/dacite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_diorite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_diorite.json",
+      "backup_sha256": "3b06dab30f5c85389d66d7cc5091d40465148bffa5c85fbdb2daac4a1683cd61",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/diorite",
+        "id_to": "tfc:deposit/cassiterite/diorite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_dolomite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_dolomite.json",
+      "backup_sha256": "12965f1dd20a9fae00625c585a2f361debe753d32731a101d0ee669277fa4669",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/dolomite",
+        "id_to": "tfc:deposit/cassiterite/dolomite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_gabbro.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_gabbro.json",
+      "backup_sha256": "29825a2b888e81763aeea096223c5c581c307a9e0371b250b15aeb80ef3c4410",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/gabbro",
+        "id_to": "tfc:deposit/cassiterite/gabbro"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_gneiss.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_gneiss.json",
+      "backup_sha256": "27bdb74881af73cccef11c28aad8b6a0adccd71aec7811b0dcd3614c36e3cd68",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/gneiss",
+        "id_to": "tfc:deposit/cassiterite/gneiss"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_granite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_granite.json",
+      "backup_sha256": "7cbdf809a7fc5d93241d935905e8b493557fd14ab259ea4a4f3b8051d99f6c71",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/granite",
+        "id_to": "tfc:deposit/cassiterite/granite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_limestone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_limestone.json",
+      "backup_sha256": "eca9cfc3939c459a1314b6420e4795b6f9f46ae0391729bc70cba18b269adb9d",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/limestone",
+        "id_to": "tfc:deposit/cassiterite/limestone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_marble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_marble.json",
+      "backup_sha256": "cdaf85d41f806f59e5bdb8724a999559f8515f9f1be523396f930ed8e05828b6",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/marble",
+        "id_to": "tfc:deposit/cassiterite/marble"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_phyllite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_phyllite.json",
+      "backup_sha256": "3c6f1eef2f4a7059e634f0f3008a6f486e2533de792f5f0d42c073c07f231ee0",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/phyllite",
+        "id_to": "tfc:deposit/cassiterite/phyllite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_quartzite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_quartzite.json",
+      "backup_sha256": "7485a5b999014ca0ee5d9d5d5c3fde394423632422ca57a30a24eb4cdbedc0fd",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/quartzite",
+        "id_to": "tfc:deposit/cassiterite/quartzite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_rhyolite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_rhyolite.json",
+      "backup_sha256": "4d06564a2161141443ee70069ebbf1b5d0543e4d5483b307311926d81ed5a7e3",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/rhyolite",
+        "id_to": "tfc:deposit/cassiterite/rhyolite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_schist.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_schist.json",
+      "backup_sha256": "ee147c517fd7fb7f7024052d0081313f10e4e2b76b2851fa4ebadefeefe0e002",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/schist",
+        "id_to": "tfc:deposit/cassiterite/schist"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_shale.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_shale.json",
+      "backup_sha256": "eecb6d50b6a85c307025b3a767aa56781f96a361999f1c53234e841769d91a3f",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/shale",
+        "id_to": "tfc:deposit/cassiterite/shale"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/cassiterite_slate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\cassiterite_slate.json",
+      "backup_sha256": "57d82c167cf2d348019163847e211b634146c99b21c66a7bcd6fa787cc4804d5",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/slate",
+        "id_to": "tfc:deposit/cassiterite/slate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_andesite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_andesite.json",
+      "backup_sha256": "1b0237dc619b01e02b3e96c40fd42acd5d7c6338afeef56afb3fe94c27173ee6",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/andesite",
+        "id_to": "tfc:deposit/native_copper/andesite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_basalt.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_basalt.json",
+      "backup_sha256": "d0151b2fe490619837a2162491e695140e6192f24b9c1e99e5b736f9ef2a4f3c",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/basalt",
+        "id_to": "tfc:deposit/native_copper/basalt"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_chalk.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_chalk.json",
+      "backup_sha256": "27116d65ab445f8cc61087f0993f59e6a9c99dba253e066c802c26e081cf0a93",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/chalk",
+        "id_to": "tfc:deposit/native_copper/chalk"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_chert.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_chert.json",
+      "backup_sha256": "bfea98bbdafb089922da738a48552d31fcd34aec4c0e83796cba284958bf44b0",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/chert",
+        "id_to": "tfc:deposit/native_copper/chert"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_claystone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_claystone.json",
+      "backup_sha256": "1e436a5d5461516841710212b75e307d93832068b695565c40a39d8eadbea3e0",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/claystone",
+        "id_to": "tfc:deposit/native_copper/claystone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_conglomerate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_conglomerate.json",
+      "backup_sha256": "45b9c2c8c47438c127a3e5cbcdc5b212adb48775bd7c43bf6fa49b201e3bf24f",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/conglomerate",
+        "id_to": "tfc:deposit/native_copper/conglomerate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_dacite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_dacite.json",
+      "backup_sha256": "53b756be1214a77a7a631c8a966956b0146cb36ccc559bafbf71c11cfe4b073e",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/dacite",
+        "id_to": "tfc:deposit/native_copper/dacite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_diorite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_diorite.json",
+      "backup_sha256": "7fc5ea65d799d68fbdccaae06f2f26b99207842ae18e3e206127f63f3590399d",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/diorite",
+        "id_to": "tfc:deposit/native_copper/diorite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_dolomite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_dolomite.json",
+      "backup_sha256": "d26a9b462e892ecdddb162d25df67574fe53cae75f09462ecc43d38479a6f209",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/dolomite",
+        "id_to": "tfc:deposit/native_copper/dolomite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_gabbro.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_gabbro.json",
+      "backup_sha256": "f5bec6de4eb759147768dffeb19a83dba02e20dc6049c6cdacc81351dd2206d8",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/gabbro",
+        "id_to": "tfc:deposit/native_copper/gabbro"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_gneiss.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_gneiss.json",
+      "backup_sha256": "a4c0e6c43e9c4f52f406ee67230591c91623aa3193086340c7f945d3ad90fdd9",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/gneiss",
+        "id_to": "tfc:deposit/native_copper/gneiss"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_granite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_granite.json",
+      "backup_sha256": "9800c81e8b66cf811f915b2f8089195cf93721f8639dbb60717fdf4ecf4b5577",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/granite",
+        "id_to": "tfc:deposit/native_copper/granite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_limestone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_limestone.json",
+      "backup_sha256": "43b290c43091fd050fe2ab8bc80f304db9ec91aae80e740e71fae7f393a6c573",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/limestone",
+        "id_to": "tfc:deposit/native_copper/limestone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_marble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_marble.json",
+      "backup_sha256": "a36be92db0186d86fe1dd21c4a4df5f7f5ba1a9ccbe95b76df1a822608bef0f2",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/marble",
+        "id_to": "tfc:deposit/native_copper/marble"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_phyllite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_phyllite.json",
+      "backup_sha256": "d0fe227712de9dbbffa03e40494a11609c1e2d1c12d2ffb3de005e204d64db9c",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/phyllite",
+        "id_to": "tfc:deposit/native_copper/phyllite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_quartzite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_quartzite.json",
+      "backup_sha256": "1dbb4423782e8fd66e205591cf493e5eda136d7217552a2c1b16ad6c2e7fb65c",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/quartzite",
+        "id_to": "tfc:deposit/native_copper/quartzite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_rhyolite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_rhyolite.json",
+      "backup_sha256": "b0a5ff8e3228c29025e5323a7f2d6809e5a4a38692091cd87e3eceedacb33bde",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/rhyolite",
+        "id_to": "tfc:deposit/native_copper/rhyolite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_schist.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_schist.json",
+      "backup_sha256": "cd8c1793131f97ff2ea8021d596c4156ce1cea8d51eaaac0685e25397e983322",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/schist",
+        "id_to": "tfc:deposit/native_copper/schist"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_shale.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_shale.json",
+      "backup_sha256": "4e3ec598238f9583e1347f75b69daa4c5de14a3cba6b923c70a51b7f1e9e0786",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/shale",
+        "id_to": "tfc:deposit/native_copper/shale"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_copper_slate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_copper_slate.json",
+      "backup_sha256": "61b1c9791e99846ee08e7178b0ba3c5204321c25220152c36195bb803a760678",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/slate",
+        "id_to": "tfc:deposit/native_copper/slate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_andesite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_andesite.json",
+      "backup_sha256": "922f3d38ad212285cf331d51f806417f0d16418c00f02f4c26c74abd5d378eee",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/andesite",
+        "id_to": "tfc:deposit/native_gold/andesite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_basalt.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_basalt.json",
+      "backup_sha256": "021bbf467f8cb1ad3e07d9eb2961cbbebead28d835bc11cb556dc1973efb5739",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/basalt",
+        "id_to": "tfc:deposit/native_gold/basalt"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_chalk.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_chalk.json",
+      "backup_sha256": "ec0bfab4d91968e8366c4fe6f8beba7decf7f928afaeae3e598c6a112c526aa6",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/chalk",
+        "id_to": "tfc:deposit/native_gold/chalk"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_chert.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_chert.json",
+      "backup_sha256": "4e95d05501003023fe4f32f13e60306393b94ab072498bd218e68f9c7c65940f",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/chert",
+        "id_to": "tfc:deposit/native_gold/chert"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_claystone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_claystone.json",
+      "backup_sha256": "275f87c1e32ca6f2ee23b49b195c3252c299e15d196dcdae048b91fab75c2753",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/claystone",
+        "id_to": "tfc:deposit/native_gold/claystone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_conglomerate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_conglomerate.json",
+      "backup_sha256": "22417f9202568ba5326bc7d325be45a413c027c0a61aa3038d306e4285bedd00",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/conglomerate",
+        "id_to": "tfc:deposit/native_gold/conglomerate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_dacite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_dacite.json",
+      "backup_sha256": "9b46ce7ddde9d86aa62c33dff8c0889fc5629175b6bd2842d06aa089bd82f78a",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/dacite",
+        "id_to": "tfc:deposit/native_gold/dacite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_diorite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_diorite.json",
+      "backup_sha256": "63cffe366756b582175752a7d879ce53fdbe8af239d7ecad9a6cc269a036d7b5",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/diorite",
+        "id_to": "tfc:deposit/native_gold/diorite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_dolomite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_dolomite.json",
+      "backup_sha256": "cf64971a4560e754998f410de29c36f71828b9afd1306e0f353a6aff67ddb57d",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/dolomite",
+        "id_to": "tfc:deposit/native_gold/dolomite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_gabbro.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_gabbro.json",
+      "backup_sha256": "b1ac97bbd6d477502949712872ae83b3c1907bbfca7f4f50a288774a71b9e91b",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/gabbro",
+        "id_to": "tfc:deposit/native_gold/gabbro"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_gneiss.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_gneiss.json",
+      "backup_sha256": "83e26cbe29aca2eb9c04a01250dbd832d698844d82637a8308c3f7752397b226",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/gneiss",
+        "id_to": "tfc:deposit/native_gold/gneiss"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_granite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_granite.json",
+      "backup_sha256": "ca7ceff3e701b2dd94c57348225c8aff4d46573204e15079f0992d7af8a68be9",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/granite",
+        "id_to": "tfc:deposit/native_gold/granite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_limestone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_limestone.json",
+      "backup_sha256": "446466716e1eec23a788fec590e308f91753c553bbb19ae9846cfd390e8559bc",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/limestone",
+        "id_to": "tfc:deposit/native_gold/limestone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_marble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_marble.json",
+      "backup_sha256": "42fa7f8c01576fdc467d3833047a9bc9ea57923921ef90fe9ff24674266eb13a",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/marble",
+        "id_to": "tfc:deposit/native_gold/marble"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_phyllite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_phyllite.json",
+      "backup_sha256": "ccf49b8e5456629c148482d8ac95792d02d82219ec6bc9675e33e4fee8c0665a",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/phyllite",
+        "id_to": "tfc:deposit/native_gold/phyllite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_quartzite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_quartzite.json",
+      "backup_sha256": "8073c21736bf296371e0378be6b4b1e79c3de527351f8c904aa9b2971c69aeab",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/quartzite",
+        "id_to": "tfc:deposit/native_gold/quartzite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_rhyolite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_rhyolite.json",
+      "backup_sha256": "6a4d80086750a2ce90ed8d68d23a8ff4d8622dac4442fa943be5936b675a10fb",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/rhyolite",
+        "id_to": "tfc:deposit/native_gold/rhyolite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_schist.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_schist.json",
+      "backup_sha256": "75e9ef5372027612b870e301e67d18176312ffa1203b038312acb06665db048b",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/schist",
+        "id_to": "tfc:deposit/native_gold/schist"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_shale.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_shale.json",
+      "backup_sha256": "0dd5311477e9c97dfcebb2523e672e273d4df0c9af237f484885e4d0698ce5b0",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/shale",
+        "id_to": "tfc:deposit/native_gold/shale"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_gold_slate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_gold_slate.json",
+      "backup_sha256": "b5bd6ee6e1ce2e57a27fb6ddc9b098dcb396e358740eb6a5e082c15ea7fcabe9",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/slate",
+        "id_to": "tfc:deposit/native_gold/slate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_andesite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_andesite.json",
+      "backup_sha256": "5bc532183dfc0a0870dc0ab6eba5c06721321400b40dcf4d3e20c4d52ed7d4ba",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/andesite",
+        "id_to": "tfc:deposit/native_silver/andesite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_basalt.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_basalt.json",
+      "backup_sha256": "0f11bf8973f7e4a6a49b96e4af2a95745a9336bb85ceaad42136e7228c0050f5",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/basalt",
+        "id_to": "tfc:deposit/native_silver/basalt"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_chalk.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_chalk.json",
+      "backup_sha256": "aa9b968823eba771ad7db512bea7cfbbfc0f6facd48b5406117e8367ded1e960",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/chalk",
+        "id_to": "tfc:deposit/native_silver/chalk"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_chert.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_chert.json",
+      "backup_sha256": "783b5fc1773356d18cd1f57476bbbe172557e4300ed3bb1976bbca3c26652580",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/chert",
+        "id_to": "tfc:deposit/native_silver/chert"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_claystone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_claystone.json",
+      "backup_sha256": "2957ea42cc46cb883add8139e86de605d2776d482f6f59780fc955ddabf45a42",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/claystone",
+        "id_to": "tfc:deposit/native_silver/claystone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_conglomerate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_conglomerate.json",
+      "backup_sha256": "72e503a07a0ff04e68c4163e952e67326a5689840bef5cc518af19c1c28a86dc",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/conglomerate",
+        "id_to": "tfc:deposit/native_silver/conglomerate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_dacite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_dacite.json",
+      "backup_sha256": "f17ac9aa604db68b99cc8925a81d00ad79d02f7d6e1abb76df45c95ef6992464",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/dacite",
+        "id_to": "tfc:deposit/native_silver/dacite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_diorite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_diorite.json",
+      "backup_sha256": "909ecf08add60eb56c029581a23677770bc788e476aa969c3061fa1844d6a501",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/diorite",
+        "id_to": "tfc:deposit/native_silver/diorite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_dolomite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_dolomite.json",
+      "backup_sha256": "b612064bbd228d6d4e0aa2ed4559a36bec695b0642c689a5802406f42e88d1f4",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/dolomite",
+        "id_to": "tfc:deposit/native_silver/dolomite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_gabbro.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_gabbro.json",
+      "backup_sha256": "23a7e857b7205457d0cfd1865a116f840383e83a37ee6ca1c25f85876828b3fc",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/gabbro",
+        "id_to": "tfc:deposit/native_silver/gabbro"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_gneiss.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_gneiss.json",
+      "backup_sha256": "e43f902749369403a67ee0b31c0223b527b7663a5c2988b4f2c845d75d234e14",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/gneiss",
+        "id_to": "tfc:deposit/native_silver/gneiss"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_granite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_granite.json",
+      "backup_sha256": "695059da9280ec8f2182a1b298c862200ec799b20edbbdce7c7011bc159ed930",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/granite",
+        "id_to": "tfc:deposit/native_silver/granite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_limestone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_limestone.json",
+      "backup_sha256": "3a0afcf10e219e4a6f29f84fd3e2bbb648f57c47119868dd8e93d10a3c0ed349",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/limestone",
+        "id_to": "tfc:deposit/native_silver/limestone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_marble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_marble.json",
+      "backup_sha256": "8673d41de976ff38bb536520b0a88932ea47fe0a32be48755cb6214c24b53d8e",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/marble",
+        "id_to": "tfc:deposit/native_silver/marble"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_phyllite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_phyllite.json",
+      "backup_sha256": "a7bc929bd2184c0ef0fbeaa61bbafbc8518cb202dca67585591386317cc43959",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/phyllite",
+        "id_to": "tfc:deposit/native_silver/phyllite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_quartzite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_quartzite.json",
+      "backup_sha256": "2927e076b3d765f06c13dc2ac1699dee7b047aba0e805fb6056956c786cf1150",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/quartzite",
+        "id_to": "tfc:deposit/native_silver/quartzite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_rhyolite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_rhyolite.json",
+      "backup_sha256": "c191aba92ff890c9b5a8367c54ecdc55380365a282e610f48001f1945c34b074",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/rhyolite",
+        "id_to": "tfc:deposit/native_silver/rhyolite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_schist.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_schist.json",
+      "backup_sha256": "ef4e61c3cf6275894a9145174a04dc80c2937a2f2eb935f9a3be2322379365ac",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/schist",
+        "id_to": "tfc:deposit/native_silver/schist"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_shale.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_shale.json",
+      "backup_sha256": "d342b6425381d5cea878bb40aed570955f2f98310b9e07565de52b967e301a53",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/shale",
+        "id_to": "tfc:deposit/native_silver/shale"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/panning/deposits/native_silver_slate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\panning\\deposits\\native_silver_slate.json",
+      "backup_sha256": "4ce52f3e8db51c7ca7e31d2402e9d96e3b4deebef2bc30b8230e4929ddc65cff",
+      "kind": "tfc/panning",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/slate",
+        "id_to": "tfc:deposit/native_silver/slate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_andesite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_andesite.json",
+      "backup_sha256": "c4a21fe8e413ba3003e26a7f6a343e2011ef4bc44c71c8d198d5cf89255dfecc",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/andesite",
+        "id_to": "tfc:deposit/cassiterite/andesite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_basalt.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_basalt.json",
+      "backup_sha256": "b8ce7a14f125d7fed45d37dd1664a1c13018efa1b93b61200cf39cb081e8e7c7",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/basalt",
+        "id_to": "tfc:deposit/cassiterite/basalt"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_chalk.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_chalk.json",
+      "backup_sha256": "f8be3e86ea4dfaeead6bf8baa3bedec9d4ec2e9d071b36026e79ecfcd8d1b600",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/chalk",
+        "id_to": "tfc:deposit/cassiterite/chalk"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_chert.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_chert.json",
+      "backup_sha256": "365bf94ebd5638a18fdb30d9544a4fdffa266d36d22666b98e7a7daa7692d20d",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/chert",
+        "id_to": "tfc:deposit/cassiterite/chert"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_claystone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_claystone.json",
+      "backup_sha256": "a56d10051b85eb9f122fdc6e179e58e7749ad7da3b8e1f6775f347ebf1592af1",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/claystone",
+        "id_to": "tfc:deposit/cassiterite/claystone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_conglomerate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_conglomerate.json",
+      "backup_sha256": "6da540e56fc4b871ba0bfbe7a8da511da539b7a83ae1bcccfbd095d230cf1f8c",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/conglomerate",
+        "id_to": "tfc:deposit/cassiterite/conglomerate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_dacite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_dacite.json",
+      "backup_sha256": "900620b4adc2a54ddd4a76afbce26e443d0e6bd3dfb943c9a56348825685a14f",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/dacite",
+        "id_to": "tfc:deposit/cassiterite/dacite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_diorite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_diorite.json",
+      "backup_sha256": "a25787501b352560d97d916aa328c1ec0765825a225b769e077937317432c7f0",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/diorite",
+        "id_to": "tfc:deposit/cassiterite/diorite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_dolomite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_dolomite.json",
+      "backup_sha256": "bdb2c7a35fa00828891b76dfb04a25e0f2e883e2071b5826a8c44f160316fde3",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/dolomite",
+        "id_to": "tfc:deposit/cassiterite/dolomite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_gabbro.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_gabbro.json",
+      "backup_sha256": "e6161cdf47a52c30ccf439881141d4c3a5fc7ea92de854419d9159ce2bccc977",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/gabbro",
+        "id_to": "tfc:deposit/cassiterite/gabbro"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_gneiss.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_gneiss.json",
+      "backup_sha256": "6e2dbce676ac551eea1fb287e8ee4b18b0570d58f2a02fbe616b3771176ce601",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/gneiss",
+        "id_to": "tfc:deposit/cassiterite/gneiss"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_granite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_granite.json",
+      "backup_sha256": "1ed7a7306632e7d728892ea0c912d5c3ade7e1926ff34b7273d6870eb09c1a24",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/granite",
+        "id_to": "tfc:deposit/cassiterite/granite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_limestone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_limestone.json",
+      "backup_sha256": "7cb9ae85503e7f5e5ba6d371126ece723c9a7bd46e35b1a2d1fab899398df0cc",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/limestone",
+        "id_to": "tfc:deposit/cassiterite/limestone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_marble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_marble.json",
+      "backup_sha256": "3a5217ad51a08c43301d2d0b351f92999db6a56a5afaf3a1e12fa57eafc4b0e2",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/marble",
+        "id_to": "tfc:deposit/cassiterite/marble"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_phyllite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_phyllite.json",
+      "backup_sha256": "0a008dcd7f46be60d5b0fa838b1e4b4071955cf12c4b1650f500dc672715fb3e",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/phyllite",
+        "id_to": "tfc:deposit/cassiterite/phyllite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_quartzite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_quartzite.json",
+      "backup_sha256": "d0b413ff0dcf8a5ac3c5040d88e611414e78c2418a1888539ea088cd75bb6019",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/quartzite",
+        "id_to": "tfc:deposit/cassiterite/quartzite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_rhyolite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_rhyolite.json",
+      "backup_sha256": "afa975477ef70a70efdd746499d18e64c578b310774c5dc9a88a8a29d6c96967",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/rhyolite",
+        "id_to": "tfc:deposit/cassiterite/rhyolite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_schist.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_schist.json",
+      "backup_sha256": "87987ae0d7f3ef11c5c6edf0a6117b4d83ec68a601ae7e7299e850d16d207dd7",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/schist",
+        "id_to": "tfc:deposit/cassiterite/schist"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_shale.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_shale.json",
+      "backup_sha256": "866a6cff539461d18ea61d65f115005108575ab5c35c3c72b0c3387ecc4a4109",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/shale",
+        "id_to": "tfc:deposit/cassiterite/shale"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/cassiterite_slate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\cassiterite_slate.json",
+      "backup_sha256": "e8ac44fc9a2f7ddad338727d46ce915f5500995ba2bcf0c687e6ddc90cbd2014",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/cassiterite/slate",
+        "id_to": "tfc:deposit/cassiterite/slate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_andesite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_andesite.json",
+      "backup_sha256": "261c7b8dd46e3a0cf3165843abdbd8694f6363afb2c944961fa61f4a24b0cdfd",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/andesite",
+        "id_to": "tfc:deposit/native_copper/andesite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_basalt.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_basalt.json",
+      "backup_sha256": "85d91c5f67ebe0010ff7af73036ca2eba6f33d28ccdbbac917a0744f630f10e4",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/basalt",
+        "id_to": "tfc:deposit/native_copper/basalt"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_chalk.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_chalk.json",
+      "backup_sha256": "a950882d6d83bff0582befc2401c5f7cdf9f0eb39dc539253d9681596ad9e6a9",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/chalk",
+        "id_to": "tfc:deposit/native_copper/chalk"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_chert.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_chert.json",
+      "backup_sha256": "57ea9c34cac7832f60ddd1efa74b7d475071c332d3dd50dc79923a96e392faa0",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/chert",
+        "id_to": "tfc:deposit/native_copper/chert"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_claystone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_claystone.json",
+      "backup_sha256": "e47c518d3b3d33212dc9a68f074945cf56f904fdef47e6bcaebb91d5fb888492",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/claystone",
+        "id_to": "tfc:deposit/native_copper/claystone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_conglomerate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_conglomerate.json",
+      "backup_sha256": "763f1e9b2f3ea9f57d2e77100c2b3f0f1ad4637666da9d39b1f5ee7233d3f085",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/conglomerate",
+        "id_to": "tfc:deposit/native_copper/conglomerate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_dacite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_dacite.json",
+      "backup_sha256": "723225753790bd70a3f8c55fcc33185c14e7a4dd26b7b8ba9bf3b6b9a322c4a8",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/dacite",
+        "id_to": "tfc:deposit/native_copper/dacite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_diorite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_diorite.json",
+      "backup_sha256": "b0f1800835e950bf4f7a3d43139d82ecaafa046afb3f1cceb9022bf299e998e6",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/diorite",
+        "id_to": "tfc:deposit/native_copper/diorite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_dolomite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_dolomite.json",
+      "backup_sha256": "3baa064ec55ec733ee660067d78796ec38d145dbaba25f3c649c3866d08ab4a9",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/dolomite",
+        "id_to": "tfc:deposit/native_copper/dolomite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_gabbro.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_gabbro.json",
+      "backup_sha256": "3a51190f609e0ce7ba812a1be3c771e48c8f2031d6d62960755c03ed29270875",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/gabbro",
+        "id_to": "tfc:deposit/native_copper/gabbro"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_gneiss.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_gneiss.json",
+      "backup_sha256": "310f799e39be97f78151880301c6c3d542002d08a5e5727457eb3526ebbc591d",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/gneiss",
+        "id_to": "tfc:deposit/native_copper/gneiss"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_granite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_granite.json",
+      "backup_sha256": "9c505b203d4cdcd426b020eb26d52476289a9ce432eeadb21027a4a9d0ed1084",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/granite",
+        "id_to": "tfc:deposit/native_copper/granite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_limestone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_limestone.json",
+      "backup_sha256": "f2f0ea5ba36ef282b132b19a07fe7fdf028ae983bed983ced57d2f2306168888",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/limestone",
+        "id_to": "tfc:deposit/native_copper/limestone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_marble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_marble.json",
+      "backup_sha256": "af02596de07c0ee433c6b1f6323de7c67b754cc2e392dfcddf2b48787bd9f81e",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/marble",
+        "id_to": "tfc:deposit/native_copper/marble"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_phyllite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_phyllite.json",
+      "backup_sha256": "710fab08e901e2801706abfa480436e47f5c624e5d4488f7f1c59f08fcda7572",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/phyllite",
+        "id_to": "tfc:deposit/native_copper/phyllite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_quartzite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_quartzite.json",
+      "backup_sha256": "52cc20bb6b88be78c6d613cea0da4c71c53293eaa995d960a997d1e92e8f081b",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/quartzite",
+        "id_to": "tfc:deposit/native_copper/quartzite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_rhyolite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_rhyolite.json",
+      "backup_sha256": "669fe2658623c1c3a1cd1340c9f8a82cbea8866bbd03422a8591204feb1cd820",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/rhyolite",
+        "id_to": "tfc:deposit/native_copper/rhyolite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_schist.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_schist.json",
+      "backup_sha256": "2f48687d08bbcf99e02e251d15173888c343a04d71bf74ec3bec35a6a817e4dd",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/schist",
+        "id_to": "tfc:deposit/native_copper/schist"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_shale.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_shale.json",
+      "backup_sha256": "6a258ad2c95b6d168f55fb56e4a99c41601413951a75428e9bc3fa70c5850028",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/shale",
+        "id_to": "tfc:deposit/native_copper/shale"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_copper_slate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_copper_slate.json",
+      "backup_sha256": "91998f49cdda2e66c2d414bf8ffc39d45b8404204651183836354b745cfb72f3",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_copper/slate",
+        "id_to": "tfc:deposit/native_copper/slate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_andesite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_andesite.json",
+      "backup_sha256": "d3582a23ab474109166bd67e9a2f9835084dbab78b67f5f6eb1e0ecc060b9d11",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/andesite",
+        "id_to": "tfc:deposit/native_gold/andesite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_basalt.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_basalt.json",
+      "backup_sha256": "06c1d1460e9f2febb04248abb8b66dc73907d1d081382a5aef29de3a834186f6",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/basalt",
+        "id_to": "tfc:deposit/native_gold/basalt"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_chalk.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_chalk.json",
+      "backup_sha256": "8d00c25786507ee98ae6f996e01877562aca25fd1439667ae531a07d10575950",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/chalk",
+        "id_to": "tfc:deposit/native_gold/chalk"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_chert.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_chert.json",
+      "backup_sha256": "90748c4fbb4c847509b98899d44279e2a186d75f93a40b57cf0043c131ad51d7",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/chert",
+        "id_to": "tfc:deposit/native_gold/chert"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_claystone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_claystone.json",
+      "backup_sha256": "5887511378b210547f86ab53aa73b068be56b4289324eb7bb55c01a44e9c1a97",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/claystone",
+        "id_to": "tfc:deposit/native_gold/claystone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_conglomerate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_conglomerate.json",
+      "backup_sha256": "3a82c2386dcee9b6b738eb50f9a8a4e78527760a1a726ad873a04a73980baaae",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/conglomerate",
+        "id_to": "tfc:deposit/native_gold/conglomerate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_dacite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_dacite.json",
+      "backup_sha256": "55be6ac700fc7b06ee03c04016182b48eea6deaaa66f9d4ac251c57853316d5a",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/dacite",
+        "id_to": "tfc:deposit/native_gold/dacite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_diorite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_diorite.json",
+      "backup_sha256": "593f5a1391add3ab1839633092889445d32de7f5f954fd3eab5e352c5e6552a2",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/diorite",
+        "id_to": "tfc:deposit/native_gold/diorite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_dolomite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_dolomite.json",
+      "backup_sha256": "39a771fbceb266cf9a5c9869037358e2715fe55ebb0a775679ac0372e522228f",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/dolomite",
+        "id_to": "tfc:deposit/native_gold/dolomite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_gabbro.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_gabbro.json",
+      "backup_sha256": "16c9a524dd22be55a7c1fc1c3f251be1f0894186ebb5c8bdc190f1bf727f7fcb",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/gabbro",
+        "id_to": "tfc:deposit/native_gold/gabbro"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_gneiss.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_gneiss.json",
+      "backup_sha256": "28bbbacb2a409d7c5c1116ad1dce469472f58ba3f99e76f8958ab0235f8775c7",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/gneiss",
+        "id_to": "tfc:deposit/native_gold/gneiss"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_granite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_granite.json",
+      "backup_sha256": "260dfc5d2a5a12737c5d6d429000c54e2bc56f451d350a4bd2681fa8d0904a37",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/granite",
+        "id_to": "tfc:deposit/native_gold/granite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_limestone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_limestone.json",
+      "backup_sha256": "eef4263e0cc7fdcf00de053f57cda786b712be0fff4fe173bb9b22de7b2a93a2",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/limestone",
+        "id_to": "tfc:deposit/native_gold/limestone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_marble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_marble.json",
+      "backup_sha256": "6cf5790fd6b4c8cfb74a3c2f58cee5d3b4ff1d6d55b8a29331b533093494bb35",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/marble",
+        "id_to": "tfc:deposit/native_gold/marble"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_phyllite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_phyllite.json",
+      "backup_sha256": "52bd27367d571921baf5152eae29b581b023cdcc1a2de8a19f56ffbfd6e6bf0f",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/phyllite",
+        "id_to": "tfc:deposit/native_gold/phyllite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_quartzite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_quartzite.json",
+      "backup_sha256": "c0b7f67a61a16aa3ebbf3996697e0fcdeca67c28870da9dc0aa0c531f082473a",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/quartzite",
+        "id_to": "tfc:deposit/native_gold/quartzite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_rhyolite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_rhyolite.json",
+      "backup_sha256": "5336f33a52e314bce570b9d528cfddae58b5ba329ca8eadd190bbd31d95a9d0a",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/rhyolite",
+        "id_to": "tfc:deposit/native_gold/rhyolite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_schist.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_schist.json",
+      "backup_sha256": "490c45612804c579a48891b700d6c6945ba6bc7661cc34d0cabb8bb2e3b898df",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/schist",
+        "id_to": "tfc:deposit/native_gold/schist"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_shale.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_shale.json",
+      "backup_sha256": "37b18c21ff0c18373a296888f51bc1a1b84863b9250ab6919426e5be72797d50",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/shale",
+        "id_to": "tfc:deposit/native_gold/shale"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_gold_slate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_gold_slate.json",
+      "backup_sha256": "e4e4c87220e8cd3e161ccb9be12da908adde898bf4077c3c23a86c99a2a372b9",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_gold/slate",
+        "id_to": "tfc:deposit/native_gold/slate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_andesite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_andesite.json",
+      "backup_sha256": "05af4e424ce5045855939410e9dda75b23dca766909a81afcd18c4190fd91461",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/andesite",
+        "id_to": "tfc:deposit/native_silver/andesite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_basalt.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_basalt.json",
+      "backup_sha256": "a5caeeb23d99ca9c267792ccd6563fe85ff17b5754a436ae883d5051387a924f",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/basalt",
+        "id_to": "tfc:deposit/native_silver/basalt"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_chalk.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_chalk.json",
+      "backup_sha256": "2bbc52222872b96d30dc21957ec1734b2884d33b97a35c1f2a0bbb6045d8b563",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/chalk",
+        "id_to": "tfc:deposit/native_silver/chalk"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_chert.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_chert.json",
+      "backup_sha256": "bae06dd3521ee37e051d6a8b3c65b19628743535f3584fef3849dd2c18c43682",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/chert",
+        "id_to": "tfc:deposit/native_silver/chert"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_claystone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_claystone.json",
+      "backup_sha256": "105bc378225b53bafdd4ef5f51735be99d126ef3e11763965c2a6e837d05b7c6",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/claystone",
+        "id_to": "tfc:deposit/native_silver/claystone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_conglomerate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_conglomerate.json",
+      "backup_sha256": "95547d1bbfc82dde2bd27f96a5d3996f8b5075f67e16786f737acae4b46a8673",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/conglomerate",
+        "id_to": "tfc:deposit/native_silver/conglomerate"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_dacite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_dacite.json",
+      "backup_sha256": "6434f102f6ea951a52bc4499e2f9b52be24bbe7bb5f51f36b6be5bfc0349aa9d",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/dacite",
+        "id_to": "tfc:deposit/native_silver/dacite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_diorite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_diorite.json",
+      "backup_sha256": "8938feb9d9189fe4dee90d332b6471ff333a3306a3d54b279f2bc9b07ec9bc1b",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/diorite",
+        "id_to": "tfc:deposit/native_silver/diorite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_dolomite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_dolomite.json",
+      "backup_sha256": "919b1323f09c671d3d5f8021afc6f32a347cc5548e14de491dd97eed18a8ce00",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/dolomite",
+        "id_to": "tfc:deposit/native_silver/dolomite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_gabbro.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_gabbro.json",
+      "backup_sha256": "935729d2836797a2ef0e81d533cea80e758cdefbc49aa8a08dc937de2c5c482c",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/gabbro",
+        "id_to": "tfc:deposit/native_silver/gabbro"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_gneiss.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_gneiss.json",
+      "backup_sha256": "2d6725e725f7ed90f6c7b61aed8d21ffe25405c9c92b0eeba037bd3e6a4a6a73",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/gneiss",
+        "id_to": "tfc:deposit/native_silver/gneiss"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_granite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_granite.json",
+      "backup_sha256": "150b0418670daf02083c55facb2b3f6aae5921bb28dab0a95e02c6d8db5fbb7a",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/granite",
+        "id_to": "tfc:deposit/native_silver/granite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_limestone.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_limestone.json",
+      "backup_sha256": "b2db5fa49eaf1378f92a5464d4a62fcdcb0290dd8d503803fa8bcbe0b5934b23",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/limestone",
+        "id_to": "tfc:deposit/native_silver/limestone"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_marble.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_marble.json",
+      "backup_sha256": "0231f0cbfce9ecec3d5556bbf9931c559456964e7a3369602d194a49f6497195",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/marble",
+        "id_to": "tfc:deposit/native_silver/marble"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_phyllite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_phyllite.json",
+      "backup_sha256": "203f650ff954cfd40eadd9e62763f21e70d8a38d76a9bfb1c051e0d08c163ec3",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/phyllite",
+        "id_to": "tfc:deposit/native_silver/phyllite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_quartzite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_quartzite.json",
+      "backup_sha256": "cd921398dac40ec290e517cdf493c411a1b8beee8c4b1e880fd3e4480d6bae05",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/quartzite",
+        "id_to": "tfc:deposit/native_silver/quartzite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_rhyolite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_rhyolite.json",
+      "backup_sha256": "789bb8f9ec9630c0219c8ff57677402c30bc563e69faa3355835233aa660038a",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/rhyolite",
+        "id_to": "tfc:deposit/native_silver/rhyolite"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_schist.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_schist.json",
+      "backup_sha256": "d54f58ea777780e1d2b7ececfc99c9574227f76f9fee28268b992c4630afbd97",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/schist",
+        "id_to": "tfc:deposit/native_silver/schist"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_shale.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_shale.json",
+      "backup_sha256": "9a2c9064857e728316b56701ac2d168002650d1ca1606a9ab7aac02ff48892d0",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/shale",
+        "id_to": "tfc:deposit/native_silver/shale"
+      }
+    },
+    {
+      "file": "data/tfcflorae/tfc/sluicing/deposits/native_silver_slate.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\runtime-parser-fixes\\data\\tfcflorae\\tfc\\sluicing\\deposits\\native_silver_slate.json",
+      "backup_sha256": "7240b7877c6752c1a11f5e00b967524f9318120d0ac7c56999fd865d23f01ffa",
+      "kind": "tfc/sluicing",
+      "changes": {
+        "id_from": "tfcflorae:deposit/native_silver/slate",
+        "id_to": "tfc:deposit/native_silver/slate"
+      }
+    }
+  ]
+}

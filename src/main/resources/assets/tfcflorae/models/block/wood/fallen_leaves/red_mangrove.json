@@ -1,6 +1,0 @@
-{
-  "parent": "tfc:block/groundcover/fallen_leaves_height2",
-  "textures": {
-    "all": "tfcflorae:block/wood/leaves/red_mangrove"
-  }
-}

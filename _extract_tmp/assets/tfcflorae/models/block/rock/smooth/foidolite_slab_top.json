@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/smooth/foidolite",
+    "top": "tfcflorae:block/rock/smooth/foidolite",
+    "side": "tfcflorae:block/rock/smooth/foidolite"
+  }
+}

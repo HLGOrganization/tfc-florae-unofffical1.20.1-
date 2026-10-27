@@ -13,18 +13,9 @@ import net.minecraft.world.level.material.MapColor;
 
 public enum Colors implements StringRepresentable {
    BLACK(new Color(56, 56, 56).getRGB(), MapColor.TERRACOTTA_BLACK, true, false, true),
-   BLUE(new Color(50, 68, 255).getRGB(), MapColor.TERRACOTTA_BLUE, false, true, true),
    BROWN(new Color(112, 113, 89).getRGB(), MapColor.TERRACOTTA_BROWN, true, false, true),
-   CYAN(new Color(73, 198, 198).getRGB(), MapColor.TERRACOTTA_CYAN, false, true, false),
-   GRAY(new Color(112, 112, 112).getRGB(), MapColor.TERRACOTTA_GRAY, false, true, true),
    GREEN(new Color(106, 116, 81).getRGB(), MapColor.TERRACOTTA_GREEN, true, false, true),
-   LIGHT_BLUE(new Color(85, 162, 214).getRGB(), MapColor.TERRACOTTA_LIGHT_BLUE, false, true, false),
-   LIGHT_GRAY(new Color(175, 175, 175).getRGB(), MapColor.TERRACOTTA_LIGHT_GRAY, false, true, false),
-   LIGHT_GREEN(new Color(136, 132, 61).getRGB(), MapColor.TERRACOTTA_LIGHT_GREEN, false, true, true),
-   MAGENTA(new Color(165, 0, 165).getRGB(), MapColor.TERRACOTTA_MAGENTA, false, true, false),
-   ORANGE(new Color(190, 109, 56).getRGB(), MapColor.TERRACOTTA_ORANGE, false, true, true),
    PINK(new Color(150, 101, 97).getRGB(), MapColor.TERRACOTTA_PINK, true, false, true),
-   PURPLE(new Color(116, 73, 94).getRGB(), MapColor.TERRACOTTA_PURPLE, false, true, true),
    RED(new Color(125, 99, 84).getRGB(), MapColor.TERRACOTTA_RED, true, false, true),
    WHITE(new Color(202, 202, 201).getRGB(), MapColor.TERRACOTTA_WHITE, true, false, true),
    YELLOW(new Color(215, 196, 140).getRGB(), MapColor.TERRACOTTA_YELLOW, true, false, true);
@@ -103,14 +94,14 @@ public enum Colors implements StringRepresentable {
          || materialColor == MapColor.TERRACOTTA_WHITE) {
          return WHITE;
       } else if (materialColor == MapColor.FIRE || materialColor == MapColor.COLOR_ORANGE || materialColor == MapColor.TERRACOTTA_ORANGE) {
-         return ORANGE;
+         return YELLOW;
       } else if (materialColor == MapColor.ICE
          || materialColor == MapColor.CLAY
          || materialColor == MapColor.COLOR_LIGHT_BLUE
          || materialColor == MapColor.TERRACOTTA_LIGHT_BLUE) {
-         return LIGHT_BLUE;
+         return WHITE;
       } else if (materialColor == MapColor.METAL || materialColor == MapColor.COLOR_LIGHT_GRAY || materialColor == MapColor.TERRACOTTA_LIGHT_GRAY) {
-         return LIGHT_GRAY;
+         return WHITE;
       } else if (materialColor == MapColor.DIRT
          || materialColor == MapColor.WOOD
          || materialColor == MapColor.COLOR_BROWN
@@ -121,19 +112,19 @@ public enum Colors implements StringRepresentable {
          || materialColor == MapColor.COLOR_GRAY
          || materialColor == MapColor.TERRACOTTA_GRAY
          || materialColor == MapColor.GLOW_LICHEN) {
-         return GRAY;
+         return WHITE;
       } else if (materialColor == MapColor.WATER
          || materialColor == MapColor.COLOR_BLUE
          || materialColor == MapColor.TERRACOTTA_BLUE
          || materialColor == MapColor.LAPIS) {
-         return BLUE;
+         return WHITE;
       } else if (materialColor == MapColor.COLOR_MAGENTA
          || materialColor == MapColor.TERRACOTTA_MAGENTA
          || materialColor == MapColor.WARPED_STEM
          || materialColor == MapColor.WARPED_HYPHAE) {
-         return MAGENTA;
+         return PINK;
       } else if (materialColor == MapColor.COLOR_LIGHT_GREEN || materialColor == MapColor.TERRACOTTA_LIGHT_GREEN) {
-         return LIGHT_GREEN;
+         return GREEN;
       } else if (materialColor == MapColor.COLOR_PINK || materialColor == MapColor.TERRACOTTA_PINK) {
          return PINK;
       } else if (materialColor == MapColor.COLOR_CYAN
@@ -142,9 +133,9 @@ public enum Colors implements StringRepresentable {
          || materialColor == MapColor.WARPED_NYLIUM
          || materialColor == MapColor.CRIMSON_STEM
          || materialColor == MapColor.CRIMSON_HYPHAE) {
-         return CYAN;
+         return GREEN;
       } else if (materialColor == MapColor.COLOR_PURPLE || materialColor == MapColor.TERRACOTTA_PURPLE) {
-         return PURPLE;
+         return PINK;
       } else if (materialColor == MapColor.COLOR_RED
          || materialColor == MapColor.TERRACOTTA_RED
          || materialColor == MapColor.NETHER
@@ -152,7 +143,7 @@ public enum Colors implements StringRepresentable {
          || materialColor == MapColor.WARPED_WART_BLOCK) {
          return RED;
       } else {
-         return materialColor != MapColor.COLOR_BLACK && materialColor != MapColor.TERRACOTTA_BLACK && materialColor != MapColor.DEEPSLATE ? ORANGE : BLACK;
+         return materialColor != MapColor.COLOR_BLACK && materialColor != MapColor.TERRACOTTA_BLACK && materialColor != MapColor.DEEPSLATE ? YELLOW : BLACK;
       }
    }
 
@@ -173,7 +164,7 @@ public enum Colors implements StringRepresentable {
          case PINK:
             return PINK;
          default:
-            return ORANGE;
+            return YELLOW;
       }
    }
 
@@ -185,8 +176,6 @@ public enum Colors implements StringRepresentable {
          case RED:
          case YELLOW:
          case GREEN:
-         case PINK:
-            return ORANGE;
          default:
             return sandColor;
       }
@@ -200,8 +189,6 @@ public enum Colors implements StringRepresentable {
          case RED:
          case YELLOW:
          case GREEN:
-         case PINK:
-            return ORANGE;
          default:
             return this;
       }
@@ -253,28 +240,10 @@ public enum Colors implements StringRepresentable {
       switch (dyeColor) {
          case WHITE:
             return WHITE;
-         case ORANGE:
-            return ORANGE;
-         case MAGENTA:
-            return MAGENTA;
-         case LIGHT_BLUE:
-            return LIGHT_BLUE;
          case YELLOW:
             return YELLOW;
-         case LIME:
-            return LIGHT_GREEN;
          case PINK:
             return PINK;
-         case GRAY:
-            return GRAY;
-         case LIGHT_GRAY:
-            return LIGHT_GRAY;
-         case CYAN:
-            return CYAN;
-         case PURPLE:
-            return PURPLE;
-         case BLUE:
-            return BLUE;
          case BROWN:
             return BROWN;
          case GREEN:

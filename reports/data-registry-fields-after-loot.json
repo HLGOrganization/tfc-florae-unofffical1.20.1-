@@ -1,0 +1,30 @@
+{
+  "dump": "tfc_florae_port\\reports\\runtime-registries.json",
+  "registry_probe_complete_for_tfc": true,
+  "probe_namespace_presence": {
+    "tfc_items": true,
+    "tfcflorae_items": true,
+    "tfc_blocks": true,
+    "tfcflorae_blocks": true,
+    "tfc_recipe_serializers": true,
+    "tfcflorae_recipe_serializers": true
+  },
+  "files_by_category": {
+    "advancements": 2209,
+    "loot_tables": 10699,
+    "recipes": 16697,
+    "tfc": 453
+  },
+  "checked_fields_by_registry": {
+    "minecraft:item": 38966,
+    "minecraft:block": 21398,
+    "minecraft:enchantment": 189,
+    "minecraft:recipe_serializer": 17201,
+    "minecraft:fluid": 304,
+    "minecraft:sound_event": 4
+  },
+  "invalid_fields": 0,
+  "invalid_by_category": {},
+  "errors": [],
+  "limits": "Only explicit registry fields in recipes/loot/advancements/TFC managers. External namespaces absent from the minimal probe are excluded. Tag and dynamic-worldgen checks are separate. Invalid fields are not actionable unless registry_probe_complete_for_tfc is true; a failed mod bootstrap yields vanilla-only false positives."
+}

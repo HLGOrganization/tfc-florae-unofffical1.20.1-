@@ -1,0 +1,22 @@
+Compiled from "RandomTreeConfig.java"
+public final class net.dries007.tfc.world.feature.tree.RandomTreeConfig extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final java.util.List<net.minecraft.resources.ResourceLocation> structureNames;
+  private final java.util.Optional<net.dries007.tfc.world.feature.tree.TrunkConfig> trunk;
+  private final net.dries007.tfc.world.feature.tree.TreePlacementConfig placement;
+  private final java.util.Optional<net.dries007.tfc.world.feature.tree.RootConfig> rootSystem;
+  public static final com.mojang.serialization.Codec<net.dries007.tfc.world.feature.tree.RandomTreeConfig> CODEC;
+  public net.dries007.tfc.world.feature.tree.RandomTreeConfig(java.util.List<net.minecraft.resources.ResourceLocation>, java.util.Optional<net.dries007.tfc.world.feature.tree.TrunkConfig>, net.dries007.tfc.world.feature.tree.TreePlacementConfig, java.util.Optional<net.dries007.tfc.world.feature.tree.RootConfig>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.resources.ResourceLocation> structureNames();
+  public java.util.Optional<net.dries007.tfc.world.feature.tree.TrunkConfig> trunk();
+  public net.dries007.tfc.world.feature.tree.TreePlacementConfig placement();
+  public java.util.Optional<net.dries007.tfc.world.feature.tree.RootConfig> rootSystem();
+  private static com.mojang.datafixers.kinds.App lambda$static$4(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.Optional lambda$static$3(net.dries007.tfc.world.feature.tree.RandomTreeConfig);
+  private static net.dries007.tfc.world.feature.tree.TreePlacementConfig lambda$static$2(net.dries007.tfc.world.feature.tree.RandomTreeConfig);
+  private static java.util.Optional lambda$static$1(net.dries007.tfc.world.feature.tree.RandomTreeConfig);
+  private static java.util.List lambda$static$0(net.dries007.tfc.world.feature.tree.RandomTreeConfig);
+  static {};
+}

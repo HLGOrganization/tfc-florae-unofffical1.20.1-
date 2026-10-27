@@ -5,7 +5,7 @@
         "north": true
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_port/wenge"
+        "model": "tfcflorae:block/wood/gear_box_port/wenge"
       }
     },
     {
@@ -13,7 +13,7 @@
         "north": false
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_face/wenge"
+        "model": "tfcflorae:block/wood/gear_box_face/wenge"
       }
     },
     {
@@ -21,7 +21,7 @@
         "south": true
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_port/wenge",
+        "model": "tfcflorae:block/wood/gear_box_port/wenge",
         "y": 180
       }
     },
@@ -30,7 +30,7 @@
         "south": false
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_face/wenge",
+        "model": "tfcflorae:block/wood/gear_box_face/wenge",
         "y": 180
       }
     },
@@ -39,7 +39,7 @@
         "east": true
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_port/wenge",
+        "model": "tfcflorae:block/wood/gear_box_port/wenge",
         "y": 90
       }
     },
@@ -48,7 +48,7 @@
         "east": false
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_face/wenge",
+        "model": "tfcflorae:block/wood/gear_box_face/wenge",
         "y": 90
       }
     },
@@ -57,7 +57,7 @@
         "west": true
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_port/wenge",
+        "model": "tfcflorae:block/wood/gear_box_port/wenge",
         "y": 270
       }
     },
@@ -66,7 +66,7 @@
         "west": false
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_face/wenge",
+        "model": "tfcflorae:block/wood/gear_box_face/wenge",
         "y": 270
       }
     },
@@ -75,7 +75,7 @@
         "down": true
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_port/wenge",
+        "model": "tfcflorae:block/wood/gear_box_port/wenge",
         "x": 90
       }
     },
@@ -84,7 +84,7 @@
         "down": false
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_face/wenge",
+        "model": "tfcflorae:block/wood/gear_box_face/wenge",
         "x": 90
       }
     },
@@ -93,7 +93,7 @@
         "up": true
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_port/wenge",
+        "model": "tfcflorae:block/wood/gear_box_port/wenge",
         "x": 270
       }
     },
@@ -102,7 +102,7 @@
         "up": false
       },
       "apply": {
-        "model": "tfc:block/wood/gear_box_face/wenge",
+        "model": "tfcflorae:block/wood/gear_box_face/wenge",
         "x": 270
       }
     }

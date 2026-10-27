@@ -1,46 +1,9 @@
-# Gradle and IDE
+﻿build/
 .gradle/
-build/
 run/
+logs/
+*.log
 out/
 .idea/
-.vscode/
 *.iml
-
-# Local caches and generated reports
-libs-offline/
-mc-cache/
-reports/
-META-INF/
-
-# Working backups, extracted files, and temporary diagnostics
-_backup*/
-structures_backup*/
-_bakcls/
-_extract_tmp/
-_tmp_native/
-attic/
-parked/
-_audit/
-*.log
-*.out
-*.bak
-*.orig
-*.tmp
-*.class
-
-# Local handoff notes
-项目交接文档.md
-接手进度.md
-
-# Local scripts and inspection dumps
-_audit_*.py
-inspect_*.py
-scan_*.py
-*_audit*.py
-*_chk*.txt
-*_full.txt
-*_grower.txt
-*_leaf*.txt
-*_sap*.txt
-*_tfc_*.txt
+*.jar.bak-*

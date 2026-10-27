@@ -44,7 +44,7 @@ public class TFCFContainerTypes {
    );
    // 打制界面统一为一个 MenuType，与 TFC 的做法一致（TFC 也只有 tfc:knapping 一个菜单）。
    // 四种材质靠 KnappingType 区分，而 KnappingType 是数据驱动的：
-   //   data/tfcflorae/tfc/knapping_types/{earthenware,kaolinite,stoneware}_clay_knapping.json
+   //   data/tfcflorae/tfc/knapping_types/{earthenware,stoneware}_clay_knapping.json
    //   data/tfcflorae/tfc/knapping_types/flint_knapping.json
    public static final RegistryObject<MenuType<KnappingContainer>> KNAPPING = registerItem(
       "knapping", TFCFContainerTypes::createKnapping

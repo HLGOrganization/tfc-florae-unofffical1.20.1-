@@ -1,11 +1,11 @@
 package tfcflorae.common.blocks.rock;
-import net.dries007.tfc.common.blocks.rock.RockDisplayCategory;
 
 import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
+import net.dries007.tfc.common.blocks.DecorationBlockRegistryObject;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.SandstoneBlockType;
 import net.dries007.tfc.common.blocks.TFCBlocks;
@@ -13,6 +13,7 @@ import net.dries007.tfc.common.blocks.rock.MossGrowingBlock;
 import net.dries007.tfc.common.blocks.rock.MossSpreadingBlock;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory;
+import net.dries007.tfc.common.blocks.rock.RockDisplayCategory;
 import net.dries007.tfc.common.blocks.rock.Rock.BlockType;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
 import net.dries007.tfc.util.Helpers;
@@ -30,7 +31,6 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.SandLayerBlock;
 import tfcflorae.util.registry.TFCFRegistryRock;
 
@@ -46,7 +46,8 @@ public enum TFCFRock implements TFCFRegistryRock {
    JASPILLITE(RockCategory.SEDIMENTARY, MapColor.TERRACOTTA_RED, "RED"),
    WACKESTONE(RockCategory.SEDIMENTARY, MapColor.TERRACOTTA_BLACK, "BLACK"),
    CATACLASITE(RockCategory.METAMORPHIC, MapColor.TERRACOTTA_GRAY, "GRAY"),
-   SOAPSTONE(RockCategory.METAMORPHIC, MapColor.TERRACOTTA_CYAN, "CYAN");
+   SOAPSTONE(RockCategory.METAMORPHIC, MapColor.TERRACOTTA_CYAN, "CYAN"),
+   TUFF(RockCategory.IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_GRAY, "GRAY");
 
    public static final TFCFRock[] VALUES = values();
    public final String serializedName = this.name().toLowerCase(Locale.ROOT);
@@ -61,82 +62,62 @@ public enum TFCFRock implements TFCFRegistryRock {
    }
 
    public Supplier<? extends Block> getSandType() {
-      String var1 = this.sandType;
-      switch (var1) {
+      switch (this.sandType) {
          case "BLACK":
-            return (Supplier<? extends Block>)TFCBlocks.SAND.get(SandBlockType.BLACK);
-         case "BLUE":
-            return (Supplier<? extends Block>)TFCFBlocks.SAND.get(Colors.BLUE);
+            return (Supplier)TFCBlocks.SAND.get(SandBlockType.BLACK);
          case "BROWN":
-            return (Supplier<? extends Block>)TFCBlocks.SAND.get(SandBlockType.BROWN);
-         case "CYAN":
-            return (Supplier<? extends Block>)TFCFBlocks.SAND.get(Colors.CYAN);
-         case "GRAY":
-            return (Supplier<? extends Block>)TFCFBlocks.SAND.get(Colors.GRAY);
+            return (Supplier)TFCBlocks.SAND.get(SandBlockType.BROWN);
          case "GREEN":
-            return (Supplier<? extends Block>)TFCBlocks.SAND.get(SandBlockType.GREEN);
-         case "LIGHT_BLUE":
-            return (Supplier<? extends Block>)TFCFBlocks.SAND.get(Colors.LIGHT_BLUE);
-         case "LIGHT_GRAY":
-            return (Supplier<? extends Block>)TFCFBlocks.SAND.get(Colors.LIGHT_GRAY);
-         case "LIGHT_GREEN":
-            return (Supplier<? extends Block>)TFCFBlocks.SAND.get(Colors.LIGHT_GREEN);
-         case "MAGENTA":
-            return (Supplier<? extends Block>)TFCFBlocks.SAND.get(Colors.MAGENTA);
-         case "ORANGE":
-            return (Supplier<? extends Block>)TFCFBlocks.SAND.get(Colors.ORANGE);
+            return (Supplier)TFCBlocks.SAND.get(SandBlockType.GREEN);
          case "PINK":
-            return (Supplier<? extends Block>)TFCBlocks.SAND.get(SandBlockType.PINK);
-         case "PURPLE":
-            return (Supplier<? extends Block>)TFCFBlocks.SAND.get(Colors.PURPLE);
+            return (Supplier)TFCBlocks.SAND.get(SandBlockType.PINK);
          case "RED":
-            return (Supplier<? extends Block>)TFCBlocks.SAND.get(SandBlockType.RED);
+            return (Supplier)TFCBlocks.SAND.get(SandBlockType.RED);
          case "WHITE":
-            return (Supplier<? extends Block>)TFCBlocks.SAND.get(SandBlockType.WHITE);
+            return (Supplier)TFCBlocks.SAND.get(SandBlockType.WHITE);
          case "YELLOW":
-            return (Supplier<? extends Block>)TFCBlocks.SAND.get(SandBlockType.YELLOW);
+            return (Supplier)TFCBlocks.SAND.get(SandBlockType.YELLOW);
          default:
-            return (Supplier<? extends Block>)TFCBlocks.SAND.get(SandBlockType.YELLOW);
+            return (Supplier)TFCBlocks.SAND.get(SandBlockType.YELLOW);
       }
    }
 
    public Supplier<? extends Block> getSandstone() {
-      String var1 = this.sandType;
-      switch (var1) {
+      switch (this.sandType) {
          case "BLACK":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.BLACK)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.BLACK)).get(SandstoneBlockType.RAW);
          case "BLUE":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.WHITE)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.WHITE)).get(SandstoneBlockType.RAW);
          case "BROWN":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.BROWN)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.BROWN)).get(SandstoneBlockType.RAW);
          case "CYAN":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.GREEN)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.GREEN)).get(SandstoneBlockType.RAW);
          case "GRAY":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.BLACK)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.BLACK)).get(SandstoneBlockType.RAW);
          case "GREEN":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.GREEN)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.GREEN)).get(SandstoneBlockType.RAW);
          case "LIGHT_BLUE":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.WHITE)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.WHITE)).get(SandstoneBlockType.RAW);
          case "LIGHT_GRAY":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.WHITE)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.WHITE)).get(SandstoneBlockType.RAW);
          case "LIGHT_GREEN":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.GREEN)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.GREEN)).get(SandstoneBlockType.RAW);
          case "MAGENTA":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.PINK)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.PINK)).get(SandstoneBlockType.RAW);
          case "ORANGE":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.RED)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.RED)).get(SandstoneBlockType.RAW);
          case "PINK":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.PINK)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.PINK)).get(SandstoneBlockType.RAW);
          case "PURPLE":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.PINK)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.PINK)).get(SandstoneBlockType.RAW);
          case "RED":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.RED)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.RED)).get(SandstoneBlockType.RAW);
          case "WHITE":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.WHITE)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.WHITE)).get(SandstoneBlockType.RAW);
          case "YELLOW":
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.YELLOW)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.YELLOW)).get(SandstoneBlockType.RAW);
          default:
-            return (Supplier<? extends Block>)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.YELLOW)).get(SandstoneBlockType.RAW);
+            return (Supplier)((Map)TFCBlocks.SANDSTONE.get(SandBlockType.YELLOW)).get(SandstoneBlockType.RAW);
       }
    }
 
@@ -165,80 +146,64 @@ public enum TFCFRock implements TFCFRegistryRock {
       }
    }
 
-   @Override
    public RockCategory category() {
       return this.category;
    }
 
-   @Override
    public MapColor color() {
       return this.color;
    }
 
-   public Supplier<? extends Block> getBlock(BlockType type) {
-      return (Supplier<? extends Block>)TFCFBlocks.TFCF_ROCK_BLOCKS.get(this).get(type);
+   public Supplier<? extends Block> getBlock(Rock.BlockType type) {
+      return (Supplier)((Map)TFCFBlocks.TFCF_ROCK_BLOCKS.get(this)).get(type);
    }
 
-   @Override
    public Supplier<? extends Block> getBlockTFC(RegistryRock rock, TFCFRock.TFCFBlockType type) {
-      return (Supplier<? extends Block>)TFCFBlocks.ROCK_BLOCKS.get(rock).get(type);
+      return (Supplier)((Map)TFCFBlocks.ROCK_BLOCKS.get(rock)).get(type);
    }
 
-   @Override
    public Supplier<? extends Block> getBlockTFCF(TFCFRock.TFCFBlockType type) {
-      return (Supplier<? extends Block>)TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(this).get(type);
+      return (Supplier)((Map)TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(this)).get(type);
    }
 
    public Supplier<? extends Block> getAnvil() {
-      return (Supplier<? extends Block>)TFCFBlocks.ROCK_ANVILS.get(this);
+      return (Supplier)TFCFBlocks.ROCK_ANVILS.get(this);
    }
 
-   public Supplier<? extends SlabBlock> getSlab(BlockType type) {
-      return TFCFBlocks.TFCF_ROCKTYPE_DECORATIONS.get(this).get(type).slab();
+   public Supplier<? extends SlabBlock> getSlab(Rock.BlockType type) {
+      return ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFCF_ROCKTYPE_DECORATIONS.get(this)).get(type)).slab();
    }
 
-   public Supplier<? extends StairBlock> getStair(BlockType type) {
-      return TFCFBlocks.TFCF_ROCKTYPE_DECORATIONS.get(this).get(type).stair();
+   public Supplier<? extends StairBlock> getStair(Rock.BlockType type) {
+      return ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFCF_ROCKTYPE_DECORATIONS.get(this)).get(type)).stair();
    }
 
-   public Supplier<? extends WallBlock> getWall(BlockType type) {
-      return TFCFBlocks.TFCF_ROCKTYPE_DECORATIONS.get(this).get(type).wall();
+   public Supplier<? extends WallBlock> getWall(Rock.BlockType type) {
+      return ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFCF_ROCKTYPE_DECORATIONS.get(this)).get(type)).wall();
    }
 
-   @Override
    public Supplier<? extends SlabBlock> getSlabTFC(RegistryRock rock, TFCFRock.TFCFBlockType type) {
-      return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock) != null && TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type) != null
-         ? TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type).slab()
-         : TFCFBlocks.TFC_ROCK_DECORATIONS.get(Rock.GRANITE).get(TFCFRock.TFCFBlockType.COBBLED_BRICKS).slab();
+      return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock) != null && ((Map)TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock)).get(type) != null ? ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock)).get(type)).slab() : ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFC_ROCK_DECORATIONS.get(Rock.GRANITE)).get(TFCFRock.TFCFBlockType.COBBLED_BRICKS)).slab();
    }
 
-   @Override
    public Supplier<? extends StairBlock> getStairTFC(RegistryRock rock, TFCFRock.TFCFBlockType type) {
-      return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock) != null && TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type) != null
-         ? TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type).stair()
-         : TFCFBlocks.TFC_ROCK_DECORATIONS.get(Rock.GRANITE).get(TFCFRock.TFCFBlockType.COBBLED_BRICKS).stair();
+      return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock) != null && ((Map)TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock)).get(type) != null ? ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock)).get(type)).stair() : ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFC_ROCK_DECORATIONS.get(Rock.GRANITE)).get(TFCFRock.TFCFBlockType.COBBLED_BRICKS)).stair();
    }
 
-   @Override
    public Supplier<? extends WallBlock> getWallTFC(RegistryRock rock, TFCFRock.TFCFBlockType type) {
-      return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock) != null && TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type) != null
-         ? TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock).get(type).wall()
-         : TFCFBlocks.TFC_ROCK_DECORATIONS.get(Rock.GRANITE).get(TFCFRock.TFCFBlockType.COBBLED_BRICKS).wall();
+      return TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock) != null && ((Map)TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock)).get(type) != null ? ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFC_ROCK_DECORATIONS.get(rock)).get(type)).wall() : ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFC_ROCK_DECORATIONS.get(Rock.GRANITE)).get(TFCFRock.TFCFBlockType.COBBLED_BRICKS)).wall();
    }
 
-   @Override
    public Supplier<? extends SlabBlock> getSlabTFCF(TFCFRock.TFCFBlockType type) {
-      return TFCFBlocks.TFCF_ROCK_DECORATIONS.get(this).get(type).slab();
+      return ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFCF_ROCK_DECORATIONS.get(this)).get(type)).slab();
    }
 
-   @Override
    public Supplier<? extends StairBlock> getStairTFCF(TFCFRock.TFCFBlockType type) {
-      return TFCFBlocks.TFCF_ROCK_DECORATIONS.get(this).get(type).stair();
+      return ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFCF_ROCK_DECORATIONS.get(this)).get(type)).stair();
    }
 
-   @Override
    public Supplier<? extends WallBlock> getWallTFCF(TFCFRock.TFCFBlockType type) {
-      return TFCFBlocks.TFCF_ROCK_DECORATIONS.get(this).get(type).wall();
+      return ((DecorationBlockRegistryObject)((Map)TFCFBlocks.TFCF_ROCK_DECORATIONS.get(this)).get(type)).wall();
    }
 
    public String getSerializedName() {
@@ -246,134 +211,88 @@ public enum TFCFRock implements TFCFRegistryRock {
    }
 
    public static void registerDefaultRocks() {
-      for (TFCFRock rock : values()) {
-         ResourceLocation id = Helpers.identifier(rock.getSerializedName());
-         RockCategory category = rock.category();
-         Map<BlockType, RegistryObject<Block>> blocks = TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock);
-         RockSettings.register(
-            id,
-            new RockSettings(
-               (Block)blocks.get(BlockType.RAW).get(),
-               (Block)blocks.get(BlockType.HARDENED).get(),
-               (Block)blocks.get(BlockType.GRAVEL).get(),
-               (Block)blocks.get(BlockType.COBBLE).get(),
-               rock.getSandType().get(),
-               rock.getSandstone().get(),
-               Optional.of((Block)blocks.get(BlockType.SPIKE).get()),
-               Optional.of((Block)blocks.get(BlockType.LOOSE).get()),
-               Optional.empty()
-            )
-         );
+      for(TFCFRock rock : values()) {
+         if (rock != TUFF) {
+            ResourceLocation id = Helpers.identifier(rock.getSerializedName());
+            RockCategory category = rock.category();
+            Map<Rock.BlockType, RegistryObject<Block>> blocks = (Map)TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock);
+            RockSettings.register(id, new RockSettings((Block)((RegistryObject)blocks.get(BlockType.RAW)).get(), (Block)((RegistryObject)blocks.get(BlockType.HARDENED)).get(), (Block)((RegistryObject)blocks.get(BlockType.GRAVEL)).get(), (Block)((RegistryObject)blocks.get(BlockType.COBBLE)).get(), (Block)rock.getSandType().get(), (Block)rock.getSandstone().get(), Optional.of((Block)((RegistryObject)blocks.get(BlockType.SPIKE)).get()), Optional.of((Block)((RegistryObject)blocks.get(BlockType.LOOSE)).get()), Optional.empty()));
+         }
       }
+
    }
 
    public static Enum<?> getEnum(RockSettings rockSettings) {
-      // TFC 3.x's RockSettings record no longer carries its own id, so the lookup falls back
-      // to the first TFCF rock. Callers use this only for display purposes.
       return values()[0];
    }
 
+   public RockDisplayCategory displayCategory() {
+      RockDisplayCategory var10000;
+      switch (this.name().toLowerCase(Locale.ROOT)) {
+         case "rhyolite":
+         case "basalt":
+         case "andesite":
+         case "dacite":
+            var10000 = RockDisplayCategory.FELSIC_IGNEOUS_EXTRUSIVE;
+            break;
+         case "porphyry":
+         case "boninite":
+         case "cataclasite":
+            var10000 = RockDisplayCategory.INTERMEDIATE_IGNEOUS_EXTRUSIVE;
+            break;
+         case "granite":
+         case "red_granite":
+            var10000 = RockDisplayCategory.FELSIC_IGNEOUS_INTRUSIVE;
+            break;
+         case "diorite":
+         case "gabbro":
+            var10000 = RockDisplayCategory.INTERMEDIATE_IGNEOUS_INTRUSIVE;
+            break;
+         case "quartzite":
+         case "slate":
+         case "phyllite":
+         case "schist":
+         case "gneiss":
+         case "marble":
+         case "soapstone":
+            var10000 = RockDisplayCategory.METAMORPHIC;
+            break;
+         case "shale":
+         case "claystone":
+         case "limestone":
+         case "conglomerate":
+         case "dolomite":
+         case "chert":
+         case "chalk":
+         case "arkose":
+         case "mudstone":
+         case "wackestone":
+         case "carbonatite":
+         case "laterite":
+         case "sandstone":
+         case "jaspillite":
+         case "dripstone":
+         case "gypsum":
+            var10000 = RockDisplayCategory.SEDIMENTARY;
+            break;
+         default:
+            var10000 = RockDisplayCategory.SEDIMENTARY;
+      }
+
+      return var10000;
+   }
+
    public static enum TFCFBlockType implements StringRepresentable {
-      STONE_TILES(
-         (rock, self) -> new Block(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         (rock, self) -> new Block(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         true
-      ),
-      COBBLED_BRICKS(
-         (rock, self) -> new MossGrowingRotatedPillarBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops(),
-               (Supplier<? extends Block>)TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())
-            ),
-         (rock, self) -> new MossGrowingRotatedPillarBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops(),
-               (Supplier<? extends Block>)TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())
-            ),
-         true
-      ),
-      POLISHED_COBBLED_BRICKS(
-         (rock, self) -> new Block(
-               Properties.of().mapColor(rock.color()).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7.0F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         (rock, self) -> new Block(
-               Properties.of().mapColor(rock.color()).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7.0F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         true
-      ),
-      FLAGSTONE_BRICKS(
-         (rock, self) -> new MossGrowingBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops(),
-               (Supplier)TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())
-            ),
-         (rock, self) -> new MossGrowingBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops(),
-               (Supplier)TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())
-            ),
-         true
-      ),
-      MOSSY_COBBLED_BRICKS(
-         (rock, self) -> new MossSpreadingRotatedPillarBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         (rock, self) -> new MossSpreadingRotatedPillarBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         true
-      ),
-      MOSSY_FLAGSTONE_BRICKS(
-         (rock, self) -> new MossSpreadingBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         (rock, self) -> new MossSpreadingBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         true
-      ),
-      CRACKED_FLAGSTONE_BRICKS(
-         (rock, self) -> new Block(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         (rock, self) -> new Block(
-               Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         true
-      ),
-      MORTAR_AND_COBBLE(
-         (rock, self) -> new MossGrowingBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5F), 10.0F).requiresCorrectToolForDrops(),
-               (Supplier)TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock).get(self.mossy())
-            ),
-         (rock, self) -> new MossGrowingBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5F), 10.0F).requiresCorrectToolForDrops(),
-               (Supplier)TFCFBlocks.ROCK_BLOCKS.get(rock).get(self.mossy())
-            ),
-         true
-      ),
-      MOSSY_MORTAR_AND_COBBLE(
-         (rock, self) -> new MossSpreadingBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         (rock, self) -> new MossSpreadingBlock(
-               Properties.of().mapColor(rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5F), 10.0F).requiresCorrectToolForDrops()
-            ),
-         true
-      ),
-      GRAVEL_LAYER(
-         (rock, self) -> new SandLayerBlock(
-               rock.color().col,
-               ExtendedProperties.of(rock.color()).strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.GRAVEL),
-               (Supplier<? extends Block>)TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock).get(BlockType.GRAVEL)
-            ),
-         (rock, self) -> new SandLayerBlock(
-               rock.color().col,
-               ExtendedProperties.of(rock.color()).strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.GRAVEL),
-               (Supplier<? extends Block>)((Map)TFCBlocks.ROCK_BLOCKS.get(rock)).get(BlockType.GRAVEL)
-            ),
-         false
-      );
+      STONE_TILES((rock, self) -> new Block(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5F), 10.0F).requiresCorrectToolForDrops()), (rock, self) -> new Block(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE).strength(rock.category().hardness(6.5F), 10.0F).requiresCorrectToolForDrops()), true),
+      COBBLED_BRICKS((rock, self) -> new MossGrowingRotatedPillarBlock(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops(), (Supplier)((Map)TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock)).get(self.mossy())), (rock, self) -> new MossGrowingRotatedPillarBlock(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops(), (Supplier)((Map)TFCFBlocks.ROCK_BLOCKS.get(rock)).get(self.mossy())), true),
+      POLISHED_COBBLED_BRICKS((rock, self) -> new Block(Properties.of().mapColor(rock.color()).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7.0F), 10.0F).requiresCorrectToolForDrops()), (rock, self) -> new Block(Properties.of().mapColor(rock.color()).sound(SoundType.ANCIENT_DEBRIS).strength(rock.category().hardness(7.0F), 10.0F).requiresCorrectToolForDrops()), true),
+      FLAGSTONE_BRICKS((rock, self) -> new MossGrowingBlock(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops(), (Supplier)((Map)TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock)).get(self.mossy())), (rock, self) -> new MossGrowingBlock(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops(), (Supplier)((Map)TFCFBlocks.ROCK_BLOCKS.get(rock)).get(self.mossy())), true),
+      MOSSY_COBBLED_BRICKS((rock, self) -> new MossSpreadingRotatedPillarBlock(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()), (rock, self) -> new MossSpreadingRotatedPillarBlock(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_BRICKS).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()), true),
+      MOSSY_FLAGSTONE_BRICKS((rock, self) -> new MossSpreadingBlock(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()), (rock, self) -> new MossSpreadingBlock(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()), true),
+      CRACKED_FLAGSTONE_BRICKS((rock, self) -> new Block(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()), (rock, self) -> new Block(Properties.of().mapColor(rock.color()).sound(SoundType.DEEPSLATE_TILES).strength(rock.category().hardness(9.0F), 10.0F).requiresCorrectToolForDrops()), true),
+      MORTAR_AND_COBBLE((rock, self) -> new MossGrowingBlock(Properties.of().mapColor(rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5F), 10.0F).requiresCorrectToolForDrops(), (Supplier)((Map)TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rock)).get(self.mossy())), (rock, self) -> new MossGrowingBlock(Properties.of().mapColor(rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5F), 10.0F).requiresCorrectToolForDrops(), (Supplier)((Map)TFCFBlocks.ROCK_BLOCKS.get(rock)).get(self.mossy())), true),
+      MOSSY_MORTAR_AND_COBBLE((rock, self) -> new MossSpreadingBlock(Properties.of().mapColor(rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5F), 10.0F).requiresCorrectToolForDrops()), (rock, self) -> new MossSpreadingBlock(Properties.of().mapColor(rock.color()).sound(SoundType.STONE).strength(rock.category().hardness(5.5F), 10.0F).requiresCorrectToolForDrops()), true),
+      GRAVEL_LAYER((rock, self) -> new SandLayerBlock(rock.color().col, ExtendedProperties.of(rock.color()).strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.GRAVEL), (Supplier)((Map)TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock)).get(BlockType.GRAVEL)), (rock, self) -> new SandLayerBlock(rock.color().col, ExtendedProperties.of(rock.color()).strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.GRAVEL), (Supplier)((Map)TFCBlocks.ROCK_BLOCKS.get(rock)).get(BlockType.GRAVEL)), false);
 
       public static final TFCFRock.TFCFBlockType[] VALUES = values();
       private final boolean variants;
@@ -385,11 +304,7 @@ public enum TFCFRock implements TFCFRegistryRock {
          return i >= 0 && i < VALUES.length ? VALUES[i] : STONE_TILES;
       }
 
-      private TFCFBlockType(
-         BiFunction<TFCFRegistryRock, TFCFRock.TFCFBlockType, Block> TFCFFactory,
-         BiFunction<RegistryRock, TFCFRock.TFCFBlockType, Block> TFCFactory,
-         boolean variants
-      ) {
+      private TFCFBlockType(BiFunction<TFCFRegistryRock, TFCFRock.TFCFBlockType, Block> TFCFFactory, BiFunction<RegistryRock, TFCFRock.TFCFBlockType, Block> TFCFactory, boolean variants) {
          this.TFCFFactory = TFCFFactory;
          this.TFCFactory = TFCFactory;
          this.variants = variants;
@@ -408,11 +323,11 @@ public enum TFCFRock implements TFCFRegistryRock {
       }
 
       public Block createTFC(RegistryRock rock) {
-         return this.TFCFactory.apply(rock, this);
+         return (Block)this.TFCFactory.apply(rock, this);
       }
 
       public Block createTFCF(TFCFRegistryRock rock) {
-         return this.TFCFFactory.apply(rock, this);
+         return (Block)this.TFCFFactory.apply(rock, this);
       }
 
       public BiFunction<RegistryRock, TFCFRock.TFCFBlockType, Block> getTFCFactory() {
@@ -428,38 +343,25 @@ public enum TFCFRock implements TFCFRegistryRock {
       }
 
       @Nullable
-      public TFCFRock.TFCFBlockType mossy() {
-         return switch (this) {
-            case COBBLED_BRICKS, MOSSY_COBBLED_BRICKS -> MOSSY_COBBLED_BRICKS;
-            case FLAGSTONE_BRICKS, MOSSY_FLAGSTONE_BRICKS -> MOSSY_FLAGSTONE_BRICKS;
-                        case MORTAR_AND_COBBLE -> MOSSY_MORTAR_AND_COBBLE;
-            default -> null;
-         };
-      }
-   }
+      public TFCFRock.@Nullable TFCFBlockType mossy() {
+         TFCFRock.TFCFBlockType var10000;
+         switch (this) {
+            case COBBLED_BRICKS:
+            case MOSSY_COBBLED_BRICKS:
+               var10000 = MOSSY_COBBLED_BRICKS;
+               break;
+            case FLAGSTONE_BRICKS:
+            case MOSSY_FLAGSTONE_BRICKS:
+               var10000 = MOSSY_FLAGSTONE_BRICKS;
+               break;
+            case MORTAR_AND_COBBLE:
+               var10000 = MOSSY_MORTAR_AND_COBBLE;
+               break;
+            default:
+               var10000 = null;
+         }
 
-   /**
-    * 岩石的显示分类，用于工具提示与采集难度提示。
-    * <p>
-    * 按 TFC 的四类岩石 tag 归类（与 tfc:igneous_extrusive_rock / igneous_intrusive_rock /
-    * metamorphic_rock / sedimentary_rock 保持一致）；TFC 没有的岩石按其矿物学成分归入最接近的一类。
-    */
-   @Override
-   public net.dries007.tfc.common.blocks.rock.RockDisplayCategory displayCategory() {
-      return switch (this.name().toLowerCase(java.util.Locale.ROOT)) {
-         // 火山岩（喷出岩）
-         case "rhyolite", "basalt", "andesite", "dacite" -> RockDisplayCategory.FELSIC_IGNEOUS_EXTRUSIVE;
-         case "porphyry", "boninite", "cataclasite" -> RockDisplayCategory.INTERMEDIATE_IGNEOUS_EXTRUSIVE;
-         // 深成岩（侵入岩）
-         case "granite", "red_granite" -> RockDisplayCategory.FELSIC_IGNEOUS_INTRUSIVE;
-         case "diorite", "gabbro" -> RockDisplayCategory.INTERMEDIATE_IGNEOUS_INTRUSIVE;
-         // 变质岩
-         case "quartzite", "slate", "phyllite", "schist", "gneiss", "marble", "soapstone" -> RockDisplayCategory.METAMORPHIC;
-         // 沉积岩
-         case "shale", "claystone", "limestone", "conglomerate", "dolomite", "chert", "chalk",
-              "arkose", "mudstone", "wackestone", "carbonatite", "laterite", "sandstone",
-              "jaspillite", "dripstone", "gypsum" -> RockDisplayCategory.SEDIMENTARY;
-         default -> RockDisplayCategory.SEDIMENTARY;
-      };
+         return var10000;
+      }
    }
 }

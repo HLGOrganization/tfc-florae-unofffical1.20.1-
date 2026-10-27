@@ -1,0 +1,167 @@
+{
+  "source_tags": 679,
+  "source_tag_links": 398,
+  "dependency_jars": 289,
+  "excluded_florae_jars": [
+    "TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar"
+  ],
+  "missing_required": [],
+  "missing_optional": [],
+  "missing_worldgen_resources": [],
+  "reachable_cycles": [],
+  "pack_directives_requiring_runtime_order": [
+    {
+      "pack": "[群峦附魔] Enchanting With TFC 1.20.1-1.0.0.jar",
+      "file": "data/minecraft/tags/blocks/needs_diamond_tool.json",
+      "replace": true,
+      "remove": []
+    },
+    {
+      "pack": "[林海物语] afc-1.0.23-1.20.1.jar",
+      "file": "data/tfc/tags/worldgen/configured_feature/forest_trees.json",
+      "replace": true,
+      "remove": []
+    },
+    {
+      "pack": "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar",
+      "file": "data/tfc/tags/worldgen/placed_feature/in_biome/veins.json",
+      "replace": true,
+      "remove": []
+    }
+  ],
+  "handoff_15": {
+    "tfc:feature/berry_bushes": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/berry_bushes.json",
+          "[群峦生活] Firmalife-1.20.1-2.1.28.jar: data/tfc/tags/worldgen/placed_feature/feature/berry_bushes.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/berry_bushes.json"
+        ]
+      }
+    ],
+    "tfc:feature/boulders": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/boulders.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/boulders.json"
+        ]
+      }
+    ],
+    "tfc:feature/crops": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[万花筒群峦烹饪] ktfcc-1.3.1-1.20.1.jar: data/tfc/tags/worldgen/placed_feature/feature/crops.json",
+          "[群峦-衣物] textile-2.2.3.jar: data/tfc/tags/worldgen/placed_feature/feature/crops.json",
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/crops.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/crops.json"
+        ]
+      }
+    ],
+    "tfc:feature/forest_plants": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/forest_plants.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/forest_plants.json"
+        ]
+      }
+    ],
+    "tfc:feature/icebergs": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/icebergs.json"
+        ]
+      }
+    ],
+    "tfc:feature/land_plants": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/land_plants.json",
+          "[群峦农场魅力] tfc_farm_charm-1.0.1-1.20.1-test-1.jar: data/tfc/tags/worldgen/placed_feature/feature/land_plants.json",
+          "[群峦森罗酒馆] kaleidoscopetfctavern-1.0.8-forge-1.20.1.jar: data/tfc/tags/worldgen/placed_feature/feature/land_plants.json",
+          "[群峦生活] Firmalife-1.20.1-2.1.28.jar: data/tfc/tags/worldgen/placed_feature/feature/land_plants.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/land_plants.json"
+        ]
+      }
+    ],
+    "tfc:feature/ocean_plants": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/ocean_plants.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/ocean_plants.json"
+        ]
+      }
+    ],
+    "tfc:feature/ore_deposits": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/ore_deposits.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/ore_deposits.json"
+        ]
+      }
+    ],
+    "tfc:feature/shore_decorations": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/shore_decorations.json",
+          "[群峦生活] Firmalife-1.20.1-2.1.28.jar: data/tfc/tags/worldgen/placed_feature/feature/shore_decorations.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/shore_decorations.json"
+        ]
+      }
+    ],
+    "tfc:feature/soil_discs": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/soil_discs.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/soil_discs.json"
+        ]
+      }
+    ],
+    "tfc:feature/volcanoes": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/placed_feature/feature/volcanoes.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/placed_feature/feature/volcanoes.json"
+        ]
+      }
+    ],
+    "tfc:is_lake": [
+      {
+        "registry": "worldgen/biome",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/biome/is_lake.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/biome/is_lake.json"
+        ]
+      }
+    ],
+    "tfc:is_river": [
+      {
+        "registry": "worldgen/biome",
+        "files": [
+          "[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar: data/tfc/tags/worldgen/biome/is_river.json",
+          "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar: data/tfc/tags/worldgen/biome/is_river.json"
+        ]
+      }
+    ],
+    "tfc:planks": [],
+    "tfcflorae:feature/steppe_plants": [
+      {
+        "registry": "worldgen/placed_feature",
+        "files": [
+          "source: data/tfcflorae/tags/worldgen/placed_feature/feature/steppe_plants.json"
+        ]
+      }
+    ]
+  },
+  "limits": "Checks tag links and TFC/Florae worldgen resource existence. Does not verify runtime block/item registries, code-registered biomes, conditions, unknown external registry types, pack order or gameplay. Dependency directives are warnings: this tool cannot infer their runtime ordering."
+}

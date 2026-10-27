@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "tfcflorae:ceramic/earthenware/clay_block",
-    "tfcflorae:ceramic/kaolinite/clay_block",
     "tfcflorae:ceramic/stoneware/clay_block"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/chert",
+  "model_stages": [
+    "tfc:item/pan/native_copper/chert_full",
+    "tfc:item/pan/native_copper/chert_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper_chert"
+}

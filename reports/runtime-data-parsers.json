@@ -1,0 +1,57 @@
+{
+  "skipped": [
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\drying\\silk_worm.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\earthenware_clay_knapping\\firmalife\\oven_bottom.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\earthenware_clay_knapping\\firmalife\\oven_chimney.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\earthenware_clay_knapping\\firmalife\\oven_top.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\kaolinite_clay_knapping\\firmalife\\oven_bottom.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\kaolinite_clay_knapping\\firmalife\\oven_chimney.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\kaolinite_clay_knapping\\firmalife\\oven_top.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\stoneware_clay_knapping\\firmalife\\oven_bottom.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\stoneware_clay_knapping\\firmalife\\oven_chimney.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\stoneware_clay_knapping\\firmalife\\oven_top.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    }
+  ],
+  "counts": {
+    "climate_ranges": 42,
+    "food_items": 65,
+    "fuels": 71,
+    "item_heats": 12,
+    "item_sizes": 2,
+    "knapping_types": 4,
+    "panning": 128,
+    "recipes": 16687,
+    "sluicing": 128,
+    "supports": 1
+  },
+  "failures": []
+}

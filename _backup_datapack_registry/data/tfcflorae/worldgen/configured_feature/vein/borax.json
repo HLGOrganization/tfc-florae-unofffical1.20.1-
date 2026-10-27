@@ -1,0 +1,365 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 65,
+    "density": 0.4,
+    "min_y": 20,
+    "max_y": 120,
+    "size": 20,
+    "random_name": "borax",
+    "blocks": [
+      {
+        "replace": [
+          "tfcflorae:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/arkose"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/boninite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/boninite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/carbonatite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/carbonatite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/cataclasite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/cataclasite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/jaspillite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/jaspillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/laterite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/laterite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mudstone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/mudstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/porphyry"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/porphyry"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/red_granite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/red_granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/sandstone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/soapstone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/wackestone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/borax/wackestone"
+          }
+        ]
+      }
+    ]
+  }
+}

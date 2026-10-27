@@ -75,7 +75,6 @@ public class TFCFTags {
       // 这四种是 KnappingType 的输入 tag（见 data/tfcflorae/tfc/knapping_types/*.json），
       // 在 Java 侧只由 KNAPPING_ANY 间接引用，因此这里保留 tag 定义但不单独使用。
       public static final TagKey<Item> EARTHENWARE_CLAY_KNAPPING = create("earthenware_clay_knapping");
-      public static final TagKey<Item> KAOLINITE_CLAY_KNAPPING = create("kaolinite_clay_knapping");
       public static final TagKey<Item> STONEWARE_CLAY_KNAPPING = create("stoneware_clay_knapping");
       public static final TagKey<Item> FLINT_KNAPPING = create("flint_knapping");
       /** 本模组所有可打制物品的合集；同时会以 replace:false 追加进 TFC 的 tfc:any_knapping。 */

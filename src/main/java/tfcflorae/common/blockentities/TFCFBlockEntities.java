@@ -43,20 +43,14 @@ public class TFCFBlockEntities {
       "tfcf_chest",
       TFCFChestBlockEntity::new,
       blockStreams(
-            TFCFBlocks.WOODS.values().stream().map(map -> (RegistryObject)map.get(BlockType.CHEST)),
-            TFCFBlocks.ROCK_CHEST,
-            TFCFBlocks.ROCK_CHESTS_TFC.values().stream(),
-            TFCFBlocks.ROCK_CHESTS_TFCF.values().stream()
+            TFCFBlocks.WOODS.values().stream().map(map -> (RegistryObject)map.get(BlockType.CHEST))
          )
    );
    public static final RegistryObject<BlockEntityType<TFCFTrappedChestBlockEntity>> TRAPPED_CHEST = register(
       "tfcf_trapped_chest",
       TFCFTrappedChestBlockEntity::new,
       blockStreams(
-            TFCFBlocks.WOODS.values().stream().map(map -> (RegistryObject)map.get(BlockType.TRAPPED_CHEST)),
-            TFCFBlocks.ROCK_TRAPPED_CHEST,
-            TFCFBlocks.ROCK_TRAPPED_CHESTS_TFC.values().stream(),
-            TFCFBlocks.ROCK_TRAPPED_CHESTS_TFCF.values().stream()
+            TFCFBlocks.WOODS.values().stream().map(map -> (RegistryObject)map.get(BlockType.TRAPPED_CHEST))
          )
    );
    public static final RegistryObject<BlockEntityType<WebbedChestBlockEntity>> WEBBED_CHEST = register(

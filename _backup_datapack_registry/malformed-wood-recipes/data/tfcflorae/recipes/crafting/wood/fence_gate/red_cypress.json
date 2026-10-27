@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YXY",
+    "YXY"
+  ],
+  "key": {
+    "X": {},
+    "Y": {}
+  },
+  "result": {
+    "count": 2
+  }
+}

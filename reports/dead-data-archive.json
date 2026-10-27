@@ -1,0 +1,301 @@
+{
+  "archived": 49,
+  "advancements": 25,
+  "empty_collapse_recipes": 24,
+  "files": [
+    {
+      "file": "data/tfcflorae/advancements/crafting/tools/axe_flint.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\tools\\axe_flint.json",
+      "sha256": "381be0d2de46627c864f7e36a1856cc0e6c0de6fd3777921069a8c6e2c9908e9",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/tools/hammer_flint.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\tools\\hammer_flint.json",
+      "sha256": "94917408f2b887bb35feacf8cd0cf7bf86a7728ed883e1981ab38697c829672e",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/tools/hoe_flint.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\tools\\hoe_flint.json",
+      "sha256": "79a71d105149a2b9f29aac1cd444b3b73c8246f001252141e6801ca869c1411b",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/tools/javelin_flint.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\tools\\javelin_flint.json",
+      "sha256": "669c7ba475e2071d224cd0c348c27aa0876b072dae43a4e90c7470be3f0d55ed",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/tools/knife_flint.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\tools\\knife_flint.json",
+      "sha256": "cf9b43556ceada8009c64452313f166712c9175d8896834edc9aeaf15eed43c1",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/tools/shovel_flint.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\tools\\shovel_flint.json",
+      "sha256": "0a4f78d75125f6252ded00eb0e2f43053e2bc7496539201aee591ed6af56fb27",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/acacia.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\acacia.json",
+      "sha256": "68e4a468812c88a3573ff2feb75de1708b02b20741f2479da91c9a966308ecdd",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/ash.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\ash.json",
+      "sha256": "e48427448fcb658ab0905c9cb87c741ecce22b145fef11dffc459734152e8003",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/aspen.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\aspen.json",
+      "sha256": "637edad010a34637346656b7b58d8779c35e9ce09a4b7aa7fa05abcd12b602eb",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/birch.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\birch.json",
+      "sha256": "722c4d029b20d563877125328bb8b83879764e98b793550d28c566d23a3b4458",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/blackwood.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\blackwood.json",
+      "sha256": "705ad71204294ac80f8d2e6c534d9085f452ec2fed478df4d02e281431744738",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/chestnut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\chestnut.json",
+      "sha256": "07c4c6d629248dc22704f917eaae5eab8b407d7d9681e2aadf9af58694e57480",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/douglas_fir.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\douglas_fir.json",
+      "sha256": "d0bb396feced3e87f0f9f17c90a3bb1dc75f1792eb907c6ef91b5bcfbe8bc756",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/hickory.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\hickory.json",
+      "sha256": "df6863f1e59af4530196acb78fa6ad6248a22ef06c26d56f68c9f6f68f98369e",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/kapok.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\kapok.json",
+      "sha256": "3501c12509e88f83b552987f88c787862637c3bd090f4de4562012438d536a46",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/maple.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\maple.json",
+      "sha256": "376db93f7c9791356061aa3a83cc7e87f73710ead3eef489b4f82da394dfb6d9",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/oak.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\oak.json",
+      "sha256": "2deb46735c4a8abc4eb5cdce98a555a47019a3464c47219ee71d8fd0c022938e",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/palm.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\palm.json",
+      "sha256": "29b52c8478c30eec542557e9271cf6c139137c2a120ba0b708dd908b64861a83",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/pine.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\pine.json",
+      "sha256": "6e633935e511ca02396ffc027cf8ca3ff2ca541bf5263e94e6fd98b12e9ee9df",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/rosewood.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\rosewood.json",
+      "sha256": "e7c1e4e1c09cc6d0d8bd79cdf7790b7882872cd316f7418c0658db9a1610c1e5",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/sequoia.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\sequoia.json",
+      "sha256": "9fe35c076d1de92e29943922100eb2a03b87587bc134ac0ae8af6a259cd52f6b",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/spruce.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\spruce.json",
+      "sha256": "8e90b7ab35d85bafb7f6719161a5c22e8da0eac940b99c7347f3876a439176ed",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/sycamore.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\sycamore.json",
+      "sha256": "4c84e3399bc7bf7bd8e95b71fd5ef30e8c2aa0d7ba0e0b310c353532ea9c6fcc",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/white_cedar.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\white_cedar.json",
+      "sha256": "50db9fb7ad2746296ac762ca92691d13334b95734110041e5f0f3f9aac71ec55",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/advancements/crafting/wood/bookshelf/willow.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\willow.json",
+      "sha256": "4cb713f038f5e101f22ad9dae4b2b69d2c1e5672461ab905d2a2cbdec8219dee",
+      "reason": "Both recipe reward and recipe_unlocked refer to an absent recipe; no matching parent-mod recipe has the Florae ID."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_bismuthinite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_bismuthinite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_cassiterite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_cassiterite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_garnierite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_garnierite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_hematite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_hematite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_limonite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_limonite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_magnetite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_magnetite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_malachite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_malachite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_native_copper.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_native_copper.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_native_gold.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_native_gold.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_native_silver.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_native_silver.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_sphalerite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_sphalerite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/normal_blackband_ironstone_tetrahedrite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_tetrahedrite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_bismuthinite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_bismuthinite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_cassiterite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_cassiterite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_garnierite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_garnierite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_hematite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_hematite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_limonite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_limonite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_magnetite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_magnetite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_malachite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_malachite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_native_copper.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_native_copper.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_native_gold.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_native_gold.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_native_silver.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_native_silver.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_sphalerite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_sphalerite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    },
+    {
+      "file": "data/tfcflorae/recipes/collapse/ore/poor_blackband_ironstone_tetrahedrite.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\dead-data\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_tetrahedrite.json",
+      "sha256": "b57579b6b2af1abc4d16c7d4545728e055a1841bd55c38498a6d247e764da599",
+      "reason": "Empty collapse recipe has neither ingredient nor result; old blackband_ironstone blocks were removed and must not be reintroduced."
+    }
+  ]
+}

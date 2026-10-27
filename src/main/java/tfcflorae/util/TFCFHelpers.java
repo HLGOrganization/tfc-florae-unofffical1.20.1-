@@ -361,7 +361,7 @@ public class TFCFHelpers {
                if (sand != null
                   && (
                      sand == ((RegistryObject)TFCBlocks.SAND.get(Colors.toSandTFC(sandColors, true))).get()
-                        || sand == TFCFBlocks.SAND.get(Colors.nonTFC(sandColors)).get()
+                        || isTfcfSandBlock(Colors.nonTFC(sandColors), sand)
                   )) {
                   return Colors.toSandTFC(sandColors, true);
                }
@@ -402,7 +402,7 @@ public class TFCFHelpers {
                if (sand != null
                   && (
                      sand == ((RegistryObject)TFCBlocks.SAND.get(Colors.toSandTFC(sandColors, true))).get()
-                        || sand == TFCFBlocks.SAND.get(Colors.nonTFC(sandColors)).get()
+                        || isTfcfSandBlock(Colors.nonTFC(sandColors), sand)
                   )) {
                   return sandColors;
                }
@@ -410,7 +410,7 @@ public class TFCFHelpers {
          }
       }
 
-      return Colors.ORANGE;
+      return Colors.YELLOW;
    }
 
    public static MapColor gemColor(Gem gem) {
@@ -636,5 +636,10 @@ public class TFCFHelpers {
       } else {
          return 0.0F;
       }
+   }
+
+   private static boolean isTfcfSandBlock(Colors color, Block block) {
+      RegistryObject<Block> ref = (RegistryObject<Block>)TFCFBlocks.SAND.get(color);
+      return ref != null && block == (Block)ref.get();
    }
 }

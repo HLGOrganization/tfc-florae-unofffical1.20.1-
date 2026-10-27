@@ -1,0 +1,16 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/rockier_compact_dirt/silt/gneiss"
+      },
+      {
+        "model": "tfcflorae:block/pebble_compact_dirt/silt/gneiss"
+      },
+      {
+        "model": "tfcflorae:block/rocky_compact_dirt/silt/gneiss"
+      }
+    ]
+  }
+}

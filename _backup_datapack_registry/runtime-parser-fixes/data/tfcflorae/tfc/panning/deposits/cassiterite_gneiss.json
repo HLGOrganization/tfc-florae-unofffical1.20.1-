@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/gneiss",
+  "model_stages": [
+    "tfc:item/pan/cassiterite/gneiss_full",
+    "tfc:item/pan/cassiterite/gneiss_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_gneiss"
+}

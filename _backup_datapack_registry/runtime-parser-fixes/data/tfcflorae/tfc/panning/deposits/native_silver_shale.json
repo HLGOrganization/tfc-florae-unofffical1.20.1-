@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/shale",
+  "model_stages": [
+    "tfc:item/pan/native_silver/shale_full",
+    "tfc:item/pan/native_silver/shale_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver_shale"
+}

@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_gold/gneiss",
+  "model_stages": [
+    "tfc:item/pan/native_gold/gneiss_full",
+    "tfc:item/pan/native_gold/gneiss_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_gold_gneiss"
+}

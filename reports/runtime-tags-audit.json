@@ -1,0 +1,31 @@
+{
+  "snapshot": "reports\\runtime-registries.json",
+  "applied": false,
+  "snapshot_partial": false,
+  "trust_registry_dump": true,
+  "probe_status": {
+    "baseline": false,
+    "data_parsers_passed": true,
+    "worldgen_passed": true,
+    "mod_load_error": "",
+    "error": null
+  },
+  "registry_sizes": {
+    "minecraft:block": 15239,
+    "minecraft:item": 16405,
+    "minecraft:fluid": 146,
+    "minecraft:entity_type": 306,
+    "minecraft:game_event": 60
+  },
+  "checked_members": {
+    "minecraft:block": 49813,
+    "minecraft:item": 23684
+  },
+  "replacements": [],
+  "unresolved_required": [],
+  "unverified_required": [],
+  "optional_missing": [],
+  "external_unverified": [],
+  "changed_files": [],
+  "limits": "Static inspection of real registry IDs. Does not model pack ordering, conditional tags or missing nested tag dependencies; use audit_tag_links too."
+}

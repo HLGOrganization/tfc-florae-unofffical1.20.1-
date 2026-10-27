@@ -1,0 +1,13 @@
+{
+  "errors": [],
+  "remaining_error_count": 0,
+  "notes": [
+    "Four chisel recipes were restored from the existing sibling template; 24 empty blackband collapse files archived with byte-identical backups. copy_input=true on 14 spike collapse recipes legally omits result."
+  ],
+  "limits": "Required fields and empty ItemStackProvider shape only. Full deserialization is checked by the Forge runtime probe.",
+  "additional_checks": {
+    "knapping_patterns_checked": 82,
+    "invalid_patterns": 0,
+    "pattern_constraints": "1-5 rows, equal row width, 1-5 columns"
+  }
+}

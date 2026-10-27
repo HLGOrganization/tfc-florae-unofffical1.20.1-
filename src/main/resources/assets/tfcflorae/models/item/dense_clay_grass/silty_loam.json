@@ -1,6 +1,6 @@
 {
   "parent": "tfcflorae:item/dense_grass_inv",
   "textures": {
-    "block": "tfcflorae:block/kaolinite_clay/silty_loam"
+    "block": "tfc:block/clay/silty_loam"
   }
 }

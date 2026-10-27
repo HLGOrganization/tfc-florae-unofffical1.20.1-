@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/wood/connection",
+  "textures": {
+    "texture": "tfcflorae:block/wood/sheet/mulberry",
+    "particle": "tfcflorae:block/wood/sheet/mulberry"
+  }
+}

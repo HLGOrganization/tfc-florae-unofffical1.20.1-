@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/groundcover/rubble",
+  "textures": {
+    "0": "tfcflorae:block/rock/mossy_cobble/sandstone",
+    "particle": "tfcflorae:block/rock/mossy_cobble/sandstone"
+  }
+}

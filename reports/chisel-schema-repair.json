@@ -1,0 +1,66 @@
+[
+  {
+    "file": "data/tfcflorae/recipes/chisel/slab/wood/bald_cypress.json",
+    "before": {
+      "type": "tfc:chisel",
+      "mode": "slab",
+      "extra_drop": {}
+    },
+    "after": {
+      "type": "tfc:chisel",
+      "ingredient": "tfcflorae:wood/planks/bald_cypress",
+      "result": "tfcflorae:wood/slab/bald_cypress",
+      "mode": "slab",
+      "extra_drop": {
+        "item": "tfcflorae:wood/slab/bald_cypress"
+      }
+    },
+    "template": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\slab\\wood\\butternut.json"
+  },
+  {
+    "file": "data/tfcflorae/recipes/chisel/stair/wood/bald_cypress.json",
+    "before": {
+      "type": "tfc:chisel",
+      "mode": "stair"
+    },
+    "after": {
+      "type": "tfc:chisel",
+      "ingredient": "tfcflorae:wood/planks/bald_cypress",
+      "result": "tfcflorae:wood/stairs/bald_cypress",
+      "mode": "stair"
+    },
+    "template": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\stair\\wood\\butternut.json"
+  },
+  {
+    "file": "data/tfcflorae/recipes/chisel/slab/wood/red_cypress.json",
+    "before": {
+      "type": "tfc:chisel",
+      "mode": "slab",
+      "extra_drop": {}
+    },
+    "after": {
+      "type": "tfc:chisel",
+      "ingredient": "tfcflorae:wood/planks/red_cypress",
+      "result": "tfcflorae:wood/slab/red_cypress",
+      "mode": "slab",
+      "extra_drop": {
+        "item": "tfcflorae:wood/slab/red_cypress"
+      }
+    },
+    "template": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\slab\\wood\\butternut.json"
+  },
+  {
+    "file": "data/tfcflorae/recipes/chisel/stair/wood/red_cypress.json",
+    "before": {
+      "type": "tfc:chisel",
+      "mode": "stair"
+    },
+    "after": {
+      "type": "tfc:chisel",
+      "ingredient": "tfcflorae:wood/planks/red_cypress",
+      "result": "tfcflorae:wood/stairs/red_cypress",
+      "mode": "stair"
+    },
+    "template": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\stair\\wood\\butternut.json"
+  }
+]

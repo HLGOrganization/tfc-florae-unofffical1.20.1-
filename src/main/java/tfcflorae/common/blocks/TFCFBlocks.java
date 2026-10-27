@@ -42,6 +42,7 @@ import net.dries007.tfc.common.blocks.wood.LogBlock;
 import net.dries007.tfc.common.blocks.wood.TFCLeavesBlock;
 import net.dries007.tfc.common.blocks.wood.TFCLecternBlock;
 import net.dries007.tfc.common.blocks.wood.TFCStandingSignBlock;
+import net.dries007.tfc.common.blocks.wood.TFCSaplingBlock;
 import net.dries007.tfc.common.blocks.wood.TFCWallSignBlock;
 import net.dries007.tfc.common.blocks.wood.Wood;
 import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
@@ -129,7 +130,6 @@ import tfcflorae.common.blocks.wood.TFCFMangroveLeavesBlock;
 import tfcflorae.common.blocks.wood.TFCFMangroveMuddyRootsBlocks;
 import tfcflorae.common.blocks.wood.TFCFMangrovePropaguleBlock;
 import tfcflorae.common.blocks.wood.TFCFMangroveRootsBlocks;
-import tfcflorae.common.blocks.wood.TFCFSaplingBlock;
 import tfcflorae.common.blocks.wood.TFCFToolRackBlock;
 import tfcflorae.common.blocks.wood.TFCFTrappedChestBlock;
 import tfcflorae.common.blocks.wood.TFCFWallBlock;
@@ -140,9 +140,7 @@ import tfcflorae.common.fluid.TFCFFluids;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
 import tfcflorae.util.climate.TFCFClimateRanges;
-import tfcflorae.world.feature.tree.BambooTreeGrower;
-import tfcflorae.world.feature.tree.TFCFBambooTreeGrower;
-import tfcflorae.world.feature.tree.TFCFTreeGrower;
+import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
 public final class TFCFBlocks {
    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "tfcflorae");
@@ -362,17 +360,21 @@ public final class TFCFBlocks {
                )
          )
    );
+   // TFC 岩石上的矿石：TFC 自己已经提供了全部矿石（含分级矿），
+   // 本模组在这部分真正独有的只有非分级的 ANTHRACITE，其余一律不再重复注册。
    public static final Map<Rock, Map<TFCFOre, RegistryObject<Block>>> ORES_TFC_ROCK = Helpers.mapOfKeys(
       Rock.class,
       rock -> Helpers.mapOfKeys(
-            TFCFOre.class, ore -> !ore.isGraded(), ore -> register("ore/" + ore.name() + "/" + rock.name(), () -> ore.create(rock), TFCCreativeTabs.ORES)
+            TFCFOre.class,
+            ore -> !ore.isGraded(),
+            ore -> register("ore/" + ore.name() + "/" + rock.name(), () -> ore.create(rock), TFCCreativeTabs.ORES)
          )
    );
    public static final Map<Rock, Map<TFCFOre, Map<TFCFOre.Grade, RegistryObject<Block>>>> GRADED_ORES_TFC_ROCK = Helpers.mapOfKeys(
       Rock.class,
       rock -> Helpers.mapOfKeys(
             TFCFOre.class,
-            TFCFOre::isGraded,
+            ore -> false,
             ore -> Helpers.mapOfKeys(
                   TFCFOre.Grade.class,
                   grade -> register("ore/" + grade.name() + "_" + ore.name() + "/" + rock.name(), () -> ore.create(rock), TFCCreativeTabs.ORES)
@@ -577,100 +579,6 @@ public final class TFCFBlocks {
                ),
             TFCCreativeTabs.ORES
          )
-   );
-   public static final Map<Rock, RegistryObject<Block>> ROCK_CHESTS_TFC = Helpers.mapOfKeys(
-      Rock.class,
-      rock -> false,
-      rock -> register(
-            "rock/chest/" + rock.name(),
-            () -> new TFCFChestBlock(
-                  ExtendedProperties.of(rock.color()).requiresCorrectToolForDrops()
-                     .sound(SoundType.NETHER_BRICKS)
-                     .strength(8.0F, 10.0F)
-                     .requiresCorrectToolForDrops()
-                     .blockEntity(TFCFBlockEntities.CHEST)
-                     .clientTicks(ChestBlockEntity::lidAnimateTick),
-                  rock.name().toLowerCase()
-               ),
-            (Function<Block, ? extends BlockItem>)(b -> new ChestBlockItem(b, new Properties(), Helpers.identifier("textures/entity/chest.png")))
-         )
-   );
-   public static final Map<TFCFRock, RegistryObject<Block>> ROCK_CHESTS_TFCF = Helpers.mapOfKeys(
-      TFCFRock.class,
-      rock -> false,
-      rock -> register(
-            "rock/chest/" + rock.name(),
-            () -> new TFCFChestBlock(
-                  ExtendedProperties.of(rock.color()).requiresCorrectToolForDrops()
-                     .sound(SoundType.NETHER_BRICKS)
-                     .strength(8.0F, 10.0F)
-                     .requiresCorrectToolForDrops()
-                     .blockEntity(TFCFBlockEntities.CHEST)
-                     .clientTicks(ChestBlockEntity::lidAnimateTick),
-                  rock.name().toLowerCase()
-               ),
-            (Function<Block, ? extends BlockItem>)(b -> new ChestBlockItem(b, new Properties(), Helpers.identifier("textures/entity/chest.png")))
-         )
-   );
-   public static final RegistryObject<Block> ROCK_CHEST = register(
-      "rock/chest/rock",
-      () -> new TFCFChestBlock(
-            ExtendedProperties.of(MapColor.TERRACOTTA_BLACK).requiresCorrectToolForDrops()
-               .sound(SoundType.NETHER_BRICKS)
-               .strength(8.0F, 10.0F)
-               .requiresCorrectToolForDrops()
-               .blockEntity(TFCFBlockEntities.CHEST)
-               .clientTicks(ChestBlockEntity::lidAnimateTick),
-            "rock"
-         ),
-      (Function<Block, ? extends BlockItem>)(b -> new ChestBlockItem(b, new Properties(), Helpers.identifier("textures/entity/chest.png")))
-   );
-   public static final Map<Rock, RegistryObject<Block>> ROCK_TRAPPED_CHESTS_TFC = Helpers.mapOfKeys(
-      Rock.class,
-      rock -> false,
-      rock -> register(
-            "rock/trapped_chest/" + rock.name(),
-            () -> new TFCFTrappedChestBlock(
-                  ExtendedProperties.of(rock.color()).requiresCorrectToolForDrops()
-                     .sound(SoundType.NETHER_BRICKS)
-                     .strength(8.0F, 10.0F)
-                     .requiresCorrectToolForDrops()
-                     .blockEntity(TFCFBlockEntities.TRAPPED_CHEST)
-                     .clientTicks(ChestBlockEntity::lidAnimateTick),
-                  rock.name().toLowerCase()
-               ),
-            (Function<Block, ? extends BlockItem>)(b -> new ChestBlockItem(b, new Properties(), Helpers.identifier("textures/entity/chest.png")))
-         )
-   );
-   public static final Map<TFCFRock, RegistryObject<Block>> ROCK_TRAPPED_CHESTS_TFCF = Helpers.mapOfKeys(
-      TFCFRock.class,
-      rock -> false,
-      rock -> register(
-            "rock/trapped_chest/" + rock.name(),
-            () -> new TFCFTrappedChestBlock(
-                  ExtendedProperties.of(rock.color()).requiresCorrectToolForDrops()
-                     .sound(SoundType.NETHER_BRICKS)
-                     .strength(8.0F, 10.0F)
-                     .requiresCorrectToolForDrops()
-                     .blockEntity(TFCFBlockEntities.TRAPPED_CHEST)
-                     .clientTicks(ChestBlockEntity::lidAnimateTick),
-                  rock.name().toLowerCase()
-               ),
-            (Function<Block, ? extends BlockItem>)(b -> new ChestBlockItem(b, new Properties(), Helpers.identifier("textures/entity/chest.png")))
-         )
-   );
-   public static final RegistryObject<Block> ROCK_TRAPPED_CHEST = register(
-      "rock/trapped_chest/rock",
-      () -> new TFCFTrappedChestBlock(
-            ExtendedProperties.of(MapColor.TERRACOTTA_BLACK).requiresCorrectToolForDrops()
-               .sound(SoundType.NETHER_BRICKS)
-               .strength(8.0F, 10.0F)
-               .requiresCorrectToolForDrops()
-               .blockEntity(TFCFBlockEntities.TRAPPED_CHEST)
-               .clientTicks(ChestBlockEntity::lidAnimateTick),
-            "rock"
-         ),
-      (Function<Block, ? extends BlockItem>)(b -> new ChestBlockItem(b, new Properties(), Helpers.identifier("textures/entity/chest.png")))
    );
    public static final Map<Rock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> ROCK_BLOCKS = rockTypeTFCMapper(Rock.class);
    public static final Map<TFCFRock, Map<net.dries007.tfc.common.blocks.rock.Rock.BlockType, RegistryObject<Block>>> TFCF_ROCK_BLOCKS = rockMapper(
@@ -1594,7 +1502,10 @@ public final class TFCFBlocks {
                         register(
                            ("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
                            () -> new VanillaBambooSaplingBlock(
-                                 new BambooTreeGrower(wood),
+                                 new TFCTreeGrower(
+                                    TFCFHelpers.identifier("tree/bamboo"),
+                                    TFCFHelpers.identifier("tree/bamboo_large")
+                                 ),
                                  ExtendedProperties.of(wood.woodColor())
                                     .noCollission()
                                     .randomTicks()
@@ -1831,8 +1742,7 @@ public final class TFCFBlocks {
                            type,
                            register(
                               ("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                              () -> new TFCFSaplingBlock(
-                                    wood,
+                              () -> new TFCSaplingBlock(
                                     wood.tree(),
                                     ExtendedProperties.of(wood.woodColor())
                                        .noCollission()
@@ -1840,7 +1750,9 @@ public final class TFCFBlocks {
                                        .strength(0.0F)
                                        .sound(SoundType.GRASS)
                                        .flammableLikeLeaves()
-                                       .blockEntity(net.dries007.tfc.common.blockentities.TFCBlockEntities.TICK_COUNTER)
+                                       .blockEntity(net.dries007.tfc.common.blockentities.TFCBlockEntities.TICK_COUNTER),
+                                    wood::daysToGrow,
+                                    false
                                  ),
                               type.createBlockItem(wood, new Properties())
                            )
@@ -2732,7 +2644,10 @@ public final class TFCFBlocks {
                register(
                   ("wood/sapling/" + plant.name()).toLowerCase(Locale.ROOT),
                   () -> new TFCFBambooSaplingBlock(
-                        new TFCFBambooTreeGrower(plant),
+                        new TFCTreeGrower(
+                           TFCFHelpers.identifier("tree/grower/" + plant.name().toLowerCase(Locale.ROOT)),
+                           TFCFHelpers.identifier("tree/grower/" + plant.name().toLowerCase(Locale.ROOT) + "_large")
+                        ),
                         ExtendedProperties.of(MapColor.PLANT)
                            .noCollission()
                            .randomTicks()
@@ -2809,61 +2724,9 @@ public final class TFCFBlocks {
 
    private static Map<TFCFPlant, RegistryObject<Block>> seasonalPlantMapper(Class<TFCFPlant> enumClass) {
       Map<TFCFPlant, RegistryObject<Block>> Map = new HashMap<>();
-
       for (TFCFPlant plant : TFCFPlant.values()) {
          if (plant.isSeasonalFruitPlant()) {
-            if (plant == TFCFPlant.PRICKLY_PEAR) {
-               Map.put(
-                  plant,
-                  register(
-                     ("plant/" + plant.name()).toLowerCase(Locale.ROOT),
-                     () -> ShortFruitingCactusBlock.create(
-                           plant,
-                           TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always))
-                              .pathType(BlockPathTypes.DAMAGE_OTHER)
-                              .randomTicks(),
-                           plant.getProductItem(),
-                           plant.getStages(),
-                           TFCFClimateRanges.SEASONAL_PLANT.get(plant)
-                        ),
-                     plant.createBlockItem(new Properties())
-                  )
-               );
-            } else if (plant == TFCFPlant.BARREL_CACTUS) {
-               Map.put(
-                  plant,
-                  register(
-                     ("plant/" + plant.name()).toLowerCase(Locale.ROOT),
-                     () -> TFCFFruitingCactusBlock.create(
-                           plant,
-                           TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always))
-                              .pathType(BlockPathTypes.DAMAGE_OTHER)
-                              .randomTicks(),
-                           plant.getProductItem(),
-                           plant.getStages(),
-                           TFCFClimateRanges.SEASONAL_PLANT.get(plant)
-                        ),
-                     plant.createBlockItem(new Properties())
-                  )
-               );
-            } else if (plant == TFCFPlant.SAGUARO_CACTUS) {
-               Map.put(
-                  plant,
-                  register(
-                     ("plant/" + plant.name()).toLowerCase(Locale.ROOT),
-                     () -> SaguaroCactusBlock.create(
-                           plant,
-                           TFCFPlant.BlockType.fire(TFCFPlant.BlockType.solid().strength(0.25F).sound(SoundType.MOSS).hasPostProcess(TFCFBlocks::always))
-                              .pathType(BlockPathTypes.DAMAGE_OTHER)
-                              .randomTicks(),
-                           plant.getProductItem(),
-                           plant.getStages(),
-                           TFCFClimateRanges.SEASONAL_PLANT.get(plant)
-                        ),
-                     plant.createBlockItem(new Properties())
-                  )
-               );
-            } else if (plant == TFCFPlant.GLOW_VINES_PLANT) {
+            if (plant == TFCFPlant.GLOW_VINES_PLANT) {
                Map.put(
                   plant,
                   register(
@@ -3408,65 +3271,6 @@ public final class TFCFBlocks {
          for (TFCFRock.TFCFBlockType type : TFCFRock.TFCFBlockType.values()) {
             if (type.getTFCFactory() != null && type.hasVariants()) {
                if (type == TFCFRock.TFCFBlockType.COBBLED_BRICKS || type == TFCFRock.TFCFBlockType.FLAGSTONE_BRICKS) {
-                  typeMap.put(
-                     type,
-                     new DecorationBlockRegistryObject(
-                        register(
-                           "rock/" + type.name() + "/slab/" + rock.name(),
-                           () -> new MossGrowingSlabBlock(
-                                 net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)ROCK_BLOCKS.get(rock).get(type).get()),
-                                 TFC_ROCK_DECORATIONS.get(rock).get(type.mossy()).slab()
-                              ),
-                           TFCCreativeTabs.ROCKS
-                        ),
-                        register(
-                           "rock/" + type.name() + "/stairs/" + rock.name(),
-                           () -> new MossGrowingStairsBlock(
-                                 () -> ((Block)ROCK_BLOCKS.get(rock).get(type).get()).defaultBlockState(),
-                                 net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)ROCK_BLOCKS.get(rock).get(type).get()),
-                                 TFC_ROCK_DECORATIONS.get(rock).get(type.mossy()).stair()
-                              ),
-                           TFCCreativeTabs.ROCKS
-                        ),
-                        register(
-                           "rock/" + type.name() + "/wall/" + rock.name(),
-                           () -> new MossGrowingWallBlock(
-                                 net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)ROCK_BLOCKS.get(rock).get(type).get()),
-                                 TFC_ROCK_DECORATIONS.get(rock).get(type.mossy()).wall()
-                              ),
-                           TFCCreativeTabs.ROCKS
-                        )
-                     )
-                  );
-               } else if (type != TFCFRock.TFCFBlockType.MOSSY_COBBLED_BRICKS && type != TFCFRock.TFCFBlockType.MOSSY_FLAGSTONE_BRICKS) {
-                  typeMap.put(
-                     type,
-                     new DecorationBlockRegistryObject(
-                        register(
-                           "rock/" + type.name() + "/slab/" + rock.name(),
-                           () -> new SlabBlock(
-                                 net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)ROCK_BLOCKS.get(rock).get(type).get())
-                              ),
-                           TFCCreativeTabs.ROCKS
-                        ),
-                        register(
-                           "rock/" + type.name() + "/stairs/" + rock.name(),
-                           () -> new StairBlock(
-                                 () -> ((Block)ROCK_BLOCKS.get(rock).get(type).get()).defaultBlockState(),
-                                 net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)ROCK_BLOCKS.get(rock).get(type).get())
-                              ),
-                           TFCCreativeTabs.ROCKS
-                        ),
-                        register(
-                           "rock/" + type.name() + "/wall/" + rock.name(),
-                           () -> new WallBlock(
-                                 net.minecraft.world.level.block.state.BlockBehaviour.Properties.copy((BlockBehaviour)ROCK_BLOCKS.get(rock).get(type).get())
-                              ),
-                           TFCCreativeTabs.ROCKS
-                        )
-                     )
-                  );
-               } else {
                   typeMap.put(
                      type,
                      new DecorationBlockRegistryObject(

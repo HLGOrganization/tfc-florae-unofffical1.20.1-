@@ -1,0 +1,83 @@
+{
+  "baseline": false,
+  "runtime_tfc_version": "3.2.20",
+  "mod_load_error": "",
+  "data_parser_counts": {
+    "climate_ranges": 42,
+    "food_items": 65,
+    "fuels": 71,
+    "item_heats": 12,
+    "item_sizes": 2,
+    "knapping_types": 4,
+    "panning": 128,
+    "recipes": 16687,
+    "sluicing": 128,
+    "supports": 1
+  },
+  "data_parser_failures": [],
+  "data_parser_skipped": [
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\drying\\silk_worm.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\earthenware_clay_knapping\\firmalife\\oven_bottom.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\earthenware_clay_knapping\\firmalife\\oven_chimney.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\earthenware_clay_knapping\\firmalife\\oven_top.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\kaolinite_clay_knapping\\firmalife\\oven_bottom.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\kaolinite_clay_knapping\\firmalife\\oven_chimney.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\kaolinite_clay_knapping\\firmalife\\oven_top.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\stoneware_clay_knapping\\firmalife\\oven_bottom.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\stoneware_clay_knapping\\firmalife\\oven_chimney.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    },
+    {
+      "path": "src\\main\\resources\\data\\tfcflorae\\recipes\\stoneware_clay_knapping\\firmalife\\oven_top.json",
+      "reason": "Optional Firmalife data requires the mod\u0027s items"
+    }
+  ],
+  "data_parsers_passed": true,
+  "worldgen_registry_sizes": {
+    "minecraft:chat_type": 7,
+    "minecraft:damage_type": 49,
+    "minecraft:dimension_type": 4,
+    "minecraft:trim_material": 24,
+    "minecraft:trim_pattern": 16,
+    "minecraft:worldgen/biome": 94,
+    "minecraft:worldgen/configured_carver": 6,
+    "minecraft:worldgen/configured_feature": 1096,
+    "minecraft:worldgen/density_function": 40,
+    "minecraft:worldgen/flat_level_generator_preset": 9,
+    "minecraft:worldgen/multi_noise_biome_source_parameter_list": 2,
+    "minecraft:worldgen/noise": 60,
+    "minecraft:worldgen/noise_settings": 7,
+    "minecraft:worldgen/placed_feature": 1090,
+    "minecraft:worldgen/processor_list": 39,
+    "minecraft:worldgen/structure": 33,
+    "minecraft:worldgen/structure_set": 19,
+    "minecraft:worldgen/template_pool": 141,
+    "minecraft:worldgen/world_preset": 7
+  },
+  "worldgen_passed": true
+}

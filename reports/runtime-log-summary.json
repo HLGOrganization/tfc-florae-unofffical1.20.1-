@@ -1,0 +1,146 @@
+{
+  "log": "D:\\线框的服务器\\versions\\TFC_Wild_Fire\\logs\\latest.log",
+  "elements": [
+    "minecraft:worldgen/configured_feature",
+    "tfcflorae:vein/amethyst",
+    "tfcflorae:vein/anthracite",
+    "tfcflorae:vein/bituminous_coal",
+    "tfcflorae:vein/borax",
+    "tfcflorae:vein/cinnabar",
+    "tfcflorae:vein/cryolite",
+    "tfcflorae:vein/graphite",
+    "tfcflorae:vein/gypsum",
+    "tfcflorae:vein/halite",
+    "tfcflorae:vein/kaolinite",
+    "tfcflorae:vein/lignite",
+    "tfcflorae:vein/normal_bismuthinite",
+    "tfcflorae:vein/normal_cassiterite",
+    "tfcflorae:vein/normal_garnierite",
+    "tfcflorae:vein/normal_hematite",
+    "tfcflorae:vein/normal_limonite",
+    "tfcflorae:vein/normal_magnetite",
+    "tfcflorae:vein/normal_malachite",
+    "tfcflorae:vein/normal_native_copper",
+    "tfcflorae:vein/normal_native_gold",
+    "tfcflorae:vein/normal_native_silver",
+    "tfcflorae:vein/normal_sphalerite",
+    "tfcflorae:vein/normal_tetrahedrite",
+    "tfcflorae:vein/ruby",
+    "tfcflorae:vein/sulfur",
+    "tfcflorae:vein/sylvite"
+  ],
+  "cause_groups": {
+    "java.io.EOFException": 1,
+    "com.google.gson.stream.MalformedJsonException": 1,
+    "java.io.FileNotFoundException": 8,
+    "java.lang.RuntimeException": 26,
+    "java.lang.IllegalStateException": 1
+  },
+  "unknown_entries": [
+    {
+      "id": "tfcflorae:rock/raw/shale",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/schist",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/rhyolite",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/quartzite",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/phyllite",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/marble",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/limestone",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/granite",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/gneiss",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/gabbro",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/dolomite",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/diorite",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/dacite",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/conglomerate",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/claystone",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/chert",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/chalk",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/basalt",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 26
+    },
+    {
+      "id": "tfcflorae:rock/raw/slate",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 25
+    },
+    {
+      "id": "tfcflorae:rock/raw/andesite",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]",
+      "count": 25
+    },
+    {
+      "id": "tfcflorae:rock/raw/andesite",
+      "registry": "ResourceKey[minecraft:root / minecraft:block]\n\tat MC-BOOTSTRAP/datafixerupper@6.0.8/com.mojang.serialization.DataResult.lambda$getOrThrow$5(DataResult.java:101)\n\tat MC-BOOTSTRAP/datafixerupper@6.0.8/com.mojang.datafixers.util.Either$Right.map(Either.java:99)\n\tat MC-BOOTSTRAP/datafixerupper@6.0.8/com.mojang.serialization.DataResult.getOrThrow(DataResult.java:93)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.resources.RegistryDataLoader.m_255048_(RegistryDataLoader.java:143)\n\t... 50 more\n>> Errors in element tfcflorae:vein/bituminous_coal:\njava.lang.IllegalStateException: Failed to parse tfcflorae:worldgen/configured_feature/vein/bituminous_coal.json from pack TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.resources.RegistryDataLoader.m_255048_(RegistryDataLoader.java:147)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.resources.RegistryDataLoader$RegistryData.m_254786_(RegistryDataLoader.java:161)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.resources.RegistryDataLoader.m_254785_(RegistryDataLoader.java:63)\n\tat java.base/java.lang.Iterable.forEach(Iterable.java:75)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.resources.RegistryDataLoader.m_247207_(RegistryDataLoader.java:62)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.server.WorldLoader.m_246152_(WorldLoader.java:54)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.server.WorldLoader.m_245736_(WorldLoader.java:58)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.server.WorldLoader.m_214362_(WorldLoader.java:31)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.m_246486_(WorldOpenFlows.java:162)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.m_233122_(WorldOpenFlows.java:113)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.doLoadLevel(WorldOpenFlows.java:181)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.m_233145_(WorldOpenFlows.java:169)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.handler$gmk000$onLoadLevel(WorldOpenFlows.java:1532)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.m_233133_(WorldOpenFlows.java)\n\tat TRANSFORMER/slate_menu@1.1.0/dev.fallingcloud.slate.menu.client.play.model.WorldActions.open(WorldActions.java:118)\n\tat TRANSFORMER/slate_menu@1.1.0/dev.fallingcloud.slate.menu.client.play.model.WorldActions.play(WorldActions.java:108)\n\tat TRANSFORMER/slate_menu@1.1.0/dev.fallingcloud.slate.menu.client.LastPlayed.play(LastPlayed.java:66)\n\tat TRANSFORMER/slate_menu@1.1.0/dev.fallingcloud.slate.menu.client.title.ContinueCard.play(ContinueCard.java:96)\n\tat TRANSFORMER/slate@1.1.0/dev.fallingcloud.slate.core.widget.SlateButton.m_5716_(SlateButton.java:92)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.components.AbstractWidget.m_6375_(AbstractWidget.java:175)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.components.events.ContainerEventHandler.m_6375_(ContainerEventHandler.java:38)\n\tat TRANSFORMER/slate@1.1.0/dev.fallingcloud.slate.core.port.gui.AbstractContainerWidget.m_6375_(AbstractContainerWidget.java:56)\n\tat TRANSFORMER/slate@1.1.0/dev.fallingcloud.slate.core.widget.SlateCard.m_6375_(SlateCard.java:137)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.components.events.ContainerEventHandler.m_6375_(ContainerEventHandler.java:38)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.components.events.AbstractContainerEventHandler.m_6375_(AbstractContainerEventHandler.java:534)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.MouseHandler.m_168084_(MouseHandler.java:92)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.gui.screens.Screen.m_96579_(Screen.java:437)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.MouseHandler.m_91530_(MouseHandler.java:89)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.MouseHandler.m_168091_(MouseHandler.java:189)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:102)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.MouseHandler.m_91565_(MouseHandler.java:188)\n\tat MC-BOOTSTRAP/org.lwjgl.glfw@3.3.1+7/org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43)\n\tat MC-BOOTSTRAP/org.lwjgl@3.3.1+7/org.lwjgl.system.JNI.invokeV(Native Method)\n\tat MC-BOOTSTRAP/org.lwjgl.glfw@3.3.1+7/org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3474)\n\tat TRANSFORMER/minecraft@1.20.1/com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:237)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1173)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.Minecraft.m_91374_(Minecraft.java:718)\n\tat TRANSFORMER/minecraft@1.20.1/net.minecraft.client.main.Main.main(Main.java:218)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat MC-BOOTSTRAP/fmlloader@1.20.1-47.4.23/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111)\n\tat MC-BOOTSTRAP/fmlloader@1.20.1-47.4.23/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99)\n\tat MC-BOOTSTRAP/fmlloader@1.20.1-47.4.23/net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$makeService$0(CommonClientLaunchHandler.java:25)\n\tat MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30)\n\tat MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53)\n\tat MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71)\n\tat MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.Launcher.run(Launcher.java:108)\n\tat MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.Launcher.main(Launcher.java:78)\n\tat MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26)\n\tat MC-BOOTSTRAP/cpw.mods.modlauncher@10.0.9/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)\n\tat cpw.mods.bootstraplauncher@1.1.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141)\nCaused by: java.lang.RuntimeException: Unknown registry entry: tfcflorae:rock/raw/slate for registry: ResourceKey[minecraft:root / minecraft:block]",
+      "count": 1
+    }
+  ]
+}

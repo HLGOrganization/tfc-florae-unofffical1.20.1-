@@ -124,6 +124,12 @@ public class BambooLogBlock extends LogBlock implements IFluidLoggable {
    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
       BlockPos posBelow = pos.below();
       BlockState stateBelow = level.getBlockState(posBelow);
+      // 竹节是 4x16x4 的细柱方块，既不 isSolid 也不 faceSturdy，
+      // 原来的判定会把"叠在另一节竹子上"当成不合法支撑，导致结构/世界生成放下后
+      // 根以上的竹块在 updateShape -> tick 里被立刻 destroy。这里显式放行竹子堆叠。
+      if (stateBelow.getBlock() instanceof BambooLogBlock) {
+         return true;
+      }
       return !FluidHelpers.isAirOrEmptyFluid(stateBelow) && (stateBelow.isSolid() || stateBelow.isFaceSturdy(level, posBelow, Direction.UP));
    }
 

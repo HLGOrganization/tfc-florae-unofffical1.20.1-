@@ -1,0 +1,907 @@
+Compiled from "TreeHelpers.java"
+public final class net.dries007.tfc.world.feature.tree.TreeHelpers {
+  private static final net.minecraft.world.level.block.Rotation[] ROTATION_VALUES;
+
+  private static final net.minecraft.world.level.block.Mirror[] MIRROR_VALUES;
+
+  public net.dries007.tfc.world.feature.tree.TreeHelpers();
+    Code:
+       0: aload_0
+       1: invokespecial #51                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static boolean isValidLocation(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings, net.dries007.tfc.world.feature.tree.TreePlacementConfig);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: aload_3
+       4: invokestatic  #58                 // Method isValidGround:(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig;)Z
+       7: ifeq          24
+      10: aload_0
+      11: aload_1
+      12: aload_2
+      13: aload_3
+      14: invokestatic  #61                 // Method isValidTrunk:(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig;)Z
+      17: ifeq          24
+      20: iconst_1
+      21: goto          25
+      24: iconst_0
+      25: ireturn
+
+  public static boolean isValidGround(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings, net.dries007.tfc.world.feature.tree.TreePlacementConfig);
+    Code:
+       0: new           #9                  // class net/minecraft/core/BlockPos$MutableBlockPos
+       3: dup
+       4: invokespecial #70                 // Method net/minecraft/core/BlockPos$MutableBlockPos."<init>":()V
+       7: astore        4
+       9: iconst_1
+      10: aload_3
+      11: invokevirtual #74                 // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.width:()I
+      14: isub
+      15: iconst_2
+      16: idiv
+      17: istore        5
+      19: iload         5
+      21: aload_3
+      22: invokevirtual #74                 // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.width:()I
+      25: iconst_2
+      26: idiv
+      27: if_icmpgt     143
+      30: iconst_1
+      31: aload_3
+      32: invokevirtual #74                 // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.width:()I
+      35: isub
+      36: iconst_2
+      37: idiv
+      38: istore        6
+      40: iload         6
+      42: aload_3
+      43: invokevirtual #74                 // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.width:()I
+      46: iconst_2
+      47: idiv
+      48: if_icmpgt     137
+      51: aload         4
+      53: iload         5
+      55: iconst_0
+      56: iload         6
+      58: invokevirtual #78                 // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122178_:(III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      61: pop
+      62: aload         4
+      64: aload_2
+      65: invokevirtual #84                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74401_:()Lnet/minecraft/world/level/block/Mirror;
+      68: aload_2
+      69: invokevirtual #88                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74404_:()Lnet/minecraft/world/level/block/Rotation;
+      72: invokestatic  #92                 // Method transformMutable:(Lnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/block/Mirror;Lnet/minecraft/world/level/block/Rotation;)V
+      75: aload         4
+      77: aload_1
+      78: invokevirtual #96                 // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122193_:(Lnet/minecraft/core/Vec3i;)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      81: pop
+      82: aload_3
+      83: invokevirtual #100                // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.groundType:()Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig$GroundType;
+      86: getstatic     #104                // Field net/dries007/tfc/world/feature/tree/TreePlacementConfig$GroundType.FLOATING:Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig$GroundType;
+      89: if_acmpne     99
+      92: aload_0
+      93: aload         4
+      95: invokestatic  #108                // Method isValidFloatingPosition:(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos$MutableBlockPos;)Z
+      98: ireturn
+      99: aload_3
+     100: invokevirtual #112                // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.mayPlaceUnderwater:()Z
+     103: ifeq          119
+     106: aload_0
+     107: aload         4
+     109: aload_3
+     110: invokestatic  #116                // Method isValidPositionPossiblyUnderwater:(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig;)Z
+     113: ifeq          129
+     116: goto          131
+     119: aload_0
+     120: aload         4
+     122: aload_3
+     123: invokestatic  #119                // Method isValidPosition:(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig;)Z
+     126: ifne          131
+     129: iconst_0
+     130: ireturn
+     131: iinc          6, 1
+     134: goto          40
+     137: iinc          5, 1
+     140: goto          19
+     143: iconst_1
+     144: ireturn
+
+  private static boolean isValidPosition(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos$MutableBlockPos, net.dries007.tfc.world.feature.tree.TreePlacementConfig);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokeinterface #130,  2          // InterfaceMethod net/minecraft/world/level/LevelAccessor.m_8055_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+       7: astore_3
+       8: aload_3
+       9: invokevirtual #136                // Method net/minecraft/world/level/block/state/BlockState.m_60819_:()Lnet/minecraft/world/level/material/FluidState;
+      12: invokevirtual #142                // Method net/minecraft/world/level/material/FluidState.m_76152_:()Lnet/minecraft/world/level/material/Fluid;
+      15: getstatic     #148                // Field net/minecraft/world/level/material/Fluids.f_76193_:Lnet/minecraft/world/level/material/FlowingFluid;
+      18: if_acmpne     25
+      21: iconst_1
+      22: goto          26
+      25: iconst_0
+      26: istore        4
+      28: aload_2
+      29: invokevirtual #151                // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.mayPlaceInWater:()Z
+      32: ifeq          47
+      35: aload_3
+      36: invokestatic  #157                // Method net/dries007/tfc/common/fluids/FluidHelpers.isAirOrEmptyFluid:(Lnet/minecraft/world/level/block/state/BlockState;)Z
+      39: ifeq          47
+      42: iload         4
+      44: ifne          66
+      47: aload_3
+      48: invokevirtual #160                // Method net/minecraft/world/level/block/state/BlockState.m_60795_:()Z
+      51: ifne          66
+      54: aload_3
+      55: invokevirtual #164                // Method net/minecraft/world/level/block/state/BlockState.m_60734_:()Lnet/minecraft/world/level/block/Block;
+      58: instanceof    #166                // class net/minecraft/world/level/block/SaplingBlock
+      61: ifne          66
+      64: iconst_0
+      65: ireturn
+      66: aload_1
+      67: iconst_0
+      68: iconst_m1
+      69: iconst_0
+      70: invokevirtual #169                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122184_:(III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      73: pop
+      74: aload_0
+      75: aload_1
+      76: invokeinterface #130,  2          // InterfaceMethod net/minecraft/world/level/LevelAccessor.m_8055_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+      81: astore        5
+      83: aload         5
+      85: getstatic     #173                // Field net/dries007/tfc/common/TFCTags$Blocks.TREE_GROWS_ON:Lnet/minecraft/tags/TagKey;
+      88: invokestatic  #179                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/tags/TagKey;)Z
+      91: istore        6
+      93: iload         6
+      95: ifne          118
+      98: aload_2
+      99: invokevirtual #100                // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.groundType:()Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig$GroundType;
+     102: getstatic     #182                // Field net/dries007/tfc/world/feature/tree/TreePlacementConfig$GroundType.SAND:Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig$GroundType;
+     105: if_acmpne     118
+     108: aload         5
+     110: getstatic     #187                // Field net/minecraft/tags/BlockTags.f_13029_:Lnet/minecraft/tags/TagKey;
+     113: invokestatic  #179                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/tags/TagKey;)Z
+     116: istore        6
+     118: iload         6
+     120: ifne          145
+     123: aload_2
+     124: invokevirtual #151                // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.mayPlaceInWater:()Z
+     127: ifeq          145
+     130: iload         4
+     132: ifeq          145
+     135: aload         5
+     137: getstatic     #190                // Field net/dries007/tfc/common/TFCTags$Blocks.SEA_BUSH_PLANTABLE_ON:Lnet/minecraft/tags/TagKey;
+     140: invokestatic  #179                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/tags/TagKey;)Z
+     143: istore        6
+     145: iload         6
+     147: ireturn
+
+  private static boolean isValidFloatingPosition(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos$MutableBlockPos);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokeinterface #130,  2          // InterfaceMethod net/minecraft/world/level/LevelAccessor.m_8055_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+       7: astore_2
+       8: aload_2
+       9: invokestatic  #201                // Method net/dries007/tfc/util/EnvironmentHelpers.isWorldgenReplaceable:(Lnet/minecraft/world/level/block/state/BlockState;)Z
+      12: ifeq          25
+      15: aload_2
+      16: invokevirtual #136                // Method net/minecraft/world/level/block/state/BlockState.m_60819_:()Lnet/minecraft/world/level/material/FluidState;
+      19: invokevirtual #204                // Method net/minecraft/world/level/material/FluidState.m_76178_:()Z
+      22: ifne          27
+      25: iconst_0
+      26: ireturn
+      27: aload_1
+      28: iconst_0
+      29: iconst_m1
+      30: iconst_0
+      31: invokevirtual #169                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122184_:(III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      34: pop
+      35: aload_0
+      36: aload_1
+      37: invokeinterface #130,  2          // InterfaceMethod net/minecraft/world/level/LevelAccessor.m_8055_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+      42: astore_3
+      43: aload_3
+      44: getstatic     #207                // Field net/dries007/tfc/common/TFCTags$Blocks.BUSH_PLANTABLE_ON:Lnet/minecraft/tags/TagKey;
+      47: invokestatic  #179                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/tags/TagKey;)Z
+      50: ifne          76
+      53: aload_3
+      54: getstatic     #190                // Field net/dries007/tfc/common/TFCTags$Blocks.SEA_BUSH_PLANTABLE_ON:Lnet/minecraft/tags/TagKey;
+      57: invokestatic  #179                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/tags/TagKey;)Z
+      60: ifne          76
+      63: aload_3
+      64: invokevirtual #136                // Method net/minecraft/world/level/block/state/BlockState.m_60819_:()Lnet/minecraft/world/level/material/FluidState;
+      67: getstatic     #210                // Field net/dries007/tfc/common/TFCTags$Fluids.ANY_INFINITE_WATER:Lnet/minecraft/tags/TagKey;
+      70: invokestatic  #214                // Method net/dries007/tfc/util/Helpers.isFluid:(Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/tags/TagKey;)Z
+      73: ifeq          80
+      76: iconst_1
+      77: goto          81
+      80: iconst_0
+      81: ireturn
+
+  private static boolean isValidPositionPossiblyUnderwater(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos$MutableBlockPos, net.dries007.tfc.world.feature.tree.TreePlacementConfig);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokeinterface #130,  2          // InterfaceMethod net/minecraft/world/level/LevelAccessor.m_8055_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+       7: astore_3
+       8: aload_3
+       9: invokevirtual #136                // Method net/minecraft/world/level/block/state/BlockState.m_60819_:()Lnet/minecraft/world/level/material/FluidState;
+      12: astore        4
+      14: aload         4
+      16: invokevirtual #142                // Method net/minecraft/world/level/material/FluidState.m_76152_:()Lnet/minecraft/world/level/material/Fluid;
+      19: getstatic     #220                // Field net/dries007/tfc/common/fluids/TFCFluids.RIVER_WATER:Lnet/minecraftforge/registries/RegistryObject;
+      22: invokevirtual #226                // Method net/minecraftforge/registries/RegistryObject.get:()Ljava/lang/Object;
+      25: if_acmpne     30
+      28: iconst_0
+      29: ireturn
+      30: aload         4
+      32: invokevirtual #142                // Method net/minecraft/world/level/material/FluidState.m_76152_:()Lnet/minecraft/world/level/material/Fluid;
+      35: getstatic     #148                // Field net/minecraft/world/level/material/Fluids.f_76193_:Lnet/minecraft/world/level/material/FlowingFluid;
+      38: if_acmpeq     62
+      41: aload_2
+      42: invokevirtual #229                // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.requiresFreshwater:()Z
+      45: ifne          66
+      48: aload         4
+      50: invokevirtual #142                // Method net/minecraft/world/level/material/FluidState.m_76152_:()Lnet/minecraft/world/level/material/Fluid;
+      53: getstatic     #233                // Field net/dries007/tfc/common/fluids/TFCFluids.SALT_WATER:Lnet/dries007/tfc/common/fluids/FluidRegistryObject;
+      56: invokevirtual #239                // Method net/dries007/tfc/common/fluids/FluidRegistryObject.getSource:()Lnet/minecraft/world/level/material/FlowingFluid;
+      59: if_acmpne     66
+      62: iconst_1
+      63: goto          67
+      66: iconst_0
+      67: istore        5
+      69: aload_1
+      70: iconst_0
+      71: iconst_m1
+      72: iconst_0
+      73: invokevirtual #169                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122184_:(III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      76: pop
+      77: aload_0
+      78: aload_1
+      79: invokeinterface #130,  2          // InterfaceMethod net/minecraft/world/level/LevelAccessor.m_8055_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+      84: astore        6
+      86: iload         5
+      88: ifeq          100
+      91: aload         6
+      93: getstatic     #190                // Field net/dries007/tfc/common/TFCTags$Blocks.SEA_BUSH_PLANTABLE_ON:Lnet/minecraft/tags/TagKey;
+      96: invokestatic  #179                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/tags/TagKey;)Z
+      99: ireturn
+     100: aload         4
+     102: invokevirtual #204                // Method net/minecraft/world/level/material/FluidState.m_76178_:()Z
+     105: ifeq          146
+     108: aload         6
+     110: getstatic     #173                // Field net/dries007/tfc/common/TFCTags$Blocks.TREE_GROWS_ON:Lnet/minecraft/tags/TagKey;
+     113: invokestatic  #179                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/tags/TagKey;)Z
+     116: istore        7
+     118: iload         7
+     120: ifne          143
+     123: aload_2
+     124: invokevirtual #100                // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.groundType:()Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig$GroundType;
+     127: getstatic     #182                // Field net/dries007/tfc/world/feature/tree/TreePlacementConfig$GroundType.SAND:Lnet/dries007/tfc/world/feature/tree/TreePlacementConfig$GroundType;
+     130: if_acmpne     143
+     133: aload         6
+     135: getstatic     #187                // Field net/minecraft/tags/BlockTags.f_13029_:Lnet/minecraft/tags/TagKey;
+     138: invokestatic  #179                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/tags/TagKey;)Z
+     141: istore        7
+     143: iload         7
+     145: ireturn
+     146: iconst_0
+     147: ireturn
+
+  public static boolean isValidTrunk(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings, net.dries007.tfc.world.feature.tree.TreePlacementConfig);
+    Code:
+       0: aload_3
+       1: invokevirtual #112                // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.mayPlaceUnderwater:()Z
+       4: ifeq          15
+       7: invokedynamic #257,  0            // InvokeDynamic #0:test:()Ljava/util/function/Predicate;
+      12: goto          20
+      15: invokedynamic #260,  0            // InvokeDynamic #1:test:()Ljava/util/function/Predicate;
+      20: astore        4
+      22: new           #9                  // class net/minecraft/core/BlockPos$MutableBlockPos
+      25: dup
+      26: invokespecial #70                 // Method net/minecraft/core/BlockPos$MutableBlockPos."<init>":()V
+      29: astore        5
+      31: iconst_1
+      32: aload_3
+      33: invokevirtual #74                 // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.width:()I
+      36: isub
+      37: iconst_2
+      38: idiv
+      39: istore        6
+      41: iload         6
+      43: aload_3
+      44: invokevirtual #74                 // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.width:()I
+      47: iconst_2
+      48: idiv
+      49: if_icmpgt     159
+      52: iconst_1
+      53: aload_3
+      54: invokevirtual #74                 // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.width:()I
+      57: isub
+      58: iconst_2
+      59: idiv
+      60: istore        7
+      62: iload         7
+      64: aload_3
+      65: invokevirtual #74                 // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.width:()I
+      68: iconst_2
+      69: idiv
+      70: if_icmpgt     153
+      73: iconst_1
+      74: istore        8
+      76: iload         8
+      78: aload_3
+      79: invokevirtual #265                // Method net/dries007/tfc/world/feature/tree/TreePlacementConfig.height:()I
+      82: if_icmpge     147
+      85: aload         5
+      87: iload         6
+      89: iload         8
+      91: iload         7
+      93: invokevirtual #78                 // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122178_:(III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      96: pop
+      97: aload         5
+      99: aload_2
+     100: invokevirtual #84                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74401_:()Lnet/minecraft/world/level/block/Mirror;
+     103: aload_2
+     104: invokevirtual #88                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74404_:()Lnet/minecraft/world/level/block/Rotation;
+     107: invokestatic  #92                 // Method transformMutable:(Lnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/block/Mirror;Lnet/minecraft/world/level/block/Rotation;)V
+     110: aload         5
+     112: aload_1
+     113: invokevirtual #96                 // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122193_:(Lnet/minecraft/core/Vec3i;)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+     116: pop
+     117: aload_0
+     118: aload         5
+     120: invokeinterface #130,  2          // InterfaceMethod net/minecraft/world/level/LevelAccessor.m_8055_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     125: astore        9
+     127: aload         4
+     129: aload         9
+     131: invokeinterface #267,  2          // InterfaceMethod java/util/function/Predicate.test:(Ljava/lang/Object;)Z
+     136: ifne          141
+     139: iconst_0
+     140: ireturn
+     141: iinc          8, 1
+     144: goto          76
+     147: iinc          7, 1
+     150: goto          62
+     153: iinc          6, 1
+     156: goto          41
+     159: iconst_1
+     160: ireturn
+
+  public static void placeTemplate(net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate, net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings, net.minecraft.world.level.ServerLevelAccessor, net.minecraft.core.BlockPos);
+    Code:
+       0: aload_1
+       1: aload_0
+       2: checkcast     #275                // class net/dries007/tfc/mixin/accessor/StructureTemplateAccessor
+       5: invokeinterface #279,  1          // InterfaceMethod net/dries007/tfc/mixin/accessor/StructureTemplateAccessor.accessor$getPalettes:()Ljava/util/List;
+      10: aload_3
+      11: invokevirtual #283                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74387_:(Ljava/util/List;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$Palette;
+      14: invokevirtual #286                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$Palette.m_74652_:()Ljava/util/List;
+      17: astore        4
+      19: aload_1
+      20: invokevirtual #290                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74409_:()Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
+      23: astore        5
+      25: aload_2
+      26: aload_3
+      27: aload_3
+      28: aload_1
+      29: aload         4
+      31: aload_0
+      32: invokestatic  #294                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate.processBlockInfos:(Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Ljava/util/List;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;)Ljava/util/List;
+      35: invokeinterface #300,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+      40: astore        6
+      42: aload         6
+      44: invokeinterface #307,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      49: ifeq          154
+      52: aload         6
+      54: invokeinterface #310,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      59: checkcast     #32                 // class net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo
+      62: astore        7
+      64: aload         7
+      66: invokevirtual #314                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo.f_74675_:()Lnet/minecraft/core/BlockPos;
+      69: astore        8
+      71: aload         5
+      73: ifnull        86
+      76: aload         5
+      78: aload         8
+      80: invokevirtual #318                // Method net/minecraft/world/level/levelgen/structure/BoundingBox.m_71051_:(Lnet/minecraft/core/Vec3i;)Z
+      83: ifeq          151
+      86: aload_2
+      87: aload         8
+      89: invokeinterface #321,  2          // InterfaceMethod net/minecraft/world/level/ServerLevelAccessor.m_8055_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+      94: astore        9
+      96: aload         9
+      98: invokestatic  #201                // Method net/dries007/tfc/util/EnvironmentHelpers.isWorldgenReplaceable:(Lnet/minecraft/world/level/block/state/BlockState;)Z
+     101: ifne          118
+     104: aload         9
+     106: invokevirtual #164                // Method net/minecraft/world/level/block/state/BlockState.m_60734_:()Lnet/minecraft/world/level/block/Block;
+     109: getstatic     #324                // Field net/minecraft/tags/BlockTags.f_13035_:Lnet/minecraft/tags/TagKey;
+     112: invokestatic  #327                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/Block;Lnet/minecraft/tags/TagKey;)Z
+     115: ifeq          151
+     118: aload         7
+     120: invokevirtual #331                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo.f_74676_:()Lnet/minecraft/world/level/block/state/BlockState;
+     123: aload_1
+     124: invokevirtual #84                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74401_:()Lnet/minecraft/world/level/block/Mirror;
+     127: invokevirtual #335                // Method net/minecraft/world/level/block/state/BlockState.m_60715_:(Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;
+     130: aload_1
+     131: invokevirtual #88                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74404_:()Lnet/minecraft/world/level/block/Rotation;
+     134: invokevirtual #339                // Method net/minecraft/world/level/block/state/BlockState.m_60717_:(Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
+     137: astore        10
+     139: aload_2
+     140: aload         8
+     142: aload         10
+     144: iconst_2
+     145: invokeinterface #343,  4          // InterfaceMethod net/minecraft/world/level/ServerLevelAccessor.m_7731_:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+     150: pop
+     151: goto          42
+     154: return
+
+  public static int placeTrunk(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings, net.dries007.tfc.world.feature.tree.TrunkConfig);
+    Code:
+       0: aload         4
+       2: aload_2
+       3: invokevirtual #364                // Method net/dries007/tfc/world/feature/tree/TrunkConfig.getHeight:(Lnet/minecraft/util/RandomSource;)I
+       6: istore        5
+       8: new           #9                  // class net/minecraft/core/BlockPos$MutableBlockPos
+      11: dup
+      12: invokespecial #70                 // Method net/minecraft/core/BlockPos$MutableBlockPos."<init>":()V
+      15: astore        6
+      17: iconst_0
+      18: istore        7
+      20: iload         7
+      22: iload         5
+      24: if_icmpge     129
+      27: aload         4
+      29: invokevirtual #367                // Method net/dries007/tfc/world/feature/tree/TrunkConfig.wide:()Z
+      32: ifeq          106
+      35: aload_3
+      36: aload         4
+      38: aload_0
+      39: aload_1
+      40: aload         6
+      42: iconst_0
+      43: iload         7
+      45: iconst_0
+      46: getstatic     #373                // Field net/dries007/tfc/common/blocks/wood/BranchDirection.TRUNK_SOUTH_EAST:Lnet/dries007/tfc/common/blocks/wood/BranchDirection;
+      49: invokestatic  #376                // Method placeTrunk:(Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/dries007/tfc/world/feature/tree/TrunkConfig;Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos$MutableBlockPos;IIILnet/dries007/tfc/common/blocks/wood/BranchDirection;)V
+      52: aload_3
+      53: aload         4
+      55: aload_0
+      56: aload_1
+      57: aload         6
+      59: iconst_0
+      60: iload         7
+      62: iconst_1
+      63: getstatic     #379                // Field net/dries007/tfc/common/blocks/wood/BranchDirection.TRUNK_NORTH_EAST:Lnet/dries007/tfc/common/blocks/wood/BranchDirection;
+      66: invokestatic  #376                // Method placeTrunk:(Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/dries007/tfc/world/feature/tree/TrunkConfig;Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos$MutableBlockPos;IIILnet/dries007/tfc/common/blocks/wood/BranchDirection;)V
+      69: aload_3
+      70: aload         4
+      72: aload_0
+      73: aload_1
+      74: aload         6
+      76: iconst_1
+      77: iload         7
+      79: iconst_0
+      80: getstatic     #382                // Field net/dries007/tfc/common/blocks/wood/BranchDirection.TRUNK_SOUTH_WEST:Lnet/dries007/tfc/common/blocks/wood/BranchDirection;
+      83: invokestatic  #376                // Method placeTrunk:(Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/dries007/tfc/world/feature/tree/TrunkConfig;Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos$MutableBlockPos;IIILnet/dries007/tfc/common/blocks/wood/BranchDirection;)V
+      86: aload_3
+      87: aload         4
+      89: aload_0
+      90: aload_1
+      91: aload         6
+      93: iconst_1
+      94: iload         7
+      96: iconst_1
+      97: getstatic     #385                // Field net/dries007/tfc/common/blocks/wood/BranchDirection.TRUNK_NORTH_WEST:Lnet/dries007/tfc/common/blocks/wood/BranchDirection;
+     100: invokestatic  #376                // Method placeTrunk:(Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/dries007/tfc/world/feature/tree/TrunkConfig;Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos$MutableBlockPos;IIILnet/dries007/tfc/common/blocks/wood/BranchDirection;)V
+     103: goto          123
+     106: aload_3
+     107: aload         4
+     109: aload_0
+     110: aload_1
+     111: aload         6
+     113: iconst_0
+     114: iload         7
+     116: iconst_0
+     117: getstatic     #388                // Field net/dries007/tfc/common/blocks/wood/BranchDirection.DOWN:Lnet/dries007/tfc/common/blocks/wood/BranchDirection;
+     120: invokestatic  #376                // Method placeTrunk:(Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/dries007/tfc/world/feature/tree/TrunkConfig;Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos$MutableBlockPos;IIILnet/dries007/tfc/common/blocks/wood/BranchDirection;)V
+     123: iinc          7, 1
+     126: goto          20
+     129: iload         5
+     131: ireturn
+
+  private static void placeTrunk(net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings, net.dries007.tfc.world.feature.tree.TrunkConfig, net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos$MutableBlockPos, int, int, int, net.dries007.tfc.common.blocks.wood.BranchDirection);
+    Code:
+       0: aload         4
+       2: iload         5
+       4: iload         6
+       6: iload         7
+       8: invokevirtual #78                 // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122178_:(III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      11: pop
+      12: aload         4
+      14: aload_0
+      15: invokevirtual #84                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74401_:()Lnet/minecraft/world/level/block/Mirror;
+      18: aload_0
+      19: invokevirtual #88                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74404_:()Lnet/minecraft/world/level/block/Rotation;
+      22: invokestatic  #92                 // Method transformMutable:(Lnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/block/Mirror;Lnet/minecraft/world/level/block/Rotation;)V
+      25: aload         4
+      27: aload_3
+      28: invokevirtual #96                 // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122193_:(Lnet/minecraft/core/Vec3i;)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      31: pop
+      32: aload         8
+      34: aload_0
+      35: invokevirtual #84                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74401_:()Lnet/minecraft/world/level/block/Mirror;
+      38: invokevirtual #398                // Method net/dries007/tfc/common/blocks/wood/BranchDirection.mirror:(Lnet/minecraft/world/level/block/Mirror;)Lnet/dries007/tfc/common/blocks/wood/BranchDirection;
+      41: aload_0
+      42: invokevirtual #88                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74404_:()Lnet/minecraft/world/level/block/Rotation;
+      45: invokevirtual #402                // Method net/dries007/tfc/common/blocks/wood/BranchDirection.rotate:(Lnet/minecraft/world/level/block/Rotation;)Lnet/dries007/tfc/common/blocks/wood/BranchDirection;
+      48: astore        9
+      50: aload_1
+      51: invokevirtual #405                // Method net/dries007/tfc/world/feature/tree/TrunkConfig.state:()Lnet/minecraft/world/level/block/state/BlockState;
+      54: getstatic     #411                // Field net/dries007/tfc/common/blocks/TFCBlockStateProperties.BRANCH_DIRECTION:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+      57: aload         9
+      59: invokevirtual #415                // Method net/minecraft/world/level/block/state/BlockState.m_61124_:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+      62: checkcast     #132                // class net/minecraft/world/level/block/state/BlockState
+      65: astore        10
+      67: aload_2
+      68: aload         4
+      70: aload         10
+      72: iconst_3
+      73: invokeinterface #418,  4          // InterfaceMethod net/minecraft/world/level/WorldGenLevel.m_7731_:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+      78: pop
+      79: return
+
+  public static boolean placeRoots(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.dries007.tfc.world.feature.tree.RootConfig, net.minecraft.util.RandomSource);
+    Code:
+       0: aload_2
+       1: invokevirtual #428                // Method net/dries007/tfc/world/feature/tree/RootConfig.specialPlacer:()Ljava/util/Optional;
+       4: invokevirtual #433                // Method java/util/Optional.isPresent:()Z
+       7: ifeq          32
+      10: aload_2
+      11: invokevirtual #428                // Method net/dries007/tfc/world/feature/tree/RootConfig.specialPlacer:()Ljava/util/Optional;
+      14: invokevirtual #434                // Method java/util/Optional.get:()Ljava/lang/Object;
+      17: checkcast     #436                // class net/dries007/tfc/world/stateprovider/SpecialRootPlacer
+      20: aload_0
+      21: aload_3
+      22: aload_1
+      23: aload_1
+      24: invokevirtual #439                // Method net/minecraft/core/BlockPos.m_7494_:()Lnet/minecraft/core/BlockPos;
+      27: aload_2
+      28: invokevirtual #442                // Method net/dries007/tfc/world/stateprovider/SpecialRootPlacer.placeRoots:(Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/dries007/tfc/world/feature/tree/RootConfig;)Z
+      31: ireturn
+      32: new           #9                  // class net/minecraft/core/BlockPos$MutableBlockPos
+      35: dup
+      36: invokespecial #70                 // Method net/minecraft/core/BlockPos$MutableBlockPos."<init>":()V
+      39: astore        4
+      41: aload_2
+      42: invokevirtual #446                // Method net/dries007/tfc/world/feature/tree/RootConfig.blocks:()Ljava/util/Map;
+      45: astore        5
+      47: iconst_0
+      48: istore        6
+      50: iload         6
+      52: aload_2
+      53: invokevirtual #451                // Method net/dries007/tfc/world/feature/tree/RootConfig.tries:()I
+      56: if_icmpge     160
+      59: aload_3
+      60: aload_2
+      61: invokevirtual #452                // Method net/dries007/tfc/world/feature/tree/RootConfig.width:()I
+      64: invokestatic  #456                // Method net/dries007/tfc/util/Helpers.triangle:(Lnet/minecraft/util/RandomSource;I)I
+      67: istore        7
+      69: aload_3
+      70: aload_2
+      71: invokevirtual #452                // Method net/dries007/tfc/world/feature/tree/RootConfig.width:()I
+      74: invokestatic  #456                // Method net/dries007/tfc/util/Helpers.triangle:(Lnet/minecraft/util/RandomSource;I)I
+      77: istore        8
+      79: aload_3
+      80: aload_2
+      81: invokevirtual #457                // Method net/dries007/tfc/world/feature/tree/RootConfig.height:()I
+      84: invokeinterface #463,  2          // InterfaceMethod net/minecraft/util/RandomSource.m_188503_:(I)I
+      89: ineg
+      90: istore        9
+      92: aload         4
+      94: aload_1
+      95: iload         7
+      97: iload         9
+      99: iload         8
+     101: invokevirtual #467                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122154_:(Lnet/minecraft/core/Vec3i;III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+     104: pop
+     105: aload         5
+     107: aload_0
+     108: aload         4
+     110: invokeinterface #468,  2          // InterfaceMethod net/minecraft/world/level/WorldGenLevel.m_8055_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     115: invokevirtual #164                // Method net/minecraft/world/level/block/state/BlockState.m_60734_:()Lnet/minecraft/world/level/block/Block;
+     118: invokeinterface #471,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+     123: checkcast     #473                // class net/dries007/tfc/util/collections/IWeighted
+     126: astore        10
+     128: aload         10
+     130: ifnull        154
+     133: aload_0
+     134: aload         4
+     136: aload         10
+     138: aload_3
+     139: invokeinterface #476,  2          // InterfaceMethod net/dries007/tfc/util/collections/IWeighted.get:(Lnet/minecraft/util/RandomSource;)Ljava/lang/Object;
+     144: checkcast     #132                // class net/minecraft/world/level/block/state/BlockState
+     147: iconst_3
+     148: invokeinterface #418,  4          // InterfaceMethod net/minecraft/world/level/WorldGenLevel.m_7731_:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+     153: pop
+     154: iinc          6, 1
+     157: goto          50
+     160: iconst_1
+     161: ireturn
+
+  public static net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager getStructureManager(net.minecraft.world.level.WorldGenLevel);
+    Code:
+       0: aload_0
+       1: invokeinterface #493,  1          // InterfaceMethod net/minecraft/world/level/WorldGenLevel.m_6018_:()Lnet/minecraft/server/level/ServerLevel;
+       6: invokevirtual #499                // Method net/minecraft/server/level/ServerLevel.m_7654_:()Lnet/minecraft/server/MinecraftServer;
+       9: invokevirtual #505                // Method net/minecraft/server/MinecraftServer.m_236738_:()Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;
+      12: areturn
+
+  public static net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings getPlacementSettings(net.minecraft.world.level.LevelHeightAccessor, net.minecraft.world.level.ChunkPos, net.minecraft.util.RandomSource);
+    Code:
+       0: new           #80                 // class net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings
+       3: dup
+       4: invokespecial #508                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings."<init>":()V
+       7: new           #302                // class net/minecraft/world/level/levelgen/structure/BoundingBox
+      10: dup
+      11: aload_1
+      12: invokevirtual #513                // Method net/minecraft/world/level/ChunkPos.m_45604_:()I
+      15: bipush        16
+      17: isub
+      18: aload_0
+      19: invokeinterface #518,  1          // InterfaceMethod net/minecraft/world/level/LevelHeightAccessor.m_141937_:()I
+      24: aload_1
+      25: invokevirtual #521                // Method net/minecraft/world/level/ChunkPos.m_45605_:()I
+      28: bipush        16
+      30: isub
+      31: aload_1
+      32: invokevirtual #524                // Method net/minecraft/world/level/ChunkPos.m_45608_:()I
+      35: bipush        16
+      37: iadd
+      38: aload_0
+      39: invokeinterface #527,  1          // InterfaceMethod net/minecraft/world/level/LevelHeightAccessor.m_151558_:()I
+      44: aload_1
+      45: invokevirtual #530                // Method net/minecraft/world/level/ChunkPos.m_45609_:()I
+      48: bipush        16
+      50: iadd
+      51: invokespecial #533                // Method net/minecraft/world/level/levelgen/structure/BoundingBox."<init>":(IIIIII)V
+      54: invokevirtual #537                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74381_:(Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
+      57: aload_2
+      58: invokevirtual #541                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_230324_:(Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
+      61: getstatic     #547                // Field net/minecraft/world/level/levelgen/structure/templatesystem/BlockIgnoreProcessor.f_74048_:Lnet/minecraft/world/level/levelgen/structure/templatesystem/BlockIgnoreProcessor;
+      64: invokevirtual #551                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74383_:(Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureProcessor;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
+      67: aload_2
+      68: invokestatic  #555                // Method randomRotation:(Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/block/Rotation;
+      71: invokevirtual #559                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74379_:(Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
+      74: aload_2
+      75: invokestatic  #563                // Method randomMirror:(Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/block/Mirror;
+      78: invokevirtual #567                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74377_:(Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
+      81: areturn
+
+  public static void randomize(net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings, net.minecraft.util.RandomSource);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #555                // Method randomRotation:(Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/block/Rotation;
+       5: invokevirtual #559                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74379_:(Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
+       8: aload_1
+       9: invokestatic  #563                // Method randomMirror:(Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/block/Mirror;
+      12: invokevirtual #567                // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74377_:(Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
+      15: pop
+      16: return
+
+  public static net.minecraft.core.BlockPos transformCenter(net.minecraft.core.Vec3i, net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings);
+    Code:
+       0: new           #11                 // class net/minecraft/core/BlockPos
+       3: dup
+       4: aload_0
+       5: invokevirtual #579                // Method net/minecraft/core/Vec3i.m_123341_:()I
+       8: iconst_1
+       9: isub
+      10: iconst_2
+      11: idiv
+      12: iconst_0
+      13: aload_0
+      14: invokevirtual #582                // Method net/minecraft/core/Vec3i.m_123343_:()I
+      17: iconst_1
+      18: isub
+      19: iconst_2
+      20: idiv
+      21: invokespecial #585                // Method net/minecraft/core/BlockPos."<init>":(III)V
+      24: aload_1
+      25: invokevirtual #84                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74401_:()Lnet/minecraft/world/level/block/Mirror;
+      28: aload_1
+      29: invokevirtual #88                 // Method net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.m_74404_:()Lnet/minecraft/world/level/block/Rotation;
+      32: invokestatic  #589                // Method transform:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Mirror;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/core/BlockPos;
+      35: areturn
+
+  public static net.minecraft.core.BlockPos transform(net.minecraft.core.BlockPos, net.minecraft.world.level.block.Mirror, net.minecraft.world.level.block.Rotation);
+    Code:
+       0: aload_0
+       1: invokevirtual #592                // Method net/minecraft/core/BlockPos.m_123341_:()I
+       4: istore_3
+       5: aload_0
+       6: invokevirtual #593                // Method net/minecraft/core/BlockPos.m_123343_:()I
+       9: istore        4
+      11: iconst_1
+      12: istore        5
+      14: getstatic     #597                // Field net/dries007/tfc/world/feature/tree/TreeHelpers$1.$SwitchMap$net$minecraft$world$level$block$Mirror:[I
+      17: aload_1
+      18: invokevirtual #602                // Method net/minecraft/world/level/block/Mirror.ordinal:()I
+      21: iaload
+      22: lookupswitch  { // 2
+
+                     1: 48
+
+                     2: 56
+               default: 62
+          }
+      48: iload         4
+      50: ineg
+      51: istore        4
+      53: goto          65
+      56: iload_3
+      57: ineg
+      58: istore_3
+      59: goto          65
+      62: iconst_0
+      63: istore        5
+      65: getstatic     #605                // Field net/dries007/tfc/world/feature/tree/TreeHelpers$1.$SwitchMap$net$minecraft$world$level$block$Rotation:[I
+      68: aload_2
+      69: invokevirtual #608                // Method net/minecraft/world/level/block/Rotation.ordinal:()I
+      72: iaload
+      73: tableswitch   { // 1 to 3
+
+                     1: 100
+
+                     2: 118
+
+                     3: 136
+               default: 155
+          }
+     100: new           #11                 // class net/minecraft/core/BlockPos
+     103: dup
+     104: iload         4
+     106: aload_0
+     107: invokevirtual #611                // Method net/minecraft/core/BlockPos.m_123342_:()I
+     110: iload_3
+     111: ineg
+     112: invokespecial #585                // Method net/minecraft/core/BlockPos."<init>":(III)V
+     115: goto          178
+     118: new           #11                 // class net/minecraft/core/BlockPos
+     121: dup
+     122: iload         4
+     124: ineg
+     125: aload_0
+     126: invokevirtual #611                // Method net/minecraft/core/BlockPos.m_123342_:()I
+     129: iload_3
+     130: invokespecial #585                // Method net/minecraft/core/BlockPos."<init>":(III)V
+     133: goto          178
+     136: new           #11                 // class net/minecraft/core/BlockPos
+     139: dup
+     140: iload_3
+     141: ineg
+     142: aload_0
+     143: invokevirtual #611                // Method net/minecraft/core/BlockPos.m_123342_:()I
+     146: iload         4
+     148: ineg
+     149: invokespecial #585                // Method net/minecraft/core/BlockPos."<init>":(III)V
+     152: goto          178
+     155: iload         5
+     157: ifeq          177
+     160: new           #11                 // class net/minecraft/core/BlockPos
+     163: dup
+     164: iload_3
+     165: aload_0
+     166: invokevirtual #611                // Method net/minecraft/core/BlockPos.m_123342_:()I
+     169: iload         4
+     171: invokespecial #585                // Method net/minecraft/core/BlockPos."<init>":(III)V
+     174: goto          178
+     177: aload_0
+     178: areturn
+
+  public static void transformMutable(net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.world.level.block.Mirror, net.minecraft.world.level.block.Rotation);
+    Code:
+       0: getstatic     #597                // Field net/dries007/tfc/world/feature/tree/TreeHelpers$1.$SwitchMap$net$minecraft$world$level$block$Mirror:[I
+       3: aload_1
+       4: invokevirtual #602                // Method net/minecraft/world/level/block/Mirror.ordinal:()I
+       7: iaload
+       8: lookupswitch  { // 2
+
+                     1: 36
+
+                     2: 49
+               default: 59
+          }
+      36: aload_0
+      37: aload_0
+      38: invokevirtual #618                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123343_:()I
+      41: ineg
+      42: invokevirtual #622                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_142443_:(I)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      45: pop
+      46: goto          59
+      49: aload_0
+      50: aload_0
+      51: invokevirtual #623                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123341_:()I
+      54: ineg
+      55: invokevirtual #626                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_142451_:(I)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+      58: pop
+      59: getstatic     #605                // Field net/dries007/tfc/world/feature/tree/TreeHelpers$1.$SwitchMap$net$minecraft$world$level$block$Rotation:[I
+      62: aload_2
+      63: invokevirtual #608                // Method net/minecraft/world/level/block/Rotation.ordinal:()I
+      66: iaload
+      67: tableswitch   { // 1 to 3
+
+                     1: 92
+
+                     2: 113
+
+                     3: 134
+               default: 153
+          }
+      92: aload_0
+      93: aload_0
+      94: invokevirtual #618                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123343_:()I
+      97: aload_0
+      98: invokevirtual #627                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123342_:()I
+     101: aload_0
+     102: invokevirtual #623                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123341_:()I
+     105: ineg
+     106: invokevirtual #78                 // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122178_:(III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+     109: pop
+     110: goto          153
+     113: aload_0
+     114: aload_0
+     115: invokevirtual #618                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123343_:()I
+     118: ineg
+     119: aload_0
+     120: invokevirtual #627                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123342_:()I
+     123: aload_0
+     124: invokevirtual #623                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123341_:()I
+     127: invokevirtual #78                 // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122178_:(III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+     130: pop
+     131: goto          153
+     134: aload_0
+     135: aload_0
+     136: invokevirtual #623                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123341_:()I
+     139: ineg
+     140: aload_0
+     141: invokevirtual #627                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123342_:()I
+     144: aload_0
+     145: invokevirtual #618                // Method net/minecraft/core/BlockPos$MutableBlockPos.m_123343_:()I
+     148: ineg
+     149: invokevirtual #78                 // Method net/minecraft/core/BlockPos$MutableBlockPos.m_122178_:(III)Lnet/minecraft/core/BlockPos$MutableBlockPos;
+     152: pop
+     153: return
+
+  private static net.minecraft.world.level.block.Rotation randomRotation(net.minecraft.util.RandomSource);
+    Code:
+       0: getstatic     #629                // Field ROTATION_VALUES:[Lnet/minecraft/world/level/block/Rotation;
+       3: aload_0
+       4: getstatic     #629                // Field ROTATION_VALUES:[Lnet/minecraft/world/level/block/Rotation;
+       7: arraylength
+       8: invokeinterface #463,  2          // InterfaceMethod net/minecraft/util/RandomSource.m_188503_:(I)I
+      13: aaload
+      14: areturn
+
+  private static net.minecraft.world.level.block.Mirror randomMirror(net.minecraft.util.RandomSource);
+    Code:
+       0: getstatic     #631                // Field MIRROR_VALUES:[Lnet/minecraft/world/level/block/Mirror;
+       3: aload_0
+       4: getstatic     #631                // Field MIRROR_VALUES:[Lnet/minecraft/world/level/block/Mirror;
+       7: arraylength
+       8: invokeinterface #463,  2          // InterfaceMethod net/minecraft/util/RandomSource.m_188503_:(I)I
+      13: aaload
+      14: areturn
+
+  static {};
+    Code:
+       0: invokestatic  #636                // Method net/minecraft/world/level/block/Rotation.values:()[Lnet/minecraft/world/level/block/Rotation;
+       3: putstatic     #629                // Field ROTATION_VALUES:[Lnet/minecraft/world/level/block/Rotation;
+       6: invokestatic  #639                // Method net/minecraft/world/level/block/Mirror.values:()[Lnet/minecraft/world/level/block/Mirror;
+       9: putstatic     #631                // Field MIRROR_VALUES:[Lnet/minecraft/world/level/block/Mirror;
+      12: return
+}

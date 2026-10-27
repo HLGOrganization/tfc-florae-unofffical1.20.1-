@@ -50,6 +50,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.items.ItemHandlerHelper;
 import org.jetbrains.annotations.Nullable;
 import tfcflorae.Config;
+import net.minecraft.world.level.storage.loot.LootParams;
 
 public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements IBushBlock, HoeOverlayBlock {
    private static final int MONTHS_SPENT_DORMANT_TO_DIE = 4;
@@ -272,6 +273,19 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
 
    public BlockState stateAfterPicking(BlockState state) {
       return (BlockState)state.setValue(LIFECYCLE, Lifecycle.HEALTHY);
+   }
+
+   /**
+    * 成熟（FRUITING）状态下被破坏时也掉落果实。
+    * 原版只有右键采摘（{@code use}），直接挖掉树叶会把果实一起丢掉，不合理。
+    */
+   @Override
+   public List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
+      final List<ItemStack> drops = super.getDrops(state, params);
+      if (state.getValue(LIFECYCLE) == Lifecycle.FRUITING && this.productItem != null) {
+         drops.add(this.getProductItem(params.getLevel().getRandom()));
+      }
+      return drops;
    }
 
    public ItemStack getProductItem(RandomSource random) {

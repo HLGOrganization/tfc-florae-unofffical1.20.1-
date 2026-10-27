@@ -163,13 +163,12 @@ public class ClientEventHandler {
       TFCFBlocks.WOODS
          .forEach(
             (key, value) -> {
-               if (!key.isFruitTree() && !key.isMangrove()) {
-                  Stream.of(BlockType.LEAVES)
-                     .forEach(
-                        type -> ItemBlockRenderTypes.setRenderLayer(
-                              (Block)((RegistryObject)value.get(type)).get(), layer -> Minecraft.useFancyGraphics() ? layer == cutoutMipped : layer == cutoutMipped
-                           )
-                     );
+               // 所有木材的树叶都必须设为 cutoutMipped。
+               // 否则贴图里的透明像素会被当作不透明渲染，镶空处显示为黑色。
+               // 原先这里用 !isFruitTree() && !isMangrove() 把果树/红树排除在外，
+               // 导致嘉宝树等果树的树叶镶空处发黑。
+               if (value.get(BlockType.LEAVES) != null) {
+                  ItemBlockRenderTypes.setRenderLayer((Block)((RegistryObject)value.get(BlockType.LEAVES)).get(), cutoutMipped);
                }
             }
          );
@@ -213,10 +212,6 @@ public class ClientEventHandler {
          .get(TFCFSoil.DENSE_EARTHENWARE_CLAY_GRASS)
          .values()
          .forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
-      TFCFBlocks.TFCSOIL.get(TFCFSoil.KAOLINITE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
-      TFCFBlocks.TFCSOIL.get(TFCFSoil.DRY_KAOLINITE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
-      TFCFBlocks.TFCSOIL.get(TFCFSoil.SPARSE_KAOLINITE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
-      TFCFBlocks.TFCSOIL.get(TFCFSoil.DENSE_KAOLINITE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
       TFCFBlocks.TFCSOIL.get(TFCFSoil.STONEWARE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
       TFCFBlocks.TFCSOIL.get(TFCFSoil.DRY_STONEWARE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
       TFCFBlocks.TFCSOIL.get(TFCFSoil.SPARSE_STONEWARE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
@@ -240,13 +235,6 @@ public class ClientEventHandler {
          .get(TFCFSoil.DENSE_EARTHENWARE_CLAY_GRASS)
          .values()
          .forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
-      TFCFBlocks.TFCFSOIL.get(TFCFSoil.KAOLINITE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
-      TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRY_KAOLINITE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
-      TFCFBlocks.TFCFSOIL
-         .get(TFCFSoil.SPARSE_KAOLINITE_CLAY_GRASS)
-         .values()
-         .forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
-      TFCFBlocks.TFCFSOIL.get(TFCFSoil.DENSE_KAOLINITE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.STONEWARE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRY_STONEWARE_CLAY_GRASS).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
       TFCFBlocks.TFCFSOIL
@@ -406,10 +394,6 @@ event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockE
       TFCFBlocks.TFCSOIL.get(TFCFSoil.DRY_EARTHENWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCSOIL.get(TFCFSoil.SPARSE_EARTHENWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCSOIL.get(TFCFSoil.DENSE_EARTHENWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
-      TFCFBlocks.TFCSOIL.get(TFCFSoil.KAOLINITE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
-      TFCFBlocks.TFCSOIL.get(TFCFSoil.DRY_KAOLINITE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
-      TFCFBlocks.TFCSOIL.get(TFCFSoil.SPARSE_KAOLINITE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
-      TFCFBlocks.TFCSOIL.get(TFCFSoil.DENSE_KAOLINITE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCSOIL.get(TFCFSoil.STONEWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCSOIL.get(TFCFSoil.DRY_STONEWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCSOIL.get(TFCFSoil.SPARSE_STONEWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
@@ -427,10 +411,6 @@ event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockE
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRY_EARTHENWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.SPARSE_EARTHENWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.DENSE_EARTHENWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
-      TFCFBlocks.TFCFSOIL.get(TFCFSoil.KAOLINITE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
-      TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRY_KAOLINITE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
-      TFCFBlocks.TFCFSOIL.get(TFCFSoil.SPARSE_KAOLINITE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
-      TFCFBlocks.TFCFSOIL.get(TFCFSoil.DENSE_KAOLINITE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.STONEWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.DRY_STONEWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.SPARSE_STONEWARE_CLAY_GRASS).values().forEach(reg -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
@@ -441,13 +421,15 @@ event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockE
       TFCFBlocks.WOODS
          .forEach(
             (wood, reg) -> {
-               if (!wood.isFruitTree() && !wood.isMangrove()) {
-                  registry.register(
-                     wood.isConifer() ? foliageColor : seasonalFoliageColor,
-                     new Block[]{(Block)reg.get(BlockType.LEAVES).get(), (Block)reg.get(BlockType.FALLEN_LEAVES).get()}
-                  );
-               } else {
-                  registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, new Block[]{(Block)reg.get(BlockType.FALLEN_LEAVES).get()});
+               // 所有木材的树叶与落叶都需要 tint。
+               // 原先果树/红树只给落叶上色，树叶没有 BlockColor，
+               // 而贴图是灰度的，于是显示成灰白。
+               final BlockColor color = wood.isConifer() ? foliageColor : seasonalFoliageColor;
+               if (reg.get(BlockType.LEAVES) != null) {
+                  registry.register(color, new Block[]{(Block)((RegistryObject)reg.get(BlockType.LEAVES)).get()});
+               }
+               if (reg.get(BlockType.FALLEN_LEAVES) != null) {
+                  registry.register(color, new Block[]{(Block)((RegistryObject)reg.get(BlockType.FALLEN_LEAVES)).get()});
                }
             }
          );
@@ -484,44 +466,33 @@ event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockE
 
    public static void registerColorHandlerItems(net.minecraftforge.client.event.RegisterColorHandlersEvent.Item event) {
       ItemColors registry = event.getItemColors();
+      // 与 TFC 原版一致：物品图标一律用 getFoliageColor / getGrassColor（坐标传 null 即可）。
+      // 之前对非针叶树叶使用了季节气调色板的查询接口，而那个接口依赖真实坐标，
+      // 物品上下文没有坐标，取不到季节数据，图标就渲染成灰白。
       ItemColor grassColor = (stack, tintIndex) -> TFCColors.getGrassColor(null, tintIndex);
       ItemColor foliageColor = (stack, tintIndex) -> TFCColors.getFoliageColor(null, tintIndex);
-      ItemColor seasonalFoliageColor = (stack, tintIndex) -> TFCColors.getSeasonalFoliageColor(null, tintIndex, 0);
       TFCFBlocks.WOODS.forEach((wood, value) -> {
-         if (value.get(BlockType.FALLEN_LEAVES).get() != null) {
-            registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, new ItemLike[]{(ItemLike)value.get(BlockType.FALLEN_LEAVES).get()});
+         if (value.get(BlockType.FALLEN_LEAVES) != null) {
+            registry.register(foliageColor, new ItemLike[]{(ItemLike)value.get(BlockType.FALLEN_LEAVES).get()});
          }
-
-         if (!wood.isFruitTree() && value.get(BlockType.LEAVES).get() != null) {
-            registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, new ItemLike[]{(ItemLike)value.get(BlockType.LEAVES).get()});
+         if (value.get(BlockType.LEAVES) != null) {
+            registry.register(foliageColor, new ItemLike[]{(ItemLike)value.get(BlockType.LEAVES).get()});
          }
       });
-      TFCFBlocks.LEAVES_ONLY.forEach((key, value) -> registry.register(seasonalFoliageColor, new ItemLike[]{(ItemLike)value.get(), (ItemLike)value.get()}));
-      TFCFBlocks.JOSHUA_LEAVES.forEach((key, value) -> registry.register(seasonalFoliageColor, new ItemLike[]{(ItemLike)value.get(), (ItemLike)value.get()}));
-      TFCFBlocks.WOODS_SEASONAL_LEAVES
-         .forEach((key, value) -> registry.register(seasonalFoliageColor, new ItemLike[]{(ItemLike)value.get(), (ItemLike)value.get()}));
-      // 方块侧（registerColorHandlerBlocks）注册了棕榈叶，物品侧此前遗漏 —— 物品栏里会渲染成灰白。
-      TFCFBlocks.PLANTS
-         .forEach(
-            (plant, reg) -> {
-               if (plant.isItemTinted()) {
-                  registry.register(
-                     plant.isConifer() ? seasonalFoliageColor : (plant.isSeasonal() ? seasonalFoliageColor : grassColor), new ItemLike[]{(ItemLike)reg.get()}
-                  );
-               }
-            }
-         );
-      TFCFBlocks.FRUITING_PLANTS
-         .forEach(
-            (plant, reg) -> {
-               if (plant.isItemTinted()) {
-                  registry.register(
-                     plant.isConifer() ? seasonalFoliageColor : (plant.isSeasonal() ? seasonalFoliageColor : grassColor), new ItemLike[]{(ItemLike)reg.get()}
-                  );
-               }
-            }
-         );
-      TFCFBlocks.BAMBOO_LEAVES.forEach((plant, reg) -> registry.register(seasonalFoliageColor, new ItemLike[]{(ItemLike)reg.get()}));
+      TFCFBlocks.LEAVES_ONLY.forEach((key, value) -> registry.register(foliageColor, new ItemLike[]{(ItemLike)value.get(), (ItemLike)value.get()}));
+      TFCFBlocks.JOSHUA_LEAVES.forEach((key, value) -> registry.register(foliageColor, new ItemLike[]{(ItemLike)value.get(), (ItemLike)value.get()}));
+      TFCFBlocks.WOODS_SEASONAL_LEAVES.forEach((key, value) -> registry.register(foliageColor, new ItemLike[]{(ItemLike)value.get(), (ItemLike)value.get()}));
+      TFCFBlocks.PLANTS.forEach((plant, reg) -> {
+         if (plant.isItemTinted()) {
+            registry.register(plant.isSeasonal() ? foliageColor : grassColor, new ItemLike[]{(ItemLike)reg.get()});
+         }
+      });
+      TFCFBlocks.FRUITING_PLANTS.forEach((plant, reg) -> {
+         if (plant.isItemTinted()) {
+            registry.register(plant.isSeasonal() ? foliageColor : grassColor, new ItemLike[]{(ItemLike)reg.get()});
+         }
+      });
+      TFCFBlocks.BAMBOO_LEAVES.forEach((plant, reg) -> registry.register(foliageColor, new ItemLike[]{(ItemLike)reg.get()}));
    }
 
    public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {

@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:deposit/cassiterite/dolomite"
+  },
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_dolomite"
+}

@@ -1,0 +1,316 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:ore/normal_cassiterite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/arkose"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/cataclasite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/chalk"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/chert"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/claystone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/conglomerate"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/dacite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/diorite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/dolomite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/dripstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/gabbro"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/gneiss"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/laterite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/limestone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/mudstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/porphyry"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/red_granite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/sandstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/schist"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/shale"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_cassiterite/wackestone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/arkose"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/cataclasite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/chalk"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/chert"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/claystone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/conglomerate"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/dacite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/diorite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/dolomite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/dripstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/gabbro"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/gneiss"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/laterite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/limestone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/mudstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/porphyry"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/red_granite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/sandstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/schist"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/shale"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_cassiterite/wackestone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/arkose"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/cataclasite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/chalk"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/chert"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/claystone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/conglomerate"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/dacite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/diorite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/dolomite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/dripstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/gabbro"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/gneiss"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/laterite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/limestone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/mudstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/porphyry"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/red_granite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/sandstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/schist"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/shale"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_cassiterite/wackestone"
+    },
+    {
+      "item": "tfcflorae:ore/small_cassiterite"
+    }
+  ],
+  "heat_capacity": 2.857,
+  "forging_temperature": 138,
+  "welding_temperature": 184
+}

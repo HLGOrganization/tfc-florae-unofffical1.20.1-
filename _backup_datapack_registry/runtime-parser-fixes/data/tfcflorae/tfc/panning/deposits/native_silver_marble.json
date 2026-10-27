@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/marble",
+  "model_stages": [
+    "tfc:item/pan/native_silver/marble_full",
+    "tfc:item/pan/native_silver/marble_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver_marble"
+}

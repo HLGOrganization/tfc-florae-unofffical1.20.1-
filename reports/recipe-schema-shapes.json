@@ -1,0 +1,304 @@
+{
+  "errors": [
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\arkose_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\boninite_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\carbonatite_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\cataclasite_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\dripstone_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\gypsum_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\jaspillite_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\laterite_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\mudstone_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\porphyry_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\red_granite_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\sandstone_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\soapstone_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\wackestone_spike.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\slab\\wood\\bald_cypress.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\slab\\wood\\bald_cypress.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\slab\\wood\\red_cypress.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\slab\\wood\\red_cypress.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\stair\\wood\\bald_cypress.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\stair\\wood\\bald_cypress.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\stair\\wood\\red_cypress.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\chisel\\stair\\wood\\red_cypress.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_bismuthinite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_bismuthinite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_cassiterite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_cassiterite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_garnierite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_garnierite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_hematite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_hematite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_limonite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_limonite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_magnetite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_magnetite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_malachite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_malachite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_native_copper.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_native_copper.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_native_gold.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_native_gold.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_native_silver.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_native_silver.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_sphalerite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_sphalerite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_tetrahedrite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\normal_blackband_ironstone_tetrahedrite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_bismuthinite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_bismuthinite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_cassiterite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_cassiterite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_garnierite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_garnierite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_hematite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_hematite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_limonite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_limonite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_magnetite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_magnetite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_malachite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_malachite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_native_copper.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_native_copper.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_native_gold.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_native_gold.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_native_silver.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_native_silver.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_sphalerite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_sphalerite.json",
+      "missing result"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_tetrahedrite.json",
+      "missing ingredient"
+    ],
+    [
+      "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\recipes\\collapse\\ore\\poor_blackband_ironstone_tetrahedrite.json",
+      "missing result"
+    ]
+  ],
+  "recipe_types_including_nested": {
+    "tfc:collapse": 2253,
+    "minecraft:crafting_shapeless": 1538,
+    "minecraft:crafting_shaped": 3288,
+    "tfc:damage_inputs_shapeless_crafting": 488,
+    "firmalife:drying": 1,
+    "tfc:knapping": 82,
+    "tfc:landslide": 2839,
+    "tfc:pot": 5,
+    "tfc:quern": 79,
+    "tfc:extra_products_shapeless_crafting": 17,
+    "tfc:advanced_shapeless_crafting": 17,
+    "tfc:barrel_sealed": 23,
+    "tfc:blast_furnace": 4,
+    "tfcflorae:brushing": 2688,
+    "tfc:casting": 260,
+    "tfc:chisel": 1704,
+    "tfc:heating": 152,
+    "minecraft:stonecutting": 1788
+  }
+}

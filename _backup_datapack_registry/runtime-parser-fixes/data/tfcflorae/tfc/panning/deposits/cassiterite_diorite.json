@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/diorite",
+  "model_stages": [
+    "tfc:item/pan/cassiterite/diorite_full",
+    "tfc:item/pan/cassiterite/diorite_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_diorite"
+}

@@ -1,0 +1,19 @@
+{
+  "manager_counts": {
+    "food_items": 65,
+    "fuels": 71,
+    "item_sizes": 2,
+    "knapping_types": 4,
+    "supports": 1,
+    "climate_ranges": 42,
+    "item_heats": 12,
+    "panning": 128,
+    "sluicing": 128
+  },
+  "files": 453,
+  "schema_errors": [],
+  "limits": "Validated the constructor-required fields, current size/weight enums, nonnegative supports, knapping item-stack shape. Registry lookups still require the runtime dump. Numeric balance is not assessed.",
+  "notes": [
+    "48 own-rock panning definitions have two model stages instead of three. TFC PanItemRenderer computes a clamped progress fraction against stages.length, so both positive lengths are legal. This is a presentation difference, not a schema error."
+  ]
+}

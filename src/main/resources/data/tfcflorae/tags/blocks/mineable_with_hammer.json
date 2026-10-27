@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:plant/cobblestone_lichen",
     "tfc:rock/cobble/andesite",
     "tfc:rock/cobble/andesite_slab",
     "tfc:rock/cobble/andesite_stairs",

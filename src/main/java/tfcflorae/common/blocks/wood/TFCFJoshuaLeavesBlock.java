@@ -65,6 +65,8 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import org.jetbrains.annotations.Nullable;
 import tfcflorae.Config;
 import tfcflorae.common.blocks.TFCFBlocks;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.storage.loot.LootParams;
 
 public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implements IFluidLoggable, ILeavesBlock, IBushBlock, HoeOverlayBlock {
    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
@@ -185,6 +187,19 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
 
    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
       return SHAPE;
+   }
+
+   /**
+    * 成熟（FRUITING 且 AGE >= 4，与右键采摘条件一致）时被破坏也掉落果实。
+    * 原版只有右键采摘，直接挖掉树叶会把果实一起丢掉。
+    */
+   @Override
+   public List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
+      final List<ItemStack> drops = super.getDrops(state, params);
+      if (state.getValue(LIFECYCLE) == Lifecycle.FRUITING && this.productItem != null && state.getValue(AGE) >= 4) {
+         drops.add(this.getProductItem(params.getLevel().getRandom()));
+      }
+      return drops;
    }
 
    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {

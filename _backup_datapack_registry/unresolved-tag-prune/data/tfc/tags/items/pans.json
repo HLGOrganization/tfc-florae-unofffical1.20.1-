@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:pan/full/arkose",
+    "tfcflorae:pan/full/boninite",
+    "tfcflorae:pan/full/carbonatite",
+    "tfcflorae:pan/full/cataclasite",
+    "tfcflorae:pan/full/jaspillite",
+    "tfcflorae:pan/full/laterite",
+    "tfcflorae:pan/full/mudstone",
+    "tfcflorae:pan/full/porphyry",
+    "tfcflorae:pan/full/red_granite",
+    "tfcflorae:pan/full/sandstone",
+    "tfcflorae:pan/full/soapstone",
+    "tfcflorae:pan/full/wackestone",
+    "tfcflorae:pan/half/arkose",
+    "tfcflorae:pan/half/boninite",
+    "tfcflorae:pan/half/carbonatite",
+    "tfcflorae:pan/half/cataclasite",
+    "tfcflorae:pan/half/jaspillite",
+    "tfcflorae:pan/half/laterite",
+    "tfcflorae:pan/half/mudstone",
+    "tfcflorae:pan/half/porphyry",
+    "tfcflorae:pan/half/red_granite",
+    "tfcflorae:pan/half/sandstone",
+    "tfcflorae:pan/half/soapstone",
+    "tfcflorae:pan/half/wackestone"
+  ]
+}

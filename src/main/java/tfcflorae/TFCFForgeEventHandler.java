@@ -55,7 +55,6 @@ import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.TFCFRockSand;
 import tfcflorae.common.blocks.soil.TFCFRockSoil;
 import tfcflorae.common.blocks.soil.TFCFSoil;
-import tfcflorae.common.blocks.wood.TFCFSaplingBlock;
 import tfcflorae.common.commands.TFCFCommands;
 import tfcflorae.common.items.TFCFItems;
 
@@ -95,7 +94,6 @@ public class TFCFForgeEventHandler {
          if ((level.getBlockState(pos).isAir() || Helpers.isBlock(level.getBlockState(pos), TFCFTags.Blocks.SAPLING_CAN_REPLACE))
             && (
                Helpers.isItem(itemStack, TFCFTags.Items.SAPLINGS)
-                  || Block.byItem(itemStack.getItem()) instanceof TFCFSaplingBlock
                   || Block.byItem(itemStack.getItem()) instanceof TFCSaplingBlock
             )) {
             Block block = Block.byItem(itemStack.getItem());
@@ -126,7 +124,7 @@ public class TFCFForgeEventHandler {
       if (level instanceof ServerLevel server
          && BuiltInRegistries.ITEM.getKey(event.getItemStack().getItem()).toString().equals("create:tree_fertilizer")
          && block instanceof BonemealableBlock bonemealable
-         && block instanceof TFCFSaplingBlock) {
+         && block instanceof TFCSaplingBlock) {
          bonemealable.performBonemeal(server, server.random, pos, state);
          if (event.getEntity() != null && !event.getEntity().isCreative()) {
             event.getItemStack().shrink(1);
@@ -227,9 +225,9 @@ public class TFCFForgeEventHandler {
          }
 
          for (Colors sandColor : Colors.values()) {
-            if (block != ((RegistryObject)TFCBlocks.SAND.get(sandColor.toSandTFC(true))).get() && block != TFCFBlocks.SAND.get(sandColor.nonTFC()).get()) {
+            if (block != ((RegistryObject)TFCBlocks.SAND.get(sandColor.toSandTFC(true))).get() && !isTfcfSandBlock(sandColor, block)) {
                if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get()
-                  && Helpers.isItem(event.getItemStack(), ((Block)TFCFBlocks.SAND_LAYERS.get(sandColor).get()).asItem())) {
+                  && isSandLayerItem(sandColor, event.getItemStack())) {
                   event.getItemStack().shrink(1);
                   BlockState placedBlock = ((Block)TFCFBlocks.ROCKY_SAND_TFC.get(TFCFRockSand.SANDY_TILES).get(sandColor).get(rockTFC).get()).defaultBlockState();
                   level.setBlockAndUpdate(pos, placedBlock);
@@ -296,9 +294,9 @@ public class TFCFForgeEventHandler {
          }
 
          for (Colors sandColorx : Colors.values()) {
-            if (block != ((RegistryObject)TFCBlocks.SAND.get(sandColorx.toSandTFC(true))).get() && block != TFCFBlocks.SAND.get(sandColorx.nonTFC()).get()) {
+            if (block != ((RegistryObject)TFCBlocks.SAND.get(sandColorx.toSandTFC(true))).get() && !isTfcfSandBlock(sandColorx, block)) {
                if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get()
-                  && Helpers.isItem(event.getItemStack(), ((Block)TFCFBlocks.SAND_LAYERS.get(sandColorx).get()).asItem())) {
+                  && isSandLayerItem(sandColorx, event.getItemStack())) {
                   event.getItemStack().shrink(1);
                   BlockState placedBlock = ((Block)TFCFBlocks.ROCKY_SAND_TFCF.get(TFCFRockSand.SANDY_TILES).get(sandColorx).get(rockTFCF).get()).defaultBlockState();
                   level.setBlockAndUpdate(pos, placedBlock);
@@ -318,5 +316,15 @@ public class TFCFForgeEventHandler {
       }
 
       event.setCancellationResult(InteractionResult.PASS);
+   }
+
+   private static boolean isTfcfSandBlock(Colors color, Block block) {
+      RegistryObject<Block> ref = (RegistryObject<Block>)TFCFBlocks.SAND.get(color);
+      return ref != null && block == (Block)ref.get();
+   }
+
+   private static boolean isSandLayerItem(Colors color, ItemStack stack) {
+      RegistryObject<Block> ref = (RegistryObject<Block>)TFCFBlocks.SAND_LAYERS.get(color);
+      return ref != null && Helpers.isItem(stack, ((Block)ref.get()).asItem());
    }
 }

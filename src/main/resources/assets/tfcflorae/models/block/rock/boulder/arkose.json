@@ -2,6 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfcflorae:block/groundcover/boulder",
   "textures": {
-    "all": "tfcflorae:item/loose_rock/arkose"
+    "0": "tfcflorae:item/loose_rock/arkose",
+    "particle": "tfcflorae:item/loose_rock/arkose"
   }
 }

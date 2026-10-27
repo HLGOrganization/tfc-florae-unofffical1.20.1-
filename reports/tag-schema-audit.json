@@ -1,0 +1,275 @@
+{
+  "scope": "blocks/items/fluids/entity_types/game_events tag resource structure; registered identifiers validated separately against runtime dump",
+  "file_counts": {
+    "blocks": 301,
+    "items": 294
+  },
+  "member_counts_including_tag_links": {
+    "blocks": 53528,
+    "items": 26716
+  },
+  "direct_member_counts": {
+    "blocks": 53341,
+    "items": 26587
+  },
+  "schema_issues": [],
+  "duplicate_entries_total": 1920,
+  "duplicate_files": 2,
+  "duplicate_counts_by_file": {
+    "data/tfcflorae/tags/blocks/column_generates_on.json": 960,
+    "data/tfcflorae/tags/blocks/rocky_compact_dirt.json": 960
+  },
+  "duplicate_examples_first_50": [
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/andesite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/basalt"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/chalk"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/chert"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/claystone"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/conglomerate"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/dacite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/diorite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/dolomite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/gabbro"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/gneiss"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/granite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/limestone"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/marble"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/phyllite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/quartzite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/rhyolite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/schist"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/shale"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/loam/slate"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/andesite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/basalt"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/chalk"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/chert"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/claystone"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/conglomerate"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/dacite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/diorite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/dolomite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/gabbro"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/gneiss"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/granite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/limestone"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/marble"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/phyllite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/quartzite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/rhyolite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/schist"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/shale"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/sandy_loam/slate"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/andesite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/basalt"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/chalk"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/chert"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/claystone"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/conglomerate"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/dacite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/diorite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/dolomite"
+    },
+    {
+      "file": "data/tfcflorae/tags/blocks/column_generates_on.json",
+      "field": "values",
+      "id": "tfcflorae:rockier_compact_dirt/silt/gabbro"
+    }
+  ],
+  "duplicate_semantics": "Duplicate tag members are set-like and do not cause datapack loading failure; preserved."
+}

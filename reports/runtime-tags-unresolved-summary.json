@@ -1,0 +1,924 @@
+{
+  "source_report": "reports/runtime-tags-audit.json",
+  "runtime": "TFC 3.2.20 target; IDs from initialized block/item/fluid/entity/game-event registries",
+  "applied_same_path_replacements": {
+    "occurrences": 11312,
+    "unique_ids": 1773,
+    "files": 190,
+    "backups": "_backup_datapack_registry/data/...; existing backups never overwritten"
+  },
+  "remaining_required_unresolved": {
+    "occurrences": 6431,
+    "unique_ids": 2316,
+    "files": 165,
+    "registries": {
+      "minecraft:block": 3528,
+      "minecraft:item": 2903
+    },
+    "by_path_root": {
+      "bucket": {
+        "occurrences": 10,
+        "unique_ids": 5
+      },
+      "ceramic": {
+        "occurrences": 192,
+        "unique_ids": 96
+      },
+      "dirtier_stone_tiles": {
+        "occurrences": 116,
+        "unique_ids": 12
+      },
+      "dirtiest_stone_tiles": {
+        "occurrences": 116,
+        "unique_ids": 12
+      },
+      "dirty_stone_tiles": {
+        "occurrences": 116,
+        "unique_ids": 12
+      },
+      "dry_grass": {
+        "occurrences": 10,
+        "unique_ids": 2
+      },
+      "ore": {
+        "occurrences": 256,
+        "unique_ids": 32
+      },
+      "pan": {
+        "occurrences": 24,
+        "unique_ids": 24
+      },
+      "plant": {
+        "occurrences": 61,
+        "unique_ids": 39
+      },
+      "rock": {
+        "occurrences": 3669,
+        "unique_ids": 868
+      },
+      "rockier_compact_dirt": {
+        "occurrences": 14,
+        "unique_ids": 3
+      },
+      "wood": {
+        "occurrences": 1847,
+        "unique_ids": 1211
+      }
+    },
+    "by_path_prefix_top": {
+      "wood/planks": {
+        "occurrences": 896,
+        "unique_ids": 768,
+        "examples": [
+          "tfcflorae:wood/planks/african_padauk_fence_gate",
+          "tfcflorae:wood/planks/alder_fence_gate",
+          "tfcflorae:wood/planks/angelim_fence_gate"
+        ]
+      },
+      "rock/cobble": {
+        "occurrences": 662,
+        "unique_ids": 103,
+        "examples": [
+          "tfcflorae:rock/cobble/dripstone",
+          "tfcflorae:rock/cobble/arkose_slab",
+          "tfcflorae:rock/cobble/arkose_stairs"
+        ]
+      },
+      "rock/bricks": {
+        "occurrences": 559,
+        "unique_ids": 103,
+        "examples": [
+          "tfcflorae:rock/bricks/dripstone",
+          "tfcflorae:rock/bricks/arkose_slab",
+          "tfcflorae:rock/bricks/arkose_stairs"
+        ]
+      },
+      "rock/mossy_cobble": {
+        "occurrences": 456,
+        "unique_ids": 103,
+        "examples": [
+          "tfcflorae:rock/mossy_cobble/dripstone",
+          "tfcflorae:rock/mossy_cobble/arkose_slab",
+          "tfcflorae:rock/mossy_cobble/arkose_stairs"
+        ]
+      },
+      "rock/chiseled": {
+        "occurrences": 368,
+        "unique_ids": 100,
+        "examples": [
+          "tfcflorae:rock/chiseled/dripstone",
+          "tfcflorae:rock/chiseled/slab/andesite",
+          "tfcflorae:rock/chiseled/slab/arkose"
+        ]
+      },
+      "rock/cracked_bricks": {
+        "occurrences": 353,
+        "unique_ids": 103,
+        "examples": [
+          "tfcflorae:rock/cracked_bricks/dripstone",
+          "tfcflorae:rock/cracked_bricks/arkose_slab",
+          "tfcflorae:rock/cracked_bricks/arkose_stairs"
+        ]
+      },
+      "rock/mossy_bricks": {
+        "occurrences": 353,
+        "unique_ids": 103,
+        "examples": [
+          "tfcflorae:rock/mossy_bricks/dripstone",
+          "tfcflorae:rock/mossy_bricks/arkose_slab",
+          "tfcflorae:rock/mossy_bricks/arkose_stairs"
+        ]
+      },
+      "rock/smooth": {
+        "occurrences": 353,
+        "unique_ids": 103,
+        "examples": [
+          "tfcflorae:rock/smooth/dripstone",
+          "tfcflorae:rock/smooth/arkose_slab",
+          "tfcflorae:rock/smooth/arkose_stairs"
+        ]
+      },
+      "rock/raw": {
+        "occurrences": 348,
+        "unique_ids": 102,
+        "examples": [
+          "tfcflorae:rock/raw/arkose_slab",
+          "tfcflorae:rock/raw/arkose_stairs",
+          "tfcflorae:rock/raw/arkose_wall"
+        ]
+      },
+      "wood/fallen_leaves": {
+        "occurrences": 340,
+        "unique_ids": 68,
+        "examples": [
+          "tfcflorae:wood/fallen_leaves/old/african_padauk",
+          "tfcflorae:wood/fallen_leaves/old/alder",
+          "tfcflorae:wood/fallen_leaves/old/angelim"
+        ]
+      },
+      "ore/kaolinite": {
+        "occurrences": 256,
+        "unique_ids": 32,
+        "examples": [
+          "tfcflorae:ore/kaolinite/andesite",
+          "tfcflorae:ore/kaolinite/arkose",
+          "tfcflorae:ore/kaolinite/basalt"
+        ]
+      },
+      "wood/old_barrels": {
+        "occurrences": 201,
+        "unique_ids": 67,
+        "examples": [
+          "tfcflorae:wood/old_barrels/african_padauk",
+          "tfcflorae:wood/old_barrels/alder",
+          "tfcflorae:wood/old_barrels/angelim"
+        ]
+      },
+      "wood/chiseled_bookshelf": {
+        "occurrences": 114,
+        "unique_ids": 19,
+        "examples": [
+          "tfcflorae:wood/chiseled_bookshelf/acacia",
+          "tfcflorae:wood/chiseled_bookshelf/ash",
+          "tfcflorae:wood/chiseled_bookshelf/aspen"
+        ]
+      },
+      "wood/potted_sapling": {
+        "occurrences": 67,
+        "unique_ids": 67,
+        "examples": [
+          "tfcflorae:wood/potted_sapling/african_padauk",
+          "tfcflorae:wood/potted_sapling/alder",
+          "tfcflorae:wood/potted_sapling/angelim"
+        ]
+      },
+      "wood/wall_sign": {
+        "occurrences": 67,
+        "unique_ids": 67,
+        "examples": [
+          "tfcflorae:wood/wall_sign/african_padauk",
+          "tfcflorae:wood/wall_sign/alder",
+          "tfcflorae:wood/wall_sign/angelim"
+        ]
+      },
+      "wood/vertical_support": {
+        "occurrences": 67,
+        "unique_ids": 67,
+        "examples": [
+          "tfcflorae:wood/vertical_support/african_padauk",
+          "tfcflorae:wood/vertical_support/alder",
+          "tfcflorae:wood/vertical_support/angelim"
+        ]
+      },
+      "wood/horizontal_support": {
+        "occurrences": 67,
+        "unique_ids": 67,
+        "examples": [
+          "tfcflorae:wood/horizontal_support/african_padauk",
+          "tfcflorae:wood/horizontal_support/alder",
+          "tfcflorae:wood/horizontal_support/angelim"
+        ]
+      },
+      "ceramic/earthenware": {
+        "occurrences": 64,
+        "unique_ids": 32,
+        "examples": [
+          "tfcflorae:ceramic/earthenware/fired/large_vessel/black",
+          "tfcflorae:ceramic/earthenware/fired/large_vessel/blue",
+          "tfcflorae:ceramic/earthenware/fired/large_vessel/brown"
+        ]
+      },
+      "ceramic/kaolinite": {
+        "occurrences": 64,
+        "unique_ids": 32,
+        "examples": [
+          "tfcflorae:ceramic/kaolinite/fired/large_vessel/black",
+          "tfcflorae:ceramic/kaolinite/fired/large_vessel/blue",
+          "tfcflorae:ceramic/kaolinite/fired/large_vessel/brown"
+        ]
+      },
+      "ceramic/stoneware": {
+        "occurrences": 64,
+        "unique_ids": 32,
+        "examples": [
+          "tfcflorae:ceramic/stoneware/fired/large_vessel/black",
+          "tfcflorae:ceramic/stoneware/fired/large_vessel/blue",
+          "tfcflorae:ceramic/stoneware/fired/large_vessel/brown"
+        ]
+      },
+      "plant/potted": {
+        "occurrences": 41,
+        "unique_ids": 35,
+        "examples": [
+          "tfcflorae:plant/potted/saguaro_cactus",
+          "tfcflorae:plant/potted/bird_of_paradise",
+          "tfcflorae:plant/potted/blue_bamboo"
+        ]
+      },
+      "dirtier_stone_tiles/loam": {
+        "occurrences": 40,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:dirtier_stone_tiles/loam/dripstone",
+          "tfcflorae:dirtier_stone_tiles/loam/slab/dripstone",
+          "tfcflorae:dirtier_stone_tiles/loam/stairs/dripstone"
+        ]
+      },
+      "dirtier_stone_tiles/sandy_loam": {
+        "occurrences": 40,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:dirtier_stone_tiles/sandy_loam/dripstone",
+          "tfcflorae:dirtier_stone_tiles/sandy_loam/slab/dripstone",
+          "tfcflorae:dirtier_stone_tiles/sandy_loam/stairs/dripstone"
+        ]
+      },
+      "dirtiest_stone_tiles/loam": {
+        "occurrences": 40,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:dirtiest_stone_tiles/loam/dripstone",
+          "tfcflorae:dirtiest_stone_tiles/loam/slab/dripstone",
+          "tfcflorae:dirtiest_stone_tiles/loam/stairs/dripstone"
+        ]
+      },
+      "dirtiest_stone_tiles/sandy_loam": {
+        "occurrences": 40,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:dirtiest_stone_tiles/sandy_loam/dripstone",
+          "tfcflorae:dirtiest_stone_tiles/sandy_loam/slab/dripstone",
+          "tfcflorae:dirtiest_stone_tiles/sandy_loam/stairs/dripstone"
+        ]
+      },
+      "dirty_stone_tiles/loam": {
+        "occurrences": 40,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:dirty_stone_tiles/loam/dripstone",
+          "tfcflorae:dirty_stone_tiles/loam/slab/dripstone",
+          "tfcflorae:dirty_stone_tiles/loam/stairs/dripstone"
+        ]
+      },
+      "dirty_stone_tiles/sandy_loam": {
+        "occurrences": 40,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:dirty_stone_tiles/sandy_loam/dripstone",
+          "tfcflorae:dirty_stone_tiles/sandy_loam/slab/dripstone",
+          "tfcflorae:dirty_stone_tiles/sandy_loam/stairs/dripstone"
+        ]
+      },
+      "dirtier_stone_tiles/silt": {
+        "occurrences": 36,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:dirtier_stone_tiles/silt/dripstone",
+          "tfcflorae:dirtier_stone_tiles/silt/slab/dripstone",
+          "tfcflorae:dirtier_stone_tiles/silt/stairs/dripstone"
+        ]
+      },
+      "dirtiest_stone_tiles/silt": {
+        "occurrences": 36,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:dirtiest_stone_tiles/silt/dripstone",
+          "tfcflorae:dirtiest_stone_tiles/silt/slab/dripstone",
+          "tfcflorae:dirtiest_stone_tiles/silt/stairs/dripstone"
+        ]
+      },
+      "dirty_stone_tiles/silt": {
+        "occurrences": 36,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:dirty_stone_tiles/silt/dripstone",
+          "tfcflorae:dirty_stone_tiles/silt/slab/dripstone",
+          "tfcflorae:dirty_stone_tiles/silt/stairs/dripstone"
+        ]
+      },
+      "rock/cobbled_bricks": {
+        "occurrences": 20,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/cobbled_bricks/dripstone",
+          "tfcflorae:rock/cobbled_bricks/slab/dripstone",
+          "tfcflorae:rock/cobbled_bricks/stairs/dripstone"
+        ]
+      },
+      "rock/mortar_and_cobble": {
+        "occurrences": 20,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/mortar_and_cobble/dripstone",
+          "tfcflorae:rock/mortar_and_cobble/slab/dripstone",
+          "tfcflorae:rock/mortar_and_cobble/stairs/dripstone"
+        ]
+      },
+      "rock/mossy_cobbled_bricks": {
+        "occurrences": 20,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/mossy_cobbled_bricks/dripstone",
+          "tfcflorae:rock/mossy_cobbled_bricks/slab/dripstone",
+          "tfcflorae:rock/mossy_cobbled_bricks/stairs/dripstone"
+        ]
+      },
+      "rock/mossy_mortar_and_cobble": {
+        "occurrences": 20,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/mossy_mortar_and_cobble/dripstone",
+          "tfcflorae:rock/mossy_mortar_and_cobble/slab/dripstone",
+          "tfcflorae:rock/mossy_mortar_and_cobble/stairs/dripstone"
+        ]
+      },
+      "rock/polished_cobbled_bricks": {
+        "occurrences": 20,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/polished_cobbled_bricks/dripstone",
+          "tfcflorae:rock/polished_cobbled_bricks/slab/dripstone",
+          "tfcflorae:rock/polished_cobbled_bricks/stairs/dripstone"
+        ]
+      },
+      "rock/cracked_flagstone_bricks": {
+        "occurrences": 16,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/cracked_flagstone_bricks/dripstone",
+          "tfcflorae:rock/cracked_flagstone_bricks/slab/dripstone",
+          "tfcflorae:rock/cracked_flagstone_bricks/stairs/dripstone"
+        ]
+      },
+      "rock/flagstone": {
+        "occurrences": 16,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/flagstone/dripstone",
+          "tfcflorae:rock/flagstone/slab/dripstone",
+          "tfcflorae:rock/flagstone/stairs/dripstone"
+        ]
+      },
+      "rock/flagstone_bricks": {
+        "occurrences": 16,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/flagstone_bricks/dripstone",
+          "tfcflorae:rock/flagstone_bricks/slab/dripstone",
+          "tfcflorae:rock/flagstone_bricks/stairs/dripstone"
+        ]
+      },
+      "rock/mossy_flagstone_bricks": {
+        "occurrences": 16,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/mossy_flagstone_bricks/dripstone",
+          "tfcflorae:rock/mossy_flagstone_bricks/slab/dripstone",
+          "tfcflorae:rock/mossy_flagstone_bricks/stairs/dripstone"
+        ]
+      },
+      "rock/stone_tiles": {
+        "occurrences": 16,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:rock/stone_tiles/dripstone",
+          "tfcflorae:rock/stone_tiles/slab/dripstone",
+          "tfcflorae:rock/stone_tiles/stairs/dripstone"
+        ]
+      },
+      "pan/full": {
+        "occurrences": 12,
+        "unique_ids": 12,
+        "examples": [
+          "tfcflorae:pan/full/arkose",
+          "tfcflorae:pan/full/boninite",
+          "tfcflorae:pan/full/carbonatite"
+        ]
+      },
+      "pan/half": {
+        "occurrences": 12,
+        "unique_ids": 12,
+        "examples": [
+          "tfcflorae:pan/half/arkose",
+          "tfcflorae:pan/half/boninite",
+          "tfcflorae:pan/half/carbonatite"
+        ]
+      },
+      "bucket/ore": {
+        "occurrences": 10,
+        "unique_ids": 5,
+        "examples": [
+          "tfcflorae:bucket/ore/anthracite",
+          "tfcflorae:bucket/ore/bituminous_coal",
+          "tfcflorae:bucket/ore/charcoal"
+        ]
+      },
+      "rock/loose": {
+        "occurrences": 7,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rock/loose/gypsum"
+        ]
+      },
+      "rock/gravel": {
+        "occurrences": 6,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rock/gravel/dripstone"
+        ]
+      },
+      "rock/aqueduct": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rock/aqueduct/dripstone"
+        ]
+      },
+      "rock/button": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rock/button/dripstone"
+        ]
+      },
+      "rock/pressure_plate": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rock/pressure_plate/dripstone"
+        ]
+      },
+      "dry_grass/bog_iron": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:dry_grass/bog_iron"
+        ]
+      },
+      "dry_grass/peat": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:dry_grass/peat"
+        ]
+      },
+      "rockier_compact_dirt/loam": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rockier_compact_dirt/loam/dripstone"
+        ]
+      },
+      "rockier_compact_dirt/sandy_loam": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rockier_compact_dirt/sandy_loam/dripstone"
+        ]
+      },
+      "plant/cacao": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:plant/cacao"
+        ]
+      },
+      "plant/flower_cherry": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:plant/flower_cherry"
+        ]
+      },
+      "plant/glow_lichen": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:plant/glow_lichen"
+        ]
+      },
+      "plant/spore_blossom": {
+        "occurrences": 5,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:plant/spore_blossom"
+        ]
+      },
+      "rockier_compact_dirt/silt": {
+        "occurrences": 4,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rockier_compact_dirt/silt/dripstone"
+        ]
+      },
+      "wood/lumber": {
+        "occurrences": 4,
+        "unique_ids": 4,
+        "examples": [
+          "tfcflorae:wood/lumber/blue_bamboo",
+          "tfcflorae:wood/lumber/dragon_bamboo",
+          "tfcflorae:wood/lumber/joshua_tree"
+        ]
+      },
+      "rock/column": {
+        "occurrences": 3,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rock/column/dripstone"
+        ]
+      },
+      "rock/polished_column": {
+        "occurrences": 3,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rock/polished_column/dripstone"
+        ]
+      },
+      "rock/smoke_block": {
+        "occurrences": 3,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:rock/smoke_block/dripstone"
+        ]
+      },
+      "wood/stripped_log_bundle": {
+        "occurrences": 3,
+        "unique_ids": 3,
+        "examples": [
+          "tfcflorae:wood/stripped_log_bundle/blue_bamboo",
+          "tfcflorae:wood/stripped_log_bundle/dragon_bamboo",
+          "tfcflorae:wood/stripped_log_bundle/red_bamboo"
+        ]
+      },
+      "wood/stripped_wood_bundle": {
+        "occurrences": 3,
+        "unique_ids": 3,
+        "examples": [
+          "tfcflorae:wood/stripped_wood_bundle/blue_bamboo",
+          "tfcflorae:wood/stripped_wood_bundle/dragon_bamboo",
+          "tfcflorae:wood/stripped_wood_bundle/red_bamboo"
+        ]
+      },
+      "wood/trunks": {
+        "occurrences": 3,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/trunks/palm"
+        ]
+      },
+      "wood/twig": {
+        "occurrences": 3,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/twig/joshua_tree"
+        ]
+      },
+      "wood/stripped_log": {
+        "occurrences": 2,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/stripped_log/joshua_tree"
+        ]
+      },
+      "wood/stripped_wood": {
+        "occurrences": 2,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/stripped_wood/joshua_tree"
+        ]
+      },
+      "wood/wood": {
+        "occurrences": 2,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/wood/joshua_tree"
+        ]
+      },
+      "wood/palm_sapling": {
+        "occurrences": 1,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/palm_sapling/palm"
+        ]
+      },
+      "wood/flowers": {
+        "occurrences": 1,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/flowers/joshua"
+        ]
+      },
+      "wood/leaves_head": {
+        "occurrences": 1,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/leaves_head/joshua_old"
+        ]
+      },
+      "wood/palm_leaves": {
+        "occurrences": 1,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/palm_leaves/palm"
+        ]
+      },
+      "wood/boat": {
+        "occurrences": 1,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/boat/joshua_tree"
+        ]
+      },
+      "wood/chest_minecart": {
+        "occurrences": 1,
+        "unique_ids": 1,
+        "examples": [
+          "tfcflorae:wood/chest_minecart/joshua_tree"
+        ]
+      }
+    },
+    "top_files": [
+      [
+        "data/minecraft/tags/blocks/mineable/pickaxe.json",
+        936
+      ],
+      [
+        "data/tfcflorae/tags/blocks/can_be_snow_piled.json",
+        403
+      ],
+      [
+        "data/minecraft/tags/items/slabs.json",
+        354
+      ],
+      [
+        "data/minecraft/tags/items/stairs.json",
+        354
+      ],
+      [
+        "data/minecraft/tags/blocks/slabs.json",
+        290
+      ],
+      [
+        "data/minecraft/tags/blocks/stairs.json",
+        290
+      ],
+      [
+        "data/minecraft/tags/blocks/walls.json",
+        290
+      ],
+      [
+        "data/minecraft/tags/items/walls.json",
+        290
+      ],
+      [
+        "data/tfcflorae/tags/blocks/mineable_with_hammer.json",
+        226
+      ],
+      [
+        "data/tfc/tags/items/support_beams.json",
+        134
+      ],
+      [
+        "data/forge/tags/blocks/cobblestone.json",
+        103
+      ],
+      [
+        "data/forge/tags/items/cobblestone.json",
+        103
+      ],
+      [
+        "data/tfc/tags/blocks/rock_bricks.json",
+        103
+      ],
+      [
+        "data/tfc/tags/items/rock_bricks.json",
+        103
+      ],
+      [
+        "data/minecraft/tags/items/flower_pots.json",
+        102
+      ],
+      [
+        "data/minecraft/tags/blocks/mineable/axe.json",
+        98
+      ],
+      [
+        "data/tfc/tags/items/ceramic.json",
+        96
+      ],
+      [
+        "data/tfc/tags/items/pots.json",
+        96
+      ],
+      [
+        "data/tfcflorae/tags/blocks/mineable_with_sharp_tool.json",
+        92
+      ],
+      [
+        "data/tfc/tags/items/bookshelves.json",
+        83
+      ],
+      [
+        "data/minecraft/tags/blocks/mineable/hoe.json",
+        76
+      ],
+      [
+        "data/tfc/tags/blocks/fallen_leaves.json",
+        68
+      ],
+      [
+        "data/tfc/tags/items/fallen_leaves.json",
+        68
+      ],
+      [
+        "data/tfcflorae/tags/blocks/fallen_leaves.json",
+        68
+      ],
+      [
+        "data/minecraft/tags/items/wall_signs.json",
+        67
+      ],
+      [
+        "data/tfc/tags/blocks/barrels.json",
+        67
+      ],
+      [
+        "data/tfc/tags/items/barrels.json",
+        67
+      ],
+      [
+        "data/forge/tags/items/fence_gates/wooden.json",
+        64
+      ],
+      [
+        "data/minecraft/tags/items/wooden_buttons.json",
+        64
+      ],
+      [
+        "data/minecraft/tags/items/wooden_doors.json",
+        64
+      ],
+      [
+        "data/minecraft/tags/items/wooden_fences.json",
+        64
+      ],
+      [
+        "data/minecraft/tags/items/wooden_pressure_plates.json",
+        64
+      ],
+      [
+        "data/minecraft/tags/items/wooden_slabs.json",
+        64
+      ],
+      [
+        "data/minecraft/tags/items/wooden_stairs.json",
+        64
+      ],
+      [
+        "data/minecraft/tags/items/wooden_trapdoors.json",
+        64
+      ],
+      [
+        "data/tfc/tags/items/looms.json",
+        64
+      ],
+      [
+        "data/tfc/tags/items/tool_racks.json",
+        64
+      ],
+      [
+        "data/tfc/tags/items/workbenches.json",
+        64
+      ],
+      [
+        "data/minecraft/tags/blocks/dirt.json",
+        41
+      ],
+      [
+        "data/minecraft/tags/blocks/mineable/shovel.json",
+        41
+      ],
+      [
+        "data/minecraft/tags/items/dirt.json",
+        41
+      ],
+      [
+        "data/tfcflorae/tags/blocks/dirt.json",
+        39
+      ],
+      [
+        "data/tfc/tags/blocks/stone_tiles.json",
+        37
+      ],
+      [
+        "data/tfc/tags/items/stone_tiles.json",
+        37
+      ],
+      [
+        "data/forge/tags/blocks/ores/kaolinite.json",
+        32
+      ],
+      [
+        "data/forge/tags/blocks/ores.json",
+        32
+      ],
+      [
+        "data/forge/tags/items/ores/kaolinite.json",
+        32
+      ],
+      [
+        "data/forge/tags/items/ores.json",
+        32
+      ],
+      [
+        "data/minecraft/tags/blocks/needs_stone_tool.json",
+        32
+      ],
+      [
+        "data/tfc/tags/blocks/ores.json",
+        32
+      ],
+      [
+        "data/tfc/tags/items/ores.json",
+        32
+      ],
+      [
+        "data/tfcflorae/tags/blocks/can_landslide.json",
+        27
+      ],
+      [
+        "data/tfc/tags/items/pans.json",
+        24
+      ],
+      [
+        "data/minecraft/tags/items/mineable/axe.json",
+        19
+      ],
+      [
+        "data/tfc/tags/blocks/bookshelves.json",
+        19
+      ],
+      [
+        "data/tfcflorae/tags/blocks/bookshelves.json",
+        19
+      ],
+      [
+        "data/minecraft/tags/items/buckets.json",
+        5
+      ],
+      [
+        "data/tfc/tags/items/buckets.json",
+        5
+      ],
+      [
+        "data/tfcflorae/tags/blocks/can_be_ice_piled.json",
+        5
+      ],
+      [
+        "data/tfcflorae/tags/blocks/plants.json",
+        5
+      ]
+    ]
+  },
+  "disposition": "No unresolved entry was removed or changed. There is no same-path tfc replacement in the target runtime registry. Review invalid/dead categories individually before changing them; kaolinite is preserved."
+}

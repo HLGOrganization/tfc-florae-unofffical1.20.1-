@@ -1,0 +1,442 @@
+{
+  "applied": true,
+  "models": [
+    "tfcflorae:block/dense_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/dense_clay_grass/silty_loam/side",
+    "tfcflorae:block/dense_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dense_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dense_clay_grass/silty_loam/top",
+    "tfcflorae:block/dense_earthenware_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/dense_earthenware_clay_grass/silty_loam/side",
+    "tfcflorae:block/dense_earthenware_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dense_earthenware_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dense_earthenware_clay_grass/silty_loam/top",
+    "tfcflorae:block/dense_grass/silty_loam/bottom",
+    "tfcflorae:block/dense_grass/silty_loam/side",
+    "tfcflorae:block/dense_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dense_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dense_grass/silty_loam/top",
+    "tfcflorae:block/dense_kaolinite_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/dense_kaolinite_clay_grass/silty_loam/side",
+    "tfcflorae:block/dense_kaolinite_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dense_kaolinite_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dense_kaolinite_clay_grass/silty_loam/top",
+    "tfcflorae:block/dense_stoneware_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/dense_stoneware_clay_grass/silty_loam/side",
+    "tfcflorae:block/dense_stoneware_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dense_stoneware_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dense_stoneware_clay_grass/silty_loam/top",
+    "tfcflorae:block/dry_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/dry_clay_grass/silty_loam/side",
+    "tfcflorae:block/dry_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dry_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dry_clay_grass/silty_loam/top",
+    "tfcflorae:block/dry_earthenware_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/dry_earthenware_clay_grass/silty_loam/side",
+    "tfcflorae:block/dry_earthenware_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dry_earthenware_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dry_earthenware_clay_grass/silty_loam/top",
+    "tfcflorae:block/dry_grass/silty_loam/bottom",
+    "tfcflorae:block/dry_grass/silty_loam/side",
+    "tfcflorae:block/dry_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dry_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dry_grass/silty_loam/top",
+    "tfcflorae:block/dry_kaolinite_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/dry_kaolinite_clay_grass/silty_loam/side",
+    "tfcflorae:block/dry_kaolinite_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dry_kaolinite_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dry_kaolinite_clay_grass/silty_loam/top",
+    "tfcflorae:block/dry_stoneware_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/dry_stoneware_clay_grass/silty_loam/side",
+    "tfcflorae:block/dry_stoneware_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/dry_stoneware_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/dry_stoneware_clay_grass/silty_loam/top",
+    "tfcflorae:block/earthenware_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/earthenware_clay_grass/silty_loam/side",
+    "tfcflorae:block/earthenware_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/earthenware_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/earthenware_clay_grass/silty_loam/top",
+    "tfcflorae:block/kaolinite_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/kaolinite_clay_grass/silty_loam/side",
+    "tfcflorae:block/kaolinite_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/kaolinite_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/kaolinite_clay_grass/silty_loam/top",
+    "tfcflorae:block/mossy_packed_mud/silty_loam_1",
+    "tfcflorae:block/mossy_packed_mud/silty_loam_2",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/andesite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/arkose",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/basalt",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/boninite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/carbonatite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/cataclasite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/chalk",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/chert",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/claystone",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/conglomerate",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/dacite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/diorite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/dolomite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/dripstone",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/gabbro",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/gneiss",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/granite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/jaspillite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/laterite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/limestone",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/marble",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/mudstone",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/phyllite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/porphyry",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/quartzite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/red_granite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/rhyolite",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/sandstone",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/schist",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/shale",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/slate",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/soapstone",
+    "tfcflorae:block/pebble_compact_dirt/silty_loam/wackestone",
+    "tfcflorae:block/podzol/silty_loam/bottom",
+    "tfcflorae:block/podzol/silty_loam/side",
+    "tfcflorae:block/podzol/silty_loam/snowy_side",
+    "tfcflorae:block/podzol/silty_loam/snowy_top",
+    "tfcflorae:block/podzol/silty_loam/top",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/andesite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/arkose",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/basalt",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/boninite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/carbonatite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/cataclasite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/chalk",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/chert",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/claystone",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/conglomerate",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/dacite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/diorite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/dolomite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/dripstone",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/gabbro",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/gneiss",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/granite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/jaspillite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/laterite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/limestone",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/marble",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/mudstone",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/phyllite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/porphyry",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/quartzite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/red_granite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/rhyolite",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/sandstone",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/schist",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/shale",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/slate",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/soapstone",
+    "tfcflorae:block/rocky_compact_dirt/silty_loam/wackestone",
+    "tfcflorae:block/sparse_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/sparse_clay_grass/silty_loam/side",
+    "tfcflorae:block/sparse_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/sparse_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/sparse_clay_grass/silty_loam/top",
+    "tfcflorae:block/sparse_earthenware_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/sparse_earthenware_clay_grass/silty_loam/side",
+    "tfcflorae:block/sparse_earthenware_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/sparse_earthenware_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/sparse_earthenware_clay_grass/silty_loam/top",
+    "tfcflorae:block/sparse_grass/silty_loam/bottom",
+    "tfcflorae:block/sparse_grass/silty_loam/side",
+    "tfcflorae:block/sparse_grass/silty_loam/snowy_side",
+    "tfcflorae:block/sparse_grass/silty_loam/snowy_top",
+    "tfcflorae:block/sparse_grass/silty_loam/top",
+    "tfcflorae:block/sparse_kaolinite_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/sparse_kaolinite_clay_grass/silty_loam/side",
+    "tfcflorae:block/sparse_kaolinite_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/sparse_kaolinite_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/sparse_kaolinite_clay_grass/silty_loam/top",
+    "tfcflorae:block/sparse_stoneware_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/sparse_stoneware_clay_grass/silty_loam/side",
+    "tfcflorae:block/sparse_stoneware_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/sparse_stoneware_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/sparse_stoneware_clay_grass/silty_loam/top",
+    "tfcflorae:block/stoneware_clay_grass/silty_loam/bottom",
+    "tfcflorae:block/stoneware_clay_grass/silty_loam/side",
+    "tfcflorae:block/stoneware_clay_grass/silty_loam/snowy_side",
+    "tfcflorae:block/stoneware_clay_grass/silty_loam/snowy_top",
+    "tfcflorae:block/stoneware_clay_grass/silty_loam/top"
+  ],
+  "existing_silt_textures_reused": [
+    {
+      "model": "tfcflorae:block/mossy_packed_mud/silty_loam_1",
+      "texture": "tfcflorae:block/mossy_packed_mud/silt_1"
+    },
+    {
+      "model": "tfcflorae:block/mossy_packed_mud/silty_loam_2",
+      "texture": "tfcflorae:block/mossy_packed_mud/silt_2"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/andesite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/andesite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/arkose",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/arkose"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/basalt",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/basalt"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/boninite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/boninite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/carbonatite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/carbonatite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/cataclasite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/cataclasite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/chalk",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/chalk"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/chert",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/chert"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/claystone",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/claystone"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/conglomerate",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/conglomerate"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/dacite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/dacite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/diorite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/diorite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/dolomite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/dolomite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/dripstone",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/dripstone"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/gabbro",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/gabbro"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/gneiss",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/gneiss"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/granite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/granite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/jaspillite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/jaspillite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/laterite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/laterite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/limestone",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/limestone"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/marble",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/marble"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/mudstone",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/mudstone"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/phyllite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/phyllite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/porphyry",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/porphyry"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/quartzite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/quartzite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/red_granite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/red_granite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/rhyolite",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/rhyolite"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/sandstone",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/sandstone"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/schist",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/schist"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/shale",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/shale"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/slate",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/slate"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/soapstone",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/soapstone"
+    },
+    {
+      "model": "tfcflorae:block/pebble_compact_dirt/silty_loam/wackestone",
+      "texture": "tfcflorae:block/pebble_compact_dirt/silt/wackestone"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/andesite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/andesite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/arkose",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/arkose"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/basalt",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/basalt"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/boninite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/boninite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/carbonatite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/carbonatite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/cataclasite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/cataclasite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/chalk",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/chalk"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/chert",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/chert"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/claystone",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/claystone"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/conglomerate",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/conglomerate"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/dacite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/dacite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/diorite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/diorite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/dolomite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/dolomite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/dripstone",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/dripstone"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/gabbro",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/gabbro"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/gneiss",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/gneiss"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/granite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/granite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/jaspillite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/jaspillite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/laterite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/laterite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/limestone",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/limestone"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/marble",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/marble"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/mudstone",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/mudstone"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/phyllite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/phyllite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/porphyry",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/porphyry"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/quartzite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/quartzite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/red_granite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/red_granite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/rhyolite",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/rhyolite"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/sandstone",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/sandstone"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/schist",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/schist"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/shale",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/shale"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/slate",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/slate"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/soapstone",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/soapstone"
+    },
+    {
+      "model": "tfcflorae:block/rocky_compact_dirt/silty_loam/wackestone",
+      "texture": "tfcflorae:block/rocky_compact_dirt/silt/wackestone"
+    }
+  ]
+}

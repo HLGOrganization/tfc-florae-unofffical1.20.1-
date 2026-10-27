@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/granite",
+  "model_stages": [
+    "tfc:item/pan/native_copper/granite_full",
+    "tfc:item/pan/native_copper/granite_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper_granite"
+}

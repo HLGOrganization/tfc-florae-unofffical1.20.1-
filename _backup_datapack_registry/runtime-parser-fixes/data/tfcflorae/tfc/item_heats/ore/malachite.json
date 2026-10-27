@@ -1,0 +1,316 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:ore/normal_malachite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/arkose"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/cataclasite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/chalk"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/chert"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/claystone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/conglomerate"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/dacite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/diorite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/dolomite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/dripstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/gabbro"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/gneiss"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/laterite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/limestone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/mudstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/porphyry"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/red_granite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/sandstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/schist"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/shale"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_malachite/wackestone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/arkose"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/cataclasite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/chalk"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/chert"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/claystone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/conglomerate"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/dacite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/diorite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/dolomite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/dripstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/gabbro"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/gneiss"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/laterite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/limestone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/mudstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/porphyry"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/red_granite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/sandstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/schist"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/shale"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_malachite/wackestone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/arkose"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/cataclasite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/chalk"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/chert"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/claystone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/conglomerate"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/dacite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/diorite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/dolomite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/dripstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/gabbro"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/gneiss"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/laterite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/limestone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/mudstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/porphyry"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/red_granite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/sandstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/schist"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/shale"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_malachite/wackestone"
+    },
+    {
+      "item": "tfcflorae:ore/small_malachite"
+    }
+  ],
+  "heat_capacity": 1.143,
+  "forging_temperature": 648,
+  "welding_temperature": 864
+}

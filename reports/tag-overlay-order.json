@@ -1,0 +1,36 @@
+{
+  "scope": "Optional Forge ordering constraints for existing same-path replace:true world-generation tags in the target modpack.",
+  "observed_external_definitions": [
+    {
+      "mod": "afc",
+      "jar": "[林海物语] afc-1.0.23-1.20.1.jar",
+      "tag": "data/tfc/tags/worldgen/configured_feature/forest_trees.json",
+      "replace": true,
+      "members": 48,
+      "tfcflorae_members": 0
+    },
+    {
+      "mod": "tfe",
+      "jar": "Wildfire_TerraFirmaEarth-1.20.1-forge-2.3.0.jar",
+      "tag": "data/tfc/tags/worldgen/placed_feature/in_biome/veins.json",
+      "replace": true,
+      "members": 49,
+      "tfcflorae_members": 0
+    }
+  ],
+  "source_definitions_after_repair": {
+    "data/tfc/tags/worldgen/configured_feature/forest_trees.json": {
+      "replace": false,
+      "members": 83,
+      "tfcflorae_forest_entries": 64
+    },
+    "data/tfc/tags/worldgen/placed_feature/in_biome/veins.json": {
+      "replace": false,
+      "members": 67,
+      "tfcflorae_veins": 25,
+      "native_tfc_kaolin_disc_retained": true
+    }
+  },
+  "change": "META-INF/mods.toml now declares optional AFTER ordering for afc and tfe. Their existing replace:true tag files load before Florae when installed; Florae's replace:false definitions then append its entries while preserving the tags' prior effective values.",
+  "limits": "The exact complete 289-mod resource reload has not been run in this audit. Final effective tag contents still require the full modpack runtime to confirm."
+}

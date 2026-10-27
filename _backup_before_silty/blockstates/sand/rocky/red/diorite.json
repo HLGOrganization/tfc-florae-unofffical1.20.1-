@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/red/diorite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/red/diorite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/red/diorite"
+      }
+    ]
+  }
+}

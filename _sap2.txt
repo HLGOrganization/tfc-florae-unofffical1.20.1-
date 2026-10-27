@@ -1,0 +1,145 @@
+Compiled from "TFCSaplingBlock.java"
+public class net.dries007.tfc.common.blocks.wood.TFCSaplingBlock extends net.minecraft.world.level.block.SaplingBlock implements net.dries007.tfc.common.blocks.IForgeBlockExtension,net.dries007.tfc.common.blocks.EntityBlockExtension {
+  private final net.dries007.tfc.common.blocks.ExtendedProperties properties;
+
+  private final java.util.function.Supplier<java.lang.Integer> daysToGrow;
+
+  private final boolean sand;
+
+  public net.dries007.tfc.common.blocks.wood.TFCSaplingBlock(net.dries007.tfc.world.feature.tree.TFCTreeGrower, net.dries007.tfc.common.blocks.ExtendedProperties, java.util.function.Supplier<java.lang.Integer>, boolean);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: invokevirtual #39                 // Method net/dries007/tfc/common/blocks/ExtendedProperties.properties:()Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+       6: invokespecial #42                 // Method net/minecraft/world/level/block/SaplingBlock."<init>":(Lnet/minecraft/world/level/block/grower/AbstractTreeGrower;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+       9: aload_0
+      10: aload_2
+      11: putfield      #44                 // Field properties:Lnet/dries007/tfc/common/blocks/ExtendedProperties;
+      14: aload_0
+      15: aload_3
+      16: putfield      #46                 // Field daysToGrow:Ljava/util/function/Supplier;
+      19: aload_0
+      20: iload         4
+      22: putfield      #48                 // Field sand:Z
+      25: return
+
+  public boolean isSand();
+    Code:
+       0: aload_0
+       1: getfield      #48                 // Field sand:Z
+       4: ireturn
+
+  public net.dries007.tfc.common.blocks.ExtendedProperties getExtendedProperties();
+    Code:
+       0: aload_0
+       1: getfield      #44                 // Field properties:Lnet/dries007/tfc/common/blocks/ExtendedProperties;
+       4: areturn
+
+  public void m_213898_(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+    Code:
+       0: aload_2
+       1: aload_3
+       2: invokevirtual #65                 // Method net/minecraft/core/BlockPos.m_7494_:()Lnet/minecraft/core/BlockPos;
+       5: invokevirtual #71                 // Method net/minecraft/server/level/ServerLevel.m_46803_:(Lnet/minecraft/core/BlockPos;)I
+       8: bipush        9
+      10: if_icmplt     114
+      13: aload         4
+      15: bipush        7
+      17: invokeinterface #77,  2           // InterfaceMethod net/minecraft/util/RandomSource.m_188503_:(I)I
+      22: ifne          114
+      25: aload_2
+      26: aload_3
+      27: iconst_1
+      28: invokevirtual #81                 // Method net/minecraft/server/level/ServerLevel.isAreaLoaded:(Lnet/minecraft/core/BlockPos;I)Z
+      31: ifne          35
+      34: return
+      35: aload_2
+      36: aload_3
+      37: invokevirtual #85                 // Method net/minecraft/server/level/ServerLevel.m_7702_:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/entity/BlockEntity;
+      40: astore        6
+      42: aload         6
+      44: instanceof    #87                 // class net/dries007/tfc/common/blockentities/TickCounterBlockEntity
+      47: ifeq          114
+      50: aload         6
+      52: checkcast     #87                 // class net/dries007/tfc/common/blockentities/TickCounterBlockEntity
+      55: astore        5
+      57: aload         5
+      59: invokevirtual #91                 // Method net/dries007/tfc/common/blockentities/TickCounterBlockEntity.getTicksSinceUpdate:()J
+      62: l2d
+      63: sipush        24000
+      66: aload_0
+      67: invokevirtual #95                 // Method getDaysToGrow:()I
+      70: imul
+      71: i2d
+      72: getstatic     #101                // Field net/dries007/tfc/config/TFCConfig.SERVER:Lnet/dries007/tfc/config/ServerConfig;
+      75: getfield      #107                // Field net/dries007/tfc/config/ServerConfig.globalSaplingGrowthModifier:Lnet/minecraftforge/common/ForgeConfigSpec$DoubleValue;
+      78: invokevirtual #111                // Method net/minecraftforge/common/ForgeConfigSpec$DoubleValue.get:()Ljava/lang/Object;
+      81: checkcast     #113                // class java/lang/Double
+      84: invokevirtual #117                // Method java/lang/Double.doubleValue:()D
+      87: dmul
+      88: dcmpl
+      89: ifle          114
+      92: aload_0
+      93: aload_2
+      94: aload_3
+      95: aload_1
+      96: getstatic     #121                // Field f_55973_:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+      99: iconst_1
+     100: invokestatic  #127                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     103: invokevirtual #133                // Method net/minecraft/world/level/block/state/BlockState.m_61124_:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+     106: checkcast     #129                // class net/minecraft/world/level/block/state/BlockState
+     109: aload         4
+     111: invokevirtual #137                // Method m_222000_:(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/util/RandomSource;)V
+     114: return
+
+  public void m_6402_(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.entity.LivingEntity, net.minecraft.world.item.ItemStack);
+    Code:
+       0: aload_1
+       1: aload_2
+       2: invokestatic  #154                // Method net/dries007/tfc/common/blockentities/TickCounterBlockEntity.reset:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
+       5: aload_0
+       6: aload_1
+       7: aload_2
+       8: aload_3
+       9: aload         4
+      11: aload         5
+      13: invokespecial #156                // Method net/minecraft/world/level/block/SaplingBlock.m_6402_:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V
+      16: return
+
+  protected boolean m_6266_(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+    Code:
+       0: aload_0
+       1: getfield      #48                 // Field sand:Z
+       4: ifeq          19
+       7: aload_1
+       8: getstatic     #169                // Field net/minecraft/tags/BlockTags.f_13029_:Lnet/minecraft/tags/TagKey;
+      11: invokestatic  #175                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/tags/TagKey;)Z
+      14: ifeq          19
+      17: iconst_1
+      18: ireturn
+      19: aload_0
+      20: aload_1
+      21: aload_2
+      22: aload_3
+      23: invokespecial #177                // Method net/minecraft/world/level/block/SaplingBlock.m_6266_:(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+      26: ifne          42
+      29: aload_1
+      30: invokevirtual #181                // Method net/minecraft/world/level/block/state/BlockState.m_60734_:()Lnet/minecraft/world/level/block/Block;
+      33: getstatic     #184                // Field net/dries007/tfc/common/TFCTags$Blocks.BUSH_PLANTABLE_ON:Lnet/minecraft/tags/TagKey;
+      36: invokestatic  #187                // Method net/dries007/tfc/util/Helpers.isBlock:(Lnet/minecraft/world/level/block/Block;Lnet/minecraft/tags/TagKey;)Z
+      39: ifeq          46
+      42: iconst_1
+      43: goto          47
+      46: iconst_0
+      47: ireturn
+
+  public int getDaysToGrow();
+    Code:
+       0: aload_0
+       1: getfield      #46                 // Field daysToGrow:Ljava/util/function/Supplier;
+       4: invokeinterface #191,  1          // InterfaceMethod java/util/function/Supplier.get:()Ljava/lang/Object;
+       9: checkcast     #123                // class java/lang/Integer
+      12: invokevirtual #194                // Method java/lang/Integer.intValue:()I
+      15: ireturn
+}

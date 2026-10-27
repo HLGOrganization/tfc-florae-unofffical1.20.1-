@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/marble",
+  "model_stages": [
+    "tfc:item/pan/cassiterite/marble_full",
+    "tfc:item/pan/cassiterite/marble_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_marble"
+}

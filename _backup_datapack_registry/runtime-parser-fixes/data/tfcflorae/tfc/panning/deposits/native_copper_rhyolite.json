@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_copper/rhyolite",
+  "model_stages": [
+    "tfc:item/pan/native_copper/rhyolite_full",
+    "tfc:item/pan/native_copper/rhyolite_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper_rhyolite"
+}

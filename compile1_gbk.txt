@@ -1,0 +1,1806 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+MixinGradle is skipping eclipse integration, extension not found
+
+> Task :downloadMcpConfig
+> Task :extractSrg UP-TO-DATE
+> Task :createMcpToSrg UP-TO-DATE
+> Task :compileJava
+Setting up MCP environment
+Initializing steps
+Executing steps
+ > Running 'downloadManifest'
+ > Running 'downloadJson'
+ > Running 'downloadClient'
+ > Running 'downloadServer'
+ > Running 'extractServer'
+ > Running 'downloadClientMappings'
+ > Running 'mergeMappings'
+ > Running 'stripClient'
+ > Running 'stripServer'
+ > Running 'merge'
+ > Running 'listLibraries'
+ > Running 'rename'
+Stopping at requested step: C:\Users\hsy66\.gradle\caches\forge_gradle\mcp_repo\de\oceanlabs\mcp\mcp_config\1.20.1-20230612.114412\joined\rename\output.jar
+[16:08:28] [main/INFO]: Writing debug log file accesstransform.log
+[16:08:28] [main/INFO]: Access Transformer processor running version 8.2.14
+[16:08:28] [main/INFO]: Command line arguments [--inJar, C:\Users\hsy66\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.0\forge-1.20.1-47.3.0-injected.jar, --outJar, C:\Users\hsy66\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1\forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1.jar, --logFile, accesstransform.log, --atFile, D:\学习资料\附属模组工作区\tfc_florae_port\build\_atJar_4\parent_at.cfg]
+[16:08:28] [main/INFO]: Reading from C:\Users\hsy66\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.0\forge-1.20.1-47.3.0-injected.jar
+[16:08:28] [main/INFO]: Writing to C:\Users\hsy66\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1\forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1.jar
+[16:08:28] [main/INFO]: Transformer file D:\学习资料\附属模组工作区\tfc_florae_port\build\_atJar_4\parent_at.cfg
+[16:08:28] [main/WARN]: Found existing output jar C:\Users\hsy66\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1\forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1.jar, overwriting
+[16:08:32] [main/INFO]: JAR transformation complete C:\Users\hsy66\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1\forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1.jar
+Creating SRG -> MCP TSRG
+注: SpongePowered MIXIN Annotation Processor Version=0.8.5 (MixinGradle Version=0.7)
+注: Supported obfuscation types: ObfuscationServiceMCP supports [notch] ObfuscationServiceFG3 supports [searge]
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\accessor\TFCChunkDataGeneratorAccessor.java:8: 错误: Mixin has no targets
+@Mixin({TFCChunkDataGenerator.class})
+^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\ResourceCacheManagerMixin.java:12: 错误: Mixin has no targets
+@Mixin({ResourceCacheManager.class})
+^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\TFCChunkDataGeneratorMixin.java:24: 错误: Mixin has no targets
+@Mixin({TFCChunkDataGenerator.class})
+^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\features\NetherFortressFeatureMixin.java:22: 错误: Mixin has no targets
+@Mixin({NetherFortressFeature.class})
+^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:26: 错误: Mixin has no targets
+@Mixin({Watershed.class})
+^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:36: 错误: Mixin has no targets
+   @Mixin({Context.class})
+   ^
+注: Loading searge mappings from D:\学习资料\附属模组工作区\tfc_florae_port\build\createMcpToSrg\output.tsrg
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\BookshelfBlockMixin.java:13: 错误: Superclass net.dries007.tfc.common.blocks.devices.DeviceBlock of tfcflorae.mixin.BookshelfBlockMixin was not found in the hierarchy of target class net.dries007.tfc.common.blocks.wood.BookshelfBlock
+public abstract class BookshelfBlockMixin extends DeviceBlock {
+                ^
+注: Writing refmap to D:\学习资料\附属模组工作区\tfc_florae_port\build\tmp\compileJava\compileJava-refmap.json
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\ConnectedGrassBlockkMixin.java:40: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\ConnectedGrassBlockkMixin.java:43: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\ConnectedGrassBlockkMixin.java:110: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\DirtBlockMixin.java:37: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\DirtBlockMixin.java:40: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\FallenLeavesBlockMixin.java:63: 警告: Cannot find target for @Shadow field in net.dries007.tfc.common.blocks.wood.FallenLeavesBlock
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\FallenLeavesBlockMixin.java:63: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\FirepitBlockMixin.java:35: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\FirepitBlockMixin.java:37: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\ForestFeatureMixin.java:188: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\PoseMixin.java:20: 警告: Cannot find target for @Shadow field in net.minecraft.world.entity.Pose
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\TFCLeavesBlockMixin.java:66: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\TFCLeavesBlockMixin.java:68: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\TFCLeavesBlockMixin.java:271: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\TFCLeavesBlockMixin.java:276: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\TFCTreeGrowerMixin.java:23: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\TFCTreeGrowerMixin.java:25: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\TFCTreeGrowerMixin.java:33: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\TFCTreeGrowerMixin.java:39: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:37: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:39: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:41: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.biome.BiomeExtension
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:41: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:43: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:45: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.biome.BiomeExtension
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:45: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:47: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:49: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:51: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:53: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:55: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:57: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:60: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:63: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:56: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.biome.TFCBiomes
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:56: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:58: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:60: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:72: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:84: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:100: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:195: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:207: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:219: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:234: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:798: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:812: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:832: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:848: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:862: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:875: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:898: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:921: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:942: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:961: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:982: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:988: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1006: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1017: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.biome.TFCBiomes
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1017: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1034: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.biome.TFCBiomes
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1034: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1051: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.biome.TFCBiomes
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1051: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1069: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.biome.TFCBiomes
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1069: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1087: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.biome.TFCBiomes
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1087: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1106: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1117: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1128: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1140: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1152: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1165: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1180: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1185: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1190: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1196: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1201: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1206: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1211: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1217: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:1225: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\VolcanoNoiseMixin.java:17: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\VolcanoNoiseMixin.java:19: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\VolcanoNoiseMixin.java:22: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\VolcanoNoiseMixin.java:27: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\VolcanoNoiseMixin.java:32: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\VolcanoNoiseMixin.java:70: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\VolcanoNoiseMixin.java:76: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\VolcanoNoiseMixin.java:83: 警告: Cannot find target for @Shadow method in net.dries007.tfc.world.biome.VolcanoNoise
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\VolcanoNoiseMixin.java:83: 警告: Unable to locate obfuscation mapping for @Shadow method
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\RockDataMixin.java:15: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.chunkdata.RockData
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\RockDataMixin.java:15: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\RockDataMixin.java:17: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.chunkdata.RockData
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\RockDataMixin.java:17: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\RockDataMixin.java:19: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.chunkdata.RockData
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\RockDataMixin.java:19: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\RockDataMixin.java:21: 警告: Cannot find target for @Shadow field in net.dries007.tfc.world.chunkdata.RockData
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\RockDataMixin.java:21: 警告: Unable to locate obfuscation mapping for @Shadow field
+   @Shadow
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\accessor\RenderTypeAccessor.java:13: 错误: Could not locate @Invoker target create in target net.minecraft.client.renderer.RenderType
+   @Invoker
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\accessor\TreeFeatureAccessor.java:18: 错误: Could not locate @Invoker target isBlockWater in target net.minecraft.world.level.levelgen.feature.TreeFeature
+   @Invoker("isBlockWater")
+   ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\accessor\TreeFeatureAccessor.java:23: 错误: Could not locate @Invoker target isReplaceablePlant in target net.minecraft.world.level.levelgen.feature.TreeFeature
+   @Invoker("isReplaceablePlant")
+   ^
+注: Writing refmap to D:\学习资料\附属模组工作区\tfc_florae_port\build\tmp\compileJava\compileJava-refmap.json
+注: Writing searge composite mappings to D:\学习资料\附属模组工作区\tfc_florae_port\build\tmp\compileJava\compileJava-mappings.tsrg
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\ClientEventHandler.java:42: 错误: 找不到符号
+import net.minecraftforge.client.event.ModelRegistryEvent;
+                                      ^
+  符号:   类 ModelRegistryEvent
+  位置: 程序包 net.minecraftforge.client.event
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\ClientEventHandler.java:43: 错误: 找不到符号
+import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
+                                      ^
+  符号:   类 ParticleFactoryRegisterEvent
+  位置: 程序包 net.minecraftforge.client.event
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\ClientEventHandler.java:47: 错误: 找不到符号
+import net.minecraftforge.client.event.TextureStitchEvent.Pre;
+                                                         ^
+  符号:   类 Pre
+  位置: 类 TextureStitchEvent
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\ClientEventHandler.java:48: 错误: 找不到符号
+import net.minecraftforge.client.model.ForgeModelBakery;
+                                      ^
+  符号:   类 ForgeModelBakery
+  位置: 程序包 net.minecraftforge.client.model
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\ClientEventHandler.java:423: 错误: 找不到符号
+   public static void registerModelLoaders(ModelRegistryEvent event) {
+                                           ^
+  符号:   类 ModelRegistryEvent
+  位置: 类 ClientEventHandler
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\ClientEventHandler.java:445: 错误: 程序包net.minecraftforge.client.event.ColorHandlerEvent不存在
+   public static void registerColorHandlerBlocks(net.minecraftforge.client.event.ColorHandlerEvent.Block event) {
+                                                                                                  ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\ClientEventHandler.java:542: 错误: 程序包net.minecraftforge.client.event.ColorHandlerEvent不存在
+   public static void registerColorHandlerItems(net.minecraftforge.client.event.ColorHandlerEvent.Item event) {
+                                                                                                 ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\ClientEventHandler.java:586: 错误: 找不到符号
+   public static void registerParticleFactories(ParticleFactoryRegisterEvent event) {
+                                                ^
+  符号:   类 ParticleFactoryRegisterEvent
+  位置: 类 ClientEventHandler
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\ClientEventHandler.java:593: 错误: 找不到符号
+   public static void onTextureStitch(Pre event) {
+                                      ^
+  符号:   类 Pre
+  位置: 类 ClientEventHandler
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Animated.java:3: 错误: 找不到符号
+import com.mojang.math.Vector3f;
+                      ^
+  符号:   类 Vector3f
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Animated.java:12: 错误: 找不到符号
+   static void translate(ModelPart part, Vector3f vec) {
+                                         ^
+  符号:   类 Vector3f
+  位置: 接口 Animated
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Animated.java:18: 错误: 找不到符号
+   static void rotate(ModelPart part, Vector3f vec) {
+                                      ^
+  符号:   类 Vector3f
+  位置: 接口 Animated
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Animated.java:24: 错误: 找不到符号
+   static void scaleY(ModelPart part, Vector3f vec) {
+                                      ^
+  符号:   类 Vector3f
+  位置: 接口 Animated
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\AnimatedModel.java:3: 错误: 找不到符号
+import com.mojang.math.Vector3f;
+                      ^
+  符号:   类 Vector3f
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\AnimatedModel.java:17: 错误: 找不到符号
+   private static final Vector3f CACHE = new Vector3f();
+                        ^
+  符号:   类 Vector3f
+  位置: 类 AnimatedModel<E>
+  其中, E是类型变量:
+    E扩展已在类 AnimatedModel中声明的Entity
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Transformation.java:3: 错误: 找不到符号
+import com.mojang.math.Vector3f;
+                      ^
+  符号:   类 Vector3f
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Keyframe.java:3: 错误: 找不到符号
+import com.mojang.math.Vector3f;
+                      ^
+  符号:   类 Vector3f
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Keyframe.java:8: 错误: 找不到符号
+public record Keyframe(float timestamp, Vector3f target, Transformation.Interpolation interpolation) {
+                                        ^
+  符号:   类 Vector3f
+  位置: 类 Keyframe
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Transformation.java:13: 错误: 找不到符号
+      Vector3f apply(Vector3f var1, float var2, Keyframe[] var3, int var4, int var5, float var6);
+                     ^
+  符号:   类 Vector3f
+  位置: 接口 Interpolation
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Transformation.java:13: 错误: 找不到符号
+      Vector3f apply(Vector3f var1, float var2, Keyframe[] var3, int var4, int var5, float var6);
+      ^
+  符号:   类 Vector3f
+  位置: 接口 Interpolation
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\Transformation.java:45: 错误: 找不到符号
+      void apply(ModelPart var1, Vector3f var2);
+                                 ^
+  符号:   类 Vector3f
+  位置: 接口 Target
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\AnimationHelper.java:3: 错误: 找不到符号
+import com.mojang.math.Vector3f;
+                      ^
+  符号:   类 Vector3f
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\AnimationHelper.java:17: 错误: 找不到符号
+   public static void animate(AnimatedModel<?> model, Animation animation, long runningTime, float speed, Vector3f cache) {
+                                                                                                          ^
+  符号:   类 Vector3f
+  位置: 类 AnimationHelper
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\AnimationHelper.java:42: 错误: 找不到符号
+   public static Vector3f translate(float x, float y, float z) {
+                 ^
+  符号:   类 Vector3f
+  位置: 类 AnimationHelper
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\AnimationHelper.java:46: 错误: 找不到符号
+   public static Vector3f rotation(float x, float y, float z) {
+                 ^
+  符号:   类 Vector3f
+  位置: 类 AnimationHelper
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\model\entity\animation\api\AnimationHelper.java:50: 错误: 找不到符号
+   public static Vector3f scale(double x, double y, double z) {
+                 ^
+  符号:   类 Vector3f
+  位置: 类 AnimationHelper
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\render\blockentity\MineralSheetBlockEntityRenderer.java:20: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blockentities\MineralSheetBlockEntity.java:19: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\render\blockentity\MineralSheetBlockEntityRenderer.java:31: 错误: 找不到符号
+   public RandomSource at(int posX, int posY, int posZ, int direction, BlockEntity entity) {
+          ^
+  符号:   类 RandomSource
+  位置: 类 MineralSheetBlockEntityRenderer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\render\blockentity\TFCFSignBlockEntityRenderer.java:8: 错误: 找不到符号
+import com.mojang.math.Vector3f;
+                      ^
+  符号:   类 Vector3f
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\render\blockentity\TFCFToolRackBlockEntityRenderer.java:8: 错误: 找不到符号
+import net.minecraft.client.renderer.block.model.ItemTransforms.TransformType;
+                                                               ^
+  符号:   类 TransformType
+  位置: 类 ItemTransforms
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\render\entity\TFCFBoatRenderer.java:6: 错误: 找不到符号
+import com.mojang.math.Quaternion;
+                      ^
+  符号:   类 Quaternion
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\render\entity\TFCFBoatRenderer.java:7: 错误: 找不到符号
+import com.mojang.math.Vector3f;
+                      ^
+  符号:   类 Vector3f
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\render\entity\TFCFBoatRenderer.java:19: 错误: 找不到符号
+import net.minecraftforge.client.event.RenderNameplateEvent;
+                                      ^
+  符号:   类 RenderNameplateEvent
+  位置: 程序包 net.minecraftforge.client.event
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\button\TFCFBarrelSealButton.java:9: 错误: 找不到符号
+import net.minecraft.client.gui.components.Button.OnTooltip;
+                                                 ^
+  符号:   类 OnTooltip
+  位置: 类 Button
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\button\TFCFBarrelSealButton.java:19: 错误: 找不到符号
+   public TFCFBarrelSealButton(TFCFBarrelBlockEntity barrel, int guiLeft, int guiTop, OnTooltip onTooltip) {
+                                                                                      ^
+  符号:   类 OnTooltip
+  位置: 类 TFCFBarrelSealButton
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\button\VesselSealButton.java:9: 错误: 找不到符号
+import net.minecraft.client.gui.components.Button.OnTooltip;
+                                                 ^
+  符号:   类 OnTooltip
+  位置: 类 Button
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\button\VesselSealButton.java:11: 错误: 找不到符号
+import net.minecraft.network.chat.TextComponent;
+                                 ^
+  符号:   类 TextComponent
+  位置: 程序包 net.minecraft.network.chat
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\button\VesselSealButton.java:20: 错误: 找不到符号
+   public VesselSealButton(LargeVesselBlockEntity barrel, int guiLeft, int guiTop, OnTooltip onTooltip) {
+                                                                                   ^
+  符号:   类 OnTooltip
+  位置: 类 VesselSealButton
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\ceramics\LargeVesselScreen.java:8: 错误: 找不到符号
+import net.minecraft.client.gui.components.Button.OnTooltip;
+                                                 ^
+  符号:   类 OnTooltip
+  位置: 类 Button
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\ceramics\LargeVesselScreen.java:10: 错误: 找不到符号
+import net.minecraft.network.chat.TranslatableComponent;
+                                 ^
+  符号:   类 TranslatableComponent
+  位置: 程序包 net.minecraft.network.chat
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\TFCFAnvilPlanScreen.java:14: 错误: 找不到符号
+import net.minecraft.client.gui.components.Widget;
+                                          ^
+  符号:   类 Widget
+  位置: 程序包 net.minecraft.client.gui.components
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\TFCFAnvilScreen.java:17: 错误: 找不到符号
+import net.minecraft.client.gui.components.Widget;
+                                          ^
+  符号:   类 Widget
+  位置: 程序包 net.minecraft.client.gui.components
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\screen\TFCFBarrelScreen.java:15: 错误: 找不到符号
+import net.minecraft.client.gui.components.Button.OnTooltip;
+                                                 ^
+  符号:   类 OnTooltip
+  位置: 类 Button
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\TFCFRenderHelpers.java:6: 错误: 找不到符号
+import com.mojang.math.Matrix4f;
+                      ^
+  符号:   类 Matrix4f
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\TFCFRenderHelpers.java:7: 错误: 找不到符号
+import com.mojang.math.Vector3f;
+                      ^
+  符号:   类 Vector3f
+  位置: 程序包 com.mojang.math
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\TFCFRenderHelpers.java:12: 错误: 找不到符号
+import net.minecraft.client.gui.GuiComponent;
+                               ^
+  符号:   类 GuiComponent
+  位置: 程序包 net.minecraft.client.gui
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\TFCFRenderHelpers.java:14: 错误: 找不到符号
+import net.minecraft.client.gui.components.Button.OnTooltip;
+                                                 ^
+  符号:   类 OnTooltip
+  位置: 类 Button
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\TFCFRenderHelpers.java:21: 错误: 找不到符号
+import net.minecraft.client.renderer.block.model.ItemTransforms.TransformType;
+                                                               ^
+  符号:   类 TransformType
+  位置: 类 ItemTransforms
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\TFCFRenderHelpers.java:34: 错误: 找不到符号
+import net.minecraftforge.fluids.FluidAttributes;
+                                ^
+  符号:   类 FluidAttributes
+  位置: 程序包 net.minecraftforge.fluids
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\client\TFCFRenderHelpers.java:507: 错误: 找不到符号
+   public static OnTooltip makeButtonTooltip(final Screen screen, final Component component) {
+                 ^
+  符号:   类 OnTooltip
+  位置: 类 TFCFRenderHelpers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blockentities\ChiseledBookshelfBlockEntity.java:10: 错误: 找不到符号
+import net.minecraft.network.chat.TextComponent;
+                                 ^
+  符号:   类 TextComponent
+  位置: 程序包 net.minecraft.network.chat
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blockentities\ChiseledBookshelfBlockEntity.java:23: 错误: 找不到符号
+import net.minecraftforge.items.CapabilityItemHandler;
+                               ^
+  符号:   类 CapabilityItemHandler
+  位置: 程序包 net.minecraftforge.items
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blockentities\WebbedChestBlockEntity.java:16: 错误: 找不到符号
+import net.minecraft.network.chat.TranslatableComponent;
+                                 ^
+  符号:   类 TranslatableComponent
+  位置: 程序包 net.minecraft.network.chat
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\plant\TFCFPlant.java:14: 错误: 找不到符号
+import net.dries007.tfc.common.blocks.plant.DryPlantBlock;
+                                           ^
+  符号:   类 DryPlantBlock
+  位置: 程序包 net.dries007.tfc.common.blocks.plant
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\plant\TFCFPlant.java:37: 错误: 找不到符号
+import net.minecraft.world.item.WaterLilyBlockItem;
+                               ^
+  符号:   类 WaterLilyBlockItem
+  位置: 程序包 net.minecraft.world.item
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\rock\TFCFOreDepositBlock.java:3: 错误: 找不到符号
+import net.dries007.tfc.common.blocks.ItemPropertyProviderBlock;
+                                     ^
+  符号:   类 ItemPropertyProviderBlock
+  位置: 程序包 net.dries007.tfc.common.blocks
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\rock\TFCFOreDepositBlock.java:5: 错误: 程序包net.dries007.tfc.common.blocks.ItemPropertyProviderBlock不存在
+import net.dries007.tfc.common.blocks.ItemPropertyProviderBlock.Type;
+                                                               ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\rock\TFCFOreDepositBlock.java:9: 错误: 找不到符号
+public class TFCFOreDepositBlock extends Block implements ItemPropertyProviderBlock {
+                                                          ^
+  符号: 类 ItemPropertyProviderBlock
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\rock\TFCFOreDepositBlock.java:23: 错误: 找不到符号
+   public int getValue(Type type) {
+                       ^
+  符号:   类 Type
+  位置: 类 TFCFOreDepositBlock
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\soil\TFCFMudBlock.java:4: 错误: 找不到符号
+import net.dries007.tfc.common.blocks.soil.MudBlock;
+                                          ^
+  符号:   类 MudBlock
+  位置: 程序包 net.dries007.tfc.common.blocks.soil
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\soil\TFCFMudBlock.java:15: 错误: 找不到符号
+public class TFCFMudBlock extends MudBlock {
+                                  ^
+  符号: 类 MudBlock
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\TFCFBlocks.java:11: 错误: 找不到符号
+import net.dries007.tfc.common.TFCItemGroup;
+                              ^
+  符号:   类 TFCItemGroup
+  位置: 程序包 net.dries007.tfc.common
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\TFCFBlocks.java:24: 错误: 找不到符号
+import net.dries007.tfc.common.blocks.TFCMaterials;
+                                     ^
+  符号:   类 TFCMaterials
+  位置: 程序包 net.dries007.tfc.common.blocks
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\TFCFBlocks.java:58: 错误: 找不到符号
+import net.minecraft.world.item.WaterLilyBlockItem;
+                               ^
+  符号:   类 WaterLilyBlockItem
+  位置: 程序包 net.minecraft.world.item
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\TFCFGroundcoverBlockType.java:5: 错误: 找不到符号
+import net.dries007.tfc.common.TFCItemGroup;
+                              ^
+  符号:   类 TFCItemGroup
+  位置: 程序包 net.dries007.tfc.common
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\TFCFGroundcoverBlock.java:8: 错误: 找不到符号
+import net.dries007.tfc.common.blocks.TFCMaterials;
+                                     ^
+  符号:   类 TFCMaterials
+  位置: 程序包 net.dries007.tfc.common.blocks
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\blocks\wood\TFCFMangrovePropaguleBlock.java:20: 错误: 找不到符号
+import net.dries007.tfc.world.biome.BiomeExtension.Group;
+                                                  ^
+  符号:   类 Group
+  位置: 类 BiomeExtension
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\entities\ai\FrogAi.java:23: 错误: 找不到符号
+import net.minecraft.world.entity.ai.behavior.RunIf;
+                                             ^
+  符号:   类 RunIf
+  位置: 程序包 net.minecraft.world.entity.ai.behavior
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\entities\ai\FrogAi.java:25: 错误: 找不到符号
+import net.minecraft.world.entity.ai.behavior.RunSometimes;
+                                             ^
+  符号:   类 RunSometimes
+  位置: 程序包 net.minecraft.world.entity.ai.behavior
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\entities\ai\TadpoleAi.java:18: 错误: 找不到符号
+import net.minecraft.world.entity.ai.behavior.RandomSwim;
+                                             ^
+  符号:   类 RandomSwim
+  位置: 程序包 net.minecraft.world.entity.ai.behavior
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\entities\ai\TadpoleAi.java:19: 错误: 找不到符号
+import net.minecraft.world.entity.ai.behavior.RunIf;
+                                             ^
+  符号:   类 RunIf
+  位置: 程序包 net.minecraft.world.entity.ai.behavior
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\entities\ai\TadpoleAi.java:20: 错误: 找不到符号
+import net.minecraft.world.entity.ai.behavior.RunSometimes;
+                                             ^
+  符号:   类 RunSometimes
+  位置: 程序包 net.minecraft.world.entity.ai.behavior
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\fluid\TFCFFluids.java:8: 错误: 找不到符号
+import net.dries007.tfc.common.fluids.FlowingFluidRegistryObject;
+                                     ^
+  符号:   类 FlowingFluidRegistryObject
+  位置: 程序包 net.dries007.tfc.common.fluids
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\fluid\TFCFFluids.java:9: 错误: 找不到符号
+import net.dries007.tfc.common.fluids.FluidType;
+                                     ^
+  符号:   类 FluidType
+  位置: 程序包 net.dries007.tfc.common.fluids
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\fluid\TFCFFluids.java:20: 错误: 找不到符号
+import net.minecraftforge.fluids.FluidAttributes;
+                                ^
+  符号:   类 FluidAttributes
+  位置: 程序包 net.minecraftforge.fluids
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\fluid\TFCFFluids.java:22: 错误: 程序包net.minecraftforge.fluids.FluidAttributes不存在
+import net.minecraftforge.fluids.FluidAttributes.Builder;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\fluid\TFCFFluids.java:37: 错误: 找不到符号
+   public static final Map<SimpleFluids, FlowingFluidRegistryObject<ForgeFlowingFluid>> SIMPLE_FLUIDS = Helpers.mapOfKeys(
+                                         ^
+  符号:   类 FlowingFluidRegistryObject
+  位置: 类 TFCFFluids
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\fluid\TFCFFluids.java:67: 错误: 找不到符号
+      String sourceName, String flowingName, Consumer<Properties> builder, Builder attributes
+                                                                           ^
+  符号:   类 Builder
+  位置: 类 TFCFFluids
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\fluid\TFCFFluids.java:66: 错误: 找不到符号
+   private static FlowingFluidRegistryObject<ForgeFlowingFluid> register(
+                  ^
+  符号:   类 FlowingFluidRegistryObject
+  位置: 类 TFCFFluids
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\fluid\TFCFFluids.java:76: 错误: 找不到符号
+      Builder attributes,
+      ^
+  符号:   类 Builder
+  位置: 类 TFCFFluids
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\fluid\TFCFFluids.java:72: 错误: 找不到符号
+   private static <F extends FlowingFluid> FlowingFluidRegistryObject<F> register(
+                                           ^
+  符号:   类 FlowingFluidRegistryObject
+  位置: 类 TFCFFluids
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\items\TadpoleBucketItem.java:12: 错误: 找不到符号
+import net.minecraft.network.chat.TranslatableComponent;
+                                 ^
+  符号:   类 TranslatableComponent
+  位置: 程序包 net.minecraft.network.chat
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\items\TFCFFood.java:3: 错误: 找不到符号
+import net.dries007.tfc.common.TFCItemGroup;
+                              ^
+  符号:   类 TFCItemGroup
+  位置: 程序包 net.dries007.tfc.common
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\items\TFCFItems.java:7: 错误: 找不到符号
+import net.dries007.tfc.common.TFCItemGroup;
+                              ^
+  符号:   类 TFCItemGroup
+  位置: 程序包 net.dries007.tfc.common
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\items\TFCFItems.java:13: 错误: 找不到符号
+import net.dries007.tfc.common.items.DecayingItem;
+                                    ^
+  符号:   类 DecayingItem
+  位置: 程序包 net.dries007.tfc.common.items
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\procedures\ChiseledBookshelfOnBlockRightClickedProcedure.java:17: 错误: 找不到符号
+import net.minecraftforge.items.CapabilityItemHandler;
+                               ^
+  符号:   类 CapabilityItemHandler
+  位置: 程序包 net.minecraftforge.items
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\common\recipes\BrushingRecipe.java:10: 错误: 找不到符号
+import net.dries007.tfc.common.recipes.ingredients.BlockIngredients;
+                                                  ^
+  符号:   类 BlockIngredients
+  位置: 程序包 net.dries007.tfc.common.recipes.ingredients
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\accessor\RenderTypeAccessor.java:6: 错误: CompositeRenderType在RenderType中不是公共的; 无法从外部程序包中对其进行访问
+import net.minecraft.client.renderer.RenderType.CompositeRenderType;
+                                               ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\accessor\RenderTypeAccessor.java:14: 错误: CompositeRenderType在RenderType中不是公共的; 无法从外部程序包中对其进行访问
+   static CompositeRenderType callCreate(String string, VertexFormat vertexFormat, Mode mode, int i, boolean bl, boolean bl2, CompositeState compositeState) {
+          ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\accessor\TFCChunkDataGeneratorAccessor.java:3: 错误: 找不到符号
+import net.dries007.tfc.world.chunkdata.TFCChunkDataGenerator;
+                                       ^
+  符号:   类 TFCChunkDataGenerator
+  位置: 程序包 net.dries007.tfc.world.chunkdata
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\BookshelfBlockMixin.java:5: 错误: InventoryRemoveBehavior 在 DeviceBlock 中是 protected 访问控制
+import net.dries007.tfc.common.blocks.devices.DeviceBlock.InventoryRemoveBehavior;
+                                                         ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\LandslideRecipeMixin.java:7: 错误: 找不到符号
+import net.dries007.tfc.common.entities.TFCFallingBlockEntity;
+                                       ^
+  符号:   类 TFCFallingBlockEntity
+  位置: 程序包 net.dries007.tfc.common.entities
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\ResourceCacheManagerMixin.java:4: 错误: 找不到符号
+import net.minecraftforge.resource.ResourceCacheManager;
+                                  ^
+  符号:   类 ResourceCacheManager
+  位置: 程序包 net.minecraftforge.resource
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\TFCLeavesBlockMixin.java:22: 错误: 找不到符号
+import net.dries007.tfc.util.LegacyMaterials;
+                            ^
+  符号:   类 LegacyMaterials
+  位置: 程序包 net.dries007.tfc.util
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:10: 错误: 找不到符号
+import net.dries007.tfc.world.biome.BiomeExtension.Group;
+                                                  ^
+  符号:   类 Group
+  位置: 类 BiomeExtension
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:46: 错误: 找不到符号
+   private final Group group;
+                 ^
+  符号:   类 Group
+  位置: 类 BiomeExtensionMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\BiomeExtensionMixin.java:72: 错误: 找不到符号
+      Group group,
+      ^
+  符号:   类 Group
+  位置: 类 BiomeExtensionMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\biome\TFCBiomesMixin.java:13: 错误: 找不到符号
+import net.dries007.tfc.world.biome.BiomeExtension.Group;
+                                                  ^
+  符号:   类 Group
+  位置: 类 BiomeExtension
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\RockDataMixin.java:6: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\TFCChunkDataGeneratorMixin.java:10: 错误: 找不到符号
+import net.dries007.tfc.world.chunkdata.PlateTectonicsClassification;
+                                       ^
+  符号:   类 PlateTectonicsClassification
+  位置: 程序包 net.dries007.tfc.world.chunkdata
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\TFCChunkDataGeneratorMixin.java:11: 错误: 找不到符号
+import net.dries007.tfc.world.chunkdata.TFCChunkDataGenerator;
+                                       ^
+  符号:   类 TFCChunkDataGenerator
+  位置: 程序包 net.dries007.tfc.world.chunkdata
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\TFCChunkDataGeneratorMixin.java:16: 错误: 找不到符号
+import net.dries007.tfc.world.settings.ClimateSettings;
+                                      ^
+  符号:   类 ClimateSettings
+  位置: 程序包 net.dries007.tfc.world.settings
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\TFCChunkDataGeneratorMixin.java:41: 错误: 找不到符号
+   private final ConcurrentArea<PlateTectonicsClassification> plateTectonicsInfo;
+                                ^
+  符号:   类 PlateTectonicsClassification
+  位置: 类 TFCChunkDataGeneratorMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\TFCChunkDataGeneratorMixin.java:44: 错误: 找不到符号
+      long worldSeed, RockLayerSettings rockLayerSettings, ClimateSettings temperatureSettings, ClimateSettings rainfallSettings
+                                                           ^
+  符号:   类 ClimateSettings
+  位置: 类 TFCChunkDataGeneratorMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\TFCChunkDataGeneratorMixin.java:44: 错误: 找不到符号
+      long worldSeed, RockLayerSettings rockLayerSettings, ClimateSettings temperatureSettings, ClimateSettings rainfallSettings
+                                                                                                ^
+  符号:   类 ClimateSettings
+  位置: 类 TFCChunkDataGeneratorMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\features\NetherFortressFeatureMixin.java:9: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.feature.NetherFortressFeature;
+                                                 ^
+  符号:   类 NetherFortressFeature
+  位置: 程序包 net.minecraft.world.level.levelgen.feature
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\features\NetherFortressFeatureMixin.java:10: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.feature.StructureFeature;
+                                                 ^
+  符号:   类 StructureFeature
+  位置: 程序包 net.minecraft.world.level.levelgen.feature
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\features\NetherFortressFeatureMixin.java:13: 错误: 程序包net.minecraft.world.level.levelgen.structure.NetherBridgePieces不存在
+import net.minecraft.world.level.levelgen.structure.NetherBridgePieces.StartPiece;
+                                                                      ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\features\NetherFortressFeatureMixin.java:23: 错误: 找不到符号
+public class NetherFortressFeatureMixin extends StructureFeature<NoneFeatureConfiguration> {
+                                                ^
+  符号: 类 StructureFeature
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:10: 错误: 找不到符号
+import net.dries007.tfc.world.layer.AddLakesLayer;
+                                   ^
+  符号:   类 AddLakesLayer
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:11: 错误: 找不到符号
+import net.dries007.tfc.world.layer.BiasedLandPlateZoomLayer;
+                                   ^
+  符号:   类 BiasedLandPlateZoomLayer
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:12: 错误: 找不到符号
+import net.dries007.tfc.world.layer.InlandLayer;
+                                   ^
+  符号:   类 InlandLayer
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:13: 错误: 找不到符号
+import net.dries007.tfc.world.layer.MergeLakeLayer;
+                                   ^
+  符号:   类 MergeLakeLayer
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:14: 错误: 找不到符号
+import net.dries007.tfc.world.layer.Plate;
+                                   ^
+  符号:   类 Plate
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:15: 错误: 找不到符号
+import net.dries007.tfc.world.layer.PlateBoundaryLayer;
+                                   ^
+  符号:   类 PlateBoundaryLayer
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:16: 错误: 找不到符号
+import net.dries007.tfc.world.layer.PlateBoundaryModifierLayer;
+                                   ^
+  符号:   类 PlateBoundaryModifierLayer
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:17: 错误: 找不到符号
+import net.dries007.tfc.world.layer.PlateGenerationLayer;
+                                   ^
+  符号:   类 PlateGenerationLayer
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:19: 错误: 找不到符号
+import net.dries007.tfc.world.layer.RockLayer;
+                                   ^
+  符号:   类 RockLayer
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:619: 错误: 找不到符号
+   public static AreaFactory createOverworldBiomeLayer(long seed, IArtist<TypedAreaFactory<Plate>> plateArtist, IArtist<AreaFactory> layerArtist) {
+                                                                                           ^
+  符号:   类 Plate
+  位置: 类 TFCLayersMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\layer\TFCLayersMixin.java:744: 错误: 找不到符号
+   public static TypedAreaFactory<Plate> createEarlyPlateLayers(long seed) {
+                                  ^
+  符号:   类 Plate
+  位置: 类 TFCLayersMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:10: 错误: 找不到符号
+import net.dries007.tfc.world.layer.Plate;
+                                   ^
+  符号:   类 Plate
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:14: 错误: 找不到符号
+import net.dries007.tfc.world.river.RiverFractal;
+                                   ^
+  符号:   类 RiverFractal
+  位置: 程序包 net.dries007.tfc.world.river
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:16: 错误: 找不到符号
+import net.dries007.tfc.world.river.Watershed;
+                                   ^
+  符号:   类 Watershed
+  位置: 程序包 net.dries007.tfc.world.river
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:17: 错误: 程序包net.dries007.tfc.world.river.Watershed不存在
+import net.dries007.tfc.world.river.Watershed.Context;
+                                             ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:51: 错误: 找不到符号
+      private final ThreadLocal<TypedArea<Plate>> plates;
+                                          ^
+  符号:   类 Plate
+  位置: 类 ContextMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:53: 错误: 找不到符号
+      private final FastConcurrentCache<Watershed> watershedCache;
+                                        ^
+  符号:   类 Watershed
+  位置: 类 ContextMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:74: 错误: 找不到符号
+      public ContextMixin(TypedAreaFactory<Plate> plates, long seed, float sourceChance, float length, int depth, float feather) {
+                                           ^
+  符号:   类 Plate
+  位置: 类 ContextMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:133: 错误: 找不到符号
+      public Watershed create(float x, float z) {
+             ^
+  符号:   类 Watershed
+  位置: 类 ContextMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:138: 错误: 找不到符号
+      public Watershed create(int x, int z) {
+             ^
+  符号:   类 Watershed
+  位置: 类 ContextMixin
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\surface\SoilSurfaceStateMixin.java:21: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\TFCFForgeEventHandler.java:18: 错误: 找不到符号
+import net.minecraft.network.chat.TextComponent;
+                                 ^
+  符号:   类 TextComponent
+  位置: 程序包 net.minecraft.network.chat
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\TFCFForgeEventHandler.java:46: 错误: 找不到符号
+import net.minecraftforge.resource.PathResourcePack;
+                                  ^
+  符号:   类 PathResourcePack
+  位置: 程序包 net.minecraftforge.resource
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\util\TFCFHelpers.java:28: 错误: 找不到符号
+import net.dries007.tfc.world.settings.ClimateSettings;
+                                      ^
+  符号:   类 ClimateSettings
+  位置: 程序包 net.dries007.tfc.world.settings
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\util\TFCFHelpers.java:39: 错误: 找不到符号
+import net.minecraft.network.chat.TranslatableComponent;
+                                 ^
+  符号:   类 TranslatableComponent
+  位置: 程序包 net.minecraft.network.chat
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\util\TFCFHelpers.java:57: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\util\TFCFHelpers.java:71: 错误: 找不到符号
+   public static final Random RANDOM = RandomSource.create();
+                       ^
+  符号:   类 Random
+  位置: 类 TFCFHelpers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\util\TFCFHelpers.java:88: 错误: 找不到符号
+   public static Random randomSeed(long seed) {
+                 ^
+  符号:   类 Random
+  位置: 类 TFCFHelpers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\util\TFCFHelpers.java:287: 错误: 找不到符号
+   public static TranslatableComponent translatable(String key) {
+                 ^
+  符号:   类 TranslatableComponent
+  位置: 类 TFCFHelpers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\ContinentalWorldType.java:5: 错误: 找不到符号
+import net.dries007.tfc.world.TFCWorldType;
+                             ^
+  符号:   类 TFCWorldType
+  位置: 程序包 net.dries007.tfc.world
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\ContinentalWorldType.java:12: 错误: 找不到符号
+import net.minecraftforge.common.world.ForgeWorldPreset;
+                                      ^
+  符号:   类 ForgeWorldPreset
+  位置: 程序包 net.minecraftforge.common.world
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\ContinentalWorldType.java:18: 错误: 找不到符号
+   public static final DeferredRegister<ForgeWorldPreset> WORLD_TYPES = DeferredRegister.create(Keys.WORLD_TYPES, "tfc");
+                                        ^
+  符号:   类 ForgeWorldPreset
+  位置: 类 ContinentalWorldType
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\ContinentalWorldType.java:19: 错误: 找不到符号
+   public static final RegistryObject<ForgeWorldPreset> WORLD_TYPE = WORLD_TYPES.register(
+                                      ^
+  符号:   类 ForgeWorldPreset
+  位置: 类 ContinentalWorldType
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\LakeFeature.java:14: 错误: 找不到符号
+import net.minecraft.world.level.material.Material;
+                                         ^
+  符号:   类 Material
+  位置: 程序包 net.minecraft.world.level.material
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\MonsterRoomFeature.java:27: 错误: 找不到符号
+import net.minecraft.world.level.material.Material;
+                                         ^
+  符号:   类 Material
+  位置: 程序包 net.minecraft.world.level.material
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\plant\BlueBambooFeature.java:10: 错误: 找不到符号
+import net.minecraft.world.level.block.BambooBlock;
+                                      ^
+  符号:   类 BambooBlock
+  位置: 程序包 net.minecraft.world.level.block
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\plant\DragonBambooFeature.java:10: 错误: 找不到符号
+import net.minecraft.world.level.block.BambooBlock;
+                                      ^
+  符号:   类 BambooBlock
+  位置: 程序包 net.minecraft.world.level.block
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\plant\GoldenBambooFeature.java:10: 错误: 找不到符号
+import net.minecraft.world.level.block.BambooBlock;
+                                      ^
+  符号:   类 BambooBlock
+  位置: 程序包 net.minecraft.world.level.block
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\plant\RedBambooFeature.java:10: 错误: 找不到符号
+import net.minecraft.world.level.block.BambooBlock;
+                                      ^
+  符号:   类 BambooBlock
+  位置: 程序包 net.minecraft.world.level.block
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\TFCBambooFeature.java:11: 错误: 找不到符号
+import net.minecraft.world.level.block.BambooBlock;
+                                      ^
+  符号:   类 BambooBlock
+  位置: 程序包 net.minecraft.world.level.block
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\TFCFDeferredRegistry.java:7: 错误: 找不到符号
+import net.minecraftforge.registries.IForgeRegistryEntry;
+                                    ^
+  符号:   类 IForgeRegistryEntry
+  位置: 程序包 net.minecraftforge.registries
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\TFCFDeferredRegistry.java:9: 错误: 找不到符号
+public class TFCFDeferredRegistry<T extends IForgeRegistryEntry<T>> extends TFCFAbstractDeferredRegistry<T> {
+                                            ^
+  符号: 类 IForgeRegistryEntry
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\TFCFFeatures.java:13: 错误: 找不到符号
+import net.minecraft.data.BuiltinRegistries;
+                         ^
+  符号:   类 BuiltinRegistries
+  位置: 程序包 net.minecraft.data
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\baobab\BaobabTreeFeature.java:7: 错误: 找不到符号
+import net.dries007.tfc.world.feature.tree.TreeFeature;
+                                          ^
+  符号:   类 TreeFeature
+  位置: 程序包 net.dries007.tfc.world.feature.tree
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\baobab\BaobabTreeFeature.java:21: 错误: 找不到符号
+public class BaobabTreeFeature extends TreeFeature<DynamicTreeConfig> {
+                                       ^
+  符号: 类 TreeFeature
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\TFCFRandomTreeFeature.java:7: 错误: 找不到符号
+import net.dries007.tfc.world.feature.tree.TreeFeature;
+                                          ^
+  符号:   类 TreeFeature
+  位置: 程序包 net.dries007.tfc.world.feature.tree
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\TFCFRandomTreeFeature.java:14: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureManager;
+                                                                  ^
+  符号:   类 StructureManager
+  位置: 程序包 net.minecraft.world.level.levelgen.structure.templatesystem
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\TFCFRandomTreeFeature.java:18: 错误: 找不到符号
+public class TFCFRandomTreeFeature extends TreeFeature<RandomTreeConfig> {
+                                           ^
+  符号: 类 TreeFeature
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\RandomBeachTreeFeature.java:11: 错误: 找不到符号
+import net.dries007.tfc.world.feature.tree.TreeFeature;
+                                          ^
+  符号:   类 TreeFeature
+  位置: 程序包 net.dries007.tfc.world.feature.tree
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\RandomBeachTreeFeature.java:25: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureManager;
+                                                                  ^
+  符号:   类 StructureManager
+  位置: 程序包 net.minecraft.world.level.levelgen.structure.templatesystem
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\RandomBeachTreeFeature.java:31: 错误: 找不到符号
+public class RandomBeachTreeFeature extends TreeFeature<RandomTreeConfig> {
+                                            ^
+  符号: 类 TreeFeature
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\TFCFTreeHelpers.java:29: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureManager;
+                                                                  ^
+  符号:   类 StructureManager
+  位置: 程序包 net.minecraft.world.level.levelgen.structure.templatesystem
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\feature\tree\TFCFTreeHelpers.java:159: 错误: 找不到符号
+   public static StructureManager getStructureManager(WorldGenLevel level) {
+                 ^
+  符号:   类 StructureManager
+  位置: 类 TFCFTreeHelpers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:14: 错误: 找不到符号
+import net.dries007.tfc.world.layer.Plate;
+                                   ^
+  符号:   类 Plate
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:18: 错误: 找不到符号
+import net.dries007.tfc.world.river.RiverFractal;
+                                   ^
+  符号:   类 RiverFractal
+  位置: 程序包 net.dries007.tfc.world.river
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:20: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.MultiParallelBuilder;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:21: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.Vertex;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:23: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:30: 错误: 找不到符号
+   private final Plate plate;
+                 ^
+  符号:   类 Plate
+  位置: 类 Chasm
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:32: 错误: 找不到符号
+   public static Chasm create(TypedArea<Plate> area, int sampleX, int sampleZ, long seed, float sourceChance, float length, int depth, float feather) {
+                                        ^
+  符号:   类 Plate
+  位置: 类 Chasm
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:73: 错误: 找不到符号
+   protected Chasm(Plate plate) {
+                   ^
+  符号:   类 Plate
+  位置: 类 Chasm
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:77: 错误: 找不到符号
+   public abstract List<RiverFractal> getRivers();
+                        ^
+  符号:   类 RiverFractal
+  位置: 类 Chasm
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:79: 错误: 找不到符号
+   public Plate getPlate() {
+          ^
+  符号:   类 Plate
+  位置: 类 Chasm
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:107: 错误: 找不到符号
+      private final ThreadLocal<TypedArea<Plate>> plates;
+                                          ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:116: 错误: 找不到符号
+      public Context(TypedAreaFactory<Plate> plates, long seed, float sourceChance, float length, int depth, float feather) {
+                                      ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:181: 错误: 找不到符号
+      Empty(Plate plate) {
+            ^
+  符号:   类 Plate
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:186: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:194: 错误: 找不到符号
+      private final List<RiverFractal> riverBanks;
+                         ^
+  符号:   类 RiverFractal
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:196: 错误: 找不到符号
+      public Lines(Plate plate, LongSet interior, LongSet sources, RandomSource random, float sourceChance, float length, int depth, float feather) {
+                   ^
+  符号:   类 Plate
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:224: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:233: 错误: 找不到符号
+      class Builder extends MultiParallelBuilder {
+                            ^
+  符号:   类 MultiParallelBuilder
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:237: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                   ^
+  符号:   类 Vertex
+  位置: 类 Lines.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\Chasm.java:237: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                                ^
+  符号:   类 Vertex
+  位置: 类 Lines.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:14: 错误: 找不到符号
+import net.dries007.tfc.world.layer.Plate;
+                                   ^
+  符号:   类 Plate
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:18: 错误: 找不到符号
+import net.dries007.tfc.world.river.RiverFractal;
+                                   ^
+  符号:   类 RiverFractal
+  位置: 程序包 net.dries007.tfc.world.river
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:20: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.MultiParallelBuilder;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:21: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.Vertex;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:23: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:30: 错误: 找不到符号
+   private final Plate plate;
+                 ^
+  符号:   类 Plate
+  位置: 类 CoastalCliffs
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:32: 错误: 找不到符号
+   public static CoastalCliffs create(TypedArea<Plate> area, int sampleX, int sampleZ, long seed, float sourceChance, float length, int depth, float feather) {
+                                                ^
+  符号:   类 Plate
+  位置: 类 CoastalCliffs
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:73: 错误: 找不到符号
+   protected CoastalCliffs(Plate plate) {
+                           ^
+  符号:   类 Plate
+  位置: 类 CoastalCliffs
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:77: 错误: 找不到符号
+   public abstract List<RiverFractal> getRivers();
+                        ^
+  符号:   类 RiverFractal
+  位置: 类 CoastalCliffs
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:79: 错误: 找不到符号
+   public Plate getPlate() {
+          ^
+  符号:   类 Plate
+  位置: 类 CoastalCliffs
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:107: 错误: 找不到符号
+      private final ThreadLocal<TypedArea<Plate>> plates;
+                                          ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:116: 错误: 找不到符号
+      public Context(TypedAreaFactory<Plate> plates, long seed, float sourceChance, float length, int depth, float feather) {
+                                      ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:181: 错误: 找不到符号
+      Empty(Plate plate) {
+            ^
+  符号:   类 Plate
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:186: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:194: 错误: 找不到符号
+      private final List<RiverFractal> riverBanks;
+                         ^
+  符号:   类 RiverFractal
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:196: 错误: 找不到符号
+      public Lines(Plate plate, LongSet interior, LongSet sources, RandomSource random, float sourceChance, float length, int depth, float feather) {
+                   ^
+  符号:   类 Plate
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:224: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:233: 错误: 找不到符号
+      class Builder extends MultiParallelBuilder {
+                            ^
+  符号:   类 MultiParallelBuilder
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:237: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                   ^
+  符号:   类 Vertex
+  位置: 类 Lines.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\CoastalCliffs.java:237: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                                ^
+  符号:   类 Vertex
+  位置: 类 Lines.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:14: 错误: 找不到符号
+import net.dries007.tfc.world.layer.Plate;
+                                   ^
+  符号:   类 Plate
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:18: 错误: 找不到符号
+import net.dries007.tfc.world.river.RiverFractal;
+                                   ^
+  符号:   类 RiverFractal
+  位置: 程序包 net.dries007.tfc.world.river
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:20: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.MultiParallelBuilder;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:21: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.Vertex;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:23: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:107: 错误: 找不到符号
+      private final ThreadLocal<TypedArea<Plate>> plates;
+                                          ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:116: 错误: 找不到符号
+      public Context(TypedAreaFactory<Plate> plates, long seed, float sourceChance, float length, int depth, float feather) {
+                                      ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:30: 错误: 找不到符号
+   private final Plate plate;
+                 ^
+  符号:   类 Plate
+  位置: 类 ShoreDunes
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:32: 错误: 找不到符号
+   public static ShoreDunes create(TypedArea<Plate> area, int sampleX, int sampleZ, long seed, float sourceChance, float length, int depth, float feather) {
+                                             ^
+  符号:   类 Plate
+  位置: 类 ShoreDunes
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:73: 错误: 找不到符号
+   protected ShoreDunes(Plate plate) {
+                        ^
+  符号:   类 Plate
+  位置: 类 ShoreDunes
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:77: 错误: 找不到符号
+   public abstract List<RiverFractal> getRivers();
+                        ^
+  符号:   类 RiverFractal
+  位置: 类 ShoreDunes
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:79: 错误: 找不到符号
+   public Plate getPlate() {
+          ^
+  符号:   类 Plate
+  位置: 类 ShoreDunes
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:13: 错误: 找不到符号
+import net.dries007.tfc.world.layer.Plate;
+                                   ^
+  符号:   类 Plate
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:17: 错误: 找不到符号
+import net.dries007.tfc.world.river.RiverFractal;
+                                   ^
+  符号:   类 RiverFractal
+  位置: 程序包 net.dries007.tfc.world.river
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:19: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.MultiParallelBuilder;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:20: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.Vertex;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:22: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:13: 错误: 找不到符号
+import net.dries007.tfc.world.layer.Plate;
+                                   ^
+  符号:   类 Plate
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:17: 错误: 找不到符号
+import net.dries007.tfc.world.river.RiverFractal;
+                                   ^
+  符号:   类 RiverFractal
+  位置: 程序包 net.dries007.tfc.world.river
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:19: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.MultiParallelBuilder;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:20: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.Vertex;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:22: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:111: 错误: 找不到符号
+      private final ThreadLocal<TypedArea<Plate>> plates;
+                                          ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:120: 错误: 找不到符号
+      public Context(TypedAreaFactory<Plate> plates, long seed, float sourceChance, float length, int depth, float feather) {
+                                      ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:34: 错误: 找不到符号
+   private final Plate plate;
+                 ^
+  符号:   类 Plate
+  位置: 类 Watershed
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:36: 错误: 找不到符号
+   public static Watershed create(TypedArea<Plate> area, int sampleX, int sampleZ, long seed, float sourceChance, float length, int depth, float feather) {
+                                            ^
+  符号:   类 Plate
+  位置: 类 Watershed
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:77: 错误: 找不到符号
+   protected Watershed(Plate plate) {
+                       ^
+  符号:   类 Plate
+  位置: 类 Watershed
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:81: 错误: 找不到符号
+   public abstract List<RiverFractal> getRivers();
+                        ^
+  符号:   类 RiverFractal
+  位置: 类 Watershed
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:83: 错误: 找不到符号
+   public Plate getPlate() {
+          ^
+  符号:   类 Plate
+  位置: 类 Watershed
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:110: 错误: 找不到符号
+      private final ThreadLocal<TypedArea<Plate>> plates;
+                                          ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:119: 错误: 找不到符号
+      public Context(TypedAreaFactory<Plate> plates, long seed, float sourceChance, float length, int depth, float feather) {
+                                      ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:33: 错误: 找不到符号
+   private final Plate plate;
+                 ^
+  符号:   类 Plate
+  位置: 类 WatershedBank
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:35: 错误: 找不到符号
+   public static WatershedBank create(TypedArea<Plate> area, int sampleX, int sampleZ, long seed, float sourceChance, float length, int depth, float feather) {
+                                                ^
+  符号:   类 Plate
+  位置: 类 WatershedBank
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:76: 错误: 找不到符号
+   protected WatershedBank(Plate plate) {
+                           ^
+  符号:   类 Plate
+  位置: 类 WatershedBank
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:80: 错误: 找不到符号
+   public abstract List<RiverFractal> getRivers();
+                        ^
+  符号:   类 RiverFractal
+  位置: 类 WatershedBank
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:82: 错误: 找不到符号
+   public Plate getPlate() {
+          ^
+  符号:   类 Plate
+  位置: 类 WatershedBank
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:13: 错误: 找不到符号
+import net.dries007.tfc.world.layer.Plate;
+                                   ^
+  符号:   类 Plate
+  位置: 程序包 net.dries007.tfc.world.layer
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:20: 错误: 找不到符号
+import net.dries007.tfc.world.river.RiverFractal;
+                                   ^
+  符号:   类 RiverFractal
+  位置: 程序包 net.dries007.tfc.world.river
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:22: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.MultiParallelBuilder;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:23: 错误: 程序包net.dries007.tfc.world.river.RiverFractal不存在
+import net.dries007.tfc.world.river.RiverFractal.Vertex;
+                                                ^
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:25: 错误: 找不到符号
+import net.minecraft.world.level.levelgen.RandomSource;
+                                         ^
+  符号:   类 RandomSource
+  位置: 程序包 net.minecraft.world.level.levelgen
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:112: 错误: 找不到符号
+      private final ThreadLocal<TypedArea<Plate>> plates;
+                                          ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:122: 错误: 找不到符号
+      public Context(TypedAreaFactory<Plate> plates, AreaFactory prev, long seed, float sourceChance, float length, int depth, float feather) {
+                                      ^
+  符号:   类 Plate
+  位置: 类 Context
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:32: 错误: 找不到符号
+   private final Plate plate;
+                 ^
+  符号:   类 Plate
+  位置: 类 WatershedTertiary
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:35: 错误: 找不到符号
+      TypedArea<Plate> plateInput, AreaFactory prev, int sampleX, int sampleZ, long seed, float sourceChance, float length, int depth, float feather
+                ^
+  符号:   类 Plate
+  位置: 类 WatershedTertiary
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:78: 错误: 找不到符号
+   protected WatershedTertiary(Plate plate) {
+                               ^
+  符号:   类 Plate
+  位置: 类 WatershedTertiary
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:82: 错误: 找不到符号
+   public abstract List<RiverFractal> getRivers();
+                        ^
+  符号:   类 RiverFractal
+  位置: 类 WatershedTertiary
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:84: 错误: 找不到符号
+   public Plate getPlate() {
+          ^
+  符号:   类 Plate
+  位置: 类 WatershedTertiary
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:200: 错误: 找不到符号
+      Empty(Plate plate) {
+            ^
+  符号:   类 Plate
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:205: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:213: 错误: 找不到符号
+      private final List<RiverFractal> rivers;
+                         ^
+  符号:   类 RiverFractal
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:215: 错误: 找不到符号
+      public Rivers(Plate plate, LongSet interior, LongSet sources, RandomSource random, float sourceChance, float length, int depth, float feather) {
+                    ^
+  符号:   类 Plate
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:215: 错误: 找不到符号
+      public Rivers(Plate plate, LongSet interior, LongSet sources, RandomSource random, float sourceChance, float length, int depth, float feather) {
+                                                                    ^
+  符号:   类 RandomSource
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:243: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:252: 错误: 找不到符号
+      class Builder extends MultiParallelBuilder {
+                            ^
+  符号:   类 MultiParallelBuilder
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:256: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                   ^
+  符号:   类 Vertex
+  位置: 类 Rivers.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\Watershed.java:256: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                                ^
+  符号:   类 Vertex
+  位置: 类 Rivers.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:194: 错误: 找不到符号
+      Empty(Plate plate) {
+            ^
+  符号:   类 Plate
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:199: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:207: 错误: 找不到符号
+      private final List<RiverFractal> riverBanks;
+                         ^
+  符号:   类 RiverFractal
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:209: 错误: 找不到符号
+      public Rivers(Plate plate, LongSet interior, LongSet sources, RandomSource random, float sourceChance, float length, int depth, float feather) {
+                    ^
+  符号:   类 Plate
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:209: 错误: 找不到符号
+      public Rivers(Plate plate, LongSet interior, LongSet sources, RandomSource random, float sourceChance, float length, int depth, float feather) {
+                                                                    ^
+  符号:   类 RandomSource
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:237: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:246: 错误: 找不到符号
+      class Builder extends MultiParallelBuilder {
+                            ^
+  符号:   类 MultiParallelBuilder
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:250: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                   ^
+  符号:   类 Vertex
+  位置: 类 Rivers.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedBank.java:250: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                                ^
+  符号:   类 Vertex
+  位置: 类 Rivers.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:187: 错误: 找不到符号
+      Empty(Plate plate) {
+            ^
+  符号:   类 Plate
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:192: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:200: 错误: 找不到符号
+      private final List<RiverFractal> rivers;
+                         ^
+  符号:   类 RiverFractal
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:202: 错误: 找不到符号
+      public Rivers(Plate plate, LongSet interior, LongSet sources, RandomSource random, float sourceChance, float length, int depth, float feather) {
+                    ^
+  符号:   类 Plate
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:202: 错误: 找不到符号
+      public Rivers(Plate plate, LongSet interior, LongSet sources, RandomSource random, float sourceChance, float length, int depth, float feather) {
+                                                                    ^
+  符号:   类 RandomSource
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:230: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:239: 错误: 找不到符号
+      class Builder extends MultiParallelBuilder {
+                            ^
+  符号:   类 MultiParallelBuilder
+  位置: 类 Rivers
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:243: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                   ^
+  符号:   类 Vertex
+  位置: 类 Rivers.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\river\WatershedTertiary.java:243: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                                ^
+  符号:   类 Vertex
+  位置: 类 Rivers.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:181: 错误: 找不到符号
+      Empty(Plate plate) {
+            ^
+  符号:   类 Plate
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:186: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Empty
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:194: 错误: 找不到符号
+      private final List<RiverFractal> riverBanks;
+                         ^
+  符号:   类 RiverFractal
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:196: 错误: 找不到符号
+      public Lines(Plate plate, LongSet interior, LongSet sources, RandomSource random, float sourceChance, float length, int depth, float feather) {
+                   ^
+  符号:   类 Plate
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:224: 错误: 找不到符号
+      public List<RiverFractal> getRivers() {
+                  ^
+  符号:   类 RiverFractal
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:233: 错误: 找不到符号
+      class Builder extends MultiParallelBuilder {
+                            ^
+  符号:   类 MultiParallelBuilder
+  位置: 类 Lines
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:237: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                   ^
+  符号:   类 Vertex
+  位置: 类 Lines.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\world\layer\ShoreDunes.java:237: 错误: 找不到符号
+         protected boolean isLegal(Vertex prev, Vertex vertex) {
+                                                ^
+  符号:   类 Vertex
+  位置: 类 Lines.Builder
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\accessor\TFCChunkDataGeneratorAccessor.java:8: 错误: 找不到符号
+@Mixin({TFCChunkDataGenerator.class})
+        ^
+  符号: 类 TFCChunkDataGenerator
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\ResourceCacheManagerMixin.java:12: 错误: 找不到符号
+@Mixin({ResourceCacheManager.class})
+        ^
+  符号: 类 ResourceCacheManager
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\chunkdata\TFCChunkDataGeneratorMixin.java:24: 错误: 找不到符号
+@Mixin({TFCChunkDataGenerator.class})
+        ^
+  符号: 类 TFCChunkDataGenerator
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\features\NetherFortressFeatureMixin.java:22: 错误: 找不到符号
+@Mixin({NetherFortressFeature.class})
+        ^
+  符号: 类 NetherFortressFeature
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:26: 错误: 找不到符号
+@Mixin({Watershed.class})
+        ^
+  符号: 类 Watershed
+D:\学习资料\附属模组工作区\tfc_florae_port\src\main\java\tfcflorae\mixin\world\river\WatershedMixin.java:36: 错误: 找不到符号
+   @Mixin({Context.class})
+           ^
+  符号:   类 Context
+  位置: 类 WatershedMixin
+注: Writing refmap to D:\学习资料\附属模组工作区\tfc_florae_port\build\tmp\compileJava\compileJava-refmap.json
+注: Writing refmap to D:\学习资料\附属模组工作区\tfc_florae_port\build\tmp\compileJava\compileJava-refmap.json
+注: Writing searge composite mappings to D:\学习资料\附属模组工作区\tfc_florae_port\build\tmp\compileJava\compileJava-mappings.tsrg
+302 个错误
+100 个警告
+仅显示前 100 个警告（共 264 个）；若要查看更多错误，请使用 -Xmaxwarns
+
+> Task :compileJava FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 4m 27s
+4 actionable tasks: 2 executed, 2 up-to-date

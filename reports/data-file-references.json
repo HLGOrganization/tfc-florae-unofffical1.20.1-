@@ -1,0 +1,261 @@
+{
+  "external_jars": 290,
+  "resources_indexed": 123667,
+  "issues_by_field": {
+    "rewards.recipes": 25,
+    "criteria.recipe_unlocked": 25
+  },
+  "issues": [
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\axe_flint.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:crafting/tools/axe_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\axe_flint.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:crafting/tools/axe_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\hammer_flint.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:crafting/tools/hammer_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\hammer_flint.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:crafting/tools/hammer_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\hoe_flint.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:crafting/tools/hoe_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\hoe_flint.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:crafting/tools/hoe_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\javelin_flint.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:crafting/tools/javelin_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\javelin_flint.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:crafting/tools/javelin_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\knife_flint.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:crafting/tools/knife_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\knife_flint.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:crafting/tools/knife_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\shovel_flint.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:crafting/tools/shovel_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\tools\\shovel_flint.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:crafting/tools/shovel_flint"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\acacia.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/acacia"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\acacia.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/acacia"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\ash.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/ash"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\ash.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/ash"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\aspen.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/aspen"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\aspen.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/aspen"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\birch.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/birch"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\birch.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/birch"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\blackwood.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/blackwood"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\blackwood.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/blackwood"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\chestnut.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/chestnut"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\chestnut.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/chestnut"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\douglas_fir.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/douglas_fir"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\douglas_fir.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/douglas_fir"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\hickory.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/hickory"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\hickory.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/hickory"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\kapok.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/kapok"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\kapok.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/kapok"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\maple.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/maple"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\maple.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/maple"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\oak.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/oak"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\oak.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/oak"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\palm.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/palm"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\palm.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/palm"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\pine.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/pine"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\pine.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/pine"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\rosewood.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/rosewood"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\rosewood.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/rosewood"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\sequoia.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/sequoia"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\sequoia.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/sequoia"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\spruce.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/spruce"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\spruce.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/spruce"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\sycamore.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/sycamore"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\sycamore.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/sycamore"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\white_cedar.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/white_cedar"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\white_cedar.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/white_cedar"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\willow.json",
+      "field": "rewards.recipes",
+      "target": "tfcflorae:wood/bookshelf/willow"
+    },
+    {
+      "file": "tfc_florae_port\\src\\main\\resources\\data\\tfcflorae\\advancements\\crafting\\wood\\bookshelf\\willow.json",
+      "field": "criteria.recipe_unlocked",
+      "target": "tfcflorae:wood/bookshelf/willow"
+    }
+  ],
+  "limits": "File existence only, without runtime pack ordering or conditional processing. Includes optional external mods present in the target modpack; excludes installed Florae jar."
+}

@@ -1,0 +1,7 @@
+﻿javap.exe : ����: �Ҳ�����: net.minecraft.world.level.block.SaplingBlock
+所在位置 行:4 字符: 1
++ & "$java\javap.exe" -classpath $mc -c -p net.minecraft.world.level.bl ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (����: �Ҳ�����: ...ck.SaplingBlock:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

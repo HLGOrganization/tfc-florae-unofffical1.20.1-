@@ -1,0 +1,6 @@
+{
+  "type": "tfc:chisel",
+  "ingredient": "tfcflorae:rock/stone_tiles/tuff",
+  "result": "tfcflorae:rock/stone_tiles/stairs/tuff",
+  "mode": "stair"
+}

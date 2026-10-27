@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "tfcflorae:block/wood/encased_axle/cocobolo",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tfcflorae:block/wood/encased_axle/cocobolo"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/encased_axle/cocobolo",
+      "x": 90
+    }
+  }
+}

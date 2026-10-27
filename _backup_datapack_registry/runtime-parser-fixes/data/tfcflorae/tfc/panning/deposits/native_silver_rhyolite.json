@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/rhyolite",
+  "model_stages": [
+    "tfc:item/pan/native_silver/rhyolite_full",
+    "tfc:item/pan/native_silver/rhyolite_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver_rhyolite"
+}

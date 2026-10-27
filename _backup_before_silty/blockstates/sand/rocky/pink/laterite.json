@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/pink/laterite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/pink/laterite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/pink/laterite"
+      }
+    ]
+  }
+}

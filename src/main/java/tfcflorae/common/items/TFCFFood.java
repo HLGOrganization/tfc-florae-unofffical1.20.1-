@@ -43,7 +43,6 @@ public enum TFCFFood {
    ZUCCHINI(false, false),
    FRESH_SEAWEED(false, true),
    ROASTED_AMANITA(false, false, true),
-   ROASTED_ARTISTS_CONK(false, false, true),
    ROASTED_BEEFSTEAK_FUNGUS(false, false),
    ROASTED_BIRCH_POLYPORE(false, false),
    ROASTED_BITTER_OYSTER(false, false),

@@ -1,0 +1,6230 @@
+{
+  "custom_rocks": [
+    "arkose",
+    "boninite",
+    "carbonatite",
+    "cataclasite",
+    "jaspillite",
+    "laterite",
+    "mudstone",
+    "porphyry",
+    "red_granite",
+    "sandstone",
+    "soapstone",
+    "wackestone"
+  ],
+  "custom_ores": [
+    "anthracite"
+  ],
+  "veins": [
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/amethyst.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/andesite",
+          "to": "tfc:ore/amethyst/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/basalt",
+          "to": "tfc:ore/amethyst/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/chalk",
+          "to": "tfc:ore/amethyst/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/chert",
+          "to": "tfc:ore/amethyst/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/claystone",
+          "to": "tfc:ore/amethyst/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/conglomerate",
+          "to": "tfc:ore/amethyst/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/dacite",
+          "to": "tfc:ore/amethyst/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/diorite",
+          "to": "tfc:ore/amethyst/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/dolomite",
+          "to": "tfc:ore/amethyst/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/gabbro",
+          "to": "tfc:ore/amethyst/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/gneiss",
+          "to": "tfc:ore/amethyst/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/granite",
+          "to": "tfc:ore/amethyst/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/limestone",
+          "to": "tfc:ore/amethyst/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/marble",
+          "to": "tfc:ore/amethyst/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/phyllite",
+          "to": "tfc:ore/amethyst/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/quartzite",
+          "to": "tfc:ore/amethyst/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/rhyolite",
+          "to": "tfc:ore/amethyst/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/schist",
+          "to": "tfc:ore/amethyst/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/shale",
+          "to": "tfc:ore/amethyst/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/amethyst/slate",
+          "to": "tfc:ore/amethyst/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/anthracite.json",
+      "classification": {
+        "florae_custom_ore": 32
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/bituminous_coal.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/andesite",
+          "to": "tfc:ore/bituminous_coal/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/basalt",
+          "to": "tfc:ore/bituminous_coal/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/chalk",
+          "to": "tfc:ore/bituminous_coal/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/chert",
+          "to": "tfc:ore/bituminous_coal/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/claystone",
+          "to": "tfc:ore/bituminous_coal/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/conglomerate",
+          "to": "tfc:ore/bituminous_coal/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/dacite",
+          "to": "tfc:ore/bituminous_coal/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/diorite",
+          "to": "tfc:ore/bituminous_coal/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/dolomite",
+          "to": "tfc:ore/bituminous_coal/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/gabbro",
+          "to": "tfc:ore/bituminous_coal/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/gneiss",
+          "to": "tfc:ore/bituminous_coal/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/granite",
+          "to": "tfc:ore/bituminous_coal/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/limestone",
+          "to": "tfc:ore/bituminous_coal/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/marble",
+          "to": "tfc:ore/bituminous_coal/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/phyllite",
+          "to": "tfc:ore/bituminous_coal/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/quartzite",
+          "to": "tfc:ore/bituminous_coal/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/rhyolite",
+          "to": "tfc:ore/bituminous_coal/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/schist",
+          "to": "tfc:ore/bituminous_coal/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/shale",
+          "to": "tfc:ore/bituminous_coal/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/bituminous_coal/slate",
+          "to": "tfc:ore/bituminous_coal/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/borax.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/borax/andesite",
+          "to": "tfc:ore/borax/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/borax/basalt",
+          "to": "tfc:ore/borax/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/borax/chalk",
+          "to": "tfc:ore/borax/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/borax/chert",
+          "to": "tfc:ore/borax/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/borax/claystone",
+          "to": "tfc:ore/borax/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/borax/conglomerate",
+          "to": "tfc:ore/borax/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/borax/dacite",
+          "to": "tfc:ore/borax/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/borax/diorite",
+          "to": "tfc:ore/borax/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/borax/dolomite",
+          "to": "tfc:ore/borax/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/borax/gabbro",
+          "to": "tfc:ore/borax/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/borax/gneiss",
+          "to": "tfc:ore/borax/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/borax/granite",
+          "to": "tfc:ore/borax/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/borax/limestone",
+          "to": "tfc:ore/borax/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/borax/marble",
+          "to": "tfc:ore/borax/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/borax/phyllite",
+          "to": "tfc:ore/borax/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/borax/quartzite",
+          "to": "tfc:ore/borax/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/borax/rhyolite",
+          "to": "tfc:ore/borax/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/borax/schist",
+          "to": "tfc:ore/borax/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/borax/shale",
+          "to": "tfc:ore/borax/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/borax/slate",
+          "to": "tfc:ore/borax/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/cinnabar.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/andesite",
+          "to": "tfc:ore/cinnabar/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/basalt",
+          "to": "tfc:ore/cinnabar/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/chalk",
+          "to": "tfc:ore/cinnabar/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/chert",
+          "to": "tfc:ore/cinnabar/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/claystone",
+          "to": "tfc:ore/cinnabar/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/conglomerate",
+          "to": "tfc:ore/cinnabar/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/dacite",
+          "to": "tfc:ore/cinnabar/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/diorite",
+          "to": "tfc:ore/cinnabar/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/dolomite",
+          "to": "tfc:ore/cinnabar/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/gabbro",
+          "to": "tfc:ore/cinnabar/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/gneiss",
+          "to": "tfc:ore/cinnabar/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/granite",
+          "to": "tfc:ore/cinnabar/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/limestone",
+          "to": "tfc:ore/cinnabar/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/marble",
+          "to": "tfc:ore/cinnabar/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/phyllite",
+          "to": "tfc:ore/cinnabar/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/quartzite",
+          "to": "tfc:ore/cinnabar/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/rhyolite",
+          "to": "tfc:ore/cinnabar/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/schist",
+          "to": "tfc:ore/cinnabar/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/shale",
+          "to": "tfc:ore/cinnabar/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/cinnabar/slate",
+          "to": "tfc:ore/cinnabar/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/cryolite.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/andesite",
+          "to": "tfc:ore/cryolite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/basalt",
+          "to": "tfc:ore/cryolite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/chalk",
+          "to": "tfc:ore/cryolite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/chert",
+          "to": "tfc:ore/cryolite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/claystone",
+          "to": "tfc:ore/cryolite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/conglomerate",
+          "to": "tfc:ore/cryolite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/dacite",
+          "to": "tfc:ore/cryolite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/diorite",
+          "to": "tfc:ore/cryolite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/dolomite",
+          "to": "tfc:ore/cryolite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/gabbro",
+          "to": "tfc:ore/cryolite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/gneiss",
+          "to": "tfc:ore/cryolite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/granite",
+          "to": "tfc:ore/cryolite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/limestone",
+          "to": "tfc:ore/cryolite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/marble",
+          "to": "tfc:ore/cryolite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/phyllite",
+          "to": "tfc:ore/cryolite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/quartzite",
+          "to": "tfc:ore/cryolite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/rhyolite",
+          "to": "tfc:ore/cryolite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/schist",
+          "to": "tfc:ore/cryolite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/shale",
+          "to": "tfc:ore/cryolite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/cryolite/slate",
+          "to": "tfc:ore/cryolite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/graphite.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/andesite",
+          "to": "tfc:ore/graphite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/basalt",
+          "to": "tfc:ore/graphite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/chalk",
+          "to": "tfc:ore/graphite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/chert",
+          "to": "tfc:ore/graphite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/claystone",
+          "to": "tfc:ore/graphite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/conglomerate",
+          "to": "tfc:ore/graphite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/dacite",
+          "to": "tfc:ore/graphite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/diorite",
+          "to": "tfc:ore/graphite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/dolomite",
+          "to": "tfc:ore/graphite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/gabbro",
+          "to": "tfc:ore/graphite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/gneiss",
+          "to": "tfc:ore/graphite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/granite",
+          "to": "tfc:ore/graphite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/limestone",
+          "to": "tfc:ore/graphite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/marble",
+          "to": "tfc:ore/graphite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/phyllite",
+          "to": "tfc:ore/graphite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/quartzite",
+          "to": "tfc:ore/graphite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/rhyolite",
+          "to": "tfc:ore/graphite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/schist",
+          "to": "tfc:ore/graphite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/shale",
+          "to": "tfc:ore/graphite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/graphite/slate",
+          "to": "tfc:ore/graphite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/gypsum.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/andesite",
+          "to": "tfc:ore/gypsum/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/basalt",
+          "to": "tfc:ore/gypsum/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/chalk",
+          "to": "tfc:ore/gypsum/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/chert",
+          "to": "tfc:ore/gypsum/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/claystone",
+          "to": "tfc:ore/gypsum/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/conglomerate",
+          "to": "tfc:ore/gypsum/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/dacite",
+          "to": "tfc:ore/gypsum/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/diorite",
+          "to": "tfc:ore/gypsum/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/dolomite",
+          "to": "tfc:ore/gypsum/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/gabbro",
+          "to": "tfc:ore/gypsum/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/gneiss",
+          "to": "tfc:ore/gypsum/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/granite",
+          "to": "tfc:ore/gypsum/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/limestone",
+          "to": "tfc:ore/gypsum/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/marble",
+          "to": "tfc:ore/gypsum/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/phyllite",
+          "to": "tfc:ore/gypsum/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/quartzite",
+          "to": "tfc:ore/gypsum/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/rhyolite",
+          "to": "tfc:ore/gypsum/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/schist",
+          "to": "tfc:ore/gypsum/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/shale",
+          "to": "tfc:ore/gypsum/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/gypsum/slate",
+          "to": "tfc:ore/gypsum/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/halite.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/halite/andesite",
+          "to": "tfc:ore/halite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/halite/basalt",
+          "to": "tfc:ore/halite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/halite/chalk",
+          "to": "tfc:ore/halite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/halite/chert",
+          "to": "tfc:ore/halite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/halite/claystone",
+          "to": "tfc:ore/halite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/halite/conglomerate",
+          "to": "tfc:ore/halite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/halite/dacite",
+          "to": "tfc:ore/halite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/halite/diorite",
+          "to": "tfc:ore/halite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/halite/dolomite",
+          "to": "tfc:ore/halite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/halite/gabbro",
+          "to": "tfc:ore/halite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/halite/gneiss",
+          "to": "tfc:ore/halite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/halite/granite",
+          "to": "tfc:ore/halite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/halite/limestone",
+          "to": "tfc:ore/halite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/halite/marble",
+          "to": "tfc:ore/halite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/halite/phyllite",
+          "to": "tfc:ore/halite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/halite/quartzite",
+          "to": "tfc:ore/halite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/halite/rhyolite",
+          "to": "tfc:ore/halite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/halite/schist",
+          "to": "tfc:ore/halite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/halite/shale",
+          "to": "tfc:ore/halite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/halite/slate",
+          "to": "tfc:ore/halite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/kaolinite.json",
+      "classification": {},
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        }
+      ],
+      "unregistered": [
+        "tfcflorae:ore/kaolinite/andesite",
+        "tfcflorae:ore/kaolinite/arkose",
+        "tfcflorae:ore/kaolinite/basalt",
+        "tfcflorae:ore/kaolinite/boninite",
+        "tfcflorae:ore/kaolinite/carbonatite",
+        "tfcflorae:ore/kaolinite/cataclasite",
+        "tfcflorae:ore/kaolinite/chalk",
+        "tfcflorae:ore/kaolinite/chert",
+        "tfcflorae:ore/kaolinite/claystone",
+        "tfcflorae:ore/kaolinite/conglomerate",
+        "tfcflorae:ore/kaolinite/dacite",
+        "tfcflorae:ore/kaolinite/diorite",
+        "tfcflorae:ore/kaolinite/dolomite",
+        "tfcflorae:ore/kaolinite/gabbro",
+        "tfcflorae:ore/kaolinite/gneiss",
+        "tfcflorae:ore/kaolinite/granite",
+        "tfcflorae:ore/kaolinite/jaspillite",
+        "tfcflorae:ore/kaolinite/laterite",
+        "tfcflorae:ore/kaolinite/limestone",
+        "tfcflorae:ore/kaolinite/marble",
+        "tfcflorae:ore/kaolinite/mudstone",
+        "tfcflorae:ore/kaolinite/phyllite",
+        "tfcflorae:ore/kaolinite/porphyry",
+        "tfcflorae:ore/kaolinite/quartzite",
+        "tfcflorae:ore/kaolinite/red_granite",
+        "tfcflorae:ore/kaolinite/rhyolite",
+        "tfcflorae:ore/kaolinite/sandstone",
+        "tfcflorae:ore/kaolinite/schist",
+        "tfcflorae:ore/kaolinite/shale",
+        "tfcflorae:ore/kaolinite/slate",
+        "tfcflorae:ore/kaolinite/soapstone",
+        "tfcflorae:ore/kaolinite/wackestone"
+      ]
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/lignite.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/andesite",
+          "to": "tfc:ore/lignite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/basalt",
+          "to": "tfc:ore/lignite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/chalk",
+          "to": "tfc:ore/lignite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/chert",
+          "to": "tfc:ore/lignite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/claystone",
+          "to": "tfc:ore/lignite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/conglomerate",
+          "to": "tfc:ore/lignite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/dacite",
+          "to": "tfc:ore/lignite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/diorite",
+          "to": "tfc:ore/lignite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/dolomite",
+          "to": "tfc:ore/lignite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/gabbro",
+          "to": "tfc:ore/lignite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/gneiss",
+          "to": "tfc:ore/lignite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/granite",
+          "to": "tfc:ore/lignite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/limestone",
+          "to": "tfc:ore/lignite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/marble",
+          "to": "tfc:ore/lignite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/phyllite",
+          "to": "tfc:ore/lignite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/quartzite",
+          "to": "tfc:ore/lignite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/rhyolite",
+          "to": "tfc:ore/lignite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/schist",
+          "to": "tfc:ore/lignite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/shale",
+          "to": "tfc:ore/lignite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/lignite/slate",
+          "to": "tfc:ore/lignite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_bismuthinite.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/andesite",
+          "to": "tfc:ore/poor_bismuthinite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/andesite",
+          "to": "tfc:ore/normal_bismuthinite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/andesite",
+          "to": "tfc:ore/rich_bismuthinite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/basalt",
+          "to": "tfc:ore/poor_bismuthinite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/basalt",
+          "to": "tfc:ore/normal_bismuthinite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/basalt",
+          "to": "tfc:ore/rich_bismuthinite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/chalk",
+          "to": "tfc:ore/poor_bismuthinite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/chalk",
+          "to": "tfc:ore/normal_bismuthinite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/chalk",
+          "to": "tfc:ore/rich_bismuthinite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/chert",
+          "to": "tfc:ore/poor_bismuthinite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/chert",
+          "to": "tfc:ore/normal_bismuthinite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/chert",
+          "to": "tfc:ore/rich_bismuthinite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/claystone",
+          "to": "tfc:ore/poor_bismuthinite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/claystone",
+          "to": "tfc:ore/normal_bismuthinite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/claystone",
+          "to": "tfc:ore/rich_bismuthinite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/conglomerate",
+          "to": "tfc:ore/poor_bismuthinite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/conglomerate",
+          "to": "tfc:ore/normal_bismuthinite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/conglomerate",
+          "to": "tfc:ore/rich_bismuthinite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/dacite",
+          "to": "tfc:ore/poor_bismuthinite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/dacite",
+          "to": "tfc:ore/normal_bismuthinite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/dacite",
+          "to": "tfc:ore/rich_bismuthinite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/diorite",
+          "to": "tfc:ore/poor_bismuthinite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/diorite",
+          "to": "tfc:ore/normal_bismuthinite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/diorite",
+          "to": "tfc:ore/rich_bismuthinite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/dolomite",
+          "to": "tfc:ore/poor_bismuthinite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/dolomite",
+          "to": "tfc:ore/normal_bismuthinite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/dolomite",
+          "to": "tfc:ore/rich_bismuthinite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/gabbro",
+          "to": "tfc:ore/poor_bismuthinite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/gabbro",
+          "to": "tfc:ore/normal_bismuthinite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/gabbro",
+          "to": "tfc:ore/rich_bismuthinite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/gneiss",
+          "to": "tfc:ore/poor_bismuthinite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/gneiss",
+          "to": "tfc:ore/normal_bismuthinite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/gneiss",
+          "to": "tfc:ore/rich_bismuthinite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/granite",
+          "to": "tfc:ore/poor_bismuthinite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/granite",
+          "to": "tfc:ore/normal_bismuthinite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/granite",
+          "to": "tfc:ore/rich_bismuthinite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/limestone",
+          "to": "tfc:ore/poor_bismuthinite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/limestone",
+          "to": "tfc:ore/normal_bismuthinite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/limestone",
+          "to": "tfc:ore/rich_bismuthinite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/marble",
+          "to": "tfc:ore/poor_bismuthinite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/marble",
+          "to": "tfc:ore/normal_bismuthinite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/marble",
+          "to": "tfc:ore/rich_bismuthinite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/phyllite",
+          "to": "tfc:ore/poor_bismuthinite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/phyllite",
+          "to": "tfc:ore/normal_bismuthinite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/phyllite",
+          "to": "tfc:ore/rich_bismuthinite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/quartzite",
+          "to": "tfc:ore/poor_bismuthinite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/quartzite",
+          "to": "tfc:ore/normal_bismuthinite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/quartzite",
+          "to": "tfc:ore/rich_bismuthinite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/rhyolite",
+          "to": "tfc:ore/poor_bismuthinite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/rhyolite",
+          "to": "tfc:ore/normal_bismuthinite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/rhyolite",
+          "to": "tfc:ore/rich_bismuthinite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/schist",
+          "to": "tfc:ore/poor_bismuthinite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/schist",
+          "to": "tfc:ore/normal_bismuthinite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/schist",
+          "to": "tfc:ore/rich_bismuthinite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/shale",
+          "to": "tfc:ore/poor_bismuthinite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/shale",
+          "to": "tfc:ore/normal_bismuthinite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/shale",
+          "to": "tfc:ore/rich_bismuthinite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_bismuthinite/slate",
+          "to": "tfc:ore/poor_bismuthinite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_bismuthinite/slate",
+          "to": "tfc:ore/normal_bismuthinite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_bismuthinite/slate",
+          "to": "tfc:ore/rich_bismuthinite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_cassiterite.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/andesite",
+          "to": "tfc:ore/poor_cassiterite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/andesite",
+          "to": "tfc:ore/normal_cassiterite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/andesite",
+          "to": "tfc:ore/rich_cassiterite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/basalt",
+          "to": "tfc:ore/poor_cassiterite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/basalt",
+          "to": "tfc:ore/normal_cassiterite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/basalt",
+          "to": "tfc:ore/rich_cassiterite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/chalk",
+          "to": "tfc:ore/poor_cassiterite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/chalk",
+          "to": "tfc:ore/normal_cassiterite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/chalk",
+          "to": "tfc:ore/rich_cassiterite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/chert",
+          "to": "tfc:ore/poor_cassiterite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/chert",
+          "to": "tfc:ore/normal_cassiterite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/chert",
+          "to": "tfc:ore/rich_cassiterite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/claystone",
+          "to": "tfc:ore/poor_cassiterite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/claystone",
+          "to": "tfc:ore/normal_cassiterite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/claystone",
+          "to": "tfc:ore/rich_cassiterite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/conglomerate",
+          "to": "tfc:ore/poor_cassiterite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/conglomerate",
+          "to": "tfc:ore/normal_cassiterite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/conglomerate",
+          "to": "tfc:ore/rich_cassiterite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/dacite",
+          "to": "tfc:ore/poor_cassiterite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/dacite",
+          "to": "tfc:ore/normal_cassiterite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/dacite",
+          "to": "tfc:ore/rich_cassiterite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/diorite",
+          "to": "tfc:ore/poor_cassiterite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/diorite",
+          "to": "tfc:ore/normal_cassiterite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/diorite",
+          "to": "tfc:ore/rich_cassiterite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/dolomite",
+          "to": "tfc:ore/poor_cassiterite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/dolomite",
+          "to": "tfc:ore/normal_cassiterite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/dolomite",
+          "to": "tfc:ore/rich_cassiterite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/gabbro",
+          "to": "tfc:ore/poor_cassiterite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/gabbro",
+          "to": "tfc:ore/normal_cassiterite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/gabbro",
+          "to": "tfc:ore/rich_cassiterite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/gneiss",
+          "to": "tfc:ore/poor_cassiterite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/gneiss",
+          "to": "tfc:ore/normal_cassiterite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/gneiss",
+          "to": "tfc:ore/rich_cassiterite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/granite",
+          "to": "tfc:ore/poor_cassiterite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/granite",
+          "to": "tfc:ore/normal_cassiterite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/granite",
+          "to": "tfc:ore/rich_cassiterite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/limestone",
+          "to": "tfc:ore/poor_cassiterite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/limestone",
+          "to": "tfc:ore/normal_cassiterite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/limestone",
+          "to": "tfc:ore/rich_cassiterite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/marble",
+          "to": "tfc:ore/poor_cassiterite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/marble",
+          "to": "tfc:ore/normal_cassiterite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/marble",
+          "to": "tfc:ore/rich_cassiterite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/phyllite",
+          "to": "tfc:ore/poor_cassiterite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/phyllite",
+          "to": "tfc:ore/normal_cassiterite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/phyllite",
+          "to": "tfc:ore/rich_cassiterite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/quartzite",
+          "to": "tfc:ore/poor_cassiterite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/quartzite",
+          "to": "tfc:ore/normal_cassiterite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/quartzite",
+          "to": "tfc:ore/rich_cassiterite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/rhyolite",
+          "to": "tfc:ore/poor_cassiterite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/rhyolite",
+          "to": "tfc:ore/normal_cassiterite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/rhyolite",
+          "to": "tfc:ore/rich_cassiterite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/schist",
+          "to": "tfc:ore/poor_cassiterite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/schist",
+          "to": "tfc:ore/normal_cassiterite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/schist",
+          "to": "tfc:ore/rich_cassiterite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/shale",
+          "to": "tfc:ore/poor_cassiterite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/shale",
+          "to": "tfc:ore/normal_cassiterite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/shale",
+          "to": "tfc:ore/rich_cassiterite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_cassiterite/slate",
+          "to": "tfc:ore/poor_cassiterite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_cassiterite/slate",
+          "to": "tfc:ore/normal_cassiterite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_cassiterite/slate",
+          "to": "tfc:ore/rich_cassiterite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_garnierite.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/andesite",
+          "to": "tfc:ore/poor_garnierite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/andesite",
+          "to": "tfc:ore/normal_garnierite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/andesite",
+          "to": "tfc:ore/rich_garnierite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/basalt",
+          "to": "tfc:ore/poor_garnierite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/basalt",
+          "to": "tfc:ore/normal_garnierite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/basalt",
+          "to": "tfc:ore/rich_garnierite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/chalk",
+          "to": "tfc:ore/poor_garnierite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/chalk",
+          "to": "tfc:ore/normal_garnierite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/chalk",
+          "to": "tfc:ore/rich_garnierite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/chert",
+          "to": "tfc:ore/poor_garnierite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/chert",
+          "to": "tfc:ore/normal_garnierite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/chert",
+          "to": "tfc:ore/rich_garnierite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/claystone",
+          "to": "tfc:ore/poor_garnierite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/claystone",
+          "to": "tfc:ore/normal_garnierite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/claystone",
+          "to": "tfc:ore/rich_garnierite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/conglomerate",
+          "to": "tfc:ore/poor_garnierite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/conglomerate",
+          "to": "tfc:ore/normal_garnierite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/conglomerate",
+          "to": "tfc:ore/rich_garnierite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/dacite",
+          "to": "tfc:ore/poor_garnierite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/dacite",
+          "to": "tfc:ore/normal_garnierite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/dacite",
+          "to": "tfc:ore/rich_garnierite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/diorite",
+          "to": "tfc:ore/poor_garnierite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/diorite",
+          "to": "tfc:ore/normal_garnierite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/diorite",
+          "to": "tfc:ore/rich_garnierite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/dolomite",
+          "to": "tfc:ore/poor_garnierite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/dolomite",
+          "to": "tfc:ore/normal_garnierite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/dolomite",
+          "to": "tfc:ore/rich_garnierite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/gabbro",
+          "to": "tfc:ore/poor_garnierite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/gabbro",
+          "to": "tfc:ore/normal_garnierite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/gabbro",
+          "to": "tfc:ore/rich_garnierite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/gneiss",
+          "to": "tfc:ore/poor_garnierite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/gneiss",
+          "to": "tfc:ore/normal_garnierite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/gneiss",
+          "to": "tfc:ore/rich_garnierite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/granite",
+          "to": "tfc:ore/poor_garnierite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/granite",
+          "to": "tfc:ore/normal_garnierite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/granite",
+          "to": "tfc:ore/rich_garnierite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/limestone",
+          "to": "tfc:ore/poor_garnierite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/limestone",
+          "to": "tfc:ore/normal_garnierite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/limestone",
+          "to": "tfc:ore/rich_garnierite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/marble",
+          "to": "tfc:ore/poor_garnierite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/marble",
+          "to": "tfc:ore/normal_garnierite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/marble",
+          "to": "tfc:ore/rich_garnierite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/phyllite",
+          "to": "tfc:ore/poor_garnierite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/phyllite",
+          "to": "tfc:ore/normal_garnierite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/phyllite",
+          "to": "tfc:ore/rich_garnierite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/quartzite",
+          "to": "tfc:ore/poor_garnierite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/quartzite",
+          "to": "tfc:ore/normal_garnierite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/quartzite",
+          "to": "tfc:ore/rich_garnierite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/rhyolite",
+          "to": "tfc:ore/poor_garnierite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/rhyolite",
+          "to": "tfc:ore/normal_garnierite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/rhyolite",
+          "to": "tfc:ore/rich_garnierite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/schist",
+          "to": "tfc:ore/poor_garnierite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/schist",
+          "to": "tfc:ore/normal_garnierite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/schist",
+          "to": "tfc:ore/rich_garnierite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/shale",
+          "to": "tfc:ore/poor_garnierite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/shale",
+          "to": "tfc:ore/normal_garnierite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/shale",
+          "to": "tfc:ore/rich_garnierite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_garnierite/slate",
+          "to": "tfc:ore/poor_garnierite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_garnierite/slate",
+          "to": "tfc:ore/normal_garnierite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_garnierite/slate",
+          "to": "tfc:ore/rich_garnierite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_hematite.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/andesite",
+          "to": "tfc:ore/poor_hematite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/andesite",
+          "to": "tfc:ore/normal_hematite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/andesite",
+          "to": "tfc:ore/rich_hematite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/basalt",
+          "to": "tfc:ore/poor_hematite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/basalt",
+          "to": "tfc:ore/normal_hematite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/basalt",
+          "to": "tfc:ore/rich_hematite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/chalk",
+          "to": "tfc:ore/poor_hematite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/chalk",
+          "to": "tfc:ore/normal_hematite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/chalk",
+          "to": "tfc:ore/rich_hematite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/chert",
+          "to": "tfc:ore/poor_hematite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/chert",
+          "to": "tfc:ore/normal_hematite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/chert",
+          "to": "tfc:ore/rich_hematite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/claystone",
+          "to": "tfc:ore/poor_hematite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/claystone",
+          "to": "tfc:ore/normal_hematite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/claystone",
+          "to": "tfc:ore/rich_hematite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/conglomerate",
+          "to": "tfc:ore/poor_hematite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/conglomerate",
+          "to": "tfc:ore/normal_hematite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/conglomerate",
+          "to": "tfc:ore/rich_hematite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/dacite",
+          "to": "tfc:ore/poor_hematite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/dacite",
+          "to": "tfc:ore/normal_hematite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/dacite",
+          "to": "tfc:ore/rich_hematite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/diorite",
+          "to": "tfc:ore/poor_hematite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/diorite",
+          "to": "tfc:ore/normal_hematite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/diorite",
+          "to": "tfc:ore/rich_hematite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/dolomite",
+          "to": "tfc:ore/poor_hematite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/dolomite",
+          "to": "tfc:ore/normal_hematite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/dolomite",
+          "to": "tfc:ore/rich_hematite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/gabbro",
+          "to": "tfc:ore/poor_hematite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/gabbro",
+          "to": "tfc:ore/normal_hematite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/gabbro",
+          "to": "tfc:ore/rich_hematite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/gneiss",
+          "to": "tfc:ore/poor_hematite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/gneiss",
+          "to": "tfc:ore/normal_hematite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/gneiss",
+          "to": "tfc:ore/rich_hematite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/granite",
+          "to": "tfc:ore/poor_hematite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/granite",
+          "to": "tfc:ore/normal_hematite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/granite",
+          "to": "tfc:ore/rich_hematite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/limestone",
+          "to": "tfc:ore/poor_hematite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/limestone",
+          "to": "tfc:ore/normal_hematite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/limestone",
+          "to": "tfc:ore/rich_hematite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/marble",
+          "to": "tfc:ore/poor_hematite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/marble",
+          "to": "tfc:ore/normal_hematite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/marble",
+          "to": "tfc:ore/rich_hematite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/phyllite",
+          "to": "tfc:ore/poor_hematite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/phyllite",
+          "to": "tfc:ore/normal_hematite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/phyllite",
+          "to": "tfc:ore/rich_hematite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/quartzite",
+          "to": "tfc:ore/poor_hematite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/quartzite",
+          "to": "tfc:ore/normal_hematite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/quartzite",
+          "to": "tfc:ore/rich_hematite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/rhyolite",
+          "to": "tfc:ore/poor_hematite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/rhyolite",
+          "to": "tfc:ore/normal_hematite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/rhyolite",
+          "to": "tfc:ore/rich_hematite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/schist",
+          "to": "tfc:ore/poor_hematite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/schist",
+          "to": "tfc:ore/normal_hematite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/schist",
+          "to": "tfc:ore/rich_hematite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/shale",
+          "to": "tfc:ore/poor_hematite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/shale",
+          "to": "tfc:ore/normal_hematite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/shale",
+          "to": "tfc:ore/rich_hematite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_hematite/slate",
+          "to": "tfc:ore/poor_hematite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_hematite/slate",
+          "to": "tfc:ore/normal_hematite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_hematite/slate",
+          "to": "tfc:ore/rich_hematite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_limonite.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/andesite",
+          "to": "tfc:ore/poor_limonite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/andesite",
+          "to": "tfc:ore/normal_limonite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/andesite",
+          "to": "tfc:ore/rich_limonite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/basalt",
+          "to": "tfc:ore/poor_limonite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/basalt",
+          "to": "tfc:ore/normal_limonite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/basalt",
+          "to": "tfc:ore/rich_limonite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/chalk",
+          "to": "tfc:ore/poor_limonite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/chalk",
+          "to": "tfc:ore/normal_limonite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/chalk",
+          "to": "tfc:ore/rich_limonite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/chert",
+          "to": "tfc:ore/poor_limonite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/chert",
+          "to": "tfc:ore/normal_limonite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/chert",
+          "to": "tfc:ore/rich_limonite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/claystone",
+          "to": "tfc:ore/poor_limonite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/claystone",
+          "to": "tfc:ore/normal_limonite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/claystone",
+          "to": "tfc:ore/rich_limonite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/conglomerate",
+          "to": "tfc:ore/poor_limonite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/conglomerate",
+          "to": "tfc:ore/normal_limonite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/conglomerate",
+          "to": "tfc:ore/rich_limonite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/dacite",
+          "to": "tfc:ore/poor_limonite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/dacite",
+          "to": "tfc:ore/normal_limonite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/dacite",
+          "to": "tfc:ore/rich_limonite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/diorite",
+          "to": "tfc:ore/poor_limonite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/diorite",
+          "to": "tfc:ore/normal_limonite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/diorite",
+          "to": "tfc:ore/rich_limonite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/dolomite",
+          "to": "tfc:ore/poor_limonite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/dolomite",
+          "to": "tfc:ore/normal_limonite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/dolomite",
+          "to": "tfc:ore/rich_limonite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/gabbro",
+          "to": "tfc:ore/poor_limonite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/gabbro",
+          "to": "tfc:ore/normal_limonite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/gabbro",
+          "to": "tfc:ore/rich_limonite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/gneiss",
+          "to": "tfc:ore/poor_limonite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/gneiss",
+          "to": "tfc:ore/normal_limonite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/gneiss",
+          "to": "tfc:ore/rich_limonite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/granite",
+          "to": "tfc:ore/poor_limonite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/granite",
+          "to": "tfc:ore/normal_limonite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/granite",
+          "to": "tfc:ore/rich_limonite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/limestone",
+          "to": "tfc:ore/poor_limonite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/limestone",
+          "to": "tfc:ore/normal_limonite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/limestone",
+          "to": "tfc:ore/rich_limonite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/marble",
+          "to": "tfc:ore/poor_limonite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/marble",
+          "to": "tfc:ore/normal_limonite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/marble",
+          "to": "tfc:ore/rich_limonite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/phyllite",
+          "to": "tfc:ore/poor_limonite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/phyllite",
+          "to": "tfc:ore/normal_limonite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/phyllite",
+          "to": "tfc:ore/rich_limonite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/quartzite",
+          "to": "tfc:ore/poor_limonite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/quartzite",
+          "to": "tfc:ore/normal_limonite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/quartzite",
+          "to": "tfc:ore/rich_limonite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/rhyolite",
+          "to": "tfc:ore/poor_limonite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/rhyolite",
+          "to": "tfc:ore/normal_limonite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/rhyolite",
+          "to": "tfc:ore/rich_limonite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/schist",
+          "to": "tfc:ore/poor_limonite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/schist",
+          "to": "tfc:ore/normal_limonite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/schist",
+          "to": "tfc:ore/rich_limonite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/shale",
+          "to": "tfc:ore/poor_limonite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/shale",
+          "to": "tfc:ore/normal_limonite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/shale",
+          "to": "tfc:ore/rich_limonite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_limonite/slate",
+          "to": "tfc:ore/poor_limonite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_limonite/slate",
+          "to": "tfc:ore/normal_limonite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_limonite/slate",
+          "to": "tfc:ore/rich_limonite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_magnetite.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/andesite",
+          "to": "tfc:ore/poor_magnetite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/andesite",
+          "to": "tfc:ore/normal_magnetite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/andesite",
+          "to": "tfc:ore/rich_magnetite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/basalt",
+          "to": "tfc:ore/poor_magnetite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/basalt",
+          "to": "tfc:ore/normal_magnetite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/basalt",
+          "to": "tfc:ore/rich_magnetite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/chalk",
+          "to": "tfc:ore/poor_magnetite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/chalk",
+          "to": "tfc:ore/normal_magnetite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/chalk",
+          "to": "tfc:ore/rich_magnetite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/chert",
+          "to": "tfc:ore/poor_magnetite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/chert",
+          "to": "tfc:ore/normal_magnetite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/chert",
+          "to": "tfc:ore/rich_magnetite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/claystone",
+          "to": "tfc:ore/poor_magnetite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/claystone",
+          "to": "tfc:ore/normal_magnetite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/claystone",
+          "to": "tfc:ore/rich_magnetite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/conglomerate",
+          "to": "tfc:ore/poor_magnetite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/conglomerate",
+          "to": "tfc:ore/normal_magnetite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/conglomerate",
+          "to": "tfc:ore/rich_magnetite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/dacite",
+          "to": "tfc:ore/poor_magnetite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/dacite",
+          "to": "tfc:ore/normal_magnetite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/dacite",
+          "to": "tfc:ore/rich_magnetite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/diorite",
+          "to": "tfc:ore/poor_magnetite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/diorite",
+          "to": "tfc:ore/normal_magnetite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/diorite",
+          "to": "tfc:ore/rich_magnetite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/dolomite",
+          "to": "tfc:ore/poor_magnetite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/dolomite",
+          "to": "tfc:ore/normal_magnetite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/dolomite",
+          "to": "tfc:ore/rich_magnetite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/gabbro",
+          "to": "tfc:ore/poor_magnetite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/gabbro",
+          "to": "tfc:ore/normal_magnetite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/gabbro",
+          "to": "tfc:ore/rich_magnetite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/gneiss",
+          "to": "tfc:ore/poor_magnetite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/gneiss",
+          "to": "tfc:ore/normal_magnetite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/gneiss",
+          "to": "tfc:ore/rich_magnetite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/granite",
+          "to": "tfc:ore/poor_magnetite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/granite",
+          "to": "tfc:ore/normal_magnetite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/granite",
+          "to": "tfc:ore/rich_magnetite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/limestone",
+          "to": "tfc:ore/poor_magnetite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/limestone",
+          "to": "tfc:ore/normal_magnetite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/limestone",
+          "to": "tfc:ore/rich_magnetite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/marble",
+          "to": "tfc:ore/poor_magnetite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/marble",
+          "to": "tfc:ore/normal_magnetite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/marble",
+          "to": "tfc:ore/rich_magnetite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/phyllite",
+          "to": "tfc:ore/poor_magnetite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/phyllite",
+          "to": "tfc:ore/normal_magnetite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/phyllite",
+          "to": "tfc:ore/rich_magnetite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/quartzite",
+          "to": "tfc:ore/poor_magnetite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/quartzite",
+          "to": "tfc:ore/normal_magnetite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/quartzite",
+          "to": "tfc:ore/rich_magnetite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/rhyolite",
+          "to": "tfc:ore/poor_magnetite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/rhyolite",
+          "to": "tfc:ore/normal_magnetite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/rhyolite",
+          "to": "tfc:ore/rich_magnetite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/schist",
+          "to": "tfc:ore/poor_magnetite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/schist",
+          "to": "tfc:ore/normal_magnetite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/schist",
+          "to": "tfc:ore/rich_magnetite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/shale",
+          "to": "tfc:ore/poor_magnetite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/shale",
+          "to": "tfc:ore/normal_magnetite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/shale",
+          "to": "tfc:ore/rich_magnetite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_magnetite/slate",
+          "to": "tfc:ore/poor_magnetite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_magnetite/slate",
+          "to": "tfc:ore/normal_magnetite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_magnetite/slate",
+          "to": "tfc:ore/rich_magnetite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_malachite.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/andesite",
+          "to": "tfc:ore/poor_malachite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/andesite",
+          "to": "tfc:ore/normal_malachite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/andesite",
+          "to": "tfc:ore/rich_malachite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/basalt",
+          "to": "tfc:ore/poor_malachite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/basalt",
+          "to": "tfc:ore/normal_malachite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/basalt",
+          "to": "tfc:ore/rich_malachite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/chalk",
+          "to": "tfc:ore/poor_malachite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/chalk",
+          "to": "tfc:ore/normal_malachite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/chalk",
+          "to": "tfc:ore/rich_malachite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/chert",
+          "to": "tfc:ore/poor_malachite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/chert",
+          "to": "tfc:ore/normal_malachite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/chert",
+          "to": "tfc:ore/rich_malachite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/claystone",
+          "to": "tfc:ore/poor_malachite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/claystone",
+          "to": "tfc:ore/normal_malachite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/claystone",
+          "to": "tfc:ore/rich_malachite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/conglomerate",
+          "to": "tfc:ore/poor_malachite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/conglomerate",
+          "to": "tfc:ore/normal_malachite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/conglomerate",
+          "to": "tfc:ore/rich_malachite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/dacite",
+          "to": "tfc:ore/poor_malachite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/dacite",
+          "to": "tfc:ore/normal_malachite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/dacite",
+          "to": "tfc:ore/rich_malachite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/diorite",
+          "to": "tfc:ore/poor_malachite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/diorite",
+          "to": "tfc:ore/normal_malachite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/diorite",
+          "to": "tfc:ore/rich_malachite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/dolomite",
+          "to": "tfc:ore/poor_malachite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/dolomite",
+          "to": "tfc:ore/normal_malachite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/dolomite",
+          "to": "tfc:ore/rich_malachite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/gabbro",
+          "to": "tfc:ore/poor_malachite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/gabbro",
+          "to": "tfc:ore/normal_malachite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/gabbro",
+          "to": "tfc:ore/rich_malachite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/gneiss",
+          "to": "tfc:ore/poor_malachite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/gneiss",
+          "to": "tfc:ore/normal_malachite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/gneiss",
+          "to": "tfc:ore/rich_malachite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/granite",
+          "to": "tfc:ore/poor_malachite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/granite",
+          "to": "tfc:ore/normal_malachite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/granite",
+          "to": "tfc:ore/rich_malachite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/limestone",
+          "to": "tfc:ore/poor_malachite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/limestone",
+          "to": "tfc:ore/normal_malachite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/limestone",
+          "to": "tfc:ore/rich_malachite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/marble",
+          "to": "tfc:ore/poor_malachite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/marble",
+          "to": "tfc:ore/normal_malachite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/marble",
+          "to": "tfc:ore/rich_malachite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/phyllite",
+          "to": "tfc:ore/poor_malachite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/phyllite",
+          "to": "tfc:ore/normal_malachite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/phyllite",
+          "to": "tfc:ore/rich_malachite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/quartzite",
+          "to": "tfc:ore/poor_malachite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/quartzite",
+          "to": "tfc:ore/normal_malachite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/quartzite",
+          "to": "tfc:ore/rich_malachite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/rhyolite",
+          "to": "tfc:ore/poor_malachite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/rhyolite",
+          "to": "tfc:ore/normal_malachite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/rhyolite",
+          "to": "tfc:ore/rich_malachite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/schist",
+          "to": "tfc:ore/poor_malachite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/schist",
+          "to": "tfc:ore/normal_malachite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/schist",
+          "to": "tfc:ore/rich_malachite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/shale",
+          "to": "tfc:ore/poor_malachite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/shale",
+          "to": "tfc:ore/normal_malachite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/shale",
+          "to": "tfc:ore/rich_malachite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_malachite/slate",
+          "to": "tfc:ore/poor_malachite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_malachite/slate",
+          "to": "tfc:ore/normal_malachite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_malachite/slate",
+          "to": "tfc:ore/rich_malachite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_native_copper.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/andesite",
+          "to": "tfc:ore/poor_native_copper/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/andesite",
+          "to": "tfc:ore/normal_native_copper/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/andesite",
+          "to": "tfc:ore/rich_native_copper/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/basalt",
+          "to": "tfc:ore/poor_native_copper/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/basalt",
+          "to": "tfc:ore/normal_native_copper/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/basalt",
+          "to": "tfc:ore/rich_native_copper/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/chalk",
+          "to": "tfc:ore/poor_native_copper/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/chalk",
+          "to": "tfc:ore/normal_native_copper/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/chalk",
+          "to": "tfc:ore/rich_native_copper/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/chert",
+          "to": "tfc:ore/poor_native_copper/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/chert",
+          "to": "tfc:ore/normal_native_copper/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/chert",
+          "to": "tfc:ore/rich_native_copper/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/claystone",
+          "to": "tfc:ore/poor_native_copper/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/claystone",
+          "to": "tfc:ore/normal_native_copper/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/claystone",
+          "to": "tfc:ore/rich_native_copper/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/conglomerate",
+          "to": "tfc:ore/poor_native_copper/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/conglomerate",
+          "to": "tfc:ore/normal_native_copper/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/conglomerate",
+          "to": "tfc:ore/rich_native_copper/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/dacite",
+          "to": "tfc:ore/poor_native_copper/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/dacite",
+          "to": "tfc:ore/normal_native_copper/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/dacite",
+          "to": "tfc:ore/rich_native_copper/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/diorite",
+          "to": "tfc:ore/poor_native_copper/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/diorite",
+          "to": "tfc:ore/normal_native_copper/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/diorite",
+          "to": "tfc:ore/rich_native_copper/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/dolomite",
+          "to": "tfc:ore/poor_native_copper/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/dolomite",
+          "to": "tfc:ore/normal_native_copper/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/dolomite",
+          "to": "tfc:ore/rich_native_copper/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/gabbro",
+          "to": "tfc:ore/poor_native_copper/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/gabbro",
+          "to": "tfc:ore/normal_native_copper/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/gabbro",
+          "to": "tfc:ore/rich_native_copper/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/gneiss",
+          "to": "tfc:ore/poor_native_copper/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/gneiss",
+          "to": "tfc:ore/normal_native_copper/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/gneiss",
+          "to": "tfc:ore/rich_native_copper/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/granite",
+          "to": "tfc:ore/poor_native_copper/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/granite",
+          "to": "tfc:ore/normal_native_copper/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/granite",
+          "to": "tfc:ore/rich_native_copper/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/limestone",
+          "to": "tfc:ore/poor_native_copper/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/limestone",
+          "to": "tfc:ore/normal_native_copper/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/limestone",
+          "to": "tfc:ore/rich_native_copper/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/marble",
+          "to": "tfc:ore/poor_native_copper/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/marble",
+          "to": "tfc:ore/normal_native_copper/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/marble",
+          "to": "tfc:ore/rich_native_copper/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/phyllite",
+          "to": "tfc:ore/poor_native_copper/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/phyllite",
+          "to": "tfc:ore/normal_native_copper/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/phyllite",
+          "to": "tfc:ore/rich_native_copper/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/quartzite",
+          "to": "tfc:ore/poor_native_copper/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/quartzite",
+          "to": "tfc:ore/normal_native_copper/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/quartzite",
+          "to": "tfc:ore/rich_native_copper/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/rhyolite",
+          "to": "tfc:ore/poor_native_copper/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/rhyolite",
+          "to": "tfc:ore/normal_native_copper/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/rhyolite",
+          "to": "tfc:ore/rich_native_copper/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/schist",
+          "to": "tfc:ore/poor_native_copper/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/schist",
+          "to": "tfc:ore/normal_native_copper/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/schist",
+          "to": "tfc:ore/rich_native_copper/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/shale",
+          "to": "tfc:ore/poor_native_copper/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/shale",
+          "to": "tfc:ore/normal_native_copper/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/shale",
+          "to": "tfc:ore/rich_native_copper/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_copper/slate",
+          "to": "tfc:ore/poor_native_copper/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_copper/slate",
+          "to": "tfc:ore/normal_native_copper/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_copper/slate",
+          "to": "tfc:ore/rich_native_copper/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_native_gold.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/andesite",
+          "to": "tfc:ore/poor_native_gold/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/andesite",
+          "to": "tfc:ore/normal_native_gold/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/andesite",
+          "to": "tfc:ore/rich_native_gold/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/basalt",
+          "to": "tfc:ore/poor_native_gold/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/basalt",
+          "to": "tfc:ore/normal_native_gold/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/basalt",
+          "to": "tfc:ore/rich_native_gold/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/chalk",
+          "to": "tfc:ore/poor_native_gold/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/chalk",
+          "to": "tfc:ore/normal_native_gold/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/chalk",
+          "to": "tfc:ore/rich_native_gold/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/chert",
+          "to": "tfc:ore/poor_native_gold/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/chert",
+          "to": "tfc:ore/normal_native_gold/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/chert",
+          "to": "tfc:ore/rich_native_gold/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/claystone",
+          "to": "tfc:ore/poor_native_gold/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/claystone",
+          "to": "tfc:ore/normal_native_gold/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/claystone",
+          "to": "tfc:ore/rich_native_gold/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/conglomerate",
+          "to": "tfc:ore/poor_native_gold/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/conglomerate",
+          "to": "tfc:ore/normal_native_gold/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/conglomerate",
+          "to": "tfc:ore/rich_native_gold/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/dacite",
+          "to": "tfc:ore/poor_native_gold/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/dacite",
+          "to": "tfc:ore/normal_native_gold/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/dacite",
+          "to": "tfc:ore/rich_native_gold/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/diorite",
+          "to": "tfc:ore/poor_native_gold/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/diorite",
+          "to": "tfc:ore/normal_native_gold/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/diorite",
+          "to": "tfc:ore/rich_native_gold/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/dolomite",
+          "to": "tfc:ore/poor_native_gold/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/dolomite",
+          "to": "tfc:ore/normal_native_gold/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/dolomite",
+          "to": "tfc:ore/rich_native_gold/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/gabbro",
+          "to": "tfc:ore/poor_native_gold/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/gabbro",
+          "to": "tfc:ore/normal_native_gold/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/gabbro",
+          "to": "tfc:ore/rich_native_gold/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/gneiss",
+          "to": "tfc:ore/poor_native_gold/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/gneiss",
+          "to": "tfc:ore/normal_native_gold/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/gneiss",
+          "to": "tfc:ore/rich_native_gold/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/granite",
+          "to": "tfc:ore/poor_native_gold/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/granite",
+          "to": "tfc:ore/normal_native_gold/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/granite",
+          "to": "tfc:ore/rich_native_gold/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/limestone",
+          "to": "tfc:ore/poor_native_gold/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/limestone",
+          "to": "tfc:ore/normal_native_gold/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/limestone",
+          "to": "tfc:ore/rich_native_gold/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/marble",
+          "to": "tfc:ore/poor_native_gold/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/marble",
+          "to": "tfc:ore/normal_native_gold/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/marble",
+          "to": "tfc:ore/rich_native_gold/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/phyllite",
+          "to": "tfc:ore/poor_native_gold/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/phyllite",
+          "to": "tfc:ore/normal_native_gold/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/phyllite",
+          "to": "tfc:ore/rich_native_gold/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/quartzite",
+          "to": "tfc:ore/poor_native_gold/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/quartzite",
+          "to": "tfc:ore/normal_native_gold/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/quartzite",
+          "to": "tfc:ore/rich_native_gold/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/rhyolite",
+          "to": "tfc:ore/poor_native_gold/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/rhyolite",
+          "to": "tfc:ore/normal_native_gold/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/rhyolite",
+          "to": "tfc:ore/rich_native_gold/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/schist",
+          "to": "tfc:ore/poor_native_gold/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/schist",
+          "to": "tfc:ore/normal_native_gold/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/schist",
+          "to": "tfc:ore/rich_native_gold/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/shale",
+          "to": "tfc:ore/poor_native_gold/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/shale",
+          "to": "tfc:ore/normal_native_gold/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/shale",
+          "to": "tfc:ore/rich_native_gold/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_gold/slate",
+          "to": "tfc:ore/poor_native_gold/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_gold/slate",
+          "to": "tfc:ore/normal_native_gold/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_gold/slate",
+          "to": "tfc:ore/rich_native_gold/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_native_silver.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/andesite",
+          "to": "tfc:ore/poor_native_silver/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/andesite",
+          "to": "tfc:ore/normal_native_silver/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/andesite",
+          "to": "tfc:ore/rich_native_silver/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/basalt",
+          "to": "tfc:ore/poor_native_silver/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/basalt",
+          "to": "tfc:ore/normal_native_silver/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/basalt",
+          "to": "tfc:ore/rich_native_silver/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/chalk",
+          "to": "tfc:ore/poor_native_silver/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/chalk",
+          "to": "tfc:ore/normal_native_silver/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/chalk",
+          "to": "tfc:ore/rich_native_silver/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/chert",
+          "to": "tfc:ore/poor_native_silver/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/chert",
+          "to": "tfc:ore/normal_native_silver/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/chert",
+          "to": "tfc:ore/rich_native_silver/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/claystone",
+          "to": "tfc:ore/poor_native_silver/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/claystone",
+          "to": "tfc:ore/normal_native_silver/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/claystone",
+          "to": "tfc:ore/rich_native_silver/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/conglomerate",
+          "to": "tfc:ore/poor_native_silver/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/conglomerate",
+          "to": "tfc:ore/normal_native_silver/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/conglomerate",
+          "to": "tfc:ore/rich_native_silver/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/dacite",
+          "to": "tfc:ore/poor_native_silver/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/dacite",
+          "to": "tfc:ore/normal_native_silver/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/dacite",
+          "to": "tfc:ore/rich_native_silver/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/diorite",
+          "to": "tfc:ore/poor_native_silver/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/diorite",
+          "to": "tfc:ore/normal_native_silver/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/diorite",
+          "to": "tfc:ore/rich_native_silver/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/dolomite",
+          "to": "tfc:ore/poor_native_silver/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/dolomite",
+          "to": "tfc:ore/normal_native_silver/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/dolomite",
+          "to": "tfc:ore/rich_native_silver/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/gabbro",
+          "to": "tfc:ore/poor_native_silver/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/gabbro",
+          "to": "tfc:ore/normal_native_silver/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/gabbro",
+          "to": "tfc:ore/rich_native_silver/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/gneiss",
+          "to": "tfc:ore/poor_native_silver/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/gneiss",
+          "to": "tfc:ore/normal_native_silver/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/gneiss",
+          "to": "tfc:ore/rich_native_silver/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/granite",
+          "to": "tfc:ore/poor_native_silver/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/granite",
+          "to": "tfc:ore/normal_native_silver/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/granite",
+          "to": "tfc:ore/rich_native_silver/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/limestone",
+          "to": "tfc:ore/poor_native_silver/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/limestone",
+          "to": "tfc:ore/normal_native_silver/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/limestone",
+          "to": "tfc:ore/rich_native_silver/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/marble",
+          "to": "tfc:ore/poor_native_silver/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/marble",
+          "to": "tfc:ore/normal_native_silver/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/marble",
+          "to": "tfc:ore/rich_native_silver/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/phyllite",
+          "to": "tfc:ore/poor_native_silver/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/phyllite",
+          "to": "tfc:ore/normal_native_silver/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/phyllite",
+          "to": "tfc:ore/rich_native_silver/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/quartzite",
+          "to": "tfc:ore/poor_native_silver/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/quartzite",
+          "to": "tfc:ore/normal_native_silver/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/quartzite",
+          "to": "tfc:ore/rich_native_silver/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/rhyolite",
+          "to": "tfc:ore/poor_native_silver/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/rhyolite",
+          "to": "tfc:ore/normal_native_silver/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/rhyolite",
+          "to": "tfc:ore/rich_native_silver/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/schist",
+          "to": "tfc:ore/poor_native_silver/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/schist",
+          "to": "tfc:ore/normal_native_silver/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/schist",
+          "to": "tfc:ore/rich_native_silver/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/shale",
+          "to": "tfc:ore/poor_native_silver/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/shale",
+          "to": "tfc:ore/normal_native_silver/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/shale",
+          "to": "tfc:ore/rich_native_silver/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_native_silver/slate",
+          "to": "tfc:ore/poor_native_silver/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_native_silver/slate",
+          "to": "tfc:ore/normal_native_silver/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_native_silver/slate",
+          "to": "tfc:ore/rich_native_silver/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_sphalerite.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/andesite",
+          "to": "tfc:ore/poor_sphalerite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/andesite",
+          "to": "tfc:ore/normal_sphalerite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/andesite",
+          "to": "tfc:ore/rich_sphalerite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/basalt",
+          "to": "tfc:ore/poor_sphalerite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/basalt",
+          "to": "tfc:ore/normal_sphalerite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/basalt",
+          "to": "tfc:ore/rich_sphalerite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/chalk",
+          "to": "tfc:ore/poor_sphalerite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/chalk",
+          "to": "tfc:ore/normal_sphalerite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/chalk",
+          "to": "tfc:ore/rich_sphalerite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/chert",
+          "to": "tfc:ore/poor_sphalerite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/chert",
+          "to": "tfc:ore/normal_sphalerite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/chert",
+          "to": "tfc:ore/rich_sphalerite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/claystone",
+          "to": "tfc:ore/poor_sphalerite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/claystone",
+          "to": "tfc:ore/normal_sphalerite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/claystone",
+          "to": "tfc:ore/rich_sphalerite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/conglomerate",
+          "to": "tfc:ore/poor_sphalerite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/conglomerate",
+          "to": "tfc:ore/normal_sphalerite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/conglomerate",
+          "to": "tfc:ore/rich_sphalerite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/dacite",
+          "to": "tfc:ore/poor_sphalerite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/dacite",
+          "to": "tfc:ore/normal_sphalerite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/dacite",
+          "to": "tfc:ore/rich_sphalerite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/diorite",
+          "to": "tfc:ore/poor_sphalerite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/diorite",
+          "to": "tfc:ore/normal_sphalerite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/diorite",
+          "to": "tfc:ore/rich_sphalerite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/dolomite",
+          "to": "tfc:ore/poor_sphalerite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/dolomite",
+          "to": "tfc:ore/normal_sphalerite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/dolomite",
+          "to": "tfc:ore/rich_sphalerite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/gabbro",
+          "to": "tfc:ore/poor_sphalerite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/gabbro",
+          "to": "tfc:ore/normal_sphalerite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/gabbro",
+          "to": "tfc:ore/rich_sphalerite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/gneiss",
+          "to": "tfc:ore/poor_sphalerite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/gneiss",
+          "to": "tfc:ore/normal_sphalerite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/gneiss",
+          "to": "tfc:ore/rich_sphalerite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/granite",
+          "to": "tfc:ore/poor_sphalerite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/granite",
+          "to": "tfc:ore/normal_sphalerite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/granite",
+          "to": "tfc:ore/rich_sphalerite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/limestone",
+          "to": "tfc:ore/poor_sphalerite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/limestone",
+          "to": "tfc:ore/normal_sphalerite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/limestone",
+          "to": "tfc:ore/rich_sphalerite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/marble",
+          "to": "tfc:ore/poor_sphalerite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/marble",
+          "to": "tfc:ore/normal_sphalerite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/marble",
+          "to": "tfc:ore/rich_sphalerite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/phyllite",
+          "to": "tfc:ore/poor_sphalerite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/phyllite",
+          "to": "tfc:ore/normal_sphalerite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/phyllite",
+          "to": "tfc:ore/rich_sphalerite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/quartzite",
+          "to": "tfc:ore/poor_sphalerite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/quartzite",
+          "to": "tfc:ore/normal_sphalerite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/quartzite",
+          "to": "tfc:ore/rich_sphalerite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/rhyolite",
+          "to": "tfc:ore/poor_sphalerite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/rhyolite",
+          "to": "tfc:ore/normal_sphalerite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/rhyolite",
+          "to": "tfc:ore/rich_sphalerite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/schist",
+          "to": "tfc:ore/poor_sphalerite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/schist",
+          "to": "tfc:ore/normal_sphalerite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/schist",
+          "to": "tfc:ore/rich_sphalerite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/shale",
+          "to": "tfc:ore/poor_sphalerite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/shale",
+          "to": "tfc:ore/normal_sphalerite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/shale",
+          "to": "tfc:ore/rich_sphalerite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_sphalerite/slate",
+          "to": "tfc:ore/poor_sphalerite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_sphalerite/slate",
+          "to": "tfc:ore/normal_sphalerite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_sphalerite/slate",
+          "to": "tfc:ore/rich_sphalerite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/normal_tetrahedrite.json",
+      "classification": {
+        "needs_tfc_namespace": 60,
+        "valid_florae_ore": 36
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/andesite",
+          "to": "tfc:ore/poor_tetrahedrite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/andesite",
+          "to": "tfc:ore/normal_tetrahedrite/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/andesite",
+          "to": "tfc:ore/rich_tetrahedrite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/basalt",
+          "to": "tfc:ore/poor_tetrahedrite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/basalt",
+          "to": "tfc:ore/normal_tetrahedrite/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/basalt",
+          "to": "tfc:ore/rich_tetrahedrite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/chalk",
+          "to": "tfc:ore/poor_tetrahedrite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/chalk",
+          "to": "tfc:ore/normal_tetrahedrite/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/chalk",
+          "to": "tfc:ore/rich_tetrahedrite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/chert",
+          "to": "tfc:ore/poor_tetrahedrite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/chert",
+          "to": "tfc:ore/normal_tetrahedrite/chert"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/chert",
+          "to": "tfc:ore/rich_tetrahedrite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/claystone",
+          "to": "tfc:ore/poor_tetrahedrite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/claystone",
+          "to": "tfc:ore/normal_tetrahedrite/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/claystone",
+          "to": "tfc:ore/rich_tetrahedrite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/conglomerate",
+          "to": "tfc:ore/poor_tetrahedrite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/conglomerate",
+          "to": "tfc:ore/normal_tetrahedrite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/conglomerate",
+          "to": "tfc:ore/rich_tetrahedrite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/dacite",
+          "to": "tfc:ore/poor_tetrahedrite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/dacite",
+          "to": "tfc:ore/normal_tetrahedrite/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/dacite",
+          "to": "tfc:ore/rich_tetrahedrite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/diorite",
+          "to": "tfc:ore/poor_tetrahedrite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/diorite",
+          "to": "tfc:ore/normal_tetrahedrite/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/diorite",
+          "to": "tfc:ore/rich_tetrahedrite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/dolomite",
+          "to": "tfc:ore/poor_tetrahedrite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/dolomite",
+          "to": "tfc:ore/normal_tetrahedrite/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/dolomite",
+          "to": "tfc:ore/rich_tetrahedrite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/gabbro",
+          "to": "tfc:ore/poor_tetrahedrite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/gabbro",
+          "to": "tfc:ore/normal_tetrahedrite/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/gabbro",
+          "to": "tfc:ore/rich_tetrahedrite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/gneiss",
+          "to": "tfc:ore/poor_tetrahedrite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/gneiss",
+          "to": "tfc:ore/normal_tetrahedrite/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/gneiss",
+          "to": "tfc:ore/rich_tetrahedrite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/granite",
+          "to": "tfc:ore/poor_tetrahedrite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/granite",
+          "to": "tfc:ore/normal_tetrahedrite/granite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/granite",
+          "to": "tfc:ore/rich_tetrahedrite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/limestone",
+          "to": "tfc:ore/poor_tetrahedrite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/limestone",
+          "to": "tfc:ore/normal_tetrahedrite/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/limestone",
+          "to": "tfc:ore/rich_tetrahedrite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/marble",
+          "to": "tfc:ore/poor_tetrahedrite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/marble",
+          "to": "tfc:ore/normal_tetrahedrite/marble"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/marble",
+          "to": "tfc:ore/rich_tetrahedrite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/phyllite",
+          "to": "tfc:ore/poor_tetrahedrite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/phyllite",
+          "to": "tfc:ore/normal_tetrahedrite/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/phyllite",
+          "to": "tfc:ore/rich_tetrahedrite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/quartzite",
+          "to": "tfc:ore/poor_tetrahedrite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/quartzite",
+          "to": "tfc:ore/normal_tetrahedrite/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/quartzite",
+          "to": "tfc:ore/rich_tetrahedrite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/rhyolite",
+          "to": "tfc:ore/poor_tetrahedrite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/rhyolite",
+          "to": "tfc:ore/normal_tetrahedrite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/rhyolite",
+          "to": "tfc:ore/rich_tetrahedrite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/schist",
+          "to": "tfc:ore/poor_tetrahedrite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/schist",
+          "to": "tfc:ore/normal_tetrahedrite/schist"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/schist",
+          "to": "tfc:ore/rich_tetrahedrite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/shale",
+          "to": "tfc:ore/poor_tetrahedrite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/shale",
+          "to": "tfc:ore/normal_tetrahedrite/shale"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/shale",
+          "to": "tfc:ore/rich_tetrahedrite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/poor_tetrahedrite/slate",
+          "to": "tfc:ore/poor_tetrahedrite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/normal_tetrahedrite/slate",
+          "to": "tfc:ore/normal_tetrahedrite/slate"
+        },
+        {
+          "from": "tfcflorae:ore/rich_tetrahedrite/slate",
+          "to": "tfc:ore/rich_tetrahedrite/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/ruby.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/andesite",
+          "to": "tfc:ore/ruby/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/basalt",
+          "to": "tfc:ore/ruby/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/chalk",
+          "to": "tfc:ore/ruby/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/chert",
+          "to": "tfc:ore/ruby/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/claystone",
+          "to": "tfc:ore/ruby/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/conglomerate",
+          "to": "tfc:ore/ruby/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/dacite",
+          "to": "tfc:ore/ruby/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/diorite",
+          "to": "tfc:ore/ruby/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/dolomite",
+          "to": "tfc:ore/ruby/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/gabbro",
+          "to": "tfc:ore/ruby/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/gneiss",
+          "to": "tfc:ore/ruby/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/granite",
+          "to": "tfc:ore/ruby/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/limestone",
+          "to": "tfc:ore/ruby/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/marble",
+          "to": "tfc:ore/ruby/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/phyllite",
+          "to": "tfc:ore/ruby/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/quartzite",
+          "to": "tfc:ore/ruby/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/rhyolite",
+          "to": "tfc:ore/ruby/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/schist",
+          "to": "tfc:ore/ruby/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/shale",
+          "to": "tfc:ore/ruby/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/ruby/slate",
+          "to": "tfc:ore/ruby/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/sulfur.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/andesite",
+          "to": "tfc:ore/sulfur/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/basalt",
+          "to": "tfc:ore/sulfur/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/chalk",
+          "to": "tfc:ore/sulfur/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/chert",
+          "to": "tfc:ore/sulfur/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/claystone",
+          "to": "tfc:ore/sulfur/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/conglomerate",
+          "to": "tfc:ore/sulfur/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/dacite",
+          "to": "tfc:ore/sulfur/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/diorite",
+          "to": "tfc:ore/sulfur/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/dolomite",
+          "to": "tfc:ore/sulfur/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/gabbro",
+          "to": "tfc:ore/sulfur/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/gneiss",
+          "to": "tfc:ore/sulfur/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/granite",
+          "to": "tfc:ore/sulfur/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/limestone",
+          "to": "tfc:ore/sulfur/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/marble",
+          "to": "tfc:ore/sulfur/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/phyllite",
+          "to": "tfc:ore/sulfur/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/quartzite",
+          "to": "tfc:ore/sulfur/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/rhyolite",
+          "to": "tfc:ore/sulfur/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/schist",
+          "to": "tfc:ore/sulfur/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/shale",
+          "to": "tfc:ore/sulfur/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/sulfur/slate",
+          "to": "tfc:ore/sulfur/slate"
+        }
+      ],
+      "unregistered": []
+    },
+    {
+      "file": "src/main/resources/data/tfcflorae/worldgen/configured_feature/vein/sylvite.json",
+      "classification": {
+        "needs_tfc_namespace": 20,
+        "valid_florae_ore": 12
+      },
+      "replacements": [
+        {
+          "from": "tfcflorae:rock/raw/andesite",
+          "to": "tfc:rock/raw/andesite"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/andesite",
+          "to": "tfc:ore/sylvite/andesite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/basalt",
+          "to": "tfc:rock/raw/basalt"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/basalt",
+          "to": "tfc:ore/sylvite/basalt"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chalk",
+          "to": "tfc:rock/raw/chalk"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/chalk",
+          "to": "tfc:ore/sylvite/chalk"
+        },
+        {
+          "from": "tfcflorae:rock/raw/chert",
+          "to": "tfc:rock/raw/chert"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/chert",
+          "to": "tfc:ore/sylvite/chert"
+        },
+        {
+          "from": "tfcflorae:rock/raw/claystone",
+          "to": "tfc:rock/raw/claystone"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/claystone",
+          "to": "tfc:ore/sylvite/claystone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/conglomerate",
+          "to": "tfc:rock/raw/conglomerate"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/conglomerate",
+          "to": "tfc:ore/sylvite/conglomerate"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dacite",
+          "to": "tfc:rock/raw/dacite"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/dacite",
+          "to": "tfc:ore/sylvite/dacite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/diorite",
+          "to": "tfc:rock/raw/diorite"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/diorite",
+          "to": "tfc:ore/sylvite/diorite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/dolomite",
+          "to": "tfc:rock/raw/dolomite"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/dolomite",
+          "to": "tfc:ore/sylvite/dolomite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gabbro",
+          "to": "tfc:rock/raw/gabbro"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/gabbro",
+          "to": "tfc:ore/sylvite/gabbro"
+        },
+        {
+          "from": "tfcflorae:rock/raw/gneiss",
+          "to": "tfc:rock/raw/gneiss"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/gneiss",
+          "to": "tfc:ore/sylvite/gneiss"
+        },
+        {
+          "from": "tfcflorae:rock/raw/granite",
+          "to": "tfc:rock/raw/granite"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/granite",
+          "to": "tfc:ore/sylvite/granite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/limestone",
+          "to": "tfc:rock/raw/limestone"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/limestone",
+          "to": "tfc:ore/sylvite/limestone"
+        },
+        {
+          "from": "tfcflorae:rock/raw/marble",
+          "to": "tfc:rock/raw/marble"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/marble",
+          "to": "tfc:ore/sylvite/marble"
+        },
+        {
+          "from": "tfcflorae:rock/raw/phyllite",
+          "to": "tfc:rock/raw/phyllite"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/phyllite",
+          "to": "tfc:ore/sylvite/phyllite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/quartzite",
+          "to": "tfc:rock/raw/quartzite"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/quartzite",
+          "to": "tfc:ore/sylvite/quartzite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/rhyolite",
+          "to": "tfc:rock/raw/rhyolite"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/rhyolite",
+          "to": "tfc:ore/sylvite/rhyolite"
+        },
+        {
+          "from": "tfcflorae:rock/raw/schist",
+          "to": "tfc:rock/raw/schist"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/schist",
+          "to": "tfc:ore/sylvite/schist"
+        },
+        {
+          "from": "tfcflorae:rock/raw/shale",
+          "to": "tfc:rock/raw/shale"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/shale",
+          "to": "tfc:ore/sylvite/shale"
+        },
+        {
+          "from": "tfcflorae:rock/raw/slate",
+          "to": "tfc:rock/raw/slate"
+        },
+        {
+          "from": "tfcflorae:ore/sylvite/slate",
+          "to": "tfc:ore/sylvite/slate"
+        }
+      ],
+      "unregistered": []
+    }
+  ]
+}

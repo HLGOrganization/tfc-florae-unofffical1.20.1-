@@ -57,10 +57,9 @@ public class TFCFlorae {
       TFCFSounds.SOUNDS.register(bus);
       TFCFParticles.PARTICLE_TYPES.register(bus);
       TFCFBlockEntities.BLOCK_ENTITIES.register(bus);
-            TFCFCreativeTabs.TABS.register(bus);
-      // 世界生成：特征本体 + 树干放置器类型 + 树装饰器类型
+      TFCFCreativeTabs.TABS.register(bus);
+      // 世界生成：专用特征与竹类树装饰器；普通树使用 TFC 原生实现
       TFCFFeatures.FEATURES.register(bus);
-      TFCFFeatures.TRUNK_DECOR.register(bus);
       TFCFFeatures.LEAF_DECOR.register(bus);
       TFCFBrain.registerAll(bus);
       Config.init();

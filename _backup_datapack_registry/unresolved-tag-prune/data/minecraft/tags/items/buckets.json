@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:bucket/ore/anthracite",
+    "tfcflorae:bucket/ore/bituminous_coal",
+    "tfcflorae:bucket/ore/charcoal",
+    "tfcflorae:bucket/ore/coke",
+    "tfcflorae:bucket/ore/lignite"
+  ]
+}

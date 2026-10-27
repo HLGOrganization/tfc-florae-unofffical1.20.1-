@@ -1,0 +1,1500 @@
+{
+  "file": "data/tfc/tags/worldgen/configured_feature/forest_trees.json",
+  "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\data\\tfc\\tags\\worldgen\\configured_feature\\forest_trees.json",
+  "before": {
+    "replace": false,
+    "values": [
+      "tfc:tree/acacia_entry",
+      "tfc:tree/ash_entry",
+      "tfc:tree/aspen_entry",
+      "tfc:tree/birch_entry",
+      "tfc:tree/blackwood_entry",
+      "tfc:tree/chestnut_entry",
+      "tfc:tree/douglas_fir_entry",
+      "tfc:tree/hickory_entry",
+      "tfc:tree/kapok_entry",
+      "tfc:tree/maple_entry",
+      "tfc:tree/oak_entry",
+      "tfc:tree/palm_entry",
+      "tfc:tree/pine_entry",
+      "tfc:tree/rosewood_entry",
+      "tfc:tree/sequoia_entry",
+      "tfc:tree/spruce_entry",
+      "tfc:tree/sycamore_entry",
+      "tfc:tree/white_cedar_entry",
+      "tfc:tree/willow_entry",
+      "tfcflorae:tree/african_padauk",
+      "tfcflorae:tree/african_padauk_dead",
+      "tfcflorae:tree/african_padauk_entry",
+      "tfcflorae:tree/african_padauk_large",
+      "tfcflorae:tree/african_padauk_tall",
+      "tfcflorae:tree/alder",
+      "tfcflorae:tree/alder_dead",
+      "tfcflorae:tree/alder_entry",
+      "tfcflorae:tree/alder_large",
+      "tfcflorae:tree/alder_tall",
+      "tfcflorae:tree/angelim",
+      "tfcflorae:tree/angelim_dead",
+      "tfcflorae:tree/angelim_entry",
+      "tfcflorae:tree/angelim_large",
+      "tfcflorae:tree/angelim_tall",
+      "tfcflorae:tree/argyle_eucalyptus",
+      "tfcflorae:tree/argyle_eucalyptus_dead",
+      "tfcflorae:tree/argyle_eucalyptus_entry",
+      "tfcflorae:tree/argyle_eucalyptus_large",
+      "tfcflorae:tree/argyle_eucalyptus_tall",
+      "tfcflorae:tree/bald_cypress",
+      "tfcflorae:tree/bald_cypress_dead",
+      "tfcflorae:tree/bald_cypress_entry",
+      "tfcflorae:tree/bamboo",
+      "tfcflorae:tree/bamboo_large",
+      "tfcflorae:tree/bamboo_tall",
+      "tfcflorae:tree/beech",
+      "tfcflorae:tree/beech_dead",
+      "tfcflorae:tree/beech_entry",
+      "tfcflorae:tree/beech_large",
+      "tfcflorae:tree/beech_tall",
+      "tfcflorae:tree/black_willow",
+      "tfcflorae:tree/black_willow_dead",
+      "tfcflorae:tree/black_willow_entry",
+      "tfcflorae:tree/black_willow_large",
+      "tfcflorae:tree/brazilwood",
+      "tfcflorae:tree/brazilwood_dead",
+      "tfcflorae:tree/brazilwood_entry",
+      "tfcflorae:tree/brazilwood_large",
+      "tfcflorae:tree/brazilwood_tall",
+      "tfcflorae:tree/butternut",
+      "tfcflorae:tree/butternut_dead",
+      "tfcflorae:tree/butternut_entry",
+      "tfcflorae:tree/butternut_large",
+      "tfcflorae:tree/butternut_tall",
+      "tfcflorae:tree/buxus",
+      "tfcflorae:tree/buxus_dead",
+      "tfcflorae:tree/buxus_entry",
+      "tfcflorae:tree/buxus_large",
+      "tfcflorae:tree/buxus_tall",
+      "tfcflorae:tree/cocobolo",
+      "tfcflorae:tree/cocobolo_dead",
+      "tfcflorae:tree/cocobolo_entry",
+      "tfcflorae:tree/cocobolo_large",
+      "tfcflorae:tree/cocobolo_tall",
+      "tfcflorae:tree/common_oak",
+      "tfcflorae:tree/common_oak_dead",
+      "tfcflorae:tree/common_oak_entry",
+      "tfcflorae:tree/common_oak_large",
+      "tfcflorae:tree/common_oak_tall",
+      "tfcflorae:tree/fever",
+      "tfcflorae:tree/fever_dead",
+      "tfcflorae:tree/fever_entry",
+      "tfcflorae:tree/fever_large",
+      "tfcflorae:tree/fever_tall",
+      "tfcflorae:tree/ghaf",
+      "tfcflorae:tree/ghaf_dead",
+      "tfcflorae:tree/ghaf_entry",
+      "tfcflorae:tree/ghaf_large",
+      "tfcflorae:tree/ghaf_tall",
+      "tfcflorae:tree/ginkgo",
+      "tfcflorae:tree/ginkgo_dead",
+      "tfcflorae:tree/ginkgo_entry",
+      "tfcflorae:tree/ginkgo_large",
+      "tfcflorae:tree/ginkgo_tall",
+      "tfcflorae:tree/greenheart",
+      "tfcflorae:tree/greenheart_dead",
+      "tfcflorae:tree/greenheart_entry",
+      "tfcflorae:tree/greenheart_large",
+      "tfcflorae:tree/greenheart_tall",
+      "tfcflorae:tree/hawthorn",
+      "tfcflorae:tree/hawthorn_dead",
+      "tfcflorae:tree/hawthorn_entry",
+      "tfcflorae:tree/hawthorn_large",
+      "tfcflorae:tree/hawthorn_tall",
+      "tfcflorae:tree/hazel",
+      "tfcflorae:tree/hazel_dead",
+      "tfcflorae:tree/hazel_entry",
+      "tfcflorae:tree/hazel_large",
+      "tfcflorae:tree/hazel_tall",
+      "tfcflorae:tree/holly",
+      "tfcflorae:tree/holly_dead",
+      "tfcflorae:tree/holly_entry",
+      "tfcflorae:tree/holly_large",
+      "tfcflorae:tree/holly_tall",
+      "tfcflorae:tree/hornbeam",
+      "tfcflorae:tree/hornbeam_dead",
+      "tfcflorae:tree/hornbeam_entry",
+      "tfcflorae:tree/hornbeam_large",
+      "tfcflorae:tree/hornbeam_tall",
+      "tfcflorae:tree/iroko",
+      "tfcflorae:tree/iroko_dead",
+      "tfcflorae:tree/iroko_entry",
+      "tfcflorae:tree/iroko_large",
+      "tfcflorae:tree/iroko_tall",
+      "tfcflorae:tree/jabuticabeira",
+      "tfcflorae:tree/jabuticabeira_dead",
+      "tfcflorae:tree/jabuticabeira_entry",
+      "tfcflorae:tree/jabuticabeira_large",
+      "tfcflorae:tree/jabuticabeira_tall",
+      "tfcflorae:tree/joshua",
+      "tfcflorae:tree/joshua_entry",
+      "tfcflorae:tree/joshua_large",
+      "tfcflorae:tree/joshua_tall",
+      "tfcflorae:tree/juniper",
+      "tfcflorae:tree/juniper_dead",
+      "tfcflorae:tree/juniper_entry",
+      "tfcflorae:tree/juniper_large",
+      "tfcflorae:tree/juniper_tall",
+      "tfcflorae:tree/kauri",
+      "tfcflorae:tree/kauri_dead",
+      "tfcflorae:tree/kauri_entry",
+      "tfcflorae:tree/kauri_large",
+      "tfcflorae:tree/kauri_tall",
+      "tfcflorae:tree/laurel",
+      "tfcflorae:tree/laurel_dead",
+      "tfcflorae:tree/laurel_entry",
+      "tfcflorae:tree/laurel_large",
+      "tfcflorae:tree/laurel_tall",
+      "tfcflorae:tree/limba",
+      "tfcflorae:tree/limba_dead",
+      "tfcflorae:tree/limba_entry",
+      "tfcflorae:tree/limba_large",
+      "tfcflorae:tree/limba_tall",
+      "tfcflorae:tree/locust",
+      "tfcflorae:tree/locust_dead",
+      "tfcflorae:tree/locust_entry",
+      "tfcflorae:tree/locust_large",
+      "tfcflorae:tree/locust_tall",
+      "tfcflorae:tree/logwood",
+      "tfcflorae:tree/logwood_dead",
+      "tfcflorae:tree/logwood_entry",
+      "tfcflorae:tree/logwood_large",
+      "tfcflorae:tree/logwood_tall",
+      "tfcflorae:tree/maclura",
+      "tfcflorae:tree/maclura_dead",
+      "tfcflorae:tree/maclura_entry",
+      "tfcflorae:tree/maclura_large",
+      "tfcflorae:tree/maclura_tall",
+      "tfcflorae:tree/mahoe",
+      "tfcflorae:tree/mahoe_dead",
+      "tfcflorae:tree/mahoe_entry",
+      "tfcflorae:tree/mahoe_large",
+      "tfcflorae:tree/mahoe_tall",
+      "tfcflorae:tree/marblewood",
+      "tfcflorae:tree/marblewood_dead",
+      "tfcflorae:tree/marblewood_entry",
+      "tfcflorae:tree/marblewood_large",
+      "tfcflorae:tree/marblewood_tall",
+      "tfcflorae:tree/medlar",
+      "tfcflorae:tree/medlar_dead",
+      "tfcflorae:tree/medlar_entry",
+      "tfcflorae:tree/medlar_large",
+      "tfcflorae:tree/medlar_tall",
+      "tfcflorae:tree/messmate",
+      "tfcflorae:tree/messmate_dead",
+      "tfcflorae:tree/messmate_entry",
+      "tfcflorae:tree/messmate_large",
+      "tfcflorae:tree/messmate_tall",
+      "tfcflorae:tree/mountain_ash",
+      "tfcflorae:tree/mountain_ash_dead",
+      "tfcflorae:tree/mountain_ash_entry",
+      "tfcflorae:tree/mountain_ash_large",
+      "tfcflorae:tree/mountain_ash_tall",
+      "tfcflorae:tree/mulberry",
+      "tfcflorae:tree/mulberry_dead",
+      "tfcflorae:tree/mulberry_entry",
+      "tfcflorae:tree/mulberry_large",
+      "tfcflorae:tree/mulberry_tall",
+      "tfcflorae:tree/nordmann_fir",
+      "tfcflorae:tree/nordmann_fir_dead",
+      "tfcflorae:tree/nordmann_fir_entry",
+      "tfcflorae:tree/nordmann_fir_large",
+      "tfcflorae:tree/nordmann_fir_tall",
+      "tfcflorae:tree/pear",
+      "tfcflorae:tree/pear_dead",
+      "tfcflorae:tree/pear_entry",
+      "tfcflorae:tree/pear_large",
+      "tfcflorae:tree/pear_tall",
+      "tfcflorae:tree/persimmon",
+      "tfcflorae:tree/persimmon_dead",
+      "tfcflorae:tree/persimmon_entry",
+      "tfcflorae:tree/persimmon_large",
+      "tfcflorae:tree/persimmon_tall",
+      "tfcflorae:tree/pink_cherry_blossom",
+      "tfcflorae:tree/pink_cherry_blossom_dead",
+      "tfcflorae:tree/pink_cherry_blossom_entry",
+      "tfcflorae:tree/pink_cherry_blossom_large",
+      "tfcflorae:tree/pink_cherry_blossom_tall",
+      "tfcflorae:tree/poplar",
+      "tfcflorae:tree/poplar_dead",
+      "tfcflorae:tree/poplar_entry",
+      "tfcflorae:tree/poplar_large",
+      "tfcflorae:tree/poplar_tall",
+      "tfcflorae:tree/purple_ipe",
+      "tfcflorae:tree/purple_ipe_dead",
+      "tfcflorae:tree/purple_ipe_entry",
+      "tfcflorae:tree/purple_ipe_large",
+      "tfcflorae:tree/purple_ipe_tall",
+      "tfcflorae:tree/purple_jacaranda",
+      "tfcflorae:tree/purple_jacaranda_dead",
+      "tfcflorae:tree/purple_jacaranda_entry",
+      "tfcflorae:tree/purple_jacaranda_large",
+      "tfcflorae:tree/purple_jacaranda_tall",
+      "tfcflorae:tree/purpleheart",
+      "tfcflorae:tree/purpleheart_dead",
+      "tfcflorae:tree/purpleheart_entry",
+      "tfcflorae:tree/purpleheart_large",
+      "tfcflorae:tree/purpleheart_tall",
+      "tfcflorae:tree/quince",
+      "tfcflorae:tree/quince_dead",
+      "tfcflorae:tree/quince_entry",
+      "tfcflorae:tree/quince_large",
+      "tfcflorae:tree/quince_tall",
+      "tfcflorae:tree/red_cedar",
+      "tfcflorae:tree/red_cedar_dead",
+      "tfcflorae:tree/red_cedar_entry",
+      "tfcflorae:tree/red_cedar_large",
+      "tfcflorae:tree/red_cedar_tall",
+      "tfcflorae:tree/red_cypress",
+      "tfcflorae:tree/red_cypress_dead",
+      "tfcflorae:tree/red_cypress_entry",
+      "tfcflorae:tree/red_elm",
+      "tfcflorae:tree/red_elm_dead",
+      "tfcflorae:tree/red_elm_entry",
+      "tfcflorae:tree/red_elm_large",
+      "tfcflorae:tree/red_elm_tall",
+      "tfcflorae:tree/red_mangrove",
+      "tfcflorae:tree/red_mangrove_large",
+      "tfcflorae:tree/red_mangrove_tall",
+      "tfcflorae:tree/rowan",
+      "tfcflorae:tree/rowan_dead",
+      "tfcflorae:tree/rowan_entry",
+      "tfcflorae:tree/rowan_large",
+      "tfcflorae:tree/rowan_tall",
+      "tfcflorae:tree/rubber_fig",
+      "tfcflorae:tree/rubber_fig_dead",
+      "tfcflorae:tree/rubber_fig_entry",
+      "tfcflorae:tree/rubber_fig_large",
+      "tfcflorae:tree/rubber_fig_tall",
+      "tfcflorae:tree/sloe",
+      "tfcflorae:tree/sloe_dead",
+      "tfcflorae:tree/sloe_entry",
+      "tfcflorae:tree/sloe_large",
+      "tfcflorae:tree/sloe_tall",
+      "tfcflorae:tree/sorb",
+      "tfcflorae:tree/sorb_dead",
+      "tfcflorae:tree/sorb_entry",
+      "tfcflorae:tree/sorb_large",
+      "tfcflorae:tree/sorb_tall",
+      "tfcflorae:tree/sweetgum",
+      "tfcflorae:tree/sweetgum_dead",
+      "tfcflorae:tree/sweetgum_entry",
+      "tfcflorae:tree/sweetgum_large",
+      "tfcflorae:tree/sweetgum_tall",
+      "tfcflorae:tree/syzygium",
+      "tfcflorae:tree/syzygium_dead",
+      "tfcflorae:tree/syzygium_entry",
+      "tfcflorae:tree/syzygium_large",
+      "tfcflorae:tree/syzygium_tall",
+      "tfcflorae:tree/wenge",
+      "tfcflorae:tree/wenge_dead",
+      "tfcflorae:tree/wenge_entry",
+      "tfcflorae:tree/wenge_large",
+      "tfcflorae:tree/wenge_tall",
+      "tfcflorae:tree/white_cedar",
+      "tfcflorae:tree/white_cedar_dead",
+      "tfcflorae:tree/white_cedar_large",
+      "tfcflorae:tree/white_cedar_tall",
+      "tfcflorae:tree/white_cherry_blossom",
+      "tfcflorae:tree/white_cherry_blossom_dead",
+      "tfcflorae:tree/white_cherry_blossom_entry",
+      "tfcflorae:tree/white_cherry_blossom_large",
+      "tfcflorae:tree/white_cherry_blossom_tall",
+      "tfcflorae:tree/white_elm",
+      "tfcflorae:tree/white_elm_dead",
+      "tfcflorae:tree/white_elm_entry",
+      "tfcflorae:tree/white_elm_large",
+      "tfcflorae:tree/white_elm_tall",
+      "tfcflorae:tree/white_ipe",
+      "tfcflorae:tree/white_ipe_dead",
+      "tfcflorae:tree/white_ipe_entry",
+      "tfcflorae:tree/white_ipe_large",
+      "tfcflorae:tree/white_ipe_tall",
+      "tfcflorae:tree/white_jacaranda",
+      "tfcflorae:tree/white_jacaranda_dead",
+      "tfcflorae:tree/white_jacaranda_entry",
+      "tfcflorae:tree/white_jacaranda_large",
+      "tfcflorae:tree/white_jacaranda_tall",
+      "tfcflorae:tree/white_mangrove",
+      "tfcflorae:tree/white_mangrove_large",
+      "tfcflorae:tree/white_mangrove_tall",
+      "tfcflorae:tree/whitebeam",
+      "tfcflorae:tree/whitebeam_dead",
+      "tfcflorae:tree/whitebeam_entry",
+      "tfcflorae:tree/whitebeam_large",
+      "tfcflorae:tree/whitebeam_tall",
+      "tfcflorae:tree/yellow_jacaranda",
+      "tfcflorae:tree/yellow_jacaranda_dead",
+      "tfcflorae:tree/yellow_jacaranda_entry",
+      "tfcflorae:tree/yellow_jacaranda_large",
+      "tfcflorae:tree/yellow_jacaranda_tall",
+      "tfcflorae:tree/yellow_meranti",
+      "tfcflorae:tree/yellow_meranti_dead",
+      "tfcflorae:tree/yellow_meranti_entry",
+      "tfcflorae:tree/yellow_meranti_large",
+      "tfcflorae:tree/yellow_meranti_tall",
+      "tfcflorae:tree/yew",
+      "tfcflorae:tree/yew_dead",
+      "tfcflorae:tree/yew_entry",
+      "tfcflorae:tree/yew_large",
+      "tfcflorae:tree/yew_tall",
+      "tfcflorae:tree/zebrawood",
+      "tfcflorae:tree/zebrawood_dead",
+      "tfcflorae:tree/zebrawood_entry",
+      "tfcflorae:tree/zebrawood_large",
+      "tfcflorae:tree/zebrawood_tall"
+    ]
+  },
+  "after": {
+    "replace": false,
+    "values": [
+      "tfc:tree/acacia_entry",
+      "tfc:tree/ash_entry",
+      "tfc:tree/aspen_entry",
+      "tfc:tree/birch_entry",
+      "tfc:tree/blackwood_entry",
+      "tfc:tree/chestnut_entry",
+      "tfc:tree/douglas_fir_entry",
+      "tfc:tree/hickory_entry",
+      "tfc:tree/kapok_entry",
+      "tfc:tree/maple_entry",
+      "tfc:tree/oak_entry",
+      "tfc:tree/palm_entry",
+      "tfc:tree/pine_entry",
+      "tfc:tree/rosewood_entry",
+      "tfc:tree/sequoia_entry",
+      "tfc:tree/spruce_entry",
+      "tfc:tree/sycamore_entry",
+      "tfc:tree/white_cedar_entry",
+      "tfc:tree/willow_entry",
+      "tfcflorae:tree/african_padauk_entry",
+      "tfcflorae:tree/alder_entry",
+      "tfcflorae:tree/angelim_entry",
+      "tfcflorae:tree/argyle_eucalyptus_entry",
+      "tfcflorae:tree/bald_cypress_entry",
+      "tfcflorae:tree/beech_entry",
+      "tfcflorae:tree/black_willow_entry",
+      "tfcflorae:tree/brazilwood_entry",
+      "tfcflorae:tree/butternut_entry",
+      "tfcflorae:tree/buxus_entry",
+      "tfcflorae:tree/cocobolo_entry",
+      "tfcflorae:tree/common_oak_entry",
+      "tfcflorae:tree/fever_entry",
+      "tfcflorae:tree/ghaf_entry",
+      "tfcflorae:tree/ginkgo_entry",
+      "tfcflorae:tree/greenheart_entry",
+      "tfcflorae:tree/hawthorn_entry",
+      "tfcflorae:tree/hazel_entry",
+      "tfcflorae:tree/holly_entry",
+      "tfcflorae:tree/hornbeam_entry",
+      "tfcflorae:tree/iroko_entry",
+      "tfcflorae:tree/jabuticabeira_entry",
+      "tfcflorae:tree/joshua_entry",
+      "tfcflorae:tree/juniper_entry",
+      "tfcflorae:tree/kauri_entry",
+      "tfcflorae:tree/laurel_entry",
+      "tfcflorae:tree/limba_entry",
+      "tfcflorae:tree/locust_entry",
+      "tfcflorae:tree/logwood_entry",
+      "tfcflorae:tree/maclura_entry",
+      "tfcflorae:tree/mahoe_entry",
+      "tfcflorae:tree/marblewood_entry",
+      "tfcflorae:tree/medlar_entry",
+      "tfcflorae:tree/messmate_entry",
+      "tfcflorae:tree/mountain_ash_entry",
+      "tfcflorae:tree/mulberry_entry",
+      "tfcflorae:tree/nordmann_fir_entry",
+      "tfcflorae:tree/pear_entry",
+      "tfcflorae:tree/persimmon_entry",
+      "tfcflorae:tree/pink_cherry_blossom_entry",
+      "tfcflorae:tree/poplar_entry",
+      "tfcflorae:tree/purple_ipe_entry",
+      "tfcflorae:tree/purple_jacaranda_entry",
+      "tfcflorae:tree/purpleheart_entry",
+      "tfcflorae:tree/quince_entry",
+      "tfcflorae:tree/red_cedar_entry",
+      "tfcflorae:tree/red_cypress_entry",
+      "tfcflorae:tree/red_elm_entry",
+      "tfcflorae:tree/rowan_entry",
+      "tfcflorae:tree/rubber_fig_entry",
+      "tfcflorae:tree/sloe_entry",
+      "tfcflorae:tree/sorb_entry",
+      "tfcflorae:tree/sweetgum_entry",
+      "tfcflorae:tree/syzygium_entry",
+      "tfcflorae:tree/wenge_entry",
+      "tfcflorae:tree/white_cherry_blossom_entry",
+      "tfcflorae:tree/white_elm_entry",
+      "tfcflorae:tree/white_ipe_entry",
+      "tfcflorae:tree/white_jacaranda_entry",
+      "tfcflorae:tree/whitebeam_entry",
+      "tfcflorae:tree/yellow_jacaranda_entry",
+      "tfcflorae:tree/yellow_meranti_entry",
+      "tfcflorae:tree/yew_entry",
+      "tfcflorae:tree/zebrawood_entry"
+    ]
+  },
+  "removed_wrong_config_types": [
+    {
+      "id": "tfcflorae:tree/african_padauk",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/african_padauk_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/african_padauk_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/african_padauk_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/alder",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/alder_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/alder_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/alder_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/angelim",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/angelim_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/angelim_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/angelim_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/argyle_eucalyptus",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/argyle_eucalyptus_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/argyle_eucalyptus_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/argyle_eucalyptus_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/bald_cypress",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/bald_cypress_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/bamboo",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/bamboo_large",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/bamboo_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/beech",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/beech_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/beech_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/beech_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/black_willow",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/black_willow_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/black_willow_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/brazilwood",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/brazilwood_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/brazilwood_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/brazilwood_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/butternut",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/butternut_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/butternut_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/butternut_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/buxus",
+      "type": "tfc:overlay_tree"
+    },
+    {
+      "id": "tfcflorae:tree/buxus_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/buxus_large",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/buxus_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/cocobolo",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/cocobolo_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/cocobolo_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/cocobolo_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/common_oak",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/common_oak_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/common_oak_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/common_oak_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/fever",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/fever_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/fever_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/fever_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/ghaf",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/ghaf_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/ghaf_large",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/ghaf_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/ginkgo",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/ginkgo_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/ginkgo_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/ginkgo_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/greenheart",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/greenheart_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/greenheart_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/greenheart_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/hawthorn",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/hawthorn_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/hawthorn_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/hawthorn_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/hazel",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/hazel_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/hazel_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/hazel_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/holly",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/holly_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/holly_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/holly_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/hornbeam",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/hornbeam_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/hornbeam_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/hornbeam_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/iroko",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/iroko_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/iroko_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/iroko_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/jabuticabeira",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/jabuticabeira_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/jabuticabeira_large",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/jabuticabeira_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/joshua",
+      "type": "tfcflorae:joshua_tree"
+    },
+    {
+      "id": "tfcflorae:tree/joshua_large",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/joshua_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/juniper",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/juniper_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/juniper_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/juniper_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/kauri",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/kauri_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/kauri_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/kauri_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/laurel",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/laurel_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/laurel_large",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/laurel_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/limba",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/limba_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/limba_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/limba_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/locust",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/locust_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/locust_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/locust_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/logwood",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/logwood_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/logwood_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/logwood_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/maclura",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/maclura_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/maclura_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/maclura_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/mahoe",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/mahoe_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/mahoe_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/mahoe_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/marblewood",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/marblewood_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/marblewood_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/marblewood_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/medlar",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/medlar_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/medlar_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/medlar_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/messmate",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/messmate_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/messmate_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/messmate_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/mountain_ash",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/mountain_ash_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/mountain_ash_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/mountain_ash_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/mulberry",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/mulberry_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/mulberry_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/mulberry_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/nordmann_fir",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/nordmann_fir_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/nordmann_fir_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/nordmann_fir_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/pear",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/pear_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/pear_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/pear_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/persimmon",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/persimmon_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/persimmon_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/persimmon_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/pink_cherry_blossom",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/pink_cherry_blossom_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/pink_cherry_blossom_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/pink_cherry_blossom_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/poplar",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/poplar_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/poplar_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/poplar_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/purple_ipe",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/purple_ipe_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/purple_ipe_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/purple_ipe_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/purple_jacaranda",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/purple_jacaranda_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/purple_jacaranda_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/purple_jacaranda_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/purpleheart",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/purpleheart_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/purpleheart_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/purpleheart_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/quince",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/quince_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/quince_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/quince_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_cedar",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_cedar_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_cedar_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_cedar_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_cypress",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_cypress_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_elm",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_elm_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_elm_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_elm_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_mangrove",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_mangrove_large",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/red_mangrove_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/rowan",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/rowan_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/rowan_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/rowan_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/rubber_fig",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/rubber_fig_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/rubber_fig_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/rubber_fig_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/sloe",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/sloe_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/sloe_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/sloe_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/sorb",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/sorb_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/sorb_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/sorb_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/sweetgum",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/sweetgum_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/sweetgum_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/sweetgum_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/syzygium",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/syzygium_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/syzygium_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/syzygium_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/wenge",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/wenge_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/wenge_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/wenge_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_cedar",
+      "type": "tfc:overlay_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_cedar_dead",
+      "type": "tfc:overlay_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_cedar_large",
+      "type": "tfc:overlay_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_cedar_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_cherry_blossom",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_cherry_blossom_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_cherry_blossom_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_cherry_blossom_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_elm",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_elm_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_elm_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_elm_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_ipe",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_ipe_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_ipe_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_ipe_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_jacaranda",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_jacaranda_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_jacaranda_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_jacaranda_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_mangrove",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_mangrove_large",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/white_mangrove_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/whitebeam",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/whitebeam_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/whitebeam_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/whitebeam_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/yellow_jacaranda",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/yellow_jacaranda_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/yellow_jacaranda_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/yellow_jacaranda_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/yellow_meranti",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/yellow_meranti_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/yellow_meranti_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/yellow_meranti_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/yew",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/yew_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/yew_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/yew_tall",
+      "type": "minecraft:tree"
+    },
+    {
+      "id": "tfcflorae:tree/zebrawood",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/zebrawood_dead",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/zebrawood_large",
+      "type": "tfc:random_tree"
+    },
+    {
+      "id": "tfcflorae:tree/zebrawood_tall",
+      "type": "minecraft:tree"
+    }
+  ],
+  "florae_entry_count": 64,
+  "native_entry_count": 19,
+  "duplicates_after": 0
+}

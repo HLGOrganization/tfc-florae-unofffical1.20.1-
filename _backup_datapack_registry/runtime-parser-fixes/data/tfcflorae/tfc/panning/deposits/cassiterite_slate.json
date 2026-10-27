@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/cassiterite/slate",
+  "model_stages": [
+    "tfc:item/pan/cassiterite/slate_full",
+    "tfc:item/pan/cassiterite/slate_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_slate"
+}

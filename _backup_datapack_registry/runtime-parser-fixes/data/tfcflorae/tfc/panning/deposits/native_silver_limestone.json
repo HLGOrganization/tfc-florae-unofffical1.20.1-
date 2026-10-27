@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/limestone",
+  "model_stages": [
+    "tfc:item/pan/native_silver/limestone_full",
+    "tfc:item/pan/native_silver/limestone_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver_limestone"
+}

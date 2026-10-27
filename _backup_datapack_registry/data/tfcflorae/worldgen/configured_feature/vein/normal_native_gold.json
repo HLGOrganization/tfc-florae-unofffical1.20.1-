@@ -1,0 +1,621 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 60,
+    "density": 0.5,
+    "min_y": -30,
+    "max_y": 40,
+    "size": 25,
+    "random_name": "normal_native_gold",
+    "blocks": [
+      {
+        "replace": [
+          "tfcflorae:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/andesite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/andesite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/arkose"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/arkose"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/arkose"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/basalt"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/basalt"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/boninite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/boninite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/boninite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/boninite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/carbonatite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/carbonatite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/carbonatite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/carbonatite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/cataclasite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/cataclasite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/cataclasite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/cataclasite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/chalk"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/chalk"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/chert"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/chert"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/claystone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/claystone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/conglomerate"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/conglomerate"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/dacite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/dacite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/diorite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/diorite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/dolomite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/dolomite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/gabbro"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/gabbro"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/gneiss"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/gneiss"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/granite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/granite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/jaspillite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/jaspillite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/jaspillite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/jaspillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/laterite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/laterite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/laterite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/laterite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/limestone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/limestone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/marble"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/marble"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mudstone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/mudstone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/mudstone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/mudstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/phyllite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/phyllite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/porphyry"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/porphyry"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/porphyry"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/porphyry"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/quartzite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/quartzite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/red_granite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/red_granite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/red_granite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/red_granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/rhyolite"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/rhyolite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/sandstone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/sandstone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/sandstone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/schist"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/schist"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/shale"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/shale"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/slate"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/slate"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/soapstone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/soapstone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/soapstone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/wackestone"
+        ],
+        "with": [
+          {
+            "weight": 35,
+            "block": "tfcflorae:ore/poor_native_gold/wackestone"
+          },
+          {
+            "weight": 40,
+            "block": "tfcflorae:ore/normal_native_gold/wackestone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/rich_native_gold/wackestone"
+          }
+        ]
+      }
+    ]
+  }
+}

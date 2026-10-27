@@ -1,0 +1,25 @@
+gradle.beforeProject { p ->
+    p.pluginManager.withPlugin('net.minecraftforge.gradle') {
+        p.sourceSets.main.java.srcDir(p.file('_audit/java'))
+        p.sourceSets.main.output.resourcesDir = p.file('_audit/resources')
+        p.repositories.maven { url = p.uri('_audit/repo') }
+        p.dependencies.add('runtimeOnly', p.fg.deobf('audit:patchouli:84.1'))
+        p.configurations.runtimeClasspath.exclude group: 'maven.modrinth', module: 'terrafirmacraft'
+        p.dependencies.add('runtimeOnly', p.fg.deobf('audit:terrafirmacraft:3.2.20'))
+        p.minecraft.runs.maybeCreate('server').with {
+        workingDirectory p.file('_audit/run')
+        args '--mixin', 'tfcflorae.audit.mixins.json', '--nogui'
+        property 'tfcflorae.audit', 'true'
+        property 'tfcflorae.audit.root', p.projectDir.absolutePath
+        property 'tfcflorae.audit.tfcJar', p.file('_audit/repo/audit/terrafirmacraft/3.2.20/terrafirmacraft-3.2.20.jar').absolutePath
+        property 'tfcflorae.audit.tfcVersion', '3.2.20'
+        property 'tfcflorae.audit.baseline', System.getProperty('audit.baseline', 'true')
+        }
+    }
+    p.afterEvaluate {
+        if (p.plugins.hasPlugin('net.minecraftforge.gradle')) {
+            p.minecraft.runs.server.workingDirectory(p.file('_audit/run'))
+            p.minecraft.runs.server.property('forge.logging.console.level', 'info')
+        }
+    }
+}

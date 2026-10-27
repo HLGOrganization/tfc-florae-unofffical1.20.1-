@@ -1,0 +1,33 @@
+package tfcflorae.world.layer;
+
+import java.util.function.IntPredicate;
+import java.util.function.Predicate;
+import net.dries007.tfc.world.layer.TFCLayers;
+import net.dries007.tfc.world.layer.framework.AdjacentTransformLayer;
+import net.dries007.tfc.world.layer.framework.AreaContext;
+import tfcflorae.interfaces.TFCLayersMixinInterface;
+
+public enum ExtraDunesShoreLayer implements AdjacentTransformLayer {
+   INSTANCE;
+
+   public static TFCLayers staticBiomes = new TFCLayers();
+   static final int SHORE_DUNES = ((TFCLayersMixinInterface)staticBiomes).getStaticShoreDunes();
+   static final int COASTAL_CLIFFS = ((TFCLayersMixinInterface)staticBiomes).getStaticCoastalCliffs();
+   static final int GRAVEL_SHORE = ((TFCLayersMixinInterface)staticBiomes).getStaticGravelShores();
+
+   private ExtraDunesShoreLayer() {
+   }
+
+   public int apply(AreaContext context, int north, int east, int south, int west, int center) {
+      Predicate<IntPredicate> matcher = p -> p.test(north) || p.test(east) || p.test(south) || p.test(west);
+      if (center == SHORE_DUNES) {
+         if (matcher.test(TFCLayers::isOcean)) {
+            return TFCLayers.shoreFor(center);
+         }
+      } else if (center == GRAVEL_SHORE && (matcher.test(TFCLayers::isOcean) || matcher.test(TFCLayers::isMountains))) {
+         return GRAVEL_SHORE;
+      }
+
+      return center;
+   }
+}

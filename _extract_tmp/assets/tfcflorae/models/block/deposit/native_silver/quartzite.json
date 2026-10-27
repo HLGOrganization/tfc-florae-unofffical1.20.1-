@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "tfc:block/ore",
+  "textures": {
+    "all": "tfcflorae:block/rock/gravel/quartzite",
+    "particle": "tfcflorae:block/rock/gravel/quartzite",
+    "overlay": "tfc:block/deposit/native_silver"
+  }
+}

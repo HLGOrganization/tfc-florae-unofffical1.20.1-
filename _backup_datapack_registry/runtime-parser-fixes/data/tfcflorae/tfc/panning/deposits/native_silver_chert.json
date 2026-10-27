@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/chert",
+  "model_stages": [
+    "tfc:item/pan/native_silver/chert_full",
+    "tfc:item/pan/native_silver/chert_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver_chert"
+}

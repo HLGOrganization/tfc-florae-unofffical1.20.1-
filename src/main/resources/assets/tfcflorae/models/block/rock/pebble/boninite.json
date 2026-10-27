@@ -2,6 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfcflorae:block/groundcover/pebble",
   "textures": {
-    "all": "tfcflorae:item/loose_rock/boninite"
+    "0": "tfcflorae:item/loose_rock/boninite",
+    "particle": "tfcflorae:item/loose_rock/boninite"
   }
 }

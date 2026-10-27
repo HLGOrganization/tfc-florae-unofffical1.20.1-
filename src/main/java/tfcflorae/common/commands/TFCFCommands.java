@@ -25,7 +25,8 @@ public final class TFCFCommands {
    }
 
    public static void registerCommands(CommandDispatcher<CommandSourceStack> dispatcher) {
-      dispatcher.register((LiteralArgumentBuilder)Commands.literal("tfcflorae").then(TreeCommand.create()));
+      // 树木生成已整体移除，/treetfcf 一并删除。保留 /tfcflorae 根命令。
+      dispatcher.register((LiteralArgumentBuilder)Commands.literal("tfcflorae"));
    }
 
    public static <S extends SharedSuggestionProvider> Supplier<SuggestionProvider<S>> register(String id, SuggestionProvider<SharedSuggestionProvider> provider) {

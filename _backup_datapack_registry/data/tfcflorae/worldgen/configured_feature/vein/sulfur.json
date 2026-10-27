@@ -1,0 +1,365 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 65,
+    "density": 0.4,
+    "min_y": -20,
+    "max_y": 80,
+    "size": 20,
+    "random_name": "sulfur",
+    "blocks": [
+      {
+        "replace": [
+          "tfcflorae:rock/raw/andesite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/andesite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/arkose"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/arkose"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/basalt"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/basalt"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/boninite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/boninite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/carbonatite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/carbonatite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/cataclasite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/cataclasite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/dacite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/dacite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/diorite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/diorite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/gabbro"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/gabbro"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/jaspillite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/jaspillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/laterite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/laterite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mudstone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/mudstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/phyllite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/porphyry"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/porphyry"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/red_granite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/red_granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/sandstone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/sandstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/soapstone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/soapstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/wackestone"
+        ],
+        "with": [
+          {
+            "weight": 100,
+            "block": "tfcflorae:ore/sulfur/wackestone"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -10,7 +10,6 @@ import tfcflorae.util.registry.RegistryClay;
 
 public enum Clay implements RegistryClay {
    EARTHENWARE(new Color(143, 70, 47).getRGB(), MapColor.TERRACOTTA_RED, false),
-   KAOLINITE(new Color(168, 155, 139).getRGB(), MapColor.TERRACOTTA_LIGHT_GRAY, false),
    STONEWARE(new Color(103, 99, 98).getRGB(), MapColor.TERRACOTTA_GRAY, false);
 
    public static final Clay[] VALUES = values();

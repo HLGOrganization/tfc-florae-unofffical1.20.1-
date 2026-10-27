@@ -88,6 +88,24 @@ public abstract class BambooSaplingPlantBlock extends PlantBlock implements IFlu
       }
    }
 
+   public boolean isValidBonemealTarget(BlockGetter level, BlockPos pos, BlockState state, boolean isClient) {
+      return level.getBlockState(pos.above()).isAir();
+   }
+
+   public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+      // 原版这里没有实现，竹苗完全不能催熟。骨粉后向上长出 2~4 节竹块。
+      final int height = 2 + random.nextInt(3);
+      BlockPos cursor = pos;
+      for (int i = 0; i < height; i++) {
+         final BlockPos next = cursor.above();
+         if (!level.getBlockState(next).isAir()) {
+            break;
+         }
+         level.setBlock(next, this.bambooStem.get().defaultBlockState().setValue(BambooPlantBlock.LEAVES, BambooLeaves.SMALL), 3);
+         cursor = next;
+      }
+   }
+
    public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
       return player.getMainHandItem().canPerformAction(ToolActions.SWORD_DIG) ? 1.0F : super.getDestroyProgress(state, player, level, pos);
    }

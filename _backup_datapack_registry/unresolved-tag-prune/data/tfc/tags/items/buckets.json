@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:wooden_bucket",
+    "tfc:metal/bucket/red_steel",
+    "tfc:metal/bucket/blue_steel",
+    "minecraft:bucket",
+    "tfcflorae:bucket/ore/anthracite",
+    "tfcflorae:bucket/ore/bituminous_coal",
+    "tfcflorae:bucket/ore/charcoal",
+    "tfcflorae:bucket/ore/coke",
+    "tfcflorae:bucket/ore/lignite"
+  ]
+}

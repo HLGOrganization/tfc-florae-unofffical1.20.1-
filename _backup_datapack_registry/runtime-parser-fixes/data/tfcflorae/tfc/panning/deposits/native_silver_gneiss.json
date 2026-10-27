@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfcflorae:deposit/native_silver/gneiss",
+  "model_stages": [
+    "tfc:item/pan/native_silver/gneiss_full",
+    "tfc:item/pan/native_silver/gneiss_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_silver_gneiss"
+}

@@ -22,7 +22,7 @@ import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.items.TFCFFood;
 import tfcflorae.common.items.TFCFItems;
 import tfcflorae.util.TFCFHelpers;
-import tfcflorae.world.feature.tree.TFCFTreeGrower;
+import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
 public enum TFCFWood implements RegistryWood {
    AFRICAN_PADAUK(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
@@ -516,33 +516,6 @@ public enum TFCFWood implements RegistryWood {
    ),
    RED_CYPRESS(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
    RED_ELM(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   RED_MANGROVE(
-      false,
-      false,
-      true,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      17,
-      null,
-      new Lifecycle[]{
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(235, 114, 179).getRGB()
-   ),
    ROWAN(
       false,
       false,
@@ -883,7 +856,7 @@ public enum TFCFWood implements RegistryWood {
    public final boolean fruitingLog;
    public final MapColor woodColor;
    public final MapColor barkColor;
-   public final TFCFTreeGrower tree;
+   public final TFCTreeGrower tree;
    public final int maxDecayDistance;
    public final int daysToGrow;
    public int floweringLeavesColor;
@@ -991,9 +964,10 @@ public enum TFCFWood implements RegistryWood {
       this.fruitingLog = fruitingLog;
       this.woodColor = woodColor;
       this.barkColor = barkColor;
-      // 必须用 tfcflorae: 命名空间！Helpers.identifier() 是 TFC 的工具类，返回的是 tfc:，
-      // 会让树苗去找 tfc:tree/<wood>（不存在）→ randomTick 抛 "Missing tree feature" 崩服。
-      this.tree = new TFCFTreeGrower(this, TFCFHelpers.identifier("tree/" + this.serializedName), TFCFHelpers.identifier("tree/" + this.serializedName + "_large"));
+      this.tree = new TFCTreeGrower(
+         TFCFHelpers.identifier("tree/" + this.serializedName),
+         TFCFHelpers.identifier("tree/" + this.serializedName + "_large")
+      );
       this.maxDecayDistance = maxDecayDistance;
       this.daysToGrow = daysToGrow;
       this.isFruitTree = false;
@@ -1032,7 +1006,7 @@ public enum TFCFWood implements RegistryWood {
       return this.barkColor;
    }
 
-   public TFCFTreeGrower tree() {
+   public TFCTreeGrower tree() {
       return this.tree;
    }
 

@@ -5,35 +5,22 @@ import net.dries007.tfc.common.blocks.EntityBlockExtension;
 import net.dries007.tfc.common.blocks.ExtendedProperties;
 import net.dries007.tfc.common.blocks.IForgeBlockExtension;
 import net.dries007.tfc.common.blocks.TFCBlockStateProperties;
+import net.dries007.tfc.common.blocks.wood.TFCSaplingBlock;
 import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
 import net.dries007.tfc.common.fluids.FluidHelpers;
 import net.dries007.tfc.common.fluids.FluidProperty;
 import net.dries007.tfc.common.fluids.IFluidLoggable;
 import net.dries007.tfc.common.fluids.TFCFluids;
-import net.dries007.tfc.config.TFCConfig;
-import net.dries007.tfc.util.EnvironmentHelpers;
 import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.calendar.Calendars;
-import net.dries007.tfc.util.calendar.Season;
-import net.dries007.tfc.world.biome.BiomeExtension;
-import net.dries007.tfc.world.biome.TFCBiomes;
-import net.dries007.tfc.world.chunkdata.ChunkData;
-import net.dries007.tfc.world.chunkdata.ChunkDataProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour.OffsetType;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
@@ -41,22 +28,19 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.levelgen.Heightmap.Types;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.Tags.Blocks;
-import net.minecraftforge.event.ForgeEventFactory;
 import org.jetbrains.annotations.Nullable;
-import tfcflorae.Config;
 import tfcflorae.common.TFCFTags;
-import tfcflorae.common.blockentities.TFCFTickCounterBlockEntity;
 import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.world.feature.tree.TFCFMangroveTreeGrower;
+import tfcflorae.util.TFCFHelpers;
+import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
-public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBlockExtension, EntityBlockExtension, IFluidLoggable {
+public class TFCFMangrovePropaguleBlock extends TFCSaplingBlock implements IForgeBlockExtension, EntityBlockExtension, IFluidLoggable {
    private static final VoxelShape[] SHAPES = new VoxelShape[]{
       Block.box(7.0, 13.0, 7.0, 9.0, 16.0, 9.0),
       Block.box(7.0, 10.0, 7.0, 9.0, 16.0, 9.0),
@@ -73,7 +57,15 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
    public final int daysToGrow;
 
    public TFCFMangrovePropaguleBlock(TFCFWood wood, ExtendedProperties properties, int days) {
-      super(new TFCFMangroveTreeGrower(wood, 0.85F), properties.properties());
+      super(
+         new TFCTreeGrower(
+            TFCFHelpers.identifier("tree/" + wood.getSerializedName()),
+            TFCFHelpers.identifier("tree/" + wood.getSerializedName() + "_tall")
+         ),
+         properties,
+         () -> days,
+         false
+      );
       this.wood = wood;
       this.properties = properties;
       this.daysToGrow = days;
@@ -148,59 +140,13 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
    }
 
    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-      if (!isHanging(state) && random.nextInt(7) == 0) {
-         if (!level.isAreaLoaded(pos, 1)) {
-            return;
-         }
-
-         if (level.getBlockEntity(pos) instanceof TFCFTickCounterBlockEntity counter
-            && (double)counter.getTicksSinceUpdate() > (double)(24000 * this.getDaysToGrow()) * (Double)TFCConfig.SERVER.globalSaplingGrowthModifier.get()) {
-            this.advanceTree(level, pos, (BlockState)state.setValue(STAGE, 1), random);
-            if (true) {
-               level.destroyBlock(pos, false);
-            }
-         }
+      if (!isHanging(state)) {
+         super.randomTick(state, level, pos, random);
       } else {
          if (!ageAtMax(state)) {
             level.setBlock(pos, (BlockState)state.cycle(AGE), 2);
          }
 
-         if (false && (Integer)Config.COMMON.leavesSaplingPlacementChance.get() > 0) {
-            TFCBiomes staticBiomes = new TFCBiomes();
-            BiomeExtension SWAMPS = (net.dries007.tfc.world.biome.BiomeExtension) null;
-            BiomeExtension WETLANDS = (net.dries007.tfc.world.biome.BiomeExtension) null;
-            BiomeExtension MANGROVES = (net.dries007.tfc.world.biome.BiomeExtension) null;
-            BiomeExtension MARSHES = (net.dries007.tfc.world.biome.BiomeExtension) null;
-            BiomeExtension biome = TFCBiomes.getExtension(level, (Biome)level.getBiome(pos).value());
-            boolean biomeStuff = false;
-            Season currentSeason = Calendars.get(level).getCalendarMonthOfYear().getSeason();
-            if ((currentSeason == Season.FALL || currentSeason == Season.SPRING) && ageAtMax(state) && level.getBlockState(pos.below()).isAir() && biomeStuff) {
-               ChunkDataProvider provider = ChunkDataProvider.get(level);
-               ChunkData data = provider.get(level, pos);
-               float rainfall = data.getRainfall(pos);
-               float rainfallInverted = (500.0F - rainfall) * 0.25F + 1.0F;
-               float actualForestDensity = data.getForestDensity();
-               float forestDensity = actualForestDensity == 0.0F ? 0.001F : actualForestDensity;
-               if (random.nextFloat() * ((float)((Integer)Config.COMMON.leavesSaplingPlacementChance.get()).intValue() / forestDensity * rainfallInverted) == 0.0F) {
-                  int x = pos.getX()
-                     + (int)Math.round(random.nextGaussian() * (double)((Integer)Config.COMMON.leavesSaplingSpreadDistance.get()).intValue());
-                  int z = pos.getZ()
-                     + (int)Math.round(random.nextGaussian() * (double)((Integer)Config.COMMON.leavesSaplingSpreadDistance.get()).intValue());
-                  int y = level.getHeight(Types.MOTION_BLOCKING_NO_LEAVES, x, z);
-                  BlockPos placementPos = BlockPos.containing(x, y, z);
-                  BlockState placementState = level.getBlockState(placementPos);
-                  if ((
-                        Helpers.isBlock(placementState, net.dries007.tfc.common.TFCTags.Blocks.PLANTS)
-                           || EnvironmentHelpers.isWorldgenReplaceable(placementState)
-                     )
-                     && level.getMaxLocalRawBrightness(placementPos) >= 11
-                     && this.canSurvive(state, level, placementPos)) {
-                     level.destroyBlock(pos, false);
-                     level.setBlock(placementPos, this.defaultBlockState(), 3);
-                  }
-               }
-            }
-         }
       }
    }
 
@@ -225,8 +171,4 @@ public class TFCFMangrovePropaguleBlock extends SaplingBlock implements IForgeBl
          .setValue(AGE, age);
    }
 
-   public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
-      TFCFTickCounterBlockEntity.reset(level, pos);
-      super.setPlacedBy(level, pos, state, placer, stack);
-   }
 }

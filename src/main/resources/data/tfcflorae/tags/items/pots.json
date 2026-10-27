@@ -4,7 +4,6 @@
   "values": [
     "tfc:ceramic/pot",
     "tfcflorae:ceramic/earthenware/fired/pot",
-    "tfcflorae:ceramic/kaolinite/fired/pot",
     "tfcflorae:ceramic/stoneware/fired/pot"
   ]
 }

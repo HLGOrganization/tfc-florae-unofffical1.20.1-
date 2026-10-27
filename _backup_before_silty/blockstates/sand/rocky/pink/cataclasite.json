@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/pink/cataclasite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/pink/cataclasite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/pink/cataclasite"
+      }
+    ]
+  }
+}

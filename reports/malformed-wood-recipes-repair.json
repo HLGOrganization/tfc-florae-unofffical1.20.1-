@@ -1,0 +1,1059 @@
+{
+  "files_repaired": 26,
+  "wood_types": [
+    "bald_cypress",
+    "red_cypress"
+  ],
+  "categories": [
+    "chiseled_bookshelf",
+    "door",
+    "fence",
+    "fence_gate",
+    "log_fence",
+    "log_wall",
+    "sign",
+    "slab",
+    "stairs",
+    "trapdoor",
+    "trapped_chest",
+    "wood",
+    "wood_wall"
+  ],
+  "basis": "Runtime JSON parser reports Ingredient entry needs either a tag or an item for each; each matching TFCFWood enum exists in source and each sibling butternut recipe is a valid same-path pattern template.",
+  "files": [
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/chiseled_bookshelf/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/chiseled_bookshelf/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\chiseled_bookshelf\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "012",
+          "345",
+          "678"
+        ],
+        "key": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {},
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {},
+          "8": {}
+        },
+        "result": {
+          "count": 1
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "012",
+          "345",
+          "678"
+        ],
+        "key": {
+          "0": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          },
+          "1": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          },
+          "2": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          },
+          "3": {
+            "item": "tfcflorae:wood/slab/bald_cypress"
+          },
+          "4": {
+            "item": "tfcflorae:wood/slab/bald_cypress"
+          },
+          "5": {
+            "item": "tfcflorae:wood/slab/bald_cypress"
+          },
+          "6": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          },
+          "7": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          },
+          "8": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/chiseled_bookshelf/bald_cypress",
+          "count": 1
+        }
+      },
+      "backup_sha256": "4d7bd264686d35a6be1c609003dd139a7b85332001ae5bf49daf51ce48db3641"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/chiseled_bookshelf/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/chiseled_bookshelf/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\chiseled_bookshelf\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "012",
+          "345",
+          "678"
+        ],
+        "key": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {},
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {},
+          "8": {}
+        },
+        "result": {
+          "count": 1
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "012",
+          "345",
+          "678"
+        ],
+        "key": {
+          "0": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          },
+          "1": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          },
+          "2": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          },
+          "3": {
+            "item": "tfcflorae:wood/slab/red_cypress"
+          },
+          "4": {
+            "item": "tfcflorae:wood/slab/red_cypress"
+          },
+          "5": {
+            "item": "tfcflorae:wood/slab/red_cypress"
+          },
+          "6": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          },
+          "7": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          },
+          "8": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/chiseled_bookshelf/red_cypress",
+          "count": 1
+        }
+      },
+      "backup_sha256": "4d7bd264686d35a6be1c609003dd139a7b85332001ae5bf49daf51ce48db3641"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/door/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/door/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\door\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XX",
+          "XX",
+          "XX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 2
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XX",
+          "XX",
+          "XX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/lumber/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/door/bald_cypress",
+          "count": 2
+        }
+      },
+      "backup_sha256": "eb503f6d35d58c9cdba54ca0115b94bc417b0dd084c55f89f7f60ba97337c430"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/door/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/door/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\door\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XX",
+          "XX",
+          "XX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 2
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XX",
+          "XX",
+          "XX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/lumber/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/door/red_cypress",
+          "count": 2
+        }
+      },
+      "backup_sha256": "eb503f6d35d58c9cdba54ca0115b94bc417b0dd084c55f89f7f60ba97337c430"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/fence/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/fence/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\fence\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/fence/bald_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "fae12dfbdf777f45b79f07572b9c4316ca25c46702a051c40b73002111cfeff7"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/fence/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/fence/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\fence\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/fence/red_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "fae12dfbdf777f45b79f07572b9c4316ca25c46702a051c40b73002111cfeff7"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/fence_gate/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/fence_gate/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\fence_gate\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "YXY",
+          "YXY"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 2
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "YXY",
+          "YXY"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/fence_gate/bald_cypress",
+          "count": 2
+        }
+      },
+      "backup_sha256": "424b6c50e4098c8a6bcb45176925fbbace0fce360707a0006c1572516b21a1a0"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/fence_gate/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/fence_gate/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\fence_gate\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "YXY",
+          "YXY"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 2
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "YXY",
+          "YXY"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/fence_gate/red_cypress",
+          "count": 2
+        }
+      },
+      "backup_sha256": "424b6c50e4098c8a6bcb45176925fbbace0fce360707a0006c1572516b21a1a0"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/log_fence/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/log_fence/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\log_fence\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/log/bald_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/log_fence/bald_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "fae12dfbdf777f45b79f07572b9c4316ca25c46702a051c40b73002111cfeff7"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/log_fence/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/log_fence/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\log_fence\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/log/red_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/log_fence/red_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "fae12dfbdf777f45b79f07572b9c4316ca25c46702a051c40b73002111cfeff7"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/log_wall/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/log_wall/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\log_wall\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/log/bald_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/log_wall/bald_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "fae12dfbdf777f45b79f07572b9c4316ca25c46702a051c40b73002111cfeff7"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/log_wall/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/log_wall/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\log_wall\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/log/red_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/log_wall/red_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "fae12dfbdf777f45b79f07572b9c4316ca25c46702a051c40b73002111cfeff7"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/sign/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/sign/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\sign\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX",
+          " Y "
+        ],
+        "key": {
+          "X": {},
+          "Y": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "count": 3
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX",
+          " Y "
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/lumber/bald_cypress"
+          },
+          "Y": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/sign/bald_cypress",
+          "count": 3
+        }
+      },
+      "backup_sha256": "cae29d3764e831fdb0e2deb518ecc094f2598a62d0c1204adb758155c3f971ac"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/sign/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/sign/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\sign\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX",
+          " Y "
+        ],
+        "key": {
+          "X": {},
+          "Y": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "count": 3
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX",
+          " Y "
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/lumber/red_cypress"
+          },
+          "Y": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/sign/red_cypress",
+          "count": 3
+        }
+      },
+      "backup_sha256": "cae29d3764e831fdb0e2deb518ecc094f2598a62d0c1204adb758155c3f971ac"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/slab/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/slab/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\slab\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 6
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/slab/bald_cypress",
+          "count": 6
+        }
+      },
+      "backup_sha256": "cf5115f2b0f0f23f5e639baceb0ae610fbd1369f892057340e1adbe65488192b"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/slab/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/slab/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\slab\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 6
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/slab/red_cypress",
+          "count": 6
+        }
+      },
+      "backup_sha256": "cf5115f2b0f0f23f5e639baceb0ae610fbd1369f892057340e1adbe65488192b"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/stairs/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/stairs/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\stairs\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "X  ",
+          "XX ",
+          "XXX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "X  ",
+          "XX ",
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/planks/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/stairs/bald_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "b17759b9e01066b1b6c40e286a66686c26a0778ca17e461613c3d2f02845a6f6"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/stairs/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/stairs/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\stairs\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "X  ",
+          "XX ",
+          "XXX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "X  ",
+          "XX ",
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/planks/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/stairs/red_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "b17759b9e01066b1b6c40e286a66686c26a0778ca17e461613c3d2f02845a6f6"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/trapdoor/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/trapdoor/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\trapdoor\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 3
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/lumber/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/trapdoor/bald_cypress",
+          "count": 3
+        }
+      },
+      "backup_sha256": "6d3167f3ef3f4f88c690fadb1cf328414f532c4e2e5b2b63279f05def6cdd04c"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/trapdoor/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/trapdoor/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\trapdoor\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 3
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX",
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/lumber/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/trapdoor/red_cypress",
+          "count": 3
+        }
+      },
+      "backup_sha256": "6d3167f3ef3f4f88c690fadb1cf328414f532c4e2e5b2b63279f05def6cdd04c"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/trapped_chest/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/trapped_chest/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\trapped_chest\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {},
+          {
+            "item": "minecraft:tripwire_hook"
+          }
+        ],
+        "result": {
+          "count": 1
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "tfcflorae:wood/chest/bald_cypress"
+          },
+          {
+            "item": "minecraft:tripwire_hook"
+          }
+        ],
+        "result": {
+          "item": "tfcflorae:wood/trapped_chest/bald_cypress",
+          "count": 1
+        }
+      },
+      "backup_sha256": "47be8b27860bfad6dc558d0e2e4d01750344f07b3f6865f30b5f4565d6e06803"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/trapped_chest/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/trapped_chest/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\trapped_chest\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {},
+          {
+            "item": "minecraft:tripwire_hook"
+          }
+        ],
+        "result": {
+          "count": 1
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "tfcflorae:wood/chest/red_cypress"
+          },
+          {
+            "item": "minecraft:tripwire_hook"
+          }
+        ],
+        "result": {
+          "item": "tfcflorae:wood/trapped_chest/red_cypress",
+          "count": 1
+        }
+      },
+      "backup_sha256": "47be8b27860bfad6dc558d0e2e4d01750344f07b3f6865f30b5f4565d6e06803"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/wood/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/wood/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\wood\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XX",
+          "XX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 3
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XX",
+          "XX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/log/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/wood/bald_cypress",
+          "count": 3
+        }
+      },
+      "backup_sha256": "55ea2c5026f0e3c08300a1c4e3618734bc06cdbf331f1a731d28917551ed8aa3"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/wood/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/wood/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\wood\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XX",
+          "XX"
+        ],
+        "key": {
+          "X": {}
+        },
+        "result": {
+          "count": 3
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XX",
+          "XX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/log/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/wood/red_cypress",
+          "count": 3
+        }
+      },
+      "backup_sha256": "55ea2c5026f0e3c08300a1c4e3618734bc06cdbf331f1a731d28917551ed8aa3"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/wood_wall/bald_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/wood_wall/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\wood_wall\\bald_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/wood/bald_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/bald_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/wood_wall/bald_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "fae12dfbdf777f45b79f07572b9c4316ca25c46702a051c40b73002111cfeff7"
+    },
+    {
+      "file": "data/tfcflorae/recipes/crafting/wood/wood_wall/red_cypress.json",
+      "template": "data/tfcflorae/recipes/crafting/wood/wood_wall/butternut.json",
+      "backup": "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\_backup_datapack_registry\\malformed-wood-recipes\\data\\tfcflorae\\recipes\\crafting\\wood\\wood_wall\\red_cypress.json",
+      "before": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {},
+          "Y": {}
+        },
+        "result": {
+          "count": 8
+        }
+      },
+      "after": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XYX",
+          "XYX"
+        ],
+        "key": {
+          "X": {
+            "item": "tfcflorae:wood/wood/red_cypress"
+          },
+          "Y": {
+            "item": "tfcflorae:wood/lumber/red_cypress"
+          }
+        },
+        "result": {
+          "item": "tfcflorae:wood/wood_wall/red_cypress",
+          "count": 8
+        }
+      },
+      "backup_sha256": "fae12dfbdf777f45b79f07572b9c4316ca25c46702a051c40b73002111cfeff7"
+    }
+  ]
+}
