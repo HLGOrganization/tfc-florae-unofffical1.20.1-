@@ -276,19 +276,65 @@ public class ClientEventHandler {
          .forEach(map -> ItemBlockRenderTypes.setRenderLayer((Block)map.get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.SPIKE).get(), cutout));
       TFCFBlocks.GEYSER_TFC.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
       TFCFBlocks.GEYSER_TFCF.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
-      TFCFBlocks.ORES.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout)));
-      TFCFBlocks.GRADED_ORES
-         .values()
-         .forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout))));
-      TFCFBlocks.ORE_DEPOSITS.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout)));
-      TFCFBlocks.ORES_TFC_ROCK.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout)));
-      TFCFBlocks.GRADED_ORES_TFC_ROCK
-         .values()
-         .forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout))));
-      TFCFBlocks.ORES_TFCF_ROCK.values().forEach(map -> map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout)));
-      TFCFBlocks.GRADED_ORES_TFCF_ROCK
-         .values()
-         .forEach(map -> map.values().forEach(inner -> inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout))));
+      // 矿石相关表按岩石过滤后，个别键可能整块缺失（例如凝灰岩不生成矿石）；
+      // 下面每层遍历都先判空，避免空表 / 缺失键导致 NPE。
+      TFCFBlocks.ORES.values().forEach(map -> {
+         if (map == null) {
+            return;
+         }
+         map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+      });
+      TFCFBlocks.GRADED_ORES.values().forEach(map -> {
+         if (map == null) {
+            return;
+         }
+         map.values().forEach(inner -> {
+            if (inner == null) {
+               return;
+            }
+            inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+         });
+      });
+      TFCFBlocks.ORE_DEPOSITS.values().forEach(map -> {
+         if (map == null) {
+            return;
+         }
+         map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+      });
+      TFCFBlocks.ORES_TFC_ROCK.values().forEach(map -> {
+         if (map == null) {
+            return;
+         }
+         map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+      });
+      TFCFBlocks.GRADED_ORES_TFC_ROCK.values().forEach(map -> {
+         if (map == null) {
+            return;
+         }
+         map.values().forEach(inner -> {
+            if (inner == null) {
+               return;
+            }
+            inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+         });
+      });
+      TFCFBlocks.ORES_TFCF_ROCK.values().forEach(map -> {
+         if (map == null) {
+            return;
+         }
+         map.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+      });
+      TFCFBlocks.GRADED_ORES_TFCF_ROCK.values().forEach(map -> {
+         if (map == null) {
+            return;
+         }
+         map.values().forEach(inner -> {
+            if (inner == null) {
+               return;
+            }
+            inner.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+         });
+      });
       ItemBlockRenderTypes.setRenderLayer((Block)TFCFBlocks.GLOWSTONE.get(), cutout);
       ItemBlockRenderTypes.setRenderLayer((Block)TFCFBlocks.GLOWSTONE_BUDDING.get(), cutout);
       ItemBlockRenderTypes.setRenderLayer((Block)TFCFBlocks.GLOWSTONE_CLUSTER.get(), cutout);

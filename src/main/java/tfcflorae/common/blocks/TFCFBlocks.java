@@ -327,14 +327,23 @@ public final class TFCFBlocks {
    public static final Map<TFCFGroundcoverBlockType, RegistryObject<Block>> GROUNDCOVER = Helpers.mapOfKeys(
       TFCFGroundcoverBlockType.class, type -> register("groundcover/" + type.name(), () -> new TFCFGroundcoverBlock(type), type.createBlockItem())
    );
+   // TFC 的这 8 种矿石只以物品形式存在（宝石 / 火药类），从未提供方块贴图与模型。
+   // 在岩石上注册成矿方块只会得到紫黑方块，因此不生成。
+   private static final java.util.Set<Ore> ORE_WITHOUT_BLOCK = java.util.EnumSet.of(
+      Ore.DIAMOND, Ore.EMERALD, Ore.LAPIS_LAZULI, Ore.OPAL, Ore.PYRITE, Ore.SALTPETER, Ore.SAPPHIRE, Ore.TOPAZ
+   );
+   // 凝灰岩（TUFF）不生成矿石 / 矿粒 / 矿床：这些资源从未随本模组补齐，
+   // 注册出来必然是紫黑方块。外层 mapOfKeys 直接过滤掉 TUFF 这个键。
    public static final Map<TFCFRock, Map<Ore, RegistryObject<Block>>> ORES = Helpers.mapOfKeys(
       TFCFRock.class,
+      rock -> rock != TFCFRock.TUFF,
       rock -> Helpers.mapOfKeys(
-            Ore.class, ore -> !ore.isGraded(), ore -> register("ore/" + ore.name() + "/" + rock.name(), () -> ore.create(rock), TFCCreativeTabs.ORES)
+            Ore.class, ore -> !ore.isGraded() && !ORE_WITHOUT_BLOCK.contains(ore), ore -> register("ore/" + ore.name() + "/" + rock.name(), () -> ore.create(rock), TFCCreativeTabs.ORES)
          )
    );
    public static final Map<TFCFRock, Map<Ore, Map<Grade, RegistryObject<Block>>>> GRADED_ORES = Helpers.mapOfKeys(
       TFCFRock.class,
+      rock -> rock != TFCFRock.TUFF,
       rock -> Helpers.mapOfKeys(
             Ore.class,
             Ore::isGraded,
@@ -345,6 +354,7 @@ public final class TFCFBlocks {
    );
    public static final Map<TFCFRock, Map<OreDeposit, RegistryObject<Block>>> ORE_DEPOSITS = Helpers.mapOfKeys(
       TFCFRock.class,
+      rock -> rock != TFCFRock.TUFF,
       rock -> Helpers.mapOfKeys(
             OreDeposit.class,
             ore -> register(
@@ -709,27 +719,12 @@ public final class TFCFBlocks {
             TFCCreativeTabs.ROCKS
          )
    );
-   public static final Map<Rock, RegistryObject<Block>> GEYSER_TFC = Helpers.mapOfKeys(
-      Rock.class,
-      rock -> register(
-            "rock/geyser/" + rock.name(),
-            () -> Geyser.create(
-                  ExtendedProperties.of(rock.color()).requiresCorrectToolForDrops()
-                     .sound(SoundType.BASALT)
-                     .strength(rock.category().hardness(9.0F), 15.0F)
-                     .requiresCorrectToolForDrops()
-                     .noOcclusion()
-                     .randomTicks()
-                     .dynamicShape()
-                     .hasPostProcess(TFCFBlocks::always),
-                  (java.util.function.Supplier<? extends Block>) null,
-                  true
-               ),
-            TFCCreativeTabs.ROCKS
-         )
-   );
+   // TFC 原生 20 种岩石的间歇泉只有通用部件模型，没有 blockstate / 物品模型，
+   // 注册出来是紫黑方块；本模组岩石的间歇泉资源齐全，保留在下面的表里。
+   public static final Map<Rock, RegistryObject<Block>> GEYSER_TFC = Map.of();
    public static final Map<TFCFRock, RegistryObject<Block>> GEYSER_TFCF = Helpers.mapOfKeys(
       TFCFRock.class,
+      rock -> rock != TFCFRock.TUFF,
       rock -> register(
             "rock/geyser/" + rock.name(),
             () -> Geyser.create(
@@ -1354,6 +1349,11 @@ public final class TFCFBlocks {
 
             for (BlockType type : BlockType.values()) {
                if (wood == TFCFWood.BAMBOO) {
+                  // 竹子没有 wood / stripped_wood 两种方块的 blockstate 与模型，
+                  // 注册出来是紫黑方块，这里直接跳过（其余类型资源齐全）。
+                  if (type == BlockType.WOOD || type == BlockType.STRIPPED_WOOD) {
+                     continue;
+                  }
                   if (type == BlockType.PLANKS) {
                      subMap.put(
                         type,
@@ -1965,6 +1965,10 @@ public final class TFCFBlocks {
       Map<Wood, RegistryObject<Block>> Map = new HashMap<>();
 
       for (Wood wood : enumClass.getEnumConstants()) {
+         // 红树（TFC 木材）没有 bookshelf 的 blockstate / 模型，注册出来是紫黑方块
+         if (wood == Wood.MANGROVE) {
+            continue;
+         }
          Map.put(
             wood,
             register(
@@ -2206,6 +2210,10 @@ public final class TFCFBlocks {
       Map<Wood, RegistryObject<Block>> Map = new HashMap<>();
 
       for (Wood wood : enumClass.getEnumConstants()) {
+         // 红树（TFC 木材）没有 log_wall / wood_wall 的 blockstate 与模型，注册出来是紫黑方块
+         if (wood == Wood.MANGROVE) {
+            continue;
+         }
          Map.put(
             wood,
             register(
@@ -2632,7 +2640,9 @@ public final class TFCFBlocks {
                            .strength(5.5F)
                            .requiresCorrectToolForDrops()
                            .flammableLikeLogs(),
-                        (Supplier)WOODS.get(TFCFWood.BAMBOO).get(BlockType.STRIPPED_WOOD)
+                        // 竹子的 stripped_wood 方块已不再注册（无资源），
+                        // 这里回退到仍在注册的 stripped_log，保证 supplier 非空。
+                        (Supplier)WOODS.get(TFCFWood.BAMBOO).get(BlockType.STRIPPED_LOG)
                      ),
                   TFCCreativeTabs.WOOD
                )

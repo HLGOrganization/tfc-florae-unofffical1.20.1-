@@ -212,12 +212,22 @@ public enum TFCFRock implements TFCFRegistryRock {
 
    public static void registerDefaultRocks() {
       for(TFCFRock rock : values()) {
-         if (rock != TUFF) {
-            ResourceLocation id = Helpers.identifier(rock.getSerializedName());
-            RockCategory category = rock.category();
-            Map<Rock.BlockType, RegistryObject<Block>> blocks = (Map)TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock);
-            RockSettings.register(id, new RockSettings((Block)((RegistryObject)blocks.get(BlockType.RAW)).get(), (Block)((RegistryObject)blocks.get(BlockType.HARDENED)).get(), (Block)((RegistryObject)blocks.get(BlockType.GRAVEL)).get(), (Block)((RegistryObject)blocks.get(BlockType.COBBLE)).get(), (Block)rock.getSandType().get(), (Block)rock.getSandstone().get(), Optional.of((Block)((RegistryObject)blocks.get(BlockType.SPIKE)).get()), Optional.of((Block)((RegistryObject)blocks.get(BlockType.LOOSE)).get()), Optional.empty()));
+         // 凝灰岩没有矿石，也不需要 WorldGen 用的默认岩石设置
+         if (rock == TUFF) {
+            continue;
          }
+         Map<Rock.BlockType, RegistryObject<Block>> blocks = (Map)TFCFBlocks.TFCF_ROCK_BLOCKS.get(rock);
+         // 相关表被裁剪后可能整块不注册，get() 会返回 null；这里必须跳过，否则下面解引用直接 NPE
+         if (blocks == null
+            || blocks.get(BlockType.RAW) == null
+            || blocks.get(BlockType.HARDENED) == null
+            || blocks.get(BlockType.GRAVEL) == null
+            || blocks.get(BlockType.COBBLE) == null) {
+            continue;
+         }
+         ResourceLocation id = Helpers.identifier(rock.getSerializedName());
+         RockCategory category = rock.category();
+         RockSettings.register(id, new RockSettings((Block)((RegistryObject)blocks.get(BlockType.RAW)).get(), (Block)((RegistryObject)blocks.get(BlockType.HARDENED)).get(), (Block)((RegistryObject)blocks.get(BlockType.GRAVEL)).get(), (Block)((RegistryObject)blocks.get(BlockType.COBBLE)).get(), (Block)rock.getSandType().get(), (Block)rock.getSandstone().get(), Optional.of((Block)((RegistryObject)blocks.get(BlockType.SPIKE)).get()), Optional.of((Block)((RegistryObject)blocks.get(BlockType.LOOSE)).get()), Optional.empty()));
       }
 
    }
