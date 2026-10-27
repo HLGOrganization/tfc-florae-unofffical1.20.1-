@@ -189,7 +189,7 @@ public class TFCFForgeEventHandler {
                break;
             }
 
-            if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get()
+            if (block == net.minecraft.world.level.block.Blocks.AIR
                && Helpers.isItem(event.getItemStack(), (Item)TFCFItems.SOIL_PILE_TFC.get(variantx).get())) {
                event.getItemStack().shrink(1);
                BlockState placedBlock = ((Block)TFCFBlocks.TFCROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variantx).get(rockTFC).get()).defaultBlockState();
@@ -213,7 +213,7 @@ public class TFCFForgeEventHandler {
                break;
             }
 
-            if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get()
+            if (block == net.minecraft.world.level.block.Blocks.AIR
                && Helpers.isItem(event.getItemStack(), (Item)TFCFItems.SOIL_PILE_TFCF.get(variantx).get())) {
                event.getItemStack().shrink(1);
                BlockState placedBlock = ((Block)TFCFBlocks.TFCFROCKSOIL.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variantx).get(rockTFC).get()).defaultBlockState();
@@ -226,7 +226,7 @@ public class TFCFForgeEventHandler {
 
          for (Colors sandColor : Colors.values()) {
             if (block != ((RegistryObject)TFCBlocks.SAND.get(sandColor.toSandTFC(true))).get() && !isTfcfSandBlock(sandColor, block)) {
-               if (block == TFCFBlocks.ROCK_BLOCKS.get(rockTFC).get(TFCFRock.TFCFBlockType.STONE_TILES).get()
+               if (block == net.minecraft.world.level.block.Blocks.AIR
                   && isSandLayerItem(sandColor, event.getItemStack())) {
                   event.getItemStack().shrink(1);
                   BlockState placedBlock = ((Block)TFCFBlocks.ROCKY_SAND_TFC.get(TFCFRockSand.SANDY_TILES).get(sandColor).get(rockTFC).get()).defaultBlockState();
@@ -260,7 +260,7 @@ public class TFCFForgeEventHandler {
                break;
             }
 
-            if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get()
+            if (block == net.minecraft.world.level.block.Blocks.AIR
                && Helpers.isItem(event.getItemStack(), (Item)TFCFItems.SOIL_PILE_TFC.get(variantx).get())) {
                event.getItemStack().shrink(1);
                BlockState placedBlock = ((Block)TFCFBlocks.TFCROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variantx).get(rockTFCF).get()).defaultBlockState();
@@ -282,7 +282,7 @@ public class TFCFForgeEventHandler {
                break;
             }
 
-            if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get()
+            if (block == net.minecraft.world.level.block.Blocks.AIR
                && Helpers.isItem(event.getItemStack(), (Item)TFCFItems.SOIL_PILE_TFCF.get(variantx).get())) {
                event.getItemStack().shrink(1);
                BlockState placedBlock = ((Block)TFCFBlocks.TFCFROCKSOIL2.get(TFCFRockSoil.DIRTY_STONE_TILES).get(variantx).get(rockTFCF).get()).defaultBlockState();
@@ -295,7 +295,7 @@ public class TFCFForgeEventHandler {
 
          for (Colors sandColorx : Colors.values()) {
             if (block != ((RegistryObject)TFCBlocks.SAND.get(sandColorx.toSandTFC(true))).get() && !isTfcfSandBlock(sandColorx, block)) {
-               if (block == TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.get(rockTFCF).get(TFCFRock.TFCFBlockType.STONE_TILES).get()
+               if (block == net.minecraft.world.level.block.Blocks.AIR
                   && isSandLayerItem(sandColorx, event.getItemStack())) {
                   event.getItemStack().shrink(1);
                   BlockState placedBlock = ((Block)TFCFBlocks.ROCKY_SAND_TFCF.get(TFCFRockSand.SANDY_TILES).get(sandColorx).get(rockTFCF).get()).defaultBlockState();
