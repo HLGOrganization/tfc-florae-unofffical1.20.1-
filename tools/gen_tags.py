@@ -25,6 +25,7 @@ import argparse
 import collections
 import json
 import os
+import re
 import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -210,12 +211,21 @@ def main():
     covered = collections.Counter()
     unmatched = []
 
+    # Geology tags are decided *only* by TFCFRock's category below.  The TFC twin
+    # of a rock part also carries its own rock's category (e.g. every granite part
+    # is in igneous_intrusive_items); copying that would give porphyry parts both
+    # igneous_intrusive_items and igneous_extrusive_items.
+    GEOLOGY_TAGS = {tag for (_kind, tag) in tags
+                    if re.match(r"tfc:(sedimentary|igneous_intrusive|igneous_extrusive|metamorphic)_(items|rock)$", tag)}
+
     for kind, ids in (("blocks", blocks), ("items", items)):
         for our_id in ids:
             ref = ref_id(our_id, woods, rocks)
             tagset = rev.get((kind, ref))
             if tagset:
                 for t in tagset:
+                    if t in GEOLOGY_TAGS:
+                        continue
                     out[(kind, t)].add("tfcflorae:" + our_id)
                 covered[kind] += 1
             elif our_id.split("/")[0] in ("wood", "rock", "ore", "deposit", "brick"):
@@ -263,7 +273,12 @@ def main():
         # anything of ours that is no longer registered would break the whole tag
         existing = {v for v in existing
                     if not v.startswith("tfcflorae:") or v in whitelist[kind]}
-        merged = sorted(existing | ids)
+        if tag in GEOLOGY_TAGS:
+            # geology membership is recomputed from scratch every run, otherwise a
+            # wrong classification from an earlier run would survive the merge
+            merged = sorted(ids)
+        else:
+            merged = sorted(existing | ids)
         written.append((os.path.relpath(target, ROOT), len(merged), len(ids)))
         if not args.check:
             os.makedirs(os.path.dirname(target), exist_ok=True)
