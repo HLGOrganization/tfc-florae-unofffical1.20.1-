@@ -48,6 +48,7 @@ REMOVED_SOILS = {
     "dry_clay_grass", "dense_clay_grass", "sparse_clay_grass",
     "dry_earthenware_clay_grass", "dense_earthenware_clay_grass", "sparse_earthenware_clay_grass",
     "dry_stoneware_clay_grass", "dense_stoneware_clay_grass", "sparse_stoneware_clay_grass",
+    "podzol",
 }
 
 # Wooden parts that TFC stores as `tfc:wood/planks/oak_<part>` instead of a
@@ -72,6 +73,9 @@ REMOVED_IDS = {
 } | {
     "rock/anvil/tuff",
     "brick/tuff",
+    "wood/spike/bald_cypress",
+    "wood/spike/red_cypress",
+    "wood/spike/white_mangrove",
     "sandstone/layered/slab/blue",
     "sandstone/layered/stairs/blue",
     "sandstone/layered/wall/blue",

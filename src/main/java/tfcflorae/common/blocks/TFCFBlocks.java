@@ -161,7 +161,8 @@ public final class TFCFBlocks {
       TFCFSoil.DRY_GRASS, TFCFSoil.DENSE_GRASS, TFCFSoil.SPARSE_GRASS,
       TFCFSoil.DRY_CLAY_GRASS, TFCFSoil.DENSE_CLAY_GRASS, TFCFSoil.SPARSE_CLAY_GRASS,
       TFCFSoil.DRY_EARTHENWARE_CLAY_GRASS, TFCFSoil.DENSE_EARTHENWARE_CLAY_GRASS, TFCFSoil.SPARSE_EARTHENWARE_CLAY_GRASS,
-      TFCFSoil.DRY_STONEWARE_CLAY_GRASS, TFCFSoil.DENSE_STONEWARE_CLAY_GRASS, TFCFSoil.SPARSE_STONEWARE_CLAY_GRASS
+      TFCFSoil.DRY_STONEWARE_CLAY_GRASS, TFCFSoil.DENSE_STONEWARE_CLAY_GRASS, TFCFSoil.SPARSE_STONEWARE_CLAY_GRASS,
+      TFCFSoil.PODZOL
    );
 
    public static final Map<TFCFSoil, Map<TFCFSoil.TFCFVariant, RegistryObject<Block>>> TFCFSOIL = tfcfSoilMap(TFCFSoil.class);
@@ -2200,36 +2201,10 @@ public final class TFCFBlocks {
    }
 
    private static Map<TFCFWood, RegistryObject<Block>> woodSpikeMapper(Class<TFCFWood> enumClass) {
-      Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
-
-      for (TFCFWood wood : enumClass.getEnumConstants()) {
-         BiFunction<Block, Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
-         Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Properties());
-         if (wood.isMangrove() || wood == TFCFWood.BALD_CYPRESS || wood == TFCFWood.RED_CYPRESS) {
-            Map.put(
-               wood,
-               register(
-                  "wood/spike/" + wood.getSerializedName(),
-                  () -> TFCFPointedDripstoneBlock.create(
-                        ExtendedProperties.of(MapColor.WOOD)
-                           .sound(SoundType.ROOTS)
-                           .strength(4.0F)
-                           .requiresCorrectToolForDrops()
-                           .noOcclusion()
-                           .randomTicks()
-                           .dynamicShape()
-                           .flammableLikeLogs()
-                           .hasPostProcess(TFCFBlocks::always),
-                        () -> (Block)ROOT_SPIKES.get(wood).get()
-                     ),
-                  blockItem
-               )
-            );
-         }
-      }
-
-      return Map;
+      // 木锥（wood/spike）已整体移除，不再注册任何方块
+      return new HashMap<>();
    }
+
 
    private static Map<Wood, RegistryObject<Block>> woodWallMapperTFC(Class<Wood> enumClass) {
       Map<Wood, RegistryObject<Block>> Map = new HashMap<>();
@@ -2533,7 +2508,7 @@ public final class TFCFBlocks {
                            .hasPostProcess(TFCFBlocks::always),
                         (Supplier<? extends Block>)STRIPPED_BAMBOO_LOGS.get(plant)
                      ),
-                  plant.createBlockItem(new Properties())
+                  plantBlockItem(plant)
                )
             );
          }
@@ -2563,7 +2538,7 @@ public final class TFCFBlocks {
                         null,
                         null
                      ),
-                  plant.createBlockItem(new Properties())
+                  plantBlockItem(plant)
                )
             );
          }
@@ -2594,7 +2569,7 @@ public final class TFCFBlocks {
                            .hasPostProcess(TFCFBlocks::always),
                         null
                      ),
-                  plant.createBlockItem(new Properties())
+                  plantBlockItem(plant)
                )
             );
          }
@@ -2630,7 +2605,7 @@ public final class TFCFBlocks {
                            .blockEntity(TFCFBlockEntities.TICK_COUNTER),
                         TFCFWood.BAMBOO.daysToGrow()
                      ),
-                  plant.createBlockItem(new Properties())
+                  plantBlockItem(plant)
                )
             );
          }
@@ -2682,6 +2657,18 @@ public final class TFCFBlocks {
       return Map;
    }
 
+   /**
+    * Body segments of tall plants / hanging vines are named {@code *_PLANT} and must not get
+    * a BlockItem - only the top segment is the obtainable item, which is how TFC does it.
+    * Registering both made every hanging vine show up twice in the creative menu.
+    */
+   private static java.util.function.Function<Block, ? extends net.minecraft.world.item.BlockItem> plantBlockItem(TFCFPlant plant) {
+      if (plant.name().endsWith("_PLANT")) {
+         return null;
+      }
+      return plant.createBlockItem(new Properties());
+   }
+
    private static Map<TFCFPlant, RegistryObject<Block>> normalPlantMapper(Class<TFCFPlant> enumClass) {
       Map<TFCFPlant, RegistryObject<Block>> Map = new HashMap<>();
 
@@ -2689,7 +2676,7 @@ public final class TFCFBlocks {
          if (!plant.isSeasonalFruitPlant()) {
             Map.put(
                plant,
-               register(("plant/" + plant.name()).toLowerCase(Locale.ROOT), plant::create, plant.createBlockItem(new Properties()))
+               register(("plant/" + plant.name()).toLowerCase(Locale.ROOT), plant::create, plantBlockItem(plant))
             );
          }
       }
@@ -2719,7 +2706,7 @@ public final class TFCFBlocks {
                            plant.getStages(),
                            TFCFClimateRanges.SEASONAL_PLANT.get(plant)
                         ),
-                     plant.createBlockItem(new Properties())
+                     plantBlockItem(plant)
                   )
                );
             } else if (plant == TFCFPlant.GLOW_VINES) {
@@ -2740,7 +2727,7 @@ public final class TFCFBlocks {
                            plant.getStages(),
                            TFCFClimateRanges.SEASONAL_PLANT.get(plant)
                         ),
-                     plant.createBlockItem(new Properties())
+                     plantBlockItem(plant)
                   )
                );
             } else if (plant == TFCFPlant.PITAHAYA) {
@@ -2757,7 +2744,7 @@ public final class TFCFBlocks {
                            plant.getStages(),
                            TFCFClimateRanges.SEASONAL_PLANT.get(plant)
                         ),
-                     plant.createBlockItem(new Properties())
+                     plantBlockItem(plant)
                   )
                );
             } else if (plant == TFCFPlant.POKEWEED) {
@@ -2772,7 +2759,7 @@ public final class TFCFBlocks {
                            plant.getStages(),
                            TFCFClimateRanges.SEASONAL_PLANT.get(plant)
                         ),
-                     plant.createBlockItem(new Properties())
+                     plantBlockItem(plant)
                   )
                );
             }

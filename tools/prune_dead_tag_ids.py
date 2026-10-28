@@ -32,6 +32,14 @@ REMOVED_PREFIXES = {
     "dry_clay_grass", "dense_clay_grass", "sparse_clay_grass",
     "dry_earthenware_clay_grass", "dense_earthenware_clay_grass", "sparse_earthenware_clay_grass",
     "dry_stoneware_clay_grass", "dense_stoneware_clay_grass", "sparse_stoneware_clay_grass",
+    "podzol",
+}
+
+# exact ids that must go even though their prefix is shared with live families
+REMOVED_EXACT = {
+    "wood/spike/bald_cypress",
+    "wood/spike/red_cypress",
+    "wood/spike/white_mangrove",
 }
 
 
@@ -41,7 +49,7 @@ def have(ident, kind):
     ns, path = ident.split(":", 1)
     if ns != "tfcflorae":
         return True  # not ours to judge
-    if path.split("/")[0] in REMOVED_PREFIXES:
+    if path.split("/")[0] in REMOVED_PREFIXES or path in REMOVED_EXACT:
         return False
     if kind == "blocks":
         return os.path.isfile(os.path.join(ASSETS, "blockstates", path.replace("/", os.sep) + ".json"))

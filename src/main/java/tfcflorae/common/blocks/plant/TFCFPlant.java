@@ -449,7 +449,9 @@ public enum TFCFPlant implements RegistryPlant {
    }
 
    public boolean isVine() {
-      return this.vine;
+      // 也按名字兜底：GLOW_VINES / HANGING_*_VINE / 各类 *_VINE 都属于藤蔓类，
+      // 一律用 translucent 渲染（cutout 会把半透明像素切成不透明的硬边）。
+      return this.vine || name().contains("VINE");
    }
 
    public int getSporeColor() {

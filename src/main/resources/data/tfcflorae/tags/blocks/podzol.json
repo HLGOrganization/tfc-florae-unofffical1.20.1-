@@ -3,9 +3,6 @@
   "replace": false,
   "values": [
     "minecraft:podzol",
-    "tfc:groundcover/humus",
-    "tfcflorae:podzol/silt",
-    "tfcflorae:podzol/loam",
-    "tfcflorae:podzol/sandy_loam"
+    "tfc:groundcover/humus"
   ]
 }
