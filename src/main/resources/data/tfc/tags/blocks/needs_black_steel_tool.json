@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/ruby/arkose",
+    "tfcflorae:ore/ruby/boninite",
+    "tfcflorae:ore/ruby/carbonatite",
+    "tfcflorae:ore/ruby/cataclasite",
+    "tfcflorae:ore/ruby/jaspillite",
+    "tfcflorae:ore/ruby/laterite",
+    "tfcflorae:ore/ruby/mudstone",
+    "tfcflorae:ore/ruby/porphyry",
+    "tfcflorae:ore/ruby/red_granite",
+    "tfcflorae:ore/ruby/sandstone",
+    "tfcflorae:ore/ruby/soapstone",
+    "tfcflorae:ore/ruby/wackestone"
+  ]
+}

@@ -32,7 +32,7 @@ RES = os.path.join(ROOT, "src", "main", "resources")
 DATA = os.path.join(RES, "data")
 ASSETS = os.path.join(RES, "assets", "tfcflorae")
 TFC_JAR = r"D:\学习资料\附属模组工作区\[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar"
-WHITELIST = os.path.join(ROOT, "reports", "registered-ids.json")
+WHITELIST = os.path.join(ROOT, "reports", "registered-ids-full.json")
 
 # Soil families that are deliberately no longer registered (see
 # TFCFBlocks.REMOVED_SOILS): duplicate grass paths, packed/loose mud, coarse
