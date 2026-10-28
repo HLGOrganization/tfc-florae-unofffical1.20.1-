@@ -1301,6 +1301,129 @@ def load_dump():
 
 
 # ---------------------------------------------------------------------------
+# Texture chain audit (blockstate -> model -> parent -> textures)
+# ---------------------------------------------------------------------------
+
+
+def load_json_quiet(path):
+    try:
+        with open(path, encoding="utf-8-sig") as fh:
+            return json.load(fh)
+    except Exception:
+        return None
+
+
+def resolve_model_id(ref, models):
+    """Map a model reference to a key in `models`, or None when it is not ours.
+
+    A reference without a namespace resolves to `minecraft:` in Minecraft, so it
+    is only treated as ours when a model with that exact id exists locally.
+    """
+    if not isinstance(ref, str):
+        return None
+    if ":" in ref:
+        ns, path = ref.split(":", 1)
+        return path if ns == NS else None
+    return ref if ref in models else None
+
+
+def audit_texture_chain():
+    """Walk every model's parent chain + textures and report broken links.
+
+    The A/B/C audit above only proves a model file exists; a model can still point
+    at a missing parent or a missing `tfcflorae:` texture, which also renders
+    purple/black.  This pass validates the whole chain.
+    """
+    tex_root = os.path.join(ASSET_ROOT, "textures")
+    models = {}
+    for kind in ("block", "item"):
+        base = os.path.join(ASSET_ROOT, "models", kind)
+        if not os.path.isdir(base):
+            continue
+        for dirpath, _d, files in os.walk(base):
+            for fn in files:
+                if not fn.endswith(".json"):
+                    continue
+                rel = os.path.relpath(os.path.join(dirpath, fn), base).replace(os.sep, "/")[:-5]
+                data = load_json_quiet(os.path.join(dirpath, fn))
+                if isinstance(data, dict):
+                    models["%s/%s" % (kind, rel)] = data
+
+    def collect(ref, seen, depth=0):
+        """(textures dict, missing parents) for one model reference."""
+        if depth > 12:
+            return {}, []
+        mid = resolve_model_id(ref, models)
+        if mid is None or mid in seen:
+            return {}, []
+        seen.add(mid)
+        data = models.get(mid)
+        if data is None:
+            return {}, [mid]
+        tex, missing = {}, []
+        parent = data.get("parent")
+        if isinstance(parent, str):
+            ptex, pmissing = collect(parent, seen, depth + 1)
+            tex.update(ptex)
+            missing.extend(pmissing)
+        for k, v in (data.get("textures") or {}).items():
+            if isinstance(v, str):
+                tex[k] = v
+        return tex, missing
+
+    def texture_ok(ref):
+        if not isinstance(ref, str) or ref.startswith("#") or ":" not in ref:
+            return True
+        ns, path = ref.split(":", 1)
+        if ns != NS:
+            return True
+        return os.path.isfile(os.path.join(tex_root, path.replace("/", os.sep) + ".png"))
+
+    missing_models = set()
+    missing_textures = {}
+
+    bs_root = os.path.join(ASSET_ROOT, "blockstates")
+    if os.path.isdir(bs_root):
+        for dirpath, _d, files in os.walk(bs_root):
+            for fn in files:
+                if not fn.endswith(".json"):
+                    continue
+                data = load_json_quiet(os.path.join(dirpath, fn))
+                if not isinstance(data, dict):
+                    continue
+                refs = []
+                for var in (data.get("variants") or {}).values():
+                    for it in (var if isinstance(var, list) else [var]):
+                        if isinstance(it, dict) and isinstance(it.get("model"), str):
+                            refs.append(it["model"])
+                for part in data.get("multipart") or []:
+                    ap = part.get("apply") if isinstance(part, dict) else None
+                    for it in (ap if isinstance(ap, list) else [ap]):
+                        if isinstance(it, dict) and isinstance(it.get("model"), str):
+                            refs.append(it["model"])
+                for ref in refs:
+                    mid = resolve_model_id(ref, models)
+                    if mid is not None and mid not in models:
+                        missing_models.add(mid)
+
+    for mid in models:
+        tex, mparents = collect(mid, set())
+        missing_models.update(mparents)
+        resolved = {}
+        for k, v in tex.items():
+            cur, hops = v, 0
+            while isinstance(cur, str) and cur.startswith("#") and hops < 8:
+                cur = tex.get(cur[1:])
+                hops += 1
+            resolved[k] = cur
+        for val in resolved.values():
+            if not texture_ok(val):
+                missing_textures.setdefault(val.split(":", 1)[1], set()).add(mid)
+
+    return sorted(missing_models), {k: sorted(v)[:6] for k, v in sorted(missing_textures.items())}
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -1419,6 +1542,14 @@ def main():
     for k in ("A", "B", "C", "OK"):
         print("  %s: %d" % (k, counts.get(k, 0)))
 
+    missing_models, missing_textures = audit_texture_chain()
+    print("== texture chain ==")
+    print("  missing model refs: %d   missing textures: %d" % (len(missing_models), len(missing_textures)))
+    for m in missing_models[:10]:
+        print("    model  %s" % m)
+    for t, users in list(missing_textures.items())[:10]:
+        print("    texture %-56s used by %s" % (t, users[0]))
+
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:
         json.dump(
@@ -1432,6 +1563,8 @@ def main():
                 # carry no action.  Everything below is actionable.
                 "rows": [r for r in rows if r["class"] != "OK"],
                 "unresolved": unresolved,
+                "missing_model_refs": missing_models[:400],
+                "missing_textures": missing_textures,
             },
             fh,
             indent=1,

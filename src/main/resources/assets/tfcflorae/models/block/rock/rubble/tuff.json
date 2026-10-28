@@ -2,6 +2,7 @@
   "__comment__": "This file was automatically created by mcresources",
   "parent": "tfcflorae:block/groundcover/rubble",
   "textures": {
-    "all": "tfc:item/loose_rock/conglomerate"
+    "0": "tfcflorae:item/loose_rock/tuff",
+    "particle": "tfcflorae:item/loose_rock/tuff"
   }
 }
