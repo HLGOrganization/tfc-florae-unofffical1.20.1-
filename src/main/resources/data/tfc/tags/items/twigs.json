@@ -1,26 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tfc:wood/twig/acacia",
-    "tfc:wood/twig/ash",
-    "tfc:wood/twig/aspen",
-    "tfc:wood/twig/birch",
-    "tfc:wood/twig/blackwood",
-    "tfc:wood/twig/chestnut",
-    "tfc:wood/twig/douglas_fir",
-    "tfc:wood/twig/hickory",
-    "tfc:wood/twig/kapok",
-    "tfc:wood/twig/mangrove",
-    "tfc:wood/twig/maple",
-    "tfc:wood/twig/oak",
-    "tfc:wood/twig/palm",
-    "tfc:wood/twig/pine",
-    "tfc:wood/twig/rosewood",
-    "tfc:wood/twig/sequoia",
-    "tfc:wood/twig/spruce",
-    "tfc:wood/twig/sycamore",
-    "tfc:wood/twig/white_cedar",
-    "tfc:wood/twig/willow",
     "tfcflorae:wood/twig/african_padauk",
     "tfcflorae:wood/twig/alder",
     "tfcflorae:wood/twig/angelim",
@@ -32,6 +12,7 @@
     "tfcflorae:wood/twig/brazilwood",
     "tfcflorae:wood/twig/butternut",
     "tfcflorae:wood/twig/buxus",
+    "tfcflorae:wood/twig/charred_tree",
     "tfcflorae:wood/twig/cocobolo",
     "tfcflorae:wood/twig/common_oak",
     "tfcflorae:wood/twig/fever",
@@ -45,6 +26,7 @@
     "tfcflorae:wood/twig/iroko",
     "tfcflorae:wood/twig/jabuticabeira",
     "tfcflorae:wood/twig/joshua",
+    "tfcflorae:wood/twig/joshua_tree",
     "tfcflorae:wood/twig/juniper",
     "tfcflorae:wood/twig/kauri",
     "tfcflorae:wood/twig/laurel",
@@ -86,7 +68,6 @@
     "tfcflorae:wood/twig/yellow_jacaranda",
     "tfcflorae:wood/twig/yellow_meranti",
     "tfcflorae:wood/twig/yew",
-    "tfcflorae:wood/twig/zebrawood",
-    "tfcflorae:wood/twig/charred_tree"
+    "tfcflorae:wood/twig/zebrawood"
   ]
 }

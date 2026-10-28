@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/anvil/red_granite",
+    "tfcflorae:rock/aqueduct/red_granite",
+    "tfcflorae:rock/bricks/red_granite",
+    "tfcflorae:rock/button/red_granite",
+    "tfcflorae:rock/chiseled/red_granite",
+    "tfcflorae:rock/cobble/red_granite",
+    "tfcflorae:rock/column/red_granite",
+    "tfcflorae:rock/cracked_bricks/red_granite",
+    "tfcflorae:rock/flagstone/red_granite",
+    "tfcflorae:rock/geyser/red_granite",
+    "tfcflorae:rock/gravel/red_granite",
+    "tfcflorae:rock/gravel_layer/red_granite",
+    "tfcflorae:rock/hardened/red_granite",
+    "tfcflorae:rock/loose/red_granite",
+    "tfcflorae:rock/magma/red_granite",
+    "tfcflorae:rock/mossy_bricks/red_granite",
+    "tfcflorae:rock/mossy_cobble/red_granite",
+    "tfcflorae:rock/mossy_loose/red_granite",
+    "tfcflorae:rock/polished_column/red_granite",
+    "tfcflorae:rock/pressure_plate/red_granite",
+    "tfcflorae:rock/raw/red_granite",
+    "tfcflorae:rock/smoke_block/red_granite",
+    "tfcflorae:rock/smooth/red_granite",
+    "tfcflorae:rock/spike/red_granite"
+  ]
+}

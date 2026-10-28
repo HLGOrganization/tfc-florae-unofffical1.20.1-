@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/bricks/arkose",
+    "tfcflorae:rock/bricks/boninite",
+    "tfcflorae:rock/bricks/carbonatite",
+    "tfcflorae:rock/bricks/cataclasite",
+    "tfcflorae:rock/bricks/jaspillite",
+    "tfcflorae:rock/bricks/laterite",
+    "tfcflorae:rock/bricks/mudstone",
+    "tfcflorae:rock/bricks/porphyry",
+    "tfcflorae:rock/bricks/red_granite",
+    "tfcflorae:rock/bricks/sandstone",
+    "tfcflorae:rock/bricks/soapstone",
+    "tfcflorae:rock/bricks/tuff",
+    "tfcflorae:rock/bricks/wackestone"
+  ]
+}
