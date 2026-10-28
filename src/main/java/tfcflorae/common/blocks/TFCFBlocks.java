@@ -703,7 +703,7 @@ public final class TFCFBlocks {
    );
    public static final Map<TFCFRock, RegistryObject<Block>> ROCK_ANVILS = Helpers.mapOfKeys(
       TFCFRock.class,
-      rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE,
+      rock -> rock != TFCFRock.TUFF && (rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE),
       rock -> registerRockBlock(
             "rock/anvil/" + rock.name(),
             () -> new TFCFRockAnvilBlock(
@@ -3544,8 +3544,14 @@ public final class TFCFBlocks {
       for (TFCFRock rock : enumClass.getEnumConstants()) {
          Map<net.dries007.tfc.common.blocks.rock.Rock.BlockType, RegistryObject<Block>> typeMap = new HashMap<>();
 
+         // 凝灰岩整套岩石方块由 TFE 提供，本模组不再注册（空表而不是缺键，避免下游 NPE）。
+         if (rock == TFCFRock.TUFF) {
+            Map.put(rock, typeMap);
+            continue;
+         }
+
          for (net.dries007.tfc.common.blocks.rock.Rock.BlockType type : net.dries007.tfc.common.blocks.rock.Rock.BlockType.values()) {
-            typeMap.put(type, registerRockBlock("rock/" + type.name() + "/" + rock.name(), () -> type.create(rock), rock != TFCFRock.TUFF));
+            typeMap.put(type, register("rock/" + type.name() + "/" + rock.name(), () -> type.create(rock), TFCCreativeTabs.ROCKS));
          }
 
          Map.put(rock, typeMap);

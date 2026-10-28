@@ -1,15 +1,14 @@
 {
  "summary": {
-  "OK": 5706
+  "OK": 5705
  },
  "counts": {
-  "blocks": 5666,
-  "items": 5674,
+  "blocks": 5665,
+  "items": 5673,
   "unresolved": 50
  },
  "expander_only_blocks": [
   "ore/anthracite/tuff",
-  "rock/anvil/tuff",
   "rock/aqueduct/tuff",
   "rock/bricks/slab/tuff",
   "rock/bricks/stairs/tuff",
@@ -695,11 +694,11 @@
   "TFCFBlocks.java:3417  register( \"rock/\" + type.name() + \"/slab/\" + rock.name(), () -> ne",
   "TFCFBlocks.java:3426  register( \"rock/\" + type.name() + \"/stairs/\" + rock.name(), () ->",
   "TFCFBlocks.java:3436  register( \"rock/\" + type.name() + \"/wall/\" + rock.name(), () -> ne",
-  "TFCFBlocks.java:3591  register(name, wrapped, TFCCreativeTabs.ROCKS) : register(name, wrapped); } private static <T extends Block> Regi",
-  "TFCFBlocks.java:3591  register(name, wrapped); } private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> b",
-  "TFCFBlocks.java:3595  register(name, blockSupplier, (Function<T, ? extends BlockItem>)null); } private static <T extends Block> Registr",
-  "TFCFBlocks.java:3599  register(name, blockSupplier, (Function<T, ? extends BlockItem>)(block -> new BlockItem(block, new Properties()))); }",
-  "TFCFBlocks.java:3603  register(name, blockSupplier, (Function<T, ? extends BlockItem>)(block -> new BlockItem(block, blockItemProperties)));",
+  "TFCFBlocks.java:3597  register(name, wrapped, TFCCreativeTabs.ROCKS) : register(name, wrapped); } private static <T extends Block> Regi",
+  "TFCFBlocks.java:3597  register(name, wrapped); } private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> b",
+  "TFCFBlocks.java:3601  register(name, blockSupplier, (Function<T, ? extends BlockItem>)null); } private static <T extends Block> Registr",
+  "TFCFBlocks.java:3605  register(name, blockSupplier, (Function<T, ? extends BlockItem>)(block -> new BlockItem(block, new Properties()))); }",
+  "TFCFBlocks.java:3609  register(name, blockSupplier, (Function<T, ? extends BlockItem>)(block -> new BlockItem(block, blockItemProperties)));",
   "TFCFItems.java:64  register(\"ore/\" + grade.name() + \"_\" + ore.name(), TFCCreativeTabs.ORES)) ); public static final Map<TFCFPowder, R",
   "TFCFItems.java:77  register(\"mineral/\" + mineral.name(), TFCCreativeTabs.ORES) ); public static final Map<Clay, RegistryObject<Item>>",
   "TFCFItems.java:80  register(\"mineral/\" + mineral.name(), TFCCreativeTabs.ORES) ); public static final Map<TFCFRock, RegistryObject<It",

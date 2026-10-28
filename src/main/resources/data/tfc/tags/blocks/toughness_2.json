@@ -12,7 +12,6 @@
     "tfcflorae:rock/cobble/red_granite",
     "tfcflorae:rock/cobble/sandstone",
     "tfcflorae:rock/cobble/soapstone",
-    "tfcflorae:rock/cobble/tuff",
     "tfcflorae:rock/cobble/wackestone",
     "tfcflorae:rock/mossy_cobble/arkose",
     "tfcflorae:rock/mossy_cobble/boninite",
@@ -25,7 +24,6 @@
     "tfcflorae:rock/mossy_cobble/red_granite",
     "tfcflorae:rock/mossy_cobble/sandstone",
     "tfcflorae:rock/mossy_cobble/soapstone",
-    "tfcflorae:rock/mossy_cobble/tuff",
     "tfcflorae:rock/mossy_cobble/wackestone",
     "tfcflorae:rock/raw/arkose",
     "tfcflorae:rock/raw/boninite",
@@ -38,7 +36,6 @@
     "tfcflorae:rock/raw/red_granite",
     "tfcflorae:rock/raw/sandstone",
     "tfcflorae:rock/raw/soapstone",
-    "tfcflorae:rock/raw/tuff",
     "tfcflorae:rock/raw/wackestone"
   ]
 }

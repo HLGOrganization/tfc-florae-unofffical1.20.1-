@@ -12,7 +12,6 @@
     "tfcflorae:rock/bricks/red_granite",
     "tfcflorae:rock/bricks/sandstone",
     "tfcflorae:rock/bricks/soapstone",
-    "tfcflorae:rock/bricks/tuff",
     "tfcflorae:rock/bricks/wackestone",
     "tfcflorae:rock/chiseled/arkose",
     "tfcflorae:rock/chiseled/boninite",
@@ -25,7 +24,6 @@
     "tfcflorae:rock/chiseled/red_granite",
     "tfcflorae:rock/chiseled/sandstone",
     "tfcflorae:rock/chiseled/soapstone",
-    "tfcflorae:rock/chiseled/tuff",
     "tfcflorae:rock/chiseled/wackestone",
     "tfcflorae:rock/cracked_bricks/arkose",
     "tfcflorae:rock/cracked_bricks/boninite",
@@ -38,7 +36,6 @@
     "tfcflorae:rock/cracked_bricks/red_granite",
     "tfcflorae:rock/cracked_bricks/sandstone",
     "tfcflorae:rock/cracked_bricks/soapstone",
-    "tfcflorae:rock/cracked_bricks/tuff",
     "tfcflorae:rock/cracked_bricks/wackestone",
     "tfcflorae:rock/mossy_bricks/arkose",
     "tfcflorae:rock/mossy_bricks/boninite",
@@ -51,7 +48,6 @@
     "tfcflorae:rock/mossy_bricks/red_granite",
     "tfcflorae:rock/mossy_bricks/sandstone",
     "tfcflorae:rock/mossy_bricks/soapstone",
-    "tfcflorae:rock/mossy_bricks/tuff",
     "tfcflorae:rock/mossy_bricks/wackestone"
   ]
 }

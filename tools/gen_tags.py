@@ -57,6 +57,25 @@ PLANKS_PARTS = {
     "wall_sign", "workbench",
 }
 
+# Exact ids that are NOT registered, taken from the server log
+# ("Couldn't load tag ... missing following references: <id>").  tuff's whole
+# Rock.BlockType set plus its anvil are gone (TFE provides them), and the blue
+# layered-sandstone variants no longer exist.
+ROCK_BLOCK_TYPES = (
+    "raw", "hardened", "smooth", "cobble", "bricks", "gravel", "spike",
+    "cracked_bricks", "chiseled", "loose", "mossy_loose", "mossy_bricks",
+    "mossy_cobble", "pressure_plate", "button", "aqueduct",
+)
+REMOVED_IDS = {
+    "rock/%s/tuff" % t for t in ROCK_BLOCK_TYPES
+} | {
+    "rock/anvil/tuff",
+    "brick/tuff",
+    "sandstone/layered/slab/blue",
+    "sandstone/layered/stairs/blue",
+    "sandstone/layered/wall/blue",
+}
+
 # TFCFRock -> TFC geology tag prefix
 ROCK_CATEGORY = {
     "red_granite": "igneous_intrusive",
@@ -86,8 +105,10 @@ def rock_names():
 
 def load_whitelist():
     d = json.load(open(WHITELIST, encoding="utf-8"))
-    blocks = {b for b in d["blocks"] if b.split("/")[0] not in REMOVED_SOILS}
-    items = {i for i in d["items"] if i.split("/")[0] not in REMOVED_SOILS}
+    blocks = {b for b in d["blocks"]
+              if b.split("/")[0] not in REMOVED_SOILS and b not in REMOVED_IDS}
+    items = {i for i in d["items"]
+             if i.split("/")[0] not in REMOVED_SOILS and i not in REMOVED_IDS}
     return blocks, items
 
 

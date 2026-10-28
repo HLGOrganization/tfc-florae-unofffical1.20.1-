@@ -52,7 +52,6 @@
     "tfcflorae:rock/hardened/red_granite",
     "tfcflorae:rock/hardened/sandstone",
     "tfcflorae:rock/hardened/soapstone",
-    "tfcflorae:rock/hardened/tuff",
     "tfcflorae:rock/hardened/wackestone",
     "tfcflorae:rock/raw/arkose",
     "tfcflorae:rock/raw/boninite",
@@ -67,7 +66,6 @@
     "tfcflorae:rock/raw/red_granite",
     "tfcflorae:rock/raw/sandstone",
     "tfcflorae:rock/raw/soapstone",
-    "tfcflorae:rock/raw/tuff",
     "tfcflorae:rock/raw/wackestone"
   ]
 }

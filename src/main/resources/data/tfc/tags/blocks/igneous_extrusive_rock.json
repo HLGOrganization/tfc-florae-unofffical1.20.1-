@@ -4,10 +4,8 @@
     "tfcflorae:rock/loose/boninite",
     "tfcflorae:rock/loose/carbonatite",
     "tfcflorae:rock/loose/porphyry",
-    "tfcflorae:rock/loose/tuff",
     "tfcflorae:rock/mossy_loose/boninite",
     "tfcflorae:rock/mossy_loose/carbonatite",
-    "tfcflorae:rock/mossy_loose/porphyry",
-    "tfcflorae:rock/mossy_loose/tuff"
+    "tfcflorae:rock/mossy_loose/porphyry"
   ]
 }
