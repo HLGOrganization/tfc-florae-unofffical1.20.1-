@@ -49,7 +49,6 @@ import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.rock.LooseFlintBlock;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.TFCFRockSand;
@@ -132,22 +131,6 @@ public class TFCFForgeEventHandler {
          event.setCancellationResult(InteractionResult.SUCCESS);
          event.setCanceled(true);
          return;
-      }
-
-      if (level.getBlockState(pos).isSolid()
-         && (EnvironmentHelpers.isWorldgenReplaceable(level.getBlockState(pos.above())) || level.getBlockState(pos.above()).isAir())
-         && (level.getBlockState(pos.above()).getBlock() != TFCFBlocks.LOOSE_FLINT.get() || !(level.getBlockState(pos.above()).getBlock() instanceof LooseRockBlock))
-         && ((Block)TFCFBlocks.LOOSE_FLINT.get()).defaultBlockState().canSurvive(level, pos.above())
-         && event.getHand() == InteractionHand.MAIN_HAND
-         && (
-            Helpers.isItem(event.getItemStack(), TFCFTags.Items.FLINT_KNAPPING)
-               || event.getItemStack().getItem() == Items.FLINT
-               || event.getItemStack().getItem() == ((Block)TFCFBlocks.LOOSE_FLINT.get()).asItem()
-         )) {
-         event.getItemStack().shrink(1);
-         Helpers.playSound(level, pos.above(), SoundType.STONE.getPlaceSound());
-         level.setBlockAndUpdate(pos.above(), (BlockState)((Block)TFCFBlocks.LOOSE_FLINT.get()).defaultBlockState().setValue(LooseFlintBlock.COUNT, 1));
-         event.setCancellationResult(InteractionResult.SUCCESS);
       }
 
       for (Variant variant : Variant.values()) {

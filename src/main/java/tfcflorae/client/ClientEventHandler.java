@@ -118,21 +118,6 @@ public class ClientEventHandler {
       RenderType cutout = RenderType.cutout();
       RenderType cutoutMipped = RenderType.cutoutMipped();
       RenderType translucent = RenderType.translucent();
-      TFCFItems.FLINT_TOOLS
-         .values()
-         .forEach(
-            tool -> {
-               Item javelin = (Item)tool.get(ItemType.JAVELIN).get();
-               ItemProperties.register(
-                  javelin,
-                  Helpers.identifier("throwing"),
-                  (stack, level, entity, unused) -> entity == null
-                           || (!entity.isUsingItem() || entity.getUseItem() != stack) && (!(entity instanceof Monster monster) || !monster.isAggressive())
-                        ? 0.0F
-                        : 1.0F
-               );
-            }
-         );
       TFCFBlocks.WOODS
          .values()
          .forEach(

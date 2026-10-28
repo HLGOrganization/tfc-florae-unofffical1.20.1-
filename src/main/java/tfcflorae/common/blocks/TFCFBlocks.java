@@ -99,7 +99,6 @@ import tfcflorae.common.blocks.plant.TFCFFruitingCactusBlock;
 import tfcflorae.common.blocks.plant.TFCFPlant;
 import tfcflorae.common.blocks.rock.DripstoneRock;
 import tfcflorae.common.blocks.rock.Geyser;
-import tfcflorae.common.blocks.rock.LooseFlintBlock;
 import tfcflorae.common.blocks.rock.MineralSheetBlock;
 import tfcflorae.common.blocks.rock.TFCFOre;
 import tfcflorae.common.blocks.rock.TFCFOreDepositBlock;
@@ -747,16 +746,6 @@ public final class TFCFBlocks {
    );
    public static final Map<Rock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFC_ROCK_DECORATIONS = RockDecoTFCMapper(Rock.class);
    public static final Map<TFCFRock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> TFCF_ROCK_DECORATIONS = RockDecoTFCFMapper(TFCFRock.class);
-   public static final RegistryObject<Block> LOOSE_FLINT = register(
-      "rock/loose/flint",
-      () -> new LooseFlintBlock(
-            net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(MapColor.DEEPSLATE).noOcclusion()
-               .strength(0.05F, 0.0F)
-               .sound(SoundType.STONE)
-               .noCollission()
-         ),
-      TFCCreativeTabs.ROCKS
-   );
    public static final RegistryObject<Block> MINERAL_SHEET = register(
       "mineral/mineral_sheet",
       () -> new MineralSheetBlock(

@@ -102,7 +102,6 @@ public final class TFCFItems {
    public static final Map<TFCFSoil.TFCFVariant, RegistryObject<Item>> SOIL_PILE_TFCF = Helpers.mapOfKeys(
       TFCFSoil.TFCFVariant.class, variant -> register("soil_pile/" + variant.name(), TFCCreativeTabs.EARTH)
    );
-   public static final Map<RockCategory, Map<net.dries007.tfc.common.blocks.rock.RockCategory.ItemType, RegistryObject<Item>>> FLINT_TOOLS = flintToolMapper();
    public static final RegistryObject<Item> BRUSHES = register(
       "tools/brush", (Supplier<Item>)(() -> new BrushItem(new Properties().stacksTo(1).durability(250)))
    );
@@ -230,24 +229,6 @@ public final class TFCFItems {
             }
 
             Map.put(clay, subMap);
-         }
-      }
-
-      return Map;
-   }
-
-   private static Map<RockCategory, Map<net.dries007.tfc.common.blocks.rock.RockCategory.ItemType, RegistryObject<Item>>> flintToolMapper() {
-      Map<RockCategory, Map<net.dries007.tfc.common.blocks.rock.RockCategory.ItemType, RegistryObject<Item>>> Map = new HashMap<>();
-
-      for (RockCategory category : RockCategory.class.getEnumConstants()) {
-         if (false) { // flint tools removed from the port
-            Map<net.dries007.tfc.common.blocks.rock.RockCategory.ItemType, RegistryObject<Item>> subMap = new HashMap<>();
-
-            for (net.dries007.tfc.common.blocks.rock.RockCategory.ItemType type : net.dries007.tfc.common.blocks.rock.RockCategory.ItemType.values()) {
-               subMap.put(type, register("tools/" + type.name() + "/flint", (Supplier<Item>)(() -> type.create(category))));
-            }
-
-            Map.put(category, subMap);
          }
       }
 

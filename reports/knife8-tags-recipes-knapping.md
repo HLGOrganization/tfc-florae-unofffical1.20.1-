@@ -72,3 +72,13 @@ Helpers.identifier("textures/gui/knapping/" + item.getPath() + (disabled ? "_dis
 - 新增 data 文件：118 个 tag、约 1100 个 collapse/landslide 配方
 - 新增资源：17 张敲制面板贴图
 - `assemble` EXIT=0，jar 已部署（SHA256 见 `reports/deployment.json`）
+
+## 6. 后续：燧石整体移除
+
+按要求把燧石从模组中彻底删除（jar 内已无任何 flint 条目）：
+
+- 方块 `rock/loose/flint`（`LooseFlintBlock`、blockstate、block/item 模型、raw 贴图）与掉落表
+- 燧石工具贴图 12 张；`FLINT_TOOLS` 字段与 `flintToolMapper`（本来就是 if(false) 空实现）
+- `TFCFForgeEventHandler` 里「用燧石/燧石敲制物品放置碎燧石」的分支
+- 敲制：knapping_type、输入 tag、配方目录，以及 `tfcflorae:knapping_any` 里的引用
+- `TFCFTags.Items.FLINT_KNAPPING`
