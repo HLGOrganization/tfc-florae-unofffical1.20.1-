@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/white_jacaranda",
+    "tfcflorae:wood/stripped_log/white_jacaranda",
+    "tfcflorae:wood/stripped_wood/white_jacaranda",
+    "tfcflorae:wood/wood/white_jacaranda"
+  ]
+}

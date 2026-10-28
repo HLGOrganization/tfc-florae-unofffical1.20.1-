@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:podzol/loam",
+    "tfcflorae:podzol/sandy_loam",
+    "tfcflorae:podzol/silt"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/chiseled/mudstone",
+    "top": "tfcflorae:block/rock/chiseled/mudstone",
+    "side": "tfcflorae:block/rock/chiseled/mudstone"
+  }
+}

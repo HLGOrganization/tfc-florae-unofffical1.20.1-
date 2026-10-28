@@ -1,27 +1,23 @@
-"""Generate TFC-facing tags for tfcflorae blocks and items.
+"""Give tfcflorae blocks/items the same tags TFC gives its own equivalents.
 
-Design
-------
-TFC drives rock collapse, landslides, tool tiers and many recipes through tags in
-the `tfc` namespace.  An addon participates by shipping a file with the *same*
-path (`data/tfc/tags/blocks/<tag>.json`) containing only its own ids and
-`"replace": false`; Forge merges it with TFC's own values.
+How it works (data-driven, no Java source involved)
+---------------------------------------------------
+1. Parse every tag JSON shipped by TFC, minecraft and forge inside the TFC jar.
+2. Resolve `#tag` references so each concrete id knows every tag it ends up in.
+3. For each of our registered ids, pick the TFC id it is "the same kind of thing
+   as" (a wood part of another species, a rock part of another rock, or simply
+   `tfc:<same path>`), and copy that id's whole tag set onto ours.
+4. Write `data/<ns>/tags/<kind>/<tag>.json` with `replace:false`, containing only
+   our ids.
 
-So this tool takes our registered ids (derived from the blockstate / item model
-tree, which mirrors registration) and writes:
-
-    data/tfc/tags/blocks/<tag>.json       our block ids for that TFC tag
-    data/tfc/tags/items/<tag>.json        our item ids for that TFC tag
-    data/forge/tags/blocks|items/<tag>.json  common tags where applicable
-    data/tfcflorae/tags/blocks|items/rock/<category>.json
-                                          geological class (TFC has no rock
-                                          category tag, so we provide one)
-
-Rock categories mirror TFCFRock's RockCategory (and real geology).
+Hard safety rule: **every id written must be in the registered-id whitelist**
+(`reports/registered-ids.json`, produced by `audit_register_assets.py --dump-ids`).
+A single unknown id makes the whole tag fail to load, which is exactly what made
+every TFC leaf block vanish last time (one bogus entry in `minecraft:logs`).
 
 Usage
-    python tools/gen_tags.py --check    # report what would be written
-    python tools/gen_tags.py            # write files
+    python tools/audit_register_assets.py --dump-ids reports/registered-ids.json
+    python tools/gen_tags.py [--check]
 """
 from __future__ import annotations
 
@@ -29,14 +25,17 @@ import argparse
 import collections
 import json
 import os
-import re
+import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSETS = os.path.join(ROOT, "src", "main", "resources", "assets", "tfcflorae")
-DATA = os.path.join(ROOT, "src", "main", "resources", "data")
+RES = os.path.join(ROOT, "src", "main", "resources")
+DATA = os.path.join(RES, "data")
+ASSETS = os.path.join(RES, "assets", "tfcflorae")
+TFC_JAR = r"D:\学习资料\附属模组工作区\[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar"
+WHITELIST = os.path.join(ROOT, "reports", "registered-ids.json")
 
-# name -> RockCategory, straight from TFCFRock
-ROCKS = {
+# TFCFRock -> TFC geology tag prefix
+ROCK_CATEGORY = {
     "red_granite": "igneous_intrusive",
     "porphyry": "igneous_extrusive",
     "boninite": "igneous_extrusive",
@@ -52,109 +51,82 @@ ROCKS = {
     "soapstone": "metamorphic",
 }
 
-# block path prefix -> TFC / Forge tags it belongs to
-ROCK_BLOCK_RULES = {
-    "rock/raw": ["tfc:rock/raw", "tfc:breaks_when_isolated"],
-    "rock/hardened": ["tfc:rock/hardened"],
-    "rock/smooth": ["tfc:rock/smooth"],
-    "rock/cobble": ["tfc:can_landslide", "forge:cobblestone/normal"],
-    "rock/mossy_cobble": ["tfc:can_landslide"],
-    "rock/gravel": ["tfc:rock/gravel", "tfc:can_landslide", "forge:gravel"],
-    "rock/bricks": ["tfc:rock/bricks", "forge:stone_bricks"],
-    "rock/mossy_bricks": ["tfc:rock/mossy_bricks", "tfc:rock/bricks"],
-    "rock/cracked_bricks": ["tfc:rock/cracked_bricks", "tfc:rock/bricks"],
-    "rock/chiseled": ["tfc:rock/chiseled_bricks", "tfc:rock/bricks"],
-    "rock/spike": ["tfc:can_collapse"],
-    "rock/aqueduct": ["tfc:rock/aqueducts"],
-    "rock/anvil": ["tfc:rock_anvils"],
-    "rock/loose": ["tfc:loose_rocks"],
-    "rock/mossy_loose": ["tfc:loose_rocks"],
-    "rock/gravel_layer": ["tfc:can_landslide"],
-}
 
-# variant sub-paths that still count as rock products of that type
-ROCK_SUBDIRS = ("slab", "stairs", "wall")
-
-# Non-rock families: block/item id prefix -> tags it belongs to.
-# Ordered by prefix length (longest first) so `plant/potted` wins over `plant`.
-PREFIX_RULES = {
-    # --- soil / sand: TFC put dirt, grass, farmland, mud, sand and clay into
-    # `tfc:can_landslide`, so the mod's own earth variants belong there too.
-    "rockier_compact_dirt": ["tfc:can_landslide"],
-    "rocky_compact_dirt": ["tfc:can_landslide"],
-    "rockiest_compact_dirt": ["tfc:can_landslide"],
-    "pebble_compact_dirt": ["tfc:can_landslide"],
-    "sand/rocky": ["tfc:can_landslide", "forge:sand"],
-    "sand/sandy_tiles": ["tfc:can_landslide", "forge:sand"],
-    "sand/sandier_tiles": ["tfc:can_landslide", "forge:sand"],
-    "sand/sandiest_tiles": ["tfc:can_landslide", "forge:sand"],
-    "sandstone/layered": ["forge:sandstone", "minecraft:stone_bricks"],
-    # --- ores / deposits
-    "ore": ["tfc:rock/ores"],
-    "deposit": ["tfc:ore_deposits", "tfc:can_landslide"],
-    # --- wood
-    "wood/log": ["minecraft:logs", "forge:logs", "minecraft:logs_that_log"],
-    "wood/wood": ["minecraft:logs", "forge:logs", "minecraft:logs_that_log"],
-    "wood/stripped_log": ["forge:stripped_logs"],
-    "wood/stripped_wood": ["forge:stripped_logs"],
-    "wood/planks": ["minecraft:planks"],
-    "wood/leaves": ["minecraft:leaves"],
-    "wood/sapling": ["minecraft:saplings"],
-    "wood/fallen_leaves": ["tfc:fallen_leaves", "minecraft:leaves"],
-    "wood/barrel": ["tfc:barrels"],
-    "wood/bookshelf": ["tfc:bookshelves"],
-    "wood/chiseled_bookshelf": ["tfc:bookshelves"],
-    "wood/chest": ["forge:chests/wooden"],
-    "wood/trapped_chest": ["forge:chests/wooden"],
-    "wood/trapdoor": ["minecraft:trapdoors"],
-    "wood/button": ["minecraft:buttons"],
-    "wood/pressure_plate": ["minecraft:pressure_plates"],
-    "wood/door": ["minecraft:doors"],
-    "wood/fence_gate": ["minecraft:fence_gates"],
-    "wood/fence": ["minecraft:fences"],
-    "wood/log_fence": ["minecraft:fences"],
-    "wood/sign": ["minecraft:signs"],
-    "wood/wall_sign": ["minecraft:signs"],
-    "wood/slab": ["minecraft:slabs"],
-    "wood/stairs": ["minecraft:stairs"],
-    "wood/workbench": ["tfc:workbenches"],
-    "wood/loom": ["tfc:looms"],
-    "wood/sluice": ["tfc:sluices"],
-    "wood/lectern": ["tfc:lecterns"],
-    "wood/jar_shelf": ["tfc:jar_shelves"],
-    "wood/scribing_table": ["tfc:scribing_tables"],
-    "wood/sewing_table": ["tfc:sewing_tables"],
-    "wood/tool_rack": ["tfc:tool_racks"],
-    "wood/water_wheel": ["tfc:water_wheels"],
-    "wood/twig": ["tfc:twigs"],
-    "wood/potted_sapling": ["minecraft:flower_pots"],
-    # --- plants
-    "plant/potted": ["minecraft:flower_pots"],
-    "plant": ["tfc:plants", "tfc:replaceable_plants"],
-}
+def wood_names():
+    base = os.path.join(ASSETS, "blockstates", "wood", "planks")
+    return {f[:-5] for f in os.listdir(base) if f.endswith(".json")}
 
 
-def load_ids(kind):
-    """Ids from assets (blockstates for blocks, models/item for items)."""
-    base = os.path.join(ASSETS, "blockstates" if kind == "blocks" else "models/item")
-    ids = []
-    for dirpath, _d, files in os.walk(base):
-        for fn in files:
-            if fn.endswith(".json"):
-                ids.append(os.path.relpath(os.path.join(dirpath, fn), base).replace(os.sep, "/")[:-5])
-    return sorted(set(ids))
+def rock_names():
+    return set(ROCK_CATEGORY)
 
 
-def write_tag(ns, kind, tag, ids, check):
-    path = os.path.join(DATA, ns, "tags", kind, tag + ".json")
-    payload = {"replace": False, "values": sorted(ids)}
-    if check:
-        return path, len(ids)
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8", newline="\n") as fh:
-        json.dump(payload, fh, indent=2, ensure_ascii=False)
-        fh.write("\n")
-    return path, len(ids)
+def load_whitelist():
+    d = json.load(open(WHITELIST, encoding="utf-8"))
+    return set(d["blocks"]), set(d["items"])
+
+
+def load_tfc_tags():
+    """{(kind, tag_id): [raw values]} for tfc / minecraft / forge namespaces."""
+    z = zipfile.ZipFile(TFC_JAR)
+    out = {}
+    for n in z.namelist():
+        if "/tags/" not in n or not n.endswith(".json") or not n.startswith("data/"):
+            continue
+        ns = n.split("/")[1]
+        if ns not in ("tfc", "minecraft", "forge"):
+            continue
+        rest = n.split("/tags/", 1)[1][:-5]
+        kind, path = rest.split("/", 1)
+        if kind not in ("blocks", "items"):
+            continue
+        try:
+            d = json.loads(z.read(n))
+        except Exception:
+            continue
+        vals = [v if isinstance(v, str) else v.get("id", "") for v in d.get("values", [])]
+        out[(kind, "%s:%s" % (ns, path))] = [v for v in vals if v]
+    return out
+
+
+def build_reverse(tags):
+    """{(kind, concrete id): {tag ids it belongs to}} with #refs resolved."""
+    rev = collections.defaultdict(set)
+    seen_stack = set()
+
+    def resolve(kind, tag, depth=0):
+        if depth > 16 or (kind, tag) in seen_stack:
+            return set()
+        seen_stack.add((kind, tag))
+        try:
+            vals = tags.get((kind, tag), [])
+            out = set()
+            for v in vals:
+                if v.startswith("#"):
+                    out |= resolve(kind, v[1:], depth + 1)
+                else:
+                    out.add(v)
+            return out
+        finally:
+            seen_stack.discard((kind, tag))
+
+    for (kind, tag), _vals in tags.items():
+        for ident in resolve(kind, tag):
+            rev[(kind, ident)].add(tag)
+    return rev
+
+
+def ref_id(our_id, woods, rocks):
+    """TFC id that is 'the same kind of thing' as ours."""
+    parts = our_id.split("/")
+    last = parts[-1]
+    if parts[0] == "wood" and len(parts) >= 3 and last in woods:
+        return "tfc:wood/%s/oak" % "/".join(parts[1:-1])
+    if parts[0] in ("rock", "ore", "deposit") and len(parts) >= 3 and last in rocks:
+        return "tfc:%s/%s/granite" % (parts[0], "/".join(parts[1:-1]))
+    if parts[0] == "brick" and len(parts) == 2 and last in rocks:
+        return "tfc:brick/granite"
+    return "tfc:" + our_id
 
 
 def main():
@@ -162,84 +134,93 @@ def main():
     ap.add_argument("--check", action="store_true")
     args = ap.parse_args()
 
-    blocks = load_ids("blocks")
-    items = load_ids("items")
-    print("our blocks: %d   our items: %d" % (len(blocks), len(items)))
+    blocks, items = load_whitelist()
+    woods, rocks = wood_names(), rock_names()
+    print("whitelist: %d blocks, %d items | woods %d | rocks %d" % (len(blocks), len(items), len(woods), len(rocks)))
 
-    # tag -> [(id, kind)] ; kind is 'blocks' or 'items'
-    collected = collections.defaultdict(set)
-    cats = collections.defaultdict(set)
+    tags = load_tfc_tags()
+    print("TFC data pack tags parsed: %d" % len(tags))
+    rev = build_reverse(tags)
+    print("concrete ids with tag knowledge: %d" % len(rev))
 
-    def add(tag, ident, kind):
-        collected[(kind, tag)].add(ident)
+    out = collections.defaultdict(set)   # (kind, tag) -> {our ids}
+    covered = collections.Counter()
+    unmatched = []
 
-    rock_pat = re.compile(r"^rock/([a-z_]+)/(%s)$" % "|".join(ROCKS))
-    rock_variant = re.compile(r"^rock/([a-z_]+)/(%s)/(%s)$" % ("|".join(ROCKS), "|".join(ROCK_SUBDIRS)))
+    for kind, ids in (("blocks", blocks), ("items", items)):
+        for our_id in ids:
+            ref = ref_id(our_id, woods, rocks)
+            tagset = rev.get((kind, ref))
+            if tagset:
+                for t in tagset:
+                    out[(kind, t)].add("tfcflorae:" + our_id)
+                covered[kind] += 1
+            elif our_id.split("/")[0] in ("wood", "rock", "ore", "deposit", "brick"):
+                unmatched.append((kind, our_id, ref))
 
-    matched = collections.Counter()
-    for ident in blocks:
-        m = rock_pat.match(ident)
-        mv = rock_variant.match(ident)
-        if m:
-            rtype, rock = m.group(1), m.group(2)
-            tags = ROCK_BLOCK_RULES.get("rock/" + rtype)
-            if tags:
-                for t in tags:
-                    add(t, "tfcflorae:" + ident, "blocks")
-                    matched["rock/" + rtype] += 1
-            cats["blocks"].add((ROCKS[rock], "tfcflorae:" + ident))
-        elif mv:
-            rtype, rock, _sub = mv.group(1), mv.group(2), mv.group(3)
-            if ("rock/" + rtype) in ROCK_BLOCK_RULES:
-                cats["blocks"].add((ROCKS[rock], "tfcflorae:" + ident))
+    # geology tags, driven directly by TFCFRock's category
+    geo = 0
+    for kind, ids in (("blocks", blocks), ("items", items)):
+        for our_id in ids:
+            parts = our_id.split("/")
+            rock = parts[-1]
+            if rock not in ROCK_CATEGORY:
+                continue
+            if parts[0] not in ("rock", "ore", "deposit", "brick"):
+                continue
+            cat = ROCK_CATEGORY[rock]
+            # `<cat>_items` = every item of that rock class; `<cat>_rock` = loose samples
+            out[(kind, "tfc:%s_items" % cat)].add("tfcflorae:" + our_id)
+            if parts[0] == "rock" and parts[1] in ("loose", "mossy_loose"):
+                out[(kind, "tfc:%s_rock" % cat)].add("tfcflorae:" + our_id)
+            geo += 1
 
-    for ident in items:
-        m = rock_pat.match(ident)
-        mv = rock_variant.match(ident)
-        if m:
-            rtype, rock = m.group(1), m.group(2)
-            tags = ROCK_BLOCK_RULES.get("rock/" + rtype)
-            if tags:
-                for t in tags:
-                    add(t, "tfcflorae:" + ident, "items")
-            cats["items"].add((ROCKS[rock], "tfcflorae:" + ident))
-        elif mv:
-            rtype, rock = mv.group(1), mv.group(2)
-            if ("rock/" + rtype) in ROCK_BLOCK_RULES:
-                cats["items"].add((ROCKS[rock], "tfcflorae:" + ident))
+    # never write anything that isn't actually registered
+    whitelist = {"blocks": {"tfcflorae:" + i for i in blocks}, "items": {"tfcflorae:" + i for i in items}}
+    bad = []
+    clean = {}
+    for (kind, tag), ids in out.items():
+        allowed = whitelist[kind]
+        keep = {i for i in ids if i in allowed}
+        if len(keep) != len(ids):
+            bad.append((kind, tag, len(ids) - len(keep)))
+        if keep:
+            clean[(kind, tag)] = keep
 
     written = []
-    # prefix families (longest prefix first)
-    prefix_keys = sorted(PREFIX_RULES, key=len, reverse=True)
-    for kind, idlist in (("blocks", blocks), ("items", items)):
-        for ident in idlist:
-            if ident.startswith("rock/"):
-                continue  # handled by the rock rules above
-            for prefix in prefix_keys:
-                if ident == prefix or ident.startswith(prefix + "/"):
-                    for t in PREFIX_RULES[prefix]:
-                        add(t, "tfcflorae:" + ident, kind)
-                    break
-
-    for (kind, tag) in sorted(collected):
-        ids = collected[(kind, tag)]
-        ns = tag.split(":")[0]
-        path = tag.split(":", 1)[1]
-        written.append(write_tag(ns, kind, path, ids, args.check))
-
-    for kind in ("blocks", "items"):
-        by_cat = collections.defaultdict(set)
-        for cat, ident in cats[kind]:
-            by_cat[cat].add(ident)
-        for cat, ids in sorted(by_cat.items()):
-            written.append(write_tag("tfcflorae", kind, "rock/" + cat, ids, args.check))
+    for (kind, tag), ids in sorted(clean.items()):
+        ns, path = tag.split(":", 1)
+        target = os.path.join(DATA, ns, "tags", kind, path + ".json")
+        existing = set()
+        if os.path.isfile(target):
+            try:
+                existing = {v for v in json.load(open(target, encoding="utf-8-sig")).get("values", []) if isinstance(v, str)}
+            except Exception:
+                existing = set()
+        # anything of ours that is no longer registered would break the whole tag
+        existing = {v for v in existing
+                    if not v.startswith("tfcflorae:") or v in whitelist[kind]}
+        merged = sorted(existing | ids)
+        written.append((os.path.relpath(target, ROOT), len(merged), len(ids)))
+        if not args.check:
+            os.makedirs(os.path.dirname(target), exist_ok=True)
+            with open(target, "w", encoding="utf-8", newline="\n") as fh:
+                json.dump({"replace": False, "values": merged}, fh, indent=2, ensure_ascii=False)
+                fh.write("\n")
 
     print()
-    for path, n in written:
-        print("  %-78s %d values" % (os.path.relpath(path, ROOT), n))
-    print()
-    print("rock rule matches:", dict(matched))
-    print(("CHECK" if args.check else "WROTE") + " %d tag files" % len(written))
+    print("tag files written: %d   (check=%s)" % (len(written), args.check))
+    print("ids with a TFC-twin tag set: blocks %d / %d, items %d / %d" % (
+        covered["blocks"], len(blocks), covered["items"], len(items)))
+    print("geology assignments: %d" % geo)
+    if bad:
+        print("DROPPED unregistered ids (safety):", bad[:5])
+    if unmatched:
+        print("no TFC twin (%d), needs a manual rule:" % len(unmatched))
+        for k, i, r in unmatched[:20]:
+            print("   %-6s %-46s -> %s" % (k, i, r))
+    for path, total, ours in written[:15]:
+        print("   %-72s %d values (+%d ours)" % (path, total, ours))
 
 
 if __name__ == "__main__":

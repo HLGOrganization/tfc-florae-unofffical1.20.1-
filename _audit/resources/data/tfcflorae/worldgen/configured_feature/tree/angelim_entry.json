@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 22,
+      "max_temperature": 50,
+      "min_rainfall": 320,
+      "max_rainfall": 500
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/angelim"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/angelim"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/angelim",
+    "dead_tree": "tfcflorae:tree/angelim_dead",
+    "old_growth_tree": "tfcflorae:tree/angelim_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/angelim"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/angelim",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/angelim"
+    }
+  }
+}

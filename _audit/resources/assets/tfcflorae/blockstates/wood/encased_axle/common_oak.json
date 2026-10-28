@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "tfcflorae:block/wood/encased_axle/common_oak",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tfcflorae:block/wood/encased_axle/common_oak"
+    },
+    "axis=z": {
+      "model": "tfcflorae:block/wood/encased_axle/common_oak",
+      "x": 90
+    }
+  }
+}

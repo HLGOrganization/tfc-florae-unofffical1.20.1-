@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": -4,
+      "max_temperature": 13,
+      "min_rainfall": 60,
+      "max_rainfall": 400
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/alder"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/alder"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/alder",
+    "dead_tree": "tfcflorae:tree/alder_dead",
+    "old_growth_tree": "tfcflorae:tree/alder_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/alder"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/alder",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/alder"
+    }
+  }
+}

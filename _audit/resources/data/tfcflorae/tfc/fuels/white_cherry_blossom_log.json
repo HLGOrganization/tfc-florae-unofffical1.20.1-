@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/white_cherry_blossom"
+    },
+    {
+      "item": "tfcflorae:wood/wood/white_cherry_blossom"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/white_cherry_blossom"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/white_cherry_blossom"
+    }
+  ],
+  "duration": 1500,
+  "temperature": 660,
+  "purity": 0.95
+}

@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 20,
+      "max_temperature": 50,
+      "min_rainfall": 255,
+      "max_rainfall": 500
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/cocobolo"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/cocobolo"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/cocobolo",
+    "dead_tree": "tfcflorae:tree/cocobolo_dead",
+    "old_growth_tree": "tfcflorae:tree/cocobolo_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/cocobolo"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/cocobolo",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/cocobolo"
+    }
+  }
+}

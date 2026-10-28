@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/poplar",
+    "tfcflorae:wood/stripped_log/poplar",
+    "tfcflorae:wood/stripped_wood/poplar",
+    "tfcflorae:wood/wood/poplar"
+  ]
+}

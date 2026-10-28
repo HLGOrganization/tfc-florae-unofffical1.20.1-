@@ -1,0 +1,18 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:earthenware_clay_knapping",
+  "outside_slot_required": true,
+  "pattern": [
+    "XX XX",
+    "X   X",
+    "X   X",
+    "X   X",
+    "XX XX"
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/earthenware/unfired/mold/mace_head"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:earthenware_clay_knapping"
+  }
+}

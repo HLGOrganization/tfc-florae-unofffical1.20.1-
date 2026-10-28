@@ -1,0 +1,307 @@
+{
+  "ingredient": [
+    {
+      "item": "tfc:ore/normal_bismuthinite"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/arkose"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/chalk"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/chert"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/claystone"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/dacite"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/diorite"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/dolomite"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/gabbro"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/gneiss"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/laterite"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/limestone"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/mudstone"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/porphyry"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/red_granite"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/sandstone"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/schist"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/shale"
+    },
+    {
+      "item": "tfc:ore/normal_bismuthinite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_bismuthinite/wackestone"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/arkose"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/chalk"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/chert"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/claystone"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/dacite"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/diorite"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/dolomite"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/gabbro"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/gneiss"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/laterite"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/limestone"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/mudstone"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/porphyry"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/red_granite"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/sandstone"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/schist"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/shale"
+    },
+    {
+      "item": "tfc:ore/poor_bismuthinite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_bismuthinite/wackestone"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/arkose"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/chalk"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/chert"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/claystone"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/dacite"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/diorite"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/dolomite"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/gabbro"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/gneiss"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/laterite"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/limestone"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/mudstone"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/porphyry"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/red_granite"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/sandstone"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/schist"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/shale"
+    },
+    {
+      "item": "tfc:ore/rich_bismuthinite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_bismuthinite/wackestone"
+    },
+    {
+      "item": "tfc:ore/small_bismuthinite"
+    }
+  ],
+  "heat_capacity": 2.857,
+  "forging_temperature": 162,
+  "welding_temperature": 216
+}

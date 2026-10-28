@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": -16,
+      "max_temperature": 19,
+      "min_rainfall": 100,
+      "max_rainfall": 390
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/sloe"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/sloe"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/sloe",
+    "dead_tree": "tfcflorae:tree/sloe_dead",
+    "old_growth_tree": "tfcflorae:tree/sloe_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/sloe"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/sloe",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/sloe"
+    }
+  }
+}

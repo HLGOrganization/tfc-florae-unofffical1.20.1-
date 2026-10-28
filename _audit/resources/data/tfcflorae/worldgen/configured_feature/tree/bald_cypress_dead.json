@@ -1,0 +1,26 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:bald_cypress_dead/1",
+      "tfcflorae:bald_cypress_dead/2",
+      "tfcflorae:bald_cypress_dead/3",
+      "tfcflorae:bald_cypress_dead/4",
+      "tfcflorae:bald_cypress_dead/5",
+      "tfcflorae:bald_cypress_dead/6",
+      "tfcflorae:bald_cypress_dead/7",
+      "tfcflorae:bald_cypress_dead/8",
+      "tfcflorae:bald_cypress_dead/9",
+      "tfcflorae:bald_cypress_dead/10",
+      "tfcflorae:bald_cypress_dead/11",
+      "tfcflorae:bald_cypress_dead/12",
+      "tfcflorae:bald_cypress_dead/13"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 4,
+      "ground_type": "submerged"
+    }
+  }
+}

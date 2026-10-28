@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:food/mulberry"
+  },
+  "hunger": 4,
+  "saturation": 0.5,
+  "water": 4.5,
+  "decay_modifier": 4.9,
+  "fruit": 0.75
+}

@@ -1,0 +1,13 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/bamboo"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/bamboo"
+    }
+  ],
+  "duration": 1000,
+  "temperature": 610,
+  "purity": 0.95
+}

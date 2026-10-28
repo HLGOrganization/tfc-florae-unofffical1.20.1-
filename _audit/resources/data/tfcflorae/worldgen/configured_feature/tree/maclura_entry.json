@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": -1,
+      "max_temperature": 17,
+      "min_rainfall": 140,
+      "max_rainfall": 400
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/maclura"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/maclura"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/maclura",
+    "dead_tree": "tfcflorae:tree/maclura_dead",
+    "old_growth_tree": "tfcflorae:tree/maclura_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/maclura"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/maclura",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/maclura"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfc:deposit/native_copper/gabbro",
+  "model_stages": [
+    "tfc:item/pan/native_copper/gabbro_full",
+    "tfc:item/pan/native_copper/gabbro_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_copper_gabbro"
+}

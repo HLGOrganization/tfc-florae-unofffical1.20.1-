@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/green/andesite"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/green/andesite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/green/andesite"
+      }
+    ]
+  }
+}

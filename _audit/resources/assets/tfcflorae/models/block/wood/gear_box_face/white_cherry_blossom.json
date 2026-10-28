@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/gear_box_face",
+  "textures": {
+    "all": "tfcflorae:block/wood/planks/white_cherry_blossom",
+    "overlay": "tfc:block/axle_casing_round"
+  }
+}

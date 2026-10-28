@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/wenge",
+    "tfcflorae:wood/stripped_log/wenge",
+    "tfcflorae:wood/stripped_wood/wenge",
+    "tfcflorae:wood/wood/wenge"
+  ]
+}

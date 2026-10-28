@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/zebrawood"
+    },
+    {
+      "item": "tfcflorae:wood/wood/zebrawood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/zebrawood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/zebrawood"
+    }
+  ],
+  "duration": 2000,
+  "temperature": 745,
+  "purity": 0.95
+}

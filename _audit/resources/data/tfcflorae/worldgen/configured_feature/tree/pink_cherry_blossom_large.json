@@ -1,0 +1,15 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:pink_cherry_blossom_large/1",
+      "tfcflorae:pink_cherry_blossom_large/2",
+      "tfcflorae:pink_cherry_blossom_large/3"
+    ],
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 9
+    }
+  }
+}

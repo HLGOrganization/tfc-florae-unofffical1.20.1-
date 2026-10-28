@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/logwood",
+    "tfcflorae:wood/stripped_log/logwood",
+    "tfcflorae:wood/stripped_wood/logwood",
+    "tfcflorae:wood/wood/logwood"
+  ]
+}

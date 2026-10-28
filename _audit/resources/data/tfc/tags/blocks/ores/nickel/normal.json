@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/normal_garnierite/arkose",
+    "tfcflorae:ore/normal_garnierite/boninite",
+    "tfcflorae:ore/normal_garnierite/carbonatite",
+    "tfcflorae:ore/normal_garnierite/cataclasite",
+    "tfcflorae:ore/normal_garnierite/jaspillite",
+    "tfcflorae:ore/normal_garnierite/laterite",
+    "tfcflorae:ore/normal_garnierite/mudstone",
+    "tfcflorae:ore/normal_garnierite/porphyry",
+    "tfcflorae:ore/normal_garnierite/red_granite",
+    "tfcflorae:ore/normal_garnierite/sandstone",
+    "tfcflorae:ore/normal_garnierite/soapstone",
+    "tfcflorae:ore/normal_garnierite/wackestone"
+  ]
+}

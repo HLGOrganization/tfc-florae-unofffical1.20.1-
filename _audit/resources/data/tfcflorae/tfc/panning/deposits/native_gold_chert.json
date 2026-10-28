@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfc:deposit/native_gold/chert",
+  "model_stages": [
+    "tfc:item/pan/native_gold/chert_full",
+    "tfc:item/pan/native_gold/chert_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/native_gold_chert"
+}

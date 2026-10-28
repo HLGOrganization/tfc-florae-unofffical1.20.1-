@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/nordmann_fir",
+    "tfcflorae:wood/stripped_log/nordmann_fir",
+    "tfcflorae:wood/stripped_wood/nordmann_fir",
+    "tfcflorae:wood/wood/nordmann_fir"
+  ]
+}

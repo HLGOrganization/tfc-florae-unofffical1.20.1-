@@ -1,0 +1,18 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:stoneware_clay_knapping",
+  "outside_slot_required": true,
+  "pattern": [
+    "XXXXX",
+    "     ",
+    "     ",
+    "XX XX",
+    "XXXXX"
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/stoneware/unfired/mold/hammer_head"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:stoneware_clay_knapping"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/hornbeam",
+    "tfcflorae:wood/stripped_log/hornbeam",
+    "tfcflorae:wood/stripped_wood/hornbeam",
+    "tfcflorae:wood/wood/hornbeam"
+  ]
+}

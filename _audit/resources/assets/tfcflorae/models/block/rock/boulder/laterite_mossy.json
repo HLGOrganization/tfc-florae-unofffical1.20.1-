@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/groundcover/boulder",
+  "textures": {
+    "0": "tfcflorae:block/rock/mossy_cobble/laterite",
+    "particle": "tfcflorae:block/rock/mossy_cobble/laterite"
+  }
+}

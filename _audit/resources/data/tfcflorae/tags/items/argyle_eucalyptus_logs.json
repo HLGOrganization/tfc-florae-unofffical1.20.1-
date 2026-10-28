@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/argyle_eucalyptus",
+    "tfcflorae:wood/stripped_log/argyle_eucalyptus",
+    "tfcflorae:wood/stripped_wood/argyle_eucalyptus",
+    "tfcflorae:wood/wood/argyle_eucalyptus"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bamboo",
+    "tfcflorae:plant/blue_bamboo",
+    "tfcflorae:plant/dragon_bamboo",
+    "tfcflorae:plant/red_bamboo",
+    "#tfcflorae:blue_bamboo_logs",
+    "#tfcflorae:dragon_bamboo_logs",
+    "#tfcflorae:red_bamboo_logs",
+    "tfcflorae:wood/lumber/bamboo"
+  ]
+}

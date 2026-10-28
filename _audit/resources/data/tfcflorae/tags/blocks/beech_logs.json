@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/beech",
+    "tfcflorae:wood/stripped_log/beech",
+    "tfcflorae:wood/stripped_wood/beech",
+    "tfcflorae:wood/wood/beech"
+  ]
+}

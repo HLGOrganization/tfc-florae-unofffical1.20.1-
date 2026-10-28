@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/butternut",
+    "tfcflorae:wood/stripped_log/butternut",
+    "tfcflorae:wood/stripped_wood/butternut",
+    "tfcflorae:wood/wood/butternut"
+  ]
+}

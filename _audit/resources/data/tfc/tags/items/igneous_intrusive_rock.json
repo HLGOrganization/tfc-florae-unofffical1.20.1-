@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/loose/arkose",
+    "tfcflorae:rock/loose/boninite",
+    "tfcflorae:rock/loose/carbonatite",
+    "tfcflorae:rock/loose/cataclasite",
+    "tfcflorae:rock/loose/jaspillite",
+    "tfcflorae:rock/loose/laterite",
+    "tfcflorae:rock/loose/mudstone",
+    "tfcflorae:rock/loose/porphyry",
+    "tfcflorae:rock/loose/red_granite",
+    "tfcflorae:rock/loose/sandstone",
+    "tfcflorae:rock/loose/soapstone",
+    "tfcflorae:rock/loose/tuff",
+    "tfcflorae:rock/loose/wackestone",
+    "tfcflorae:rock/mossy_loose/arkose",
+    "tfcflorae:rock/mossy_loose/boninite",
+    "tfcflorae:rock/mossy_loose/carbonatite",
+    "tfcflorae:rock/mossy_loose/cataclasite",
+    "tfcflorae:rock/mossy_loose/jaspillite",
+    "tfcflorae:rock/mossy_loose/laterite",
+    "tfcflorae:rock/mossy_loose/mudstone",
+    "tfcflorae:rock/mossy_loose/porphyry",
+    "tfcflorae:rock/mossy_loose/red_granite",
+    "tfcflorae:rock/mossy_loose/sandstone",
+    "tfcflorae:rock/mossy_loose/soapstone",
+    "tfcflorae:rock/mossy_loose/tuff",
+    "tfcflorae:rock/mossy_loose/wackestone"
+  ]
+}

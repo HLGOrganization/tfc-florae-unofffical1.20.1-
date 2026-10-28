@@ -1,0 +1,307 @@
+{
+  "ingredient": [
+    {
+      "item": "tfc:ore/normal_hematite"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/arkose"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/chalk"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/chert"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/claystone"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/dacite"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/diorite"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/dolomite"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/gabbro"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/gneiss"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/laterite"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/limestone"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/mudstone"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/porphyry"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/red_granite"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/sandstone"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/schist"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/shale"
+    },
+    {
+      "item": "tfc:ore/normal_hematite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_hematite/wackestone"
+    },
+    {
+      "item": "tfc:ore/poor_hematite"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/arkose"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/chalk"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/chert"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/claystone"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/dacite"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/diorite"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/dolomite"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/gabbro"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/gneiss"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/laterite"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/limestone"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/mudstone"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/porphyry"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/red_granite"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/sandstone"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/schist"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/shale"
+    },
+    {
+      "item": "tfc:ore/poor_hematite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_hematite/wackestone"
+    },
+    {
+      "item": "tfc:ore/rich_hematite"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/arkose"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/chalk"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/chert"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/claystone"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/dacite"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/diorite"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/dolomite"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/gabbro"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/gneiss"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/laterite"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/limestone"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/mudstone"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/porphyry"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/red_granite"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/sandstone"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/schist"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/shale"
+    },
+    {
+      "item": "tfc:ore/rich_hematite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_hematite/wackestone"
+    },
+    {
+      "item": "tfc:ore/small_hematite"
+    }
+  ],
+  "heat_capacity": 1.143,
+  "forging_temperature": 921,
+  "welding_temperature": 1228
+}

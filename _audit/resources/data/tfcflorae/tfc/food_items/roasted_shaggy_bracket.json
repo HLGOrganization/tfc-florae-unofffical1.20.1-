@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:food/roasted_shaggy_bracket"
+  },
+  "hunger": 4,
+  "saturation": 2,
+  "decay_modifier": 2.25,
+  "protein": 2.5
+}

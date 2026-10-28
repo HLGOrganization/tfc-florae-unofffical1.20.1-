@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/greenheart",
+    "tfcflorae:wood/stripped_log/greenheart",
+    "tfcflorae:wood/stripped_wood/greenheart",
+    "tfcflorae:wood/wood/greenheart"
+  ]
+}

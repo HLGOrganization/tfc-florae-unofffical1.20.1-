@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 14,
+      "max_temperature": 37,
+      "min_rainfall": 290,
+      "max_rainfall": 550
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/limba"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/limba"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/limba",
+    "dead_tree": "tfcflorae:tree/limba_dead",
+    "old_growth_tree": "tfcflorae:tree/limba_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/limba"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/limba",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/limba"
+    }
+  }
+}

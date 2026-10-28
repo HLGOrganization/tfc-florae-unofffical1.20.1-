@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:rock/smooth/arkose",
+    "tfcflorae:rock/smooth/boninite",
+    "tfcflorae:rock/smooth/carbonatite",
+    "tfcflorae:rock/smooth/cataclasite",
+    "tfcflorae:rock/smooth/jaspillite",
+    "tfcflorae:rock/smooth/laterite",
+    "tfcflorae:rock/smooth/mudstone",
+    "tfcflorae:rock/smooth/porphyry",
+    "tfcflorae:rock/smooth/red_granite",
+    "tfcflorae:rock/smooth/sandstone",
+    "tfcflorae:rock/smooth/soapstone",
+    "tfcflorae:rock/smooth/tuff",
+    "tfcflorae:rock/smooth/wackestone"
+  ]
+}

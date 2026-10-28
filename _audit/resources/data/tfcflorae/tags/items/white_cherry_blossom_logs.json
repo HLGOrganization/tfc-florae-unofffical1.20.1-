@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/white_cherry_blossom",
+    "tfcflorae:wood/stripped_log/white_cherry_blossom",
+    "tfcflorae:wood/stripped_wood/white_cherry_blossom",
+    "tfcflorae:wood/wood/white_cherry_blossom"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:angelim/1",
+      "tfcflorae:angelim/2",
+      "tfcflorae:angelim/3",
+      "tfcflorae:angelim/4",
+      "tfcflorae:angelim/5",
+      "tfcflorae:angelim/6",
+      "tfcflorae:angelim/7",
+      "tfcflorae:angelim/8",
+      "tfcflorae:angelim/9",
+      "tfcflorae:angelim/10",
+      "tfcflorae:angelim/11",
+      "tfcflorae:angelim/12",
+      "tfcflorae:angelim/13",
+      "tfcflorae:angelim/14",
+      "tfcflorae:angelim/15",
+      "tfcflorae:angelim/16",
+      "tfcflorae:angelim/17",
+      "tfcflorae:angelim/18",
+      "tfcflorae:angelim/19",
+      "tfcflorae:angelim/20",
+      "tfcflorae:angelim/21"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "ground_type": "shallow_water"
+    }
+  }
+}

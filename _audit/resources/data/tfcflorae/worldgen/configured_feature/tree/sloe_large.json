@@ -1,0 +1,19 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:sloe_large/1",
+      "tfcflorae:sloe_large/2",
+      "tfcflorae:sloe_large/3",
+      "tfcflorae:sloe_large/4",
+      "tfcflorae:sloe_large/5",
+      "tfcflorae:sloe_large/6",
+      "tfcflorae:sloe_large/7"
+    ],
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 9
+    }
+  }
+}

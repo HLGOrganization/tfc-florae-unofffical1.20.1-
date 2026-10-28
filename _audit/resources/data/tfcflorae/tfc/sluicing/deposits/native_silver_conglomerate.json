@@ -1,0 +1,6 @@
+{
+  "ingredient": {
+    "item": "tfc:deposit/native_silver/conglomerate"
+  },
+  "loot_table": "tfcflorae:panning/deposits/native_silver_conglomerate"
+}

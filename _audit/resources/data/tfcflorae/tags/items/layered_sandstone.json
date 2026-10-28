@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:sandstone/layered/black",
+    "tfcflorae:sandstone/layered/brown",
+    "tfcflorae:sandstone/layered/green",
+    "tfcflorae:sandstone/layered/pink",
+    "tfcflorae:sandstone/layered/red",
+    "tfcflorae:sandstone/layered/white",
+    "tfcflorae:sandstone/layered/yellow"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/angelim",
+    "tfcflorae:wood/stripped_log/angelim",
+    "tfcflorae:wood/stripped_wood/angelim",
+    "tfcflorae:wood/wood/angelim"
+  ]
+}

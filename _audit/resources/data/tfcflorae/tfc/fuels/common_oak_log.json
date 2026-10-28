@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/common_oak"
+    },
+    {
+      "item": "tfcflorae:wood/wood/common_oak"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/common_oak"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/common_oak"
+    }
+  ],
+  "duration": 2000,
+  "temperature": 745,
+  "purity": 0.95
+}

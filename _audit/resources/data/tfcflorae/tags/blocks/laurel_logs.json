@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/laurel",
+    "tfcflorae:wood/stripped_log/laurel",
+    "tfcflorae:wood/stripped_wood/laurel",
+    "tfcflorae:wood/wood/laurel"
+  ]
+}

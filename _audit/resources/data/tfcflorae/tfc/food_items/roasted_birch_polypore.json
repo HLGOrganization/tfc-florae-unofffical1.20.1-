@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "tfcflorae:food/roasted_birch_polypore"
+  },
+  "hunger": 4,
+  "saturation": 1,
+  "decay_modifier": 1.5,
+  "protein": 2
+}

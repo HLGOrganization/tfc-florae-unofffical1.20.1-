@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/yellow/chalk"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/yellow/chalk"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/yellow/chalk"
+      }
+    ]
+  }
+}

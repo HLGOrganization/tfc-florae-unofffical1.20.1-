@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 20,
+      "max_temperature": 50,
+      "min_rainfall": 255,
+      "max_rainfall": 500
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/wenge"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/wenge"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/wenge",
+    "dead_tree": "tfcflorae:tree/wenge_dead",
+    "old_growth_tree": "tfcflorae:tree/wenge_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/wenge"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/wenge",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/wenge"
+    }
+  }
+}

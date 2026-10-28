@@ -1,0 +1,307 @@
+{
+  "ingredient": [
+    {
+      "item": "tfc:ore/normal_garnierite"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/arkose"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/chalk"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/chert"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/claystone"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/dacite"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/diorite"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/dolomite"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/gabbro"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/gneiss"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/laterite"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/limestone"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/mudstone"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/porphyry"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/red_granite"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/sandstone"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/schist"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/shale"
+    },
+    {
+      "item": "tfc:ore/normal_garnierite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/normal_garnierite/wackestone"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/arkose"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/chalk"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/chert"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/claystone"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/dacite"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/diorite"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/dolomite"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/gabbro"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/gneiss"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/laterite"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/limestone"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/mudstone"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/porphyry"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/red_granite"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/sandstone"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/schist"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/shale"
+    },
+    {
+      "item": "tfc:ore/poor_garnierite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/poor_garnierite/wackestone"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/andesite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/arkose"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/basalt"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/boninite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/carbonatite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/cataclasite"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/chalk"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/chert"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/claystone"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/conglomerate"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/dacite"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/diorite"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/dolomite"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/gabbro"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/gneiss"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/granite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/jaspillite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/laterite"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/limestone"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/marble"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/mudstone"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/phyllite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/porphyry"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/quartzite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/red_granite"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/rhyolite"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/sandstone"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/schist"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/shale"
+    },
+    {
+      "item": "tfc:ore/rich_garnierite/slate"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/soapstone"
+    },
+    {
+      "item": "tfcflorae:ore/rich_garnierite/wackestone"
+    },
+    {
+      "item": "tfc:ore/small_garnierite"
+    }
+  ],
+  "heat_capacity": 0.833,
+  "forging_temperature": 872,
+  "welding_temperature": 1162
+}

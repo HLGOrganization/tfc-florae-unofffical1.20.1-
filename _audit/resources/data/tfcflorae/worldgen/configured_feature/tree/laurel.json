@@ -1,0 +1,33 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:laurel/1",
+      "tfcflorae:laurel/2",
+      "tfcflorae:laurel/3",
+      "tfcflorae:laurel/4",
+      "tfcflorae:laurel/5",
+      "tfcflorae:laurel/6",
+      "tfcflorae:laurel/7",
+      "tfcflorae:laurel/8",
+      "tfcflorae:laurel/9",
+      "tfcflorae:laurel/10",
+      "tfcflorae:laurel/11",
+      "tfcflorae:laurel/12",
+      "tfcflorae:laurel/13",
+      "tfcflorae:laurel/14",
+      "tfcflorae:laurel/15",
+      "tfcflorae:laurel/16",
+      "tfcflorae:laurel/17",
+      "tfcflorae:laurel/18",
+      "tfcflorae:laurel/19",
+      "tfcflorae:laurel/20",
+      "tfcflorae:laurel/21"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5
+    }
+  }
+}

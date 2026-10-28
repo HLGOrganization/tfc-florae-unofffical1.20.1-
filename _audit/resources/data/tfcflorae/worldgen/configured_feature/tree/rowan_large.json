@@ -1,0 +1,19 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:rowan_large/1",
+      "tfcflorae:rowan_large/2",
+      "tfcflorae:rowan_large/3",
+      "tfcflorae:rowan_large/4",
+      "tfcflorae:rowan_large/5",
+      "tfcflorae:rowan_large/6",
+      "tfcflorae:rowan_large/7"
+    ],
+    "radius": 2,
+    "placement": {
+      "width": 2,
+      "height": 9
+    }
+  }
+}

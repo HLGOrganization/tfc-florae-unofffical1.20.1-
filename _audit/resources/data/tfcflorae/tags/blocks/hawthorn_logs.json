@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/hawthorn",
+    "tfcflorae:wood/stripped_log/hawthorn",
+    "tfcflorae:wood/stripped_wood/hawthorn",
+    "tfcflorae:wood/wood/hawthorn"
+  ]
+}

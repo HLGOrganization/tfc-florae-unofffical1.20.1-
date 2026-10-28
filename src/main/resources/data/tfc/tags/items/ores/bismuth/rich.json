@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:ore/rich_bismuthinite/arkose",
+    "tfcflorae:ore/rich_bismuthinite/boninite",
+    "tfcflorae:ore/rich_bismuthinite/carbonatite",
+    "tfcflorae:ore/rich_bismuthinite/cataclasite",
+    "tfcflorae:ore/rich_bismuthinite/jaspillite",
+    "tfcflorae:ore/rich_bismuthinite/laterite",
+    "tfcflorae:ore/rich_bismuthinite/mudstone",
+    "tfcflorae:ore/rich_bismuthinite/porphyry",
+    "tfcflorae:ore/rich_bismuthinite/red_granite",
+    "tfcflorae:ore/rich_bismuthinite/sandstone",
+    "tfcflorae:ore/rich_bismuthinite/soapstone",
+    "tfcflorae:ore/rich_bismuthinite/wackestone"
+  ]
+}

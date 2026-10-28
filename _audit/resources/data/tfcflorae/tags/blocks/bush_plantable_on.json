@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:dirt",
+    "#tfc:farmland",
+    "#tfc:grass",
+    "#tfcflorae:dirt",
+    "#tfcflorae:grass"
+  ]
+}

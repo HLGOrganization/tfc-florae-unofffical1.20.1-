@@ -1,0 +1,17 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:stoneware_clay_knapping",
+  "pattern": [
+    "X   X",
+    "X   X",
+    "X   X",
+    "X   X",
+    "XXXXX"
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/stoneware/unfired/large_vessel"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:stoneware_clay_knapping"
+  }
+}

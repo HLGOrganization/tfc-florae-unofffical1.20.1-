@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "tfcflorae:block/rock/raw/gypsum",
+    "top": "tfcflorae:block/rock/raw/gypsum",
+    "side": "tfcflorae:block/rock/raw/gypsum"
+  }
+}

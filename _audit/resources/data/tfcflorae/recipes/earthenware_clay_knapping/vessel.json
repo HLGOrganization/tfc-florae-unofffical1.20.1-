@@ -1,0 +1,17 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:earthenware_clay_knapping",
+  "pattern": [
+    " XXX ",
+    "XXXXX",
+    "XXXXX",
+    "XXXXX",
+    " XXX "
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/earthenware/unfired/vessel"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:earthenware_clay_knapping"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": 11,
+      "max_temperature": 38,
+      "min_rainfall": 300,
+      "max_rainfall": 450
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/black_willow"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/black_willow"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/black_willow",
+    "dead_tree": "tfcflorae:tree/black_willow_dead",
+    "old_growth_tree": "tfcflorae:tree/black_willow_large",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/black_willow"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/black_willow",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/black_willow"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": -8,
+      "max_temperature": 15,
+      "min_rainfall": 180,
+      "max_rainfall": 400
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/buxus"
+      },
+      {
+        "block": "tfcflorae:wood/fallen_leaves/buxus"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/buxus",
+    "dead_tree": "tfcflorae:tree/buxus_dead",
+    "fallen_log": {
+      "Name": "tfcflorae:wood/log/buxus"
+    },
+    "bush_log": {
+      "Name": "tfcflorae:wood/wood/buxus",
+      "Properties": {
+        "axis": "y"
+      }
+    },
+    "bush_leaves": {
+      "Name": "tfcflorae:wood/leaves/buxus"
+    }
+  }
+}

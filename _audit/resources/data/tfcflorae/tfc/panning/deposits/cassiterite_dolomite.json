@@ -1,0 +1,9 @@
+{
+  "ingredient": "tfc:deposit/cassiterite/dolomite",
+  "model_stages": [
+    "tfc:item/pan/cassiterite/dolomite_full",
+    "tfc:item/pan/cassiterite/dolomite_half",
+    "tfc:item/pan/result"
+  ],
+  "loot_table": "tfcflorae:panning/deposits/cassiterite_dolomite"
+}

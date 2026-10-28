@@ -1436,6 +1436,7 @@ def main():
     ap.add_argument("--explain", help="trace one site, e.g. TFCFBlocks.java:291")
     ap.add_argument("--limit", type=int, default=60)
     ap.add_argument("--out", default=os.path.join(ROOT, "reports", "registry-asset-audit.json"))
+    ap.add_argument("--dump-ids", default="", help="write the parsed block/item id sets to this JSON path")
     args = ap.parse_args()
 
     if args.explain:
@@ -1557,6 +1558,12 @@ def main():
     print("  block items without models/item: %d" % len(missing_item_models))
     for i in missing_item_models[:10]:
         print("    item %s" % i)
+
+    if args.dump_ids:
+        os.makedirs(os.path.dirname(args.dump_ids) or ".", exist_ok=True)
+        with open(args.dump_ids, "w", encoding="utf-8") as fh:
+            json.dump({"blocks": sorted(blocks), "items": sorted(items)}, fh, indent=1)
+        print("  wrote id whitelist -> %s (%d blocks, %d items)" % (args.dump_ids, len(blocks), len(items)))
 
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:

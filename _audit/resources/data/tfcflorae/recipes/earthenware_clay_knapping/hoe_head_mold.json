@@ -1,0 +1,17 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:earthenware_clay_knapping",
+  "outside_slot_required": true,
+  "pattern": [
+    "XXXXX",
+    "     ",
+    "  XXX",
+    "XXXXX"
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/earthenware/unfired/mold/hoe_head"
+  },
+  "ingredient": {
+    "tag": "tfcflorae:earthenware_clay_knapping"
+  }
+}

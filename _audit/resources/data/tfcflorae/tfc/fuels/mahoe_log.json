@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/mahoe"
+    },
+    {
+      "item": "tfcflorae:wood/wood/mahoe"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/mahoe"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/mahoe"
+    }
+  ],
+  "duration": 1500,
+  "temperature": 660,
+  "purity": 0.95
+}

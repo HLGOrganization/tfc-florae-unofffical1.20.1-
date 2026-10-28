@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:wood/log/rubber_fig",
+    "tfcflorae:wood/stripped_log/rubber_fig",
+    "tfcflorae:wood/stripped_wood/rubber_fig",
+    "tfcflorae:wood/wood/rubber_fig"
+  ]
+}

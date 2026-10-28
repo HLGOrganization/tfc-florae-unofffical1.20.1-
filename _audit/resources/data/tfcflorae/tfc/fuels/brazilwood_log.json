@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "tfcflorae:wood/log/brazilwood"
+    },
+    {
+      "item": "tfcflorae:wood/wood/brazilwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_wood/brazilwood"
+    },
+    {
+      "item": "tfcflorae:wood/stripped_log/brazilwood"
+    }
+  ],
+  "duration": 2000,
+  "temperature": 745,
+  "purity": 0.95
+}

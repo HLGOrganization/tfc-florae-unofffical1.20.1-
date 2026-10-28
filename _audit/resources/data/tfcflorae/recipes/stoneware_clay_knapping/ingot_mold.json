@@ -1,0 +1,18 @@
+{
+  "type": "tfc:knapping",
+  "knapping_type": "tfcflorae:stoneware_clay_knapping",
+  "pattern": [
+    "XXXX",
+    "X  X",
+    "X  X",
+    "X  X",
+    "XXXX"
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/stoneware/unfired/mold/ingot",
+    "count": 2
+  },
+  "ingredient": {
+    "tag": "tfcflorae:stoneware_clay_knapping"
+  }
+}

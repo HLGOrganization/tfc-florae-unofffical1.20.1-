@@ -1,0 +1,26 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:jabuticabeira_dead/1",
+      "tfcflorae:jabuticabeira_dead/2",
+      "tfcflorae:jabuticabeira_dead/3",
+      "tfcflorae:jabuticabeira_dead/4",
+      "tfcflorae:jabuticabeira_dead/5",
+      "tfcflorae:jabuticabeira_dead/6",
+      "tfcflorae:jabuticabeira_dead/7",
+      "tfcflorae:jabuticabeira_dead/8",
+      "tfcflorae:jabuticabeira_dead/9",
+      "tfcflorae:jabuticabeira_dead/10",
+      "tfcflorae:jabuticabeira_dead/11",
+      "tfcflorae:jabuticabeira_dead/12",
+      "tfcflorae:jabuticabeira_dead/13"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5,
+      "ground_type": "submerged"
+    }
+  }
+}
