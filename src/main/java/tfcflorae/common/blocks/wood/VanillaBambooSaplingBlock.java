@@ -28,7 +28,8 @@ public class VanillaBambooSaplingBlock extends TFCSaplingBlock implements IFluid
       super(bambooTree, properties, () -> daysToGrow, false);
    }
 
-   public boolean isValidBonemealTarget(BlockGetter level, BlockPos pos, BlockState state, boolean isClient) {
+   @Override
+   public boolean isValidBonemealTarget(net.minecraft.world.level.LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
       // 上方为空才能长高（与 vanilla 竹笋一致）
       return level.getBlockState(pos.above()).isAir();
    }

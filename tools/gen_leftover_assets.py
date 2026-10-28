@@ -127,6 +127,17 @@ def main():
         silty_model,
         force,
     )
+    # The inventory model was missing too, which is what made the item render
+    # purple/black even though the block itself looked fine.
+    item_model = {
+        "__comment__": "This file was automatically created by mcresources",
+        "parent": "tfcflorae:block/wood/roots/white_mangrove/silty_loam",
+    }
+    write_text(
+        os.path.join(MODELS, "item", "wood", "roots", "white_mangrove", "silty_loam.json"),
+        json.dumps(item_model, indent=2, ensure_ascii=False) + "\n",
+        force,
+    )
 
     print("== 4. tuff item textures (loose rock + rock brick) ==")
     # The whole tuff rock texture set is currently a byte-for-byte copy of
@@ -183,6 +194,31 @@ def main():
         write_text(
             os.path.join(MODELS, "block", "rock", "aqueduct", "tuff", part + ".json"),
             text,
+            force,
+        )
+
+    print("== 7. bamboo tree features (thick bamboo for blue/dragon/red) ==")
+    # `wood/sapling/<colour>_bamboo` used to point at tfcflorae:tree/grower/<plant>,
+    # which never existed, so it could not grow at all (and after a temporary
+    # workaround it grew thin `plant/` bamboo instead of the thick `wood/log/`
+    # one).  These configured features are the missing thick-bamboo trees; the
+    # sapling growers now point at them.
+    feat_dir = os.path.join(ROOT, "src", "main", "resources", "data", "tfcflorae",
+                            "worldgen", "configured_feature", "tree")
+    template_path = os.path.join(feat_dir, "bamboo.json")
+    template = json.load(open(template_path, encoding="utf-8"))
+    for plant in ("blue_bamboo", "dragon_bamboo", "red_bamboo"):
+        data = json.loads(json.dumps(template))  # deep copy
+        cfg = data["config"]
+        cfg["trunk_provider"]["state"]["Name"] = "tfcflorae:wood/log/" + plant
+        cfg["foliage_provider"]["state"]["Name"] = "tfcflorae:wood/leaves/" + plant
+        for dec in cfg.get("decorators", []):
+            prov = dec.get("block_provider")
+            if isinstance(prov, dict):
+                prov.get("state", {})["Name"] = "tfcflorae:wood/leaves/" + plant
+        write_text(
+            os.path.join(feat_dir, plant + ".json"),
+            json.dumps(data, indent=2, ensure_ascii=False) + "\n",
             force,
         )
 

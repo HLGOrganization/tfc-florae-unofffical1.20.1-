@@ -856,7 +856,7 @@ def eval_pred(pred: str, info: EnumInfo, const: str):
 # Registration expansion
 # ---------------------------------------------------------------------------
 
-REG_RE = re.compile(r"(?<![\w.$])register\s*\(")
+REG_RE = re.compile(r"(?<![\w.$])(?:register|registerRockBlock)\s*\(")
 LAMBDA_RE = re.compile(r"(?:\(\s*([\w\s,]+?)\s*\)|(\w+))\s*->")
 FOR_RE = re.compile(r"\bfor\s*\(\s*([\w.$]+)\s+(\w+)\s*:\s*(.+)\)")
 METHOD_SIG_RE = re.compile(r"(?:public|private|protected)\s+[\w<>\[\],.\s]*?\s+(\w+)\s*\(([^)]*)\)")
@@ -1227,7 +1227,7 @@ def collect_registrations(paths, site_stats=None):
                 if sig:
                     owner = sig.group(1)
                     break
-            if owner and owner != "register" and owner not in called:
+            if owner and owner not in ("register", "registerRockBlock") and owner not in called:
                 if site_stats is not None:
                     site_stats.append(
                         ("%s:%d" % (jf.name, jf.line_of(m.start())), jf.name, jf.line_of(m.start()), 0,
@@ -1550,6 +1550,14 @@ def main():
     for t, users in list(missing_textures.items())[:10]:
         print("    texture %-56s used by %s" % (t, users[0]))
 
+    # A block can have a perfectly good block state/model and still show as a
+    # purple-black *item* when models/item/<path>.json is missing.
+    missing_item_models = [r["id"] for r in rows if r["block"] and r["item"] and not r["item_model"]]
+    print("== item models ==")
+    print("  block items without models/item: %d" % len(missing_item_models))
+    for i in missing_item_models[:10]:
+        print("    item %s" % i)
+
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     with open(args.out, "w", encoding="utf-8") as fh:
         json.dump(
@@ -1562,6 +1570,7 @@ def main():
                 # OK rows are omitted on purpose: they are thousands of lines and
                 # carry no action.  Everything below is actionable.
                 "rows": [r for r in rows if r["class"] != "OK"],
+                "missing_item_models": missing_item_models,
                 "unresolved": unresolved,
                 "missing_model_refs": missing_models[:400],
                 "missing_textures": missing_textures,

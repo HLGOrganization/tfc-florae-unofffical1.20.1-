@@ -46,10 +46,10 @@
                 },
                 {
                   "condition": "minecraft:random_chance",
-                  "chance": 0.0083
+                  "chance": 0.04
                 }
               ],
-              "name": "tfcflorae:wood/leaves/red_cypress"
+              "name": "tfcflorae:wood/sapling/red_cypress"
             }
           ]
         }

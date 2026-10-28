@@ -21,6 +21,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour.OffsetType;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
@@ -33,7 +34,13 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.ToolActions;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class BambooSaplingPlantBlock extends PlantBlock implements IFluidLoggable {
+/**
+ * 细竹竹苗（plant/<colour>_bamboo_sapling）。
+ * <p>
+ * PlantBlock 本身没有实现 {@link BonemealableBlock}，所以下面这几个骨粉方法此前只是「普通方法」，
+ * 骨粉根本不会调用 —— 表现为竹苗永远无法催熟。这里显式实现接口并让每次骨粉必定生效。
+ */
+public abstract class BambooSaplingPlantBlock extends PlantBlock implements IFluidLoggable, BonemealableBlock {
    protected static final float SAPLING_AABB_OFFSET = 4.0F;
    protected static final VoxelShape SAPLING_SHAPE = Block.box(4.0, 0.0, 4.0, 12.0, 12.0, 12.0);
    public static final FluidProperty FLUID = TFCBlockStateProperties.ALL_WATER;
@@ -88,10 +95,18 @@ public abstract class BambooSaplingPlantBlock extends PlantBlock implements IFlu
       }
    }
 
-   public boolean isValidBonemealTarget(BlockGetter level, BlockPos pos, BlockState state, boolean isClient) {
+   @Override
+   public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
       return level.getBlockState(pos.above()).isAir();
    }
 
+   @Override
+   public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
+      // 与树干一样：每次骨粉都必定生效，避免玩家连点几次都没反应。
+      return true;
+   }
+
+   @Override
    public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
       // 原版这里没有实现，竹苗完全不能催熟。骨粉后向上长出 2~4 节竹块。
       final int height = 2 + random.nextInt(3);

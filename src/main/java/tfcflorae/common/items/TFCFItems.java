@@ -80,7 +80,10 @@ public final class TFCFItems {
       Clay.class, Clay::hasRock, mineral -> register("mineral/" + mineral.name(), TFCCreativeTabs.ORES)
    );
    public static final Map<TFCFRock, RegistryObject<Item>> BRICKS = Helpers.mapOfKeys(
-      TFCFRock.class, type -> register("brick/" + type.name(), TFCCreativeTabs.ROCKS)
+      TFCFRock.class,
+      // tuff 的砖由 TFE 提供，TFCF 不再重复注册物品
+      type -> type != TFCFRock.TUFF,
+      type -> register("brick/" + type.name(), TFCCreativeTabs.ROCKS)
    );
    public static final Map<TFCFFood, RegistryObject<Item>> FOOD = foodMapper();
    public static final Map<TFCFWood, RegistryObject<Item>> LUMBER = lumberWoodMapper();

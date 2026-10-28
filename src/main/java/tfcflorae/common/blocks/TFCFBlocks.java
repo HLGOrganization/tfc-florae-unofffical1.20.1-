@@ -689,7 +689,7 @@ public final class TFCFBlocks {
    public static final Map<TFCFRock, RegistryObject<Block>> ROCK_ANVILS = Helpers.mapOfKeys(
       TFCFRock.class,
       rock -> rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE,
-      rock -> register(
+      rock -> registerRockBlock(
             "rock/anvil/" + rock.name(),
             () -> new TFCFRockAnvilBlock(
                   ExtendedProperties.of(rock.color()).requiresCorrectToolForDrops()
@@ -699,7 +699,7 @@ public final class TFCFBlocks {
                      .blockEntity(TFCFBlockEntities.ANVIL),
                   (Supplier<? extends Block>)TFCF_ROCK_BLOCKS.get(rock).get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.RAW)
                ),
-            TFCCreativeTabs.ROCKS
+            rock != TFCFRock.TUFF
          )
    );
    public static final Map<TFCFRock, RegistryObject<Block>> MAGMA_BLOCKS = Helpers.mapOfKeys(
@@ -2583,26 +2583,27 @@ public final class TFCFBlocks {
 
       for (TFCFPlant plant : TFCFPlant.values()) {
          if (plant == TFCFPlant.BLUE_BAMBOO || plant == TFCFPlant.DRAGON_BAMBOO || plant == TFCFPlant.RED_BAMBOO) {
-            // 以前这里用的是 TFCSaplingBlock + TFCTreeGrower，但 grower 指向的
-            // tfcflorae:tree/grower/<plant> 从未生成（configured_feature 里没有这个目录），
-            // TFCTreeGrower.getNormalFeature 会直接抛 Missing tree feature，
-            // 导致竹苗既不能被骨粉催熟也不会自然长高。
-            // 竹子不是树，改用与 plant/<name>_sapling 完全相同的 BambooSaplingPlantBlock：
-            // 骨粉向上长 2~4 节，随机刻长 1 节，不再依赖任何 tree feature。
+            // 这是「粗竹」竹苗（wood/sapling/<colour>_bamboo），长出来的是 wood/log/.. 粗竹，
+            // 与 plant/<colour>_bamboo_sapling（细竹）分工不同。
+            // 之前 grower 指向 tfcflorae:tree/grower/<plant>，那个 configured_feature 从未生成，
+            // 所以既不能催熟也不自然生长；现在指向下面补上的 tree/<plant>。
             Map.put(
                plant,
                register(
                   ("wood/sapling/" + plant.name()).toLowerCase(Locale.ROOT),
-                  () -> BambooSaplingPlantBlock.create(
-                        plant.saplingPlant(),
+                  () -> new VanillaBambooSaplingBlock(
+                        new TFCTreeGrower(
+                           TFCFHelpers.identifier("tree/" + plant.name().toLowerCase(Locale.ROOT)),
+                           TFCFHelpers.identifier("tree/" + plant.name().toLowerCase(Locale.ROOT) + "_large")
+                        ),
                         ExtendedProperties.of(MapColor.PLANT)
-                           .randomTicks()
-                           .instabreak()
                            .noCollission()
-                           .strength(1.0F)
-                           .sound(SoundType.BAMBOO_SAPLING)
-                           .hasPostProcess(TFCFBlocks::always),
-                        plant.stem()
+                           .randomTicks()
+                           .strength(0.0F)
+                           .sound(SoundType.GRASS)
+                           .flammableLikeLeaves()
+                           .blockEntity(TFCFBlockEntities.TICK_COUNTER),
+                        TFCFWood.BAMBOO.daysToGrow()
                      ),
                   plant.createBlockItem(new Properties())
                )
@@ -3519,7 +3520,7 @@ public final class TFCFBlocks {
          Map<net.dries007.tfc.common.blocks.rock.Rock.BlockType, RegistryObject<Block>> typeMap = new HashMap<>();
 
          for (net.dries007.tfc.common.blocks.rock.Rock.BlockType type : net.dries007.tfc.common.blocks.rock.Rock.BlockType.values()) {
-            typeMap.put(type, register("rock/" + type.name() + "/" + rock.name(), () -> type.create(rock), TFCCreativeTabs.ROCKS));
+            typeMap.put(type, registerRockBlock("rock/" + type.name() + "/" + rock.name(), () -> type.create(rock), rock != TFCFRock.TUFF));
          }
 
          Map.put(rock, typeMap);
@@ -3550,6 +3551,19 @@ public final class TFCFBlocks {
       FlowerPotBlock pot = (FlowerPotBlock)Blocks.FLOWER_POT;
       POTTED_PLANTS.forEach((plant, reg) -> pot.addPlant(PLANTS.get(plant).getId(), reg));
       WOODS.forEach((wood, map) -> pot.addPlant(map.get(BlockType.SAPLING).getId(), (Supplier)map.get(BlockType.POTTED_SAPLING)));
+   }
+
+   /**
+    * 注册岩石方块，{@code withItem == false} 时只注册方块本体、不生成 BlockItem。
+    * <p>
+    * 凝灰岩（tuff）的整套岩石方块由 TFE 提供，TFCF 这边再给一份物品只会在创造栏里重复，
+    * 所以 tuff 的 raw/hardened/smooth/cobble/bricks/gravel/spike/cracked_bricks/chiseled/
+    * loose/pressure_plate/button/aqueduct/mossy_* 以及石砧都只保留方块、不再注册物品。
+    * 保留方块本体是刻意的：世界存档、配方与内部引用都还指向它们，直接删方块会变成空气。
+    */
+   private static RegistryObject<Block> registerRockBlock(String name, Supplier<? extends Block> supplier, boolean withItem) {
+      final Supplier<Block> wrapped = () -> supplier.get();
+      return withItem ? register(name, wrapped, TFCCreativeTabs.ROCKS) : register(name, wrapped);
    }
 
    private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> blockSupplier) {
