@@ -19,23 +19,23 @@
 |---|---|
 | `brick/tuff` | TFCFItems.java:83 |
 | `rock/anvil/tuff` | TFCFBlocks.java:692 |
-| `rock/aqueduct/tuff` | TFCFBlocks.java:3519 |
-| `rock/bricks/tuff` | TFCFBlocks.java:3519 |
-| `rock/button/tuff` | TFCFBlocks.java:3519 |
-| `rock/chiseled/tuff` | TFCFBlocks.java:3519 |
-| `rock/cobble/tuff` | TFCFBlocks.java:3519 |
-| `rock/cracked_bricks/tuff` | TFCFBlocks.java:3519 |
-| `rock/gravel/tuff` | TFCFBlocks.java:3519 |
-| `rock/hardened/tuff` | TFCFBlocks.java:3519 |
-| `rock/loose/tuff` | TFCFBlocks.java:3519 |
+| `rock/aqueduct/tuff` | TFCFBlocks.java:3522 |
+| `rock/bricks/tuff` | TFCFBlocks.java:3522 |
+| `rock/button/tuff` | TFCFBlocks.java:3522 |
+| `rock/chiseled/tuff` | TFCFBlocks.java:3522 |
+| `rock/cobble/tuff` | TFCFBlocks.java:3522 |
+| `rock/cracked_bricks/tuff` | TFCFBlocks.java:3522 |
+| `rock/gravel/tuff` | TFCFBlocks.java:3522 |
+| `rock/hardened/tuff` | TFCFBlocks.java:3522 |
+| `rock/loose/tuff` | TFCFBlocks.java:3522 |
 | `rock/magma/tuff` | TFCFBlocks.java:708 |
-| `rock/mossy_bricks/tuff` | TFCFBlocks.java:3519 |
-| `rock/mossy_cobble/tuff` | TFCFBlocks.java:3519 |
-| `rock/mossy_loose/tuff` | TFCFBlocks.java:3519 |
-| `rock/pressure_plate/tuff` | TFCFBlocks.java:3519 |
-| `rock/raw/tuff` | TFCFBlocks.java:3519 |
-| `rock/smooth/tuff` | TFCFBlocks.java:3519 |
-| `rock/spike/tuff` | TFCFBlocks.java:3519 |
+| `rock/mossy_bricks/tuff` | TFCFBlocks.java:3522 |
+| `rock/mossy_cobble/tuff` | TFCFBlocks.java:3522 |
+| `rock/mossy_loose/tuff` | TFCFBlocks.java:3522 |
+| `rock/pressure_plate/tuff` | TFCFBlocks.java:3522 |
+| `rock/raw/tuff` | TFCFBlocks.java:3522 |
+| `rock/smooth/tuff` | TFCFBlocks.java:3522 |
+| `rock/spike/tuff` | TFCFBlocks.java:3522 |
 
 ## C 类（补模型）
 

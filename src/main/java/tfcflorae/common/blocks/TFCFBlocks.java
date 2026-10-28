@@ -88,6 +88,7 @@ import tfcflorae.common.blocks.ceramics.LargeVesselBlock;
 import tfcflorae.common.blocks.devices.SilkmothNestBlock;
 import tfcflorae.common.blocks.devices.TFCFBarrelBlock;
 import tfcflorae.common.blocks.devices.TFCFSluiceBlock;
+import tfcflorae.common.blocks.plant.BambooSaplingPlantBlock;
 import tfcflorae.common.blocks.plant.FruitingBodyPlantBlock;
 import tfcflorae.common.blocks.plant.FruitingTallPlantBlock;
 import tfcflorae.common.blocks.plant.FruitingTopPlantBlock;
@@ -118,7 +119,6 @@ import tfcflorae.common.blocks.spidercave.WebbedBlock;
 import tfcflorae.common.blocks.spidercave.WebbedChestBlock;
 import tfcflorae.common.blocks.wood.BambooLogBlock;
 import tfcflorae.common.blocks.wood.ChiseledBookshelfBlock;
-import tfcflorae.common.blocks.wood.TFCFBambooSaplingBlock;
 import tfcflorae.common.blocks.wood.TFCFChestBlock;
 import tfcflorae.common.blocks.wood.TFCFFruitingLogBlock;
 import tfcflorae.common.blocks.wood.TFCFJoshuaLeavesBlock;
@@ -2583,23 +2583,26 @@ public final class TFCFBlocks {
 
       for (TFCFPlant plant : TFCFPlant.values()) {
          if (plant == TFCFPlant.BLUE_BAMBOO || plant == TFCFPlant.DRAGON_BAMBOO || plant == TFCFPlant.RED_BAMBOO) {
+            // 以前这里用的是 TFCSaplingBlock + TFCTreeGrower，但 grower 指向的
+            // tfcflorae:tree/grower/<plant> 从未生成（configured_feature 里没有这个目录），
+            // TFCTreeGrower.getNormalFeature 会直接抛 Missing tree feature，
+            // 导致竹苗既不能被骨粉催熟也不会自然长高。
+            // 竹子不是树，改用与 plant/<name>_sapling 完全相同的 BambooSaplingPlantBlock：
+            // 骨粉向上长 2~4 节，随机刻长 1 节，不再依赖任何 tree feature。
             Map.put(
                plant,
                register(
                   ("wood/sapling/" + plant.name()).toLowerCase(Locale.ROOT),
-                  () -> new TFCFBambooSaplingBlock(
-                        new TFCTreeGrower(
-                           TFCFHelpers.identifier("tree/grower/" + plant.name().toLowerCase(Locale.ROOT)),
-                           TFCFHelpers.identifier("tree/grower/" + plant.name().toLowerCase(Locale.ROOT) + "_large")
-                        ),
+                  () -> BambooSaplingPlantBlock.create(
+                        plant.saplingPlant(),
                         ExtendedProperties.of(MapColor.PLANT)
-                           .noCollission()
                            .randomTicks()
-                           .strength(0.0F)
-                           .sound(SoundType.GRASS)
-                           .flammableLikeLeaves()
-                           .blockEntity(net.dries007.tfc.common.blockentities.TFCBlockEntities.TICK_COUNTER),
-                        TFCFWood.BAMBOO.daysToGrow()
+                           .instabreak()
+                           .noCollission()
+                           .strength(1.0F)
+                           .sound(SoundType.BAMBOO_SAPLING)
+                           .hasPostProcess(TFCFBlocks::always),
+                        plant.stem()
                      ),
                   plant.createBlockItem(new Properties())
                )

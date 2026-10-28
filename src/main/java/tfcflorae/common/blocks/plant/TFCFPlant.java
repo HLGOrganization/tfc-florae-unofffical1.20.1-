@@ -508,6 +508,22 @@ public enum TFCFPlant implements RegistryPlant {
       });
    }
 
+   /**
+    * 竹竿常量对应的竹苗常量（BLUE_BAMBOO -> BLUE_BAMBOO_SAPLING）。
+    * 用于让 wood/sapling/* 与 plant/*_sapling 共用同一套生长逻辑。
+    */
+   public TFCFPlant saplingPlant() {
+      return switch (this) {
+         case BLUE_BAMBOO -> BLUE_BAMBOO_SAPLING;
+         case DRAGON_BAMBOO -> DRAGON_BAMBOO_SAPLING;
+         case RED_BAMBOO -> RED_BAMBOO_SAPLING;
+         case BLUE_BAMBOO_SAPLING -> BLUE_BAMBOO_SAPLING;
+         case DRAGON_BAMBOO_SAPLING -> DRAGON_BAMBOO_SAPLING;
+         case RED_BAMBOO_SAPLING -> RED_BAMBOO_SAPLING;
+         default -> this;
+      };
+   }
+
    public Supplier<? extends Block> transformFruiting() {
       return (Supplier<? extends Block>)TFCFBlocks.FRUITING_PLANTS.get(switch (this) {
          case GLOW_VINES -> GLOW_VINES_PLANT;

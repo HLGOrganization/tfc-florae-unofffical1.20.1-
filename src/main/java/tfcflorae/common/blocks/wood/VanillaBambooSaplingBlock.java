@@ -33,6 +33,13 @@ public class VanillaBambooSaplingBlock extends TFCSaplingBlock implements IFluid
       return level.getBlockState(pos.above()).isAir();
    }
 
+   @Override
+   public boolean isBonemealSuccess(net.minecraft.world.level.Level level, net.minecraft.util.RandomSource random, BlockPos pos, BlockState state) {
+      // 原版 SaplingBlock 只有 45% 成功率，玩家连点骨粉经常「没反应」。
+      // 竹子是一次性长成的植物，这里让每次骨粉都必定生效。
+      return true;
+   }
+
    public void performBonemeal(net.minecraft.server.level.ServerLevel level, net.minecraft.util.RandomSource random, BlockPos pos, BlockState state) {
       // vanilla SaplingBlock 的两段式需要两次骨粉（STAGE 0 -> 1 -> 长成），
       // 这里直接推进到 STAGE 1 再调用 advanceTree，一次骨粉即可长出竹子。
