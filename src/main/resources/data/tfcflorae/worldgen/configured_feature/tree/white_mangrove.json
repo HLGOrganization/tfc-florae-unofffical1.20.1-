@@ -1,44 +1,156 @@
 {
-  "type": "minecraft:tree",
+  "type": "tfc:random_tree",
   "config": {
-    "ignore_vines": true,
-    "force_dirt": false,
-    "minimum_size": {
-      "type": "minecraft:two_layers_feature_size",
-      "limit": 1,
-      "lower_size": 0,
-      "upper_size": 1
+    "structures": [
+      "tfcflorae:white_mangrove/1",
+      "tfcflorae:white_mangrove/2",
+      "tfcflorae:white_mangrove/3",
+      "tfcflorae:white_mangrove/4",
+      "tfcflorae:white_mangrove/5",
+      "tfcflorae:white_mangrove/6",
+      "tfcflorae:white_mangrove/7",
+      "tfcflorae:white_mangrove/8",
+      "tfcflorae:white_mangrove/9",
+      "tfcflorae:white_mangrove/10",
+      "tfcflorae:white_mangrove/11",
+      "tfcflorae:white_mangrove/12"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 3,
+      "ground_type": "floating"
     },
-    "dirt_provider": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "minecraft:dirt"
-      }
-    },
-    "trunk_provider": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "tfcflorae:wood/log/white_mangrove"
-      }
-    },
-    "foliage_provider": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "tfcflorae:wood/leaves/white_mangrove"
-      }
-    },
-    "trunk_placer": {
-      "type": "minecraft:straight_trunk_placer",
-      "base_height": 4,
-      "height_rand_a": 3,
-      "height_rand_b": 0
-    },
-    "foliage_placer": {
-      "type": "minecraft:blob_foliage_placer",
-      "radius": 2,
-      "offset": 0,
-      "height": 3
-    },
-    "decorators": []
+    "root_system": {
+      "blocks": [
+        {
+          "replace": [
+            "tfc:grass/silt"
+          ],
+          "with": [
+            {
+              "block": "tfc:rooted_dirt/silt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:dirt/silt"
+          ],
+          "with": [
+            {
+              "block": "tfc:rooted_dirt/silt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:grass/loam"
+          ],
+          "with": [
+            {
+              "block": "tfc:rooted_dirt/loam"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:dirt/loam"
+          ],
+          "with": [
+            {
+              "block": "tfc:rooted_dirt/loam"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:grass/sandy_loam"
+          ],
+          "with": [
+            {
+              "block": "tfc:rooted_dirt/sandy_loam"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:dirt/sandy_loam"
+          ],
+          "with": [
+            {
+              "block": "tfc:rooted_dirt/sandy_loam"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:grass/silty_loam"
+          ],
+          "with": [
+            {
+              "block": "tfc:rooted_dirt/silty_loam"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:dirt/silty_loam"
+          ],
+          "with": [
+            {
+              "block": "tfc:rooted_dirt/silty_loam"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:mud/silt"
+          ],
+          "with": [
+            {
+              "block": "tfc:muddy_roots/silt"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:mud/loam"
+          ],
+          "with": [
+            {
+              "block": "tfc:muddy_roots/loam"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:mud/sandy_loam"
+          ],
+          "with": [
+            {
+              "block": "tfc:muddy_roots/sandy_loam"
+            }
+          ]
+        },
+        {
+          "replace": [
+            "tfc:mud/silty_loam"
+          ],
+          "with": [
+            {
+              "block": "tfc:muddy_roots/silty_loam"
+            }
+          ]
+        }
+      ],
+      "width": 15,
+      "height": 8,
+      "tries": 1,
+      "special_placer": {
+        "skew_chance": 0.2
+      },
+      "required": true
+    }
   }
 }

@@ -2824,6 +2824,10 @@ public final class TFCFBlocks {
                Map<TFCFRock, RegistryObject<Block>> rockMap = new HashMap<>();
 
                for (TFCFRock rock : TFCFRock.values()) {
+                  // 凝灰岩整套岩石方块已移除（TFE 提供），不再生成它的混合沙
+                  if (rock == TFCFRock.TUFF) {
+                     continue;
+                  }
                   rockMap.put(
                      rock,
                      register(
@@ -2937,6 +2941,8 @@ public final class TFCFBlocks {
                Map<TFCFRock, RegistryObject<Block>> rockMap = new HashMap<>();
 
                for (TFCFRock rock : TFCFRock.values()) {
+            // 凝灰岩整套岩石方块已移除（TFE 提供），不再生成它的产物
+            if (rock == TFCFRock.TUFF) { continue; }
                   rockMap.put(
                      rock,
                      register(
@@ -2974,6 +2980,8 @@ public final class TFCFBlocks {
                Map<TFCFRock, RegistryObject<Block>> rockMap = new HashMap<>();
 
                for (TFCFRock rock : TFCFRock.values()) {
+            // 凝灰岩整套岩石方块已移除（TFE 提供），不再生成它的产物
+            if (rock == TFCFRock.TUFF) { continue; }
                   rockMap.put(
                      rock,
                      register(
@@ -3146,6 +3154,8 @@ public final class TFCFBlocks {
                Map<TFCFRock, DecorationBlockRegistryObject> rockMap = new HashMap<>();
 
                for (TFCFRock rock : TFCFRock.values()) {
+            // 凝灰岩整套岩石方块已移除（TFE 提供），不再生成它的产物
+            if (rock == TFCFRock.TUFF) { continue; }
                   rockMap.put(
                      rock,
                      new DecorationBlockRegistryObject(
@@ -3213,6 +3223,8 @@ public final class TFCFBlocks {
                Map<TFCFRock, DecorationBlockRegistryObject> rockMap = new HashMap<>();
 
                for (TFCFRock rock : TFCFRock.values()) {
+            // 凝灰岩整套岩石方块已移除（TFE 提供），不再生成它的产物
+            if (rock == TFCFRock.TUFF) { continue; }
                   rockMap.put(
                      rock,
                      new DecorationBlockRegistryObject(

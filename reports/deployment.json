@@ -1,8 +1,11 @@
 ﻿{
-    "source":  "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\src\\main\\resources\\data",
+    "source":  "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\build\\libs\\TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar",
     "destination":  "D:\\线框的服务器\\versions\\TFC_Wild_Fire\\mods\\TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar",
-    "backup":  "D:\\线框的服务器\\versions\\TFC_Wild_Fire\\mods\\TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar.bak-20261028-223134",
-    "method":  "data pack injected directly (no gradle build)",
-    "tag_files":  791,
-    "deployed_at":  "2026-10-28T22:31:52.0072769+08:00"
+    "backup":  "D:\\线框的服务器\\versions\\TFC_Wild_Fire\\mods\\TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar.bak-20261028-231909-724",
+    "previous_sha256":  "9736FE9EAA809A546B7745400FB2B17B08A9E43133C690A656BE7CC09D2FFCA0",
+    "sha256":  "49121D3C3D072D6ADF6638103655F0743159B146EB4804B51A0ADAF4C8D566CF",
+    "installed_sha256":  "49121D3C3D072D6ADF6638103655F0743159B146EB4804B51A0ADAF4C8D566CF",
+    "match":  true,
+    "built_at":  "2026-10-28T23:19:05.9426171+08:00",
+    "deployed_at":  "2026-10-28T23:19:19.2300558+08:00"
 }
