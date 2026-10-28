@@ -1,11 +1,11 @@
 ﻿{
     "source":  "D:\\学习资料\\附属模组工作区\\tfc_florae_port\\build\\libs\\TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar",
     "destination":  "D:\\线框的服务器\\versions\\TFC_Wild_Fire\\mods\\TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar",
-    "backup":  "D:\\线框的服务器\\versions\\TFC_Wild_Fire\\mods\\TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar.bak-20261028-173909-900",
-    "previous_sha256":  "7A9552B26D241845799267E3637AC49B5525C03A7FCEF093235B4B01F759BFF2",
-    "sha256":  "C7457E7DBFB18F1B4D1CAF91854DD6E4365754BD9BE451E40098E5DD82A8D343",
-    "installed_sha256":  "C7457E7DBFB18F1B4D1CAF91854DD6E4365754BD9BE451E40098E5DD82A8D343",
+    "backup":  "D:\\线框的服务器\\versions\\TFC_Wild_Fire\\mods\\TFCFlorae-1.20.1-2.2.0-mc1.20.1.jar.bak-20261028-174919-785",
+    "previous_sha256":  "C7457E7DBFB18F1B4D1CAF91854DD6E4365754BD9BE451E40098E5DD82A8D343",
+    "sha256":  "12FDB223F14BF78A07ADCE6AF5C51348958750E3EB63960C73951A8D802485F2",
+    "installed_sha256":  "12FDB223F14BF78A07ADCE6AF5C51348958750E3EB63960C73951A8D802485F2",
     "match":  true,
-    "built_at":  "2026-10-28T17:38:56.2132445+08:00",
-    "deployed_at":  "2026-10-28T17:39:16.0857490+08:00"
+    "built_at":  "2026-10-28T17:49:06.8267698+08:00",
+    "deployed_at":  "2026-10-28T17:49:25.8754860+08:00"
 }
