@@ -134,13 +134,7 @@ public class TFCFForgeEventHandler {
       }
 
       for (Variant variant : Variant.values()) {
-         if (block == ((RegistryObject)((Map)TFCBlocks.SOIL.get(SoilBlockType.MUD)).get(variant)).get()
-            && event.getHand() == InteractionHand.MAIN_HAND
-            && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN)) {
-            level.setBlockAndUpdate(pos, ((Block)TFCFBlocks.TFCSOIL.get(TFCFSoil.PACKED_MUD).get(variant).get()).defaultBlockState());
-            event.setCancellationResult(InteractionResult.SUCCESS);
-         }
-
+         // packed_mud 不再注册，泥巴铲平的转换一并去掉
          if (block == ((RegistryObject)((Map)TFCBlocks.SOIL.get(SoilBlockType.DIRT)).get(variant)).get()
             && event.getHand() == InteractionHand.MAIN_HAND
             && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN)) {

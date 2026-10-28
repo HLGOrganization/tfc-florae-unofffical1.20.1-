@@ -1,10 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:dense_grass/loam",
-    "tfcflorae:dry_grass/loam",
     "tfcflorae:mycelium_dirt/loam",
-    "tfcflorae:podzol/loam",
-    "tfcflorae:sparse_grass/loam"
+    "tfcflorae:podzol/loam"
   ]
 }

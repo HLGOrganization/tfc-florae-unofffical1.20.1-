@@ -34,6 +34,21 @@ ASSETS = os.path.join(RES, "assets", "tfcflorae")
 TFC_JAR = r"D:\学习资料\附属模组工作区\[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar"
 WHITELIST = os.path.join(ROOT, "reports", "registered-ids.json")
 
+# Soil families that are deliberately no longer registered (see
+# TFCFBlocks.REMOVED_SOILS): duplicate grass paths, packed/loose mud, coarse
+# dirt and the broken dry/dense/sparse grass blocks.  The source-level audit
+# still expands their register() call (it does not model the REMOVED_SOILS
+# filter), so they must be excluded here or the tags would reference blocks
+# that do not exist - which is exactly what broke every leaf block once.
+REMOVED_SOILS = {
+    "grass_path", "dense_grass_path", "sparse_grass_path", "dry_grass_path",
+    "packed_mud", "mossy_packed_mud", "loose_mud", "coarse_dirt",
+    "dry_grass", "dense_grass", "sparse_grass",
+    "dry_clay_grass", "dense_clay_grass", "sparse_clay_grass",
+    "dry_earthenware_clay_grass", "dense_earthenware_clay_grass", "sparse_earthenware_clay_grass",
+    "dry_stoneware_clay_grass", "dense_stoneware_clay_grass", "sparse_stoneware_clay_grass",
+}
+
 # TFCFRock -> TFC geology tag prefix
 ROCK_CATEGORY = {
     "red_granite": "igneous_intrusive",
@@ -63,7 +78,9 @@ def rock_names():
 
 def load_whitelist():
     d = json.load(open(WHITELIST, encoding="utf-8"))
-    return set(d["blocks"]), set(d["items"])
+    blocks = {b for b in d["blocks"] if b.split("/")[0] not in REMOVED_SOILS}
+    items = {i for i in d["items"] if i.split("/")[0] not in REMOVED_SOILS}
+    return blocks, items
 
 
 def load_tfc_tags():

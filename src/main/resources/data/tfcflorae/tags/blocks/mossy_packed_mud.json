@@ -1,9 +1,5 @@
 {
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
-  "values": [
-    "tfcflorae:mossy_packed_mud/silt",
-    "tfcflorae:mossy_packed_mud/loam",
-    "tfcflorae:mossy_packed_mud/sandy_loam"
-  ]
+  "values": []
 }

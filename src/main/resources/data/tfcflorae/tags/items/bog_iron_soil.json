@@ -1,11 +1,9 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:dense_grass/bog_iron",
     "tfcflorae:dirt/bog_iron",
     "tfcflorae:grass/bog_iron",
     "tfcflorae:mycelium_dirt/bog_iron",
-    "tfcflorae:rooted_dirt/bog_iron",
-    "tfcflorae:sparse_grass/bog_iron"
+    "tfcflorae:rooted_dirt/bog_iron"
   ]
 }

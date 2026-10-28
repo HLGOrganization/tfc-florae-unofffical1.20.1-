@@ -143,12 +143,28 @@ import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
 public final class TFCFBlocks {
    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "tfcflorae");
-   public static final Map<TFCFSoil, Map<TFCFSoil.TFCFVariant, RegistryObject<Block>>> TFCFSOIL = Helpers.mapOfKeys(
-      TFCFSoil.class,
-      type -> Helpers.mapOfKeys(
-            TFCFSoil.TFCFVariant.class, variant -> register(type.name() + "/" + variant.name(), () -> type.TFCFCreate(variant), TFCCreativeTabs.EARTH)
-         )
+
+   /**
+    * 不再注册的土壤类型：
+    * <ul>
+    *   <li>所有土径（{@code *_grass_path}）—— TFC 1.20 已有 {@code tfc:grass_path/<variant>}，重复；</li>
+    *   <li>{@code packed_mud} / {@code mossy_packed_mud} / {@code loose_mud} / {@code coarse_dirt} —— 与 TFC 的泥巴/泥土体系重复或不需要；</li>
+    *   <li>所有干燥/稠密/稀疏草方块（{@code dry_*} / {@code dense_*} / {@code sparse_*}，含黏土、陶土、瓷土版本）
+    *       —— 放置后会变成可透视的树叶方块，是坏的实现，直接去掉。</li>
+    * </ul>
+    * 枚举常量本身保留（其它地方仍有 switch/transform 引用），注册时给这些类型放**空表**，
+    * 这样 {@code TFCFSOIL.get(type).values()} 是空集合而不是 NPE。
+    */
+   private static final java.util.Set<TFCFSoil> REMOVED_SOILS = java.util.EnumSet.of(
+      TFCFSoil.GRASS_PATH, TFCFSoil.DENSE_GRASS_PATH, TFCFSoil.SPARSE_GRASS_PATH, TFCFSoil.DRY_GRASS_PATH,
+      TFCFSoil.PACKED_MUD, TFCFSoil.MOSSY_PACKED_MUD, TFCFSoil.LOOSE_MUD, TFCFSoil.COARSE_DIRT,
+      TFCFSoil.DRY_GRASS, TFCFSoil.DENSE_GRASS, TFCFSoil.SPARSE_GRASS,
+      TFCFSoil.DRY_CLAY_GRASS, TFCFSoil.DENSE_CLAY_GRASS, TFCFSoil.SPARSE_CLAY_GRASS,
+      TFCFSoil.DRY_EARTHENWARE_CLAY_GRASS, TFCFSoil.DENSE_EARTHENWARE_CLAY_GRASS, TFCFSoil.SPARSE_EARTHENWARE_CLAY_GRASS,
+      TFCFSoil.DRY_STONEWARE_CLAY_GRASS, TFCFSoil.DENSE_STONEWARE_CLAY_GRASS, TFCFSoil.SPARSE_STONEWARE_CLAY_GRASS
    );
+
+   public static final Map<TFCFSoil, Map<TFCFSoil.TFCFVariant, RegistryObject<Block>>> TFCFSOIL = tfcfSoilMap(TFCFSoil.class);
    public static final Map<TFCFSoil, Map<Variant, RegistryObject<Block>>> TFCSOIL = TFCSoilMap(TFCFSoil.class);
    public static final Map<TFCFSoil.TFCFVariant, DecorationBlockRegistryObject> MUD_BRICK_DECORATIONS = Helpers.mapOfKeys(
       TFCFSoil.TFCFVariant.class,
@@ -1311,10 +1327,30 @@ public final class TFCFBlocks {
       return Map;
    }
 
+   private static Map<TFCFSoil, Map<TFCFSoil.TFCFVariant, RegistryObject<Block>>> tfcfSoilMap(Class<TFCFSoil> enumClass) {
+      Map<TFCFSoil, Map<TFCFSoil.TFCFVariant, RegistryObject<Block>>> Map = new HashMap<>();
+
+      for (TFCFSoil type : enumClass.getEnumConstants()) {
+         if (REMOVED_SOILS.contains(type)) {
+            Map.put(type, java.util.Collections.emptyMap());
+            continue;
+         }
+         Map.put(type, Helpers.mapOfKeys(
+            TFCFSoil.TFCFVariant.class, variant -> register(type.name() + "/" + variant.name(), () -> type.TFCFCreate(variant), TFCCreativeTabs.EARTH)
+         ));
+      }
+
+      return Map;
+   }
+
    private static Map<TFCFSoil, Map<Variant, RegistryObject<Block>>> TFCSoilMap(Class<TFCFSoil> enumClass) {
       Map<TFCFSoil, Map<Variant, RegistryObject<Block>>> Map = new HashMap<>();
 
       for (TFCFSoil soil : enumClass.getEnumConstants()) {
+         if (REMOVED_SOILS.contains(soil)) {
+            Map.put(soil, java.util.Collections.emptyMap());
+            continue;
+         }
          if (soil.getTFCFactory() != null) {
             Map<Variant, RegistryObject<Block>> subMap = new HashMap<>();
 

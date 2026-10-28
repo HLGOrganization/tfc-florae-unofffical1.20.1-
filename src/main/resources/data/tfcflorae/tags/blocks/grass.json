@@ -1,19 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:dense_grass/bog_iron",
-    "tfcflorae:dense_grass/loam",
-    "tfcflorae:dense_grass/sandy_loam",
-    "tfcflorae:dense_grass/silt",
-    "tfcflorae:dense_grass_path/loam",
-    "tfcflorae:dense_grass_path/sandy_loam",
-    "tfcflorae:dense_grass_path/silt",
-    "tfcflorae:dry_grass/loam",
-    "tfcflorae:dry_grass/sandy_loam",
-    "tfcflorae:dry_grass/silt",
-    "tfcflorae:dry_grass_path/loam",
-    "tfcflorae:dry_grass_path/sandy_loam",
-    "tfcflorae:dry_grass_path/silt",
     "tfcflorae:plant/bunch_grass",
     "tfcflorae:plant/cat_grass",
     "tfcflorae:plant/dune_grass",
@@ -35,13 +22,6 @@
     "tfcflorae:sand/sparse_grass/pink",
     "tfcflorae:sand/sparse_grass/red",
     "tfcflorae:sand/sparse_grass/white",
-    "tfcflorae:sand/sparse_grass/yellow",
-    "tfcflorae:sparse_grass/bog_iron",
-    "tfcflorae:sparse_grass/loam",
-    "tfcflorae:sparse_grass/sandy_loam",
-    "tfcflorae:sparse_grass/silt",
-    "tfcflorae:sparse_grass_path/loam",
-    "tfcflorae:sparse_grass_path/sandy_loam",
-    "tfcflorae:sparse_grass_path/silt"
+    "tfcflorae:sand/sparse_grass/yellow"
   ]
 }

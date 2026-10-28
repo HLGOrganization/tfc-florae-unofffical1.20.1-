@@ -22,6 +22,18 @@ RES = os.path.join(ROOT, "src", "main", "resources")
 DATA = os.path.join(RES, "data")
 ASSETS = os.path.join(RES, "assets", "tfcflorae")
 
+# Families that are no longer registered even though their assets are still on
+# disk (asset presence alone would say "alive").  Keep in sync with
+# TFCFBlocks.REMOVED_SOILS.
+REMOVED_PREFIXES = {
+    "grass_path", "dense_grass_path", "sparse_grass_path", "dry_grass_path",
+    "packed_mud", "mossy_packed_mud", "loose_mud", "coarse_dirt",
+    "dry_grass", "dense_grass", "sparse_grass",
+    "dry_clay_grass", "dense_clay_grass", "sparse_clay_grass",
+    "dry_earthenware_clay_grass", "dense_earthenware_clay_grass", "sparse_earthenware_clay_grass",
+    "dry_stoneware_clay_grass", "dense_stoneware_clay_grass", "sparse_stoneware_clay_grass",
+}
+
 
 def have(ident, kind):
     if ":" not in ident:
@@ -29,6 +41,8 @@ def have(ident, kind):
     ns, path = ident.split(":", 1)
     if ns != "tfcflorae":
         return True  # not ours to judge
+    if path.split("/")[0] in REMOVED_PREFIXES:
+        return False
     if kind == "blocks":
         return os.path.isfile(os.path.join(ASSETS, "blockstates", path.replace("/", os.sep) + ".json"))
     return os.path.isfile(os.path.join(ASSETS, "models", "item", path.replace("/", os.sep) + ".json"))

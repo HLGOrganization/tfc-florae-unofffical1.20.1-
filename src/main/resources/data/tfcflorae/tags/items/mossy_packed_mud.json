@@ -1,8 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "tfcflorae:mossy_packed_mud/loam",
-    "tfcflorae:mossy_packed_mud/sandy_loam",
-    "tfcflorae:mossy_packed_mud/silt"
-  ]
+  "values": []
 }
