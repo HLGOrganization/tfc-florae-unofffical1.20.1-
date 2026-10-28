@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/bricks/laterite"
-  },
-  "result": "tfcflorae:rock/bricks/wall/laterite",
-  "count": 1
-}

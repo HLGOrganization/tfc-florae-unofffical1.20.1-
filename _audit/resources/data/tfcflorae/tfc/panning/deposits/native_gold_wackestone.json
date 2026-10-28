@@ -1,8 +1,0 @@
-{
-  "ingredient": "tfcflorae:deposit/native_gold/wackestone",
-  "model_stages": [
-    "tfc:item/pan/empty",
-    "tfc:item/pan/result"
-  ],
-  "loot_table": "tfcflorae:panning/deposits/native_gold_wackestone"
-}

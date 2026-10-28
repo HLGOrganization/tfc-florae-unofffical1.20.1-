@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "tfc:block/rock/chiseled/granite",
-    "top": "tfc:block/rock/chiseled/granite",
-    "side": "tfc:block/rock/chiseled/granite"
-  }
-}

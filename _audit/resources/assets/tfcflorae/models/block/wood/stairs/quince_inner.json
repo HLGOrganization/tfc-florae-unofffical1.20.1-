@@ -1,8 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/wood/planks/quince",
-    "top": "tfcflorae:block/wood/planks/quince",
-    "side": "tfcflorae:block/wood/planks/quince"
-  }
-}

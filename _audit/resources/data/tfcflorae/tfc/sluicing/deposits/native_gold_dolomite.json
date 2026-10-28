@@ -1,6 +1,0 @@
-{
-  "ingredient": {
-    "item": "tfc:deposit/native_gold/dolomite"
-  },
-  "loot_table": "tfcflorae:panning/deposits/native_gold_dolomite"
-}

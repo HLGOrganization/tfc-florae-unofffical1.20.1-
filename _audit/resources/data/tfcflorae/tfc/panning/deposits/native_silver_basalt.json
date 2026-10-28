@@ -1,9 +1,0 @@
-{
-  "ingredient": "tfc:deposit/native_silver/basalt",
-  "model_stages": [
-    "tfc:item/pan/native_silver/basalt_full",
-    "tfc:item/pan/native_silver/basalt_half",
-    "tfc:item/pan/result"
-  ],
-  "loot_table": "tfcflorae:panning/deposits/native_silver_basalt"
-}

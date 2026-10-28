@@ -1,6 +1,0 @@
-{
-  "parent": "tfc:block/bladed_axle",
-  "textures": {
-    "wood": "tfcflorae:block/wood/sheet/hawthorn"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/chiseled/laterite",
-    "top": "tfcflorae:block/rock/chiseled/laterite",
-    "side": "tfcflorae:block/rock/chiseled/laterite"
-  }
-}

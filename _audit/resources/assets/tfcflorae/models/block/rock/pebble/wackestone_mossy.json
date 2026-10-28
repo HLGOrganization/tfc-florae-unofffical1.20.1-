@@ -1,7 +1,0 @@
-{
-  "parent": "tfcflorae:block/groundcover/pebble",
-  "textures": {
-    "0": "tfcflorae:block/rock/mossy_cobble/wackestone",
-    "particle": "tfcflorae:block/rock/mossy_cobble/wackestone"
-  }
-}

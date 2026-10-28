@@ -1,9 +1,0 @@
-{
-  "ingredient": {
-    "item": "tfcflorae:food/roasted_black_powderpuff"
-  },
-  "hunger": 4,
-  "saturation": 1,
-  "decay_modifier": 1.5,
-  "protein": 2
-}

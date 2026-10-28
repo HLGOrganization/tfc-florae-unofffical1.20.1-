@@ -8,3 +8,6 @@ out/
 *.iml
 *.jar.bak-*
 __pycache__/
+_audit/resources/
+_audit/run/
+_audit/tfcjar/

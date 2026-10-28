@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/sewing_table",
-  "textures": {
-    "0": "tfcflorae:block/wood/log/greenheart",
-    "1": "tfcflorae:block/wood/planks/greenheart"
-  }
-}

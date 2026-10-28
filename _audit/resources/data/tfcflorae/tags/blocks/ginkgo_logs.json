@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "tfcflorae:wood/log/ginkgo",
-    "tfcflorae:wood/stripped_log/ginkgo",
-    "tfcflorae:wood/stripped_wood/ginkgo",
-    "tfcflorae:wood/wood/ginkgo"
-  ]
-}

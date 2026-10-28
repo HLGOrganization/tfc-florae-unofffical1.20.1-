@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/holly",
-  "result": "tfcflorae:wood/stairs/holly",
-  "mode": "stair"
-}

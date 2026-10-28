@@ -1,9 +1,0 @@
-{
-  "parent": "tfcflorae:block/wood/barrel",
-  "textures": {
-    "particle": "tfcflorae:block/wood/planks/white_ipe",
-    "planks": "tfcflorae:block/wood/planks/white_ipe",
-    "sheet": "tfcflorae:block/wood/sheet/white_ipe",
-    "hoop": "tfc:block/barrel_hoop"
-  }
-}

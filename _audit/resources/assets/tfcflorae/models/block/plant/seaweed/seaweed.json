@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "tfcflorae:block/plant/seaweed/seaweed",
-    "particle": "tfcflorae:block/plant/seaweed/seaweed"
-  }
-}

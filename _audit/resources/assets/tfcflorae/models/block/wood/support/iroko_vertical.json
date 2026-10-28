@@ -1,7 +1,0 @@
-{
-  "parent": "tfcflorae:block/wood/vertical",
-  "textures": {
-    "texture": "tfcflorae:block/wood/sheet/iroko",
-    "particle": "tfcflorae:block/wood/sheet/iroko"
-  }
-}

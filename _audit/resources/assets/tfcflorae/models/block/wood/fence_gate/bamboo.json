@@ -1,7 +1,0 @@
-{
-  "parent": "tfcflorae:block/wood/template_custom_fence_gate",
-  "textures": {
-    "particle": "tfcflorae:block/wood/sheet/bamboo",
-    "texture": "tfcflorae:block/wood/fence_gate/bamboo"
-  }
-}

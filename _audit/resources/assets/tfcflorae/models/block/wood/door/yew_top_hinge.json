@@ -1,7 +1,0 @@
-{
-  "parent": "block/door_top_rh",
-  "textures": {
-    "top": "tfcflorae:block/wood/door/yew_top",
-    "bottom": "tfcflorae:block/wood/door/yew_bottom"
-  }
-}

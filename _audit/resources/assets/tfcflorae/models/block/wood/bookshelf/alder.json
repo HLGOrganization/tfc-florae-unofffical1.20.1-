@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/bookshelf",
-  "textures": {
-    "end": "tfcflorae:block/wood/planks/alder",
-    "side": "tfcflorae:block/wood/bookshelf/alder"
-  }
-}

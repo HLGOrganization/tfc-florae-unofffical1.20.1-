@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/groundcover/twig",
-  "textures": {
-    "side": "tfcflorae:block/wood/log/yellow_meranti",
-    "top": "tfcflorae:block/wood/log_top/yellow_meranti"
-  }
-}

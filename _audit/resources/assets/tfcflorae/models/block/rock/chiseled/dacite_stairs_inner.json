@@ -1,8 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfc:block/rock/chiseled/dacite",
-    "top": "tfc:block/rock/chiseled/dacite",
-    "side": "tfc:block/rock/chiseled/dacite"
-  }
-}

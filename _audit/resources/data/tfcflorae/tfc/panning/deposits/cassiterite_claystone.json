@@ -1,9 +1,0 @@
-{
-  "ingredient": "tfc:deposit/cassiterite/claystone",
-  "model_stages": [
-    "tfc:item/pan/cassiterite/claystone_full",
-    "tfc:item/pan/cassiterite/claystone_half",
-    "tfc:item/pan/result"
-  ],
-  "loot_table": "tfcflorae:panning/deposits/cassiterite_claystone"
-}

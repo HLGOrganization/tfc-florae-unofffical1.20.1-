@@ -1,6 +1,0 @@
-{
-  "parent": "tfc:item/pan/full",
-  "textures": {
-    "material": "tfcflorae:block/rock/gravel/carbonatite"
-  }
-}

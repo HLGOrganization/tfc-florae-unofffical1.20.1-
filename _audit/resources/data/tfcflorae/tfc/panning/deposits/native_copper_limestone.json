@@ -1,9 +1,0 @@
-{
-  "ingredient": "tfc:deposit/native_copper/limestone",
-  "model_stages": [
-    "tfc:item/pan/native_copper/limestone_full",
-    "tfc:item/pan/native_copper/limestone_half",
-    "tfc:item/pan/result"
-  ],
-  "loot_table": "tfcflorae:panning/deposits/native_copper_limestone"
-}

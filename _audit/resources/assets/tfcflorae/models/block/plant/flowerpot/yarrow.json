@@ -1,8 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "minecraft:block/flower_pot_cross",
-  "textures": {
-    "plant": "tfcflorae:block/plant/yarrow/yarrow_3",
-    "dirt": "minecraft:block/coarse_dirt"
-  }
-}

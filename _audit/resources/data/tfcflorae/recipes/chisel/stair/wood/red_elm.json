@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/red_elm",
-  "result": "tfcflorae:wood/stairs/red_elm",
-  "mode": "stair"
-}

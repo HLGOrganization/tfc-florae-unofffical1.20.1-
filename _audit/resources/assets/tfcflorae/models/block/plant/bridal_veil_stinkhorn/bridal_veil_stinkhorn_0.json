@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "tfcflorae:block/plant/bridal_veil_stinkhorn/bridal_veil_stinkhorn_0",
-    "particle": "tfcflorae:block/plant/bridal_veil_stinkhorn/bridal_veil_stinkhorn_0"
-  }
-}

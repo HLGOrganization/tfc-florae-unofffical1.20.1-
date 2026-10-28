@@ -1,9 +1,0 @@
-{
-  "ingredient": "tfc:deposit/native_silver/schist",
-  "model_stages": [
-    "tfc:item/pan/native_silver/schist_full",
-    "tfc:item/pan/native_silver/schist_half",
-    "tfc:item/pan/result"
-  ],
-  "loot_table": "tfcflorae:panning/deposits/native_silver_schist"
-}

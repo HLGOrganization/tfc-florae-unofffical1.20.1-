@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/column/marble",
-  "result": "tfcflorae:rock/polished_column/marble",
-  "mode": "smooth"
-}

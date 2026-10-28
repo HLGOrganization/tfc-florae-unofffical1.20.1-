@@ -1,6 +1,0 @@
-{
-  "parent": "tfcflorae:block/sand/sand_height4",
-  "textures": {
-    "sand": "tfc:block/rock/gravel/chalk"
-  }
-}

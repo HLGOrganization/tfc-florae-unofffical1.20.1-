@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "tfcflorae:block/plant/sea_anemone/sea_anemone",
-    "particle": "tfcflorae:block/plant/sea_anemone/sea_anemone"
-  }
-}

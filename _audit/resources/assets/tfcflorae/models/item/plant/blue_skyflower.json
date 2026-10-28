@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tfcflorae:block/plant/blue_skyflower/blue_skyflower_item"
-  }
-}

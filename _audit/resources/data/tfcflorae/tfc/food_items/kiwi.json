@@ -1,9 +1,0 @@
-{
-  "ingredient": {
-    "item": "tfcflorae:food/kiwi"
-  },
-  "hunger": 4,
-  "saturation": 0.5,
-  "decay_modifier": 2.5,
-  "fruit": 1
-}

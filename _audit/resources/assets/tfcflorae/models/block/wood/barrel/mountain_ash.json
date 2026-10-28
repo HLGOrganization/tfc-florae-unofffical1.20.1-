@@ -1,8 +1,0 @@
-{
-  "parent": "tfcflorae:block/barrel",
-  "textures": {
-    "particle": "tfcflorae:block/wood/planks/mountain_ash",
-    "planks": "tfcflorae:block/wood/planks/mountain_ash",
-    "sheet": "tfcflorae:block/wood/sheet/mountain_ash"
-  }
-}

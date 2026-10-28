@@ -1,7 +1,0 @@
-{
-  "parent": "block/tinted_cross",
-  "textures": {
-    "cross": "tfcflorae:block/plant/sawgrass/sawgrass_single_15",
-    "particle": "tfcflorae:block/plant/sawgrass/sawgrass_single_15"
-  }
-}

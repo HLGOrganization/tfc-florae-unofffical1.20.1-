@@ -1,8 +1,0 @@
-{
-  "parent": "tfcflorae:block/barrel_sealed",
-  "textures": {
-    "particle": "tfcflorae:block/wood/planks/fever",
-    "planks": "tfcflorae:block/wood/planks/fever",
-    "sheet": "tfcflorae:block/wood/sheet/fever"
-  }
-}

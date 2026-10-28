@@ -1,6 +1,0 @@
-{
-  "parent": "tfcflorae:item/dry_grass_inv",
-  "textures": {
-    "block": "tfcflorae:block/stoneware_clay/sandy_loam"
-  }
-}

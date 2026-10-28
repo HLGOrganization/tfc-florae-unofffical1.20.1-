@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/flagstone/gneiss",
-  "result": "tfcflorae:rock/flagstone_bricks/gneiss",
-  "mode": "smooth"
-}

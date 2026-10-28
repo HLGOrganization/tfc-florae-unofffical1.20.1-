@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/mahoe",
-  "result": "tfcflorae:wood/stairs/mahoe",
-  "mode": "stair"
-}

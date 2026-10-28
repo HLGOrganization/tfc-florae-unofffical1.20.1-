@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tfcflorae:item/loose_rock/jaspillite",
-    "layer1": "tfc:item/loose_rock/moss"
-  }
-}

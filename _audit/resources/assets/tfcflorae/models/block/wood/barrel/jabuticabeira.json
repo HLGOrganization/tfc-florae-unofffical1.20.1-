@@ -1,8 +1,0 @@
-{
-  "parent": "tfcflorae:block/barrel",
-  "textures": {
-    "particle": "tfcflorae:block/wood/planks/jabuticabeira",
-    "planks": "tfcflorae:block/wood/planks/jabuticabeira",
-    "sheet": "tfcflorae:block/wood/sheet/jabuticabeira"
-  }
-}

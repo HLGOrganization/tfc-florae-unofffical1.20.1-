@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/column/boninite",
-  "result": "tfcflorae:rock/polished_column/boninite",
-  "mode": "smooth"
-}

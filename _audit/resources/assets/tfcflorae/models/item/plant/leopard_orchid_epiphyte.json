@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tfcflorae:block/plant/leopard_orchid/leopard_orchid_epiphyte_1"
-  }
-}

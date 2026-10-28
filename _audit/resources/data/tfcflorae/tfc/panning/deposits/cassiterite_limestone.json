@@ -1,9 +1,0 @@
-{
-  "ingredient": "tfc:deposit/cassiterite/limestone",
-  "model_stages": [
-    "tfc:item/pan/cassiterite/limestone_full",
-    "tfc:item/pan/cassiterite/limestone_half",
-    "tfc:item/pan/result"
-  ],
-  "loot_table": "tfcflorae:panning/deposits/cassiterite_limestone"
-}

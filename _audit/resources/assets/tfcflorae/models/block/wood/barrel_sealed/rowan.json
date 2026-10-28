@@ -1,8 +1,0 @@
-{
-  "parent": "tfcflorae:block/barrel_sealed",
-  "textures": {
-    "particle": "tfcflorae:block/wood/planks/rowan",
-    "planks": "tfcflorae:block/wood/planks/rowan",
-    "sheet": "tfcflorae:block/wood/sheet/rowan"
-  }
-}

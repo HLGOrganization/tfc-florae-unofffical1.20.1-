@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:sandstone/layered/yellow"
-  },
-  "result": "tfcflorae:sandstone/layered/wall/yellow",
-  "count": 1
-}

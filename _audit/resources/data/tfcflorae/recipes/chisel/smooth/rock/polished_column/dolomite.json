@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/column/dolomite",
-  "result": "tfcflorae:rock/polished_column/dolomite",
-  "mode": "smooth"
-}

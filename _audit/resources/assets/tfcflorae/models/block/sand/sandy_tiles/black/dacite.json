@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "tfcflorae:block/sand/sandy_tiles/black/dacite"
-  }
-}

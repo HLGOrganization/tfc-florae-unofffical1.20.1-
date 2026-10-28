@@ -1,9 +1,0 @@
-{
-  "ingredient": "tfc:deposit/native_gold/shale",
-  "model_stages": [
-    "tfc:item/pan/native_gold/shale_full",
-    "tfc:item/pan/native_gold/shale_half",
-    "tfc:item/pan/result"
-  ],
-  "loot_table": "tfcflorae:panning/deposits/native_gold_shale"
-}

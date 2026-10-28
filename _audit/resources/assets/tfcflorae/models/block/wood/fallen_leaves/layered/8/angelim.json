@@ -1,6 +1,0 @@
-{
-  "parent": "tfcflorae:block/wood/fallen_leaves_height8",
-  "textures": {
-    "sand": "tfcflorae:block/wood/leaves/angelim"
-  }
-}

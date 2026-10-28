@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/groundcover/twig",
-  "textures": {
-    "side": "tfcflorae:block/wood/log/ginkgo",
-    "top": "tfcflorae:block/wood/log_top/ginkgo"
-  }
-}

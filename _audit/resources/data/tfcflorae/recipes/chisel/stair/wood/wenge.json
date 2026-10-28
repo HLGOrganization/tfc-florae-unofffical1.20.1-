@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/wenge",
-  "result": "tfcflorae:wood/stairs/wenge",
-  "mode": "stair"
-}

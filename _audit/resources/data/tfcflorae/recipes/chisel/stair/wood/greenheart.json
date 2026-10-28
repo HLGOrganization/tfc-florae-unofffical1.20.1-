@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/greenheart",
-  "result": "tfcflorae:wood/stairs/greenheart",
-  "mode": "stair"
-}

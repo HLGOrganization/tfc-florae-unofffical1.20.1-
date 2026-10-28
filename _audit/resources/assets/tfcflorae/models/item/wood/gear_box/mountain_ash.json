@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/ore",
-  "textures": {
-    "all": "tfcflorae:block/wood/planks/mountain_ash",
-    "overlay": "tfc:block/axle_casing_front"
-  }
-}

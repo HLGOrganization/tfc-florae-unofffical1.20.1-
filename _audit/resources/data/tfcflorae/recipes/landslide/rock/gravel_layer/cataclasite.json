@@ -1,7 +1,0 @@
-{
-  "type": "tfc:landslide",
-  "ingredient": [
-    "tfcflorae:rock/gravel_layer/cataclasite"
-  ],
-  "result": "tfcflorae:rock/gravel_layer/cataclasite"
-}

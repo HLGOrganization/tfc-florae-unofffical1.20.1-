@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/groundcover/twig",
-  "textures": {
-    "side": "tfcflorae:block/wood/log/purple_ipe",
-    "top": "tfcflorae:block/wood/log_top/purple_ipe"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "tfcflorae:block/wood/bamboo_log_noleaf",
-  "textures": {
-    "all": "tfcflorae:block/wood/stripped_log/bamboo/bamboo",
-    "particle": "tfcflorae:block/wood/stripped_log/bamboo/bamboo",
-    "0": "tfcflorae:block/wood/stripped_log/bamboo/bamboo"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "ingredient": "tfc:deposit/native_gold/dolomite",
-  "model_stages": [
-    "tfc:item/pan/native_gold/dolomite_full",
-    "tfc:item/pan/native_gold/dolomite_half",
-    "tfc:item/pan/result"
-  ],
-  "loot_table": "tfcflorae:panning/deposits/native_gold_dolomite"
-}

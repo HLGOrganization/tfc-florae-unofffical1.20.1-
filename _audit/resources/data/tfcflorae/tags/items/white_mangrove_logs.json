@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "tfcflorae:wood/log/white_mangrove",
-    "tfcflorae:wood/stripped_log/white_mangrove",
-    "tfcflorae:wood/stripped_wood/white_mangrove",
-    "tfcflorae:wood/wood/white_mangrove"
-  ]
-}

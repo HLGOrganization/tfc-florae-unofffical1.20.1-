@@ -1,8 +1,0 @@
-{
-  "parent": "tfcflorae:block/sparse_grass_path",
-  "textures": {
-    "dirt": "tfcflorae:block/dirt/bog_iron",
-    "top": "tfcflorae:block/sparse_grass_path/top",
-    "side": "tfcflorae:block/sparse_grass_path/bog_iron_side"
-  }
-}
