@@ -49,6 +49,14 @@ REMOVED_SOILS = {
     "dry_stoneware_clay_grass", "dense_stoneware_clay_grass", "sparse_stoneware_clay_grass",
 }
 
+# Wooden parts that TFC stores as `tfc:wood/planks/oak_<part>` instead of a
+# per-part directory (verified from TFC's blockstates).
+PLANKS_PARTS = {
+    "bookshelf", "button", "door", "fence", "fence_gate", "log_fence", "loom",
+    "pressure_plate", "sign", "slab", "stairs", "tool_rack", "trapdoor",
+    "wall_sign", "workbench",
+}
+
 # TFCFRock -> TFC geology tag prefix
 ROCK_CATEGORY = {
     "red_granite": "igneous_intrusive",
@@ -134,12 +142,29 @@ def build_reverse(tags):
 
 
 def ref_id(our_id, woods, rocks):
-    """TFC id that is 'the same kind of thing' as ours."""
+    """TFC id that is 'the same kind of thing' as ours.
+
+    Naming differs between the mod and TFC:
+      * TFC keeps every wooden part inside `wood/planks/` with a suffix
+        (`wood/planks/oak_slab`), while this mod uses sub-directories
+        (`wood/slab/<wood>`).
+      * TFC keeps rock variants as `<rock>_slab` in the same folder
+        (`tfc:rock/raw/granite_slab`), while this mod uses `rock/raw/slab/<rock>`.
+    """
     parts = our_id.split("/")
     last = parts[-1]
-    if parts[0] == "wood" and len(parts) >= 3 and last in woods:
-        return "tfc:wood/%s/oak" % "/".join(parts[1:-1])
-    if parts[0] in ("rock", "ore", "deposit") and len(parts) >= 3 and last in rocks:
+    # wood parts that TFC stores as wood/planks/oak_<part>
+    if parts[0] == "wood" and len(parts) == 3 and last in woods:
+        kind = parts[1]
+        if kind in PLANKS_PARTS:
+            return "tfc:wood/planks/oak_" + kind
+        return "tfc:wood/%s/oak" % kind
+    # rock variants: rock/<type>/<slab|stairs|wall>/<rock>
+    if parts[0] == "rock" and len(parts) == 4 and parts[2] in ("slab", "stairs", "wall") and last in rocks:
+        return "tfc:rock/%s/granite_%s" % (parts[1], parts[2])
+    if parts[0] == "rock" and len(parts) >= 3 and last in rocks:
+        return "tfc:rock/%s/granite" % "/".join(parts[1:-1])
+    if parts[0] in ("ore", "deposit") and len(parts) >= 3 and last in rocks:
         return "tfc:%s/%s/granite" % (parts[0], "/".join(parts[1:-1]))
     if parts[0] == "brick" and len(parts) == 2 and last in rocks:
         return "tfc:brick/granite"

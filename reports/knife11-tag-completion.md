@@ -56,3 +56,27 @@ python tools/build_whitelist.py            # -> reports/registered-ids-full.json
 python tools/gen_tags.py                   # 245 个 tag
 python tools/prune_dead_tag_ids.py         # 可选：清死条目
 ```
+
+## 补充：slab / stairs / wall 等变体
+
+TFC 的变体命名与本站不同：
+
+- 岩石：	fc:rock/raw/<rock>_slab（同目录加后缀），本站是 `rock/raw/slab/<rock>`；
+- 木材：TFC 把**所有木制部件放在 `wood/planks/` 下加后缀**（`wood/planks/oak_slab`、`oak_bookshelf`、`oak_trapdoor`…），本站是 `wood/slab/<wood>` 之类。
+
+ref_id 已按这两条规律补上映射，结果：
+
+| | 修前 | 修后 |
+|---|---:|---:|
+| tag 文件 | 245 | **278** |
+| 拿到 TFC 同款 tag 的 blocks | 2624 | **3887** |
+| 拿到 TFC 同款 tag 的 items | 2632 | **3697** |
+| `minecraft:slabs` | — | 172 条本站条目 |
+| `minecraft:stairs` | — | 172 |
+| `minecraft:walls` | — | 276 |
+
+岩质 tag（`tfc:<category>_items`）原本就包含变体（按岩石名匹配，sedimentary 126 条、extrusive 84 条、intrusive 21 条、metamorphic 42 条），这次没变；新增的是 slab/stairs/wall 也拿到了 `minecraft:slabs`/`stairs`/`walls`、`forge` 系列等通用 tag。
+
+block 级 `tfc:rock/raw` 仍只有 13 个主方块 —— 因为 **TFC 自己也不把变体放进 block tag**（TFC 的 `rock/raw` 只有 20 个主方块），1:1 保持。
+
+校验：38,592 条本站引用 0 无效、`#` 引用 0 断链。
