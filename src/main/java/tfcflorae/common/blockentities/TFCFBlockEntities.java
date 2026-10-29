@@ -39,20 +39,6 @@ public class TFCFBlockEntities {
       "chiseled_bookshelf", ChiseledBookshelfBlockEntity::new, blockStreams(TFCFBlocks.CHISELED_BOOKSHELF_TFCF.values().stream())
 
    );
-   public static final RegistryObject<BlockEntityType<TFCFChestBlockEntity>> CHEST = register(
-      "tfcf_chest",
-      TFCFChestBlockEntity::new,
-      blockStreams(
-            TFCFBlocks.WOODS.values().stream().map(map -> (RegistryObject)map.get(BlockType.CHEST))
-         )
-   );
-   public static final RegistryObject<BlockEntityType<TFCFTrappedChestBlockEntity>> TRAPPED_CHEST = register(
-      "tfcf_trapped_chest",
-      TFCFTrappedChestBlockEntity::new,
-      blockStreams(
-            TFCFBlocks.WOODS.values().stream().map(map -> (RegistryObject)map.get(BlockType.TRAPPED_CHEST))
-         )
-   );
    public static final RegistryObject<BlockEntityType<WebbedChestBlockEntity>> WEBBED_CHEST = register(
       "webbed_chest", WebbedChestBlockEntity::new, blockStreams(TFCFBlocks.WEBBED_CHEST)
 

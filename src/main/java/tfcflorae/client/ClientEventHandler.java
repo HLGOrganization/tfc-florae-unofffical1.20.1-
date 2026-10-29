@@ -56,7 +56,6 @@ import tfcflorae.client.particle.SporeParticle;
 import tfcflorae.client.particle.TFCFParticles;
 import tfcflorae.client.particle.WaterFlowParticle;
 import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
-import tfcflorae.client.render.blockentity.TFCFChestBlockEntityRenderer;
 import tfcflorae.client.render.entity.CodLikeRenderer;
 import tfcflorae.client.render.entity.SalmonLikeRenderer;
 import tfcflorae.client.render.entity.TFCFSimpleMobRenderer;
@@ -396,8 +395,6 @@ public class ClientEventHandler {
       event.registerBlockEntityRenderer(TFCFBlockEntities.SIGN.get(), SignRenderer::new);
       event.registerBlockEntityRenderer(TFCFBlockEntities.TOOL_RACK.get(),
          ctx -> new net.dries007.tfc.client.render.blockentity.ToolRackBlockEntityRenderer());
-event.registerBlockEntityRenderer(TFCFBlockEntities.CHEST.get(), TFCFChestBlockEntityRenderer::new);
-      event.registerBlockEntityRenderer(TFCFBlockEntities.TRAPPED_CHEST.get(), TFCFChestBlockEntityRenderer::new);
       event.registerBlockEntityRenderer(TFCFBlockEntities.LECTERN.get(), LecternRenderer::new);
       event.registerBlockEntityRenderer(TFCFBlockEntities.ANVIL.get(), ctx -> new AnvilBlockEntityRenderer());
       event.registerBlockEntityRenderer(TFCFBlockEntities.BARREL.get(), ctx -> new BarrelBlockEntityRenderer());
