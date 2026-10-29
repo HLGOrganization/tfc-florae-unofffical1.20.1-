@@ -43,6 +43,11 @@ public final class TFCFRotationBlockEntities
         modifyBlockEntityType("clutch", TFCBlockEntities.CLUTCH.get(), BlockType.CLUTCH);
         modifyBlockEntityType("gear_box", TFCBlockEntities.GEAR_BOX.get(), BlockType.GEAR_BOX);
         modifyBlockEntityType("windmill", TFCBlockEntities.WINDMILL.get(), BlockType.WINDMILL);
+        // chests work exactly like the rotation machines: TFC's own ChestBlock plus TFC's
+        // chest block entity; without this the block entity is never created and the chest
+        // cannot be opened.
+        modifyBlockEntityType("chest", TFCBlockEntities.CHEST.get(), BlockType.CHEST);
+        modifyBlockEntityType("trapped_chest", TFCBlockEntities.TRAPPED_CHEST.get(), BlockType.TRAPPED_CHEST);
     }
 
     private static void modifyBlockEntityType(String label, BlockEntityType<?> type, BlockType blockType)

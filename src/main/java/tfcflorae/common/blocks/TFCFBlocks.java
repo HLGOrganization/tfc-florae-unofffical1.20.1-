@@ -1488,40 +1488,6 @@ public final class TFCFBlocks {
                            TFCCreativeTabs.WOOD
                         )
                      );
-                  } else if (type == BlockType.TRAPPED_CHEST) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFTrappedChestBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.5F)
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.TRAPPED_CHEST)
-                                    .clientTicks(ChestBlockEntity::lidAnimateTick),
-                                 wood.getSerializedName()
-                              ),
-                           type.createBlockItem(wood, new Properties())
-                        )
-                     );
-                  } else if (type == BlockType.CHEST) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFChestBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.5F)
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.CHEST)
-                                    .clientTicks(ChestBlockEntity::lidAnimateTick),
-                                 wood.getSerializedName()
-                              ),
-                           type.createBlockItem(wood, new Properties())
-                        )
-                     );
                   } else if (type == BlockType.SIGN) {
                      subMap.put(
                         type,
@@ -1732,40 +1698,6 @@ public final class TFCFBlocks {
                            )
                         );
                      }
-                  } else if (type == BlockType.TRAPPED_CHEST) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFTrappedChestBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.5F)
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.TRAPPED_CHEST)
-                                    .clientTicks(ChestBlockEntity::lidAnimateTick),
-                                 wood.getSerializedName()
-                              ),
-                           type.createBlockItem(wood, new Properties())
-                        )
-                     );
-                  } else if (type == BlockType.CHEST) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFChestBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.5F)
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.CHEST)
-                                    .clientTicks(ChestBlockEntity::lidAnimateTick),
-                                 wood.getSerializedName()
-                              ),
-                           type.createBlockItem(wood, new Properties())
-                        )
-                     );
                   } else if (type == BlockType.SIGN) {
                      subMap.put(
                         type,
