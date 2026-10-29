@@ -248,17 +248,26 @@ public class ClientEventHandler {
       });
       TFCFBlocks.FRUITING_PLANTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
       TFCFBlocks.POTTED_PLANTS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+      // 凝灰岩的岩石表是空表（整套方块已移除），取 SPIKE/AQUEDUCT 会拿到 null，必须判空
       TFCFBlocks.TFCF_ROCK_BLOCKS.values().forEach(map -> {
-         ItemBlockRenderTypes.setRenderLayer((Block)map.get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.SPIKE).get(), cutout);
-         ItemBlockRenderTypes.setRenderLayer((Block)map.get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.AQUEDUCT).get(), cutout);
+         java.util.Set.of(net.dries007.tfc.common.blocks.rock.Rock.BlockType.SPIKE, net.dries007.tfc.common.blocks.rock.Rock.BlockType.AQUEDUCT)
+            .forEach(type -> {
+               RegistryObject<Block> reg = map.get(type);
+               if (reg != null) {
+                  ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout);
+               }
+            });
       });
       TFCFBlocks.ROCK_BLOCKS.values().forEach(map -> {
       });
       TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.values().forEach(map -> {
       });
-      TFCFBlocks.DRIPSTONE_BLOCKS
-         .values()
-         .forEach(map -> ItemBlockRenderTypes.setRenderLayer((Block)map.get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.SPIKE).get(), cutout));
+      TFCFBlocks.DRIPSTONE_BLOCKS.values().forEach(map -> {
+         RegistryObject<Block> reg = map.get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.SPIKE);
+         if (reg != null) {
+            ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout);
+         }
+      });
       TFCFBlocks.GEYSER_TFC.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
       TFCFBlocks.GEYSER_TFCF.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
       // 矿石相关表按岩石过滤后，个别键可能整块缺失（例如凝灰岩不生成矿石）；
