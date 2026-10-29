@@ -1353,70 +1353,6 @@ public final class TFCFBlocks {
       return Map;
    }
 
-   /** Types whose rendering depends on a block entity (invisible in world otherwise). */
-   private static boolean isRotationType(BlockType type) {
-      return type == BlockType.WATER_WHEEL || type == BlockType.AXLE || type == BlockType.BLADED_AXLE
-         || type == BlockType.ENCASED_AXLE || type == BlockType.CLUTCH || type == BlockType.GEAR_BOX
-         || type == BlockType.WINDMILL;
-   }
-
-   private static ExtendedProperties rotationProperties(TFCFWood wood) {
-      return ExtendedProperties.of(wood.woodColor())
-         .sound(SoundType.WOOD)
-         .instrument(net.minecraft.world.level.block.state.properties.NoteBlockInstrument.BASS);
-   }
-
-   private static Block createRotationBlock(BlockType type, TFCFWood wood) {
-      switch (type) {
-         case WATER_WHEEL:
-            return new net.dries007.tfc.common.blocks.rotation.WaterWheelBlock(
-               rotationProperties(wood).strength(9F).noOcclusion()
-                  .blockEntity(TFCFBlockEntities.WATER_WHEEL)
-                  .ticks(net.dries007.tfc.common.blockentities.rotation.WaterWheelBlockEntity::serverTick,
-                         net.dries007.tfc.common.blockentities.rotation.WaterWheelBlockEntity::clientTick),
-               () -> (net.dries007.tfc.common.blocks.rotation.AxleBlock) WOODS.get(wood).get(BlockType.AXLE).get(),
-               wood.getSerializedName());
-         case AXLE:
-            return new net.dries007.tfc.common.blocks.rotation.AxleBlock(
-               rotationProperties(wood).noOcclusion().strength(2.5F).flammableLikeLogs()
-                  .pushReaction(net.minecraft.world.level.material.PushReaction.DESTROY)
-                  .blockEntity(TFCFBlockEntities.AXLE),
-               () -> (net.dries007.tfc.common.blocks.rotation.WindmillBlock) WOODS.get(wood).get(BlockType.WINDMILL).get(),
-               new net.minecraft.resources.ResourceLocation("tfcflorae", "block/wood/planks/" + wood.getSerializedName()));
-         case BLADED_AXLE:
-            return new net.dries007.tfc.common.blocks.rotation.BladedAxleBlock(
-               rotationProperties(wood).noOcclusion().strength(2.5F).flammableLikeLogs()
-                  .pushReaction(net.minecraft.world.level.material.PushReaction.DESTROY)
-                  .blockEntity(TFCFBlockEntities.BLADED_AXLE),
-               () -> (net.dries007.tfc.common.blocks.rotation.AxleBlock) WOODS.get(wood).get(BlockType.AXLE).get());
-         case ENCASED_AXLE:
-            return new net.dries007.tfc.common.blocks.rotation.EncasedAxleBlock(
-               rotationProperties(wood).strength(2.5F).flammableLikeLogs()
-                  .pushReaction(net.minecraft.world.level.material.PushReaction.DESTROY)
-                  .blockEntity(TFCFBlockEntities.ENCASED_AXLE));
-         case CLUTCH:
-            return new net.dries007.tfc.common.blocks.rotation.ClutchBlock(
-               rotationProperties(wood).strength(2.5F).flammableLikeLogs()
-                  .pushReaction(net.minecraft.world.level.material.PushReaction.DESTROY)
-                  .blockEntity(TFCFBlockEntities.CLUTCH),
-               () -> (net.dries007.tfc.common.blocks.rotation.AxleBlock) WOODS.get(wood).get(BlockType.AXLE).get());
-         case GEAR_BOX:
-            return new net.dries007.tfc.common.blocks.rotation.GearBoxBlock(
-               rotationProperties(wood).strength(2F).noOcclusion()
-                  .blockEntity(TFCFBlockEntities.GEAR_BOX),
-               () -> (net.dries007.tfc.common.blocks.rotation.AxleBlock) WOODS.get(wood).get(BlockType.AXLE).get());
-         case WINDMILL:
-            return new net.dries007.tfc.common.blocks.rotation.WindmillBlock(
-               rotationProperties(wood).strength(9F).noOcclusion()
-                  .blockEntity(TFCFBlockEntities.WINDMILL)
-                  .ticks(net.dries007.tfc.common.blockentities.rotation.WindmillBlockEntity::serverTick,
-                         net.dries007.tfc.common.blockentities.rotation.WindmillBlockEntity::clientTick),
-               () -> (net.dries007.tfc.common.blocks.rotation.AxleBlock) WOODS.get(wood).get(BlockType.AXLE).get());
-         default:
-            return type.create(wood).get();
-      }
-   }
-
    private static Map<TFCFWood, Map<BlockType, RegistryObject<Block>>> woodMapper(Class<TFCFWood> enumClass) {
       Map<TFCFWood, Map<BlockType, RegistryObject<Block>>> Map = new HashMap<>();
 
@@ -1425,16 +1361,6 @@ public final class TFCFBlocks {
             Map<BlockType, RegistryObject<Block>> subMap = new HashMap<>();
 
             for (BlockType type : BlockType.values()) {
-               // rotation machines need a block entity that lists our blocks; TFC's own
-               // types only know its 20 woods, so build these blocks ourselves
-               if (isRotationType(type)) {
-                  subMap.put(type, register(
-                     ("wood/" + type.name() + "/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                     () -> createRotationBlock(type, wood),
-                     TFCCreativeTabs.WOOD
-                  ));
-                  continue;
-               }
                if (wood == TFCFWood.BAMBOO) {
                   // 竹子没有 wood / stripped_wood 两种方块的 blockstate 与模型，
                   // 注册出来是紫黑方块，这里直接跳过（其余类型资源齐全）。

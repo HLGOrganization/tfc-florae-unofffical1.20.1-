@@ -71,37 +71,6 @@ public class TFCFBlockEntities {
    public static final RegistryObject<BlockEntityType<TFCFBarrelBlockEntity>> BARREL = register(
       "tfcf_barrel", TFCFBarrelBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.BARREL))
    );
-   // TFC's own rotation block entity types only list its 20 woods; a block entity is
-   // only created for a block in that list, so machines built from this mod's woods
-   // had none and rendered as nothing.  These mirror TFC's types for our blocks.
-   public static final RegistryObject<BlockEntityType<net.dries007.tfc.common.blockentities.rotation.WaterWheelBlockEntity>> WATER_WHEEL = register(
-      "tfcf_water_wheel", net.dries007.tfc.common.blockentities.rotation.WaterWheelBlockEntity::new,
-      TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.WATER_WHEEL))
-   );
-   public static final RegistryObject<BlockEntityType<net.dries007.tfc.common.blockentities.rotation.AxleBlockEntity>> AXLE = register(
-      "tfcf_axle", net.dries007.tfc.common.blockentities.rotation.AxleBlockEntity::new,
-      TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.AXLE))
-   );
-   public static final RegistryObject<BlockEntityType<net.dries007.tfc.common.blockentities.rotation.BladedAxleBlockEntity>> BLADED_AXLE = register(
-      "tfcf_bladed_axle", net.dries007.tfc.common.blockentities.rotation.BladedAxleBlockEntity::new,
-      TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.BLADED_AXLE))
-   );
-   public static final RegistryObject<BlockEntityType<net.dries007.tfc.common.blockentities.rotation.EncasedAxleBlockEntity>> ENCASED_AXLE = register(
-      "tfcf_encased_axle", net.dries007.tfc.common.blockentities.rotation.EncasedAxleBlockEntity::new,
-      TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.ENCASED_AXLE))
-   );
-   public static final RegistryObject<BlockEntityType<net.dries007.tfc.common.blockentities.rotation.ClutchBlockEntity>> CLUTCH = register(
-      "tfcf_clutch", net.dries007.tfc.common.blockentities.rotation.ClutchBlockEntity::new,
-      TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.CLUTCH))
-   );
-   public static final RegistryObject<BlockEntityType<net.dries007.tfc.common.blockentities.rotation.GearBoxBlockEntity>> GEAR_BOX = register(
-      "tfcf_gear_box", net.dries007.tfc.common.blockentities.rotation.GearBoxBlockEntity::new,
-      TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.GEAR_BOX))
-   );
-   public static final RegistryObject<BlockEntityType<net.dries007.tfc.common.blockentities.rotation.WindmillBlockEntity>> WINDMILL = register(
-      "tfcf_windmill", net.dries007.tfc.common.blockentities.rotation.WindmillBlockEntity::new,
-      TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.WINDMILL))
-   );
    public static final RegistryObject<BlockEntityType<LoomBlockEntity>> LOOM = register(
       "tfcf_loom", TFCFLoomBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.LOOM))
    );
