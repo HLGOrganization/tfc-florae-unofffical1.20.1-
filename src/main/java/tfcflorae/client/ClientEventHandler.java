@@ -372,9 +372,14 @@ public class ClientEventHandler {
       // types we registered for our own woods have no renderer and the machines stay
       // invisible.  Reuse TFC's renderers for our four rotating types (gear box, clutch and
       // encased axle are plain models in TFC as well and need nothing here).
-      event.registerBlockEntityRenderer(
-         tfcflorae.common.blockentities.TFCFBlockEntities.WATER_WHEEL.get(),
-         net.dries007.tfc.client.render.blockentity.WaterWheelBlockEntityRenderer::new);
+      try {
+         final var be = tfcflorae.common.blockentities.TFCFBlockEntities.WATER_WHEEL.get();
+         com.mojang.logging.LogUtils.getLogger().info("TFCFlorae: binding water wheel renderer to {}", be);
+         event.registerBlockEntityRenderer(be,
+            net.dries007.tfc.client.render.blockentity.WaterWheelBlockEntityRenderer::new);
+      } catch (Throwable t) {
+         com.mojang.logging.LogUtils.getLogger().error("TFCFlorae: water wheel renderer binding failed", t);
+      }
       event.registerBlockEntityRenderer(
          tfcflorae.common.blockentities.TFCFBlockEntities.AXLE.get(),
          ctx -> new net.dries007.tfc.client.render.blockentity.AxleBlockEntityRenderer());
