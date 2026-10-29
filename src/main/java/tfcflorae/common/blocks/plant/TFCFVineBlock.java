@@ -217,7 +217,9 @@ public abstract class TFCFVineBlock extends VineBlock implements IForgeBlockExte
       int i = 0;
 
       for (BooleanProperty booleanproperty : net.minecraft.world.level.block.PipeBlock.PROPERTY_BY_DIRECTION.values()) {
-         if ((Boolean)state.getValue(booleanproperty)) {
+         // vine blocks only carry UP plus the four horizontal faces, so asking for DOWN
+         // throws IllegalArgumentException - that is the crash when the item is placed
+         if (state.hasProperty(booleanproperty) && (Boolean)state.getValue(booleanproperty)) {
             i++;
          }
       }
