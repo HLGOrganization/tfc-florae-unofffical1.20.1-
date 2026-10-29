@@ -88,9 +88,29 @@ def old_tag_ids():
     return blocks, items
 
 
+REMOVED_PATHS = (
+    "ore/anthracite/", "powder/anthracite",
+    "fluid/ore/",                      # carbon fluids removed
+    "sandstone/layered/slab/blue", "sandstone/layered/stairs/blue", "sandstone/layered/wall/blue",
+    # these five colours were never registered (only 7 of the 12 exist); the orphan
+    # cleanup already removed their assets, keep them out of the whitelist
+    "sandstone/layered/slab/gray", "sandstone/layered/stairs/gray", "sandstone/layered/wall/gray",
+    "sandstone/layered/slab/light_green", "sandstone/layered/stairs/light_green", "sandstone/layered/wall/light_green",
+    "sandstone/layered/slab/orange", "sandstone/layered/stairs/orange", "sandstone/layered/wall/orange",
+    "sandstone/layered/slab/purple", "sandstone/layered/stairs/purple", "sandstone/layered/wall/purple",
+)
+
+
+try:
+    SUSPECTS = set(json.load(open(os.path.join(ROOT, "reports", "suspect-unregistered.json"), encoding="utf-8-sig")))
+except Exception:
+    SUSPECTS = set()
+
+
 def prune(ids):
     return {i for i in ids
-            if i.split("/")[0] not in REMOVED_SOILS and i not in REMOVED_EXACT}
+            if i.split("/")[0] not in REMOVED_SOILS and i not in REMOVED_EXACT
+            and not i.startswith(REMOVED_PATHS) and i not in SUSPECTS}
 
 
 def main():
