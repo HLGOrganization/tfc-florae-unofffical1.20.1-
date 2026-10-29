@@ -1,0 +1,15 @@
+===== latest.log (2838 lines) =====
+  919 [2910��2026 12:40:04.783] [modloading-worker-0/WARN] [KubeJS/]: Plugin dev.latvian.mods.kubejs.integration.forge.gamestages.GameStagesIntegration does not have required mod gamestages loaded, skipping
+  939 [2910��2026 12:40:05.053] [modloading-worker-0/WARN] [KubeJS/]: Plugin com.notenoughmail.kubejs_tfc.addons.precpros.PrecProsPlugin does not have required mod precisionprospecting loaded, skipping
+  940 [2910��2026 12:40:05.057] [modloading-worker-0/WARN] [KubeJS/]: Plugin com.notenoughmail.kubejs_tfc.addons.entityjs.EntityJSTFCPlugin does not have required mod entityjs loaded, skipping
+  964 [2910��2026 12:40:06.142] [modloading-worker-0/INFO] [com.notenoughmail.kubejs_tfc.KubeJSTFC/]: - Self tests warnings deduplicated: true
+ 1280 [2910��2026 12:40:07.868] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded 61/61 KubeJS startup scripts in 1.102 s with 0 errors and 0 warnings
+ 1308 [2910��2026 12:40:08.052] [modloading-worker-0/INFO] [KubeJS Client/]: Loaded 13/13 KubeJS client scripts in 0.112 s with 0 errors and 0 warnings
+ 1320 [2910��2026 12:40:13.474] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:display_server_errors
+ 1321 [2910��2026 12:40:13.474] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id kubejs:display_client_errors
+
+-- lines mentioning slabs --
+
+-- lines mentioning kelp --
+
+

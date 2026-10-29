@@ -1,0 +1,31 @@
+fix(tags): stop shipping other people's ids, and audit the whole modpack
+
+Audited the pack as asked (kubejs data + scripts, tfe_structures_datapacks,
+config the pack loader, all 290 mod jars):
+
+- minecraft:slabs: 29 jar-level definitions found; every concrete id resolves to a
+  blockstate that exists in some jar, and the server log has zero
+  "missing following references" lines.  So no invalid id was killing it.
+- tfc:plants/kelp: nobody defines it - not TFC (1.20 only ships tfc:plants, whose
+  119 item values already contain tfc:plant/winged_kelp, leafy_kelp and
+  giant_kelp_flower), not KubeJS, not any datapack.  It is a 1.18-era tag name
+  that no longer exists in 1.20, so it cannot be "broken" by us.
+
+The real liability was ours: our tag files carried 15857 foreign ids copied from
+TFC's own tag values - minecraft:slabs alone shipped 216 tfc:* slab ids.  Every one
+of those is a live grenade: TFC renames one and the whole tag dies for every mod
+that reads it, which is exactly the failure mode that once wiped all leaf blocks.
+
+- tools/strip_foreign_tag_ids.py removes every non-tfcflorae concrete id from our
+  files under data/{tfc,minecraft,forge}/tags (15857 removed, 262 files rewritten,
+  4 files dropped because nothing of ours was left).
+- gen_tags.py now enforces it twice: existing entries must be ours AND either be in
+  the whitelist or still have an asset on disk.  The asset fallback recovered 80
+  live entries (wood / ceramic / layered sandstone slabs) that the source audit
+  simply does not see; a blockstate now also satisfies the item check because a
+  block with a BlockItem has an item even without models/item.
+
+Injected into the deployed jar without a build (data-pack only).  Verified in the
+jar: minecraft:slabs has 171 of our ids on both the block and item side, zero
+foreign entries; all_bamboo_logs present with 8 values; alder support recipe now
+references tfcflorae:alder_logs which exists.

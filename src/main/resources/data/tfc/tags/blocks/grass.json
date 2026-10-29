@@ -1,19 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tfc:peat_grass",
-    "tfc:kaolin_clay_grass",
-    "tfc:grass/silt",
-    "tfc:clay_grass/silt",
-    "tfc:grass/loam",
-    "tfc:clay_grass/loam",
-    "tfc:grass/sandy_loam",
-    "tfc:clay_grass/sandy_loam",
-    "tfc:grass/silty_loam",
-    "tfc:clay_grass/silty_loam",
-    "tfcflorae:grass/bog_iron",
-    "tfc:grass/loam",
-    "tfc:grass/sandy_loam",
-    "tfc:grass/silt"
+    "tfcflorae:grass/bog_iron"
   ]
 }

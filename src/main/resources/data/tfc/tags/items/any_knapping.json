@@ -1,12 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#tfc:clay_knapping",
-    "#tfc:fire_clay_knapping",
-    "#tfc:goat_horn_knapping",
-    "#tfc:leather_knapping",
-    "#tfc:rock_knapping",
-    "#tfcflorae:knapping_any",
     "tfcflorae:rock/loose/arkose",
     "tfcflorae:rock/loose/boninite",
     "tfcflorae:rock/loose/carbonatite",

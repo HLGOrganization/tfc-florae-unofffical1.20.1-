@@ -1,14 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tfc:clay_grass/silt",
-    "tfc:clay/silt",
-    "tfc:clay_grass/loam",
-    "tfc:clay/loam",
-    "tfc:clay_grass/sandy_loam",
-    "tfc:clay/sandy_loam",
-    "tfc:clay_grass/silty_loam",
-    "tfc:clay/silty_loam",
     "tfcflorae:earthenware_clay/loam",
     "tfcflorae:earthenware_clay/sandy_loam",
     "tfcflorae:earthenware_clay/silt",

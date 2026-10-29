@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tfc:sand/brown",
-    "tfc:sand/white",
-    "tfc:sand/black",
-    "tfc:sand/red",
-    "tfc:sand/yellow",
-    "tfc:sand/green",
-    "tfc:sand/pink",
     "tfcflorae:sand/dense_grass/black",
     "tfcflorae:sand/dense_grass/brown",
     "tfcflorae:sand/dense_grass/green",

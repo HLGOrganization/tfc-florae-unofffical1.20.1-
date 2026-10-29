@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#tfc:dirt",
     "tfcflorae:compact_dirt/loam",
     "tfcflorae:compact_dirt/sandy_loam",
     "tfcflorae:compact_dirt/silt",
@@ -9,12 +8,6 @@
     "tfcflorae:earthenware_clay_grass/sandy_loam",
     "tfcflorae:earthenware_clay_grass/silt",
     "tfcflorae:grass/bog_iron",
-    "tfc:grass/loam",
-    "tfc:grass/sandy_loam",
-    "tfc:grass/silt",
-    "tfc:mud/loam",
-    "tfc:mud/sandy_loam",
-    "tfc:mud/silt",
     "tfcflorae:mycelium_dirt/bog_iron",
     "tfcflorae:mycelium_dirt/loam",
     "tfcflorae:mycelium_dirt/sandy_loam",

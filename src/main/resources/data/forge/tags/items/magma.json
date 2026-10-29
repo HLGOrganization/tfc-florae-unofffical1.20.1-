@@ -1,16 +1,9 @@
 {
   "replace": false,
   "values": [
-    "tfc:rock/magma/andesite",
-    "tfc:rock/magma/basalt",
     "tfcflorae:rock/magma/boninite",
     "tfcflorae:rock/magma/carbonatite",
-    "tfc:rock/magma/dacite",
-    "tfc:rock/magma/diorite",
-    "tfc:rock/magma/gabbro",
-    "tfc:rock/magma/granite",
     "tfcflorae:rock/magma/porphyry",
-    "tfcflorae:rock/magma/red_granite",
-    "tfc:rock/magma/rhyolite"
+    "tfcflorae:rock/magma/red_granite"
   ]
 }

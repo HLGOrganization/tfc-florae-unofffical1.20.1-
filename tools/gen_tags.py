@@ -167,6 +167,22 @@ def build_reverse(tags):
     return rev
 
 
+ASSETS = os.path.join(ROOT, "src", "main", "resources", "assets", "tfcflorae")
+
+
+def has_asset(our_id, kind):
+    """Does this id still exist on disk?  Used to keep ids that the source audit
+    missed but that clearly exist (wood/ceramic/layered-sandstone slabs are the
+    usual case): the whitelist alone was dropping 80 live entries.
+
+    For items a blockstate also counts: a block with a BlockItem has an item even if
+    no models/item file was generated for it."""
+    rel = our_id.replace("/", os.sep) + ".json"
+    if os.path.isfile(os.path.join(ASSETS, "blockstates", rel)):
+        return True
+    return os.path.isfile(os.path.join(ASSETS, "models", "item", rel))
+
+
 def ref_id(our_id, woods, rocks):
     """TFC id that is 'the same kind of thing' as ours.
 
@@ -274,9 +290,13 @@ def main():
                 existing = {v for v in json.load(open(target, encoding="utf-8-sig")).get("values", []) if isinstance(v, str)}
             except Exception:
                 existing = set()
-        # anything of ours that is no longer registered would break the whole tag
+        # our files are additions to tags TFC/vanilla already define (replace:false
+        # merges them), so they must only ever contain OUR ids.  A foreign copy -
+        # even a currently valid TFC id - becomes a whole-tag failure the moment TFC
+        # renames it, which is exactly how every leaf block once got wiped.
         existing = {v for v in existing
-                    if not v.startswith("tfcflorae:") or v in whitelist[kind]}
+                    if v.startswith("tfcflorae:")
+                    and (v.split(":", 1)[1] in whitelist[kind] or has_asset(v.split(":", 1)[1], kind))}
         if tag in GEOLOGY_TAGS:
             # geology membership is recomputed from scratch every run, otherwise a
             # wrong classification from an earlier run would survive the merge
