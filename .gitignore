@@ -11,3 +11,5 @@ __pycache__/
 _audit/resources/
 _audit/run/
 _audit/tfcjar/
+.msg.txt
+.git-commit-msg.txt
