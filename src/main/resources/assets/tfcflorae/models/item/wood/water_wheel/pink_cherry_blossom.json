@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:block/oak_planks"
+    "layer0": "tfcflorae:block/wood/planks/pink_cherry_blossom"
   }
 }

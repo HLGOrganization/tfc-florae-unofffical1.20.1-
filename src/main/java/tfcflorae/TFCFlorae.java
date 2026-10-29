@@ -78,6 +78,9 @@ public class TFCFlorae {
          TFCFInteractionManager.init();
          TFCFDispenserBehaviors.registerDispenserBehaviors();
          TFCFBlocks.registerFlowerPotFlowers();
+         // TFC's rotation block entities only know its own woods; append ours so water
+         // wheels / axles / windmills actually get a block entity (and thus render)
+         tfcflorae.common.blockentities.TFCFRotationBlockEntities.extendTFCBlockEntities();
          TFCFFaunas.registerSpawnPlacements();
       });
    }
