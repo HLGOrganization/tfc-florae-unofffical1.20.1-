@@ -120,9 +120,9 @@ public enum TFCFSoil {
    ),
    MUD_BRICKS((self, variant) -> new Block(mudBrickProperties())),
    DRYING_BRICKS(
-      (self, variant) -> new TFCFDryingBricksBlock(
+      (self, variant) -> new net.dries007.tfc.common.blocks.devices.DryingBricksBlock(
             ExtendedProperties.of(Properties.of().mapColor(MapColor.PLANT).noCollission().noOcclusion().instabreak().sound(TFCFSounds.MUD_BRICKS).randomTicks())
-               .blockEntity(TFCFBlockEntities.TICK_COUNTER),
+               .blockEntity(net.dries007.tfc.common.blockentities.TFCBlockEntities.TICK_COUNTER),
             variant.getDriedMudBrick()
          )
    ),

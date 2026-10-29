@@ -52,10 +52,39 @@ public final class TFCFRotationBlockEntities
         // and update logic all apply; only the block list needs our blocks
         modifyBlockEntityType("sluice", TFCBlockEntities.SLUICE.get(), BlockType.SLUICE);
         modifyBlockEntityType("tool_rack", TFCBlockEntities.TOOL_RACK.get(), BlockType.TOOL_RACK);
+        // barrel and loom: TFC's classes, so TFC's GUI, data and renderers apply
+        modifyBlockEntityType("barrel", TFCBlockEntities.BARREL.get(), BlockType.BARREL);
+        modifyBlockEntityType("loom", TFCBlockEntities.LOOM.get(), BlockType.LOOM);
+        extendTickCounter();
         extendSoilBlockEntity();
     }
 
-    /** Farmland blocks are registered per soil variant in TFCFBlocks.TFCFSOIL. */
+    /** Drying bricks use TFC's TickCounterBlockEntity, so they go into TICK_COUNTER. */
+   private static void extendTickCounter()
+   {
+      try
+      {
+         final Set<Block> extra = new HashSet<>();
+         final Map<?, ?> variants = TFCFBlocks.TFCFSOIL.get(tfcflorae.common.blocks.soil.TFCFSoil.DRYING_BRICKS);
+         if (variants != null)
+         {
+            for (Object value : variants.values())
+            {
+               if (value instanceof RegistryObject<?> reg && reg.get() instanceof Block block)
+               {
+                  extra.add(block);
+               }
+            }
+         }
+         addBlocks("tick_counter", TFCBlockEntities.TICK_COUNTER.get(), extra);
+      }
+      catch (Throwable t)
+      {
+         LOGGER.error("TFCFlorae: could not extend the TFC tick counter block entity type", t);
+      }
+   }
+
+   /** Farmland blocks are registered per soil variant in TFCFBlocks.TFCFSOIL. */
    private static void extendSoilBlockEntity()
    {
       try

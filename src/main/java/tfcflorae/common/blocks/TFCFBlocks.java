@@ -1551,40 +1551,6 @@ public final class TFCFBlocks {
                            TFCCreativeTabs.WOOD
                         )
                      );
-                  } else if (type == BlockType.BARREL) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/barrel/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFBarrelBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.5F)
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.BARREL)
-                                    .serverTicks(BarrelBlockEntity::serverTick)
-                              ),
-                           TFCCreativeTabs.WOOD
-                        )
-                     );
-                  } else if (type == BlockType.LOOM) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/loom/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFLoomBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.5F)
-                                    .noOcclusion()
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.LOOM)
-                                    .ticks(LoomBlockEntity::tick),
-                                 TFCFHelpers.identifier("block/wood/planks/" + wood.getSerializedName())
-                              ),
-                           TFCCreativeTabs.WOOD
-                        )
-                     );
                   } else {
                      subMap.put(
                         type,
@@ -1724,40 +1690,6 @@ public final class TFCFBlocks {
                                           .strength(2.0F, 3.0F)
                                     )
                                     .flammableLikePlanks()
-                              ),
-                           TFCCreativeTabs.WOOD
-                        )
-                     );
-                  } else if (type == BlockType.BARREL) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/barrel/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFBarrelBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.5F)
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.BARREL)
-                                    .serverTicks(BarrelBlockEntity::serverTick)
-                              ),
-                           type.createBlockItem(wood, new Properties())
-                        )
-                     );
-                  } else if (type == BlockType.LOOM) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/loom/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFLoomBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.5F)
-                                    .noOcclusion()
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.LOOM)
-                                    .ticks(LoomBlockEntity::tick),
-                                 TFCFHelpers.identifier("block/wood/planks/" + wood.getSerializedName())
                               ),
                            TFCCreativeTabs.WOOD
                         )
