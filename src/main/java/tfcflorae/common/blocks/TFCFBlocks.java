@@ -1585,39 +1585,6 @@ public final class TFCFBlocks {
                            TFCCreativeTabs.WOOD
                         )
                      );
-                  } else if (type == BlockType.SLUICE) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/sluice/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFSluiceBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(3.0F)
-                                    .noOcclusion()
-                                    .flammableLikeLogs()
-                                    .blockEntity(TFCFBlockEntities.SLUICE)
-                                    .serverTicks(SluiceBlockEntity::serverTick)
-                              ),
-                           TFCCreativeTabs.WOOD
-                        )
-                     );
-                  } else if (type == BlockType.TOOL_RACK) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/tool_rack/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFToolRackBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.0F)
-                                    .noOcclusion()
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.TOOL_RACK)
-                              ),
-                           TFCCreativeTabs.WOOD
-                        )
-                     );
                   } else {
                      subMap.put(
                         type,
@@ -1791,39 +1758,6 @@ public final class TFCFBlocks {
                                     .blockEntity(TFCFBlockEntities.LOOM)
                                     .ticks(LoomBlockEntity::tick),
                                  TFCFHelpers.identifier("block/wood/planks/" + wood.getSerializedName())
-                              ),
-                           TFCCreativeTabs.WOOD
-                        )
-                     );
-                  } else if (type == BlockType.SLUICE) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/sluice/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFSluiceBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(3.0F)
-                                    .noOcclusion()
-                                    .flammableLikeLogs()
-                                    .blockEntity(TFCFBlockEntities.SLUICE)
-                                    .serverTicks(SluiceBlockEntity::serverTick)
-                              ),
-                           TFCCreativeTabs.WOOD
-                        )
-                     );
-                  } else if (type == BlockType.TOOL_RACK) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/tool_rack/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new TFCFToolRackBlock(
-                                 ExtendedProperties.of(wood.woodColor())
-                                    .sound(SoundType.WOOD)
-                                    .strength(2.0F)
-                                    .noOcclusion()
-                                    .flammableLikePlanks()
-                                    .blockEntity(TFCFBlockEntities.TOOL_RACK)
                               ),
                            TFCCreativeTabs.WOOD
                         )

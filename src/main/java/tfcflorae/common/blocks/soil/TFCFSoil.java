@@ -31,11 +31,11 @@ public enum TFCFSoil {
          )
    ),
    FARMLAND(
-      (self, variant) -> new TFCFFarmlandBlock(
+      (self, variant) -> new net.dries007.tfc.common.blocks.soil.FarmlandBlock(
             ExtendedProperties.of(
                   Properties.of().mapColor(MapColor.DIRT).strength(0.6F).sound(SoundType.GRAVEL).isViewBlocking(TFCBlocks::always).isSuffocating(TFCBlocks::always)
                )
-               .blockEntity(TFCFBlockEntities.FARMLAND),
+               .blockEntity(net.dries007.tfc.common.blockentities.TFCBlockEntities.FARMLAND),
             (Supplier<? extends Block>)TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant)
          )
    ),

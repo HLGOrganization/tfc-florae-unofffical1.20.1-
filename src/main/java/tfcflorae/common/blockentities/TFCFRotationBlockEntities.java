@@ -48,9 +48,58 @@ public final class TFCFRotationBlockEntities
         // cannot be opened.
         modifyBlockEntityType("chest", TFCBlockEntities.CHEST.get(), BlockType.CHEST);
         modifyBlockEntityType("trapped_chest", TFCBlockEntities.TRAPPED_CHEST.get(), BlockType.TRAPPED_CHEST);
+        // sluice / tool rack / farmland: TFC's classes, so TFC's block entities, renderers
+        // and update logic all apply; only the block list needs our blocks
+        modifyBlockEntityType("sluice", TFCBlockEntities.SLUICE.get(), BlockType.SLUICE);
+        modifyBlockEntityType("tool_rack", TFCBlockEntities.TOOL_RACK.get(), BlockType.TOOL_RACK);
+        extendSoilBlockEntity();
     }
 
-    private static void modifyBlockEntityType(String label, BlockEntityType<?> type, BlockType blockType)
+    /** Farmland blocks are registered per soil variant in TFCFBlocks.TFCFSOIL. */
+   private static void extendSoilBlockEntity()
+   {
+      try
+      {
+         final Set<Block> extra = new HashSet<>();
+         for (Map<?, ?> variants : TFCFBlocks.TFCFSOIL.values())
+         {
+            for (Object value : variants.values())
+            {
+               if (value instanceof RegistryObject<?> reg && reg.get() instanceof Block block)
+               {
+                  extra.add(block);
+               }
+            }
+         }
+         addBlocks("farmland", net.dries007.tfc.common.blockentities.TFCBlockEntities.FARMLAND.get(), extra);
+      }
+      catch (Throwable t)
+      {
+         LOGGER.error("TFCFlorae: could not extend the TFC farmland block entity type", t);
+      }
+   }
+
+   private static void addBlocks(String label, BlockEntityType<?> type, Set<Block> extra)
+   {
+      try
+      {
+         final Set<Block> blocks = new HashSet<>(((BlockEntityTypeAccessor) type).accessor$getValidBlocks());
+         final int before = blocks.size();
+         blocks.addAll(extra);
+         if (blocks.size() == before)
+         {
+            return;
+         }
+         ((BlockEntityTypeAccessor) type).accessor$setValidBlocks(blocks);
+         LOGGER.info("TFCFlorae: added {} blocks to TFC {} block entity type", blocks.size() - before, label);
+      }
+      catch (Throwable t)
+      {
+         LOGGER.error("TFCFlorae: could not extend the TFC {} block entity type", label, t);
+      }
+   }
+
+   private static void modifyBlockEntityType(String label, BlockEntityType<?> type, BlockType blockType)
     {
         try
         {
