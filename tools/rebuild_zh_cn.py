@@ -159,11 +159,18 @@ def translate(key):
 
 def main():
     en = json.load(io.open(os.path.join(LANG, "en_us.json"), encoding="utf-8-sig"))
+    existing = json.load(io.open(os.path.join(LANG, "zh_cn.json"), encoding="utf-8-sig"))
 
     out = {}
-    by_rule = by_fallback = 0
+    by_rule = by_fallback = kept = 0
     still = []
     for k, en_v in en.items():
+        # incremental mode: keep any translation that is not simply the English text
+        prev = existing.get(k)
+        if prev is not None and prev != en_v:
+            out[k] = prev
+            kept += 1
+            continue
         got = translate(k)
         if got:
             out[k] = got
@@ -189,7 +196,8 @@ def main():
 
     io.open(os.path.join(LANG, "zh_cn.json"), "w", encoding="utf-8", newline="\n").write(
         json.dumps(out, indent=2, ensure_ascii=False) + "\n")
-    print("translated:", by_rule + by_fallback, "(rules:", by_rule, " fallback:", by_fallback, ")")
+    print("kept existing:", kept, " newly filled:", by_rule + by_fallback,
+          "(rules:", by_rule, " fallback:", by_fallback, ")")
     print("english left:", len(still))
     if unknown:
         top = sorted(unknown.items(), key=lambda kv: -kv[1])[:30]
