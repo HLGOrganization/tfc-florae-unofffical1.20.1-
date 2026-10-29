@@ -1,6 +1,0 @@
-{
-  "parent": "tfcflorae:item/dense_grass_inv",
-  "textures": {
-    "block": "tfcflorae:block/earthenware_clay/silt"
-  }
-}

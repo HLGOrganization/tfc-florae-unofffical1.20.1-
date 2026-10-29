@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/mudstone",
-    "tfcflorae:ore/anthracite/mudstone",
     "tfcflorae:ore/bituminous_coal/mudstone",
     "tfcflorae:ore/borax/mudstone",
     "tfcflorae:ore/cinnabar/mudstone",

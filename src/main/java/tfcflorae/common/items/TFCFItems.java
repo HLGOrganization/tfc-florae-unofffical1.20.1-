@@ -56,7 +56,7 @@ public final class TFCFItems {
    );
    public static final RegistryObject<Item> COKE = register("ore/coke", TFCCreativeTabs.ORES);
    public static final Map<TFCFOre, RegistryObject<Item>> ORES = Helpers.mapOfKeys(
-      TFCFOre.class, ore -> !ore.isGraded(), type -> register("ore/" + type.name(), TFCCreativeTabs.ORES)
+      TFCFOre.class, ore -> !ore.isGraded() && ore != TFCFOre.ANTHRACITE, type -> register("ore/" + type.name(), TFCCreativeTabs.ORES)
    );
    public static final Map<TFCFOre, Map<TFCFOre.Grade, RegistryObject<Item>>> GRADED_ORES = Helpers.mapOfKeys(
       TFCFOre.class,
@@ -64,7 +64,8 @@ public final class TFCFItems {
       ore -> Helpers.mapOfKeys(TFCFOre.Grade.class, grade -> register("ore/" + grade.name() + "_" + ore.name(), TFCCreativeTabs.ORES))
    );
    public static final Map<TFCFPowder, RegistryObject<Item>> POWDERS = Helpers.mapOfKeys(
-      TFCFPowder.class, powder -> register("powder/" + powder.name(), TFCCreativeTabs.MISC)
+      TFCFPowder.class, powder -> powder != TFCFPowder.ANTHRACITE,
+      powder -> register("powder/" + powder.name(), TFCCreativeTabs.MISC)
    );
    public static final RegistryObject<Item> BOG_IRON = register("ore/small_bog_iron", TFCCreativeTabs.ORES);
    public static final RegistryObject<Item> GLOWSTONE_SHARDS = register("crystal/shard/glowstone", TFCCreativeTabs.ORES);

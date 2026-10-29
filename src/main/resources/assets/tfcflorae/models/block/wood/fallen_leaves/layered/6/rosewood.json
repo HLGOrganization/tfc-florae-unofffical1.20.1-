@@ -1,6 +1,0 @@
-{
-  "parent": "tfcflorae:block/wood/fallen_leaves_height6",
-  "textures": {
-    "sand": "tfc:block/wood/leaves/rosewood"
-  }
-}

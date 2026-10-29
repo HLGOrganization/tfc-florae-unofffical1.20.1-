@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/soapstone",
-    "tfcflorae:ore/anthracite/soapstone",
     "tfcflorae:ore/bituminous_coal/soapstone",
     "tfcflorae:ore/borax/soapstone",
     "tfcflorae:ore/cinnabar/soapstone",

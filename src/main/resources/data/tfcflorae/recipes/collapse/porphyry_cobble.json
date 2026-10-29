@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/porphyry",
-    "tfcflorae:ore/anthracite/porphyry",
     "tfcflorae:ore/bituminous_coal/porphyry",
     "tfcflorae:ore/borax/porphyry",
     "tfcflorae:ore/cinnabar/porphyry",

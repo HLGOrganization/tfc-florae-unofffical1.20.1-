@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/laterite",
-    "tfcflorae:ore/anthracite/laterite",
     "tfcflorae:ore/bituminous_coal/laterite",
     "tfcflorae:ore/borax/laterite",
     "tfcflorae:ore/cinnabar/laterite",

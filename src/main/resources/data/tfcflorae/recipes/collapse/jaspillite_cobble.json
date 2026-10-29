@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/jaspillite",
-    "tfcflorae:ore/anthracite/jaspillite",
     "tfcflorae:ore/bituminous_coal/jaspillite",
     "tfcflorae:ore/borax/jaspillite",
     "tfcflorae:ore/cinnabar/jaspillite",

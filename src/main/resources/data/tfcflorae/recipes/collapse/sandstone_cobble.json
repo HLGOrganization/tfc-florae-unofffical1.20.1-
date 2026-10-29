@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/sandstone",
-    "tfcflorae:ore/anthracite/sandstone",
     "tfcflorae:ore/bituminous_coal/sandstone",
     "tfcflorae:ore/borax/sandstone",
     "tfcflorae:ore/cinnabar/sandstone",

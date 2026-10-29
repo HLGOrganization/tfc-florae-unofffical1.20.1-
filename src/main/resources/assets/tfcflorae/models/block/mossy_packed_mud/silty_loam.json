@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "tfcflorae:block/mossy_packed_mud/silty_loam_0"
-  }
-}

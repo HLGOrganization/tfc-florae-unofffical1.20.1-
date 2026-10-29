@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/cataclasite",
-    "tfcflorae:ore/anthracite/cataclasite",
     "tfcflorae:ore/bituminous_coal/cataclasite",
     "tfcflorae:ore/borax/cataclasite",
     "tfcflorae:ore/cinnabar/cataclasite",

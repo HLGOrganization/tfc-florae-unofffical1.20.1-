@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/wackestone",
-    "tfcflorae:ore/anthracite/wackestone",
     "tfcflorae:ore/bituminous_coal/wackestone",
     "tfcflorae:ore/borax/wackestone",
     "tfcflorae:ore/cinnabar/wackestone",

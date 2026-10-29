@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/arkose",
-    "tfcflorae:ore/anthracite/arkose",
     "tfcflorae:ore/bituminous_coal/arkose",
     "tfcflorae:ore/borax/arkose",
     "tfcflorae:ore/cinnabar/arkose",

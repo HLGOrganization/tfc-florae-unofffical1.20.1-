@@ -392,7 +392,7 @@ public final class TFCFBlocks {
       Rock.class,
       rock -> Helpers.mapOfKeys(
             TFCFOre.class,
-            ore -> !ore.isGraded(),
+            ore -> !ore.isGraded() && ore != TFCFOre.ANTHRACITE,
             ore -> register("ore/" + ore.name() + "/" + rock.name(), () -> ore.create(rock), TFCCreativeTabs.ORES)
          )
    );
@@ -410,7 +410,7 @@ public final class TFCFBlocks {
    public static final Map<TFCFRock, Map<TFCFOre, RegistryObject<Block>>> ORES_TFCF_ROCK = Helpers.mapOfKeys(
       TFCFRock.class,
       rock -> Helpers.mapOfKeys(
-            TFCFOre.class, ore -> !ore.isGraded(), ore -> register("ore/" + ore.name() + "/" + rock.name(), () -> ore.create(rock), TFCCreativeTabs.ORES)
+            TFCFOre.class, ore -> !ore.isGraded() && ore != TFCFOre.ANTHRACITE, ore -> register("ore/" + ore.name() + "/" + rock.name(), () -> ore.create(rock), TFCCreativeTabs.ORES)
          )
    );
    public static final Map<TFCFRock, Map<TFCFOre, Map<TFCFOre.Grade, RegistryObject<Block>>>> GRADED_ORES_TFCF_ROCK = Helpers.mapOfKeys(

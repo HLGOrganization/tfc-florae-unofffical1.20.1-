@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/carbonatite",
-    "tfcflorae:ore/anthracite/carbonatite",
     "tfcflorae:ore/bituminous_coal/carbonatite",
     "tfcflorae:ore/borax/carbonatite",
     "tfcflorae:ore/cinnabar/carbonatite",

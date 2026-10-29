@@ -3,7 +3,6 @@
   "type": "tfc:collapse",
   "ingredient": [
     "tfcflorae:ore/amethyst/red_granite",
-    "tfcflorae:ore/anthracite/red_granite",
     "tfcflorae:ore/bituminous_coal/red_granite",
     "tfcflorae:ore/borax/red_granite",
     "tfcflorae:ore/cinnabar/red_granite",
