@@ -59,9 +59,6 @@ import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
 import tfcflorae.client.render.entity.CodLikeRenderer;
 import tfcflorae.client.render.entity.SalmonLikeRenderer;
 import tfcflorae.client.render.entity.TFCFSimpleMobRenderer;
-import tfcflorae.client.screen.TFCFAnvilPlanScreen;
-import tfcflorae.client.screen.TFCFAnvilScreen;
-import tfcflorae.client.screen.TFCFBarrelScreen;
 import tfcflorae.client.screen.ceramics.LargeVesselScreen;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
@@ -99,9 +96,6 @@ public class ClientEventHandler {
             // 打制界面统一成一个菜单（与 TFC 一致），具体材质由 KnappingType 决定
             MenuScreens.register((MenuType)TFCFContainerTypes.KNAPPING.get(), KnappingScreen::new);
             MenuScreens.register((MenuType)TFCFContainerTypes.LARGE_VESSEL.get(), LargeVesselScreen::new);
-            MenuScreens.register((MenuType)TFCFContainerTypes.BARREL.get(), TFCFBarrelScreen::new);
-            MenuScreens.register((MenuType)TFCFContainerTypes.ANVIL.get(), TFCFAnvilScreen::new);
-            MenuScreens.register((MenuType)TFCFContainerTypes.ANVIL_PLAN.get(), TFCFAnvilPlanScreen::new);
             TFCFBlocks.WOODS
                .values()
                .forEach(
@@ -396,8 +390,6 @@ public class ClientEventHandler {
       event.registerBlockEntityRenderer(TFCFBlockEntities.TOOL_RACK.get(),
          ctx -> new net.dries007.tfc.client.render.blockentity.ToolRackBlockEntityRenderer());
       event.registerBlockEntityRenderer(TFCFBlockEntities.LECTERN.get(), LecternRenderer::new);
-      event.registerBlockEntityRenderer(TFCFBlockEntities.ANVIL.get(), ctx -> new AnvilBlockEntityRenderer());
-      event.registerBlockEntityRenderer(TFCFBlockEntities.BARREL.get(), ctx -> new BarrelBlockEntityRenderer());
       event.registerBlockEntityRenderer(TFCFBlockEntities.SLUICE.get(), ctx -> new SluiceBlockEntityRenderer());
       event.registerBlockEntityRenderer(TFCFBlockEntities.MINERAL_SHEET.get(), ctx -> new MineralSheetBlockEntityRenderer());
    }

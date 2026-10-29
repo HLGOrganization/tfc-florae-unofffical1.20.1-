@@ -1,11 +1,6 @@
 package tfcflorae.common.container;
 import net.minecraft.resources.ResourceLocation;
-import tfcflorae.common.container.TFCFAnvilPlanContainer;
-import tfcflorae.common.container.TFCFAnvilContainer;
-import tfcflorae.common.container.TFCFBarrelContainer;
 import tfcflorae.common.blockentities.ceramics.LargeVesselBlockEntity;
-import tfcflorae.common.blockentities.TFCFAnvilBlockEntity;
-import tfcflorae.common.blockentities.TFCFBarrelBlockEntity;
 import net.minecraft.core.registries.Registries;
 
 import java.util.function.Supplier;
@@ -36,11 +31,6 @@ public class TFCFContainerTypes {
    public static final DeferredRegister<MenuType<?>> CONTAINERS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, "tfcflorae");
    public static final RegistryObject<MenuType<LargeVesselContainer>> LARGE_VESSEL = TFCFContainerTypes.<LargeVesselBlockEntity, LargeVesselContainer>registerBlockEntityContainer(
       "large_vessel", TFCFBlockEntities.LARGE_VESSEL, LargeVesselContainer::create
-   );
-   public static final RegistryObject<MenuType<TFCFBarrelContainer>> BARREL = TFCFContainerTypes.<TFCFBarrelBlockEntity, TFCFBarrelContainer>registerBlockEntityContainer("barrel", TFCFBlockEntities.BARREL, TFCFBarrelContainer::create);
-   public static final RegistryObject<MenuType<TFCFAnvilContainer>> ANVIL = TFCFContainerTypes.<TFCFAnvilBlockEntity, TFCFAnvilContainer>registerBlockEntityContainer("anvil", TFCFBlockEntities.ANVIL, TFCFAnvilContainer::create);
-   public static final RegistryObject<MenuType<TFCFAnvilPlanContainer>> ANVIL_PLAN = TFCFContainerTypes.<TFCFAnvilBlockEntity, TFCFAnvilPlanContainer>registerBlockEntityContainer(
-      "anvil_plan", TFCFBlockEntities.ANVIL, TFCFAnvilPlanContainer::create
    );
    // 打制界面统一为一个 MenuType，与 TFC 的做法一致（TFC 也只有 tfc:knapping 一个菜单）。
    // 四种材质靠 KnappingType 区分，而 KnappingType 是数据驱动的：

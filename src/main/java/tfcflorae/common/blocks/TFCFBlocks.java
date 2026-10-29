@@ -86,7 +86,6 @@ import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.ceramics.Clay;
 import tfcflorae.common.blocks.ceramics.LargeVesselBlock;
 import tfcflorae.common.blocks.devices.SilkmothNestBlock;
-import tfcflorae.common.blocks.devices.TFCFBarrelBlock;
 import tfcflorae.common.blocks.devices.TFCFSluiceBlock;
 import tfcflorae.common.blocks.plant.BambooSaplingPlantBlock;
 import tfcflorae.common.blocks.plant.FruitingBodyPlantBlock;
@@ -104,7 +103,6 @@ import tfcflorae.common.blocks.rock.TFCFOre;
 import tfcflorae.common.blocks.rock.TFCFOreDepositBlock;
 import tfcflorae.common.blocks.rock.TFCFPointedDripstoneBlock;
 import tfcflorae.common.blocks.rock.TFCFRock;
-import tfcflorae.common.blocks.rock.TFCFRockAnvilBlock;
 import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.SandLayerBlock;
 import tfcflorae.common.blocks.soil.TFCFRockSand;
@@ -123,7 +121,6 @@ import tfcflorae.common.blocks.wood.TFCFJoshuaLeavesBlock;
 import tfcflorae.common.blocks.wood.TFCFJoshuaTrunkBlock;
 import tfcflorae.common.blocks.wood.TFCFLeavesBlock;
 import tfcflorae.common.blocks.wood.TFCFLeavesBlockExt;
-import tfcflorae.common.blocks.wood.TFCFLoomBlock;
 import tfcflorae.common.blocks.wood.TFCFMangroveLeavesBlock;
 import tfcflorae.common.blocks.wood.TFCFMangroveMuddyRootsBlocks;
 import tfcflorae.common.blocks.wood.TFCFMangrovePropaguleBlock;
@@ -705,12 +702,12 @@ public final class TFCFBlocks {
       rock -> rock != TFCFRock.TUFF && (rock.category() == RockCategory.IGNEOUS_EXTRUSIVE || rock.category() == RockCategory.IGNEOUS_INTRUSIVE),
       rock -> registerRockBlock(
             "rock/anvil/" + rock.name(),
-            () -> new TFCFRockAnvilBlock(
+            () -> new net.dries007.tfc.common.blocks.rock.RockAnvilBlock(
                   ExtendedProperties.of(rock.color()).requiresCorrectToolForDrops()
                      .sound(SoundType.STONE)
                      .strength(2.0F, 10.0F)
                      .requiresCorrectToolForDrops()
-                     .blockEntity(TFCFBlockEntities.ANVIL),
+                     .blockEntity(net.dries007.tfc.common.blockentities.TFCBlockEntities.ANVIL),
                   (Supplier<? extends Block>)TFCF_ROCK_BLOCKS.get(rock).get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.RAW)
                ),
             rock != TFCFRock.TUFF

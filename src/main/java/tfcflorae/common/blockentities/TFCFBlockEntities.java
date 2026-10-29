@@ -54,12 +54,6 @@ public class TFCFBlockEntities {
    public static final RegistryObject<BlockEntityType<FarmlandBlockEntity>> FARMLAND = register(
       "tfcf_farmland", TFCFFarmlandBlockEntity::new, TFCFBlocks.TFCFSOIL.get(TFCFSoil.FARMLAND).values().stream()
    );
-   public static final RegistryObject<BlockEntityType<TFCFBarrelBlockEntity>> BARREL = register(
-      "tfcf_barrel", TFCFBarrelBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.BARREL))
-   );
-   public static final RegistryObject<BlockEntityType<LoomBlockEntity>> LOOM = register(
-      "tfcf_loom", TFCFLoomBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.LOOM))
-   );
    public static final RegistryObject<BlockEntityType<SluiceBlockEntity>> SLUICE = register(
       "tfcf_sluice", TFCFSluiceBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.SLUICE))
    );
@@ -71,9 +65,6 @@ public class TFCFBlockEntities {
    );
    public static final RegistryObject<BlockEntityType<TFCFToolRackBlockEntity>> TOOL_RACK = register(
       "tfcf_tool_rack", TFCFToolRackBlockEntity::new, TFCFBlocks.WOODS.values().stream().map(map -> map.get(BlockType.TOOL_RACK))
-   );
-   public static final RegistryObject<BlockEntityType<TFCFAnvilBlockEntity>> ANVIL = register(
-      "tfcf_anvil", TFCFAnvilBlockEntity::new, TFCFBlocks.ROCK_ANVILS.values().stream()
    );
    public static final RegistryObject<BlockEntityType<MineralSheetBlockEntity>> MINERAL_SHEET = register(
       "mineral_sheet", MineralSheetBlockEntity::new, TFCFBlocks.MINERAL_SHEET

@@ -56,10 +56,36 @@ public final class TFCFRotationBlockEntities
         modifyBlockEntityType("barrel", TFCBlockEntities.BARREL.get(), BlockType.BARREL);
         modifyBlockEntityType("loom", TFCBlockEntities.LOOM.get(), BlockType.LOOM);
         extendTickCounter();
+        extendRockAnvils();
         extendSoilBlockEntity();
     }
 
-    /** Drying bricks use TFC's TickCounterBlockEntity, so they go into TICK_COUNTER. */
+    /** Rock anvils use TFC's RockAnvilBlock, hence TFCBlockEntities.ANVIL. */
+   private static void extendRockAnvils()
+   {
+      try
+      {
+         final Set<Block> extra = new HashSet<>();
+         for (Map<?, ?> variants : TFCFBlocks.ROCK_BLOCKS.values())
+         {
+            for (Object value : variants.values())
+            {
+               if (value instanceof RegistryObject<?> reg && reg.get() instanceof Block block
+                   && block instanceof net.dries007.tfc.common.blocks.rock.RockAnvilBlock)
+               {
+                  extra.add(block);
+               }
+            }
+         }
+         addBlocks("anvil", TFCBlockEntities.ANVIL.get(), extra);
+      }
+      catch (Throwable t)
+      {
+         LOGGER.error("TFCFlorae: could not extend the TFC anvil block entity type", t);
+      }
+   }
+
+   /** Drying bricks use TFC's TickCounterBlockEntity, so they go into TICK_COUNTER. */
    private static void extendTickCounter()
    {
       try
