@@ -95,7 +95,7 @@
     "laterite": "红土岩",
     "mudstone": "泥岩",
     "porphyry": "斑岩",
-    "red_granite": "红色花岗岩",
+    "red_granite": "赤岗岩",
     "sandstone": "砂岩",
     "soapstone": "皂石",
     "wackestone": "泥粒灰岩",
@@ -178,14 +178,15 @@
     "stone_tiles": "%s石板瓦",
     "dirty_stone_tiles": "脏%s石板瓦",
     "dirtier_stone_tiles": "更脏%s石板瓦",
-    "dirtiest_stone_tiles": "极脏%s石板瓦"
+    "dirtiest_stone_tiles": "极脏%s石板瓦",
+    "geyser": "%s间歇泉"
   },
   "wood_parts": {
     "planks": "木板",
     "log": "原木",
     "wood": "木头",
-    "stripped_log": "去皮原木",
-    "stripped_wood": "去皮木头",
+    "stripped_log": "去皮%s原木",
+    "stripped_wood": "去皮%s",
     "leaves": "树叶",
     "sapling": "树苗",
     "potted_sapling": "树苗花盆",

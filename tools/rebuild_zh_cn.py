@@ -125,7 +125,8 @@ def translate(key):
     if fam == "wood" and len(rest) >= 2:
         w, part = rest[-1], ".".join(rest[:-1])
         if w in WOODS and part in WOOD_PARTS:
-            return WOODS[w] + WOOD_PARTS[part]
+            tmpl = WOOD_PARTS[part]
+            return tmpl % WOODS[w] if "%s" in tmpl else WOODS[w] + tmpl
 
     if fam == "rock" and len(rest) >= 2:
         r, part = rest[-1], ".".join(rest[:-1])
