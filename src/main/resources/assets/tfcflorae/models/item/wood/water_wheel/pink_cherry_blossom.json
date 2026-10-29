@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tfcflorae:block/wood/planks/pink_cherry_blossom"
+    "layer0": "tfcflorae:item/wood/water_wheel_pink_cherry_blossom"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tfcflorae:block/wood/planks/white_ipe"
+    "layer0": "tfcflorae:item/wood/water_wheel_white_ipe"
   }
 }

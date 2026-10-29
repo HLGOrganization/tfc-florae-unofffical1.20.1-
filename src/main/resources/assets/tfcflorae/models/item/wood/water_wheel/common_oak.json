@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tfcflorae:block/wood/planks/common_oak"
+    "layer0": "tfcflorae:item/wood/water_wheel_common_oak"
   }
 }
