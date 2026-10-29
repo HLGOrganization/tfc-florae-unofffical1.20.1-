@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:common_oak_logs"
+        "tag": "tfcflorae:common_oak_logs"
       },
       {
         "tag": "tfc:saws"

@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:butternut_logs"
+        "tag": "tfcflorae:butternut_logs"
       },
       {
         "tag": "tfc:saws"

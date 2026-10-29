@@ -4,10 +4,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:quince_logs"
+        "tag": "tfcflorae:quince_logs"
       },
       {
-        "tag": "tfc:quince_logs"
+        "tag": "tfcflorae:quince_logs"
       },
       {
         "tag": "tfc:saws"

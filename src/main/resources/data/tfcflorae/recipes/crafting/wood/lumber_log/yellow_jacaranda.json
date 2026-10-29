@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:yellow_jacaranda_logs"
+        "tag": "tfcflorae:yellow_jacaranda_logs"
       },
       {
         "tag": "tfc:saws"

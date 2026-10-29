@@ -4,10 +4,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:beech_logs"
+        "tag": "tfcflorae:beech_logs"
       },
       {
-        "tag": "tfc:beech_logs"
+        "tag": "tfcflorae:beech_logs"
       },
       {
         "tag": "tfc:saws"

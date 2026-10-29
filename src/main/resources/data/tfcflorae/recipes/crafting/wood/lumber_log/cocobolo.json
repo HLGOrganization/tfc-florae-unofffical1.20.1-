@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:cocobolo_logs"
+        "tag": "tfcflorae:cocobolo_logs"
       },
       {
         "tag": "tfc:saws"

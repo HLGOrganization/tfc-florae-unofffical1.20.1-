@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:mulberry_logs"
+        "tag": "tfcflorae:mulberry_logs"
       },
       {
         "tag": "tfc:saws"

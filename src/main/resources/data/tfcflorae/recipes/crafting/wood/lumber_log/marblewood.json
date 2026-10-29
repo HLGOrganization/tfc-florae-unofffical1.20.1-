@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:marblewood_logs"
+        "tag": "tfcflorae:marblewood_logs"
       },
       {
         "tag": "tfc:saws"

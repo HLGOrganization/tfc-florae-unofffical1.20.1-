@@ -6,7 +6,7 @@
   ],
   "key": {
     "X": {
-      "tag": "tfc:all_bamboo_logs"
+      "tag": "tfcflorae:all_bamboo_logs"
     },
     "Y": {
       "item": "tfcflorae:wood/lumber/bamboo"

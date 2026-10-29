@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:african_padauk_logs"
+        "tag": "tfcflorae:african_padauk_logs"
       },
       {
         "tag": "tfc:saws"

@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:ghaf_logs"
+        "tag": "tfcflorae:ghaf_logs"
       },
       {
         "tag": "tfc:saws"

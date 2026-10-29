@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:yellow_meranti_logs"
+        "tag": "tfcflorae:yellow_meranti_logs"
       },
       {
         "tag": "tfc:saws"

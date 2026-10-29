@@ -19,8 +19,10 @@ import zipfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "src", "main", "resources", "data")
 
-# top-level directories under data/ that count as data pack content
-PACK_DIRS = ("tags",)
+# everything under data/ is data pack content (tags, recipes, loot tables, worldgen,
+# advancements, structures...).  The jar's data section is built from this same tree,
+# so replacing it wholesale is safe and keeps recipes in sync with the tags.
+PACK_DIRS = None  # None = replace the entire data/ section
 
 
 def collect():
@@ -30,10 +32,9 @@ def collect():
         for fn in files:
             full = os.path.join(dirpath, fn)
             rel = os.path.relpath(full, os.path.join(ROOT, "src", "main", "resources")).replace(os.sep, "/")
-            # data/<ns>/<kind>/... : keep tags (and anything else requested later)
             parts = rel.split("/")
-            if len(parts) >= 4 and parts[0] == "data":
-                if any(parts[2].startswith(p) for p in PACK_DIRS):
+            if len(parts) >= 3 and parts[0] == "data":
+                if PACK_DIRS is None or any(parts[2].startswith(p) for p in PACK_DIRS):
                     out[rel] = full
     return out
 
@@ -62,7 +63,8 @@ def main():
         for item in zin.infolist():
             name = item.filename
             parts = name.split("/")
-            is_pack = len(parts) >= 4 and parts[0] == "data" and any(parts[2].startswith(p) for p in PACK_DIRS)
+            is_pack = len(parts) >= 2 and parts[0] == "data" and (
+                PACK_DIRS is None or (len(parts) >= 3 and any(parts[2].startswith(p) for p in PACK_DIRS)))
             if is_pack:
                 dropped += 1
                 continue  # replaced below

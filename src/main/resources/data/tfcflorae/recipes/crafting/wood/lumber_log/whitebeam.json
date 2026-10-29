@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:whitebeam_logs"
+        "tag": "tfcflorae:whitebeam_logs"
       },
       {
         "tag": "tfc:saws"

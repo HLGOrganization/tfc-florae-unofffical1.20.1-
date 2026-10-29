@@ -4,10 +4,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:purple_ipe_logs"
+        "tag": "tfcflorae:purple_ipe_logs"
       },
       {
-        "tag": "tfc:purple_ipe_logs"
+        "tag": "tfcflorae:purple_ipe_logs"
       },
       {
         "tag": "tfc:saws"

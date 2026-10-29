@@ -4,10 +4,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:iroko_logs"
+        "tag": "tfcflorae:iroko_logs"
       },
       {
-        "tag": "tfc:iroko_logs"
+        "tag": "tfcflorae:iroko_logs"
       },
       {
         "tag": "tfc:saws"

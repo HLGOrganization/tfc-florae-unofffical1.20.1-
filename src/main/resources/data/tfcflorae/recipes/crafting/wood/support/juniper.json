@@ -4,10 +4,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:juniper_logs"
+        "tag": "tfcflorae:juniper_logs"
       },
       {
-        "tag": "tfc:juniper_logs"
+        "tag": "tfcflorae:juniper_logs"
       },
       {
         "tag": "tfc:saws"

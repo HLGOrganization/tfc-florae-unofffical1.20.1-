@@ -4,10 +4,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:limba_logs"
+        "tag": "tfcflorae:limba_logs"
       },
       {
-        "tag": "tfc:limba_logs"
+        "tag": "tfcflorae:limba_logs"
       },
       {
         "tag": "tfc:saws"

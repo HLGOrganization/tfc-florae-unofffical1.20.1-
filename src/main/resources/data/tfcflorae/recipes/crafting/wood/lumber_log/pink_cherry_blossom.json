@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:pink_cherry_blossom_logs"
+        "tag": "tfcflorae:pink_cherry_blossom_logs"
       },
       {
         "tag": "tfc:saws"

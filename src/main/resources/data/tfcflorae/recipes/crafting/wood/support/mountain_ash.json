@@ -4,10 +4,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:mountain_ash_logs"
+        "tag": "tfcflorae:mountain_ash_logs"
       },
       {
-        "tag": "tfc:mountain_ash_logs"
+        "tag": "tfcflorae:mountain_ash_logs"
       },
       {
         "tag": "tfc:saws"

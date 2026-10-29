@@ -4,10 +4,10 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:rubber_fig_logs"
+        "tag": "tfcflorae:rubber_fig_logs"
       },
       {
-        "tag": "tfc:rubber_fig_logs"
+        "tag": "tfcflorae:rubber_fig_logs"
       },
       {
         "tag": "tfc:saws"

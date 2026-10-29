@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:sweetgum_logs"
+        "tag": "tfcflorae:sweetgum_logs"
       },
       {
         "tag": "tfc:saws"

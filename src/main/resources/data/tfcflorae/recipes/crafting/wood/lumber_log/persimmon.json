@@ -4,7 +4,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
       {
-        "tag": "tfc:persimmon_logs"
+        "tag": "tfcflorae:persimmon_logs"
       },
       {
         "tag": "tfc:saws"
