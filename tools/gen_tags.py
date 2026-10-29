@@ -34,6 +34,15 @@ DATA = os.path.join(RES, "data")
 ASSETS = os.path.join(RES, "assets", "tfcflorae")
 TFC_JAR = r"D:\学习资料\附属模组工作区\[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar"
 WHITELIST = os.path.join(ROOT, "reports", "registered-ids-full.json")
+# ids that have an asset on disk but were never registered (detected by family
+# consistency in tools/find_unregistered_assets.py).  Putting one of these in a tag
+# kills the whole tag - sandstone/layered/slab/gray did exactly that to
+# minecraft:slabs.
+SUSPECTS_FILE = os.path.join(ROOT, "reports", "suspect-unregistered.json")
+try:
+    UNREGISTERED = set(json.load(open(SUSPECTS_FILE, encoding="utf-8-sig")))
+except Exception:
+    UNREGISTERED = set()
 
 # Soil families that are deliberately no longer registered (see
 # TFCFBlocks.REMOVED_SOILS): duplicate grass paths, packed/loose mud, coarse
@@ -111,9 +120,11 @@ def rock_names():
 def load_whitelist():
     d = json.load(open(WHITELIST, encoding="utf-8"))
     blocks = {b for b in d["blocks"]
-              if b.split("/")[0] not in REMOVED_SOILS and b not in REMOVED_IDS}
+              if b.split("/")[0] not in REMOVED_SOILS and b not in REMOVED_IDS
+              and b not in UNREGISTERED}
     items = {i for i in d["items"]
-             if i.split("/")[0] not in REMOVED_SOILS and i not in REMOVED_IDS}
+             if i.split("/")[0] not in REMOVED_SOILS and i not in REMOVED_IDS
+             and i not in UNREGISTERED}
     return blocks, items
 
 
@@ -177,6 +188,8 @@ def has_asset(our_id, kind):
 
     For items a blockstate also counts: a block with a BlockItem has an item even if
     no models/item file was generated for it."""
+    if our_id in UNREGISTERED:
+        return False
     rel = our_id.replace("/", os.sep) + ".json"
     if os.path.isfile(os.path.join(ASSETS, "blockstates", rel)):
         return True

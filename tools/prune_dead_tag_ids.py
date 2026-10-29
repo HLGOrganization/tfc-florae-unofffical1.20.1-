@@ -43,12 +43,22 @@ REMOVED_EXACT = {
 }
 
 
+# ids with assets but no registration (family-consistency detection)
+SUSPECTS_FILE = os.path.join(ROOT, "reports", "suspect-unregistered.json")
+try:
+    UNREGISTERED = set(json.load(open(SUSPECTS_FILE, encoding="utf-8-sig")))
+except Exception:
+    UNREGISTERED = set()
+
+
 def have(ident, kind):
     if ":" not in ident:
         return True  # no namespace = minecraft default, not ours to judge
     ns, path = ident.split(":", 1)
     if ns != "tfcflorae":
         return True  # not ours to judge
+    if path in UNREGISTERED:
+        return False
     if path.split("/")[0] in REMOVED_PREFIXES or path in REMOVED_EXACT:
         return False
     if kind == "blocks":

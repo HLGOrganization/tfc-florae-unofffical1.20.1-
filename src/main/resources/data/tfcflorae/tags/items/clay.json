@@ -2,8 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "minecraft:clay_ball",
-    "tfcflorae:ceramic/earthenware/clay",
-    "tfcflorae:ceramic/stoneware/clay"
+    "minecraft:clay_ball"
   ]
 }

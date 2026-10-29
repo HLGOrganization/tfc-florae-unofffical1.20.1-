@@ -2,8 +2,6 @@
   "__comment__": "This file was automatically created by mcresources",
   "replace": false,
   "values": [
-    "tfc:ceramic/pot",
-    "tfcflorae:ceramic/earthenware/fired/pot",
-    "tfcflorae:ceramic/stoneware/fired/pot"
+    "tfc:ceramic/pot"
   ]
 }

@@ -1,9 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ceramic/earthenware/brick_slab",
     "tfcflorae:ceramic/fire_bricks/brick_slab",
-    "tfcflorae:ceramic/stoneware/brick_slab",
     "tfcflorae:rock/bricks/slab/arkose",
     "tfcflorae:rock/bricks/slab/boninite",
     "tfcflorae:rock/bricks/slab/carbonatite",
@@ -97,12 +95,8 @@
     "tfcflorae:rock/smooth/slab/wackestone",
     "tfcflorae:sandstone/layered/slab/black",
     "tfcflorae:sandstone/layered/slab/brown",
-    "tfcflorae:sandstone/layered/slab/gray",
     "tfcflorae:sandstone/layered/slab/green",
-    "tfcflorae:sandstone/layered/slab/light_green",
-    "tfcflorae:sandstone/layered/slab/orange",
     "tfcflorae:sandstone/layered/slab/pink",
-    "tfcflorae:sandstone/layered/slab/purple",
     "tfcflorae:sandstone/layered/slab/red",
     "tfcflorae:sandstone/layered/slab/white",
     "tfcflorae:sandstone/layered/slab/yellow",
