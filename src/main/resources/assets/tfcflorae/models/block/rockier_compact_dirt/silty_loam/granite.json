@@ -1,7 +1,7 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/cube_all",
+  "parent": "tfcflorae:block/template/soil_over_rock",
   "textures": {
-    "all": "tfcflorae:block/rockier_compact_dirt/silty_loam/granite"
+    "rock": "tfc:block/rock/raw/granite",
+    "soil": "tfcflorae:block/compact_dirt/rockier_compact_dirt/silty_loam"
   }
 }

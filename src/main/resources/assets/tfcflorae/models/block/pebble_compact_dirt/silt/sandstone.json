@@ -1,7 +1,7 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/cube_all",
+  "parent": "tfcflorae:block/template/soil_over_rock",
   "textures": {
-    "all": "tfcflorae:block/pebble_compact_dirt/silt/sandstone"
+    "rock": "tfcflorae:block/rock/raw/sandstone",
+    "soil": "tfcflorae:block/compact_dirt/pebble_compact_dirt/silt"
   }
 }

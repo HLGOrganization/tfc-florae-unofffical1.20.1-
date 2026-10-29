@@ -1,7 +1,7 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/cube_all",
+  "parent": "tfcflorae:block/template/soil_over_rock",
   "textures": {
-    "all": "tfcflorae:block/rockier_compact_dirt/silty_loam/cataclasite"
+    "rock": "tfcflorae:block/rock/raw/cataclasite",
+    "soil": "tfcflorae:block/compact_dirt/rockier_compact_dirt/silty_loam"
   }
 }
