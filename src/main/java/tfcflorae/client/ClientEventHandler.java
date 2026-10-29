@@ -134,7 +134,17 @@ public class ClientEventHandler {
                      BlockType.STAIRS,
                      BlockType.TWIG,
                      BlockType.BARREL,
-                     BlockType.SCRIBING_TABLE
+                     BlockType.SCRIBING_TABLE,
+                     BlockType.SEWING_TABLE,
+                     BlockType.JAR_SHELF,
+                     BlockType.POTTED_SAPLING,
+                     // these three carry the镂空 axle casing overlay (axle_casing*.png is
+                     // ~70% transparent); without cutout the transparent part renders black,
+                     // which made the placed gear box / clutch / encased axle look wrong.
+                     // TFC puts the same three in its cutout list.
+                     BlockType.ENCASED_AXLE,
+                     BlockType.CLUTCH,
+                     BlockType.GEAR_BOX
                   )
                   .forEach(type -> ItemBlockRenderTypes.setRenderLayer((Block)((RegistryObject)map.get(type)).get(), cutout));
                Stream.of(BlockType.FALLEN_LEAVES)
