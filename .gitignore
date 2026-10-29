@@ -13,3 +13,4 @@ _audit/run/
 _audit/tfcjar/
 .msg.txt
 .git-commit-msg.txt
+reports/_*
