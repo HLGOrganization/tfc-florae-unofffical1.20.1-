@@ -1,23 +1,22 @@
-"""Rebuild zh_cn.json: translate every entry that is still plain English.
+"""Rebuild zh_cn.json with proper Chinese word order.
 
-Reference is TFC's own Chinese wording (material first, then part: "橡木木板",
-"天然花岗岩", "花岗岩砖"), so the rules below follow the same word order.
+Reference is TFC's own wording: material first, then part ("橡木木板", "天然花岗岩",
+"花岗岩砖"), decoration last ("花岗岩砖台阶").  Rules per family:
 
-Family rules (by key path, not by the English text):
-  wood.<part>.<wood>            -> <wood><part>            e.g. 橡木木板
-  rock.<part>[.<sub>].<rock>    -> per-part template       e.g. 天然花岗岩 / 花岗岩台阶
-  ore.<ore>[.<rock>]            -> <rock><ore>矿石 / <ore>矿石
-  sand.<type>.<color>[.<rock>]  -> <color><rock><type>沙
-  everything else               -> word-by-word from the glossary, unknown words
-                                   keep their English form and get reported
+  wood.<part>.<wood>              <wood><part>
+  rock.<part>[.<deco>].<rock>     <rock><template>[<deco>]
+  ore.<ore>[.<rock>]              <rock><ore>矿石
+  sand.<kind>.<colour>[.<rock>]   <colour><rock><kind>沙
+  plant / others                  drop the English category prefix ("Plant ", "Wood ",
+                                  "Ore "...) and translate the rest; multi-word names
+                                  are matched as a whole first so "Jack in the Pulpit"
+                                  and "Venus Flytrap" do not fragment.
 """
 from __future__ import annotations
 
 import io
 import json
 import os
-import re
-import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANG = os.path.join(ROOT, "src", "main", "resources", "assets", "tfcflorae", "lang")
@@ -32,30 +31,60 @@ WOOD_PARTS = g["wood_parts"]
 ORES = g["ore_names"]
 WORDS = g["words"]
 
+STRIP_PREFIX = ("Plant ", "Wood ", "Ore ", "Rock ", "Ceramic ", "Fluid ", "Mineral ")
+
+SAND_KINDS = {
+    "rocky": "多岩",
+    "rockier": "更含岩",
+    "sandier": "含砂",
+    "sandiest": "富砂",
+    "sandy": "砂质",
+    "tiles": "瓦",
+    "sandy_tiles": "砂瓦",
+    "sandier_tiles": "含砂瓦",
+    "sandiest_tiles": "富砂瓦",
+    "rocky_tiles": "多岩瓦",
+    "dense_grass": "稠密草",
+    "sparse_grass": "稀疏草",
+    "dry_grass": "干燥草",
+    "grass": "草",
+    "sand_layer": "沙层",
+    "weathered_terracotta": "风化陶瓦",
+    "terracotta": "陶瓦",
+}
+
 unknown = {}
 
 
-def word(w):
-    """translate a single English word/phrase, or keep it and report"""
-    if w in WORDS:
-        return WORDS[w]
-    low = w.lower()
+_LOWER = {k.lower(): v for k, v in WORDS.items()}
+
+
+def lookup(text):
+    if not text:
+        return None
+    if text in WORDS:
+        return WORDS[text]
+    low = text.lower().strip()
+    if low in _LOWER:
+        return _LOWER[low]
     if low in COLORS:
         return COLORS[low]
-    # try multi-word keys of WORDS (e.g. "Sandy Loam")
     return None
 
 
 def fallback(text):
+    whole = lookup(text)
+    if whole:
+        return whole
+    parts = text.split()
     out = []
     i = 0
-    parts = text.split()
     while i < len(parts):
         hit = None
-        for take in (3, 2, 1):
+        for take in (4, 3, 2, 1):
             if i + take <= len(parts):
                 cand = " ".join(parts[i:i + take])
-                tr = word(cand)
+                tr = lookup(cand)
                 if tr:
                     hit = (tr, take)
                     break
@@ -69,24 +98,24 @@ def fallback(text):
     return "".join(out)
 
 
-def rock_part(part, rock_zh):
-    """part key like 'bricks' or 'raw.slab' -> Chinese"""
-    segs = part.split(".")
-    base = segs[0]
-    deco = segs[1] if len(segs) > 1 else None
+def rock_name_for(part_key, rock_zh):
+    segs = part_key.split(".")
+    deco = None
+    if segs and segs[-1] in ("slab", "stairs", "wall", "button", "pressure_plate"):
+        deco = segs[-1]
+        segs = segs[:-1]
+    base = ".".join(segs)
     tmpl = ROCK_PARTS.get(base)
     if tmpl is None:
         return None
     name = tmpl % rock_zh if "%s" in tmpl else tmpl
     if deco:
-        d = {"slab": "台阶", "stairs": "楼梯", "wall": "墙"}.get(deco)
-        if d:
-            return name + d
-        return None
+        name += {"slab": "台阶", "stairs": "楼梯", "wall": "墙",
+                 "button": "按钮", "pressure_plate": "压力板"}[deco]
     return name
 
 
-def translate(key, en_value):
+def translate(key):
     p = key.split(".")
     if len(p) < 4:
         return None
@@ -94,87 +123,80 @@ def translate(key, en_value):
     rest = p[3:]
 
     if fam == "wood" and len(rest) >= 2:
-        wood = rest[-1]
-        part = ".".join(rest[:-1])
-        if wood in WOODS and part in WOOD_PARTS:
-            return WOODS[wood] + WOOD_PARTS[part]
+        w, part = rest[-1], ".".join(rest[:-1])
+        if w in WOODS and part in WOOD_PARTS:
+            return WOODS[w] + WOOD_PARTS[part]
 
     if fam == "rock" and len(rest) >= 2:
-        rock = rest[-1]
-        part = ".".join(rest[:-1])
-        if rock in ROCKS:
-            got = rock_part(part, ROCKS[rock])
-            if got:
-                return got
+        r, part = rest[-1], ".".join(rest[:-1])
+        if r in ROCKS:
+            return rock_name_for(part, ROCKS[r])
 
     if fam == "ore" and rest:
-        if len(rest) >= 2 and rest[-1] in ROCKS:
-            rock, ore = rest[-1], rest[-2]
-            if ore in ORES:
-                return ROCKS[rock] + ORES[ore] + "矿石"
+        if len(rest) >= 2 and rest[-1] in ROCKS and rest[-2] in ORES:
+            return ROCKS[rest[-1]] + ORES[rest[-2]] + "矿石"
         if rest[-1] in ORES:
             return ORES[rest[-1]] + "矿石"
 
     if fam == "sand" and len(rest) >= 2:
         rock = rest[-1] if rest[-1] in ROCKS else None
-        color = rest[-2] if rock and len(rest) >= 3 else (rest[-1] if rest[-1] in COLORS else None)
-        kind = None
-        if rock:
-            kind = ".".join(rest[:-2])
-        else:
-            kind = ".".join(rest[:-1])
-        kind_zh = {
-            "rocky": "多岩", "sandy_tiles": "砂瓦", "sandy": "砂质",
-            "sandier": "含砂", "sandiest": "富砂", "dense_grass": "稠密草",
-            "sparse_grass": "稀疏草", "dry_grass": "干燥草", "grass": "草",
-            "sand_layer": "沙层", "weathered_terracotta": "风化陶瓦",
-        }.get(kind, kind)
-        bits = []
+        idx = len(rest) - 1 - (1 if rock else 0)
+        color = rest[idx] if idx >= 0 and rest[idx] in COLORS else None
         if color:
-            bits.append(COLORS[color])
-        if rock:
-            bits.append(ROCKS[rock])
-        bits.append(kind_zh)
-        bits.append("沙")
-        return "".join(bits)
+            kind = ".".join(rest[:idx])
+            bits = [COLORS[color]]
+            if rock:
+                bits.append(ROCKS[rock])
+            if kind in SAND_KINDS:
+                bits.append(SAND_KINDS[kind])
+            elif kind:
+                bits.append(fallback(kind.replace("_", " ").title()))
+            bits.append("沙")
+            return "".join(bits)
 
     return None
 
 
 def main():
     en = json.load(io.open(os.path.join(LANG, "en_us.json"), encoding="utf-8-sig"))
-    zh = json.load(io.open(os.path.join(LANG, "zh_cn.json"), encoding="utf-8-sig"))
 
-    translated = 0
-    fallbacks = 0
+    out = {}
+    by_rule = by_fallback = 0
     still = []
-    out = dict(zh)
     for k, en_v in en.items():
-        # full rebuild: every entry is regenerated so terminology is consistent
-        # (the old file mixed styles, e.g. common_oak was "夏栎木" elsewhere)"橡木")
-        got = translate(k, en_v)
+        got = translate(k)
         if got:
             out[k] = got
-            translated += 1
+            by_rule += 1
             continue
-        got = fallback(str(en_v))
-        if got and got != en_v:
+        text = str(en_v)
+        whole = lookup(text)
+        if whole:
+            out[k] = whole
+            by_fallback += 1
+            continue
+        for pre in STRIP_PREFIX:
+            if text.startswith(pre):
+                text = text[len(pre):]
+                break
+        got = fallback(text)
+        if got and got != text:
             out[k] = got
-            translated += 1
-            fallbacks += 1
+            by_fallback += 1
         else:
+            out[k] = got or text
             still.append(k)
 
     io.open(os.path.join(LANG, "zh_cn.json"), "w", encoding="utf-8", newline="\n").write(
-        json.dumps(out, indent=2, ensure_ascii=False, sort_keys=False) + "\n")
-    print("translated:", translated, "(family rules: %d, word fallback: %d)" % (translated - fallbacks, fallbacks))
-    print("still english:", len(still))
+        json.dumps(out, indent=2, ensure_ascii=False) + "\n")
+    print("translated:", by_rule + by_fallback, "(rules:", by_rule, " fallback:", by_fallback, ")")
+    print("english left:", len(still))
     if unknown:
-        top = sorted(unknown.items(), key=lambda kv: -kv[1])[:40]
+        top = sorted(unknown.items(), key=lambda kv: -kv[1])[:30]
         print("unknown words:", len(unknown))
         print("   " + ", ".join("%s(%d)" % (w, n) for w, n in top))
-    for k in still[:10]:
-        print("   LEFT", k, "=", en[k])
+    for k in still[:8]:
+        print("   LEFT", k.replace("tfcflorae.", ""), "=", en[k])
 
 
 if __name__ == "__main__":
