@@ -10,6 +10,9 @@
       },
       {
         "model": "tfcflorae:block/rocky_compact_dirt/silt/gneiss"
+      },
+      {
+        "model": "tfcflorae:block/rockiest_compact_dirt/silt/gneiss"
       }
     ]
   }

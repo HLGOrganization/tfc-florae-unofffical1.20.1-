@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/template/soil_over_rock",
+  "textures": {
+    "rock": "tfcflorae:block/rock/raw/porphyry",
+    "soil": "tfcflorae:block/compact_dirt/rockiest_compact_dirt/sandy_loam"
+  }
+}

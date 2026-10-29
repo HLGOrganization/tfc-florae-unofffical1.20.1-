@@ -10,6 +10,9 @@
       },
       {
         "model": "tfcflorae:block/rocky_compact_dirt/loam/soapstone"
+      },
+      {
+        "model": "tfcflorae:block/rockiest_compact_dirt/loam/soapstone"
       }
     ]
   }

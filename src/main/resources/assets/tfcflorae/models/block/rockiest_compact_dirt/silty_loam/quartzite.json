@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/template/soil_over_rock",
+  "textures": {
+    "rock": "tfc:block/rock/raw/quartzite",
+    "soil": "tfcflorae:block/compact_dirt/rockiest_compact_dirt/silty_loam"
+  }
+}
