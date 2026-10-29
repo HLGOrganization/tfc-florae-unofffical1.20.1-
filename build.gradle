@@ -9,6 +9,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
+
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '6.0.+', changing: true
         classpath 'org.parchmentmc:librarian:1.+'
         classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
@@ -72,6 +73,7 @@ minecraft {
 }
 
 dependencies {
+    annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     // TerraFirmaCraft 1.20.1 (this is the single most important dependency)
@@ -86,6 +88,7 @@ dependencies {
 // 白名单（BlockEntityType.validBlocks）。这与 ArborFirmaCraft 的做法完全一致
 // （afc.mixins.json -> BlockEntityTypeAccessor）。
 mixin {
+    add sourceSets.main, "tfcflorae.refmap.json"
     config "tfcflorae.mixins.json"
 }
 

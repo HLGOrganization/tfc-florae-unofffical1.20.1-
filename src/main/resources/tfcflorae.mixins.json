@@ -9,5 +9,6 @@
   "mixins": [
     "BlockEntityTypeAccessor"
   ],
-  "client": []
+  "client": [],
+  "refmap": "tfcflorae.refmap.json"
 }
