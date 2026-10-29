@@ -46,24 +46,7 @@ public class TFCFFluids
     public static final ResourceLocation MOLTEN_FLOW = Helpers.identifier("block/molten_flow");
     public static final int ALPHA_MASK = 0xFF000000;
 
-    public static final Map<SimpleFluids, FluidRegistryObject<ForgeFlowingFluid>> SIMPLE_FLUIDS = Helpers.mapOfKeys(
-        SimpleFluids.class,
-        fluid -> register(
-            "ore/" + fluid.getId(),
-            properties -> properties
-                .block(TFCFBlocks.SIMPLE_FLUIDS.get(fluid))
-                .explosionResistance(100.0F),
-            FluidType.Properties.create()
-                .descriptionId("fluid.tfcflorae.ore." + fluid.getId())
-                .density(3000)
-                .viscosity(6000)
-                .temperature(1300)
-                .lightLevel(15),
-            new FluidTypeClientProperties(ALPHA_MASK | fluid.getColor(), MOLTEN_STILL, MOLTEN_FLOW, null, null),
-            MoltenFluid.Source::new,
-            MoltenFluid.Flowing::new
-        )
-    );
+    public static final Map<SimpleFluids, FluidRegistryObject<ForgeFlowingFluid>> SIMPLE_FLUIDS = new java.util.HashMap<>();
 
     public static int dyeColorToInt(DyeColor dye)
     {

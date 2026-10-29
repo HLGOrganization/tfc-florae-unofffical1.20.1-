@@ -1112,20 +1112,7 @@ public final class TFCFBlocks {
    public static final Map<TFCFRockSoil, Map<TFCFSoil.TFCFVariant, Map<TFCFRock, DecorationBlockRegistryObject>>> TFCFROCKSOILDECO2 = TFCFRockSoilDeco2Mapper(
       TFCFRockSoil.class
    );
-   public static final Map<SimpleFluids, RegistryObject<LiquidBlock>> SIMPLE_FLUIDS = Helpers.mapOfKeys(
-      SimpleFluids.class,
-      fluid -> register(
-            "fluid/ore/" + fluid.getId(),
-            () -> new LiquidBlock(
-                  TFCFFluids.SIMPLE_FLUIDS.get(fluid).source(),
-                  net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().liquid()
-                     .noCollission()
-                     .strength(100.0F)
-                     .lightLevel(state -> 15)
-                     .noLootTable()
-               )
-         )
-   );
+   public static final Map<SimpleFluids, RegistryObject<LiquidBlock>> SIMPLE_FLUIDS = new HashMap<>();
 
    public TFCFBlocks() {
    }
