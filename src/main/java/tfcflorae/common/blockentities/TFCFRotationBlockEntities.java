@@ -1,10 +1,9 @@
 package tfcflorae.common.blockentities;
 
-import java.lang.reflect.Field;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Stream;
 import net.dries007.tfc.common.blocks.wood.Wood.BlockType;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
 import net.minecraft.world.level.block.Block;
@@ -13,84 +12,56 @@ import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import tfcflorae.common.blocks.TFCFBlocks;
+import tfcflorae.mixin.BlockEntityTypeAccessor;
 
 /**
- * TFC registers its rotation block entities with a block list built from its own 20
- * woods:
- * <pre>register("water_wheel", WaterWheelBlockEntity::new, woodBlocks(Wood.BlockType.WATER_WHEEL))</pre>
- * A block entity is only created for a block in that list, so machines built from this
- * mod's woods got none - and because WaterWheelBlock reports
- * {@code RenderShape.ENTITYBLOCK_ANIMATED}, a missing block entity means the block is
- * completely invisible, since nothing renders the model.
+ * Adds this mod's wood blocks to TFC's rotation block entity types.
  * <p>
- * ArborFirmaCraft solves the same problem with
- * {@code @Mixin(BlockEntityType.class) interface BlockEntityTypeAccessor
- * { @Accessor("validBlocks") @Mutable void setValidBlocks(Set<Block>); }}.  This project
- * ships no mixins, so the same field replacement is done with sun.misc.Unsafe, which
- * ignores the final modifier.  Blocks stay TFC's own classes, so TFC's block entities and
- * renderers apply without any extra registration.
+ * TFC builds those lists from its own 20 woods:
+ * <pre>register("water_wheel", WaterWheelBlockEntity::new, woodBlocks(Wood.BlockType.WATER_WHEEL))</pre>
+ * A block entity is only created for a block in the list, and because
+ * {@code WaterWheelBlock} uses {@code RenderShape.ENTITYBLOCK_ANIMATED} a missing block
+ * entity means the block is entirely invisible.
+ * <p>
+ * This is a straight port of ArborFirmaCraft's fix (ModEvents#modifyBlockEntityType with
+ * the BlockEntityTypeAccessor mixin): the blocks stay TFC's own block classes, so TFC's
+ * block entities, tickers and renderers apply without any extra registration - only the
+ * block list is extended.
  */
 public final class TFCFRotationBlockEntities
 {
     private static final Logger LOGGER = LogUtils.getLogger();
-    private static Object unsafe;
-    private static long validBlocksOffset;
 
     private TFCFRotationBlockEntities() {}
 
     public static void extendTFCBlockEntities()
     {
-        if (!init()) return;
-        patch("water_wheel", TFCBlockEntities.WATER_WHEEL, BlockType.WATER_WHEEL);
-        patch("axle", TFCBlockEntities.AXLE, BlockType.AXLE);
-        patch("bladed_axle", TFCBlockEntities.BLADED_AXLE, BlockType.BLADED_AXLE);
-        patch("encased_axle", TFCBlockEntities.ENCASED_AXLE, BlockType.ENCASED_AXLE);
-        patch("clutch", TFCBlockEntities.CLUTCH, BlockType.CLUTCH);
-        patch("gear_box", TFCBlockEntities.GEAR_BOX, BlockType.GEAR_BOX);
-        patch("windmill", TFCBlockEntities.WINDMILL, BlockType.WINDMILL);
+        modifyBlockEntityType("water_wheel", TFCBlockEntities.WATER_WHEEL.get(), BlockType.WATER_WHEEL);
+        modifyBlockEntityType("axle", TFCBlockEntities.AXLE.get(), BlockType.AXLE);
+        modifyBlockEntityType("bladed_axle", TFCBlockEntities.BLADED_AXLE.get(), BlockType.BLADED_AXLE);
+        modifyBlockEntityType("encased_axle", TFCBlockEntities.ENCASED_AXLE.get(), BlockType.ENCASED_AXLE);
+        modifyBlockEntityType("clutch", TFCBlockEntities.CLUTCH.get(), BlockType.CLUTCH);
+        modifyBlockEntityType("gear_box", TFCBlockEntities.GEAR_BOX.get(), BlockType.GEAR_BOX);
+        modifyBlockEntityType("windmill", TFCBlockEntities.WINDMILL.get(), BlockType.WINDMILL);
     }
 
-    private static boolean init()
-    {
-        if (unsafe != null) return true;
-        try
-        {
-            final Class<?> unsafeClass = Class.forName("sun.misc.Unsafe");
-            final Field theUnsafe = unsafeClass.getDeclaredField("theUnsafe");
-            theUnsafe.setAccessible(true);
-            unsafe = theUnsafe.get(null);
-            final Field field = BlockEntityType.class.getDeclaredField("validBlocks");
-            validBlocksOffset = (Long) unsafeClass.getMethod("objectFieldOffset", Field.class)
-                .invoke(unsafe, field);
-            return true;
-        }
-        catch (Throwable t)
-        {
-            LOGGER.error("TFCFlorae: cannot access BlockEntityType.validBlocks", t);
-            return false;
-        }
-    }
-
-    @SuppressWarnings("unchecked")
-    private static void patch(String label, RegistryObject<? extends BlockEntityType<?>> holder, BlockType type)
+    private static void modifyBlockEntityType(String label, BlockEntityType<?> type, BlockType blockType)
     {
         try
         {
-            final BlockEntityType<?> beType = holder.get();
-            final Set<Block> current = (Set<Block>) unsafe.getClass()
-                .getMethod("getObject", Object.class, long.class)
-                .invoke(unsafe, beType, validBlocksOffset);
-            final Set<Block> merged = new HashSet<>(current);
-            int added = 0;
-            for (Map<BlockType, RegistryObject<Block>> parts : TFCFBlocks.WOODS.values())
+            final Stream<Block> extra = TFCFBlocks.WOODS.values().stream()
+                .map(map -> map.get(blockType))
+                .filter(java.util.Objects::nonNull)
+                .map(RegistryObject::get);
+            final Set<Block> blocks = new HashSet<>(((BlockEntityTypeAccessor) type).accessor$getValidBlocks());
+            final int before = blocks.size();
+            blocks.addAll(extra.toList());
+            if (blocks.size() == before)
             {
-                final RegistryObject<Block> block = parts.get(type);
-                if (block != null && merged.add(block.get())) added++;
+                return;
             }
-            if (added == 0) return;
-            unsafe.getClass().getMethod("putObject", Object.class, long.class, Object.class)
-                .invoke(unsafe, beType, validBlocksOffset, Collections.unmodifiableSet(merged));
-            LOGGER.info("TFCFlorae: added {} blocks to TFC {} block entity type", added, label);
+            ((BlockEntityTypeAccessor) type).accessor$setValidBlocks(blocks);
+            LOGGER.info("TFCFlorae: added {} blocks to TFC {} block entity type", blocks.size() - before, label);
         }
         catch (Throwable t)
         {

@@ -82,10 +82,12 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:15.2.0.21")
 }
 
-// 本模组不使用任何 Mixin（0 个 @Mixin，tfcflorae.mixin 包不存在），
-// 因此不声明 MixinConfigs —— 否则每次启动都会刷
-// "Reference map 'tfcflorae.refmap.json' could not be read"。
-// 作为 TFC/TFE 的附属模组，我们只通过它们的公开 API 扩展，不侵入它们的字节码。
+// 需要的最小 Mixin：仅一个 @Accessor，用来把本模组的木材追加进 TFC 的旋转方块实体
+// 白名单（BlockEntityType.validBlocks）。这与 ArborFirmaCraft 的做法完全一致
+// （afc.mixins.json -> BlockEntityTypeAccessor）。
+mixin {
+    config "tfcflorae.mixins.json"
+}
 
 jar {
     manifest {
