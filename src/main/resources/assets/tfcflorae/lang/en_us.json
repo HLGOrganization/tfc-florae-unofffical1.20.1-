@@ -11673,5 +11673,9 @@
   "block.tfcflorae.rockier_compact_dirt.podzol.shale": "Shale-Bearing Podzol",
   "block.tfcflorae.rockier_compact_dirt.podzol.slate": "Slate-Bearing Podzol",
   "block.tfcflorae.rockier_compact_dirt.podzol.soapstone": "Soapstone-Bearing Podzol",
-  "block.tfcflorae.rockier_compact_dirt.podzol.wackestone": "Wackestone-Bearing Podzol"
+  "block.tfcflorae.rockier_compact_dirt.podzol.wackestone": "Wackestone-Bearing Podzol",
+  "item.tfcflorae.soil_pile.fluvisol": "Fluvisol Pile",
+  "item.tfcflorae.soil_pile.mollisol": "Mollisol Pile",
+  "item.tfcflorae.soil_pile.oxisol": "Oxisol Pile",
+  "item.tfcflorae.soil_pile.podzol": "Podzol Pile"
 }

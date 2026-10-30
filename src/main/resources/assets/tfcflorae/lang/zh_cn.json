@@ -11667,5 +11667,9 @@
   "block.tfcflorae.rockier_compact_dirt.podzol.shale": "页岩混石灰化土",
   "block.tfcflorae.rockier_compact_dirt.podzol.slate": "板岩混石灰化土",
   "block.tfcflorae.rockier_compact_dirt.podzol.soapstone": "皂岩混石灰化土",
-  "block.tfcflorae.rockier_compact_dirt.podzol.wackestone": "泥粒岩混石灰化土"
+  "block.tfcflorae.rockier_compact_dirt.podzol.wackestone": "泥粒岩混石灰化土",
+  "item.tfcflorae.soil_pile.fluvisol": "冲积土堆",
+  "item.tfcflorae.soil_pile.mollisol": "软土堆",
+  "item.tfcflorae.soil_pile.oxisol": "氧化土堆",
+  "item.tfcflorae.soil_pile.podzol": "灰化土堆"
 }

@@ -1318,8 +1318,16 @@ public final class TFCFBlocks {
             Map.put(type, java.util.Collections.emptyMap());
             continue;
          }
+         // 只注册 TFC 自带的 4 种土壤变体；TFE 新增的 4 种变体只有多石土一族有资源，
+         // 这里不注册，否则 grass/fluvisol 之类的方块没有 blockstate、会显示为紫黑
          Map.put(type, Helpers.mapOfKeys(
-            TFCFSoil.TFCFVariant.class, variant -> register(type.name() + "/" + variant.name(), () -> type.TFCFCreate(variant), TFCCreativeTabs.EARTH)
+            TFCFSoil.TFCFVariant.class,
+            variant -> {
+               if (variant.isTfeOnly()) {
+                  return null;
+               }
+               return register(type.name() + "/" + variant.name(), () -> type.TFCFCreate(variant), TFCCreativeTabs.EARTH);
+            }
          ));
       }
 
@@ -1528,6 +1536,17 @@ public final class TFCFBlocks {
                                     .blockEntity(TFCFBlockEntities.LECTERN)
                               ),
                            type.createBlockItem(wood, new Properties())
+                        )
+                     );
+                  } else if (type == BlockType.BOOKSHELF) {
+                     // 1.20 布局，与 AFC 一致：每种木材一个雕纹书架，
+                     // id 为 wood/planks/<wood>_bookshelf，方块用 TFC 的 BookshelfBlock
+                     subMap.put(
+                        type,
+                        register(
+                           ("wood/planks/" + wood.getSerializedName() + "_bookshelf").toLowerCase(Locale.ROOT),
+                           () -> type.create(wood).get(),
+                           TFCCreativeTabs.WOOD
                         )
                      );
                   } else {
@@ -3011,6 +3030,10 @@ public final class TFCFBlocks {
       Map<TFCFRock, Map<net.dries007.tfc.common.blocks.rock.Rock.BlockType, DecorationBlockRegistryObject>> Map = new HashMap<>();
 
       for (TFCFRock rock : enumClass.getEnumConstants()) {
+         // 凝灰岩（TUFF）的整套方块由 TFE 提供
+         if (rock == TFCFRock.TUFF) {
+            continue;
+         }
          Map<net.dries007.tfc.common.blocks.rock.Rock.BlockType, DecorationBlockRegistryObject> typeMap = new HashMap<>();
 
          for (net.dries007.tfc.common.blocks.rock.Rock.BlockType type : net.dries007.tfc.common.blocks.rock.Rock.BlockType.values()) {
@@ -3315,6 +3338,10 @@ public final class TFCFBlocks {
       Map<TFCFRock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> Map = new HashMap<>();
 
       for (TFCFRock rock : enumClass.getEnumConstants()) {
+         // 凝灰岩（TUFF）的整套方块由 TFE 提供
+         if (rock == TFCFRock.TUFF) {
+            continue;
+         }
          Map<TFCFRock.TFCFBlockType, RegistryObject<Block>> typeMap = new HashMap<>();
 
          for (TFCFRock.TFCFBlockType type : TFCFRock.TFCFBlockType.values()) {

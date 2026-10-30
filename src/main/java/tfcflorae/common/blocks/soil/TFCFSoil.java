@@ -534,6 +534,12 @@ public enum TFCFSoil {
       PODZOL
       ;
 
+      /** TFE 新增、只有多石土一族补齐了资源，其余土壤类型不应注册这些变体。 */
+      public boolean isTfeOnly()
+      {
+         return this == FLUVISOL || this == MOLLISOL || this == OXISOL || this == PODZOL;
+      }
+
       public static final TFCFSoil.TFCFVariant[] VALUES = values();
 
       private TFCFVariant() {
