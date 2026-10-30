@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/white_mangrove",
+              "name": "tfcflorae:wood/stripped_log/white_mangrove",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

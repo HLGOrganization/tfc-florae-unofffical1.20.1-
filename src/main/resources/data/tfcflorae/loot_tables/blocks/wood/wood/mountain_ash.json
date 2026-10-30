@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/mountain_ash",
+              "name": "tfcflorae:wood/log/mountain_ash",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

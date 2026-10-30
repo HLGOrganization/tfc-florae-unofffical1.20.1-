@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/purpleheart",
+              "name": "tfcflorae:wood/log/purpleheart",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

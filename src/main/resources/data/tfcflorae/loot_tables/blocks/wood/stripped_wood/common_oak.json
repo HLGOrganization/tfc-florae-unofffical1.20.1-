@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/common_oak",
+              "name": "tfcflorae:wood/stripped_log/common_oak",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

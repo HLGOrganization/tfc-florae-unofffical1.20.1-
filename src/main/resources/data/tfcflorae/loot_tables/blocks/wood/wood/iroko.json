@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/iroko",
+              "name": "tfcflorae:wood/log/iroko",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

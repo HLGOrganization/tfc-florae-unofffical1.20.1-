@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/persimmon",
+              "name": "tfcflorae:wood/log/persimmon",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

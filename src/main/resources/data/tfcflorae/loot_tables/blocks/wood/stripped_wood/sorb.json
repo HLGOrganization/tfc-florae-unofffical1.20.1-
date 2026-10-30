@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/sorb",
+              "name": "tfcflorae:wood/stripped_log/sorb",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

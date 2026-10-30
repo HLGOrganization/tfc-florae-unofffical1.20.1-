@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/quince",
+              "name": "tfcflorae:wood/stripped_log/quince",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

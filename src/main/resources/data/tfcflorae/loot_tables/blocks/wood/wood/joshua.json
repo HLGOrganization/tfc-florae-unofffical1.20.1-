@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/joshua",
+              "name": "tfcflorae:wood/log/joshua",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

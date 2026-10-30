@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/juniper",
+              "name": "tfcflorae:wood/stripped_log/juniper",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

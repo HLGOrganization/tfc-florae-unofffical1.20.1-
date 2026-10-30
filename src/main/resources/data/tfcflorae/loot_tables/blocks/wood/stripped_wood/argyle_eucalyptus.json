@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/argyle_eucalyptus",
+              "name": "tfcflorae:wood/stripped_log/argyle_eucalyptus",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/charred_tree",
+              "name": "tfcflorae:wood/log/charred_tree",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

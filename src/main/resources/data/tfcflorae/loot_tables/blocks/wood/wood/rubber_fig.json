@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/rubber_fig",
+              "name": "tfcflorae:wood/log/rubber_fig",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

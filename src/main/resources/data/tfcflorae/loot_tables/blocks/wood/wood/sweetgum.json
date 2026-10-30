@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/sweetgum",
+              "name": "tfcflorae:wood/log/sweetgum",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

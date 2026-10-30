@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/pear",
+              "name": "tfcflorae:wood/stripped_log/pear",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

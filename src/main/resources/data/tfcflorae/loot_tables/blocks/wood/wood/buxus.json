@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/buxus",
+              "name": "tfcflorae:wood/log/buxus",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

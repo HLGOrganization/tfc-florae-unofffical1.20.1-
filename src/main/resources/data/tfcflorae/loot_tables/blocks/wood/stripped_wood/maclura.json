@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/maclura",
+              "name": "tfcflorae:wood/stripped_log/maclura",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

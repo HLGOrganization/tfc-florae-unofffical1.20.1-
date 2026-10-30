@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/nordmann_fir",
+              "name": "tfcflorae:wood/stripped_log/nordmann_fir",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

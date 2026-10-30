@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/mahoe",
+              "name": "tfcflorae:wood/log/mahoe",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

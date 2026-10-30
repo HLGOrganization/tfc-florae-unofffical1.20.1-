@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/white_jacaranda",
+              "name": "tfcflorae:wood/stripped_log/white_jacaranda",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

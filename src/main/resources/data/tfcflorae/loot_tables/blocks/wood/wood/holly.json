@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/holly",
+              "name": "tfcflorae:wood/log/holly",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

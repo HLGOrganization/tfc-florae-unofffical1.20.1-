@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/white_elm",
+              "name": "tfcflorae:wood/log/white_elm",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

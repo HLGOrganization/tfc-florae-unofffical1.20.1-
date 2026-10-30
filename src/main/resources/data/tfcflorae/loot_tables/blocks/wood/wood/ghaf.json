@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/ghaf",
+              "name": "tfcflorae:wood/log/ghaf",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

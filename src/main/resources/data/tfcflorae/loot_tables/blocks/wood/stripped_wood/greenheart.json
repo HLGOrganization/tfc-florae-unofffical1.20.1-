@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/greenheart",
+              "name": "tfcflorae:wood/stripped_log/greenheart",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

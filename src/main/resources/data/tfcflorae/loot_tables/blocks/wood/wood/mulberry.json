@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/mulberry",
+              "name": "tfcflorae:wood/log/mulberry",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

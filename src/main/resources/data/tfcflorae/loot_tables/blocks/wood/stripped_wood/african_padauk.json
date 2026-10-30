@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/african_padauk",
+              "name": "tfcflorae:wood/stripped_log/african_padauk",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

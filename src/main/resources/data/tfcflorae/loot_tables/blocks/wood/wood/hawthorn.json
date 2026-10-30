@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/hawthorn",
+              "name": "tfcflorae:wood/log/hawthorn",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/yew",
+              "name": "tfcflorae:wood/log/yew",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

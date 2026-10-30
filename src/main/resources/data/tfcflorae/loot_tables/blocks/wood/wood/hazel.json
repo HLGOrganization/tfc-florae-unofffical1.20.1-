@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/hazel",
+              "name": "tfcflorae:wood/log/hazel",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

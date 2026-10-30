@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/marblewood",
+              "name": "tfcflorae:wood/stripped_log/marblewood",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

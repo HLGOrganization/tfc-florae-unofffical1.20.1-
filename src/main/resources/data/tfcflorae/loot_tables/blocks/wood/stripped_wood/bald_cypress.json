@@ -33,11 +33,11 @@
             {
               "type": "minecraft:item",
               "conditions": [],
-              "name": "tfcflorae:wood/stripped_wood/bald_cypress"
+              "name": "tfcflorae:wood/stripped_log/bald_cypress"
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/bald_cypress"
+              "name": "tfcflorae:wood/stripped_log/bald_cypress"
             }
           ]
         }

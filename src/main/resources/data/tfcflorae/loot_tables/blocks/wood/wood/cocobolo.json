@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/cocobolo",
+              "name": "tfcflorae:wood/log/cocobolo",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

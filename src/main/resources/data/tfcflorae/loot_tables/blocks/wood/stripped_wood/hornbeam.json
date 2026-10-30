@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/hornbeam",
+              "name": "tfcflorae:wood/stripped_log/hornbeam",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

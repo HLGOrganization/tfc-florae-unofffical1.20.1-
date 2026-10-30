@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/stripped_wood/angelim",
+              "name": "tfcflorae:wood/stripped_log/angelim",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",

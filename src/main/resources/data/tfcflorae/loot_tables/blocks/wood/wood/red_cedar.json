@@ -32,7 +32,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tfcflorae:wood/wood/red_cedar",
+              "name": "tfcflorae:wood/log/red_cedar",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
