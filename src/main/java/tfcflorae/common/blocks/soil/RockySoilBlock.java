@@ -54,24 +54,10 @@ public class RockySoilBlock extends Block {
       this(properties, null, variant.getBlock(dirtType), variant.getBlock(dirtType), variant.getBlock(dirtType), transformsToCobble);
    }
 
-   public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-      ItemStack stack = player.getItemInHand(hand);
-      if (!Helpers.isItem(stack, this.requiredItem.get().asItem()) || this.transformsTo == null) {
-         return InteractionResult.PASS;
-      } else if (this.transformsToCobble && this.soilVariantDrop != null) {
-         stack.shrink(1);
-         BlockState block = this.transformsTo.get().defaultBlockState();
-         level.setBlockAndUpdate(pos, block);
-         ItemHandlerHelper.giveItemToPlayer(player, new ItemStack((ItemLike)this.soilVariantDrop.get()));
-         Helpers.playSound(level, pos, SoundType.STONE.getPlaceSound());
-         return InteractionResult.SUCCESS;
-      } else {
-         stack.shrink(1);
-         BlockState block = this.transformsTo.get().defaultBlockState();
-         level.setBlockAndUpdate(pos, block);
-         Helpers.playSound(level, pos, SoundType.BASALT.getPlaceSound());
-         return InteractionResult.SUCCESS;
-      }
+   public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit)
+   {
+      // 石子与多石土的互转机制已废弃：手持石子点击不再消耗石子、也不改变方块
+      return InteractionResult.PASS;
    }
 
    @Nullable
