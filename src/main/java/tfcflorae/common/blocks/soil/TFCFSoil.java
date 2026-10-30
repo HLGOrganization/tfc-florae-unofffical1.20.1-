@@ -527,6 +527,11 @@ public enum TFCFSoil {
    }
 
    public static enum TFCFVariant implements RegistrySoilVariant {
+      // TFE 新增的土壤类型（原版 TFC 只有 silt/loam/sandy_loam/silty_loam）
+      FLUVISOL,
+      MOLLISOL,
+      OXISOL,
+      PODZOL
       ;
 
       public static final TFCFSoil.TFCFVariant[] VALUES = values();

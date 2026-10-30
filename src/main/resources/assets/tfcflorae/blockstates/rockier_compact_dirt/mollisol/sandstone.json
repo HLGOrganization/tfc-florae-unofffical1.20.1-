@@ -1,0 +1,19 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/rockier_compact_dirt/mollisol/sandstone"
+      },
+      {
+        "model": "tfcflorae:block/rocky_compact_dirt/mollisol/sandstone"
+      },
+      {
+        "model": "tfcflorae:block/rockiest_compact_dirt/mollisol/sandstone"
+      },
+      {
+        "model": "tfcflorae:block/pebble_compact_dirt/mollisol/sandstone"
+      }
+    ]
+  }
+}

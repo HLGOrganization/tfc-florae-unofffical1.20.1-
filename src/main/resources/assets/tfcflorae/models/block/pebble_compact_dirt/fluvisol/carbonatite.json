@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/template/soil_over_rock",
+  "textures": {
+    "rock": "tfc:block/rock/raw/carbonatite",
+    "soil": "tfcflorae:block/compact_dirt/pebble_compact_dirt/fluvisol"
+  }
+}
