@@ -5,8 +5,7 @@
     "tfcflorae:caverns/jungle/floor",
     "tfcflorae:caverns/jungle/floor_soil",
     "tfcflorae:caverns/webbed/floor",
-    "tfcflorae:caverns/thermal/dripleaf_clay",
-    "tfcflorae:caverns/thermal/lichen_clay"
+    "tfcflorae:caverns/thermal/dripleaf_clay"
   ],
   "step": "underground_decoration"
 }

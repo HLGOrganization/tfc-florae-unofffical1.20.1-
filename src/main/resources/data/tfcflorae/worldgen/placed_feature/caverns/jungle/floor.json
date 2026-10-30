@@ -127,7 +127,7 @@
           }
         ]
       },
-      "vegetation_feature": "tfc:nothing"
+      "vegetation_feature": "minecraft:patch_grass"
     }
   },
   "placement": [

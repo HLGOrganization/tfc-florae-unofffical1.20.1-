@@ -13,7 +13,6 @@
     "#minecraft:terracotta",
     "#tfc:magma_block",
     "minecraft:clay",
-    "minecraft:calcite",
-    "#tfcflorae:rocky_compact_dirt"
+    "minecraft:calcite"
   ]
 }
