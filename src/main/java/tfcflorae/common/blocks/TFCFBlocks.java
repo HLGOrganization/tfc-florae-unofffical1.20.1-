@@ -1534,19 +1534,6 @@ public final class TFCFBlocks {
                            type.createBlockItem(wood, new Properties())
                         )
                      );
-                  } else if (type == BlockType.BOOKSHELF) {
-                     // 1.20 布局，与 AFC 一致：每种木材一个雕纹书架，
-                     // id 为 wood/planks/<wood>_bookshelf，方块用 TFC 的 BookshelfBlock
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/planks/" + wood.getSerializedName() + "_bookshelf").toLowerCase(Locale.ROOT),
-                           () -> type.create(wood).get(),
-                           // 必须用 createBlockItem，否则只注册方块、没有 BlockItem，
-                           // 配方与掉落表里的物品 id 就找不到（"Expected name to be an item"）
-                           type.createBlockItem(wood, new Properties())
-                        )
-                     );
                   } else {
                      subMap.put(
                         type,
@@ -1674,7 +1661,20 @@ public final class TFCFBlocks {
                            type.createBlockItem(wood, new Properties())
                         )
                      );
-                  } else if (wood != TFCFWood.BAMBOO
+                                    } else if (type == BlockType.BOOKSHELF) {
+                     // 1.20 布局，与 AFC 一致：每种木材一个雕纹书架，
+                     // id 为 wood/planks/<wood>_bookshelf，方块用 TFC 的 BookshelfBlock。
+                     // 注意必须用 createBlockItem，否则只有方块没有物品，
+                     // 配方与掉落表的物品 id 会找不到。
+                     subMap.put(
+                        type,
+                        register(
+                           ("wood/planks/" + wood.getSerializedName() + "_bookshelf").toLowerCase(Locale.ROOT),
+                           () -> type.create(wood).get(),
+                           type.createBlockItem(wood, new Properties())
+                        )
+                     );
+} else if (wood != TFCFWood.BAMBOO
                      || type != BlockType.PLANKS
                         && type != BlockType.LOG
                         && type != BlockType.WOOD
