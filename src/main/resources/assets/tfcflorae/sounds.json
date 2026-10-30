@@ -793,5 +793,50 @@
       }
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.froglight.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      {
+        "name": "minecraft:block.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.froglight.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      {
+        "name": "minecraft:block.place",
+        "type": "event"
+      }
+    ]
+  },
+  "block.froglight.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      {
+        "name": "minecraft:block.hit",
+        "type": "event"
+      }
+    ]
+  },
+  "block.froglight.fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      {
+        "name": "minecraft:block.fall",
+        "type": "event"
+      }
+    ]
+  },
+  "block.froglight.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      {
+        "name": "minecraft:block.step",
+        "type": "event"
+      }
+    ]
   }
 }
