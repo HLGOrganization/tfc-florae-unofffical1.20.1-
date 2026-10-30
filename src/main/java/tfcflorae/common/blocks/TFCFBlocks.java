@@ -1751,31 +1751,10 @@ public final class TFCFBlocks {
    }
 
    private static Map<Wood, RegistryObject<Block>> normalBookshelfMapperTFC(Class<Wood> enumClass) {
-      Map<Wood, RegistryObject<Block>> Map = new HashMap<>();
-
-      for (Wood wood : enumClass.getEnumConstants()) {
-         // 红树（TFC 木材）没有 bookshelf 的 blockstate / 模型，注册出来是紫黑方块
-         if (wood == Wood.MANGROVE) {
-            continue;
-         }
-         Map.put(
-            wood,
-            register(
-               ("wood/bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-               () -> new ExtendedBlock(
-                     ExtendedProperties.of(
-                           net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(wood.woodColor())
-                              .sound(SoundType.WOOD)
-                              .strength(2.0F, 3.0F)
-                        )
-                        .flammableLikePlanks()
-                  ),
-               TFCCreativeTabs.WOOD
-            )
-         );
-      }
-
-      return Map;
+      // TFC 的木材有自己的书架；在这里为 tfcflorae:wood/bookshelf/<tfc wood> 注册
+      // 只会产生没有资源的紫黑方块。本模组木材的书架走 BlockType.BOOKSHELF 分支
+      // （id 为 wood/planks/<wood>_bookshelf）。
+      return new HashMap<>();
    }
 
    private static Map<TFCFWood, RegistryObject<Block>> leavesOnlyMapper(Class<TFCFWood> enumClass) {
