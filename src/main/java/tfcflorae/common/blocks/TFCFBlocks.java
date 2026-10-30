@@ -829,7 +829,9 @@ public final class TFCFBlocks {
    public static final Map<TFCFWood, RegistryObject<Block>> WOODS_SEASONAL_WOOD = seasonalWoodMapper(TFCFWood.class);
    public static final Map<TFCFWood, RegistryObject<Block>> LEAVES_ONLY = leavesOnlyMapper(TFCFWood.class);
    public static final Map<Wood, RegistryObject<Block>> NORMAL_BOOKSHELF_TFC = normalBookshelfMapperTFC(Wood.class);
-   public static final Map<TFCFWood, RegistryObject<Block>> CHISELED_BOOKSHELF_TFCF = chiseledBookshelfMapperTFCF(TFCFWood.class);
+   // 1.18-style chiseled shelves are gone: 1.20 has one chiseled bookshelf per wood,
+   // registered through BlockType.BOOKSHELF above (AFC does the same)
+   public static final Map<TFCFWood, RegistryObject<Block>> CHISELED_BOOKSHELF_TFCF = new HashMap<>();
    public static final Map<Wood, RegistryObject<Block>> LOG_WALL_TFC = woodWallMapperTFC(Wood.class);
    public static final Map<TFCFWood, RegistryObject<Block>> LOG_WALL_TFCF = woodWallMapperTFCF(TFCFWood.class);
    public static final Map<TFCFWood, RegistryObject<Block>> MANGROVE_ROOTS = mangroveRootsMapper(TFCFWood.class);
@@ -1527,22 +1529,6 @@ public final class TFCFBlocks {
                                     .blockEntity(TFCFBlockEntities.LECTERN)
                               ),
                            type.createBlockItem(wood, new Properties())
-                        )
-                     );
-                  } else if (type == BlockType.BOOKSHELF) {
-                     subMap.put(
-                        type,
-                        register(
-                           ("wood/bookshelf/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                           () -> new ExtendedBlock(
-                                 ExtendedProperties.of(
-                                       net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(wood.woodColor())
-                                          .sound(SoundType.WOOD)
-                                          .strength(2.0F, 3.0F)
-                                    )
-                                    .flammableLikePlanks()
-                              ),
-                           TFCCreativeTabs.WOOD
                         )
                      );
                   } else {

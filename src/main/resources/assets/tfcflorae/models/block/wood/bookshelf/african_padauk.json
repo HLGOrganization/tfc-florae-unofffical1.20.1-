@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/bookshelf",
-  "textures": {
-    "end": "tfcflorae:block/wood/planks/african_padauk",
-    "side": "tfcflorae:block/wood/bookshelf/african_padauk"
-  }
-}

@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "block/cube_column",
+  "textures": {
+    "north": "tfcflorae:block/wood/planks/marblewood_bookshelf_stage1",
+    "side": "tfcflorae:block/wood/planks/marblewood_bookshelf_side",
+    "end": "tfcflorae:block/wood/planks/marblewood_bookshelf_top"
+  }
+}

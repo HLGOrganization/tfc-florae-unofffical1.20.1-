@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "BBB",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfcflorae:wood/planks/pink_cherry_blossom"
+    },
+    "B": {
+      "item": "minecraft:book"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/pink_cherry_blossom_bookshelf",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "BBB",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "tfcflorae:wood/planks/argyle_eucalyptus"
+    },
+    "B": {
+      "item": "minecraft:book"
+    }
+  },
+  "result": {
+    "item": "tfcflorae:wood/planks/argyle_eucalyptus_bookshelf",
+    "count": 1
+  }
+}

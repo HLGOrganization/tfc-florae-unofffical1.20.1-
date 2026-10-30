@@ -1,0 +1,9 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "parent": "minecraft:block/chiseled_bookshelf_inventory",
+  "textures": {
+    "top": "tfcflorae:block/wood/planks/buxus_bookshelf_top",
+    "side": "tfcflorae:block/wood/planks/buxus_bookshelf_side",
+    "front": "tfcflorae:block/wood/planks/buxus_bookshelf_empty"
+  }
+}

@@ -58,10 +58,33 @@ public final class TFCFRotationBlockEntities
         extendTickCounter();
         extendRockAnvils();
         extendLargeVessels();
+        extendChiseledBookshelves();
         extendSoilBlockEntity();
     }
 
-    /** Fired clay large vessels use TFC's LargeVesselBlock, hence its block entity. */
+    /** Vanilla ChiseledBookshelfBlock keeps its block entity in a vanilla type. */
+   private static void extendChiseledBookshelves()
+   {
+      try
+      {
+         final Set<Block> extra = new HashSet<>();
+         for (Map<BlockType, RegistryObject<Block>> parts : TFCFBlocks.WOODS.values())
+         {
+            final RegistryObject<Block> block = parts.get(BlockType.BOOKSHELF);
+            if (block != null)
+            {
+               extra.add(block.get());
+            }
+         }
+         addBlocks("bookshelf", net.dries007.tfc.common.blockentities.TFCBlockEntities.BOOKSHELF.get(), extra);
+      }
+      catch (Throwable t)
+      {
+         LOGGER.error("TFCFlorae: could not extend the vanilla chiseled bookshelf block entity type", t);
+      }
+   }
+
+   /** Fired clay large vessels use TFC's LargeVesselBlock, hence its block entity. */
    private static void extendLargeVessels()
    {
       try
