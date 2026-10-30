@@ -1542,7 +1542,9 @@ public final class TFCFBlocks {
                         register(
                            ("wood/planks/" + wood.getSerializedName() + "_bookshelf").toLowerCase(Locale.ROOT),
                            () -> type.create(wood).get(),
-                           TFCCreativeTabs.WOOD
+                           // 必须用 createBlockItem，否则只注册方块、没有 BlockItem，
+                           // 配方与掉落表里的物品 id 就找不到（"Expected name to be an item"）
+                           type.createBlockItem(wood, new Properties())
                         )
                      );
                   } else {

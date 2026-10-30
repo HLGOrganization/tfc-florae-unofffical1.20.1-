@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/flagstone/basalt",
-  "result": "tfcflorae:rock/flagstone_bricks/basalt",
-  "mode": "smooth"
-}

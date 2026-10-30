@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/flagstone/jaspillite",
-  "result": "tfcflorae:rock/flagstone_bricks/jaspillite",
-  "mode": "smooth"
-}

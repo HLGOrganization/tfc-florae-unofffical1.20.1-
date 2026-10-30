@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/flagstone/laterite",
-  "result": "tfcflorae:rock/flagstone_bricks/laterite",
-  "mode": "smooth"
-}
