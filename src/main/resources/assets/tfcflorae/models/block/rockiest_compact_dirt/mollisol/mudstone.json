@@ -1,7 +1,7 @@
 {
   "parent": "tfcflorae:block/template/soil_over_rock",
   "textures": {
-    "rock": "tfc:block/rock/raw/mudstone",
+    "rock": "tfcflorae:block/rock/raw/mudstone",
     "soil": "tfcflorae:block/compact_dirt/rockiest_compact_dirt/mollisol"
   }
 }

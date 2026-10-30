@@ -3082,6 +3082,10 @@ public final class TFCFBlocks {
       Map<TFCFRock, Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject>> Map = new HashMap<>();
 
       for (TFCFRock rock : enumClass.getEnumConstants()) {
+         // 凝灰岩（TUFF）的整套方块由 TFE 提供，这里不再注册装饰变体
+         if (rock == TFCFRock.TUFF) {
+            continue;
+         }
          Map<TFCFRock.TFCFBlockType, DecorationBlockRegistryObject> typeMap = new HashMap<>();
 
          for (TFCFRock.TFCFBlockType type : TFCFRock.TFCFBlockType.values()) {
