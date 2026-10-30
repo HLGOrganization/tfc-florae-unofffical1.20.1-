@@ -7,9 +7,6 @@
       "item": "tfc:ore/normal_magnetite/andesite"
     },
     {
-      "item": "tfcflorae:ore/normal_magnetite/arkose"
-    },
-    {
       "item": "tfc:ore/normal_magnetite/basalt"
     },
     {
@@ -17,9 +14,6 @@
     },
     {
       "item": "tfcflorae:ore/normal_magnetite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/normal_magnetite/cataclasite"
     },
     {
       "item": "tfc:ore/normal_magnetite/chalk"
@@ -82,9 +76,6 @@
       "item": "tfc:ore/normal_magnetite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/normal_magnetite/sandstone"
-    },
-    {
       "item": "tfc:ore/normal_magnetite/schist"
     },
     {
@@ -106,9 +97,6 @@
       "item": "tfc:ore/poor_magnetite/andesite"
     },
     {
-      "item": "tfcflorae:ore/poor_magnetite/arkose"
-    },
-    {
       "item": "tfc:ore/poor_magnetite/basalt"
     },
     {
@@ -116,9 +104,6 @@
     },
     {
       "item": "tfcflorae:ore/poor_magnetite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/poor_magnetite/cataclasite"
     },
     {
       "item": "tfc:ore/poor_magnetite/chalk"
@@ -181,9 +166,6 @@
       "item": "tfc:ore/poor_magnetite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/poor_magnetite/sandstone"
-    },
-    {
       "item": "tfc:ore/poor_magnetite/schist"
     },
     {
@@ -205,9 +187,6 @@
       "item": "tfc:ore/rich_magnetite/andesite"
     },
     {
-      "item": "tfcflorae:ore/rich_magnetite/arkose"
-    },
-    {
       "item": "tfc:ore/rich_magnetite/basalt"
     },
     {
@@ -215,9 +194,6 @@
     },
     {
       "item": "tfcflorae:ore/rich_magnetite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_magnetite/cataclasite"
     },
     {
       "item": "tfc:ore/rich_magnetite/chalk"
@@ -278,9 +254,6 @@
     },
     {
       "item": "tfc:ore/rich_magnetite/rhyolite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_magnetite/sandstone"
     },
     {
       "item": "tfc:ore/rich_magnetite/schist"

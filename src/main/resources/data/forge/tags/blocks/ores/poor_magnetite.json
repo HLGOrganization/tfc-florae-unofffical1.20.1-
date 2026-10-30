@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/poor_magnetite/arkose",
     "tfcflorae:ore/poor_magnetite/boninite",
     "tfcflorae:ore/poor_magnetite/carbonatite",
-    "tfcflorae:ore/poor_magnetite/cataclasite",
     "tfcflorae:ore/poor_magnetite/jaspillite",
     "tfcflorae:ore/poor_magnetite/laterite",
     "tfcflorae:ore/poor_magnetite/mudstone",
     "tfcflorae:ore/poor_magnetite/porphyry",
     "tfcflorae:ore/poor_magnetite/red_granite",
-    "tfcflorae:ore/poor_magnetite/sandstone",
     "tfcflorae:ore/poor_magnetite/soapstone",
     "tfcflorae:ore/poor_magnetite/wackestone"
   ]

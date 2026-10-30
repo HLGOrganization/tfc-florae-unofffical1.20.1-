@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:rock/chiseled/arkose",
     "tfcflorae:rock/chiseled/boninite",
     "tfcflorae:rock/chiseled/carbonatite",
-    "tfcflorae:rock/chiseled/cataclasite",
     "tfcflorae:rock/chiseled/jaspillite",
     "tfcflorae:rock/chiseled/laterite",
     "tfcflorae:rock/chiseled/mudstone",
     "tfcflorae:rock/chiseled/porphyry",
     "tfcflorae:rock/chiseled/red_granite",
-    "tfcflorae:rock/chiseled/sandstone",
     "tfcflorae:rock/chiseled/soapstone",
     "tfcflorae:rock/chiseled/wackestone"
   ]

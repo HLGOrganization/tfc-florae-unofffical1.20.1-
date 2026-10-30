@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/poor_native_gold/arkose",
     "tfcflorae:ore/poor_native_gold/boninite",
     "tfcflorae:ore/poor_native_gold/carbonatite",
-    "tfcflorae:ore/poor_native_gold/cataclasite",
     "tfcflorae:ore/poor_native_gold/jaspillite",
     "tfcflorae:ore/poor_native_gold/laterite",
     "tfcflorae:ore/poor_native_gold/mudstone",
     "tfcflorae:ore/poor_native_gold/porphyry",
     "tfcflorae:ore/poor_native_gold/red_granite",
-    "tfcflorae:ore/poor_native_gold/sandstone",
     "tfcflorae:ore/poor_native_gold/soapstone",
     "tfcflorae:ore/poor_native_gold/wackestone"
   ]

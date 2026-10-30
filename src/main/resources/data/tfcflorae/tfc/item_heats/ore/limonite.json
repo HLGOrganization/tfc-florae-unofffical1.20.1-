@@ -7,9 +7,6 @@
       "item": "tfc:ore/normal_limonite/andesite"
     },
     {
-      "item": "tfcflorae:ore/normal_limonite/arkose"
-    },
-    {
       "item": "tfc:ore/normal_limonite/basalt"
     },
     {
@@ -17,9 +14,6 @@
     },
     {
       "item": "tfcflorae:ore/normal_limonite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/normal_limonite/cataclasite"
     },
     {
       "item": "tfc:ore/normal_limonite/chalk"
@@ -82,9 +76,6 @@
       "item": "tfc:ore/normal_limonite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/normal_limonite/sandstone"
-    },
-    {
       "item": "tfc:ore/normal_limonite/schist"
     },
     {
@@ -106,9 +97,6 @@
       "item": "tfc:ore/poor_limonite/andesite"
     },
     {
-      "item": "tfcflorae:ore/poor_limonite/arkose"
-    },
-    {
       "item": "tfc:ore/poor_limonite/basalt"
     },
     {
@@ -116,9 +104,6 @@
     },
     {
       "item": "tfcflorae:ore/poor_limonite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/poor_limonite/cataclasite"
     },
     {
       "item": "tfc:ore/poor_limonite/chalk"
@@ -181,9 +166,6 @@
       "item": "tfc:ore/poor_limonite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/poor_limonite/sandstone"
-    },
-    {
       "item": "tfc:ore/poor_limonite/schist"
     },
     {
@@ -205,9 +187,6 @@
       "item": "tfc:ore/rich_limonite/andesite"
     },
     {
-      "item": "tfcflorae:ore/rich_limonite/arkose"
-    },
-    {
       "item": "tfc:ore/rich_limonite/basalt"
     },
     {
@@ -215,9 +194,6 @@
     },
     {
       "item": "tfcflorae:ore/rich_limonite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_limonite/cataclasite"
     },
     {
       "item": "tfc:ore/rich_limonite/chalk"
@@ -278,9 +254,6 @@
     },
     {
       "item": "tfc:ore/rich_limonite/rhyolite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_limonite/sandstone"
     },
     {
       "item": "tfc:ore/rich_limonite/schist"

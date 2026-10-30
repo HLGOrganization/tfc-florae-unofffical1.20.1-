@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/sylvite/arkose",
     "tfcflorae:ore/sylvite/boninite",
     "tfcflorae:ore/sylvite/carbonatite",
-    "tfcflorae:ore/sylvite/cataclasite",
     "tfcflorae:ore/sylvite/jaspillite",
     "tfcflorae:ore/sylvite/laterite",
     "tfcflorae:ore/sylvite/mudstone",
     "tfcflorae:ore/sylvite/porphyry",
     "tfcflorae:ore/sylvite/red_granite",
-    "tfcflorae:ore/sylvite/sandstone",
     "tfcflorae:ore/sylvite/soapstone",
     "tfcflorae:ore/sylvite/wackestone"
   ]

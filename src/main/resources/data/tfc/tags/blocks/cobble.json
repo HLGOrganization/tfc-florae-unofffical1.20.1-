@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:rock/cobble/arkose",
     "tfcflorae:rock/cobble/boninite",
     "tfcflorae:rock/cobble/carbonatite",
-    "tfcflorae:rock/cobble/cataclasite",
     "tfcflorae:rock/cobble/jaspillite",
     "tfcflorae:rock/cobble/laterite",
     "tfcflorae:rock/cobble/mudstone",
     "tfcflorae:rock/cobble/porphyry",
     "tfcflorae:rock/cobble/red_granite",
-    "tfcflorae:rock/cobble/sandstone",
     "tfcflorae:rock/cobble/soapstone",
     "tfcflorae:rock/cobble/wackestone"
   ]

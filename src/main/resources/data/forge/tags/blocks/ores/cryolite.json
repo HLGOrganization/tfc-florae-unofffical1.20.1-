@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/cryolite/arkose",
     "tfcflorae:ore/cryolite/boninite",
     "tfcflorae:ore/cryolite/carbonatite",
-    "tfcflorae:ore/cryolite/cataclasite",
     "tfcflorae:ore/cryolite/jaspillite",
     "tfcflorae:ore/cryolite/laterite",
     "tfcflorae:ore/cryolite/mudstone",
     "tfcflorae:ore/cryolite/porphyry",
     "tfcflorae:ore/cryolite/red_granite",
-    "tfcflorae:ore/cryolite/sandstone",
     "tfcflorae:ore/cryolite/soapstone",
     "tfcflorae:ore/cryolite/wackestone"
   ]

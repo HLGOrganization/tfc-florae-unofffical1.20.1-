@@ -1,6 +1,0 @@
-{
-  "parent": "tfcflorae:block/sand/sand_height8",
-  "textures": {
-    "sand": "tfcflorae:block/rock/gravel/cataclasite"
-  }
-}

@@ -7,9 +7,6 @@
       "item": "tfc:ore/normal_garnierite/andesite"
     },
     {
-      "item": "tfcflorae:ore/normal_garnierite/arkose"
-    },
-    {
       "item": "tfc:ore/normal_garnierite/basalt"
     },
     {
@@ -17,9 +14,6 @@
     },
     {
       "item": "tfcflorae:ore/normal_garnierite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/normal_garnierite/cataclasite"
     },
     {
       "item": "tfc:ore/normal_garnierite/chalk"
@@ -82,9 +76,6 @@
       "item": "tfc:ore/normal_garnierite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/normal_garnierite/sandstone"
-    },
-    {
       "item": "tfc:ore/normal_garnierite/schist"
     },
     {
@@ -106,9 +97,6 @@
       "item": "tfc:ore/poor_garnierite/andesite"
     },
     {
-      "item": "tfcflorae:ore/poor_garnierite/arkose"
-    },
-    {
       "item": "tfc:ore/poor_garnierite/basalt"
     },
     {
@@ -116,9 +104,6 @@
     },
     {
       "item": "tfcflorae:ore/poor_garnierite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/poor_garnierite/cataclasite"
     },
     {
       "item": "tfc:ore/poor_garnierite/chalk"
@@ -181,9 +166,6 @@
       "item": "tfc:ore/poor_garnierite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/poor_garnierite/sandstone"
-    },
-    {
       "item": "tfc:ore/poor_garnierite/schist"
     },
     {
@@ -205,9 +187,6 @@
       "item": "tfc:ore/rich_garnierite/andesite"
     },
     {
-      "item": "tfcflorae:ore/rich_garnierite/arkose"
-    },
-    {
       "item": "tfc:ore/rich_garnierite/basalt"
     },
     {
@@ -215,9 +194,6 @@
     },
     {
       "item": "tfcflorae:ore/rich_garnierite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_garnierite/cataclasite"
     },
     {
       "item": "tfc:ore/rich_garnierite/chalk"
@@ -278,9 +254,6 @@
     },
     {
       "item": "tfc:ore/rich_garnierite/rhyolite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_garnierite/sandstone"
     },
     {
       "item": "tfc:ore/rich_garnierite/schist"

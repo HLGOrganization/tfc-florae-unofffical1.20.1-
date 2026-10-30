@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/normal_limonite/arkose",
     "tfcflorae:ore/normal_limonite/boninite",
     "tfcflorae:ore/normal_limonite/carbonatite",
-    "tfcflorae:ore/normal_limonite/cataclasite",
     "tfcflorae:ore/normal_limonite/jaspillite",
     "tfcflorae:ore/normal_limonite/laterite",
     "tfcflorae:ore/normal_limonite/mudstone",
     "tfcflorae:ore/normal_limonite/porphyry",
     "tfcflorae:ore/normal_limonite/red_granite",
-    "tfcflorae:ore/normal_limonite/sandstone",
     "tfcflorae:ore/normal_limonite/soapstone",
     "tfcflorae:ore/normal_limonite/wackestone"
   ]

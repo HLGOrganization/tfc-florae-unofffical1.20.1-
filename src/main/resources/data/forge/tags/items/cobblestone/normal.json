@@ -1,28 +1,22 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:rock/cobble/arkose",
     "tfcflorae:rock/cobble/boninite",
     "tfcflorae:rock/cobble/carbonatite",
-    "tfcflorae:rock/cobble/cataclasite",
     "tfcflorae:rock/cobble/jaspillite",
     "tfcflorae:rock/cobble/laterite",
     "tfcflorae:rock/cobble/mudstone",
     "tfcflorae:rock/cobble/porphyry",
     "tfcflorae:rock/cobble/red_granite",
-    "tfcflorae:rock/cobble/sandstone",
     "tfcflorae:rock/cobble/soapstone",
     "tfcflorae:rock/cobble/wackestone",
-    "tfcflorae:rock/mossy_cobble/arkose",
     "tfcflorae:rock/mossy_cobble/boninite",
     "tfcflorae:rock/mossy_cobble/carbonatite",
-    "tfcflorae:rock/mossy_cobble/cataclasite",
     "tfcflorae:rock/mossy_cobble/jaspillite",
     "tfcflorae:rock/mossy_cobble/laterite",
     "tfcflorae:rock/mossy_cobble/mudstone",
     "tfcflorae:rock/mossy_cobble/porphyry",
     "tfcflorae:rock/mossy_cobble/red_granite",
-    "tfcflorae:rock/mossy_cobble/sandstone",
     "tfcflorae:rock/mossy_cobble/soapstone",
     "tfcflorae:rock/mossy_cobble/wackestone"
   ]

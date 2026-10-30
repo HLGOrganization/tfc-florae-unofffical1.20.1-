@@ -1,10 +1,8 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:rock/spike/arkose",
     "tfcflorae:rock/spike/boninite",
     "tfcflorae:rock/spike/carbonatite",
-    "tfcflorae:rock/spike/cataclasite",
     "tfcflorae:rock/spike/dripstone",
     "tfcflorae:rock/spike/gypsum",
     "tfcflorae:rock/spike/jaspillite",
@@ -12,7 +10,6 @@
     "tfcflorae:rock/spike/mudstone",
     "tfcflorae:rock/spike/porphyry",
     "tfcflorae:rock/spike/red_granite",
-    "tfcflorae:rock/spike/sandstone",
     "tfcflorae:rock/spike/soapstone",
     "tfcflorae:rock/spike/wackestone"
   ]

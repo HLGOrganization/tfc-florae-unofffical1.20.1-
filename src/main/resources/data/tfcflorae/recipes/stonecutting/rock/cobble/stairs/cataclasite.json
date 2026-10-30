@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "tfcflorae:rock/cobble/cataclasite"
-  },
-  "result": "tfcflorae:rock/cobble/stairs/cataclasite",
-  "count": 1
-}

@@ -7,9 +7,6 @@
       "item": "tfc:ore/normal_bismuthinite/andesite"
     },
     {
-      "item": "tfcflorae:ore/normal_bismuthinite/arkose"
-    },
-    {
       "item": "tfc:ore/normal_bismuthinite/basalt"
     },
     {
@@ -17,9 +14,6 @@
     },
     {
       "item": "tfcflorae:ore/normal_bismuthinite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/normal_bismuthinite/cataclasite"
     },
     {
       "item": "tfc:ore/normal_bismuthinite/chalk"
@@ -82,9 +76,6 @@
       "item": "tfc:ore/normal_bismuthinite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/normal_bismuthinite/sandstone"
-    },
-    {
       "item": "tfc:ore/normal_bismuthinite/schist"
     },
     {
@@ -106,9 +97,6 @@
       "item": "tfc:ore/poor_bismuthinite/andesite"
     },
     {
-      "item": "tfcflorae:ore/poor_bismuthinite/arkose"
-    },
-    {
       "item": "tfc:ore/poor_bismuthinite/basalt"
     },
     {
@@ -116,9 +104,6 @@
     },
     {
       "item": "tfcflorae:ore/poor_bismuthinite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/poor_bismuthinite/cataclasite"
     },
     {
       "item": "tfc:ore/poor_bismuthinite/chalk"
@@ -181,9 +166,6 @@
       "item": "tfc:ore/poor_bismuthinite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/poor_bismuthinite/sandstone"
-    },
-    {
       "item": "tfc:ore/poor_bismuthinite/schist"
     },
     {
@@ -205,9 +187,6 @@
       "item": "tfc:ore/rich_bismuthinite/andesite"
     },
     {
-      "item": "tfcflorae:ore/rich_bismuthinite/arkose"
-    },
-    {
       "item": "tfc:ore/rich_bismuthinite/basalt"
     },
     {
@@ -215,9 +194,6 @@
     },
     {
       "item": "tfcflorae:ore/rich_bismuthinite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_bismuthinite/cataclasite"
     },
     {
       "item": "tfc:ore/rich_bismuthinite/chalk"
@@ -278,9 +254,6 @@
     },
     {
       "item": "tfc:ore/rich_bismuthinite/rhyolite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_bismuthinite/sandstone"
     },
     {
       "item": "tfc:ore/rich_bismuthinite/schist"

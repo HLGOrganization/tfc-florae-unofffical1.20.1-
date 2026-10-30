@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/halite/arkose",
     "tfcflorae:ore/halite/boninite",
     "tfcflorae:ore/halite/carbonatite",
-    "tfcflorae:ore/halite/cataclasite",
     "tfcflorae:ore/halite/jaspillite",
     "tfcflorae:ore/halite/laterite",
     "tfcflorae:ore/halite/mudstone",
     "tfcflorae:ore/halite/porphyry",
     "tfcflorae:ore/halite/red_granite",
-    "tfcflorae:ore/halite/sandstone",
     "tfcflorae:ore/halite/soapstone",
     "tfcflorae:ore/halite/wackestone"
   ]

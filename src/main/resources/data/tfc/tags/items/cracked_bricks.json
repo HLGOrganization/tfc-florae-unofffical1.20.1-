@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:rock/cracked_bricks/arkose",
     "tfcflorae:rock/cracked_bricks/boninite",
     "tfcflorae:rock/cracked_bricks/carbonatite",
-    "tfcflorae:rock/cracked_bricks/cataclasite",
     "tfcflorae:rock/cracked_bricks/jaspillite",
     "tfcflorae:rock/cracked_bricks/laterite",
     "tfcflorae:rock/cracked_bricks/mudstone",
     "tfcflorae:rock/cracked_bricks/porphyry",
     "tfcflorae:rock/cracked_bricks/red_granite",
-    "tfcflorae:rock/cracked_bricks/sandstone",
     "tfcflorae:rock/cracked_bricks/soapstone",
     "tfcflorae:rock/cracked_bricks/wackestone"
   ]

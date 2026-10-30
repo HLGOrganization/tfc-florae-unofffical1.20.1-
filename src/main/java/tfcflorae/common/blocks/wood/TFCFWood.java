@@ -57,9 +57,7 @@ public enum TFCFWood implements RegistryWood {
    ),
    BALD_CYPRESS(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
    BAMBOO(false, false, false, false, false, MapColor.COLOR_LIGHT_GREEN, MapColor.COLOR_LIGHT_GREEN, 10, 9),
-   BEECH(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    BLACK_WILLOW(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   BRAZILWOOD(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    BUTTERNUT(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    BUXUS(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    COCOBOLO(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
@@ -95,7 +93,6 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(245, 232, 241).getRGB()
    ),
-   HAZEL(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    HOLLY(
       false,
       true,
@@ -206,7 +203,6 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(255, 255, 249).getRGB()
    ),
-   KAURI(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    LAUREL(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    LIMBA(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    LOCUST(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
@@ -627,60 +623,6 @@ public enum TFCFWood implements RegistryWood {
       new Color(235, 114, 179).getRGB()
    ),
    WENGE(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
-   WHITEBEAM(
-      false,
-      false,
-      false,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      (Supplier<? extends Item>)TFCFItems.FOOD.get(TFCFFood.ROWAN_BERRY),
-      new Lifecycle[]{
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.HEALTHY,
-         Lifecycle.FRUITING,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY
-      },
-      new Color(255, 213, 213).getRGB()
-   ),
-   WHITE_CHERRY_BLOSSOM(
-      false,
-      false,
-      false,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      (Supplier<? extends Item>)TFCItems.FOOD.get(Food.CHERRY),
-      new Lifecycle[]{
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(237, 237, 239).getRGB()
-   ),
    WHITE_ELM(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    WHITE_IPE(
       false,
@@ -735,60 +677,6 @@ public enum TFCFWood implements RegistryWood {
          Lifecycle.DORMANT
       },
       new Color(241, 235, 238).getRGB()
-   ),
-   WHITE_MANGROVE(
-      false,
-      false,
-      true,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      17,
-      null,
-      new Lifecycle[]{
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(241, 251, 251).getRGB()
-   ),
-   YELLOW_JACARANDA(
-      false,
-      false,
-      false,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      null,
-      new Lifecycle[]{
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.HEALTHY,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(241, 167, 0).getRGB()
    ),
    YELLOW_MERANTI(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    YEW(

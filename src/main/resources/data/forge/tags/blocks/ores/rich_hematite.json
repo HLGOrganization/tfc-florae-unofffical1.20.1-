@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/rich_hematite/arkose",
     "tfcflorae:ore/rich_hematite/boninite",
     "tfcflorae:ore/rich_hematite/carbonatite",
-    "tfcflorae:ore/rich_hematite/cataclasite",
     "tfcflorae:ore/rich_hematite/jaspillite",
     "tfcflorae:ore/rich_hematite/laterite",
     "tfcflorae:ore/rich_hematite/mudstone",
     "tfcflorae:ore/rich_hematite/porphyry",
     "tfcflorae:ore/rich_hematite/red_granite",
-    "tfcflorae:ore/rich_hematite/sandstone",
     "tfcflorae:ore/rich_hematite/soapstone",
     "tfcflorae:ore/rich_hematite/wackestone"
   ]

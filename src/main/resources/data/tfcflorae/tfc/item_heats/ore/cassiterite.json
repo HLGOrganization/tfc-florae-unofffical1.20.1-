@@ -7,9 +7,6 @@
       "item": "tfc:ore/normal_cassiterite/andesite"
     },
     {
-      "item": "tfcflorae:ore/normal_cassiterite/arkose"
-    },
-    {
       "item": "tfc:ore/normal_cassiterite/basalt"
     },
     {
@@ -17,9 +14,6 @@
     },
     {
       "item": "tfcflorae:ore/normal_cassiterite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/normal_cassiterite/cataclasite"
     },
     {
       "item": "tfc:ore/normal_cassiterite/chalk"
@@ -82,9 +76,6 @@
       "item": "tfc:ore/normal_cassiterite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/normal_cassiterite/sandstone"
-    },
-    {
       "item": "tfc:ore/normal_cassiterite/schist"
     },
     {
@@ -106,9 +97,6 @@
       "item": "tfc:ore/poor_cassiterite/andesite"
     },
     {
-      "item": "tfcflorae:ore/poor_cassiterite/arkose"
-    },
-    {
       "item": "tfc:ore/poor_cassiterite/basalt"
     },
     {
@@ -116,9 +104,6 @@
     },
     {
       "item": "tfcflorae:ore/poor_cassiterite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/poor_cassiterite/cataclasite"
     },
     {
       "item": "tfc:ore/poor_cassiterite/chalk"
@@ -181,9 +166,6 @@
       "item": "tfc:ore/poor_cassiterite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/poor_cassiterite/sandstone"
-    },
-    {
       "item": "tfc:ore/poor_cassiterite/schist"
     },
     {
@@ -205,9 +187,6 @@
       "item": "tfc:ore/rich_cassiterite/andesite"
     },
     {
-      "item": "tfcflorae:ore/rich_cassiterite/arkose"
-    },
-    {
       "item": "tfc:ore/rich_cassiterite/basalt"
     },
     {
@@ -215,9 +194,6 @@
     },
     {
       "item": "tfcflorae:ore/rich_cassiterite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_cassiterite/cataclasite"
     },
     {
       "item": "tfc:ore/rich_cassiterite/chalk"
@@ -278,9 +254,6 @@
     },
     {
       "item": "tfc:ore/rich_cassiterite/rhyolite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_cassiterite/sandstone"
     },
     {
       "item": "tfc:ore/rich_cassiterite/schist"

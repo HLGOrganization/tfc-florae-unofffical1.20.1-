@@ -1,6 +1,0 @@
-{
-  "parent": "tfc:block/axle",
-  "textures": {
-    "wood": "tfcflorae:block/wood/sheet/whitebeam"
-  }
-}

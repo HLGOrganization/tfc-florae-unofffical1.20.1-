@@ -1,7 +1,0 @@
-{
-  "parent": "tfcflorae:block/template/soil_over_rock",
-  "textures": {
-    "rock": "tfcflorae:block/rock/raw/cataclasite",
-    "soil": "tfcflorae:block/compact_dirt/pebble_compact_dirt/mollisol"
-  }
-}

@@ -7,9 +7,6 @@
       "item": "tfc:ore/normal_native_silver/andesite"
     },
     {
-      "item": "tfcflorae:ore/normal_native_silver/arkose"
-    },
-    {
       "item": "tfc:ore/normal_native_silver/basalt"
     },
     {
@@ -17,9 +14,6 @@
     },
     {
       "item": "tfcflorae:ore/normal_native_silver/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/normal_native_silver/cataclasite"
     },
     {
       "item": "tfc:ore/normal_native_silver/chalk"
@@ -82,9 +76,6 @@
       "item": "tfc:ore/normal_native_silver/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/normal_native_silver/sandstone"
-    },
-    {
       "item": "tfc:ore/normal_native_silver/schist"
     },
     {
@@ -106,9 +97,6 @@
       "item": "tfc:ore/poor_native_silver/andesite"
     },
     {
-      "item": "tfcflorae:ore/poor_native_silver/arkose"
-    },
-    {
       "item": "tfc:ore/poor_native_silver/basalt"
     },
     {
@@ -116,9 +104,6 @@
     },
     {
       "item": "tfcflorae:ore/poor_native_silver/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/poor_native_silver/cataclasite"
     },
     {
       "item": "tfc:ore/poor_native_silver/chalk"
@@ -181,9 +166,6 @@
       "item": "tfc:ore/poor_native_silver/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/poor_native_silver/sandstone"
-    },
-    {
       "item": "tfc:ore/poor_native_silver/schist"
     },
     {
@@ -205,9 +187,6 @@
       "item": "tfc:ore/rich_native_silver/andesite"
     },
     {
-      "item": "tfcflorae:ore/rich_native_silver/arkose"
-    },
-    {
       "item": "tfc:ore/rich_native_silver/basalt"
     },
     {
@@ -215,9 +194,6 @@
     },
     {
       "item": "tfcflorae:ore/rich_native_silver/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_native_silver/cataclasite"
     },
     {
       "item": "tfc:ore/rich_native_silver/chalk"
@@ -278,9 +254,6 @@
     },
     {
       "item": "tfc:ore/rich_native_silver/rhyolite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_native_silver/sandstone"
     },
     {
       "item": "tfc:ore/rich_native_silver/schist"

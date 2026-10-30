@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:rock/hardened/arkose",
     "tfcflorae:rock/hardened/boninite",
     "tfcflorae:rock/hardened/carbonatite",
-    "tfcflorae:rock/hardened/cataclasite",
     "tfcflorae:rock/hardened/jaspillite",
     "tfcflorae:rock/hardened/laterite",
     "tfcflorae:rock/hardened/mudstone",
     "tfcflorae:rock/hardened/porphyry",
     "tfcflorae:rock/hardened/red_granite",
-    "tfcflorae:rock/hardened/sandstone",
     "tfcflorae:rock/hardened/soapstone",
     "tfcflorae:rock/hardened/wackestone"
   ]

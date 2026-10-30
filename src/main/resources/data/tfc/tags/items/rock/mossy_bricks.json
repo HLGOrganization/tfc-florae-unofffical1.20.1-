@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:rock/mossy_bricks/arkose",
     "tfcflorae:rock/mossy_bricks/boninite",
     "tfcflorae:rock/mossy_bricks/carbonatite",
-    "tfcflorae:rock/mossy_bricks/cataclasite",
     "tfcflorae:rock/mossy_bricks/jaspillite",
     "tfcflorae:rock/mossy_bricks/laterite",
     "tfcflorae:rock/mossy_bricks/mudstone",
     "tfcflorae:rock/mossy_bricks/porphyry",
     "tfcflorae:rock/mossy_bricks/red_granite",
-    "tfcflorae:rock/mossy_bricks/sandstone",
     "tfcflorae:rock/mossy_bricks/soapstone",
     "tfcflorae:rock/mossy_bricks/wackestone"
   ]

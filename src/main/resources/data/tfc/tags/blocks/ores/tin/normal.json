@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/normal_cassiterite/arkose",
     "tfcflorae:ore/normal_cassiterite/boninite",
     "tfcflorae:ore/normal_cassiterite/carbonatite",
-    "tfcflorae:ore/normal_cassiterite/cataclasite",
     "tfcflorae:ore/normal_cassiterite/jaspillite",
     "tfcflorae:ore/normal_cassiterite/laterite",
     "tfcflorae:ore/normal_cassiterite/mudstone",
     "tfcflorae:ore/normal_cassiterite/porphyry",
     "tfcflorae:ore/normal_cassiterite/red_granite",
-    "tfcflorae:ore/normal_cassiterite/sandstone",
     "tfcflorae:ore/normal_cassiterite/soapstone",
     "tfcflorae:ore/normal_cassiterite/wackestone"
   ]

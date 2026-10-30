@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/cinnabar/arkose",
     "tfcflorae:ore/cinnabar/boninite",
     "tfcflorae:ore/cinnabar/carbonatite",
-    "tfcflorae:ore/cinnabar/cataclasite",
     "tfcflorae:ore/cinnabar/jaspillite",
     "tfcflorae:ore/cinnabar/laterite",
     "tfcflorae:ore/cinnabar/mudstone",
     "tfcflorae:ore/cinnabar/porphyry",
     "tfcflorae:ore/cinnabar/red_granite",
-    "tfcflorae:ore/cinnabar/sandstone",
     "tfcflorae:ore/cinnabar/soapstone",
     "tfcflorae:ore/cinnabar/wackestone"
   ]

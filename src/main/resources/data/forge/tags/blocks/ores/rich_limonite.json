@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/rich_limonite/arkose",
     "tfcflorae:ore/rich_limonite/boninite",
     "tfcflorae:ore/rich_limonite/carbonatite",
-    "tfcflorae:ore/rich_limonite/cataclasite",
     "tfcflorae:ore/rich_limonite/jaspillite",
     "tfcflorae:ore/rich_limonite/laterite",
     "tfcflorae:ore/rich_limonite/mudstone",
     "tfcflorae:ore/rich_limonite/porphyry",
     "tfcflorae:ore/rich_limonite/red_granite",
-    "tfcflorae:ore/rich_limonite/sandstone",
     "tfcflorae:ore/rich_limonite/soapstone",
     "tfcflorae:ore/rich_limonite/wackestone"
   ]

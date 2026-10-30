@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/borax/arkose",
     "tfcflorae:ore/borax/boninite",
     "tfcflorae:ore/borax/carbonatite",
-    "tfcflorae:ore/borax/cataclasite",
     "tfcflorae:ore/borax/jaspillite",
     "tfcflorae:ore/borax/laterite",
     "tfcflorae:ore/borax/mudstone",
     "tfcflorae:ore/borax/porphyry",
     "tfcflorae:ore/borax/red_granite",
-    "tfcflorae:ore/borax/sandstone",
     "tfcflorae:ore/borax/soapstone",
     "tfcflorae:ore/borax/wackestone"
   ]

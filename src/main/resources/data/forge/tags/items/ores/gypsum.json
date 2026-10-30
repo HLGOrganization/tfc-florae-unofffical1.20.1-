@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/gypsum/arkose",
     "tfcflorae:ore/gypsum/boninite",
     "tfcflorae:ore/gypsum/carbonatite",
-    "tfcflorae:ore/gypsum/cataclasite",
     "tfcflorae:ore/gypsum/jaspillite",
     "tfcflorae:ore/gypsum/laterite",
     "tfcflorae:ore/gypsum/mudstone",
     "tfcflorae:ore/gypsum/porphyry",
     "tfcflorae:ore/gypsum/red_granite",
-    "tfcflorae:ore/gypsum/sandstone",
     "tfcflorae:ore/gypsum/soapstone",
     "tfcflorae:ore/gypsum/wackestone"
   ]

@@ -1,16 +1,13 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:ore/rich_native_copper/arkose",
     "tfcflorae:ore/rich_native_copper/boninite",
     "tfcflorae:ore/rich_native_copper/carbonatite",
-    "tfcflorae:ore/rich_native_copper/cataclasite",
     "tfcflorae:ore/rich_native_copper/jaspillite",
     "tfcflorae:ore/rich_native_copper/laterite",
     "tfcflorae:ore/rich_native_copper/mudstone",
     "tfcflorae:ore/rich_native_copper/porphyry",
     "tfcflorae:ore/rich_native_copper/red_granite",
-    "tfcflorae:ore/rich_native_copper/sandstone",
     "tfcflorae:ore/rich_native_copper/soapstone",
     "tfcflorae:ore/rich_native_copper/wackestone"
   ]

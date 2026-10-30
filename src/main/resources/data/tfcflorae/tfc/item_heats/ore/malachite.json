@@ -7,9 +7,6 @@
       "item": "tfc:ore/normal_malachite/andesite"
     },
     {
-      "item": "tfcflorae:ore/normal_malachite/arkose"
-    },
-    {
       "item": "tfc:ore/normal_malachite/basalt"
     },
     {
@@ -17,9 +14,6 @@
     },
     {
       "item": "tfcflorae:ore/normal_malachite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/normal_malachite/cataclasite"
     },
     {
       "item": "tfc:ore/normal_malachite/chalk"
@@ -82,9 +76,6 @@
       "item": "tfc:ore/normal_malachite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/normal_malachite/sandstone"
-    },
-    {
       "item": "tfc:ore/normal_malachite/schist"
     },
     {
@@ -106,9 +97,6 @@
       "item": "tfc:ore/poor_malachite/andesite"
     },
     {
-      "item": "tfcflorae:ore/poor_malachite/arkose"
-    },
-    {
       "item": "tfc:ore/poor_malachite/basalt"
     },
     {
@@ -116,9 +104,6 @@
     },
     {
       "item": "tfcflorae:ore/poor_malachite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/poor_malachite/cataclasite"
     },
     {
       "item": "tfc:ore/poor_malachite/chalk"
@@ -181,9 +166,6 @@
       "item": "tfc:ore/poor_malachite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/poor_malachite/sandstone"
-    },
-    {
       "item": "tfc:ore/poor_malachite/schist"
     },
     {
@@ -205,9 +187,6 @@
       "item": "tfc:ore/rich_malachite/andesite"
     },
     {
-      "item": "tfcflorae:ore/rich_malachite/arkose"
-    },
-    {
       "item": "tfc:ore/rich_malachite/basalt"
     },
     {
@@ -215,9 +194,6 @@
     },
     {
       "item": "tfcflorae:ore/rich_malachite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_malachite/cataclasite"
     },
     {
       "item": "tfc:ore/rich_malachite/chalk"
@@ -278,9 +254,6 @@
     },
     {
       "item": "tfc:ore/rich_malachite/rhyolite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_malachite/sandstone"
     },
     {
       "item": "tfc:ore/rich_malachite/schist"

@@ -7,9 +7,6 @@
       "item": "tfc:ore/normal_tetrahedrite/andesite"
     },
     {
-      "item": "tfcflorae:ore/normal_tetrahedrite/arkose"
-    },
-    {
       "item": "tfc:ore/normal_tetrahedrite/basalt"
     },
     {
@@ -17,9 +14,6 @@
     },
     {
       "item": "tfcflorae:ore/normal_tetrahedrite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/normal_tetrahedrite/cataclasite"
     },
     {
       "item": "tfc:ore/normal_tetrahedrite/chalk"
@@ -82,9 +76,6 @@
       "item": "tfc:ore/normal_tetrahedrite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/normal_tetrahedrite/sandstone"
-    },
-    {
       "item": "tfc:ore/normal_tetrahedrite/schist"
     },
     {
@@ -106,9 +97,6 @@
       "item": "tfc:ore/poor_tetrahedrite/andesite"
     },
     {
-      "item": "tfcflorae:ore/poor_tetrahedrite/arkose"
-    },
-    {
       "item": "tfc:ore/poor_tetrahedrite/basalt"
     },
     {
@@ -116,9 +104,6 @@
     },
     {
       "item": "tfcflorae:ore/poor_tetrahedrite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/poor_tetrahedrite/cataclasite"
     },
     {
       "item": "tfc:ore/poor_tetrahedrite/chalk"
@@ -181,9 +166,6 @@
       "item": "tfc:ore/poor_tetrahedrite/rhyolite"
     },
     {
-      "item": "tfcflorae:ore/poor_tetrahedrite/sandstone"
-    },
-    {
       "item": "tfc:ore/poor_tetrahedrite/schist"
     },
     {
@@ -205,9 +187,6 @@
       "item": "tfc:ore/rich_tetrahedrite/andesite"
     },
     {
-      "item": "tfcflorae:ore/rich_tetrahedrite/arkose"
-    },
-    {
       "item": "tfc:ore/rich_tetrahedrite/basalt"
     },
     {
@@ -215,9 +194,6 @@
     },
     {
       "item": "tfcflorae:ore/rich_tetrahedrite/carbonatite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_tetrahedrite/cataclasite"
     },
     {
       "item": "tfc:ore/rich_tetrahedrite/chalk"
@@ -278,9 +254,6 @@
     },
     {
       "item": "tfc:ore/rich_tetrahedrite/rhyolite"
-    },
-    {
-      "item": "tfcflorae:ore/rich_tetrahedrite/sandstone"
     },
     {
       "item": "tfc:ore/rich_tetrahedrite/schist"

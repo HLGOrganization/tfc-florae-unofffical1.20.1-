@@ -41,11 +41,8 @@ public enum TFCFRock implements TFCFRegistryRock {
    CARBONATITE(RockCategory.IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_YELLOW, "YELLOW"),
    LATERITE(RockCategory.SEDIMENTARY, MapColor.TERRACOTTA_ORANGE, "ORANGE"),
    MUDSTONE(RockCategory.SEDIMENTARY, MapColor.TERRACOTTA_LIGHT_GRAY, "LIGHT_GRAY"),
-   SANDSTONE(RockCategory.SEDIMENTARY, MapColor.TERRACOTTA_YELLOW, "YELLOW"),
-   ARKOSE(RockCategory.SEDIMENTARY, MapColor.TERRACOTTA_BROWN, "BROWN"),
    JASPILLITE(RockCategory.SEDIMENTARY, MapColor.TERRACOTTA_RED, "RED"),
    WACKESTONE(RockCategory.SEDIMENTARY, MapColor.TERRACOTTA_BLACK, "BLACK"),
-   CATACLASITE(RockCategory.METAMORPHIC, MapColor.TERRACOTTA_GRAY, "GRAY"),
    SOAPSTONE(RockCategory.METAMORPHIC, MapColor.TERRACOTTA_CYAN, "CYAN"),
    TUFF(RockCategory.IGNEOUS_EXTRUSIVE, MapColor.TERRACOTTA_GRAY, "GRAY");
 
@@ -247,7 +244,6 @@ public enum TFCFRock implements TFCFRegistryRock {
             break;
          case "porphyry":
          case "boninite":
-         case "cataclasite":
             var10000 = RockDisplayCategory.INTERMEDIATE_IGNEOUS_EXTRUSIVE;
             break;
          case "granite":
@@ -274,12 +270,10 @@ public enum TFCFRock implements TFCFRegistryRock {
          case "dolomite":
          case "chert":
          case "chalk":
-         case "arkose":
          case "mudstone":
          case "wackestone":
          case "carbonatite":
          case "laterite":
-         case "sandstone":
          case "jaspillite":
          case "dripstone":
          case "gypsum":
