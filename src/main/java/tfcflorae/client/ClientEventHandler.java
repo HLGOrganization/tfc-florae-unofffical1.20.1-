@@ -59,7 +59,6 @@ import tfcflorae.client.render.blockentity.MineralSheetBlockEntityRenderer;
 import tfcflorae.client.render.entity.CodLikeRenderer;
 import tfcflorae.client.render.entity.SalmonLikeRenderer;
 import tfcflorae.client.render.entity.TFCFSimpleMobRenderer;
-import tfcflorae.client.screen.ceramics.LargeVesselScreen;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.rock.Mineral;
@@ -95,7 +94,6 @@ public class ClientEventHandler {
          () -> {
             // 打制界面统一成一个菜单（与 TFC 一致），具体材质由 KnappingType 决定
             MenuScreens.register((MenuType)TFCFContainerTypes.KNAPPING.get(), KnappingScreen::new);
-            MenuScreens.register((MenuType)TFCFContainerTypes.LARGE_VESSEL.get(), LargeVesselScreen::new);
             TFCFBlocks.WOODS
                .values()
                .forEach(

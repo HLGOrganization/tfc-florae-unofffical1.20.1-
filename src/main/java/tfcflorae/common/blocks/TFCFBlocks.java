@@ -84,7 +84,6 @@ import tfcflorae.client.TFCFSounds;
 import tfcflorae.common.blockentities.SilkmothNestBlockEntity;
 import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.ceramics.Clay;
-import tfcflorae.common.blocks.ceramics.LargeVesselBlock;
 import tfcflorae.common.blocks.devices.SilkmothNestBlock;
 import tfcflorae.common.blocks.devices.TFCFSluiceBlock;
 import tfcflorae.common.blocks.plant.BambooSaplingPlantBlock;
@@ -1227,13 +1226,13 @@ public final class TFCFBlocks {
                clay,
                register(
                   ("ceramic/" + clay.getSerializedName()).toLowerCase(Locale.ROOT) + "/fired/large_vessel",
-                  () -> new LargeVesselBlock(
+                  () -> new net.dries007.tfc.common.blocks.LargeVesselBlock(
                         ExtendedProperties.of(
                               net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(clay.getMaterialColor())
                                  .strength(2.5F)
                                  .noOcclusion()
                            )
-                           .blockEntity(TFCFBlockEntities.LARGE_VESSEL)
+                           .blockEntity(net.dries007.tfc.common.blockentities.TFCBlockEntities.LARGE_VESSEL)
                      ),
                   TFCCreativeTabs.MISC
                )

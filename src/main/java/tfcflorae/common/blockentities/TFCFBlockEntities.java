@@ -17,7 +17,6 @@ import net.minecraft.world.level.block.entity.BlockEntityType.BlockEntitySupplie
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import tfcflorae.common.blockentities.ceramics.LargeVesselBlockEntity;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.soil.TFCFSoil;
 
@@ -41,10 +40,6 @@ public class TFCFBlockEntities {
    );
    public static final RegistryObject<BlockEntityType<WebbedChestBlockEntity>> WEBBED_CHEST = register(
       "webbed_chest", WebbedChestBlockEntity::new, blockStreams(TFCFBlocks.WEBBED_CHEST)
-
-   );
-   public static final RegistryObject<BlockEntityType<LargeVesselBlockEntity>> LARGE_VESSEL = register(
-      "large_vessel", LargeVesselBlockEntity::new, blockStreams(TFCFBlocks.CLAY_LARGE_VESSELS.values().stream())
 
    );
    public static final RegistryObject<BlockEntityType<SilkmothNestBlockEntity>> SILKMOTH_NEST = register(

@@ -57,10 +57,32 @@ public final class TFCFRotationBlockEntities
         modifyBlockEntityType("loom", TFCBlockEntities.LOOM.get(), BlockType.LOOM);
         extendTickCounter();
         extendRockAnvils();
+        extendLargeVessels();
         extendSoilBlockEntity();
     }
 
-    /** Rock anvils use TFC's RockAnvilBlock, hence TFCBlockEntities.ANVIL. */
+    /** Fired clay large vessels use TFC's LargeVesselBlock, hence its block entity. */
+   private static void extendLargeVessels()
+   {
+      try
+      {
+         final Set<Block> extra = new HashSet<>();
+         for (Object value : TFCFBlocks.CLAY_LARGE_VESSELS.values())
+         {
+            if (value instanceof RegistryObject<?> reg && reg.get() instanceof Block block)
+            {
+               extra.add(block);
+            }
+         }
+         addBlocks("large_vessel", TFCBlockEntities.LARGE_VESSEL.get(), extra);
+      }
+      catch (Throwable t)
+      {
+         LOGGER.error("TFCFlorae: could not extend the TFC large vessel block entity type", t);
+      }
+   }
+
+   /** Rock anvils use TFC's RockAnvilBlock, hence TFCBlockEntities.ANVIL. */
    private static void extendRockAnvils()
    {
       try
