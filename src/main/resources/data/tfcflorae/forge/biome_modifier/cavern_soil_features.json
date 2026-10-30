@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "tfcflorae:caverns/jungle/floor",
+    "tfcflorae:caverns/jungle/floor_soil",
+    "tfcflorae:caverns/webbed/floor",
+    "tfcflorae:caverns/thermal/dripleaf_clay",
+    "tfcflorae:caverns/thermal/lichen_clay"
+  ],
+  "step": "underground_decoration"
+}
