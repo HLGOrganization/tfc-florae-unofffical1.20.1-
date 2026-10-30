@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:rock/flagstone/tuff",
-  "result": "tfcflorae:rock/flagstone_bricks/tuff",
-  "mode": "smooth"
-}
