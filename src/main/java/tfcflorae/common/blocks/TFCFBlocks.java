@@ -334,9 +334,6 @@ public final class TFCFBlocks {
    );
    public static final Map<Colors, RegistryObject<Block>> SAND = sandMap(Colors.class);
    public static final Map<Colors, RegistryObject<Block>> SAND_LAYERS = sandLayerMap(Colors.class);
-   public static final Map<TFCFGroundcoverBlockType, RegistryObject<Block>> GROUNDCOVER = Helpers.mapOfKeys(
-      TFCFGroundcoverBlockType.class, type -> register("groundcover/" + type.name(), () -> new TFCFGroundcoverBlock(type), type.createBlockItem())
-   );
    // TFC 的这 8 种矿石只以物品形式存在（宝石 / 火药类），从未提供方块贴图与模型。
    // 在岩石上注册成矿方块只会得到紫黑方块，因此不生成。
    private static final java.util.Set<Ore> ORE_WITHOUT_BLOCK = java.util.EnumSet.of(

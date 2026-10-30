@@ -18,7 +18,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import tfcflorae.common.TFCFTags;
 import tfcflorae.common.blocks.TFCFBlocks;
-import tfcflorae.common.blocks.TFCFGroundcoverBlockType;
 import tfcflorae.common.blocks.rock.MineralSheetBlock;
 import tfcflorae.common.container.TFCFContainerProviders;
 
@@ -88,10 +87,5 @@ public final class TFCFInteractionManager {
          }
       );
 
-      for (TFCFGroundcoverBlockType type : TFCFGroundcoverBlockType.values()) {
-         if (type.getVanillaItem() != null) {
-            InteractionManager.register(new BlockItemPlacement(type.getVanillaItem(), (Supplier)TFCFBlocks.GROUNDCOVER.get(type)));
-         }
-      }
    }
 }

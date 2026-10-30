@@ -4,7 +4,6 @@
   "values": [
     "tfc:groundcover/clam",
     "tfc:groundcover/mollusk",
-    "tfc:groundcover/mussel",
-    "tfcflorae:groundcover/sea_urchin"
+    "tfc:groundcover/mussel"
   ]
 }

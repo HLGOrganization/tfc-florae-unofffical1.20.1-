@@ -365,7 +365,6 @@ public class ClientEventHandler {
       ItemBlockRenderTypes.setRenderLayer((Block)TFCFBlocks.OCHRE_FROGLIGHT.get(), cutout);
       ItemBlockRenderTypes.setRenderLayer((Block)TFCFBlocks.VERDANT_FROGLIGHT.get(), cutout);
       ItemBlockRenderTypes.setRenderLayer((Block)TFCFBlocks.PEARLESCENT_FROGLIGHT.get(), cutout);
-      TFCFBlocks.GROUNDCOVER.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
    }
 
    public static void registerEntityRenderers(RegisterRenderers event) {
