@@ -127,7 +127,7 @@
           }
         ]
       },
-      "vegetation_feature": "minecraft:patch_grass"
+      "vegetation_feature": "tfc:plant/blue_ginger"
     }
   },
   "placement": [
