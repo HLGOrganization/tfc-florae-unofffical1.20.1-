@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/sandstone/layered/blue",
-    "top": "tfcflorae:block/sandstone/layered/blue",
-    "side": "tfcflorae:block/sandstone/layered/blue"
-  }
-}

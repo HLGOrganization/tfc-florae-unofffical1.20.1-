@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/chiseled/cataclasite",
-    "top": "tfcflorae:block/rock/chiseled/cataclasite",
-    "side": "tfcflorae:block/rock/chiseled/cataclasite"
-  }
-}

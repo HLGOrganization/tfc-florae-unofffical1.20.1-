@@ -1,8 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfc:block/rock/chiseled/chert",
-    "top": "tfc:block/rock/chiseled/chert",
-    "side": "tfc:block/rock/chiseled/chert"
-  }
-}

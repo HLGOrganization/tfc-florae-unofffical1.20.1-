@@ -1,8 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/chiseled/wackestone",
-    "top": "tfcflorae:block/rock/chiseled/wackestone",
-    "side": "tfcflorae:block/rock/chiseled/wackestone"
-  }
-}

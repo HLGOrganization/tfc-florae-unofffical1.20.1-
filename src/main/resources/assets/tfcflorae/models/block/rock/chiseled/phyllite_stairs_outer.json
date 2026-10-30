@@ -1,8 +1,0 @@
-{
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "tfc:block/rock/chiseled/phyllite",
-    "top": "tfc:block/rock/chiseled/phyllite",
-    "side": "tfc:block/rock/chiseled/phyllite"
-  }
-}

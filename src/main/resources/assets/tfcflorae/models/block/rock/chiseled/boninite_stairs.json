@@ -1,8 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "tfcflorae:block/rock/chiseled/boninite",
-    "top": "tfcflorae:block/rock/chiseled/boninite",
-    "side": "tfcflorae:block/rock/chiseled/boninite"
-  }
-}
