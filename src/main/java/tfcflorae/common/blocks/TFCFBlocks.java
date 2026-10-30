@@ -1319,15 +1319,11 @@ public final class TFCFBlocks {
             continue;
          }
          // 只注册 TFC 自带的 4 种土壤变体；TFE 新增的 4 种变体只有多石土一族有资源，
-         // 这里不注册，否则 grass/fluvisol 之类的方块没有 blockstate、会显示为紫黑
+         // 这里用过滤后的数组，不能返回 null（mapOfKeys 内部用 Map.merge，null 会 NPE）
          Map.put(type, Helpers.mapOfKeys(
             TFCFSoil.TFCFVariant.class,
-            variant -> {
-               if (variant.isTfeOnly()) {
-                  return null;
-               }
-               return register(type.name() + "/" + variant.name(), () -> type.TFCFCreate(variant), TFCCreativeTabs.EARTH);
-            }
+            variant -> !variant.isTfeOnly(),
+            variant -> register(type.name() + "/" + variant.name(), () -> type.TFCFCreate(variant), TFCCreativeTabs.EARTH)
          ));
       }
 
