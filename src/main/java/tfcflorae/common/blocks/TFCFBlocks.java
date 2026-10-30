@@ -1445,6 +1445,16 @@ public final class TFCFBlocks {
                            TFCCreativeTabs.WOOD
                         )
                      );
+                  } else if (type == BlockType.BOOKSHELF) {
+                     // 竹子也有书架（原模组提供了 bamboo 的整套雕纹书架贴图）
+                     subMap.put(
+                        type,
+                        register(
+                           ("wood/planks/" + wood.getSerializedName() + "_bookshelf").toLowerCase(Locale.ROOT),
+                           () -> type.create(wood).get(),
+                           type.createBlockItem(wood, new Properties())
+                        )
+                     );
                   } else if (type == BlockType.SAPLING) {
                      subMap.put(
                         type,
