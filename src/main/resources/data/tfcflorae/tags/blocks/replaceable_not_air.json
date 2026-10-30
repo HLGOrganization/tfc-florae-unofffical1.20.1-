@@ -7,11 +7,11 @@
     "#forge:gravel",
     "#forge:cobblestone",
     "#minecraft:dirt",
-    "minecraft:coarse_dirt",
+    "#minecraft:coarse_dirt",
     "#minecraft:sand",
     "#minecraft:moss_replaceable",
     "#minecraft:terracotta",
-    "minecraft:magma_block",
+    "#tfc:magma_block",
     "minecraft:clay",
     "minecraft:calcite",
     "#tfcflorae:rocky_compact_dirt"

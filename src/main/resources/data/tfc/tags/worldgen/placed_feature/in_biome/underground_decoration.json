@@ -1,0 +1,21 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:cave_column",
+    "tfc:cave_spike",
+    "tfc:large_cave_spike",
+    "tfc:water_spring",
+    "tfc:calcite",
+    "tfc:mega_calcite",
+    "tfc:icicle",
+    "tfc:underground_loose_rocks",
+    "tfc:underground_guano_patch",
+    "tfc:underground_rock_pile",
+    "tfcflorae:caverns/jungle/floor",
+    "tfcflorae:caverns/jungle/floor_soil",
+    "tfcflorae:caverns/webbed/floor",
+    "tfcflorae:caverns/thermal/dripleaf_clay",
+    "tfcflorae:caverns/thermal/lichen_clay"
+  ]
+}
