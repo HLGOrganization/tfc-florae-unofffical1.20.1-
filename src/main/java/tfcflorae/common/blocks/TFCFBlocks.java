@@ -163,6 +163,7 @@ public final class TFCFBlocks {
    public static final Map<TFCFSoil, Map<Variant, RegistryObject<Block>>> TFCSOIL = TFCSoilMap(TFCFSoil.class);
    public static final Map<TFCFSoil.TFCFVariant, DecorationBlockRegistryObject> MUD_BRICK_DECORATIONS = Helpers.mapOfKeys(
       TFCFSoil.TFCFVariant.class,
+      variant -> !variant.isTfeOnly(),
       variant -> new DecorationBlockRegistryObject(
             register("mud_bricks/" + variant.name() + "_slab", () -> new SlabBlock(net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(MapColor.DIRT).sound(SoundType.MUD_BRICKS).strength(2.6F)), TFCCreativeTabs.DECORATIONS),
             register(
@@ -2123,6 +2124,10 @@ public final class TFCFBlocks {
             Map<TFCFSoil.TFCFVariant, RegistryObject<Block>> soilVariantMap = new HashMap<>();
 
             for (TFCFSoil.TFCFVariant soilVariant : TFCFSoil.TFCFVariant.values()) {
+               // TFE 变体只在多石土一族注册，这里跳过
+               if (soilVariant.isTfeOnly()) {
+                  continue;
+               }
                BiFunction<Block, Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
                Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Properties());
                soilVariantMap.put(

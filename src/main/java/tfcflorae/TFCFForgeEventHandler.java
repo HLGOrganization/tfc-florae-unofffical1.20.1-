@@ -144,6 +144,10 @@ public class TFCFForgeEventHandler {
       }
 
       for (TFCFSoil.TFCFVariant variant : TFCFSoil.TFCFVariant.values()) {
+         // TFE 变体只在多石土一族注册，TFCFSOIL 里没有它们，直接跳过
+         if (variant.isTfeOnly()) {
+            continue;
+         }
          if (block == TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(variant).get()
             && event.getHand() == InteractionHand.MAIN_HAND
             && event.getItemStack().canPerformAction(ToolActions.SHOVEL_FLATTEN)) {

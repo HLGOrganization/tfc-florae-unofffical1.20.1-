@@ -164,6 +164,10 @@ public abstract class FungiBlock extends TFCBushBlock {
          }
 
          for (TFCFSoil.TFCFVariant soilVariantx : TFCFSoil.TFCFVariant.values()) {
+         // TFE 变体只在多石土一族注册，TFCFSOIL 里没有它们
+         if (soilVariantx.isTfeOnly()) {
+            continue;
+         }
             if (blockBelow == TFCFBlocks.TFCFSOIL.get(TFCFSoil.ROOTED_DIRT).get(soilVariantx).get()
                || blockBelow == TFCFBlocks.TFCFSOIL.get(TFCFSoil.DIRT).get(soilVariantx).get()) {
                level.setBlock(posBelow, ((Block)TFCFBlocks.TFCFSOIL.get(TFCFSoil.MYCELIUM_DIRT).get(soilVariantx).get()).defaultBlockState(), 3);
