@@ -1,15 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tfcflorae:food/acorn_squash",
-    "tfcflorae:food/aehobak",
-    "tfcflorae:food/butternut",
-    "tfcflorae:food/crookneck",
-    "tfcflorae:food/cucumber",
-    "tfcflorae:food/fresh_seaweed",
-    "tfcflorae:food/scallopini",
-    "tfcflorae:food/tromboncino",
-    "tfcflorae:food/zucchini",
     "tfcflorae:food/roasted_amanita",
     "tfcflorae:food/roasted_beefsteak_fungus",
     "tfcflorae:food/roasted_birch_polypore",

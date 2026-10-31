@@ -1,9 +1,0 @@
-{
-  "ingredient": {
-    "item": "tfcflorae:food/tromboncino"
-  },
-  "hunger": 4,
-  "saturation": 0.5,
-  "decay_modifier": 3,
-  "vegetables": 1
-}

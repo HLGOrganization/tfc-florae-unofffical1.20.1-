@@ -569,25 +569,6 @@ public final class TFCFItems {
                         ))
                   )
                );
-            } else if (food == TFCFFood.EUCALYPTUS_LEAVES) {
-               Map.put(
-                  food,
-                  register(
-                     "food/" + food.name(),
-                     (Supplier<Item>)(() -> new Item(
-                           new Properties()
-                              .food(
-                                 new Builder()
-                                    .nutrition(0)
-                                    .saturationMod(0.0F)
-                                    .effect(new MobEffectInstance(MobEffects.POISON, 35, 0), 0.2F)
-                                    .alwaysEat()
-                                    .build()
-                              )
-                              
-                        ))
-                  )
-               );
             } else {
                Map.put(food, register("food/" + food.name(), (Supplier<Item>)(() -> new Item(food.createProperties()))));
             }

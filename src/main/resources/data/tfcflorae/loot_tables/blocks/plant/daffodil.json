@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:plant/death_cap",
+          "name": "tfcflorae:plant/daffodil",
           "conditions": [
             {
               "condition": "minecraft:match_tool",

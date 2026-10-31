@@ -93,33 +93,6 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(245, 232, 241).getRGB()
    ),
-   HOLLY(
-      false,
-      true,
-      false,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      (Supplier<? extends Item>)TFCFItems.FOOD.get(TFCFFood.HOLLY_BERRY),
-      new Lifecycle[]{
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(232, 211, 229).getRGB()
-   ),
    HORNBEAM(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    IROKO(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    JABUTICABEIRA(

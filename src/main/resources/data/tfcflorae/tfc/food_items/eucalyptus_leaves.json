@@ -1,9 +1,0 @@
-{
-  "ingredient": {
-    "item": "tfcflorae:food/eucalyptus_leaves"
-  },
-  "hunger": 2,
-  "saturation": 0,
-  "decay_modifier": 3,
-  "vegetables": 0.5
-}

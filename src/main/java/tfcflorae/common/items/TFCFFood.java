@@ -6,42 +6,24 @@ import net.minecraft.world.food.FoodProperties.Builder;
 import net.minecraft.world.item.Item.Properties;
 
 public enum TFCFFood {
-   BARREL_CACTUS_FRUIT(false, false),
-   CARAMBOLA(false, false),
    DRAGONBERRY(false, true, true),
    GLOW_BERRY(false, true),
    HAWTHORN(false, true),
-   HOLLY_BERRY(false, true),
    JABUTICABA(false, true),
    JOSHUA_FRUIT(false, false),
    JUNIPER(false, true),
-   KIWI(false, false),
    MEDLAR(false, false),
    MULBERRY(false, true),
    OSAGE_ORANGE(false, false),
    OTAHEITE_APPLE(false, false),
-   PAPAYA(false, false),
    PEAR(false, false),
    PERSIMMON(false, false),
    PITAHAYA(false, false),
-   PRICKLY_PEAR(false, false),
    QUINCE(false, false),
-   RIBERRY(false, true),
    ROWAN_BERRY(false, true),
-   SAGUARO(false, false),
-   SKY_FRUIT(false, false),
    SLOE(false, true),
    SORB_APPLE(false, false),
    YEW_BERRY(false, true),
-   ACORN_SQUASH(false, false),
-   AEHOBAK(false, false),
-   BUTTERNUT(false, false),
-   CROOKNECK(false, false),
-   CUCUMBER(false, false),
-   SCALLOPINI(false, false),
-   TROMBONCINO(false, false),
-   ZUCCHINI(false, false),
-   FRESH_SEAWEED(false, true),
    ROASTED_AMANITA(false, false, true),
    ROASTED_BEEFSTEAK_FUNGUS(false, false),
    ROASTED_BIRCH_POLYPORE(false, false),
@@ -68,15 +50,14 @@ public enum TFCFFood {
    ROASTED_TURKEY_TAIL(false, false, true),
    ROASTED_WEEPING_MILK_CAP(false, false),
    ROASTED_WOOD_BLEWIT(false, false),
-   ROASTED_WOOLLY_GOMPHUS(false, false, true),
-   EUCALYPTUS_LEAVES(false, false, true);
+   ROASTED_WOOLLY_GOMPHUS(false, false, true);
 
    public final boolean meat;
    public final boolean fast;
    public final boolean hasEffect;
 
    private TFCFFood(boolean meat, boolean fast) {
-      this(false, false, false);
+      this(meat, fast, false);
    }
 
    private TFCFFood(boolean meat, boolean fast, boolean hasEffect) {
