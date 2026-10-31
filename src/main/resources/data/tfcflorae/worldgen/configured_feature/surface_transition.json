@@ -1,0 +1,13 @@
+{
+  "type": "tfcflorae:surface_transition",
+  "config": {
+    "width_min": 2,
+    "width_max": 3,
+    "search_depth": 8,
+    "dirt_to_sand": true,
+    "grass_to_sand": true,
+    "dirt_to_rock": true,
+    "grass_to_rock": false,
+    "sand_to_rock": true
+  }
+}

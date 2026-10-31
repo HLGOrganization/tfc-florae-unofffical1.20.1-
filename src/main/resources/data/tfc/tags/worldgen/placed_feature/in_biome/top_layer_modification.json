@@ -1,0 +1,7 @@
+{
+  "__comment__": "把本模组的地表过渡带并进 TFC 的 top_layer_modification（Forge 会与 TFC 的同名标签合并，不是覆盖）",
+  "replace": false,
+  "values": [
+    "tfcflorae:surface_transition"
+  ]
+}

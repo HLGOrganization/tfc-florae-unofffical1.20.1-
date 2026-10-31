@@ -39,6 +39,13 @@ public final class TFCFFeatures {
     public static final RegistryObject<TemplateTreeFeature> TEMPLATE_TREE =
         register("template_tree", TemplateTreeFeature::new, RandomTreeConfig.CODEC);
 
+    /**
+     * 地表过渡带：在 岩 / 土 / 沙 三类表层的交界处铺 2-3 格宽的「多石」变体。
+     * 挂在 {@code #tfc:in_biome/top_layer_modification} 上，覆盖 TFC 全部群系。
+     */
+    public static final RegistryObject<SurfaceTransitionFeature> SURFACE_TRANSITION =
+        register("surface_transition", SurfaceTransitionFeature::new, SurfaceTransitionConfig.CODEC);
+
     private TFCFFeatures() {}
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> RegistryObject<F> register(
