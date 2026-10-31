@@ -1,4 +1,5 @@
 package tfcflorae;
+import tfcflorae.common.TFCFCreativeTabEvents;
 import tfcflorae.common.TFCFCreativeTabs;
 
 import com.mojang.logging.LogUtils;
@@ -46,6 +47,8 @@ public class TFCFlorae {
       IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
       bus.addListener(this::setup);
       bus.addListener(TFCFEntities::onEntityAttributeCreation);
+      // 果树整套追加进 TFC 的「木质」创造页（1.20.1 只能走 BuildCreativeModeTabContentsEvent）
+      bus.addListener(TFCFCreativeTabEvents::onBuildContents);
       TFCFItems.ITEMS.register(bus);
       TFCFBlocks.BLOCKS.register(bus);
       TFCFContainerTypes.CONTAINERS.register(bus);
