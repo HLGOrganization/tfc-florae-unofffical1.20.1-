@@ -1,0 +1,45 @@
+{
+  "type": "tfc_ie_addon:quartz_geode",
+  "config": {
+    "outer": "tfc:rock/hardened/basalt",
+    "middle": "tfc:rock/raw/quartzite",
+    "inner": [
+      {
+        "data": "tfcflorae:crystal/budding/amethyst",
+        "weight": 2
+      },
+      {
+        "data": "tfcflorae:crystal/amethyst",
+        "weight": 5
+      },
+      {
+        "data": "tfc:rock/raw/quartzite",
+        "weight": 1
+      }
+    ],
+    "filling": [
+      {
+        "data": "minecraft:air",
+        "weight": 1
+      }
+    ],
+    "inner_placements": [
+      {
+        "data": "tfcflorae:crystal/cluster/amethyst",
+        "weight": 1
+      },
+      {
+        "data": "tfcflorae:crystal/large_bud/amethyst",
+        "weight": 3
+      },
+      {
+        "data": "tfcflorae:crystal/medium_bud/amethyst",
+        "weight": 5
+      },
+      {
+        "data": "tfcflorae:crystal/small_bud/amethyst",
+        "weight": 8
+      }
+    ]
+  }
+}
