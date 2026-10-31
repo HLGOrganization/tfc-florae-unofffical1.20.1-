@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/leaves_overlay",
+  "textures": {
+    "all": "tfcflorae:block/fruit_tree/jabuticabeira_leaves",
+    "overlay": "tfcflorae:block/fruit_tree/jabuticabeira_flowering_leaves"
+  }
+}

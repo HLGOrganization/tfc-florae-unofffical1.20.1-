@@ -1,0 +1,6 @@
+{
+  "type": "tfc:fruit_trees",
+  "config": {
+    "state": "tfcflorae:plant/mulberry_growing_branch"
+  }
+}

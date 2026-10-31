@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "tfcflorae:block/fruit_tree/quince_leaves"
+  }
+}

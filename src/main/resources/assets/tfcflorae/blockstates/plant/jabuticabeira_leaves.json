@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lifecycle=flowering": {
+      "model": "tfcflorae:block/plant/jabuticabeira_flowering_leaves"
+    },
+    "lifecycle=fruiting": {
+      "model": "tfcflorae:block/plant/jabuticabeira_fruiting_leaves"
+    },
+    "lifecycle=dormant": {
+      "model": "tfcflorae:block/plant/jabuticabeira_dry_leaves"
+    },
+    "lifecycle=healthy": {
+      "model": "tfcflorae:block/plant/jabuticabeira_leaves"
+    }
+  }
+}

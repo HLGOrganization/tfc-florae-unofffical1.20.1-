@@ -1,0 +1,6 @@
+{
+  "type": "tfc:fruit_trees",
+  "config": {
+    "state": "tfcflorae:plant/sorb_growing_branch"
+  }
+}

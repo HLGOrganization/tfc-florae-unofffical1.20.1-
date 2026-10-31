@@ -2,6 +2,7 @@ package tfcflorae.common.blocks;
 import net.minecraft.core.registries.Registries;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.function.BiFunction;
@@ -94,6 +95,7 @@ import tfcflorae.common.blocks.plant.PitahayaBlock;
 import tfcflorae.common.blocks.plant.SaguaroCactusBlock;
 import tfcflorae.common.blocks.plant.ShortFruitingCactusBlock;
 import tfcflorae.common.blocks.plant.TFCFFruitingCactusBlock;
+import tfcflorae.common.blocks.plant.TFCFFruitTrees;
 import tfcflorae.common.blocks.plant.TFCFPlant;
 import tfcflorae.common.blocks.rock.DripstoneRock;
 import tfcflorae.common.blocks.rock.Geyser;
@@ -840,6 +842,15 @@ public final class TFCFBlocks {
    public static final Map<TFCFWood, RegistryObject<Block>> ROOT_SPIKES = woodSpikeMapper(TFCFWood.class);
    public static final Map<TFCFWood, RegistryObject<Block>> JOSHUA_TRUNK = joshuaTrunkMapper(TFCFWood.class);
    public static final Map<TFCFWood, RegistryObject<Block>> JOSHUA_LEAVES = joshuaLeavesMapper(TFCFWood.class);
+   // ---- TFC 3.2 的「果树」（fruit tree）----
+   // TFC 的 FruitBlocks.Tree 是封闭枚举，附属无法扩展；Firmalife 的可可树是直接实例化
+   // TFC 的 FruitTree*Block 再自己注册一组方块实现的，这里照做。
+   // 注意声明顺序：树苗 / 生长中枝干的工厂会去读下面的 map，所以被引用的先声明。
+   public static final Map<TFCFWood, RegistryObject<Block>> FRUIT_TREE_BRANCHES = fruitTreeBlocks("plant/%s_branch", TFCFFruitTrees::createBranch, false);
+   public static final Map<TFCFWood, RegistryObject<Block>> FRUIT_TREE_LEAVES = fruitTreeBlocks("plant/%s_leaves", TFCFFruitTrees::createLeaves, true);
+   public static final Map<TFCFWood, RegistryObject<Block>> FRUIT_TREE_GROWING_BRANCHES = fruitTreeBlocks("plant/%s_growing_branch", TFCFFruitTrees::createGrowingBranch, false);
+   public static final Map<TFCFWood, RegistryObject<Block>> FRUIT_TREE_SAPLINGS = fruitTreeBlocks("plant/%s_sapling", TFCFFruitTrees::createSapling, true);
+   public static final Map<TFCFWood, RegistryObject<Block>> FRUIT_TREE_POTTED_SAPLINGS = fruitTreeBlocks("plant/potted/%s_sapling", TFCFFruitTrees::createPottedSapling, false);
    public static final Map<TFCFPlant, RegistryObject<Block>> BAMBOO_LOGS = bambooLogMapper(TFCFPlant.class);
    public static final Map<TFCFPlant, RegistryObject<Block>> STRIPPED_BAMBOO_LOGS = bambooStrippedLogMapper(TFCFPlant.class);
    public static final Map<TFCFPlant, RegistryObject<Block>> BAMBOO_LEAVES = bambooLeavesMapper(TFCFPlant.class);
@@ -3353,6 +3364,7 @@ public final class TFCFBlocks {
       FlowerPotBlock pot = (FlowerPotBlock)Blocks.FLOWER_POT;
       POTTED_PLANTS.forEach((plant, reg) -> pot.addPlant(PLANTS.get(plant).getId(), reg));
       WOODS.forEach((wood, map) -> pot.addPlant(map.get(BlockType.SAPLING).getId(), (Supplier)map.get(BlockType.POTTED_SAPLING)));
+      FRUIT_TREE_SAPLINGS.forEach((wood, reg) -> pot.addPlant(reg.getId(), (Supplier)FRUIT_TREE_POTTED_SAPLINGS.get(wood)));
    }
 
    /**
@@ -3363,6 +3375,28 @@ public final class TFCFBlocks {
     * loose/pressure_plate/button/aqueduct/mossy_* 以及石砧都只保留方块、不再注册物品。
     * 保留方块本体是刻意的：世界存档、配方与内部引用都还指向它们，直接删方块会变成空气。
     */
+   /**
+    * 为 {@link TFCFFruitTrees#TREES} 里的每个树种注册一种果树方块。
+    * <p>
+    * 方块工厂必须通过 lambda 延迟求值：{@code createSapling} / {@code createGrowingBranch}
+    * 内部会去读 {@code FRUIT_TREE_*} 里的其它 map，在类初始化阶段直接调用会拿到 null。
+    */
+   private static Map<TFCFWood, RegistryObject<Block>> fruitTreeBlocks(String pattern, Function<TFCFWood, Block> factory, boolean withItem) {
+      final Map<TFCFWood, RegistryObject<Block>> map = new LinkedHashMap<>();
+
+      for (TFCFWood wood : TFCFFruitTrees.TREES) {
+         final String name = String.format(Locale.ROOT, pattern, wood.getSerializedName());
+         map.put(
+            wood,
+            withItem
+               ? register(name, () -> factory.apply(wood), TFCCreativeTabs.WOOD)
+               : register(name, () -> factory.apply(wood), (Function<Block, ? extends BlockItem>)null)
+         );
+      }
+
+      return map;
+   }
+
    private static RegistryObject<Block> registerRockBlock(String name, Supplier<? extends Block> supplier, boolean withItem) {
       final Supplier<Block> wrapped = () -> supplier.get();
       return withItem ? register(name, wrapped, TFCCreativeTabs.ROCKS) : register(name, wrapped);

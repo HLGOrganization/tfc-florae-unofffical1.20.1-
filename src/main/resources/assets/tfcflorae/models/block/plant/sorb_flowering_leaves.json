@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/leaves_overlay",
+  "textures": {
+    "all": "tfcflorae:block/fruit_tree/sorb_leaves",
+    "overlay": "tfcflorae:block/fruit_tree/sorb_flowering_leaves"
+  }
+}

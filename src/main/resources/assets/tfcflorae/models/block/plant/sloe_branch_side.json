@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/plant/branch_side",
+  "textures": {
+    "bark": "tfcflorae:block/fruit_tree/sloe_branch"
+  }
+}

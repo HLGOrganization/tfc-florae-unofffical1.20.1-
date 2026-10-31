@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/plant/cross_3",
+  "textures": {
+    "cross": "tfcflorae:block/fruit_tree/jabuticabeira_sapling"
+  }
+}

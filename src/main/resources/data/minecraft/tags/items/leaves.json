@@ -58,6 +58,20 @@
     "tfcflorae:wood/leaves/white_jacaranda",
     "tfcflorae:wood/leaves/yellow_meranti",
     "tfcflorae:wood/leaves/yew",
-    "tfcflorae:wood/leaves/zebrawood"
+    "tfcflorae:wood/leaves/zebrawood",
+    "tfcflorae:plant/hawthorn_leaves",
+    "tfcflorae:plant/jabuticabeira_leaves",
+    "tfcflorae:plant/joshua_leaves",
+    "tfcflorae:plant/maclura_leaves",
+    "tfcflorae:plant/medlar_leaves",
+    "tfcflorae:plant/mulberry_leaves",
+    "tfcflorae:plant/pear_leaves",
+    "tfcflorae:plant/persimmon_leaves",
+    "tfcflorae:plant/quince_leaves",
+    "tfcflorae:plant/rowan_leaves",
+    "tfcflorae:plant/sloe_leaves",
+    "tfcflorae:plant/sorb_leaves",
+    "tfcflorae:plant/syzygium_leaves",
+    "tfcflorae:plant/yew_leaves"
   ]
 }

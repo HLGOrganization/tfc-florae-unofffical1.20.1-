@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/plant/branch_up",
+  "textures": {
+    "bark": "tfcflorae:block/fruit_tree/pear_branch"
+  }
+}

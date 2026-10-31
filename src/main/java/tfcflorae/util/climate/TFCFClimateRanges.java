@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.function.Supplier;
 import net.dries007.tfc.util.RegisteredDataManager.Entry;
 import net.dries007.tfc.util.climate.ClimateRange;
+import tfcflorae.common.blocks.plant.TFCFFruitTrees;
 import tfcflorae.common.blocks.plant.TFCFPlant;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.util.TFCFHelpers;
@@ -13,8 +14,20 @@ import tfcflorae.util.TFCFHelpers;
 public class TFCFClimateRanges {
    public static final Map<TFCFWood, Supplier<ClimateRange>> LARGE_FRUIT_TREES = woodClimateMapper(TFCFWood.class);
    public static final Map<TFCFPlant, Supplier<ClimateRange>> SEASONAL_PLANT = plantClimateMapper(TFCFPlant.class);
+   /** TFC 3.2 果树（fruit tree）用的气候范围，数据在 {@code tfcflorae:plant/<wood>_tree}。 */
+   public static final Map<TFCFWood, Supplier<ClimateRange>> FRUIT_TREES = fruitTreeClimateMapper();
 
    public TFCFClimateRanges() {
+   }
+
+   private static Map<TFCFWood, Supplier<ClimateRange>> fruitTreeClimateMapper() {
+      Map<TFCFWood, Supplier<ClimateRange>> Map = new HashMap<>();
+
+      for (TFCFWood wood : TFCFFruitTrees.TREES) {
+         Map.put(wood, register("plant/" + wood.getSerializedName().toLowerCase(Locale.ROOT) + "_tree"));
+      }
+
+      return Map;
    }
 
    private static Map<TFCFWood, Supplier<ClimateRange>> woodClimateMapper(Class<TFCFWood> enumClass) {

@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/plant/cross_4",
+  "textures": {
+    "cross": "tfcflorae:block/fruit_tree/medlar_sapling"
+  }
+}

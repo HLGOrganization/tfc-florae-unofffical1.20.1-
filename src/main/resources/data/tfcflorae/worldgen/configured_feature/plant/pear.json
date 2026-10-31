@@ -1,0 +1,6 @@
+{
+  "type": "tfc:fruit_trees",
+  "config": {
+    "state": "tfcflorae:plant/pear_growing_branch"
+  }
+}

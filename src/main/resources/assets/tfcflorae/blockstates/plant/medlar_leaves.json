@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lifecycle=flowering": {
+      "model": "tfcflorae:block/plant/medlar_flowering_leaves"
+    },
+    "lifecycle=fruiting": {
+      "model": "tfcflorae:block/plant/medlar_fruiting_leaves"
+    },
+    "lifecycle=dormant": {
+      "model": "tfcflorae:block/plant/medlar_dry_leaves"
+    },
+    "lifecycle=healthy": {
+      "model": "tfcflorae:block/plant/medlar_leaves"
+    }
+  }
+}

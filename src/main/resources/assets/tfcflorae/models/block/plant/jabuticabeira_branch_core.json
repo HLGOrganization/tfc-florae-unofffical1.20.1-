@@ -1,0 +1,6 @@
+{
+  "parent": "tfc:block/plant/branch_core",
+  "textures": {
+    "bark": "tfcflorae:block/fruit_tree/jabuticabeira_branch"
+  }
+}

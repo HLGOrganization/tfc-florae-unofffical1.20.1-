@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lifecycle=flowering": {
+      "model": "tfcflorae:block/plant/rowan_flowering_leaves"
+    },
+    "lifecycle=fruiting": {
+      "model": "tfcflorae:block/plant/rowan_fruiting_leaves"
+    },
+    "lifecycle=dormant": {
+      "model": "tfcflorae:block/plant/rowan_dry_leaves"
+    },
+    "lifecycle=healthy": {
+      "model": "tfcflorae:block/plant/rowan_leaves"
+    }
+  }
+}

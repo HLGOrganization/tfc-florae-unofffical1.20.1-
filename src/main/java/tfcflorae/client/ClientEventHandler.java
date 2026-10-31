@@ -9,6 +9,8 @@ import net.dries007.tfc.client.render.blockentity.AnvilBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.BarrelBlockEntityRenderer;
 import net.dries007.tfc.client.render.blockentity.SluiceBlockEntityRenderer;
 import net.dries007.tfc.client.screen.KnappingScreen;
+import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeLeavesBlock;
+import net.dries007.tfc.common.blocks.plant.fruit.Lifecycle;
 import net.dries007.tfc.common.blocks.rock.Rock;
 import net.dries007.tfc.common.blocks.rock.RockCategory.ItemType;
 import net.dries007.tfc.common.blocks.wood.Wood;
@@ -109,6 +111,14 @@ public class ClientEventHandler {
       RenderType cutout = RenderType.cutout();
       RenderType cutoutMipped = RenderType.cutoutMipped();
       RenderType translucent = RenderType.translucent();
+      // ---- TFC 3.2 果树（fruit tree）----
+      // 叶子是镂空的、枝干模型是一根细管道，透明像素不设渲染层会被渲染成黑色。
+      // TFC 自己也是把 FRUIT_TREE_LEAVES 设成 cutoutMipped、树苗设成 cutout。
+      TFCFBlocks.FRUIT_TREE_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
+      TFCFBlocks.FRUIT_TREE_SAPLINGS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+      TFCFBlocks.FRUIT_TREE_POTTED_SAPLINGS.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+      TFCFBlocks.FRUIT_TREE_BRANCHES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
+      TFCFBlocks.FRUIT_TREE_GROWING_BRANCHES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
       TFCFBlocks.WOODS
          .values()
          .forEach(
@@ -498,6 +508,19 @@ public class ClientEventHandler {
       TFCFBlocks.DENSE_SAND_GRASS.forEach((grass, reg) -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.SAND_GRASS.forEach((grass, reg) -> registry.register(grassColor, new Block[]{(Block)reg.get()}));
       TFCFBlocks.BAMBOO_LEAVES.forEach((plant, reg) -> registry.register(seasonalFoliageColor, new Block[]{(Block)reg.get()}));
+      // 果树树叶：健康/开花/结果三态用的都是灰度贴图，要和旧 wood/leaves 一样靠 BlockColor 染色；
+      // 枯萎态（dry_leaves）贴图本身就是按 TFC 的枯萎色调生成的，返回白色不再二次染色。
+      TFCFBlocks.FRUIT_TREE_LEAVES.forEach(
+         (wood, reg) -> {
+            final BlockColor tint = wood.isConifer() ? foliageColor : seasonalFoliageColor;
+            registry.register(
+               (state, worldIn, pos, tintIndex) -> state.getValue(FruitTreeLeavesBlock.LIFECYCLE) == Lifecycle.DORMANT
+                  ? 0xFFFFFF
+                  : tint.getColor(state, worldIn, pos, tintIndex),
+               new Block[]{(Block)reg.get()}
+            );
+         }
+      );
    }
 
    public static void registerColorHandlerItems(net.minecraftforge.client.event.RegisterColorHandlersEvent.Item event) {
@@ -529,6 +552,8 @@ public class ClientEventHandler {
          }
       });
       TFCFBlocks.BAMBOO_LEAVES.forEach((plant, reg) -> registry.register(foliageColor, new ItemLike[]{(ItemLike)reg.get()}));
+      // 果树树叶物品图标：贴图是灰度的，和旧树叶一样用 foliageColor 上色。
+      TFCFBlocks.FRUIT_TREE_LEAVES.forEach((wood, reg) -> registry.register(foliageColor, new ItemLike[]{(ItemLike)reg.get()}));
    }
 
    public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
