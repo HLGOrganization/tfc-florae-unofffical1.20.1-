@@ -1,4 +1,4 @@
-﻿package tfcflorae.common;
+package tfcflorae.common;
 import net.minecraft.core.registries.Registries;
 
 import net.minecraft.core.Registry;

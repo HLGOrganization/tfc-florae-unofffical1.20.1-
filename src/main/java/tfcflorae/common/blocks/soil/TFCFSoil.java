@@ -268,9 +268,9 @@ public enum TFCFSoil {
       (self, variant) -> new DirtBlock(
             Properties.of().mapColor(MapColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL),
             (Supplier)TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(ROOTED_DIRT).get(variant),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.GRASS_PATH)).get(variant.borrowedVariant()),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.FARMLAND)).get(variant.borrowedVariant()),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.ROOTED_DIRT)).get(variant.borrowedVariant()),
             null
          ),
       (self, variant) -> new DirtBlock(
@@ -285,13 +285,13 @@ public enum TFCFSoil {
    EARTHENWARE_CLAY_GRASS(
       (self, variant) -> new ConnectedGrassBlock(
             Properties.of().mapColor(MapColor.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant)
+            (Supplier)TFCFBlocks.TFCFSOIL.get(EARTHENWARE_CLAY).get(variant),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.GRASS_PATH)).get(variant.borrowedVariant()),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.FARMLAND)).get(variant.borrowedVariant())
          ),
       (self, variant) -> new ConnectedGrassBlock(
             Properties.of().mapColor(MapColor.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS),
-            (Supplier)TFCFBlocks.TFCSOIL.get(self.transform()).get(variant),
+            (Supplier)TFCFBlocks.TFCSOIL.get(EARTHENWARE_CLAY).get(variant),
             (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.GRASS_PATH)).get(variant),
             (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.FARMLAND)).get(variant)
          )
@@ -342,9 +342,9 @@ public enum TFCFSoil {
       (self, variant) -> new DirtBlock(
             Properties.of().mapColor(MapColor.DIRT).strength(0.5F).sound(SoundType.GRAVEL),
             (Supplier)TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(ROOTED_DIRT).get(variant),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.GRASS_PATH)).get(variant.borrowedVariant()),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.FARMLAND)).get(variant.borrowedVariant()),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.ROOTED_DIRT)).get(variant.borrowedVariant()),
             null
          ),
       (self, variant) -> new DirtBlock(
@@ -359,13 +359,13 @@ public enum TFCFSoil {
    STONEWARE_CLAY_GRASS(
       (self, variant) -> new ConnectedGrassBlock(
             Properties.of().mapColor(MapColor.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(self.transform()).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(GRASS_PATH).get(variant),
-            (Supplier)TFCFBlocks.TFCFSOIL.get(FARMLAND).get(variant)
+            (Supplier)TFCFBlocks.TFCFSOIL.get(STONEWARE_CLAY).get(variant),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.GRASS_PATH)).get(variant.borrowedVariant()),
+            (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.FARMLAND)).get(variant.borrowedVariant())
          ),
       (self, variant) -> new ConnectedGrassBlock(
             Properties.of().mapColor(MapColor.GRASS).randomTicks().strength(0.6F).sound(SoundType.GRASS),
-            (Supplier)TFCFBlocks.TFCSOIL.get(self.transform()).get(variant),
+            (Supplier)TFCFBlocks.TFCSOIL.get(STONEWARE_CLAY).get(variant),
             (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.GRASS_PATH)).get(variant),
             (Supplier)((Map)TFCBlocks.SOIL.get(SoilBlockType.FARMLAND)).get(variant)
          )
@@ -526,24 +526,49 @@ public enum TFCFSoil {
       }
    }
 
+   /**
+    * 是否注册 TFE 新增的 4 个土纲变体（fluvisol / mollisol / oxisol / podzol）。
+    * <p>
+    * 目前只有陶土与石胎瓷土两族补齐了贴图、模型与 blockstate，所以只对这两族放行；
+    * 其余土壤仍然只注册 TFC 的 4 个变体，行为与之前一致。
+    */
+   public boolean supportsTfeVariants()
+   {
+      return this == EARTHENWARE_CLAY || this == EARTHENWARE_CLAY_GRASS
+         || this == STONEWARE_CLAY || this == STONEWARE_CLAY_GRASS;
+   }
+
    public static enum TFCFVariant implements RegistrySoilVariant {
-      // TFE 新增的土壤类型（原版 TFC 只有 silt/loam/sandy_loam/silty_loam）
-      FLUVISOL,
-      MOLLISOL,
-      OXISOL,
-      PODZOL
+      // TFE 新增的土壤类型（原版 TFC 只有 silt/loam/sandy_loam/silty_loam）。
+      // 参数是"借用"的 TFC 变体：grass_path / farmland / rooted_dirt 这几个方块 TFC 只做了 4 个变体，
+      // TFE 新增的 4 个土纲没有对应方块，跨引用时借语义最接近的那个
+      // （与 TFE 的 NTESoil.nativeVariant() 同一思路）。
+      FLUVISOL(Variant.SILT),
+      MOLLISOL(Variant.LOAM),
+      OXISOL(Variant.SANDY_LOAM),
+      PODZOL(Variant.SILTY_LOAM)
       ;
 
-      /** TFE 新增、只有多石土一族补齐了资源，其余土壤类型不应注册这些变体。 */
+      private final Variant borrowed;
+
+      TFCFVariant(Variant borrowed)
+      {
+         this.borrowed = borrowed;
+      }
+
+      /** TFC 侧语义最接近的变体，用于 grass_path / farmland / rooted_dirt 这类只有 4 个变体的方块。 */
+      public Variant borrowedVariant()
+      {
+         return borrowed;
+      }
+
+      /** TFE 新增、默认不注册；只有显式声明支持 TFE 变体的土壤（见 {@link TFCFSoil#supportsTfeVariants()}）才注册。 */
       public boolean isTfeOnly()
       {
          return this == FLUVISOL || this == MOLLISOL || this == OXISOL || this == PODZOL;
       }
 
       public static final TFCFSoil.TFCFVariant[] VALUES = values();
-
-      private TFCFVariant() {
-      }
 
       public static TFCFSoil.TFCFVariant valueOf(int i) {
          return i >= 0 && i < VALUES.length ? VALUES[i] : null;

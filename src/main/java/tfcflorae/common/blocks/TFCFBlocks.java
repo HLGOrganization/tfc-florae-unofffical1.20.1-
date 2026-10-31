@@ -1319,11 +1319,12 @@ public final class TFCFBlocks {
             Map.put(type, java.util.Collections.emptyMap());
             continue;
          }
-         // 只注册 TFC 自带的 4 种土壤变体；TFE 新增的 4 种变体只有多石土一族有资源，
+         // 只注册 TFC 自带的 4 种土壤变体；TFE 新增的 4 种变体默认不注册，
+         // 只有显式声明 supportsTfeVariants() 的土壤（陶土 / 石胎瓷土两族）才补齐。
          // 这里用过滤后的数组，不能返回 null（mapOfKeys 内部用 Map.merge，null 会 NPE）
          Map.put(type, Helpers.mapOfKeys(
             TFCFSoil.TFCFVariant.class,
-            variant -> !variant.isTfeOnly(),
+            variant -> !variant.isTfeOnly() || type.supportsTfeVariants(),
             variant -> register(type.name() + "/" + variant.name(), () -> type.TFCFCreate(variant), TFCCreativeTabs.EARTH)
          ));
       }
