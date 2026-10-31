@@ -20,8 +20,6 @@ public enum TFCFFood {
    PERSIMMON(false, false),
    PITAHAYA(false, false),
    QUINCE(false, false),
-   ROWAN_BERRY(false, true),
-   SLOE(false, true),
    SORB_APPLE(false, false),
    YEW_BERRY(false, true),
    ROASTED_AMANITA(false, false, true),

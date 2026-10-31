@@ -1,7 +1,0 @@
-{
-  "parent": "tfcflorae:block/wood/horizontal",
-  "textures": {
-    "texture": "tfcflorae:block/wood/sheet/syzygium",
-    "particle": "tfcflorae:block/wood/sheet/syzygium"
-  }
-}

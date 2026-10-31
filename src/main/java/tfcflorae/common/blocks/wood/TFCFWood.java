@@ -485,61 +485,7 @@ public enum TFCFWood implements RegistryWood {
    ),
    RED_CYPRESS(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
    RED_ELM(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   ROWAN(
-      false,
-      false,
-      false,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      (Supplier<? extends Item>)TFCFItems.FOOD.get(TFCFFood.ROWAN_BERRY),
-      new Lifecycle[]{
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(245, 232, 241).getRGB()
-   ),
    RUBBER_FIG(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   SLOE(
-      false,
-      false,
-      false,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      (Supplier<? extends Item>)TFCFItems.FOOD.get(TFCFFood.SLOE),
-      new Lifecycle[]{
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.HEALTHY,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(228, 239, 243).getRGB()
-   ),
    SORB(
       false,
       false,
@@ -833,6 +779,23 @@ public enum TFCFWood implements RegistryWood {
       this.daysToGrow = daysToGrow;
       this.isFruitTree = false;
       this.floweringLeavesColor = -1;
+   }
+
+   /**
+    * 只有果树形态（{@code plant/<tree>_sapling|_growing_branch|_branch|_leaves}）、
+    * <b>不注册</b> {@code wood/*} 那一整套木材方块的树种。
+    * <p>
+    * 精确名单，禁止子串匹配。这些枚举常量<b>必须保留</b> —— 果树要用它们的
+    * {@link #getStages()}、{@link #daysToGrow()}、{@link #getProductItem()}、花色与气候数据，
+    * 只是不再产出木材方块（{@code woodMapper} / {@code seasonalLeavesMapper} 等映射器按此跳过）。
+    */
+   private static final java.util.Set<TFCFWood> NO_WOOD_SET = java.util.EnumSet.of(
+      HAWTHORN, JABUTICABEIRA, MACLURA, MEDLAR, MULBERRY, PEAR, PERSIMMON, QUINCE, SORB, SYZYGIUM, YEW
+   );
+
+   /** 是否注册 {@code wood/*} 木材方块。见 {@link #NO_WOOD_SET}。 */
+   public boolean hasWoodSet() {
+      return !NO_WOOD_SET.contains(this);
    }
 
    public String getSerializedName() {

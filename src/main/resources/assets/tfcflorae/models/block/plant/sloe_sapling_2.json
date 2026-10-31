@@ -1,6 +1,0 @@
-{
-  "parent": "tfc:block/plant/cross_2",
-  "textures": {
-    "cross": "tfcflorae:block/fruit_tree/sloe_sapling"
-  }
-}

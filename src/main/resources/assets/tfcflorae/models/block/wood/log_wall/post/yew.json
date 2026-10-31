@@ -1,8 +1,0 @@
-{
-  "parent": "tfcflorae:block/template_wall_post_log",
-  "textures": {
-    "top": "tfcflorae:block/wood/log_top/yew",
-    "wall": "tfcflorae:block/wood/log/yew",
-    "particle": "tfcflorae:block/wood/log/yew"
-  }
-}

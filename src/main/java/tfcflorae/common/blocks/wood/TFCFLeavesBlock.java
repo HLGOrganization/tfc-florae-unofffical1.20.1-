@@ -195,32 +195,9 @@ public abstract class TFCFLeavesBlock extends TFCLeavesBlock implements IBushBlo
             this.lastUpdateTick = Calendars.SERVER.getTicks();
          }
 
-         if (this == TFCFBlocks.WOODS_SEASONAL_LEAVES.get(TFCFWood.MULBERRY).get() && !level.isDay() && state.getValue(LIFECYCLE) != Lifecycle.DORMANT) {
-            Month currentMonth = Calendars.SERVER.getCalendarMonthOfYear();
-            Season season = currentMonth.getSeason();
-            if (random.nextInt(26400) == 0 && season == Season.SUMMER && Climate.getTemperature(level, pos) >= 2.0F) {
-               boolean flag = !level.getBlockState(pos).getCollisionShape(level, pos).isEmpty();
-               Direction direction = Direction.getRandom(random);
-               Entity entity = ((EntityType)TFCFEntities.SILKMOTH.get()).create(level);
-               if (entity != null) {
-                  if (entity instanceof Silkmoth moth) {
-                     if (moth.getSavedTargetPos() != null && !moth.hasSavedTargetPos() && level.random.nextFloat() < 0.9F) {
-                        moth.setSavedTargetPos(moth.getSavedTargetPos());
-                     }
-
-                     float f = entity.getBbWidth();
-                     double d3 = flag ? 0.0 : 0.55 + (double)(f / 2.0F);
-                     double d0 = (double)pos.getX() + 0.5 + d3 * (double)direction.getStepX();
-                     double d1 = (double)pos.getY() + 0.5 - (double)(entity.getBbHeight() / 2.0F);
-                     double d2 = (double)pos.getZ() + 0.5 + d3 * (double)direction.getStepZ();
-                     entity.moveTo(d0, d1, d2, entity.getYRot(), entity.getXRot());
-                  }
-
-                  level.playSound((Player)null, pos, SoundEvents.BEEHIVE_EXIT, SoundSource.BLOCKS, 1.0F, 1.0F);
-                  level.addFreshEntity(entity);
-               }
-            }
-         }
+         // 桑叶的蚕蛾羽化逻辑原本写在这里（判断 this == WOODS_SEASONAL_LEAVES.get(MULBERRY)）。
+         // 桑树已改为只有果树形态，wood/leaves/mulberry 不再注册，该判断会取到 null 而 NPE，
+         // 所以整段搬到 TFCFMulberryLeavesBlock.randomTick（plant/mulberry_leaves）。
       }
 
       // 注意：1.18.2 在这里还有一段「树叶随季节点播撒树苗」的逻辑（读 ChunkData 算降雨/森林密度）。

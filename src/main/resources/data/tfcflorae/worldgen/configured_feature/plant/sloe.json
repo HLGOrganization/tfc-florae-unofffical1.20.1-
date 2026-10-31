@@ -1,6 +1,0 @@
-{
-  "type": "tfc:fruit_trees",
-  "config": {
-    "state": "tfcflorae:plant/sloe_growing_branch"
-  }
-}

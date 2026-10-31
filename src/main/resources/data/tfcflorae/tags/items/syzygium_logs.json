@@ -1,9 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "tfcflorae:wood/log/syzygium",
-    "tfcflorae:wood/stripped_log/syzygium",
-    "tfcflorae:wood/stripped_wood/syzygium",
-    "tfcflorae:wood/wood/syzygium"
-  ]
+  "values": []
 }

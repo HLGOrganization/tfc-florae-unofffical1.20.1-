@@ -1,6 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "tfcflorae:block/fruit_tree/rowan_sapling"
-  }
-}

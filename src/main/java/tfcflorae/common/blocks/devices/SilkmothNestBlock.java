@@ -244,7 +244,9 @@ public class SilkmothNestBlock extends Block implements IForgeBlockExtension, IT
 
          if (blockEntity.getOccupantCount() < 3 && random.nextInt(400) == 0) {
             BlockPos checkPos = pos.offset(random.nextInt(8) - 8, random.nextInt(8) - 8, random.nextInt(8) - 8);
-            if (level.getBlockState(checkPos).getBlock() == TFCFBlocks.WOODS_SEASONAL_LEAVES.get(TFCFWood.MULBERRY).get()) {
+            // 桑树只有果树形态了：桑叶是 plant/mulberry_leaves（FRUIT_TREE_LEAVES），
+            // 不再是 wood/leaves/mulberry。这里必须跟着改指向，否则取到 null 会 NPE。
+            if (level.getBlockState(checkPos).getBlock() == TFCFBlocks.FRUIT_TREE_LEAVES.get(TFCFWood.MULBERRY).get()) {
                blockEntity.addOccupantWithPresetTicks(((EntityType)TFCFEntities.SILKMOTH.get()).create(level), true, 2400);
                blockEntity.markForSync();
             }

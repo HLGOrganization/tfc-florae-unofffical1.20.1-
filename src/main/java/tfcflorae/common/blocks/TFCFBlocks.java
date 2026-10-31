@@ -1369,7 +1369,7 @@ public final class TFCFBlocks {
       Map<TFCFWood, Map<BlockType, RegistryObject<Block>>> Map = new HashMap<>();
 
       for (TFCFWood wood : enumClass.getEnumConstants()) {
-         if (!wood.hasLeavesOnly()) {
+         if (!wood.hasLeavesOnly() && wood.hasWoodSet()) {
             Map<BlockType, RegistryObject<Block>> subMap = new HashMap<>();
 
             for (BlockType type : BlockType.values()) {
@@ -1752,7 +1752,7 @@ public final class TFCFBlocks {
       Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
 
       for (TFCFWood wood : enumClass.getEnumConstants()) {
-         if (!wood.hasLeavesOnly()) {
+         if (!wood.hasLeavesOnly() && wood.hasWoodSet()) {
             Map.put(
                wood,
                register(
@@ -1827,7 +1827,7 @@ public final class TFCFBlocks {
       Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
 
       for (TFCFWood wood : enumClass.getEnumConstants()) {
-         if (!wood.hasLeavesOnly()) {
+         if (!wood.hasLeavesOnly() && wood.hasWoodSet()) {
             BiFunction<Block, Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
             Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Properties());
             if ((wood.isFruitTree() || wood.isMangrove()) && !wood.hasFruitingLog()) {
@@ -1900,7 +1900,7 @@ public final class TFCFBlocks {
       Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
 
       for (TFCFWood wood : enumClass.getEnumConstants()) {
-         if (!wood.hasLeavesOnly()) {
+         if (!wood.hasLeavesOnly() && wood.hasWoodSet()) {
             BiFunction<Block, Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
             Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Properties());
             if (wood.isFruitTree() && wood.hasFruitingLog()) {
@@ -1936,7 +1936,7 @@ public final class TFCFBlocks {
       Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
 
       for (TFCFWood wood : enumClass.getEnumConstants()) {
-         if (!wood.hasLeavesOnly()) {
+         if (!wood.hasLeavesOnly() && wood.hasWoodSet()) {
             BiFunction<Block, Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
             Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Properties());
             if (wood.isFruitTree() && wood.hasFruitingLog()) {
@@ -2026,7 +2026,7 @@ public final class TFCFBlocks {
       Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
 
       for (TFCFWood wood : enumClass.getEnumConstants()) {
-         if (!wood.hasLeavesOnly()) {
+         if (!wood.hasLeavesOnly() && wood.hasWoodSet()) {
             Map.put(
                wood,
                register(

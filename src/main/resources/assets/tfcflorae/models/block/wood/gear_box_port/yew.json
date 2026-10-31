@@ -1,7 +1,0 @@
-{
-  "parent": "tfc:block/gear_box_port",
-  "textures": {
-    "all": "tfcflorae:block/wood/planks/yew",
-    "overlay": "tfc:block/axle_casing_front"
-  }
-}

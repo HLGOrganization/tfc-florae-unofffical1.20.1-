@@ -1,9 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "tfcflorae:wood/log/medlar",
-    "tfcflorae:wood/stripped_log/medlar",
-    "tfcflorae:wood/stripped_wood/medlar",
-    "tfcflorae:wood/wood/medlar"
-  ]
+  "values": []
 }

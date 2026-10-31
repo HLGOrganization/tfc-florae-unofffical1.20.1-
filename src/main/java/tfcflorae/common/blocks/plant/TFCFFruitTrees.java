@@ -46,21 +46,23 @@ public final class TFCFFruitTrees
     /**
      * 需要按 TFC 果树方式注册的树种。顺序决定创造栏顺序。
      * <p>
-     * 这 14 个都是 {@code TFCFWood} 里带 productItem + Lifecycle[] 的果树，
-     * 去掉杜松三兄弟后的全集。
+     * <b>11 种</b>。已按用户要求移除三种：
+     * <ul>
+     *   <li>{@code JOSHUA}（短叶丝兰）—— 只删果树形态，保留木材形态，所以它仍留在 {@link TFCFWood} 里；</li>
+     *   <li>{@code SLOE}（黑刺李）、{@code ROWAN}（花楸）—— 连同 {@link TFCFWood} 常量一起彻底删除。</li>
+     * </ul>
+     * 剩下这 11 种反过来：<b>只有果树形态</b>，不注册 {@code wood/*} 木材方块
+     * （见 {@link TFCFWood#hasWoodSet()} 的精确名单）。
      */
     public static final List<TFCFWood> TREES = List.of(
         TFCFWood.HAWTHORN,
         TFCFWood.JABUTICABEIRA,
-        TFCFWood.JOSHUA,
         TFCFWood.MACLURA,
         TFCFWood.MEDLAR,
         TFCFWood.MULBERRY,
         TFCFWood.PEAR,
         TFCFWood.PERSIMMON,
         TFCFWood.QUINCE,
-        TFCFWood.ROWAN,
-        TFCFWood.SLOE,
         TFCFWood.SORB,
         TFCFWood.SYZYGIUM,
         TFCFWood.YEW
@@ -101,21 +103,31 @@ public final class TFCFFruitTrees
     /** 果树树叶：四个生命周期各一张贴图，结果状态下右键可取果。 */
     public static Block createLeaves(TFCFWood wood)
     {
+        final ExtendedProperties props = ExtendedProperties.of()
+            .mapColor(FruitTreeLeavesBlock::getMapColor)
+            .strength(0.5F)
+            .sound(SoundType.GRASS)
+            .randomTicks()
+            .noOcclusion()
+            // 必须是本模组自己的类型：BlockEntityType 的 validBlocks 固定，
+            // 借用 TFC 的 tfc:berry_bush 会让 LevelChunk 判定 isValid 失败而跳过 ticker，
+            // serverTick 不执行 → /addday 对果树完全无效。见 TFCFBerryBushBlockEntity。
+            // 用 lambda 延迟解析，避免在 TFCFBlocks 静态初始化期间触发 TFCFBlockEntities
+            // 的初始化环（FRUIT_TREE_LEAVES 在 BAMBOO_SAPLINGS/WEBBED_CHEST 之前声明）。
+            .blockEntity(() -> TFCFBlockEntities.BERRY_BUSH.get())
+            .serverTicks(BerryBushBlockEntity::serverTick)
+            .flammableLikeLeaves();
+
+        // 桑叶要额外承载「蚕蛾羽化」逻辑。那段逻辑原来挂在 wood/leaves/mulberry 上，
+        // 而桑树已改为只有果树形态（wood/leaves/mulberry 不再注册），所以用专用子类接过来。
+        // 见 TFCFMulberryLeavesBlock。
+        if (wood == TFCFWood.MULBERRY)
+        {
+            return new TFCFMulberryLeavesBlock(props, wood.getProductItem(), wood.getStages(), TFCFClimateRanges.FRUIT_TREES.get(wood), wood.getFloweringLeavesColor());
+        }
+
         return new FruitTreeLeavesBlock(
-            ExtendedProperties.of()
-                .mapColor(FruitTreeLeavesBlock::getMapColor)
-                .strength(0.5F)
-                .sound(SoundType.GRASS)
-                .randomTicks()
-                .noOcclusion()
-                // 必须是本模组自己的类型：BlockEntityType 的 validBlocks 固定，
-                // 借用 TFC 的 tfc:berry_bush 会让 LevelChunk 判定 isValid 失败而跳过 ticker，
-                // serverTick 不执行 → /addday 对果树完全无效。见 TFCFBerryBushBlockEntity。
-                // 用 lambda 延迟解析，避免在 TFCFBlocks 静态初始化期间触发 TFCFBlockEntities
-                // 的初始化环（FRUIT_TREE_LEAVES 在 BAMBOO_SAPLINGS/WEBBED_CHEST 之前声明）。
-                .blockEntity(() -> TFCFBlockEntities.BERRY_BUSH.get())
-                .serverTicks(BerryBushBlockEntity::serverTick)
-                .flammableLikeLeaves(),
+            props,
             wood.getProductItem(),
             wood.getStages(),
             TFCFClimateRanges.FRUIT_TREES.get(wood),

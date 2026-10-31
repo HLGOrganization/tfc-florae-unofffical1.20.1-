@@ -1,9 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "tfcflorae:wood/log/jabuticabeira",
-    "tfcflorae:wood/stripped_log/jabuticabeira",
-    "tfcflorae:wood/stripped_wood/jabuticabeira",
-    "tfcflorae:wood/wood/jabuticabeira"
-  ]
+  "values": []
 }
