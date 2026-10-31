@@ -1,4 +1,4 @@
-package tfcflorae.common;
+﻿package tfcflorae.common;
 import net.minecraft.core.registries.Registries;
 
 import net.minecraft.core.Registry;
@@ -34,7 +34,6 @@ public class TFCFTags {
       public static final TagKey<Block> PODZOL = create("podzol");
       public static final TagKey<Block> ROOTED_DIRT = create("rooted_dirt");
       public static final TagKey<Block> MOSSY_PACKED_MUD = create("mossy_packed_mud");
-      public static final TagKey<Block> MANGROVE_LOGS_CAN_GROW_THROUGH = create("mangrove_logs_can_grow_through");
       public static final TagKey<Block> MANGROVE_ROOTS_CAN_GROW_THROUGH = create("mangrove_roots_can_grow_through");
       public static final TagKey<Block> REPLACEABLE = create("replaceable");
       public static final TagKey<Block> SILKMOTH_TARGET_BLOCKS = create("silkmoth_target_blocks");
@@ -72,16 +71,16 @@ public class TFCFTags {
       public static final TagKey<Item> BRUSHES = create("brushes");
       public static final TagKey<Item> WALKING_CANES = create("walking_canes");
       public static final TagKey<Item> BYPASS_SLOWDOWN = create("bypass_slowdown");
-      // 以下是 KnappingType 的输入 tag（见 data/tfcflorae/tfc/knapping_types/*.json），
-      // 在 Java 侧只由 KNAPPING_ANY 间接引用，因此这里保留 tag 定义但不单独使用。
+      // 浠ヤ笅鏄?KnappingType 鐨勮緭鍏?tag锛堣 data/tfcflorae/tfc/knapping_types/*.json锛夛紝
+      // 鍦?Java 渚у彧鐢?KNAPPING_ANY 闂存帴寮曠敤锛屽洜姝よ繖閲屼繚鐣?tag 瀹氫箟浣嗕笉鍗曠嫭浣跨敤銆?
       public static final TagKey<Item> EARTHENWARE_CLAY_KNAPPING = create("earthenware_clay_knapping");
       public static final TagKey<Item> STONEWARE_CLAY_KNAPPING = create("stoneware_clay_knapping");
-      /** 本模组所有可打制物品的合集；同时会以 replace:false 追加进 TFC 的 tfc:any_knapping。 */
+      /** 鏈ā缁勬墍鏈夊彲鎵撳埗鐗╁搧鐨勫悎闆嗭紱鍚屾椂浼氫互 replace:false 杩藉姞杩?TFC 鐨?tfc:any_knapping銆?*/
       public static final TagKey<Item> KNAPPING_ANY = create("knapping_any");
       public static final TagKey<Item> MINERAL_SHEETS = create("mineral_sheets");
       public static final TagKey<Item> POTS = create("pots");
       public static final TagKey<Item> SILKMOTH_TEMPTATION_ITEMS = create("silkmoth_temptation_items");
-      // 青蛙 / 鹦鹉的 tag 随实体一起移除（frog_temptation_items / parrot_food / poisonous_parrot_food）
+      // 闈掕洐 / 楣﹂箟鐨?tag 闅忓疄浣撲竴璧风Щ闄わ紙frog_temptation_items / parrot_food / poisonous_parrot_food锛?
       public static final TagKey<Item> SAPLINGS = create("saplings");
 
       public Items() {
