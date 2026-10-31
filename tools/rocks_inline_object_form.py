@@ -100,7 +100,9 @@ NEW_LAYERS = [
 ]
 
 TOP_ADDS = {
-    "land": ["tfcflorae_extrusive", "tfcflorae_sedimentary", "tfcflorae_metamorphic"],
+    # intrusive must be listed here too, otherwise red_granite only ever appears as the
+    # layer *under* tfcflorae_extrusive and never as the surface rock
+    "land": ["tfcflorae_intrusive", "tfcflorae_extrusive", "tfcflorae_sedimentary", "tfcflorae_metamorphic"],
     "volcanic": ["tfcflorae_extrusive"],
     "uplift": ["tfcflorae_metamorphic", "tfcflorae_sedimentary"],
 }
