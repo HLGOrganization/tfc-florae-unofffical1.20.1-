@@ -25,6 +25,17 @@ public class TFCFBlockEntities {
    public static final RegistryObject<BlockEntityType<SandPileBlockEntity>> SAND_PILE = register(
       "sand_pile", SandPileBlockEntity::new, blockStreams(TFCFBlocks.SAND_LAYERS)
    );
+   /**
+    * 果树树叶的方块实体类型。
+    * <p>
+    * 必须是我们自己的注册项，不能借 TFC 的 {@code tfc:berry_bush}：{@code BlockEntityType} 的
+    * {@code validBlocks} 是固定的，而 {@code LevelChunk.BoundTickingBlockEntity.tick()} 会先判
+    * {@code type.isValid(state)}，不通过就直接跳过 ticker —— 借来的类型永远不认我们的树叶，
+    * {@code serverTick} 不执行，{@code /addday} 对果树失效。详见 {@link TFCFBerryBushBlockEntity}。
+    */
+   public static final RegistryObject<BlockEntityType<TFCFBerryBushBlockEntity>> BERRY_BUSH = register(
+      "tfcf_berry_bush", TFCFBerryBushBlockEntity::new, blockStreams(TFCFBlocks.FRUIT_TREE_LEAVES.values())
+   );
    public static final RegistryObject<BlockEntityType<TFCFTickCounterBlockEntity>> TICK_COUNTER = register(
       "tfcf_tick_counter",
       TFCFTickCounterBlockEntity::new,

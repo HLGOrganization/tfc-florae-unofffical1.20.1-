@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 import net.dries007.tfc.common.blockentities.BerryBushBlockEntity;
 import net.dries007.tfc.common.blockentities.TFCBlockEntities;
@@ -17,6 +18,7 @@ import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeLeavesBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.FruitTreeSaplingBlock;
 import net.dries007.tfc.common.blocks.plant.fruit.GrowingFruitTreeBranchBlock;
 
+import tfcflorae.common.blockentities.TFCFBlockEntities;
 import tfcflorae.common.blocks.TFCFBlocks;
 import tfcflorae.common.blocks.wood.TFCFWood;
 import tfcflorae.util.climate.TFCFClimateRanges;
@@ -72,7 +74,7 @@ public final class TFCFFruitTrees
     public static Block createSapling(TFCFWood wood)
     {
         return new FruitTreeSaplingBlock(
-            ExtendedProperties.of()
+            ExtendedProperties.of(MapColor.PLANT)
                 .noCollission()
                 .randomTicks()
                 .strength(0.0F)
@@ -106,7 +108,12 @@ public final class TFCFFruitTrees
                 .sound(SoundType.GRASS)
                 .randomTicks()
                 .noOcclusion()
-                .blockEntity(TFCBlockEntities.BERRY_BUSH)
+                // 必须是本模组自己的类型：BlockEntityType 的 validBlocks 固定，
+                // 借用 TFC 的 tfc:berry_bush 会让 LevelChunk 判定 isValid 失败而跳过 ticker，
+                // serverTick 不执行 → /addday 对果树完全无效。见 TFCFBerryBushBlockEntity。
+                // 用 lambda 延迟解析，避免在 TFCFBlocks 静态初始化期间触发 TFCFBlockEntities
+                // 的初始化环（FRUIT_TREE_LEAVES 在 BAMBOO_SAPLINGS/WEBBED_CHEST 之前声明）。
+                .blockEntity(() -> TFCFBlockEntities.BERRY_BUSH.get())
                 .serverTicks(BerryBushBlockEntity::serverTick)
                 .flammableLikeLeaves(),
             wood.getProductItem(),
@@ -124,6 +131,7 @@ public final class TFCFFruitTrees
                 .sound(SoundType.SCAFFOLDING)
                 .randomTicks()
                 .strength(1.0F)
+                .pushReaction(PushReaction.DESTROY)
                 .flammableLikeLogs(),
             TFCFClimateRanges.FRUIT_TREES.get(wood)
         );
@@ -137,6 +145,7 @@ public final class TFCFFruitTrees
                 .sound(SoundType.SCAFFOLDING)
                 .randomTicks()
                 .strength(1.0F)
+                .pushReaction(PushReaction.DESTROY)
                 .blockEntity(TFCBlockEntities.TICK_COUNTER)
                 .flammableLikeLogs(),
             TFCFBlocks.FRUIT_TREE_BRANCHES.get(wood),
