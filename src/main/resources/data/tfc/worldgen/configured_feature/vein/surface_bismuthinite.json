@@ -1,0 +1,310 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 32,
+    "density": 0.3,
+    "min_y": 40,
+    "max_y": 130,
+    "size": 20,
+    "random_name": "surface_bismuthinite",
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfc:ore/poor_bismuthinite/shale"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/normal_bismuthinite/shale"
+          },
+          {
+            "weight": 5,
+            "block": "tfc:ore/rich_bismuthinite/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfc:ore/poor_bismuthinite/claystone"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/normal_bismuthinite/claystone"
+          },
+          {
+            "weight": 5,
+            "block": "tfc:ore/rich_bismuthinite/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfc:ore/poor_bismuthinite/limestone"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/normal_bismuthinite/limestone"
+          },
+          {
+            "weight": 5,
+            "block": "tfc:ore/rich_bismuthinite/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfc:ore/poor_bismuthinite/conglomerate"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/normal_bismuthinite/conglomerate"
+          },
+          {
+            "weight": 5,
+            "block": "tfc:ore/rich_bismuthinite/conglomerate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfc:ore/poor_bismuthinite/dolomite"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/normal_bismuthinite/dolomite"
+          },
+          {
+            "weight": 5,
+            "block": "tfc:ore/rich_bismuthinite/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfc:ore/poor_bismuthinite/chert"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/normal_bismuthinite/chert"
+          },
+          {
+            "weight": 5,
+            "block": "tfc:ore/rich_bismuthinite/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfc:ore/poor_bismuthinite/chalk"
+          },
+          {
+            "weight": 25,
+            "block": "tfc:ore/normal_bismuthinite/chalk"
+          },
+          {
+            "weight": 5,
+            "block": "tfc:ore/rich_bismuthinite/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfe:rock/raw/tuff"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfe:ore/poor_bismuthinite/tuff"
+          },
+          {
+            "weight": 25,
+            "block": "tfe:ore/normal_bismuthinite/tuff"
+          },
+          {
+            "weight": 5,
+            "block": "tfe:ore/rich_bismuthinite/tuff"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/porphyry"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfcflorae:ore/poor_bismuthinite/porphyry"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/normal_bismuthinite/porphyry"
+          },
+          {
+            "weight": 5,
+            "block": "tfcflorae:ore/rich_bismuthinite/porphyry"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/boninite"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfcflorae:ore/poor_bismuthinite/boninite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/normal_bismuthinite/boninite"
+          },
+          {
+            "weight": 5,
+            "block": "tfcflorae:ore/rich_bismuthinite/boninite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/carbonatite"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfcflorae:ore/poor_bismuthinite/carbonatite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/normal_bismuthinite/carbonatite"
+          },
+          {
+            "weight": 5,
+            "block": "tfcflorae:ore/rich_bismuthinite/carbonatite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/laterite"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfcflorae:ore/poor_bismuthinite/laterite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/normal_bismuthinite/laterite"
+          },
+          {
+            "weight": 5,
+            "block": "tfcflorae:ore/rich_bismuthinite/laterite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/mudstone"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfcflorae:ore/poor_bismuthinite/mudstone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/normal_bismuthinite/mudstone"
+          },
+          {
+            "weight": 5,
+            "block": "tfcflorae:ore/rich_bismuthinite/mudstone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/jaspillite"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfcflorae:ore/poor_bismuthinite/jaspillite"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/normal_bismuthinite/jaspillite"
+          },
+          {
+            "weight": 5,
+            "block": "tfcflorae:ore/rich_bismuthinite/jaspillite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfcflorae:rock/raw/wackestone"
+        ],
+        "with": [
+          {
+            "weight": 70,
+            "block": "tfcflorae:ore/poor_bismuthinite/wackestone"
+          },
+          {
+            "weight": 25,
+            "block": "tfcflorae:ore/normal_bismuthinite/wackestone"
+          },
+          {
+            "weight": 5,
+            "block": "tfcflorae:ore/rich_bismuthinite/wackestone"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 14,
+      "depth": 35,
+      "underground_rarity": 1,
+      "underground_count": 0,
+      "blocks": [
+        {
+          "block": "tfc:ore/small_bismuthinite"
+        }
+      ]
+    }
+  }
+}

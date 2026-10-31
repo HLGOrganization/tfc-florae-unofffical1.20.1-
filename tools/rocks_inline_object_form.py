@@ -31,6 +31,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JAR_BS = os.path.join(ROOT, "src", "main", "resources", "assets", "tfcflorae", "blockstates")
 KJS = r"D:\线框的服务器\versions\TFC_Wild_Fire\kubejs\data\tfc\worldgen"
 JAR_WG = os.path.join(ROOT, "src", "main", "resources", "data", "tfc", "worldgen")
+KEEP_PRESET = "overworld.json"
 
 # rock -> (category, tfc sand colour)
 OUR_ROCKS = {
@@ -221,9 +222,11 @@ print()
 print("=== kubejs presets ===")
 pd = os.path.join(KJS, "world_preset")
 for fn in sorted(os.listdir(pd)):
-    if fn.endswith(".json"):
+    if fn.endswith(".json") and fn == KEEP_PRESET:
         ok = patch_preset(os.path.join(pd, fn), fn)
         print("   %-24s %s" % (fn, "patched" if ok else "unchanged"))
+    elif fn.endswith(".json"):
+        print("   %-24s left alone (only %s may change)" % (fn, KEEP_PRESET))
 
 t, e = patch_veins(KJS, "kubejs")
 print("kubejs veins: %d files, %d entries" % (t, e))
@@ -234,7 +237,7 @@ print("=== jar presets ===")
 pd = os.path.join(JAR_WG, "world_preset")
 if os.path.isdir(pd):
     for fn in sorted(os.listdir(pd)):
-        if fn.endswith(".json"):
+        if fn.endswith(".json") and fn == KEEP_PRESET:
             ok = patch_preset(os.path.join(pd, fn), fn)
             print("   %-24s %s" % (fn, "patched" if ok else "unchanged"))
 t, e = patch_veins(JAR_WG, "jar")
