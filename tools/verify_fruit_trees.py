@@ -4,6 +4,7 @@
 只做静态校验，不能替代进游戏。用法：
     python tools/verify_fruit_trees.py
 """
+import glob
 import json
 import os
 import re
@@ -12,7 +13,7 @@ import zipfile
 
 RES = "src/main/resources"
 NS = "tfcflorae"
-TFC_JAR = r"D:\线框的服务器\versions\TFC_Wild_Fire\mods\[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar"
+TFC_JAR = sorted(glob.glob(r"D:\线框的服务器\versions\TFC_Wild_Fire\mods\*TerraFirmaCraft-Forge*.jar"))[-1]
 TREES = ["hawthorn", "jabuticabeira", "joshua", "maclura", "medlar", "mulberry",
          "pear", "persimmon", "quince", "rowan", "sloe", "sorb", "syzygium", "yew"]
 

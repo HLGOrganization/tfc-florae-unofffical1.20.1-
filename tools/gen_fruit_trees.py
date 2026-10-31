@@ -90,21 +90,92 @@ def dry_target():
     return hue, scale
 
 
-def make_dry(leaves_src, dst, target):
+def make_dry(leaves_src, dst, target, size):
     """把健康树叶贴图做成褐色枯萎态：保留每像素亮度与 alpha，只换色相。"""
     import numpy as np
     from PIL import Image
     hue, scale = target
-    src = Image.open(os.path.join(RES, "assets", NS, "textures", "block", leaves_src)).convert("RGBA")
-    a = np.asarray(src, dtype=np.float64)
+    a = np.asarray(_fit(_load_block_tex(leaves_src), size), dtype=np.float64)
     rgb, alpha = a[..., :3], a[..., 3]
     gray = rgb @ np.array([0.299, 0.587, 0.114])
     out_rgb = np.clip(gray[..., None] * scale * hue, 0, 255)
-    out = np.dstack([out_rgb, alpha]).astype(np.uint8)
+    _save_block_tex(Image.fromarray(np.dstack([out_rgb, alpha]).astype(np.uint8), "RGBA"), dst)
+
+
+def foliage_tint():
+    """取 TFC 叶色调色板 `colormap/foliage.png` 的温带中心色，转成乘算系数。
+
+    TFC 的果树树叶是**每个状态一张已经上好色的成图**，客户端全程不染色：
+    `flowerColor` 只被 `FallingLeafParticle` 用（粒子颜色），
+    TFC 的 `ClientEventHandler` 里没有任何果树树叶的 BlockColor。
+    所以这里把绿色直接烘进贴图，运行时就不需要染色了。
+    """
+    import io
+    import numpy as np
+    from PIL import Image
+    z = zipfile.ZipFile(TFC_JAR)
+    im = Image.open(io.BytesIO(z.read("assets/tfc/textures/colormap/foliage.png"))).convert("RGB")
+    a = np.asarray(im)
+    h, w, _ = a.shape
+    green = a[h // 2, w // 2].astype(np.float64)
+    lum = float(green @ np.array([0.299, 0.587, 0.114]))
+    tint = green / lum
+    print("TFC 叶色调色板中心色 = %s (亮度 %.1f) -> 乘算系数 (%.3f, %.3f, %.3f)"
+          % (tuple(green.astype(int)), lum, tint[0], tint[1], tint[2]))
+    return tint
+
+
+def _load_block_tex(rel):
+    from PIL import Image
+    return Image.open(os.path.join(RES, "assets", NS, "textures", "block", rel)).convert("RGBA")
+
+
+def _fit(img, size):
+    """把贴图对齐到目标尺寸（最近邻，保持像素画风）。
+
+    joshua 的花/果叠加层是 32x32 而树叶是 16x16；旧方案分两层画时各用各的分辨率，
+    合成成单张后必须统一。取较大者，保住叠加层的细节。
+    """
+    from PIL import Image
+    return img if img.size == size else img.resize(size, Image.NEAREST)
+
+
+def _save_block_tex(img, dst):
     d = os.path.join(RES, "assets", NS, "textures", "block", "fruit_tree", dst)
     os.makedirs(os.path.dirname(d), exist_ok=True)
-    Image.fromarray(out, "RGBA").save(d)
+    img.save(d)
     created.append("textures/" + dst)
+
+
+def bake_leaves(leaves_src, dst, tint, size):
+    """把绿色烘进树叶贴图：保留每像素明暗与 alpha，色相统一到 TFC 的温带绿。"""
+    import numpy as np
+    from PIL import Image
+    a = np.asarray(_fit(_load_block_tex(leaves_src), size), dtype=np.float64)
+    rgb, alpha = a[..., :3], a[..., 3]
+    out_rgb = np.clip(rgb * tint, 0, 255)
+    _save_block_tex(Image.fromarray(np.dstack([out_rgb, alpha]).astype(np.uint8), "RGBA"), dst)
+
+
+def bake_overlay(leaves_src, overlay_src, dst, tint, size):
+    """把「染好绿的健康树叶」与「花/果叠加层」合成一张成图（标准 over 混合）。
+
+    旧方案用 leaves_overlay 父模型分两层画：底层的 #all 被 BlockColor 染绿、
+    上层的 #overlay 保持本色。现在按 TFC 的布局合成成单张，视觉等价，
+    但不再依赖任何运行时染色。
+    """
+    import numpy as np
+    from PIL import Image
+    base = np.asarray(_fit(_load_block_tex(leaves_src), size), dtype=np.float64)
+    ov = np.asarray(_fit(_load_block_tex(overlay_src), size), dtype=np.float64)
+    base[..., :3] = np.clip(base[..., :3] * tint, 0, 255)
+    ba = base[..., 3:4] / 255.0
+    oa = ov[..., 3:4] / 255.0
+    out_a = oa + ba * (1.0 - oa)
+    safe = np.where(out_a > 0, out_a, 1.0)
+    out_rgb = (ov[..., :3] * oa + base[..., :3] * ba * (1.0 - oa)) / safe
+    out = np.dstack([np.clip(out_rgb, 0, 255), np.clip(out_a * 255.0, 0, 255)]).astype(np.uint8)
+    _save_block_tex(Image.fromarray(out, "RGBA"), dst)
 
 
 
@@ -245,15 +316,23 @@ def main():
     print("TFC 父模型/贴图 全部存在 (%d 项)" % len(need))
 
     target = dry_target()
+    tint = foliage_tint()
 
     for t, (fruit, cr, pf) in TREES.items():
         # ---------- 贴图 ----------
         copy_tex("wood/log/%s.png" % t, "%s_branch.png" % t)
-        copy_tex("wood/leaves/%s.png" % t, "%s_leaves.png" % t)
-        copy_tex("wood/flowers/%s.png" % t, "%s_flowering_leaves.png" % t)
-        copy_tex("wood/fruits/%s.png" % t, "%s_fruiting_leaves.png" % t)
         copy_tex("wood/sapling/%s.png" % t, "%s_sapling.png" % t)
-        make_dry("wood/leaves/%s.png" % t, "%s_dry_leaves.png" % t, target)
+        # 四态统一分辨率：取树叶/花/果三者中最大的那个（只有 joshua 是 32x32）
+        _sz = [_load_block_tex(p % t).size for p in
+               ("wood/leaves/%s.png", "wood/flowers/%s.png", "wood/fruits/%s.png")]
+        size = (max(s[0] for s in _sz), max(s[1] for s in _sz))
+        # 健康 / 开花 / 结果三态都是「烘好色的成图」，与 TFC 的布局一致
+        bake_leaves("wood/leaves/%s.png" % t, "%s_leaves.png" % t, tint, size)
+        bake_overlay("wood/leaves/%s.png" % t, "wood/flowers/%s.png" % t,
+                     "%s_flowering_leaves.png" % t, tint, size)
+        bake_overlay("wood/leaves/%s.png" % t, "wood/fruits/%s.png" % t,
+                     "%s_fruiting_leaves.png" % t, tint, size)
+        make_dry("wood/leaves/%s.png" % t, "%s_dry_leaves.png" % t, target, size)
 
         # ---------- blockstate ----------
         w("assets/%s/blockstates/plant/%s_branch.json" % (NS, t), blockstate_branch(t))
@@ -269,18 +348,12 @@ def main():
             w("assets/%s/models/block/plant/%s_branch_%s.json" % (NS, t, part),
               {"parent": "tfc:block/plant/" + parent,
                "textures": {"bark": "%s:block/fruit_tree/%s_branch" % (NS, t)}})
-        for suffix in ("leaves", "dry_leaves"):
+        # 四种状态一律「一张成图 + block/leaves 父模型」，与 TFC 的
+        # models/block/plant/<tree>_<state>_leaves.json 完全同构，不再用 leaves_overlay。
+        for suffix in ("leaves", "flowering_leaves", "fruiting_leaves", "dry_leaves"):
             w("assets/%s/models/block/plant/%s_%s.json" % (NS, t, suffix),
               {"parent": "block/leaves",
                "textures": {"all": "%s:block/fruit_tree/%s_%s" % (NS, t, suffix)}})
-        # 开花 / 结果态沿用原模组 wood/leaves 的叠加做法：
-        # leaves_overlay 里 #all 带 tintindex 0（会被 BlockColor 染成绿色），
-        # #overlay 不带 tintindex（保持花/果本身的颜色）。
-        for suffix in ("flowering_leaves", "fruiting_leaves"):
-            w("assets/%s/models/block/plant/%s_%s.json" % (NS, t, suffix),
-              {"parent": "%s:block/leaves_overlay" % NS,
-               "textures": {"all": "%s:block/fruit_tree/%s_leaves" % (NS, t),
-                            "overlay": "%s:block/fruit_tree/%s_%s" % (NS, t, suffix)}})
         for i, parent in ((1, "block/cross"), (2, "tfc:block/plant/cross_2"),
                           (3, "tfc:block/plant/cross_3"), (4, "tfc:block/plant/cross_4")):
             w("assets/%s/models/block/plant/%s_sapling_%d.json" % (NS, t, i),
