@@ -9,6 +9,8 @@
     "grass_to_sand": true,
     "dirt_to_rock": true,
     "grass_to_rock": false,
-    "sand_to_rock": true
+    "sand_to_rock": true,
+    "rock_contact": true,
+    "skip_biomes": "tfcflorae:no_surface_transition"
   }
 }

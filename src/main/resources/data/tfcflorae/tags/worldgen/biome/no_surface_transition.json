@@ -1,0 +1,13 @@
+{
+  "__comment__": "这些群系整段跳过地表过渡带：恶地类风景本来就是裸岩 + 分层沙，铺多石沙会把地貌毁掉",
+  "replace": false,
+  "values": [
+    "tfc:badlands",
+    "tfc:inverted_badlands",
+    "tfc:burren_badlands",
+    "tfc:burren_badlands_tall",
+    "tfc:mesas",
+    "tfc:buttes",
+    "tfc:hoodoos"
+  ]
+}

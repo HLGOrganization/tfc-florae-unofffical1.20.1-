@@ -3,11 +3,14 @@ package tfcflorae.world.feature;
 import com.mojang.serialization.Codec;
 import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.Set;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,19 +23,20 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
  * <p>
  * TFC 的 岩 / 土 / 沙 三类表层是在 {@code TFCChunkGenerator} 里按气候和岩层逐列判定的硬阈值，
  * 交界处是一条生硬的线。这个地物在表层生成完成之后（{@code #tfc:in_biome/top_layer_modification}）
- * 扫一遍整块 chunk，沿着真正的接触线往两侧铺「多石」变体。
+ * 扫一遍整块 chunk，沿着真正的接触线往两侧铺过渡方块。
  * <p>
- * 算法分三步，顺序不能换：
+ * 一共有三条独立规则：
  * <ol>
- *   <li><b>找接触线</b>：只看<b>前后左右</b>四邻（不含对角），两侧都是地形方块且类别不同才算接触。
- *       水下/其它方块不参与，所以「沙滩挨着海」不算接触，只有「沙滩挨着草地/土/岩」才算。</li>
- *   <li><b>算深度</b>：从接触线出发，沿同类方块向外做 BFS，得到每列「离接触线几格」。
- *       同时把接触到的类别一路带出去，这样第 3 格也知道自己面对的是草还是岩。</li>
- *   <li><b>薄地带保护</b>：对每个同类连通块取最大深度 {@code dmax}，该块的过渡带宽度上限
- *       = {@code dmax / thin_zone_divisor}（默认 2，即至少留一半原样）。
- *       3 格宽的沙滩 {@code dmax = 3} → 上限 1，只有贴边那一格变多石沙，不会被整片吃掉。</li>
+ *   <li><b>水平交界</b>：只看<b>前后左右</b>四邻（不含对角），两侧都是地形方块且类别不同才算接触。
+ *       水下/其它方块不参与，所以「沙滩挨着海」不算接触。然后沿同类方块做 BFS 得到「离接触线几格」，
+ *       并用同类连通块的最大深度做薄地带保护（至少留一半原样）。</li>
+ *   <li><b>草 ↔ 沙</b>：沙一侧铺沙草渐变，由密到疏 ——
+ *       {@code sand/grass}（顶面 100% 草）→ {@code sand/dense_grass}（41.8%）→ {@code sand/sparse_grass}（10.2%）。
+ *       这条<b>优先于</b>多石沙：同时挨着草和岩石时用沙草。</li>
+ *   <li><b>垂直贴岩</b>：裸土/沙 直接压在岩石/砂砾上时，把紧贴岩石的那一层换成多石变体（只换 1 层）。</li>
  * </ol>
  * 岩石类型从该列下方真实岩层读取，找不到就跳过该列 —— 不会出现「花岗岩地上长安山岩混石土」。
+ * 恶地类群系通过 {@code tfcflorae:no_surface_transition} 标签整段跳过。
  */
 public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
 {
@@ -46,6 +50,9 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
 
     private static final String ROCKY_SAND_PREFIX = "sand/rocky/";
     private static final String ROCKY_SOIL_PREFIX = "rockier_compact_dirt/";
+    private static final String SAND_GRASS_PREFIX = "sand/grass/";
+    private static final String SAND_DENSE_GRASS_PREFIX = "sand/dense_grass/";
+    private static final String SAND_SPARSE_GRASS_PREFIX = "sand/sparse_grass/";
     private static final String ROCK_RAW_PREFIX = "rock/raw/";
     private static final String ROCK_GRAVEL_PREFIX = "rock/gravel/";
 
@@ -56,7 +63,7 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         SOIL,   // 裸土
         SAND,   // 沙
         ROCK,   // 裸岩
-        OTHER   // 其它（含水下、非地表方块）
+        OTHER   // 其它（含水下、非地表方块、已过渡方块）
     }
 
     public SurfaceTransitionFeature(Codec<SurfaceTransitionConfig> codec)
@@ -77,6 +84,7 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         final int margin = Math.max(1, config.widthMax()) + 1;
         final int span = CHUNK + margin * 2;
         final int total = span * span;
+        final TagKey<Biome> skip = config.skipBiomes().orElse(null);
 
         // ---------- 1. 采样表层类别 ----------
         final Kind[] kinds = new Kind[total];
@@ -90,7 +98,7 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
 
         // ---------- 2. 找接触线（只认前后左右） ----------
         final int[] dist = new int[total];
-        final int[] contacts = new int[total]; // 接触到的类别位掩码
+        final int[] contacts = new int[total];
         Arrays.fill(dist, -1);
 
         final ArrayDeque<Integer> queue = new ArrayDeque<>();
@@ -118,7 +126,7 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
             }
         }
 
-        // ---------- 3. 沿同类方块向外扩散，得到每列离接触线的深度 ----------
+        // ---------- 3. 沿同类方块向外扩散 ----------
         while (!queue.isEmpty())
         {
             final int cur = queue.poll();
@@ -172,100 +180,156 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                 final int gz = dz + margin;
                 final int idx = gx * span + gz;
 
-                final Kind kind = kinds[idx];
-                final int depth = dist[idx];
-                if (kind == Kind.OTHER || kind == Kind.ROCK || depth <= 0)
-                {
-                    continue; // 不在接触线上（或者不参与过渡）
-                }
-
-                // 薄地带保护
-                final int cap = compMax[comp[idx]] / config.thinZoneDivisor();
-                if (cap <= 0)
-                {
-                    continue;
-                }
                 final int wx = (chunkX << 4) + dx;
                 final int wz = (chunkZ << 4) + dz;
-                final int width = Math.min(widthAt(config, wx, wz), cap);
-                if (depth > width)
-                {
-                    continue;
-                }
-
-                // 这一列面对的是哪些类别
-                final int mask = contacts[idx];
-                final boolean touchGrass = (mask & bitOf(Kind.GRASS)) != 0;
-                final boolean touchSoil = (mask & bitOf(Kind.SOIL)) != 0;
-                final boolean touchSand = (mask & bitOf(Kind.SAND)) != 0;
-                final boolean touchRock = (mask & bitOf(Kind.ROCK)) != 0;
-
-                final boolean wantSand;
-                final boolean wantSoil;
-                switch (kind)
-                {
-                    case SAND -> {
-                        wantSand = (touchSoil && config.dirtToSand())
-                            || (touchGrass && config.grassToSand())
-                            || (touchRock && config.sandToRock());
-                        wantSoil = false;
-                    }
-                    case SOIL -> {
-                        wantSand = false;
-                        wantSoil = (touchSand && config.dirtToSand())
-                            || (touchRock && config.dirtToRock());
-                    }
-                    case GRASS -> {
-                        wantSand = false;
-                        wantSoil = touchRock && config.grassToRock();
-                    }
-                    default -> {
-                        wantSand = false;
-                        wantSoil = false;
-                    }
-                }
-                if (!wantSand && !wantSoil)
-                {
-                    continue;
-                }
 
                 final BlockPos top = findTop(level, wx, wz);
                 if (top == null)
                 {
                     continue;
                 }
-                final BlockState current = level.getBlockState(top);
-                final String path = BuiltInRegistries.BLOCK.getKey(current.getBlock()).getPath();
-                if (path.startsWith(ROCKY_SAND_PREFIX) || path.startsWith(ROCKY_SOIL_PREFIX))
-                {
-                    continue; // 已经是过渡方块
-                }
-
-                final String rock = findRock(level, top, config.searchDepth());
-                if (rock == null)
+                // 群系白名单：恶地类整段跳过
+                if (skip != null && level.getBiome(top).is(skip))
                 {
                     continue;
                 }
 
-                final BlockState replacement;
-                if (wantSand)
+                final BlockState current = level.getBlockState(top);
+                final Kind kind = classify(BuiltInRegistries.BLOCK.getKey(current.getBlock()));
+                if (kind == Kind.OTHER || kind == Kind.ROCK)
                 {
-                    final String color = lastSegment(path);
-                    replacement = color == null ? null : lookup("tfcflorae:" + ROCKY_SAND_PREFIX + color + "/" + rock);
-                }
-                else
-                {
-                    replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(path)) + "/" + rock);
+                    continue;
                 }
 
-                if (replacement != null && !replacement.is(current.getBlock()))
+                // 向下扫一遍：同时拿到岩层名 + 紧贴岩层上方那一块
+                String rock = null;
+                BlockPos aboveRock = null;
+                for (int d = 1; d <= config.searchDepth(); d++)
                 {
-                    level.setBlock(top, replacement, 2);
+                    final BlockPos q = top.below(d);
+                    if (q.getY() < level.getMinBuildHeight())
+                    {
+                        break;
+                    }
+                    final String name = rockName(pathOf(level, q));
+                    if (name != null)
+                    {
+                        rock = name;
+                        aboveRock = top.below(d - 1);
+                        break;
+                    }
+                }
+                if (rock == null)
+                {
+                    continue; // 这一列探不到岩层，两条规则都没法确定岩石类型
+                }
+
+                // ---------- 规则一/二：水平交界 ----------
+                boolean done = false;
+                final int depth = dist[idx];
+                if (depth > 0 && kind != Kind.OTHER)
+                {
+                    final int cap = compMax[comp[idx]] / config.thinZoneDivisor();
+                    if (cap > 0 && depth <= Math.min(widthAt(config, wx, wz), cap))
+                    {
+                        done = applyHorizontal(level, config, top, current, kind, contacts[idx], depth, rock);
+                    }
+                }
+                if (done)
+                {
                     changed = true;
+                    continue;
+                }
+
+                // ---------- 规则三：垂直贴岩 ----------
+                if (config.rockContact())
+                {
+                    final BlockState above = level.getBlockState(aboveRock);
+                    final Kind aboveKind = classify(BuiltInRegistries.BLOCK.getKey(above.getBlock()));
+                    if (aboveKind == Kind.SOIL || aboveKind == Kind.SAND)
+                    {
+                        final String abovePath = pathOf(level, aboveRock);
+                        final BlockState repl = aboveKind == Kind.SAND
+                            ? lookup("tfcflorae:" + ROCKY_SAND_PREFIX + lastSegment(abovePath) + "/" + rock)
+                            : lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(abovePath)) + "/" + rock);
+                        if (repl != null && !repl.is(above.getBlock()))
+                        {
+                            level.setBlock(aboveRock, repl, 3);
+                            changed = true;
+                        }
+                    }
                 }
             }
         }
         return changed;
+    }
+
+    /**
+     * 水平交界规则。返回是否真的改了方块。
+     * <p>
+     * 沙一侧的优先级：<b>挨着草</b> ＞ 挨着土/岩。挨着草时铺沙草渐变（由密到疏），
+     * 否则铺多石沙。
+     */
+    private static boolean applyHorizontal(WorldGenLevel level, SurfaceTransitionConfig config, BlockPos top,
+                                           BlockState current, Kind kind, int mask, int depth, String rock)
+    {
+        final String path = BuiltInRegistries.BLOCK.getKey(current.getBlock()).getPath();
+        final boolean touchGrass = (mask & bitOf(Kind.GRASS)) != 0;
+        final boolean touchSoil = (mask & bitOf(Kind.SOIL)) != 0;
+        final boolean touchSand = (mask & bitOf(Kind.SAND)) != 0;
+        final boolean touchRock = (mask & bitOf(Kind.ROCK)) != 0;
+
+        BlockState replacement = null;
+        if (kind == Kind.SAND)
+        {
+            final String color = lastSegment(path);
+            if (touchGrass && config.grassToSand())
+            {
+                // 沙草渐变：1 格最密（全草），越远越疏
+                replacement = lookup("tfcflorae:" + sandGrassFamily(depth) + color);
+            }
+            else if ((touchSoil && config.dirtToSand()) || (touchRock && config.sandToRock()))
+            {
+                replacement = lookup("tfcflorae:" + ROCKY_SAND_PREFIX + color + "/" + rock);
+            }
+        }
+        else if (kind == Kind.SOIL)
+        {
+            if ((touchSand && config.dirtToSand()) || (touchRock && config.dirtToRock()))
+            {
+                replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(path)) + "/" + rock);
+            }
+        }
+        else if (kind == Kind.GRASS)
+        {
+            if (touchRock && config.grassToRock())
+            {
+                replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(path)) + "/" + rock);
+            }
+        }
+
+        if (replacement == null || replacement.is(current.getBlock()))
+        {
+            return false;
+        }
+        level.setBlock(top, replacement, 3);
+        return true;
+    }
+
+    /**
+     * 沙草渐变的三档。密度实测（顶面不透明覆盖率）：
+     * {@code sand/grass} = 100%（等同 {@code tfc:grass_top}）、
+     * {@code sand/dense_grass} = 41.8%、
+     * {@code sand/sparse_grass} = 10.2%。
+     * 所以 1 格用 grass 最密，3 格及以外用 sparse_grass 最疏。
+     */
+    private static String sandGrassFamily(int depth)
+    {
+        if (depth <= 1)
+        {
+            return SAND_GRASS_PREFIX;
+        }
+        return depth == 2 ? SAND_DENSE_GRASS_PREFIX : SAND_SPARSE_GRASS_PREFIX;
     }
 
     // ------------------------------------------------------------------ 图遍历
@@ -359,7 +423,11 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
             return Kind.ROCK;
         }
         // 已经是过渡方块，不重复处理
-        if (p.startsWith(ROCKY_SAND_PREFIX) || p.startsWith(ROCKY_SOIL_PREFIX))
+        if (p.startsWith(ROCKY_SAND_PREFIX)
+            || p.startsWith(ROCKY_SOIL_PREFIX)
+            || p.startsWith(SAND_GRASS_PREFIX)
+            || p.startsWith(SAND_DENSE_GRASS_PREFIX)
+            || p.startsWith(SAND_SPARSE_GRASS_PREFIX))
         {
             return Kind.OTHER;
         }
@@ -393,25 +461,21 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         return Kind.OTHER;
     }
 
-    /** 从地表向下找岩层，返回岩石名（如 {@code granite}），找不到返回 null。 */
-    private static String findRock(WorldGenLevel level, BlockPos top, int depth)
+    private static String pathOf(WorldGenLevel level, BlockPos pos)
     {
-        for (int d = 1; d <= depth; d++)
+        return BuiltInRegistries.BLOCK.getKey(level.getBlockState(pos).getBlock()).getPath();
+    }
+
+    /** 是岩层就返回岩石名（如 {@code granite}），否则 null。 */
+    private static String rockName(String path)
+    {
+        if (path.startsWith(ROCK_RAW_PREFIX) && path.indexOf('/', ROCK_RAW_PREFIX.length()) < 0)
         {
-            final BlockPos pos = top.below(d);
-            if (pos.getY() < level.getMinBuildHeight())
-            {
-                break;
-            }
-            final String path = BuiltInRegistries.BLOCK.getKey(level.getBlockState(pos).getBlock()).getPath();
-            if (path.startsWith(ROCK_RAW_PREFIX) && path.indexOf('/', ROCK_RAW_PREFIX.length()) < 0)
-            {
-                return path.substring(ROCK_RAW_PREFIX.length());
-            }
-            if (path.startsWith(ROCK_GRAVEL_PREFIX) && path.indexOf('/', ROCK_GRAVEL_PREFIX.length()) < 0)
-            {
-                return path.substring(ROCK_GRAVEL_PREFIX.length());
-            }
+            return path.substring(ROCK_RAW_PREFIX.length());
+        }
+        if (path.startsWith(ROCK_GRAVEL_PREFIX) && path.indexOf('/', ROCK_GRAVEL_PREFIX.length()) < 0)
+        {
+            return path.substring(ROCK_GRAVEL_PREFIX.length());
         }
         return null;
     }

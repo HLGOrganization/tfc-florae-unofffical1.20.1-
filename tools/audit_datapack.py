@@ -105,6 +105,12 @@ def main() -> int:
     if "--tfc" in sys.argv:
         tfc_jar = sys.argv[sys.argv.index("--tfc") + 1]
         args = [a for a in args if a != tfc_jar]
+    # --extra <jar> 可重复：额外的参考模组（如 TFE），用于解析只存在于它里面的群系/地物 id
+    extra_jars = []
+    for i, a in enumerate(sys.argv):
+        if a == "--extra" and i + 1 < len(sys.argv):
+            extra_jars.append(sys.argv[i + 1])
+            args = [x for x in args if x != sys.argv[i + 1]]
 
     if args:
         jar = args[0]
@@ -148,19 +154,30 @@ def main() -> int:
     other_items, other_blocks = set(), set()
     other_tags = set()
     other_worldgen = {}
+    ref_jars = []
     if tfc_jar and os.path.exists(tfc_jar):
-        with zipfile.ZipFile(tfc_jar) as tz:
+        ref_jars.append(tfc_jar)
+    for ej in extra_jars:
+        if os.path.exists(ej):
+            ref_jars.append(ej)
+        else:
+            print("  [警告] 参考 jar 不存在: %s" % ej)
+    for rj in ref_jars:
+        with zipfile.ZipFile(rj) as tz:
             ti, tb = collect_ids(tz, "tfc")
             other_items |= set("tfc:" + x for x in ti)
             other_blocks |= set("tfc:" + x for x in tb)
-            for (ns, path) in collect_tags(tz):
+            rtags = collect_tags(tz)
+            for (ns, path) in rtags:
                 other_tags.add("%s:%s" % (ns, path))
+            wg = 0
             for n2 in tz.namelist():
                 m = re.match(r"data/([^/]+)/worldgen/([^/]+)/(.+)\.json$", n2)
                 if m:
                     other_worldgen[(m.group(2), "%s:%s" % (m.group(1), m.group(3)))] = True
-            print("  TFC 参考: 物品 %d  方块 %d  标签 %d  地物 %d"
-                  % (len(ti), len(tb), len(other_tags), len(other_worldgen)))
+                    wg += 1
+            print("  参考 %-34s 物品 %d  方块 %d  标签 %d  地物 %d"
+                  % (os.path.basename(rj)[:34], len(ti), len(tb), len(rtags), wg))
 
     unresolved = {"tag": [], "recipe": [], "loot": [], "texture": [], "parent": []}
     unverifiable = 0
