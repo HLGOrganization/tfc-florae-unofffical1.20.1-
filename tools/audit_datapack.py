@@ -120,7 +120,20 @@ def main() -> int:
 
     items, blocks = collect_ids(zf, NS)
     tags = collect_tags(zf)  # 所有命名空间
-    our_tag_ids = set("%s:%s" % (ns, path) for (ns, path) in tags)
+
+    def tag_id_of(tpath: str) -> str:
+        """把标签文件路径换成标签 id 的路径部分。
+
+        blocks/dirt            -> dirt
+        items/dirt             -> dirt
+        worldgen/placed_feature/feature/steppe_plants -> feature/steppe_plants
+        规则：worldgen 类去掉前两段，其余去掉第一段。
+        """
+        parts = tpath.split("/")
+        drop = 2 if tpath.startswith("worldgen/") else 1
+        return "/".join(parts[drop:])
+
+    our_tag_ids = set("%s:%s" % (ns, tag_id_of(path)) for (ns, path) in tags)
     print("  物品 id: %d   方块 id: %d   标签文件: %d（全命名空间）"
           % (len(items), len(blocks), len(tags)))
 
@@ -165,8 +178,8 @@ def main() -> int:
             if tid in our_tag_ids:
                 return True
             if ns == NS:
-                # 标签 id 不带类别，需在任一类别里找
-                return any("%s:%s/%s" % (NS, cat, path) in our_tag_ids for cat in TAG_CATS)
+                # 已按标准映射（去掉类别前缀）比较过；此处兜底处理残留写法
+                return False
             if ns == "tfc":
                 return tid in other_tags or True  # TFC 标签集不全，按通过处理
             unverifiable += 1
