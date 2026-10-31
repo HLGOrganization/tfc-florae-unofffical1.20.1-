@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/green/red_granite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/green/red_granite"
       }
     ]
   }

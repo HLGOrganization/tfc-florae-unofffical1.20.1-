@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/green/shale"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/green/shale"
       }
     ]
   }

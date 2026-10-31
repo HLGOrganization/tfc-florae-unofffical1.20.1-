@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/white/gneiss"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/white/gneiss"
       }
     ]
   }

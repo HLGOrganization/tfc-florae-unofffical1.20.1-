@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "tfcflorae:block/template/soil_over_rock",
   "textures": {
-    "all": "tfcflorae:block/sand/rocky/black/conglomerate"
+    "rock": "tfc:block/rock/raw/conglomerate",
+    "soil": "tfcflorae:block/sand/rocky/black"
   }
 }

@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/black/quartzite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/black/quartzite"
       }
     ]
   }

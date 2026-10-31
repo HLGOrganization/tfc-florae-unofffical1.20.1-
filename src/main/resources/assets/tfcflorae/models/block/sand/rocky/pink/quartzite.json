@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "tfcflorae:block/template/soil_over_rock",
   "textures": {
-    "all": "tfcflorae:block/sand/rocky/pink/quartzite"
+    "rock": "tfc:block/rock/raw/quartzite",
+    "soil": "tfcflorae:block/sand/rocky/pink"
   }
 }

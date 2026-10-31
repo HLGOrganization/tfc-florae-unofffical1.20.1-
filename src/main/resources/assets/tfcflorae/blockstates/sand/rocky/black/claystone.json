@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/black/claystone"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/black/claystone"
       }
     ]
   }

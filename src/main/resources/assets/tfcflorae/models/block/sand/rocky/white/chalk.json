@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "tfcflorae:block/template/soil_over_rock",
   "textures": {
-    "all": "tfcflorae:block/sand/rocky/white/chalk"
+    "rock": "tfc:block/rock/raw/chalk",
+    "soil": "tfcflorae:block/sand/rocky/white"
   }
 }

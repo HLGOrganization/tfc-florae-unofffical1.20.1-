@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "tfcflorae:block/template/soil_over_rock",
   "textures": {
-    "all": "tfcflorae:block/sand/rocky/black/jaspillite"
+    "rock": "tfcflorae:block/rock/raw/jaspillite",
+    "soil": "tfcflorae:block/sand/rocky/black"
   }
 }

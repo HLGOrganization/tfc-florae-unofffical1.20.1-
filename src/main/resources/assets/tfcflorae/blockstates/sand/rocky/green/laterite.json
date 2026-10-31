@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/green/laterite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/green/laterite"
       }
     ]
   }

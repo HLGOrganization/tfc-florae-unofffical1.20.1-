@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/yellow/chalk"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/yellow/chalk"
       }
     ]
   }

@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/black/phyllite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/black/phyllite"
       }
     ]
   }

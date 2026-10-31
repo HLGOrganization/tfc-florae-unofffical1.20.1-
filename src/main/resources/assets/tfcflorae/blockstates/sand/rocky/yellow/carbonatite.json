@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/yellow/carbonatite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/yellow/carbonatite"
       }
     ]
   }

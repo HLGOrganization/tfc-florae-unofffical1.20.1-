@@ -1,0 +1,7 @@
+{
+  "parent": "tfcflorae:block/template/soil_over_rock",
+  "textures": {
+    "rock": "tfcflorae:block/rock/raw/laterite",
+    "soil": "tfcflorae:block/sand/rockiest/yellow"
+  }
+}

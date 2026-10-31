@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "tfcflorae:block/template/soil_over_rock",
   "textures": {
-    "all": "tfcflorae:block/sand/pebble/yellow/gabbro"
+    "rock": "tfc:block/rock/raw/gabbro",
+    "soil": "tfcflorae:block/sand/pebble/yellow"
   }
 }

@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/pink/quartzite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/pink/quartzite"
       }
     ]
   }

@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/brown/boninite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/brown/boninite"
       }
     ]
   }

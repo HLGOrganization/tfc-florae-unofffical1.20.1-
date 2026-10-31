@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/black/rhyolite"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/black/rhyolite"
       }
     ]
   }

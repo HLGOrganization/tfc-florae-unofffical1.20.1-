@@ -9,6 +9,9 @@
       },
       {
         "model": "tfcflorae:block/sand/rockier/pink/schist"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/pink/schist"
       }
     ]
   }
