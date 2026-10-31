@@ -50,6 +50,12 @@ repositories {
         content { includeGroup 'maven.modrinth' }
     }
     flatDir { dirs 'libs' }
+    // 本地 maven：放只有 dev 才需要的生产 jar（见依赖区的 withTFE 说明）。已在 .gitignore 中。
+    maven {
+        name = 'LocalDevLibs'
+        url = uri("${projectDir}/devlibs")
+        content { includeGroup 'tfe' }
+    }
     mavenCentral()
 }
 
@@ -82,6 +88,23 @@ dependencies {
     // Optional compile-only integrations
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:15.2.0.21")
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:15.2.0.21")
+
+    // Patchouli 是 TFC 的强制依赖。开发环境里 TFC 会因为缺它直接拒绝启动，
+    // 但生产 jar 是混淆过的，直接丢进 run/mods 会 NoSuchFieldError，
+    // 必须由 ForgeGradle 重新映射成 deobf 版本才可用。
+    // 用 -PwithPatchouli 开关控制：默认构建（含 --offline）完全不受影响。
+    if (project.hasProperty('withPatchouli')) {
+        runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84.1-FORGE")
+    }
+
+    // 本模组 data/tfc/worldgen/** 下的矿脉、漂砾、world_preset 覆盖文件引用了 TFE 的岩石
+    // （tfe:rock/raw/tuff 等）。目标整合包里有 TFE，所以运行时没问题；但开发环境没有它，
+    // 数据包注册表会加载失败。这里把本地 mods 里的 TFE 生产 jar 挂成本地 maven，
+    // 由 ForgeGradle 反混淆后只在 dev 运行时加载。
+    // 同样用 -PwithTFE 开关控制，默认构建不受影响。devlibs/ 已在 .gitignore 中。
+    if (project.hasProperty('withTFE')) {
+        runtimeOnly fg.deobf("tfe:Wildfire_TerraFirmaEarth:1.20.1-forge-2.3.0")
+    }
 }
 
 // 需要的最小 Mixin：仅一个 @Accessor，用来把本模组的木材追加进 TFC 的旋转方块实体

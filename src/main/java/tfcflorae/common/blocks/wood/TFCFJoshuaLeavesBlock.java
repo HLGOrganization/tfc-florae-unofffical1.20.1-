@@ -115,7 +115,9 @@ public abstract class TFCFJoshuaLeavesBlock extends SeasonalPlantBlock implement
       super(properties, climateRange, productItem, stages);
       this.wood = wood;
       this.properties = properties;
-      this.lastUpdateTick = Calendars.SERVER.getTicks();
+      // lastUpdateTick 保持 0（字段默认值）：注册阶段不能读 TFC 的 Calendars ——
+      // 它的静态初始化要读配置，dev 环境会在构造方块时直接抛 IllegalStateException。
+      // 生产环境里注册阶段 getTicks() 本来就是 0，因此行为不变。
       this.registerDefaultState(
          (BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(AGE, 0)).setValue(FACING, Direction.UP))
                .setValue(PERSISTENT, false))

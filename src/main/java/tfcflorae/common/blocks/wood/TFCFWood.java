@@ -839,7 +839,15 @@ public enum TFCFWood implements RegistryWood {
    }
 
    public int daysToGrow() {
-      return (Integer)Config.COMMON.saplingGrowthDays.get(this).get();
+      try {
+         return (Integer)Config.COMMON.saplingGrowthDays.get(this).get();
+      } catch (IllegalStateException e) {
+         // 开发环境里注册阶段早于配置加载，Forge 会在这里抛
+         // "Cannot get config value before config is loaded"（该异常只在 dev 抛）。
+         // 回退到枚举自带的默认值，让 runServer/runClient 能正常起来。
+         // 生产环境配置总是已加载，这条路径不会走到，行为与之前完全一致。
+         return this.daysToGrow;
+      }
    }
 
    public int defaultDaysToGrow() {

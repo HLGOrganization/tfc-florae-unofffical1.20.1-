@@ -74,7 +74,9 @@ public class FruitingTopPlantBlock extends TopPlantBlock implements ILeavesBlock
       this.climateRange = climateRange;
       this.lifecycle = lifecycle;
       this.productItem = productItem;
-      this.lastUpdateTick = Calendars.SERVER.getTicks();
+      // lastUpdateTick 保持 0（字段默认值）：注册阶段不能读 TFC 的 Calendars ——
+      // 它的静态初始化要读配置，dev 环境会在构造方块时直接抛 IllegalStateException。
+      // 生产环境里注册阶段 getTicks() 本来就是 0，因此行为不变。
       this.registerDefaultState((BlockState)((BlockState)((BlockState)this.getStateDefinition().any()).setValue(LIFECYCLE, Lifecycle.HEALTHY)).setValue(TFCFBlockStateProperties.NATURAL, false));
    }
 

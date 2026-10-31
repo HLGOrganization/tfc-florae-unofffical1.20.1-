@@ -118,7 +118,9 @@ public abstract class TFCFMangroveLeavesBlock extends TFCLeavesBlock implements 
       this.fallenLeaves = fallenLeaves;
       this.fallenTwig = fallenTwig;
       this.sapling = sapling;
-      this.lastUpdateTick = Calendars.SERVER.getTicks();
+      // lastUpdateTick 保持 0（字段默认值）：注册阶段不能读 TFC 的 Calendars ——
+      // 它的静态初始化要读配置，dev 环境会在构造方块时直接抛 IllegalStateException。
+      // 生产环境里注册阶段 getTicks() 本来就是 0，因此行为不变。
       this.registerDefaultState((BlockState)((BlockState)((BlockState)this.getStateDefinition().any()).setValue(PERSISTENT, false)).setValue(LIFECYCLE, Lifecycle.HEALTHY));
    }
 
