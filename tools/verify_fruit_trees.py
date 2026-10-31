@@ -214,6 +214,7 @@ tag_checks = [
     ("data/minecraft/tags/blocks/mineable/axe.json", "plant/pear_branch"),
     ("data/minecraft/tags/blocks/leaves.json", "plant/pear_leaves"),
     ("data/minecraft/tags/blocks/saplings.json", "plant/pear_sapling"),
+    ("data/minecraft/tags/blocks/flower_pots.json", "plant/potted/pear_sapling"),
     ("data/minecraft/tags/items/leaves.json", "plant/pear_leaves"),
     ("data/minecraft/tags/items/saplings.json", "plant/pear_sapling"),
     ("data/tfc/tags/blocks/fruit_tree_branch.json", "plant/pear_growing_branch"),
@@ -226,7 +227,7 @@ if bad:
     for p in bad:
         err("tag 没写进去: " + p)
 else:
-    print("8) tag: 9 个文件全部包含果树条目")
+    print("8) tag: %d 个文件全部包含果树条目" % len(tag_checks))
 
 # ---------------------------------------------------------------- 汇总
 print()

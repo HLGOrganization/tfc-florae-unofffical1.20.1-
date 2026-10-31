@@ -129,11 +129,37 @@ def blockstate_sapling(t):
 
 
 def loot_sticks():
+    """生长中的枝干：只掉 1-4 根木棍。"""
     return {"type": "minecraft:block", "pools": [{
         "name": "loot_pool", "rolls": 1,
         "entries": [{"type": "minecraft:item", "name": "minecraft:stick", "functions": [
             {"function": "minecraft:set_count", "count": {"min": 1, "max": 4, "type": "minecraft:uniform"}}]}],
         "conditions": [{"condition": "minecraft:survives_explosion"}]}]}
+
+
+def loot_branch(t):
+    """长成的枝干：两池。
+
+    第 1 池是果树唯一的存活获取途径——当这根枝干「往上还有」且「往侧面还有」
+    （即 up=true 且四向之一=true，说明是一个分叉点），用斧头砍掉会掉一棵果树苗。
+    第 2 池才是 1-4 根木棍。两者都照抄 TFC 的 cherry_branch。
+    """
+    b = "%s:plant/%s_branch" % (NS, t)
+    forks = [{"condition": "minecraft:block_state_property", "block": b,
+              "properties": {"up": "true", d: "true"}}
+             for d in ("west", "east", "north", "south")]
+    return {"type": "minecraft:block", "pools": [
+        {"name": "loot_pool", "rolls": 1, "entries": [
+            {"type": "minecraft:item", "name": "%s:plant/%s_sapling" % (NS, t), "conditions": [
+                {"condition": "minecraft:all_of", "terms": [
+                    {"condition": "minecraft:any_of", "terms": forks},
+                    {"condition": "minecraft:match_tool", "predicate": {"tag": "tfc:axes"}}]}]}],
+         "conditions": [{"condition": "minecraft:survives_explosion"}]},
+        {"name": "loot_pool", "rolls": 1, "entries": [
+            {"type": "minecraft:item", "name": "minecraft:stick", "functions": [
+                {"function": "minecraft:set_count",
+                 "count": {"min": 1, "max": 4, "type": "minecraft:uniform"}}]}],
+         "conditions": [{"condition": "minecraft:survives_explosion"}]}]}
 
 
 def loot_leaves(t, fruit):
@@ -259,7 +285,7 @@ def main():
            "textures": {"layer0": "%s:block/fruit_tree/%s_sapling" % (NS, t)}})
 
         # ---------- 掉落表 ----------
-        w("data/%s/loot_tables/blocks/plant/%s_branch.json" % (NS, t), loot_sticks())
+        w("data/%s/loot_tables/blocks/plant/%s_branch.json" % (NS, t), loot_branch(t))
         w("data/%s/loot_tables/blocks/plant/%s_growing_branch.json" % (NS, t), loot_sticks())
         w("data/%s/loot_tables/blocks/plant/%s_leaves.json" % (NS, t), loot_leaves(t, fruit))
         w("data/%s/loot_tables/blocks/plant/%s_sapling.json" % (NS, t), loot_sapling(t))
