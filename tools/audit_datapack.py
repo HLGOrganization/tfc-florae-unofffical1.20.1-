@@ -285,7 +285,7 @@ def main() -> int:
         rows2 = [r for r in rows if not KNOWN_MISSING_MODEL.search(str(r[1]))]
         total += len(rows2)
         print("%s: 未解析 %d 条（已排除已知基线遗留 %d 条）" % (label, len(rows2), len(rows) - len(rows2)))
-        for r in rows2[:8]:
+        for r in rows2[:20]:
             print("    %s  ->  %s" % (r[0], r[1]))
         # 收集与本次精简 13 树种相关的条目
         for r in rows2:
