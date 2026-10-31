@@ -8,9 +8,10 @@ import json
 import os
 import shutil
 import zipfile
+import glob
 
 RES = "src/main/resources"
-TFC_JAR = r"D:\线框的服务器\versions\TFC_Wild_Fire\mods\[群峦传说] TerraFirmaCraft-Forge-1.20.1-3.2.20.jar"
+TFC_JAR = sorted(glob.glob(r"D:\线框的服务器\versions\TFC_Wild_Fire\mods\*TerraFirmaCraft-Forge*.jar"))[-1]
 NS = "tfcflorae"
 
 # 树种 -> (产物食物, climate_range(min_hyd,min_t,max_t), placed(min_t,max_t,min_r,max_r))
@@ -62,30 +63,43 @@ def _avg_rgb(img):
     return a[m][:, :3].mean(axis=0)
 
 
-def dry_ratio():
-    """从 TFC 自己的 cherry 一对贴图推出「枯萎 / 健康」的色调比例。"""
+def dry_target():
+    """从 TFC 的 cherry 一对贴图推出「枯萎态」的色相与亮度系数。
+
+    以前这里是「枯萎均值 / 健康均值」的逐通道比值，再乘到灰度图上。那个做法对
+    本身是绿色的贴图没问题（TFC 樱桃就是绿的），但我们的树叶贴图大多是灰度，
+    灰度乘一个「红略高、绿大减、蓝略减」的比值必然得到品红/紫——山楂、花楸那批
+    枯萎态实测是 (110,66,93)、(187,112,158)，一眼就是粉色。
+
+    正确做法：只保留原图的亮度，然后统一乘上褐色色相。色相和系数都从 TFC 的
+    cherry 那对贴图反推，保证结果与 TFC 的枯萎态同色系、同亮度。
+    """
     import io
+    import numpy as np
     from PIL import Image
     z = zipfile.ZipFile(TFC_JAR)
     live = Image.open(io.BytesIO(z.read("assets/tfc/textures/block/fruit_tree/cherry_leaves.png")))
     dry = Image.open(io.BytesIO(z.read("assets/tfc/textures/block/fruit_tree/cherry_dry_leaves.png")))
-    ratio = _avg_rgb(dry) / _avg_rgb(live)
-    print("TFC cherry 枯萎/健康 色调比例: R=%.3f G=%.3f B=%.3f" % tuple(ratio))
-    return ratio
+    d = _avg_rgb(dry)
+    l = _avg_rgb(live)
+    live_lum = float(l @ np.array([0.299, 0.587, 0.114]))
+    hue = d / d.max()                       # 归一化色相，最大通道 = 1
+    scale = float(d.max()) / live_lum       # 亮度系数
+    print("TFC cherry 枯萎态: 均值=%s 亮度=%.1f -> 色相=(%.3f,%.3f,%.3f) 亮度系数=%.3f"
+          % (tuple(d.round(0).astype(int)), live_lum, hue[0], hue[1], hue[2], scale))
+    return hue, scale
 
 
-def make_dry(leaves_src, dst, ratio):
-    """把健康树叶贴图按上面的比例做成枯黄色，保留 alpha 与叶形。"""
+def make_dry(leaves_src, dst, target):
+    """把健康树叶贴图做成褐色枯萎态：保留每像素亮度与 alpha，只换色相。"""
     import numpy as np
     from PIL import Image
+    hue, scale = target
     src = Image.open(os.path.join(RES, "assets", NS, "textures", "block", leaves_src)).convert("RGBA")
     a = np.asarray(src, dtype=np.float64)
     rgb, alpha = a[..., :3], a[..., 3]
     gray = rgb @ np.array([0.299, 0.587, 0.114])
-    m = alpha > 0
-    g_avg = gray[m].mean()
-    k = (rgb[m].mean(axis=0) * ratio) / g_avg          # 让结果均值 = 原均值 * 比例
-    out_rgb = np.clip(gray[..., None] * k, 0, 255)
+    out_rgb = np.clip(gray[..., None] * scale * hue, 0, 255)
     out = np.dstack([out_rgb, alpha]).astype(np.uint8)
     d = os.path.join(RES, "assets", NS, "textures", "block", "fruit_tree", dst)
     os.makedirs(os.path.dirname(d), exist_ok=True)
@@ -230,7 +244,7 @@ def main():
             raise SystemExit("TFC 缺少父资源: " + n)
     print("TFC 父模型/贴图 全部存在 (%d 项)" % len(need))
 
-    ratio = dry_ratio()
+    target = dry_target()
 
     for t, (fruit, cr, pf) in TREES.items():
         # ---------- 贴图 ----------
@@ -239,7 +253,7 @@ def main():
         copy_tex("wood/flowers/%s.png" % t, "%s_flowering_leaves.png" % t)
         copy_tex("wood/fruits/%s.png" % t, "%s_fruiting_leaves.png" % t)
         copy_tex("wood/sapling/%s.png" % t, "%s_sapling.png" % t)
-        make_dry("wood/leaves/%s.png" % t, "%s_dry_leaves.png" % t, ratio)
+        make_dry("wood/leaves/%s.png" % t, "%s_dry_leaves.png" % t, target)
 
         # ---------- blockstate ----------
         w("assets/%s/blockstates/plant/%s_branch.json" % (NS, t), blockstate_branch(t))
