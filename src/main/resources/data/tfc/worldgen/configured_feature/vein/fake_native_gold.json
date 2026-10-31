@@ -85,7 +85,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/pyrite/red_granite"
           }
         ]
@@ -96,7 +95,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/pyrite/porphyry"
           }
         ]
@@ -107,7 +105,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/pyrite/boninite"
           }
         ]
@@ -118,7 +115,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/pyrite/carbonatite"
           }
         ]

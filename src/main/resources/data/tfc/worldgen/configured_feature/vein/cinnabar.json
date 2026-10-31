@@ -55,7 +55,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/cinnabar/soapstone"
           }
         ]

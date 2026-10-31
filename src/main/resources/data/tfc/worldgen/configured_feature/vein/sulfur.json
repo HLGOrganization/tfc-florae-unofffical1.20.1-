@@ -107,7 +107,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/sulfur/red_granite"
           }
         ]
@@ -118,7 +117,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/sulfur/soapstone"
           }
         ]

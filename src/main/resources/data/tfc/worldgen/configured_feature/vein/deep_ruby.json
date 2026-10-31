@@ -25,7 +25,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/ruby/soapstone"
           }
         ]

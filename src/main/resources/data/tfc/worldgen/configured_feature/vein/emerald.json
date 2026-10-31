@@ -51,7 +51,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/emerald/red_granite"
           }
         ]

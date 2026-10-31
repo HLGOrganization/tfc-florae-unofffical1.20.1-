@@ -156,7 +156,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/amethyst/porphyry"
           }
         ]
@@ -167,7 +166,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/amethyst/boninite"
           }
         ]
@@ -178,7 +176,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/amethyst/carbonatite"
           }
         ]
@@ -189,7 +186,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/amethyst/laterite"
           }
         ]
@@ -200,7 +196,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/amethyst/mudstone"
           }
         ]
@@ -211,7 +206,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/amethyst/jaspillite"
           }
         ]
@@ -222,7 +216,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/amethyst/wackestone"
           }
         ]
@@ -233,7 +226,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/amethyst/soapstone"
           }
         ]

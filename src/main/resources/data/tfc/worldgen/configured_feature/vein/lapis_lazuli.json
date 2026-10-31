@@ -35,7 +35,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/lapis_lazuli/laterite"
           }
         ]
@@ -46,7 +45,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/lapis_lazuli/mudstone"
           }
         ]
@@ -57,7 +55,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/lapis_lazuli/jaspillite"
           }
         ]
@@ -68,7 +65,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/lapis_lazuli/wackestone"
           }
         ]
@@ -79,7 +75,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/lapis_lazuli/soapstone"
           }
         ]

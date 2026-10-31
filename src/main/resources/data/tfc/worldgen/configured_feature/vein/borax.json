@@ -46,7 +46,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/borax/laterite"
           }
         ]
@@ -57,7 +56,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/borax/mudstone"
           }
         ]
@@ -68,7 +66,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/borax/jaspillite"
           }
         ]
@@ -79,7 +76,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/borax/wackestone"
           }
         ]

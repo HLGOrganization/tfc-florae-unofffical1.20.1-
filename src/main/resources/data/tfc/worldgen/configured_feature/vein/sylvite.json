@@ -46,7 +46,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/sylvite/laterite"
           }
         ]
@@ -57,7 +56,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/sylvite/mudstone"
           }
         ]
@@ -68,7 +66,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/sylvite/jaspillite"
           }
         ]
@@ -79,7 +76,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/sylvite/wackestone"
           }
         ]

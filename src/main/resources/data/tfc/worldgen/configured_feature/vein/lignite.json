@@ -88,7 +88,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/lignite/laterite"
           }
         ]
@@ -99,7 +98,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/lignite/mudstone"
           }
         ]
@@ -110,7 +108,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/lignite/jaspillite"
           }
         ]
@@ -121,7 +118,6 @@
         ],
         "with": [
           {
-            "weight": null,
             "block": "tfcflorae:ore/lignite/wackestone"
           }
         ]
