@@ -147,7 +147,8 @@
               {
                 "id": "felsic",
                 "layers": {
-                  "granite": "bottom"
+                  "granite": "bottom",
+                  "red_granite": "bottom"
                 }
               },
               {
@@ -227,7 +228,8 @@
                   "marble": "bottom",
                   "phyllite": "high_grade",
                   "quartzite": "bottom",
-                  "slate": "high_grade"
+                  "slate": "high_grade",
+                  "red_granite": "low_grade"
                 }
               },
               {
@@ -271,7 +273,6 @@
             "land": [
               "igneous_extrusive",
               "sedimentary",
-              "tfcflorae_intrusive",
               "tfcflorae_extrusive",
               "tfcflorae_sedimentary",
               "tfcflorae_metamorphic"
