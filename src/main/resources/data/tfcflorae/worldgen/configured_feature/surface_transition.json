@@ -5,6 +5,7 @@
     "width_max": 3,
     "search_depth": 8,
     "thin_zone_divisor": 2,
+    "grass_rings": 3,
     "dirt_to_sand": true,
     "grass_to_sand": true,
     "dirt_to_rock": true,

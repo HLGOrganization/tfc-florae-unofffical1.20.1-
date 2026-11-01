@@ -19,22 +19,23 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
  *   <li>多石沙 {@code tfcflorae:sand/rocky/<颜色>/<岩石>} —— 203 个</li>
  *   <li>沙草 {@code tfcflorae:sand/{grass,dense_grass,sparse_grass}/<颜色>} —— 21 个</li>
  * </ul>
- * <p>
  * 各开关的含义是「某一侧要不要响应相邻的另一种表层」，默认值对应已经确定的设计：
  * <pre>
  *   土(裸) ↔ 沙   两侧都做        dirt_to_sand  = true
- *   土(草) ↔ 沙   只做沙一侧      grass_to_sand = true（沙一侧变成沙草，由密到疏）
+ *   土(草) ↔ 沙   只做沙一侧      grass_to_sand = true（沙一侧铺沙草渐变）
  *   土(裸) ↔ 岩   只做土一侧      dirt_to_rock  = true
  *   土(草) ↔ 岩   整段跳过        grass_to_rock = false
  *   沙     ↔ 岩   只做沙一侧      sand_to_rock  = true
  * </pre>
  *
- * @param widthMin         过渡带最小宽度
- * @param widthMax         过渡带最大宽度（每 4 格抖动一次，让边缘不齐整）
+ * @param widthMin         多石变体的过渡带最小宽度（有抖动）
+ * @param widthMax         多石变体的过渡带最大宽度（有抖动）
  * @param searchDepth      向下找岩层的最大格数，找不到就跳过该列
- * @param thinZoneDivisor  薄地带保护：某一地带的过渡带宽度上限 = 该地带最大深度 / 这个值。
+ * @param thinZoneDivisor  薄地带保护：过渡带宽度上限 = 该地带最大深度 / 这个值。
  *                         默认 2 表示「至少留一半原样」，设成 1 等于关掉保护。
- *                         例：3 格宽的沙滩，最大深度 3，上限 = 3/2 = 1，只有贴边那一格会变
+ * @param grassRings       沙草渐变铺几环（<b>不抖动</b>）。默认 3，对应
+ *                         {@code sand/grass} → {@code sand/dense_grass} → {@code sand/sparse_grass}。
+ *                         调大会让最外那一环（稀疏档）继续往外延伸，用来把大沙滩的过渡拉长。
  * @param dirtToSand       裸土 ↔ 沙
  * @param grassToSand      草 ↔ 沙（只做沙一侧，铺沙草渐变）
  * @param dirtToRock       裸土 ↔ 岩
@@ -50,6 +51,7 @@ public record SurfaceTransitionConfig(
     int widthMax,
     int searchDepth,
     int thinZoneDivisor,
+    int grassRings,
     boolean dirtToSand,
     boolean grassToSand,
     boolean dirtToRock,
@@ -64,6 +66,7 @@ public record SurfaceTransitionConfig(
         Codec.intRange(1, 8).optionalFieldOf("width_max", 3).forGetter(SurfaceTransitionConfig::widthMax),
         Codec.intRange(1, 32).optionalFieldOf("search_depth", 8).forGetter(SurfaceTransitionConfig::searchDepth),
         Codec.intRange(1, 8).optionalFieldOf("thin_zone_divisor", 2).forGetter(SurfaceTransitionConfig::thinZoneDivisor),
+        Codec.intRange(1, 8).optionalFieldOf("grass_rings", 3).forGetter(SurfaceTransitionConfig::grassRings),
         Codec.BOOL.optionalFieldOf("dirt_to_sand", true).forGetter(SurfaceTransitionConfig::dirtToSand),
         Codec.BOOL.optionalFieldOf("grass_to_sand", true).forGetter(SurfaceTransitionConfig::grassToSand),
         Codec.BOOL.optionalFieldOf("dirt_to_rock", true).forGetter(SurfaceTransitionConfig::dirtToRock),

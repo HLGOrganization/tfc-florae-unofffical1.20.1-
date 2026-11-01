@@ -227,12 +227,12 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                 // ---------- 规则一/二：水平交界 ----------
                 boolean done = false;
                 final int depth = dist[idx];
-                if (depth > 0 && kind != Kind.OTHER)
+                if (depth > 0)
                 {
                     final int cap = compMax[comp[idx]] / config.thinZoneDivisor();
-                    if (cap > 0 && depth <= Math.min(widthAt(config, wx, wz), cap))
+                    if (cap > 0)
                     {
-                        done = applyHorizontal(level, config, top, current, kind, contacts[idx], depth, rock);
+                        done = applyHorizontal(level, config, top, current, kind, contacts[idx], depth, cap, wx, wz, rock);
                     }
                 }
                 if (done)
@@ -267,11 +267,16 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
     /**
      * 水平交界规则。返回是否真的改了方块。
      * <p>
-     * 沙一侧的优先级：<b>挨着草</b> ＞ 挨着土/岩。挨着草时铺沙草渐变（由密到疏），
-     * 否则铺多石沙。
+     * 沙一侧的优先级：<b>挨着草</b> ＞ 挨着土/岩。挨着草时铺沙草渐变（由密到疏），否则铺多石沙。
+     * <p>
+     * <b>沙草渐变不参与宽度抖动</b>：环数由 {@code grass_rings} 定死，只要地带够厚就整圈铺满。
+     * 之前给它加了「每 4 格抖一次」的宽度，结果最外那一环（{@code sparse_grass}）只在宽度=3 的格子里出现，
+     * 沿沙滩看是「4 格有 4 格无」的虚线，也就是肉眼看到的断层。
+     * 多石变体没有渐变，抖动不会破坏图案，所以照旧保留抖动。
      */
     private static boolean applyHorizontal(WorldGenLevel level, SurfaceTransitionConfig config, BlockPos top,
-                                           BlockState current, Kind kind, int mask, int depth, String rock)
+                                           BlockState current, Kind kind, int mask, int depth, int cap,
+                                           int wx, int wz, String rock)
     {
         final String path = BuiltInRegistries.BLOCK.getKey(current.getBlock()).getPath();
         final boolean touchGrass = (mask & bitOf(Kind.GRASS)) != 0;
@@ -279,30 +284,37 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         final boolean touchSand = (mask & bitOf(Kind.SAND)) != 0;
         final boolean touchRock = (mask & bitOf(Kind.ROCK)) != 0;
 
+        // 沙草：固定环数，不抖动
+        final int grassRings = Math.min(config.grassRings(), cap);
+        // 多石：抖动宽度，让边缘不齐整
+        final int rockyWidth = Math.min(widthAt(config, wx, wz), cap);
+
         BlockState replacement = null;
         if (kind == Kind.SAND)
         {
             final String color = lastSegment(path);
             if (touchGrass && config.grassToSand())
             {
-                // 沙草渐变：1 格最密（全草），越远越疏
-                replacement = lookup("tfcflorae:" + sandGrassFamily(depth) + color);
+                if (depth <= grassRings)
+                {
+                    replacement = lookup("tfcflorae:" + sandGrassFamily(depth) + color);
+                }
             }
-            else if ((touchSoil && config.dirtToSand()) || (touchRock && config.sandToRock()))
+            else if (depth <= rockyWidth && ((touchSoil && config.dirtToSand()) || (touchRock && config.sandToRock())))
             {
                 replacement = lookup("tfcflorae:" + ROCKY_SAND_PREFIX + color + "/" + rock);
             }
         }
         else if (kind == Kind.SOIL)
         {
-            if ((touchSand && config.dirtToSand()) || (touchRock && config.dirtToRock()))
+            if (depth <= rockyWidth && ((touchSand && config.dirtToSand()) || (touchRock && config.dirtToRock())))
             {
                 replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(path)) + "/" + rock);
             }
         }
         else if (kind == Kind.GRASS)
         {
-            if (touchRock && config.grassToRock())
+            if (depth <= rockyWidth && touchRock && config.grassToRock())
             {
                 replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(path)) + "/" + rock);
             }
