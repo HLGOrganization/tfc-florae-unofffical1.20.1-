@@ -2,10 +2,10 @@
   "type": "tfc:forest_entry",
   "config": {
     "climate": {
-      "min_temperature": 3,
-      "max_temperature": 7,
-      "min_rainfall": 50,
-      "max_rainfall": 130
+      "min_temperature": 0,
+      "max_temperature": 10,
+      "min_rainfall": 40,
+      "max_rainfall": 200
     },
     "groundcover": [
       {
