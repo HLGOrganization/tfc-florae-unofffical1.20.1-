@@ -1,14 +1,32 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "loot_pool",
+      "name": "soil",
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:rockier_compact_dirt/sandy_loam/wackestone"
+          "name": "tfc:dirt/sandy_loam"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    },
+    {
+      "name": "loose_rock",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tfcflorae:rock/loose/wackestone"
         }
       ],
       "conditions": [

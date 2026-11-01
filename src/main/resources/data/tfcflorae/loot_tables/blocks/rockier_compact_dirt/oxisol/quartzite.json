@@ -2,11 +2,31 @@
   "type": "minecraft:block",
   "pools": [
     {
+      "name": "soil",
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tfcflorae:rockier_compact_dirt/oxisol/quartzite"
+          "name": "tfe:dirt/oxisol"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    },
+    {
+      "name": "loose_rock",
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tfc:rock/loose/quartzite"
         }
       ],
       "conditions": [
