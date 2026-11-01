@@ -242,6 +242,10 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
 
         // ---------- 5. 逐列处理 chunk 本体 ----------
         boolean changed = false;
+        // 诊断用：每区块统计「沙列 / 有草邻接的沙列 / 真正写入的渐变格数」
+        int statsSand = 0;
+        int statsGrassCt = 0;
+        int statsApplied = 0;
         final int minWidth = config.minWidth();
         for (int dx = 0; dx < CHUNK; dx++)
         {
@@ -278,6 +282,32 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                     continue;
                 }
 
+                if (self.kind == Kind.SAND)
+                {
+                    statsSand++;
+                }
+
+                // ---------- 沙草渐变：不需要岩层，必须放在岩石扫描之前 ----------
+                // 之前它排在岩石扫描之后，而岩石扫描探不到岩层就 continue，
+                // 于是「沙层比 search_depth(8) 厚」的地方（海岸沙滩正是如此）
+                // 整列被跳过，渐变永远不出现；同群系内 1~2 格厚的河道沙岸却能找到岩石、
+                // 正常生成 —— 这就是「同群系内生效、海岸不出现」的真正原因。
+                final int depth = dist[idx];
+                if (depth > 0
+                    && self.kind == Kind.SAND
+                    && (contacts[idx] & bitOf(Kind.GRASS)) != 0
+                    && config.grassToSand()
+                    && depth <= config.grassRings())
+                {
+                    statsGrassCt++;
+                    if (applySandGrass(level, self, depth))
+                    {
+                        changed = true;
+                        statsApplied++;
+                    }
+                    continue;
+                }
+
                 // 向下扫一遍：同时拿到岩层名 + 紧贴岩层上方那一块。
                 // 对「草方块压在沙上」的列，从底下那块沙开始扫，草方块不参与。
                 String rock = null;
@@ -304,7 +334,6 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
 
                 // ---------- 规则一/二：水平交界 ----------
                 boolean done = false;
-                final int depth = dist[idx];
                 if (depth > 0)
                 {
                     done = applyHorizontal(level, config, self, contacts[idx], depth, wx, wz, rock);
@@ -346,7 +375,38 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                 }
             }
         }
+        if (statsGrassCt > 0 && statsApplied == 0)
+        {
+            tfcflorae.TFCFlorae.LOGGER.info(
+                "[surface_transition] 有草邻接沙但未写入 chunk=({}, {}) 沙列={} 草邻接沙列={} 写入={} minWidth={} rings={}",
+                chunkX, chunkZ, statsSand, statsGrassCt, statsApplied,
+                config.minWidth(), config.grassRings());
+        }
+        else if (statsApplied > 0)
+        {
+            tfcflorae.TFCFlorae.LOGGER.info(
+                "[surface_transition] 沙草渐变已写入 chunk=({}, {}) 沙列={} 草邻接={} 写入={}",
+                chunkX, chunkZ, statsSand, statsGrassCt, statsApplied);
+        }
         return changed;
+    }
+
+    /**
+     * 沙草渐变：把一列沙换成由密到疏的三档沙草方块。
+     * <p>
+     * 这一支<b>不需要岩层</b>，所以必须在岩石扫描之前单独判断 —— 岩石扫描探不到岩层会
+     * 直接跳过整列，而海岸沙滩的沙层常常比 {@code search_depth} 厚，那样渐变就永远不出现。
+     */
+    private static boolean applySandGrass(WorldGenLevel level, Sample self, int depth)
+    {
+        final String path = BuiltInRegistries.BLOCK.getKey(self.state.getBlock()).getPath();
+        final BlockState sandGrass = lookup("tfcflorae:" + sandGrassFamily(depth) + lastSegment(path));
+        if (sandGrass != null && !sandGrass.is(self.state.getBlock()))
+        {
+            level.setBlock(self.pos, sandGrass, 3);
+            return true;
+        }
+        return false;
     }
 
     /**
