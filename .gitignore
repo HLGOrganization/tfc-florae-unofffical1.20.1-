@@ -28,3 +28,4 @@ devlibs/
 .fix*.py
 .commitmsg.txt
 .commitmsg*.txt
+.*msg*.txt
