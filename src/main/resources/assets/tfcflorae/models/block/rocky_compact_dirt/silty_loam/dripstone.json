@@ -1,7 +1,0 @@
-{
-  "parent": "tfcflorae:block/template/soil_over_rock",
-  "textures": {
-    "rock": "tfcflorae:block/rock/raw/dripstone",
-    "soil": "tfcflorae:block/compact_dirt/rocky_compact_dirt/silty_loam"
-  }
-}
