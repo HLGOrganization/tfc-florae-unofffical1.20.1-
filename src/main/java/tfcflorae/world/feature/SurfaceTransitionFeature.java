@@ -207,12 +207,13 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
             }
         }
 
-        // 每列「垂直接触线方向有多厚」：这是过渡带能不能铺得下的唯一依据。
-        // 为什么不用「最窄跨度」：海滩天然是沿岸很长、垂直很窄的狭长带，
-        // TFC 的薄海滩垂直方向常常只有 2~4 格。用「最窄跨度 >= 4」当门槛会把
-        // 几乎所有正常海滩整片否掉（这正是「完全没出现沙草方块」的原因）。
-        // 真正要拦的是「薄到过渡带能把它整个吞掉」的小沙岸，所以要量的是「厚度」：
-        // 从该列沿接触方向（朝最近的那条边界）还能走几格同类。
+        // 每列「在较长方向上有多长」：这是过渡带会不会把整块地带吞掉的依据。
+        // 为什么不能只量「垂直接触线方向的厚度」：海滩天然是垂直方向只有 2~3 格，
+        // 那样一量，所有沙列都被 min_width 挡掉 —— 实测存档里 sand/grass、
+        // sand/dense_grass、sand/sparse_grass、sand/rocky 全是 0，而多石土正常
+        // （土的长边很长，所以只有沙被全灭）。这正是「沙草过渡不生效」的根因。
+        // 现在取两个轴向里较长的那个：薄而长的海滩能通过，方块状的小沙岸
+        // （两个方向都短）仍然被拦下，不会把河道两侧的小沙岸整个盖住。
         final int[] thickStats = new int[total];
         {
             // 最近边界的反方向：BFS 只沿同类扩散，所以「上一层」就在来的方向上。
@@ -230,31 +231,11 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                     {
                         continue;
                     }
-                    // 接触方向：若水平方向(x轴)有接触，则厚度沿 z 轴量；反之亦然。
-                    final boolean xContact =
-                        (gx > 0 && kinds[idx - span] != self && kinds[idx - span] != Kind.OTHER)
-                        || (gx < span - 1 && kinds[idx + span] != self && kinds[idx + span] != Kind.OTHER);
-                    final boolean zContact =
-                        (gz > 0 && kinds[idx - 1] != self && kinds[idx - 1] != Kind.OTHER)
-                        || (gz < span - 1 && kinds[idx + 1] != self && kinds[idx + 1] != Kind.OTHER);
-                    // 两个方向都有接触（角落）或都没有（尚未接触）时，取两轴中较大的那个厚度
-                    final int tx = xContact ? 1 : 0;
-                    final int tz = zContact ? 1 : 0;
-                    int thick;
-                    if (tx == 1 && tz == 0)
-                    {
-                        thick = measure(kinds, span, gx, gz, self, 0, maxCheck);
-                    }
-                    else if (tz == 1 && tx == 0)
-                    {
-                        thick = measure(kinds, span, gx, gz, self, 1, maxCheck);
-                    }
-                    else
-                    {
-                        thick = Math.max(measure(kinds, span, gx, gz, self, 0, maxCheck),
-                                         measure(kinds, span, gx, gz, self, 1, maxCheck));
-                    }
-                    thickStats[idx] = thick;
+                    // 两个轴向都量，取较长者。只要地带在任一方向够长，
+                    // 2~3 格宽的海滩 / 薄沙层就不会被过渡带整条吞掉。
+                    final int tx = measure(kinds, span, gx, gz, self, 0, maxCheck);
+                    final int tz = measure(kinds, span, gx, gz, self, 1, maxCheck);
+                    thickStats[idx] = Math.max(tx, tz);
                 }
             }
         }
