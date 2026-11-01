@@ -66,6 +66,25 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         OTHER   // 其它（含水下、非地表方块、已过渡方块）
     }
 
+    /** 采样时要额外记录的信息：每列的类别、实际地表方块、以及「草方块盖在沙上」这个标记。 */
+    private static final class Sample
+    {
+        final Kind kind;
+        /** 这一列真正要改的方块（「草方块盖在沙上」时是下面那块沙，不是两块草） */
+        final BlockPos pos;
+        final BlockState state;
+        /** 地表是草方块、但正下方是沙 —— 这种列归类成 SAND，改的是底下那块沙 */
+        final boolean grassOverSand;
+
+        Sample(Kind kind, BlockPos pos, BlockState state, boolean grassOverSand)
+        {
+            this.kind = kind;
+            this.pos = pos;
+            this.state = state;
+            this.grassOverSand = grassOverSand;
+        }
+    }
+
     public SurfaceTransitionFeature(Codec<SurfaceTransitionConfig> codec)
     {
         super(codec);
@@ -80,19 +99,24 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
 
         final int chunkX = origin.getX() >> 4;
         final int chunkZ = origin.getZ() >> 4;
-        // 采样环要比过渡带再宽 1 格，否则 chunk 边缘的接触线判断不到
-        final int margin = Math.max(1, config.widthMax()) + 1;
+        // 采样环要在 chunk 外留够余量：过渡带本身、最小宽度检测的半径，再各加 1 格容错。
+        // 否则 chunk 边缘的接触线判断不到，最小宽度也数不准。
+        final int minHalf = (Math.max(4, config.minWidth()) - 1) / 2;
+        final int margin = Math.max(config.widthMax(), minHalf) + 1;
         final int span = CHUNK + margin * 2;
         final int total = span * span;
         final TagKey<Biome> skip = config.skipBiomes().orElse(null);
 
         // ---------- 1. 采样表层类别 ----------
         final Kind[] kinds = new Kind[total];
+        final Sample[] samples = new Sample[total];
         for (int gx = 0; gx < span; gx++)
         {
             for (int gz = 0; gz < span; gz++)
             {
-                kinds[gx * span + gz] = sampleKind(level, (chunkX << 4) + gx - margin, (chunkZ << 4) + gz - margin);
+                final Sample s = sample(level, (chunkX << 4) + gx - margin, (chunkZ << 4) + gz - margin);
+                samples[gx * span + gz] = s;
+                kinds[gx * span + gz] = s == null ? Kind.OTHER : s.kind;
             }
         }
 
@@ -140,10 +164,9 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
             if (gz < span - 1) relax(kinds, dist, contacts, queue, cur + 1, self, nd, contacts[cur]);
         }
 
-        // ---------- 4. 同类连通块 + 每块最大深度 ----------
+        // ---------- 4. 同类连通块 ----------
         final int[] comp = new int[total];
         Arrays.fill(comp, -1);
-        final int[] compMax = new int[total];
         int compCount = 0;
         for (int i = 0; i < total; i++)
         {
@@ -152,14 +175,12 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                 continue;
             }
             final int id = compCount++;
-            int max = 0;
             final ArrayDeque<Integer> flood = new ArrayDeque<>();
             flood.add(i);
             comp[i] = id;
             while (!flood.isEmpty())
             {
                 final int cur = flood.poll();
-                max = Math.max(max, dist[cur]);
                 final int gx = cur / span;
                 final int gz = cur % span;
                 if (gx > 0) floodInto(kinds, comp, flood, cur - span, kinds[cur], id);
@@ -167,11 +188,55 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                 if (gz > 0) floodInto(kinds, comp, flood, cur - 1, kinds[cur], id);
                 if (gz < span - 1) floodInto(kinds, comp, flood, cur + 1, kinds[cur], id);
             }
-            compMax[id] = max;
+        }
+
+        // 每列的「同类地带的格数」：在 (2R+1)^2 的方块邻域里数同类的列。
+        // R 取宽度上限的一半（至少 1）—— 只关心「左右各 R 格内还有没有同类」，不是整块连通块的面积。
+        // 这就是「沙/土/岩的地带宽度不足就不生成过渡」的判定依据：
+        // 一条 1~3 格的河道小沙岸周围全是草，数出来的上限只有 3^2 = 9，达不到 min_cells，于是整片跳过。
+        // 注意这个量跟面积无关、跟「最窄处实际宽度」有关：只有无限宽的地带才能数满 (2R+1)^2。
+        final int cap2 = config.minWidth() + 1;
+        final int[] narrowStats = new int[total];
+        for (int gx = 0; gx < span; gx++)
+        {
+            for (int gz = 0; gz < span; gz++)
+            {
+                final int idx = gx * span + gz;
+                final Kind self = kinds[idx];
+                if (self == Kind.OTHER)
+                {
+                    continue;
+                }
+                int best = 0;
+                for (int axis = 0; axis < 2; axis++)
+                {
+                    int len = 1;
+                    for (int sign = -1; sign <= 1; sign += 2)
+                    {
+                        for (int k = 1; k <= cap2; k++)
+                        {
+                            final int nx = gx + (axis == 0 ? sign * k : 0);
+                            final int nz = gz + (axis == 1 ? sign * k : 0);
+                            if (nx < 0 || nz < 0 || nx >= span || nz >= span)
+                            {
+                                break;
+                            }
+                            if (kinds[nx * span + nz] != self)
+                            {
+                                break;
+                            }
+                            len++;
+                        }
+                    }
+                    best = axis == 0 ? len : Math.min(best, len);
+                }
+                narrowStats[idx] = best;
+            }
         }
 
         // ---------- 5. 逐列处理 chunk 本体 ----------
         boolean changed = false;
+        final int minWidth = config.minWidth();
         for (int dx = 0; dx < CHUNK; dx++)
         {
             for (int dz = 0; dz < CHUNK; dz++)
@@ -194,19 +259,26 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                     continue;
                 }
 
-                final BlockState current = level.getBlockState(top);
-                final Kind kind = classify(BuiltInRegistries.BLOCK.getKey(current.getBlock()));
-                if (kind == Kind.OTHER || kind == Kind.ROCK)
+                final Sample self = samples[idx];
+                if (self == null || self.kind == Kind.OTHER || self.kind == Kind.ROCK)
                 {
                     continue;
                 }
 
-                // 向下扫一遍：同时拿到岩层名 + 紧贴岩层上方那一块
+                // 地带太窄就不生成，避免把小河道两侧的小沙岸整个盖住。
+                // 判定用「同类地带的最窄跨度」，不是整块连通块的面积。
+                if (narrowStats[idx] < minWidth)
+                {
+                    continue;
+                }
+
+                // 向下扫一遍：同时拿到岩层名 + 紧贴岩层上方那一块。
+                // 对「草方块压在沙上」的列，从底下那块沙开始扫，草方块不参与。
                 String rock = null;
                 BlockPos aboveRock = null;
                 for (int d = 1; d <= config.searchDepth(); d++)
                 {
-                    final BlockPos q = top.below(d);
+                    final BlockPos q = self.pos.below(d);
                     if (q.getY() < level.getMinBuildHeight())
                     {
                         break;
@@ -215,7 +287,7 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                     if (name != null)
                     {
                         rock = name;
-                        aboveRock = top.below(d - 1);
+                        aboveRock = self.pos.below(d - 1);
                         break;
                     }
                 }
@@ -229,11 +301,7 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                 final int depth = dist[idx];
                 if (depth > 0)
                 {
-                    final int cap = compMax[comp[idx]] / config.thinZoneDivisor();
-                    if (cap > 0)
-                    {
-                        done = applyHorizontal(level, config, top, current, kind, contacts[idx], depth, cap, wx, wz, rock);
-                    }
+                    done = applyHorizontal(level, config, self, contacts[idx], depth, wx, wz, rock);
                 }
                 if (done)
                 {
@@ -242,7 +310,7 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                 }
 
                 // ---------- 规则三：垂直贴岩 ----------
-                if (config.rockContact())
+                if (config.rockContact() && !aboveRock.equals(self.pos))
                 {
                     final BlockState above = level.getBlockState(aboveRock);
                     final Kind aboveKind = classify(BuiltInRegistries.BLOCK.getKey(above.getBlock()));
@@ -274,57 +342,66 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
      * 沿沙滩看是「4 格有 4 格无」的虚线，也就是肉眼看到的断层。
      * 多石变体没有渐变，抖动不会破坏图案，所以照旧保留抖动。
      */
-    private static boolean applyHorizontal(WorldGenLevel level, SurfaceTransitionConfig config, BlockPos top,
-                                           BlockState current, Kind kind, int mask, int depth, int cap,
-                                           int wx, int wz, String rock)
+    private static boolean applyHorizontal(WorldGenLevel level, SurfaceTransitionConfig config, Sample self,
+                                           int mask, int depth, int wx, int wz, String rock)
     {
-        final String path = BuiltInRegistries.BLOCK.getKey(current.getBlock()).getPath();
+        final Kind kind = self.kind;
+        final String path = BuiltInRegistries.BLOCK.getKey(self.state.getBlock()).getPath();
         final boolean touchGrass = (mask & bitOf(Kind.GRASS)) != 0;
         final boolean touchSoil = (mask & bitOf(Kind.SOIL)) != 0;
         final boolean touchSand = (mask & bitOf(Kind.SAND)) != 0;
         final boolean touchRock = (mask & bitOf(Kind.ROCK)) != 0;
 
-        // 沙草：固定环数，不抖动
-        final int grassRings = Math.min(config.grassRings(), cap);
-        // 多石：抖动宽度，让边缘不齐整
-        final int rockyWidth = Math.min(widthAt(config, wx, wz), cap);
+        // ---------- 沙草渐变：固定环数，不抖动 ----------
+        // 沙草方块「下方必须是沙」，所以这一支只在 self 本身就是沙方块时成立。
+        // 若这一列是「草方块压在沙上」，self.pos 指向底下那块沙，「顶上那块草」原样保留 ——
+        // 绝不会出现「草方块上面再叠一个沙草方块」。
+        if (kind == Kind.SAND && touchGrass && config.grassToSand() && depth <= config.grassRings())
+        {
+            final BlockState sandGrass = lookup("tfcflorae:" + sandGrassFamily(depth) + lastSegment(path));
+            if (sandGrass != null && !sandGrass.is(self.state.getBlock()))
+            {
+                level.setBlock(self.pos, sandGrass, 3);
+                return true;
+            }
+            return false;
+        }
+
+        // ---------- 多石变体：保留宽度抖动，让边缘不齐整 ----------
+        final int rockyWidth = widthAt(config, wx, wz);
+        if (depth > rockyWidth)
+        {
+            return false;
+        }
 
         BlockState replacement = null;
         if (kind == Kind.SAND)
         {
-            final String color = lastSegment(path);
-            if (touchGrass && config.grassToSand())
+            if ((touchSoil && config.dirtToSand()) || (touchRock && config.sandToRock()))
             {
-                if (depth <= grassRings)
-                {
-                    replacement = lookup("tfcflorae:" + sandGrassFamily(depth) + color);
-                }
-            }
-            else if (depth <= rockyWidth && ((touchSoil && config.dirtToSand()) || (touchRock && config.sandToRock())))
-            {
-                replacement = lookup("tfcflorae:" + ROCKY_SAND_PREFIX + color + "/" + rock);
+                replacement = lookup("tfcflorae:" + ROCKY_SAND_PREFIX + lastSegment(path) + "/" + rock);
             }
         }
         else if (kind == Kind.SOIL)
         {
-            if (depth <= rockyWidth && ((touchSand && config.dirtToSand()) || (touchRock && config.dirtToRock())))
+            if ((touchSand && config.dirtToSand()) || (touchRock && config.dirtToRock()))
             {
                 replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(path)) + "/" + rock);
             }
         }
         else if (kind == Kind.GRASS)
         {
-            if (depth <= rockyWidth && touchRock && config.grassToRock())
+            if (touchRock && config.grassToRock())
             {
                 replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(path)) + "/" + rock);
             }
         }
 
-        if (replacement == null || replacement.is(current.getBlock()))
+        if (replacement == null || replacement.is(self.state.getBlock()))
         {
             return false;
         }
-        level.setBlock(top, replacement, 3);
+        level.setBlock(self.pos, replacement, 3);
         return true;
     }
 
@@ -415,10 +492,41 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         return null;
     }
 
-    private static Kind sampleKind(WorldGenLevel level, int x, int z)
+    /**
+     * 采样一列：类别 + 真正要改的方块。
+     * <p>
+     * 特殊处理「<b>草方块盖在沙上</b>」：TFC 的沙滩最上两层是草方块、下面是沙，这是原生状态。
+     * 这种列按 <b>SAND</b> 归类，改的是<b>底下那块沙</b>，绝不改草方块 ——
+     * 否则会刷出「草方块上面再叠一个沙草方块」的假方块，那是错的。
+     */
+    private static Sample sample(WorldGenLevel level, int x, int z)
     {
         final BlockPos top = findTop(level, x, z);
-        return top == null ? Kind.OTHER : classify(BuiltInRegistries.BLOCK.getKey(level.getBlockState(top).getBlock()));
+        if (top == null)
+        {
+            return null;
+        }
+        final Kind kind = classify(BuiltInRegistries.BLOCK.getKey(level.getBlockState(top).getBlock()));
+        if (kind == Kind.GRASS)
+        {
+            final BlockPos below = top.below();
+            final BlockState belowState = level.getBlockState(below);
+            if (below.getY() >= level.getMinBuildHeight()
+                && level.getFluidState(top).isEmpty()
+                && classify(BuiltInRegistries.BLOCK.getKey(belowState.getBlock())) == Kind.SAND)
+            {
+                // 草方块压在沙上：把「沙」当成这一列的表层
+                return new Sample(Kind.SAND, below, belowState, true);
+            }
+        }
+        return new Sample(kind, top, level.getBlockState(top), false);
+    }
+
+    /** 兼容旧调用：只要类别。 */
+    private static Kind sampleKind(WorldGenLevel level, int x, int z)
+    {
+        final Sample s = sample(level, x, z);
+        return s == null ? Kind.OTHER : s.kind;
     }
 
     private static Kind classify(ResourceLocation id)

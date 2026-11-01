@@ -31,8 +31,12 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
  * @param widthMin         多石变体的过渡带最小宽度（有抖动）
  * @param widthMax         多石变体的过渡带最大宽度（有抖动）
  * @param searchDepth      向下找岩层的最大格数，找不到就跳过该列
- * @param thinZoneDivisor  薄地带保护：过渡带宽度上限 = 该地带最大深度 / 这个值。
- *                         默认 2 表示「至少留一半原样」，设成 1 等于关掉保护。
+ * @param minWidth         最小地带宽度。某列周围 {@code (2R+1)^2} 格方块范围内（R = width_max/2，至少 1），
+ *                         同类地形（沙/土/岩）的列数少于这个值就整列跳过。
+ *                         默认 <b>4</b>，即「沙/土/岩的地带最窄处不足 4 格就不生成过渡」——
+ *                         一条 1~3 格的河道小沙岸最多只能数到 9，但它是个长条，
+ *                         R=1 的邻域里数出来仍然可能不到 4；而 4 格以上的正常地带必定超过。
+ *                         注意这个量跟面积无关，只跟「最窄处实际宽度」有关。
  * @param grassRings       沙草渐变铺几环（<b>不抖动</b>）。默认 3，对应
  *                         {@code sand/grass} → {@code sand/dense_grass} → {@code sand/sparse_grass}。
  *                         调大会让最外那一环（稀疏档）继续往外延伸，用来把大沙滩的过渡拉长。
@@ -50,7 +54,7 @@ public record SurfaceTransitionConfig(
     int widthMin,
     int widthMax,
     int searchDepth,
-    int thinZoneDivisor,
+    int minWidth,
     int grassRings,
     boolean dirtToSand,
     boolean grassToSand,
@@ -65,7 +69,7 @@ public record SurfaceTransitionConfig(
         Codec.intRange(1, 8).optionalFieldOf("width_min", 2).forGetter(SurfaceTransitionConfig::widthMin),
         Codec.intRange(1, 8).optionalFieldOf("width_max", 3).forGetter(SurfaceTransitionConfig::widthMax),
         Codec.intRange(1, 32).optionalFieldOf("search_depth", 8).forGetter(SurfaceTransitionConfig::searchDepth),
-        Codec.intRange(1, 8).optionalFieldOf("thin_zone_divisor", 2).forGetter(SurfaceTransitionConfig::thinZoneDivisor),
+        Codec.intRange(1, 64).optionalFieldOf("min_width", 4).forGetter(SurfaceTransitionConfig::minWidth),
         Codec.intRange(1, 8).optionalFieldOf("grass_rings", 3).forGetter(SurfaceTransitionConfig::grassRings),
         Codec.BOOL.optionalFieldOf("dirt_to_sand", true).forGetter(SurfaceTransitionConfig::dirtToSand),
         Codec.BOOL.optionalFieldOf("grass_to_sand", true).forGetter(SurfaceTransitionConfig::grassToSand),
