@@ -22,3 +22,9 @@ devlibs/
 .tmp*.py
 .skillupd*.py
 .fixstate.py
+.scan*.py
+.chk*.py
+.verify*.py
+.fix*.py
+.commitmsg.txt
+.commitmsg*.txt
