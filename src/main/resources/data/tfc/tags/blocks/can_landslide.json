@@ -91,6 +91,27 @@
     "tfcflorae:sand/sand_layer/pink",
     "tfcflorae:sand/sand_layer/red",
     "tfcflorae:sand/sand_layer/white",
-    "tfcflorae:sand/sand_layer/yellow"
+    "tfcflorae:sand/sand_layer/yellow",
+    "tfcflorae:sand/dense_grass/black",
+    "tfcflorae:sand/dense_grass/brown",
+    "tfcflorae:sand/dense_grass/green",
+    "tfcflorae:sand/dense_grass/pink",
+    "tfcflorae:sand/dense_grass/red",
+    "tfcflorae:sand/dense_grass/white",
+    "tfcflorae:sand/dense_grass/yellow",
+    "tfcflorae:sand/grass/black",
+    "tfcflorae:sand/grass/brown",
+    "tfcflorae:sand/grass/green",
+    "tfcflorae:sand/grass/pink",
+    "tfcflorae:sand/grass/red",
+    "tfcflorae:sand/grass/white",
+    "tfcflorae:sand/grass/yellow",
+    "tfcflorae:sand/sparse_grass/black",
+    "tfcflorae:sand/sparse_grass/brown",
+    "tfcflorae:sand/sparse_grass/green",
+    "tfcflorae:sand/sparse_grass/pink",
+    "tfcflorae:sand/sparse_grass/red",
+    "tfcflorae:sand/sparse_grass/white",
+    "tfcflorae:sand/sparse_grass/yellow"
   ]
 }
