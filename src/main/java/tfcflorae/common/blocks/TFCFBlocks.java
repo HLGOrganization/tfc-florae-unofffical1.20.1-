@@ -2582,9 +2582,19 @@ public final class TFCFBlocks {
                Map<TFCFRock, RegistryObject<Block>> rockMap = new HashMap<>();
 
                for (TFCFRock rock : TFCFRock.values()) {
-                  // 凝灰岩整套岩石方块（raw/gravel/cobble…）已移除、改由 TFE 提供，
-                  // 但 tuff 仍会生成在世界表层（tfe:rock/raw/tuff），
-                  // 所以它的「多石沙」要照常注册，贴图直接引用 tfe:block/rock/raw/tuff。
+                  // 凝灰岩（tuff）：只注册「多石沙」这一族，三族瓷砖沙必须跳过。
+                  //  1) TFCFRockSand 的瓷砖沙工厂（SANDIEST/SANDIER/SANDY_TILES）要读
+                  //     TFCF_ROCKTYPE_BLOCKS.get(rock).get(STONE_TILES)，而 rockTypeMapper
+                  //     对 tuff 是「整个键都没有（continue 前没有 put）」，不是空表 ——
+                  //     取出来是 null 再 .get(...) 直接 NPE，会让整个方块注册中断
+                  //     （2026-11-01 客户端启动崩溃就是这个原因）。
+                  //  2) 那三族的整套瓷砖方块本来就由 TFE 提供，本模组也没有它们的 tuff 资源。
+                  // 而「多石沙 sand/rocky」读的是 TFCF_ROCK_BLOCKS（对 tuff 是空表，安全）
+                  // 和自身的表，且地表过渡带用的正是这一族，所以照常注册。
+                  // 贴图直接引用 tfe:block/rock/raw/tuff（不经拷贝）。
+                  if (rock == TFCFRock.TUFF && soilBlockType != TFCFRockSand.ROCKY) {
+                     continue;
+                  }
                   rockMap.put(
                      rock,
                      register(
