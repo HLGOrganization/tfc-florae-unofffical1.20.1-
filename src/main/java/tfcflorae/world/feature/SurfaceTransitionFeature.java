@@ -49,16 +49,20 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
     );
 
     /**
-     * 我们真正做了多石变体的岩石（{@code rockier_compact_dirt} 与 {@code sand/rocky} 都是这 29 种，两侧一致）。
-     * 从真实岩层读到的岩石名不在这张表里就跳过该列 —— 例如 TFE 的 {@code tuff}，
-     * 我们没做 tuff 的多石变体，硬套只会刷出「tuff 地上长花岗岩混石土」。
+     * 我们真正做了多石变体的岩石：TFC 原版 20 种 + 本模组自己的 10 种（含 {@code tuff}）。
+     * <p>
+     * {@code rockier_compact_dirt} 与 {@code sand/rocky} 两侧都有这 30 种。
+     * tuff 的整套岩石方块（raw/gravel/cobble…）虽已移除、改由 TFE 提供，
+     * 但 tuff 仍会生成在世界表层（{@code tfe:rock/raw/tuff}），所以它的多石变体照常注册，
+     * 贴图直接引用 {@code tfe:block/rock/raw/tuff}。不在这张表里的岩石就跳过该列，
+     * 硬套只会刷出「别的岩石地上长花岗岩混石土」。
      */
     private static final Set<String> ROCKY_ROCKS = Set.of(
         "andesite", "basalt", "boninite", "carbonatite", "chalk", "chert", "claystone",
         "conglomerate", "dacite", "diorite", "dolomite", "gabbro", "gneiss", "granite",
         "jaspillite", "laterite", "limestone", "marble", "mudstone", "phyllite", "porphyry",
         "quartzite", "red_granite", "rhyolite", "schist", "shale", "slate", "soapstone",
-        "wackestone"
+        "wackestone", "tuff"
     );
 
     private static final String ROCKY_SAND_PREFIX = "sand/rocky/";

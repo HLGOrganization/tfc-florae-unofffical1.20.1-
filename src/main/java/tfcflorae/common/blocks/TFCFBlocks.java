@@ -2582,10 +2582,9 @@ public final class TFCFBlocks {
                Map<TFCFRock, RegistryObject<Block>> rockMap = new HashMap<>();
 
                for (TFCFRock rock : TFCFRock.values()) {
-                  // 凝灰岩整套岩石方块已移除（TFE 提供），不再生成它的混合沙
-                  if (rock == TFCFRock.TUFF) {
-                     continue;
-                  }
+                  // 凝灰岩整套岩石方块（raw/gravel/cobble…）已移除、改由 TFE 提供，
+                  // 但 tuff 仍会生成在世界表层（tfe:rock/raw/tuff），
+                  // 所以它的「多石沙」要照常注册，贴图直接引用 tfe:block/rock/raw/tuff。
                   rockMap.put(
                      rock,
                      register(
@@ -2699,8 +2698,8 @@ public final class TFCFBlocks {
                Map<TFCFRock, RegistryObject<Block>> rockMap = new HashMap<>();
 
                for (TFCFRock rock : TFCFRock.values()) {
-            // 凝灰岩整套岩石方块已移除（TFE 提供），不再生成它的产物
-            if (rock == TFCFRock.TUFF) { continue; }
+            // tuff 仍会生成在世界表层（tfe:rock/raw/tuff），多石变体照常注册，
+            // 贴图直接引用 tfe:block/rock/raw/tuff（不经拷贝）。
                   rockMap.put(
                      rock,
                      register(
@@ -2738,8 +2737,8 @@ public final class TFCFBlocks {
                Map<TFCFRock, RegistryObject<Block>> rockMap = new HashMap<>();
 
                for (TFCFRock rock : TFCFRock.values()) {
-            // 凝灰岩整套岩石方块已移除（TFE 提供），不再生成它的产物
-            if (rock == TFCFRock.TUFF) { continue; }
+            // tuff 仍会生成在世界表层（tfe:rock/raw/tuff），多石变体照常注册，
+            // 贴图直接引用 tfe:block/rock/raw/tuff（不经拷贝）。
                   rockMap.put(
                      rock,
                      register(

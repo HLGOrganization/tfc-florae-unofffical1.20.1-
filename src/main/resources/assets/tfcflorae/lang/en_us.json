@@ -8922,5 +8922,20 @@
   "block.tfcflorae.sandstone.layered.yellow": "Sandstone Layered Yellow",
   "block.tfcflorae.sandstone.layered.slab.yellow": "Sandstone Layered Slab Yellow",
   "block.tfcflorae.sandstone.layered.stairs.yellow": "Sandstone Layered Stairs Yellow",
-  "block.tfcflorae.sandstone.layered.wall.yellow": "Sandstone Layered Wall Yellow"
+  "block.tfcflorae.sandstone.layered.wall.yellow": "Sandstone Layered Wall Yellow",
+  "block.tfcflorae.rockier_compact_dirt.fluvisol.tuff": "Tuff-Bearing Fluvisol",
+  "block.tfcflorae.rockier_compact_dirt.loam.tuff": "Rockier Compact Dirt Loam Tuff",
+  "block.tfcflorae.rockier_compact_dirt.mollisol.tuff": "Tuff-Bearing Mollisol",
+  "block.tfcflorae.rockier_compact_dirt.oxisol.tuff": "Tuff-Bearing Oxisol",
+  "block.tfcflorae.rockier_compact_dirt.podzol.tuff": "Tuff-Bearing Podzol",
+  "block.tfcflorae.rockier_compact_dirt.sandy_loam.tuff": "Rockier Compact Dirt Sandy Loam Tuff",
+  "block.tfcflorae.rockier_compact_dirt.silt.tuff": "Rockier Compact Dirt Silt Tuff",
+  "block.tfcflorae.rockier_compact_dirt.silty_loam.tuff": "Rockier Compact Dirt Silty Loam Tuff",
+  "block.tfcflorae.sand.rocky.black.tuff": "Sand Rocky Black Tuff",
+  "block.tfcflorae.sand.rocky.brown.tuff": "Sand Rocky Brown Tuff",
+  "block.tfcflorae.sand.rocky.green.tuff": "Sand Rocky Green Tuff",
+  "block.tfcflorae.sand.rocky.pink.tuff": "Sand Rocky Pink Tuff",
+  "block.tfcflorae.sand.rocky.red.tuff": "Sand Rocky Red Tuff",
+  "block.tfcflorae.sand.rocky.white.tuff": "Sand Rocky White Tuff",
+  "block.tfcflorae.sand.rocky.yellow.tuff": "Sand Rocky Yellow Tuff"
 }

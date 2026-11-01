@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tfcflorae:block/sand/rocky/white/tuff"
+      },
+      {
+        "model": "tfcflorae:block/sand/pebble/white/tuff"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockier/white/tuff"
+      },
+      {
+        "model": "tfcflorae:block/sand/rockiest/white/tuff"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+地表过渡带：识别 TFE 命名空间 / 腐殖层算草 / 无多石变体不回退 / 补齐 tuff 多石变体
+
+一、tfe 命名空间此前完全没被识别（严重）
+  TFE 的方块用的是 tfe: 前缀：
+    tfe:grass/{fluvisol,mollisol,oxisol,podzol}   新土壤草方块
+    tfe:dirt/*                                   新土壤裸土
+    tfe:duff/*  tfe:clay_duff/*                  腐殖层
+    tfe:rock/raw/tuff  tfe:rock/gravel/tuff      TFE 的新岩石
+  而 classify() 只认 tfc / tfcflorae，tfe: 一律打成 OTHER ——
+  整片 TFE 新土壤地表不参与任何过渡，用户反馈「新土壤草方块没有过渡」就是这个。
+
+  之前误判为「没问题」，因为查 TFE 的 jar 时看到 clay_grass/fluvisol 这类路径，
+  就默认它属于 tfc 命名空间。目录结构相同不代表命名空间相同。
+
+  顺带处理 tfe:rock/raw/tuff_slab 这类变体：slab/stairs/wall 不是整块岩石，归 OTHER。
+
+二、腐殖层（TFE 的「X腐殖层」）判定为草
+  tfc:duff/<变体>  tfc:clay_duff/<变体>
+  tfe:duff/<变体>  tfe:clay_duff/<变体>
+  共 24 个方块，按用户要求归 Kind.GRASS。
+  注意 duff 和 clay_duff 是两个前缀，先前的 SOIL 列表里一个都没有。
+
+三、没有对应多石变体的土壤不回退成 loam
+  有草/裸土的土壤变体共 9 种（含 bog_iron），
+  但 rockier_compact_dirt 只做了 8 种，bog_iron 没有。
+  先前 normalizeVariant 会回退成 loam，等于「沼铁土变成壤土」，是刷错方块。
+  改成返回 null，该列整条跳过。三处调用点都加了 null 判断。
+
+四、补齐 tuff 的多石变体（30 种方块）
+  背景：TFCFRock.TUFF 存在，但整套岩石方块（raw/gravel/cobble…）已移除、改由 TFE 提供，
+  两个注册循环里用 `if (rock == TFCFRock.TUFF) continue;` 把它的多石变体一起跳过了。
+  而 TFE 的 tuff 会生成在世界表层（tfe:rock/raw/tuff），这一带接沙/土时需要有过渡方块。
+
+  改动：
+    TFCFRockSandMapper      去掉 TUFF 跳过（多石沙）
+    TFCRockSoil2Mapper      去掉 TUFF 跳过（多石土）
+    TFCFRockSoil2Mapper     去掉 TUFF 跳过（多石土）
+    slab 的两个 mapper     保持跳过（rocky 系列本来就没有 slab 资源）
+    ROCKY_ROCKS 白名单     加入 tuff（29 -> 30）
+
+  资源（贴图不拷贝，直接引用 tfe）：105 个文件
+    rockier_compact_dirt/<8种土壤>/tuff          blockstate + 4 个变体模型 + item + loot
+    sand/rocky/<7种颜色>/tuff                    同上
+    语言 zh_cn / en_us 各 15 条（凝灰岩混石X / Tuff-Bearing X）
+
+  安全性核对：
+    TFCF_ROCK_BLOCKS.get(TUFF) 是空表不是缺键（rockMapper 显式 put 空表），
+    所以 .get(BlockType.LOOSE) 返回 null 而非 NPE；TFCFRockySoilBlock.use() 用
+    `requiredInput instanceof Block` 判断，instanceof 对 null 为 false，不会崩。
+    重复注册核对：TFCRockSoil2Mapper 用 TFC 的 Variant（4 种），
+    TFCFRockSoil2Mapper 用 TFCFSoil.TFCFVariant（我方 4 种），并集正好 8 种，无同 id。
+
+构建：assemble 通过。审计 T1=1 T2=2876 T3=89 T4=232 T5=11，与基线一致
+（新增模型引用的 tfe 贴图和模板 parent 全部解析成功）。

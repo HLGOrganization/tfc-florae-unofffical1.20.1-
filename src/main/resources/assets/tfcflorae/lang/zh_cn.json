@@ -8916,5 +8916,20 @@
   "block.tfcflorae.sandstone.layered.yellow": "层压黄砂岩",
   "block.tfcflorae.sandstone.layered.slab.yellow": "层压黄砂岩台阶",
   "block.tfcflorae.sandstone.layered.stairs.yellow": "层压黄砂岩楼梯",
-  "block.tfcflorae.sandstone.layered.wall.yellow": "层压黄砂岩墙"
+  "block.tfcflorae.sandstone.layered.wall.yellow": "层压黄砂岩墙",
+  "block.tfcflorae.rockier_compact_dirt.fluvisol.tuff": "凝灰岩混石冲积土",
+  "block.tfcflorae.rockier_compact_dirt.loam.tuff": "凝灰岩混石壤土",
+  "block.tfcflorae.rockier_compact_dirt.mollisol.tuff": "凝灰岩混石软土",
+  "block.tfcflorae.rockier_compact_dirt.oxisol.tuff": "凝灰岩混石氧化土",
+  "block.tfcflorae.rockier_compact_dirt.podzol.tuff": "凝灰岩混石灰化土",
+  "block.tfcflorae.rockier_compact_dirt.sandy_loam.tuff": "凝灰岩混石砂质壤土",
+  "block.tfcflorae.rockier_compact_dirt.silt.tuff": "凝灰岩混石泥土",
+  "block.tfcflorae.rockier_compact_dirt.silty_loam.tuff": "凝灰岩混石粉质壤土",
+  "block.tfcflorae.sand.rocky.black.tuff": "凝灰岩碎砾黑砂",
+  "block.tfcflorae.sand.rocky.brown.tuff": "凝灰岩碎砾棕沙",
+  "block.tfcflorae.sand.rocky.green.tuff": "凝灰岩碎砾绿砂",
+  "block.tfcflorae.sand.rocky.pink.tuff": "凝灰岩碎砾粉沙",
+  "block.tfcflorae.sand.rocky.red.tuff": "凝灰岩碎砾红砂",
+  "block.tfcflorae.sand.rocky.white.tuff": "凝灰岩碎砾白沙",
+  "block.tfcflorae.sand.rocky.yellow.tuff": "凝灰岩碎砾黄砂"
 }
