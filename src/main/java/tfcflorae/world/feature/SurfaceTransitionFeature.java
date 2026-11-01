@@ -48,6 +48,19 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         "fluvisol", "mollisol", "oxisol", "podzol"
     );
 
+    /**
+     * 我们真正做了多石变体的岩石（{@code rockier_compact_dirt} 与 {@code sand/rocky} 都是这 29 种，两侧一致）。
+     * 从真实岩层读到的岩石名不在这张表里就跳过该列 —— 例如 TFE 的 {@code tuff}，
+     * 我们没做 tuff 的多石变体，硬套只会刷出「tuff 地上长花岗岩混石土」。
+     */
+    private static final Set<String> ROCKY_ROCKS = Set.of(
+        "andesite", "basalt", "boninite", "carbonatite", "chalk", "chert", "claystone",
+        "conglomerate", "dacite", "diorite", "dolomite", "gabbro", "gneiss", "granite",
+        "jaspillite", "laterite", "limestone", "marble", "mudstone", "phyllite", "porphyry",
+        "quartzite", "red_granite", "rhyolite", "schist", "shale", "slate", "soapstone",
+        "wackestone"
+    );
+
     private static final String ROCKY_SAND_PREFIX = "sand/rocky/";
     private static final String ROCKY_SOIL_PREFIX = "rockier_compact_dirt/";
     private static final String SAND_GRASS_PREFIX = "sand/grass/";
@@ -137,10 +150,10 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                     continue;
                 }
                 int mask = 0;
-                if (gx > 0 && different(self, kinds[idx - span])) mask |= bitOf(kinds[idx - span]);
-                if (gx < span - 1 && different(self, kinds[idx + span])) mask |= bitOf(kinds[idx + span]);
-                if (gz > 0 && different(self, kinds[idx - 1])) mask |= bitOf(kinds[idx - 1]);
-                if (gz < span - 1 && different(self, kinds[idx + 1])) mask |= bitOf(kinds[idx + 1]);
+                if (gx > 0 && needsPair(self, kinds[idx - span])) mask |= bitOf(kinds[idx - span]);
+                if (gx < span - 1 && needsPair(self, kinds[idx + span])) mask |= bitOf(kinds[idx + span]);
+                if (gz > 0 && needsPair(self, kinds[idx - 1])) mask |= bitOf(kinds[idx - 1]);
+                if (gz < span - 1 && needsPair(self, kinds[idx + 1])) mask |= bitOf(kinds[idx + 1]);
                 if (mask != 0)
                 {
                     dist[idx] = 1;
@@ -190,47 +203,55 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
             }
         }
 
-        // 每列的「同类地带的格数」：在 (2R+1)^2 的方块邻域里数同类的列。
-        // R 取宽度上限的一半（至少 1）—— 只关心「左右各 R 格内还有没有同类」，不是整块连通块的面积。
-        // 这就是「沙/土/岩的地带宽度不足就不生成过渡」的判定依据：
-        // 一条 1~3 格的河道小沙岸周围全是草，数出来的上限只有 3^2 = 9，达不到 min_cells，于是整片跳过。
-        // 注意这个量跟面积无关、跟「最窄处实际宽度」有关：只有无限宽的地带才能数满 (2R+1)^2。
-        final int cap2 = config.minWidth() + 1;
-        final int[] narrowStats = new int[total];
-        for (int gx = 0; gx < span; gx++)
+        // 每列「垂直接触线方向有多厚」：这是过渡带能不能铺得下的唯一依据。
+        // 为什么不用「最窄跨度」：海滩天然是沿岸很长、垂直很窄的狭长带，
+        // TFC 的薄海滩垂直方向常常只有 2~4 格。用「最窄跨度 >= 4」当门槛会把
+        // 几乎所有正常海滩整片否掉（这正是「完全没出现沙草方块」的原因）。
+        // 真正要拦的是「薄到过渡带能把它整个吞掉」的小沙岸，所以要量的是「厚度」：
+        // 从该列沿接触方向（朝最近的那条边界）还能走几格同类。
+        final int[] thickStats = new int[total];
         {
-            for (int gz = 0; gz < span; gz++)
+            // 最近边界的反方向：BFS 只沿同类扩散，所以「上一层」就在来的方向上。
+            // 这里改用一个更直接的度量：沿 BFS 深度增加的方向计数，
+            // 即「该列到同类方块中心的厚度」。用 dist 无法直接得到，改为逐列实测四个方向，
+            // 取「垂直接触线」的那个轴 —— 接触线方向由 contacts 掩码决定。
+            final int maxCheck = Math.min(16, config.minWidth() + 8);
+            for (int gx = 0; gx < span; gx++)
             {
-                final int idx = gx * span + gz;
-                final Kind self = kinds[idx];
-                if (self == Kind.OTHER)
+                for (int gz = 0; gz < span; gz++)
                 {
-                    continue;
-                }
-                int best = 0;
-                for (int axis = 0; axis < 2; axis++)
-                {
-                    int len = 1;
-                    for (int sign = -1; sign <= 1; sign += 2)
+                    final int idx = gx * span + gz;
+                    final Kind self = kinds[idx];
+                    if (self == Kind.OTHER)
                     {
-                        for (int k = 1; k <= cap2; k++)
-                        {
-                            final int nx = gx + (axis == 0 ? sign * k : 0);
-                            final int nz = gz + (axis == 1 ? sign * k : 0);
-                            if (nx < 0 || nz < 0 || nx >= span || nz >= span)
-                            {
-                                break;
-                            }
-                            if (kinds[nx * span + nz] != self)
-                            {
-                                break;
-                            }
-                            len++;
-                        }
+                        continue;
                     }
-                    best = axis == 0 ? len : Math.min(best, len);
+                    // 接触方向：若水平方向(x轴)有接触，则厚度沿 z 轴量；反之亦然。
+                    final boolean xContact =
+                        (gx > 0 && kinds[idx - span] != self && kinds[idx - span] != Kind.OTHER)
+                        || (gx < span - 1 && kinds[idx + span] != self && kinds[idx + span] != Kind.OTHER);
+                    final boolean zContact =
+                        (gz > 0 && kinds[idx - 1] != self && kinds[idx - 1] != Kind.OTHER)
+                        || (gz < span - 1 && kinds[idx + 1] != self && kinds[idx + 1] != Kind.OTHER);
+                    // 两个方向都有接触（角落）或都没有（尚未接触）时，取两轴中较大的那个厚度
+                    final int tx = xContact ? 1 : 0;
+                    final int tz = zContact ? 1 : 0;
+                    int thick;
+                    if (tx == 1 && tz == 0)
+                    {
+                        thick = measure(kinds, span, gx, gz, self, 0, maxCheck);
+                    }
+                    else if (tz == 1 && tx == 0)
+                    {
+                        thick = measure(kinds, span, gx, gz, self, 1, maxCheck);
+                    }
+                    else
+                    {
+                        thick = Math.max(measure(kinds, span, gx, gz, self, 0, maxCheck),
+                                         measure(kinds, span, gx, gz, self, 1, maxCheck));
+                    }
+                    thickStats[idx] = thick;
                 }
-                narrowStats[idx] = best;
             }
         }
 
@@ -266,8 +287,8 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                 }
 
                 // 地带太窄就不生成，避免把小河道两侧的小沙岸整个盖住。
-                // 判定用「同类地带的最窄跨度」，不是整块连通块的面积。
-                if (narrowStats[idx] < minWidth)
+                // 判定用「垂直接触线方向的厚度」，不是整块连通块的面积、也不是最窄跨度。
+                if (thickStats[idx] < minWidth)
                 {
                     continue;
                 }
@@ -283,7 +304,7 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                     {
                         break;
                     }
-                    final String name = rockName(pathOf(level, q));
+                    final String name = resolveRock(rockName(pathOf(level, q)));
                     if (name != null)
                     {
                         rock = name;
@@ -317,9 +338,20 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                     if (aboveKind == Kind.SOIL || aboveKind == Kind.SAND)
                     {
                         final String abovePath = pathOf(level, aboveRock);
-                        final BlockState repl = aboveKind == Kind.SAND
-                            ? lookup("tfcflorae:" + ROCKY_SAND_PREFIX + lastSegment(abovePath) + "/" + rock)
-                            : lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(abovePath)) + "/" + rock);
+                        BlockState repl = null;
+                        if (aboveKind == Kind.SAND)
+                        {
+                            repl = lookup("tfcflorae:" + ROCKY_SAND_PREFIX + lastSegment(abovePath) + "/" + rock);
+                        }
+                        else
+                        {
+                            // 没有对应多石变体的土壤（如 bog_iron）不做，不回退成 loam
+                            final String v = normalizeVariant(lastSegment(abovePath));
+                            if (v != null)
+                            {
+                                repl = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + v + "/" + rock);
+                            }
+                        }
                         if (repl != null && !repl.is(above.getBlock()))
                         {
                             level.setBlock(aboveRock, repl, 3);
@@ -386,14 +418,23 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         {
             if ((touchSand && config.dirtToSand()) || (touchRock && config.dirtToRock()))
             {
-                replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(path)) + "/" + rock);
+                // 没有对应多石变体的土壤（如 bog_iron）不做，不回退成 loam
+                final String v = normalizeVariant(lastSegment(path));
+                if (v != null)
+                {
+                    replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + v + "/" + rock);
+                }
             }
         }
         else if (kind == Kind.GRASS)
         {
             if (touchRock && config.grassToRock())
             {
-                replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + normalizeVariant(lastSegment(path)) + "/" + rock);
+                final String v = normalizeVariant(lastSegment(path));
+                if (v != null)
+                {
+                    replacement = lookup("tfcflorae:" + ROCKY_SOIL_PREFIX + v + "/" + rock);
+                }
             }
         }
 
@@ -444,9 +485,64 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         queue.add(next);
     }
 
+    /** 沿某个轴（0 = x，1 = z）数同类连续长度，含自身，最多数到 max 格。 */
+    private static int measure(Kind[] kinds, int span, int gx, int gz, Kind self, int axis, int max)
+    {
+        int len = 1;
+        for (int sign = -1; sign <= 1; sign += 2)
+        {
+            for (int k = 1; k <= max; k++)
+            {
+                final int nx = gx + (axis == 0 ? sign * k : 0);
+                final int nz = gz + (axis == 1 ? sign * k : 0);
+                if (nx < 0 || nz < 0 || nx >= span || nz >= span)
+                {
+                    break;
+                }
+                if (kinds[nx * span + nz] != self)
+                {
+                    break;
+                }
+                len++;
+            }
+        }
+        return len;
+    }
+
     private static boolean different(Kind self, Kind other)
     {
         return other != Kind.OTHER && other != self;
+    }
+
+    /**
+     * 这一类地形会不会「因为」邻接另一类地形而需要改变。
+     * <p>
+     * 不能直接用「类别不同」：草地挨着岩石也会判成接触，于是 {@code dist} 被点亮，
+     * 但 {@code grass_to_rock} 默认关，草分支什么都不做 —— 结果就是草侧整片没有过渡，
+     * 而且还会把「草 ↔ 沙」的沙侧触发挡在后面（因为沙侧靠的是同一张 {@code dist} 图）。
+     * <p>
+     * 这里按已确认的设计表逐对声明：
+     * <pre>
+     *   草 需要 沙   ← 关键：草侧必须感知沙，沙草渐变才会被触发
+     *   土 需要 沙 / 岩
+     *   沙 需要 草 / 土 / 岩
+     *   岩 不需要任何（岩侧永远不动）
+     * </pre>
+     */
+    private static boolean needsPair(Kind self, Kind other)
+    {
+        if (other == Kind.OTHER || other == self)
+        {
+            return false;
+        }
+        return switch (self)
+        {
+            case GRASS -> other == Kind.SAND;
+            case SOIL -> other == Kind.SAND || other == Kind.ROCK;
+            case SAND -> other == Kind.GRASS || other == Kind.SOIL || other == Kind.ROCK;
+            case ROCK -> false;
+            default -> false;
+        };
     }
 
     private static int bitOf(Kind kind)
@@ -532,7 +628,10 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
     private static Kind classify(ResourceLocation id)
     {
         final String ns = id.getNamespace();
-        if (!"tfc".equals(ns) && !"tfcflorae".equals(ns))
+        // 必须把 tfe 也算进来！TerraFirmaEarth 的新土壤草方块用的是 tfe: 命名空间
+        // （tfe:grass/fluvisol 等），只认 tfc / tfcflorae 会把整片 TFE 新土壤地表当成 OTHER，
+        // 那一带上就完全不会有任何过渡。
+        if (!"tfc".equals(ns) && !"tfcflorae".equals(ns) && !"tfe".equals(ns))
         {
             return Kind.OTHER;
         }
@@ -540,6 +639,11 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
 
         if (p.startsWith(ROCK_RAW_PREFIX) || p.startsWith(ROCK_GRAVEL_PREFIX))
         {
+            // tfe:rock/raw/tuff_slab 这类不是整块岩石
+            if (p.contains("slab") || p.contains("stairs") || p.contains("wall"))
+            {
+                return Kind.OTHER;
+            }
             return Kind.ROCK;
         }
         // 已经是过渡方块，不重复处理
@@ -561,6 +665,13 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
             return Kind.OTHER;
         }
         if (p.contains("grass"))
+        {
+            return Kind.GRASS;
+        }
+        // 腐殖层（TFE 的「X腐殖层」）按草处理 —— 它是有机质表土层，视觉上就是草皮那种质感，
+        // 归成 SOIL 会在接沙时被换成多石土，反而更不对。
+        // 注意 duff / clay_duff 两个都要，别漏 clay_duff。
+        if (p.startsWith("duff/") || p.startsWith("clay_duff/"))
         {
             return Kind.GRASS;
         }
@@ -600,15 +711,34 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         return null;
     }
 
+    /**
+     * 这一列的岩石名 → 我们模组里对应的多石方块岩石名。
+     * <p>
+     * 我们只给 TFC 的岩石做了 {@code rockier_compact_dirt/*} 和 {@code sand/rocky/*}。
+     * TFE 的 {@code tuff} 也有 {@code tfe:rock/raw/tuff}，但我们没做 tuff 的多石变体，
+     * 所以这里返回 null —— 该列跳过，不会刷出「tuff 地上长花岗岩混石土」。
+     */
+    private static String resolveRock(String raw)
+    {
+        return raw != null && ROCKY_ROCKS.contains(raw) ? raw : null;
+    }
+
     private static String lastSegment(String path)
     {
         final int i = path.lastIndexOf('/');
         return i < 0 ? path : path.substring(i + 1);
     }
 
+    /**
+     * 把土壤变体归一到我们有 {@code rockier_compact_dirt} 的那 8 种之一。
+     * <p>
+     * 没有对应多石变体的（目前只有 {@code bog_iron}）返回 {@code null} ——
+     * 该列跳过，<b>不回退成 loam</b>。回退会刷出「沼铁土变成壤土」这种错误方块，
+     * 宁可不做过渡。
+     */
     private static String normalizeVariant(String variant)
     {
-        return variant != null && ROCKY_SOIL_VARIANTS.contains(variant) ? variant : "loam";
+        return variant != null && ROCKY_SOIL_VARIANTS.contains(variant) ? variant : null;
     }
 
     private static BlockState lookup(String id)
