@@ -576,9 +576,10 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
     /**
      * 采样一列：类别 + 真正要改的方块。
      * <p>
-     * 特殊处理「<b>草方块盖在沙上</b>」：TFC 的沙滩最上两层是草方块、下面是沙，这是原生状态。
-     * 这种列按 <b>SAND</b> 归类，改的是<b>底下那块沙</b>，绝不改草方块 ——
-     * 否则会刷出「草方块上面再叠一个沙草方块」的假方块，那是错的。
+     * 特殊处理「<b>草方块盖在沙上</b>」：TFC 的海岸/沙岸最上两层是草方块、下面是沙。
+     * 这种列仍按 <b>GRASS</b> 归类（表层确实是草），只把写入目标指向<b>底下那块沙</b>，
+     * 绝不改草方块本体 —— 否则会刷出「草方块上面再叠一个沙草方块」的假方块。
+     * 归类成 SAND 会让整条海岸失去草/沙边界，这正是沙草渐变在海岸几乎不出现的原因。
      */
     private static Sample sample(WorldGenLevel level, int x, int z)
     {
@@ -596,8 +597,11 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
                 && level.getFluidState(top).isEmpty()
                 && classify(BuiltInRegistries.BLOCK.getKey(belowState.getBlock())) == Kind.SAND)
             {
-                // 草方块压在沙上：把「沙」当成这一列的表层
-                return new Sample(Kind.SAND, below, belowState, true);
+                // 草方块压在沙上：类别仍是 GRASS，只把写入目标改成底下那块沙。
+                // 绝不能归类成 SAND —— TFC 的海岸/沙岸表层全是「草盖沙」，
+                // 那样整条海岸就没有 GRASS 与 SAND 的边界，沙草渐变永远不触发
+                // （这正是「同群系内正常、跨群系到海岸几乎不出现」的原因）。
+                return new Sample(Kind.GRASS, below, belowState, true);
             }
         }
         return new Sample(kind, top, level.getBlockState(top), false);
