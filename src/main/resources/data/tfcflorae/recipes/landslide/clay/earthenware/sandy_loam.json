@@ -1,0 +1,8 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:earthenware_clay/sandy_loam",
+    "tfcflorae:earthenware_clay_grass/sandy_loam"
+  ],
+  "result": "tfcflorae:earthenware_clay/sandy_loam"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:stoneware_clay/sandy_loam",
+    "tfcflorae:stoneware_clay_grass/sandy_loam"
+  ],
+  "result": "tfcflorae:stoneware_clay/sandy_loam"
+}

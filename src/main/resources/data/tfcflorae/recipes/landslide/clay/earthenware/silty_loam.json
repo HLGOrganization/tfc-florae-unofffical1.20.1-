@@ -1,0 +1,8 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:earthenware_clay/silty_loam",
+    "tfcflorae:earthenware_clay_grass/silty_loam"
+  ],
+  "result": "tfcflorae:earthenware_clay/silty_loam"
+}

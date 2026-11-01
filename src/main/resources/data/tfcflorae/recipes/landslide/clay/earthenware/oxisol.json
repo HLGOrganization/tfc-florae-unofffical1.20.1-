@@ -1,0 +1,8 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:earthenware_clay/oxisol",
+    "tfcflorae:earthenware_clay_grass/oxisol"
+  ],
+  "result": "tfcflorae:earthenware_clay/oxisol"
+}

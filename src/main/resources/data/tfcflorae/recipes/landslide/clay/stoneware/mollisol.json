@@ -1,0 +1,8 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:stoneware_clay/mollisol",
+    "tfcflorae:stoneware_clay_grass/mollisol"
+  ],
+  "result": "tfcflorae:stoneware_clay/mollisol"
+}

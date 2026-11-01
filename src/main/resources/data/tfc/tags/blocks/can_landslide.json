@@ -1283,6 +1283,26 @@
     "tfcflorae:wood/fallen_leaves/white_ipe",
     "tfcflorae:wood/fallen_leaves/white_jacaranda",
     "tfcflorae:wood/fallen_leaves/yellow_meranti",
-    "tfcflorae:wood/fallen_leaves/zebrawood"
+    "tfcflorae:wood/fallen_leaves/zebrawood",
+    "tfcflorae:earthenware_clay/silty_loam",
+    "tfcflorae:earthenware_clay/fluvisol",
+    "tfcflorae:earthenware_clay/mollisol",
+    "tfcflorae:earthenware_clay/oxisol",
+    "tfcflorae:earthenware_clay/podzol",
+    "tfcflorae:earthenware_clay_grass/silty_loam",
+    "tfcflorae:earthenware_clay_grass/fluvisol",
+    "tfcflorae:earthenware_clay_grass/mollisol",
+    "tfcflorae:earthenware_clay_grass/oxisol",
+    "tfcflorae:earthenware_clay_grass/podzol",
+    "tfcflorae:stoneware_clay/silty_loam",
+    "tfcflorae:stoneware_clay/fluvisol",
+    "tfcflorae:stoneware_clay/mollisol",
+    "tfcflorae:stoneware_clay/oxisol",
+    "tfcflorae:stoneware_clay/podzol",
+    "tfcflorae:stoneware_clay_grass/silty_loam",
+    "tfcflorae:stoneware_clay_grass/fluvisol",
+    "tfcflorae:stoneware_clay_grass/mollisol",
+    "tfcflorae:stoneware_clay_grass/oxisol",
+    "tfcflorae:stoneware_clay_grass/podzol"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:stoneware_clay/silt",
+    "tfcflorae:stoneware_clay_grass/silt"
+  ],
+  "result": "tfcflorae:stoneware_clay/silt"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:earthenware_clay/fluvisol",
+    "tfcflorae:earthenware_clay_grass/fluvisol"
+  ],
+  "result": "tfcflorae:earthenware_clay/fluvisol"
+}

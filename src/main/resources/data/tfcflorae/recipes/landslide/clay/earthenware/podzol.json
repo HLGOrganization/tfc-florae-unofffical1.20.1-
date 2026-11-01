@@ -1,0 +1,8 @@
+{
+  "type": "tfc:landslide",
+  "ingredient": [
+    "tfcflorae:earthenware_clay/podzol",
+    "tfcflorae:earthenware_clay_grass/podzol"
+  ],
+  "result": "tfcflorae:earthenware_clay/podzol"
+}
