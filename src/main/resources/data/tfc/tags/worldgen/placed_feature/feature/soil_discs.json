@@ -1,0 +1,14 @@
+{
+  "values": [
+    "tfc:clay_disc_with_indicator",
+    "tfc:water_clay_disc_with_indicator",
+    "tfc:peat_disc",
+    "tfc:powder_snow",
+    "tfc:rooted_dirt",
+    "tfc:mollisol_disc",
+    "tfcflorae:earthenware_disc_with_indicator",
+    "tfcflorae:stoneware_disc_with_indicator"
+  ],
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false
+}
