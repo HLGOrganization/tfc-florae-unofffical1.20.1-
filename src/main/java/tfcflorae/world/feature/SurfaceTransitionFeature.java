@@ -242,7 +242,8 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
 
         // ---------- 5. 逐列处理 chunk 本体 ----------
         boolean changed = false;
-        // 诊断用：每区块统计「沙列 / 有草邻接的沙列 / 真正写入的渐变格数」
+        // 诊断用（只在 debug 日志级别下输出）：每区块统计
+        // 「沙列 / 有草邻接的沙列 / 真正写入的渐变格数」
         int statsSand = 0;
         int statsGrassCt = 0;
         int statsApplied = 0;
@@ -377,14 +378,14 @@ public class SurfaceTransitionFeature extends Feature<SurfaceTransitionConfig>
         }
         if (statsGrassCt > 0 && statsApplied == 0)
         {
-            tfcflorae.TFCFlorae.LOGGER.info(
+            tfcflorae.TFCFlorae.LOGGER.debug(
                 "[surface_transition] 有草邻接沙但未写入 chunk=({}, {}) 沙列={} 草邻接沙列={} 写入={} minWidth={} rings={}",
                 chunkX, chunkZ, statsSand, statsGrassCt, statsApplied,
                 config.minWidth(), config.grassRings());
         }
         else if (statsApplied > 0)
         {
-            tfcflorae.TFCFlorae.LOGGER.info(
+            tfcflorae.TFCFlorae.LOGGER.debug(
                 "[surface_transition] 沙草渐变已写入 chunk=({}, {}) 沙列={} 草邻接={} 写入={}",
                 chunkX, chunkZ, statsSand, statsGrassCt, statsApplied);
         }
