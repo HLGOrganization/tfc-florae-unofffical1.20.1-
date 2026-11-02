@@ -46,6 +46,14 @@ public final class TFCFFeatures {
     public static final RegistryObject<SurfaceTransitionFeature> SURFACE_TRANSITION =
         register("surface_transition", SurfaceTransitionFeature::new, SurfaceTransitionConfig.CODEC);
 
+    /** 石柱 / 岩柱（radius=0 为单根立柱，radius>0 为成片柱群）。 */
+    public static final RegistryObject<RockColumnFeature> ROCK_COLUMN =
+        register("rock_column", RockColumnFeature::new, RockColumnFeatureConfig.CODEC);
+
+    /** 间歇泉簇。 */
+    public static final RegistryObject<GeyserClusterFeature> GEYSER_CLUSTER =
+        register("geyser_cluster", GeyserClusterFeature::new, GeyserClusterFeatureConfig.CODEC);
+
     private TFCFFeatures() {}
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> RegistryObject<F> register(

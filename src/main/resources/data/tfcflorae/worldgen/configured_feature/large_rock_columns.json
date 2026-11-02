@@ -1,0 +1,52 @@
+{
+  "type": "tfcflorae:rock_column",
+  "config": {
+    "blocks": [
+      "tfcflorae:rock/column/andesite",
+      "tfcflorae:rock/column/basalt",
+      "tfcflorae:rock/column/boninite",
+      "tfcflorae:rock/column/carbonatite",
+      "tfcflorae:rock/column/chalk",
+      "tfcflorae:rock/column/chert",
+      "tfcflorae:rock/column/claystone",
+      "tfcflorae:rock/column/conglomerate",
+      "tfcflorae:rock/column/dacite",
+      "tfcflorae:rock/column/diorite",
+      "tfcflorae:rock/column/dolomite",
+      "tfcflorae:rock/column/gabbro",
+      "tfcflorae:rock/column/gneiss",
+      "tfcflorae:rock/column/granite",
+      "tfcflorae:rock/column/jaspillite",
+      "tfcflorae:rock/column/laterite",
+      "tfcflorae:rock/column/limestone",
+      "tfcflorae:rock/column/marble",
+      "tfcflorae:rock/column/mudstone",
+      "tfcflorae:rock/column/phyllite",
+      "tfcflorae:rock/column/porphyry",
+      "tfcflorae:rock/column/quartzite",
+      "tfcflorae:rock/column/red_granite",
+      "tfcflorae:rock/column/rhyolite",
+      "tfcflorae:rock/column/schist",
+      "tfcflorae:rock/column/shale",
+      "tfcflorae:rock/column/slate",
+      "tfcflorae:rock/column/soapstone",
+      "tfcflorae:rock/column/tuff",
+      "tfcflorae:rock/column/wackestone"
+    ],
+    "height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 4,
+        "max_inclusive": 10
+      }
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 2,
+        "max_inclusive": 4
+      }
+    },
+    "density": 0.5
+  }
+}

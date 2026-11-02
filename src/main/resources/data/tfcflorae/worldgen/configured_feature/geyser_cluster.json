@@ -1,0 +1,24 @@
+{
+  "type": "tfcflorae:geyser_cluster",
+  "config": {
+    "blocks": [
+      "tfcflorae:rock/geyser/boninite",
+      "tfcflorae:rock/geyser/carbonatite",
+      "tfcflorae:rock/geyser/jaspillite",
+      "tfcflorae:rock/geyser/laterite",
+      "tfcflorae:rock/geyser/mudstone",
+      "tfcflorae:rock/geyser/porphyry",
+      "tfcflorae:rock/geyser/red_granite",
+      "tfcflorae:rock/geyser/soapstone",
+      "tfcflorae:rock/geyser/wackestone"
+    ],
+    "count": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 1,
+        "max_inclusive": 3
+      }
+    },
+    "radius": 4
+  }
+}

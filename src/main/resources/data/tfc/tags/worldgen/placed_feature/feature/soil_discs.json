@@ -8,7 +8,11 @@
     "tfc:mollisol_disc",
     "tfcflorae:earthenware_disc_with_indicator",
     "tfcflorae:stoneware_disc_with_indicator",
-    "tfcflorae:smoke_block"
+    "tfcflorae:smoke_block",
+    "tfcflorae:rock_pillar",
+    "tfcflorae:large_rock_columns",
+    "tfcflorae:small_rock_columns",
+    "tfcflorae:geyser_cluster"
   ],
   "__comment__": "This file was automatically created by mcresources",
   "replace": false
