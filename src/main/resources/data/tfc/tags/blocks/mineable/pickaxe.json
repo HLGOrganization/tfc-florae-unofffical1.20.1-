@@ -3,7 +3,6 @@
   "values": [
     "tfcflorae:rock/raw/boninite",
     "tfcflorae:rock/raw/carbonatite",
-    "tfcflorae:rock/raw/gypsum",
     "tfcflorae:rock/raw/jaspillite",
     "tfcflorae:rock/raw/laterite",
     "tfcflorae:rock/raw/mudstone",
@@ -13,7 +12,6 @@
     "tfcflorae:rock/raw/wackestone",
     "tfcflorae:rock/spike/boninite",
     "tfcflorae:rock/spike/carbonatite",
-    "tfcflorae:rock/spike/gypsum",
     "tfcflorae:rock/spike/jaspillite",
     "tfcflorae:rock/spike/laterite",
     "tfcflorae:rock/spike/mudstone",
