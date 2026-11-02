@@ -7,7 +7,8 @@
     "tfc:rooted_dirt",
     "tfc:mollisol_disc",
     "tfcflorae:earthenware_disc_with_indicator",
-    "tfcflorae:stoneware_disc_with_indicator"
+    "tfcflorae:stoneware_disc_with_indicator",
+    "tfcflorae:smoke_block"
   ],
   "__comment__": "This file was automatically created by mcresources",
   "replace": false

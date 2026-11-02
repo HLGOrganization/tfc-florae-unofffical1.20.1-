@@ -97,12 +97,10 @@ import tfcflorae.common.blocks.plant.ShortFruitingCactusBlock;
 import tfcflorae.common.blocks.plant.TFCFFruitingCactusBlock;
 import tfcflorae.common.blocks.plant.TFCFFruitTrees;
 import tfcflorae.common.blocks.plant.TFCFPlant;
-import tfcflorae.common.blocks.rock.DripstoneRock;
 import tfcflorae.common.blocks.rock.Geyser;
 import tfcflorae.common.blocks.rock.MineralSheetBlock;
 import tfcflorae.common.blocks.rock.TFCFOre;
 import tfcflorae.common.blocks.rock.TFCFOreDepositBlock;
-import tfcflorae.common.blocks.rock.TFCFPointedDripstoneBlock;
 import tfcflorae.common.blocks.rock.TFCFRock;
 import tfcflorae.common.blocks.soil.Colors;
 import tfcflorae.common.blocks.soil.SandLayerBlock;
@@ -605,9 +603,6 @@ public final class TFCFBlocks {
       TFCFRock.class
    );
    public static final Map<TFCFRock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> TFCF_ROCKTYPE_BLOCKS = rockTypeMapper(TFCFRock.class);
-   public static final Map<DripstoneRock, Map<net.dries007.tfc.common.blocks.rock.Rock.BlockType, RegistryObject<Block>>> DRIPSTONE_BLOCKS = dripstoneMapper(
-      DripstoneRock.class
-   );
    public static final Map<Rock, RegistryObject<Block>> TFC_COLUMN = Helpers.mapOfKeys(
       Rock.class,
       rock -> register(
@@ -3241,71 +3236,6 @@ public final class TFCFBlocks {
       return Map;
    }
 
-   private static Map<DripstoneRock, Map<net.dries007.tfc.common.blocks.rock.Rock.BlockType, RegistryObject<Block>>> dripstoneMapper(
-      Class<DripstoneRock> enumClass
-   ) {
-      Map<DripstoneRock, Map<net.dries007.tfc.common.blocks.rock.Rock.BlockType, RegistryObject<Block>>> Map = new HashMap<>();
-
-      for (DripstoneRock rock : enumClass.getEnumConstants()) {
-         Map<net.dries007.tfc.common.blocks.rock.Rock.BlockType, RegistryObject<Block>> typeMap = new HashMap<>();
-
-         for (net.dries007.tfc.common.blocks.rock.Rock.BlockType type : net.dries007.tfc.common.blocks.rock.Rock.BlockType.values()) {
-            if (type == net.dries007.tfc.common.blocks.rock.Rock.BlockType.SPIKE) {
-               if (rock == DripstoneRock.GYPSUM) {
-                  typeMap.put(
-                     type,
-                     register(
-                        "rock/" + type.name() + "/" + rock.name(),
-                        () -> TFCFPointedDripstoneBlock.create(
-                              ExtendedProperties.of(MapColor.STONE).requiresCorrectToolForDrops()
-                                 .sound(SoundType.AMETHYST)
-                                 .strength(rock.category().hardness(2.0F), 7.0F)
-                                 .requiresCorrectToolForDrops()
-                                 .noOcclusion()
-                                 .randomTicks()
-                                 .dynamicShape()
-                                 .hasPostProcess(TFCFBlocks::always)
-                                 .lightLevel(state -> 6),
-                              () -> (Block)DRIPSTONE_BLOCKS.get(rock).get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.SPIKE).get()
-                           ),
-                        TFCCreativeTabs.ROCKS
-                     )
-                  );
-               } else {
-                  typeMap.put(
-                     type,
-                     register(
-                        "rock/" + type.name() + "/" + rock.name(),
-                        () -> TFCFPointedDripstoneBlock.create(
-                              ExtendedProperties.of(MapColor.STONE).requiresCorrectToolForDrops()
-                                 .sound(SoundType.POINTED_DRIPSTONE)
-                                 .strength(rock.category().hardness(4.0F), 10.0F)
-                                 .requiresCorrectToolForDrops()
-                                 .noOcclusion()
-                                 .randomTicks()
-                                 .dynamicShape()
-                                 .hasPostProcess(TFCFBlocks::always),
-                              () -> (Block)DRIPSTONE_BLOCKS.get(rock).get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.SPIKE).get()
-                           ),
-                        TFCCreativeTabs.ROCKS
-                     )
-                  );
-               }
-            } else if ((
-                  type == net.dries007.tfc.common.blocks.rock.Rock.BlockType.RAW
-                     || type == net.dries007.tfc.common.blocks.rock.Rock.BlockType.HARDENED
-                     || type == net.dries007.tfc.common.blocks.rock.Rock.BlockType.LOOSE
-               )
-               && (type != net.dries007.tfc.common.blocks.rock.Rock.BlockType.LOOSE || rock != DripstoneRock.GYPSUM)) {
-               typeMap.put(type, register("rock/" + type.name() + "/" + rock.name(), () -> type.create(rock), TFCCreativeTabs.ROCKS));
-            }
-         }
-
-         Map.put(rock, typeMap);
-      }
-
-      return Map;
-   }
 
    private static Map<Rock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> rockTypeTFCMapper(Class<Rock> enumClass) {
       Map<Rock, Map<TFCFRock.TFCFBlockType, RegistryObject<Block>>> Map = new HashMap<>();

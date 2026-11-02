@@ -271,12 +271,6 @@ public class ClientEventHandler {
       });
       TFCFBlocks.TFCF_ROCKTYPE_BLOCKS.values().forEach(map -> {
       });
-      TFCFBlocks.DRIPSTONE_BLOCKS.values().forEach(map -> {
-         RegistryObject<Block> reg = map.get(net.dries007.tfc.common.blocks.rock.Rock.BlockType.SPIKE);
-         if (reg != null) {
-            ItemBlockRenderTypes.setRenderLayer(reg.get(), cutout);
-         }
-      });
       TFCFBlocks.GEYSER_TFC.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
       TFCFBlocks.GEYSER_TFCF.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
       // 矿石相关表按岩石过滤后，个别键可能整块缺失（例如凝灰岩不生成矿石）；
