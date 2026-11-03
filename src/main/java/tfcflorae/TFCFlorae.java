@@ -85,6 +85,9 @@ public class TFCFlorae {
          // wheels / axles / windmills actually get a block entity (and thus render)
          tfcflorae.common.blockentities.TFCFRotationBlockEntities.extendTFCBlockEntities();
          TFCFFaunas.registerSpawnPlacements();
+         // 抢回海岸地表状态（TFE 的 SurfaceStatesMixin 会整套替换），再按分配表改岩石沙色
+         tfcflorae.world.SandSurfaceStates.apply();
+         tfcflorae.world.RockSandOverrides.apply();
       });
    }
 }

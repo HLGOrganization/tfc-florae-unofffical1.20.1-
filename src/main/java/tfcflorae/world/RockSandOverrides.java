@@ -1,0 +1,83 @@
+package tfcflorae.world;
+
+import java.lang.reflect.Field;
+import java.util.Locale;
+import java.util.Map;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import org.slf4j.Logger;
+
+import com.mojang.logging.LogUtils;
+import net.dries007.tfc.common.blocks.SandstoneBlockType;
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.rock.Rock;
+import net.dries007.tfc.common.blocks.soil.SandBlockType;
+import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.world.settings.RockSettings;
+
+/**
+ * TFC 岩石的沙色改写（用户指定的分配表）。
+ * <p>
+ * TFC 把「岩石 -> 沙色」写死在 {@link Rock} 枚举里，数据包改不了；
+ * 但 {@link RockSettings#register} 的实现是 {@code PRESETS.put(id, settings)}（覆盖），
+ * 这里反射取出 TFC 已注册好的记录，只替换 sand / sandstone，其余字段原样保留。
+ * <p>
+ * 生效前提：{@link SandSurfaceStates} 已把海岸地表状态抢回「按岩石取沙」。
+ */
+public final class RockSandOverrides
+{
+    private static final Logger LOGGER = LogUtils.getLogger();
+
+    private RockSandOverrides()
+    {
+    }
+
+    public static void apply()
+    {
+        // 安山岩、英安岩 -> 白沙
+        override(Rock.ANDESITE, SandBlockType.WHITE);
+        override(Rock.DACITE, SandBlockType.WHITE);
+        // 流纹岩 -> 黄沙
+        override(Rock.RHYOLITE, SandBlockType.YELLOW);
+        // 玄武岩 -> 棕沙
+        override(Rock.BASALT, SandBlockType.BROWN);
+        // 花岗岩 -> 粉沙
+        override(Rock.GRANITE, SandBlockType.PINK);
+        // 板岩、黏土岩、砾岩 -> 黄沙
+        override(Rock.SLATE, SandBlockType.YELLOW);
+        override(Rock.CLAYSTONE, SandBlockType.YELLOW);
+        override(Rock.CONGLOMERATE, SandBlockType.YELLOW);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static void override(Rock rock, SandBlockType sandType)
+    {
+        final ResourceLocation id = Helpers.identifier(rock.name().toLowerCase(Locale.ROOT));
+        final Block sand = TFCBlocks.SAND.get(sandType).get();
+        final Block sandstone = TFCBlocks.SANDSTONE.get(sandType).get(SandstoneBlockType.RAW).get();
+
+        try
+        {
+            final Field field = RockSettings.class.getDeclaredField("PRESETS");
+            field.setAccessible(true);
+            final Map<ResourceLocation, RockSettings> presets = (Map<ResourceLocation, RockSettings>) field.get(null);
+            final RockSettings old = presets.get(id);
+            if (old == null)
+            {
+                LOGGER.warn("[TFCFlorae] RockSettings 里找不到 {}，跳过沙色改写", id);
+                return;
+            }
+            presets.put(id, new RockSettings(
+                old.raw(), old.hardened(), old.gravel(), old.cobble(),
+                sand, sandstone,
+                old.spike(), old.loose(), old.mossyLoose()
+            ));
+            LOGGER.info("[TFCFlorae] 沙色改写 {} -> {}", id, sandType);
+        }
+        catch (Throwable t)
+        {
+            LOGGER.error("[TFCFlorae] 沙色改写失败 {} -> {}", id, sandType, t);
+        }
+    }
+}
