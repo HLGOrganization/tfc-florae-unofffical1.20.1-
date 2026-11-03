@@ -40,6 +40,9 @@ public final class RockSandOverrides
         // 安山岩、英安岩 -> 白沙
         override(Rock.ANDESITE, SandBlockType.WHITE);
         override(Rock.DACITE, SandBlockType.WHITE);
+        // 流纹岩 -> 黄沙、玄武岩 -> 棕沙
+        override(Rock.RHYOLITE, SandBlockType.YELLOW);
+        override(Rock.BASALT, SandBlockType.BROWN);
         // 花岗岩 -> 粉沙
         override(Rock.GRANITE, SandBlockType.PINK);
         // 板岩、黏土岩、砾岩 -> 黄沙
