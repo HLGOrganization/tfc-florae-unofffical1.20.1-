@@ -1,6 +1,7 @@
 package tfcflorae.world;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import net.minecraft.world.level.block.state.BlockState;
 import org.slf4j.Logger;
@@ -11,18 +12,34 @@ import net.dries007.tfc.world.surface.SurfaceState;
 import net.dries007.tfc.world.surface.SurfaceStates;
 
 /**
- * 抢回海岸 / 沙岸的沙色控制权。
+ * 把海岸 / 沙岸的沙色改回「按当地岩石取沙」。
  * <p>
- * TFE 的 {@code SurfaceStatesMixin} 在 {@link SurfaceStates} 的静态初始化末尾把
- * SHORE_SAND / RARE_SHORE_SAND / SHORE_SANDSTONE / RARE_SHORE_SANDSTONE
- * 全部替换成 {@code NTESurfaceStates.*}（噪声挑色板，与岩石无关）。
+ * TFE 用两个 mixin 接管了地表：{@code SurfaceStatesMixin} 把 TFC {@link SurfaceStates} 的海岸状态
+ * 换成 {@code NTESurfaceStates.*}；{@code NormalSurfaceBuilderMixin} 改写地表构建流程读 TFE 自己的状态。
+ * 反编译确认的实际链条（TFE 2.3.0）：
+ * <pre>
+ * ShorelineSurfaceBuilder.SANDY  -> NTESurfaceStates.SHORE_SAND / SHORE_SANDSTONE
+ * ShorelineSurfaceBuilder.NORMAL -> NTESurfaceStates.SHORE_SURFACE / SHORE_UNDERLAYER
+ * SHORE_SURFACE = BEACH_MIX_NOISE &gt; lerp(温度) ? GRAVEL : SHORE_SAND
+ * SHORE_SAND    = SAND_VARIANT_NOISE 在 RARE / YELLOW / BROWN / RED 之间挑
+ * </pre>
+ * 全程与岩石无关，所以海岸必然是固定那几种沙。
  * <p>
- * 我们在建世界前用反射把这 4 个静态字段重新指回「按当地岩石取沙」的实现，
- * 行为与 TFC 原本一致，于是 {@link RockSandOverrides} 对岩石沙色的改写才会生效。
+ * 这些字段都是 {@code public static final}，{@code Field.set} 会抛
+ * {@code IllegalAccessException: Can not set static final}，必须用 {@code sun.misc.Unsafe} 写入。
  */
 public final class SandSurfaceStates
 {
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    private static final String[] TFC_FIELDS = {
+        "SHORE_SAND", "RARE_SHORE_SAND", "SHORE_SANDSTONE", "RARE_SHORE_SANDSTONE"
+    };
+
+    private static Object UNSAFE;
+    private static Method STATIC_FIELD_BASE;
+    private static Method STATIC_FIELD_OFFSET;
+    private static Method PUT_OBJECT;
 
     private SandSurfaceStates()
     {
@@ -30,36 +47,36 @@ public final class SandSurfaceStates
 
     public static void apply()
     {
-        final SurfaceState sand = SandSurfaceStates::sandState;
-        final SurfaceState sandstone = SandSurfaceStates::sandstoneState;
+        for (final String name : TFC_FIELDS)
+        {
+            writeStatic(SurfaceStates.class, name, name.endsWith("SANDSTONE") ? SandSurfaceStates::sandstoneState : SandSurfaceStates::sandState);
+        }
 
-        override("SHORE_SAND", sand);
-        override("RARE_SHORE_SAND", sand);
-        override("SHORE_SANDSTONE", sandstone);
-        override("RARE_SHORE_SANDSTONE", sandstone);
-
-        // TFE 的 NormalSurfaceBuilderMixin 读的是它自己 NTESurfaceStates 里的状态，
-        // 只改 TFC 的字段不够，必须把 TFE 那一套也换掉。
-        overrideTfe(sand, sandstone);
+        // TFE 那一套：先换 SANDSTONE 结尾的，再换其余含 SAND 的
+        writeAll(SurfaceStates.class, true);
+        writeAll(SurfaceStates.class, false);
+        writeAll(loadTfe(), true);
+        writeAll(loadTfe(), false);
     }
 
-    /**
-     * 把 TFE {@code NTESurfaceStates} 里所有以 SAND / SANDSTONE 结尾的静态状态替换成按岩石取沙。
-     * TFE 未安装时静默跳过。
-     */
-    private static void overrideTfe(SurfaceState sand, SurfaceState sandstone)
+    private static Class<?> loadTfe()
     {
-        final Class<?> clazz;
         try
         {
-            clazz = Class.forName("com.newterraearth.tfe.world.surface.NTESurfaceStates");
+            return Class.forName("com.newterraearth.tfe.world.surface.NTESurfaceStates", true, SandSurfaceStates.class.getClassLoader());
         }
-        catch (Throwable ignored)
+        catch (Throwable t)
         {
-            LOGGER.info("[TFCFlorae] 未找到 TFE 的 NTESurfaceStates，跳过");
+            return null;
+        }
+    }
+
+    private static void writeAll(Class<?> clazz, boolean stone)
+    {
+        if (clazz == null)
+        {
             return;
         }
-
         int changed = 0;
         for (final Field field : clazz.getDeclaredFields())
         {
@@ -68,31 +85,21 @@ public final class SandSurfaceStates
                 continue;
             }
             final String name = field.getName();
-            final SurfaceState replacement;
-            if (name.endsWith("SANDSTONE"))
-            {
-                replacement = sandstone;
-            }
-            else if (name.endsWith("SAND"))
-            {
-                replacement = sand;
-            }
-            else
+            if (name.endsWith("SANDSTONE") != stone)
             {
                 continue;
             }
-            try
+            if (!stone && !name.contains("SAND"))
             {
-                field.setAccessible(true);
-                field.set(null, replacement);
+                continue;
+            }
+            final SurfaceState state = stone ? SandSurfaceStates::sandstoneState : SandSurfaceStates::sandState;
+            if (writeStatic(clazz, name, state))
+            {
                 changed++;
             }
-            catch (Throwable t)
-            {
-                LOGGER.error("[TFCFlorae] 改写 TFE 地表状态失败 {}", name, t);
-            }
         }
-        LOGGER.info("[TFCFlorae] 已改写 TFE 的 NTESurfaceStates 沙状态 {} 个", changed);
+        LOGGER.info("[TFCFlorae] {}.{} 改写 {} 个", clazz.getSimpleName(), stone ? "SANDSTONE" : "SAND", changed);
     }
 
     private static BlockState sandState(SurfaceBuilderContext context)
@@ -105,18 +112,42 @@ public final class SandSurfaceStates
         return context.getRock().sandstone().defaultBlockState();
     }
 
-    private static void override(String fieldName, SurfaceState state)
+    /** 用 Unsafe 写 static final；Unsafe 不可用则退回 Field.set。 */
+    private static boolean writeStatic(Class<?> clazz, String fieldName, SurfaceState value)
     {
         try
         {
-            final Field field = SurfaceStates.class.getDeclaredField(fieldName);
+            final Field field = clazz.getDeclaredField(fieldName);
             field.setAccessible(true);
-            field.set(null, state);
-            LOGGER.info("[TFCFlorae] 海岸地表状态抢回 SurfaceStates.{} -> 按岩石取沙", fieldName);
+            if (unsafeWrite(field, value))
+            {
+                return true;
+            }
+            field.set(null, value);
+            return true;
         }
         catch (Throwable t)
         {
-            LOGGER.error("[TFCFlorae] 海岸地表状态抢回失败 {}", fieldName, t);
+            LOGGER.error("[TFCFlorae] 地表状态改写失败 {}.{}", clazz.getSimpleName(), fieldName, t);
+            return false;
         }
+    }
+
+    private static boolean unsafeWrite(Field field, Object value) throws Exception
+    {
+        if (UNSAFE == null)
+        {
+            final Class<?> unsafeClass = Class.forName("sun.misc.Unsafe");
+            final Field theUnsafe = unsafeClass.getDeclaredField("theUnsafe");
+            theUnsafe.setAccessible(true);
+            UNSAFE = theUnsafe.get(null);
+            STATIC_FIELD_BASE = unsafeClass.getMethod("staticFieldBase", Field.class);
+            STATIC_FIELD_OFFSET = unsafeClass.getMethod("staticFieldOffset", Field.class);
+            PUT_OBJECT = unsafeClass.getMethod("putObject", Object.class, long.class, Object.class);
+        }
+        final Object base = STATIC_FIELD_BASE.invoke(UNSAFE, field);
+        final long offset = (Long) STATIC_FIELD_OFFSET.invoke(UNSAFE, field);
+        PUT_OBJECT.invoke(UNSAFE, base, offset, value);
+        return true;
     }
 }
