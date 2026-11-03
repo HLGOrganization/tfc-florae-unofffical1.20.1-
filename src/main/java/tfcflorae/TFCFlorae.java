@@ -8,8 +8,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.event.server.ServerAboutToStartEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
@@ -48,8 +46,6 @@ public class TFCFlorae {
       );
       IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
       bus.addListener(this::setup);
-      // 沙色改写在建世界前再兜一次，避免被后续注册覆盖
-      MinecraftForge.EVENT_BUS.addListener((ServerAboutToStartEvent e) -> tfcflorae.world.RockSandOverrides.apply());
       bus.addListener(TFCFEntities::onEntityAttributeCreation);
       // 果树整套追加进 TFC 的「木质」创造页（1.20.1 只能走 BuildCreativeModeTabContentsEvent）
       bus.addListener(TFCFCreativeTabEvents::onBuildContents);
@@ -89,8 +85,6 @@ public class TFCFlorae {
          // wheels / axles / windmills actually get a block entity (and thus render)
          tfcflorae.common.blockentities.TFCFRotationBlockEntities.extendTFCBlockEntities();
          TFCFFaunas.registerSpawnPlacements();
-         // TFC 岩石的沙色改写（需在 TFC 注册完 RockSettings 之后执行）
-         tfcflorae.world.RockSandOverrides.apply();
       });
    }
 }
