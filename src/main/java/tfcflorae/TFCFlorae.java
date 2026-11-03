@@ -85,6 +85,8 @@ public class TFCFlorae {
          // wheels / axles / windmills actually get a block entity (and thus render)
          tfcflorae.common.blockentities.TFCFRotationBlockEntities.extendTFCBlockEntities();
          TFCFFaunas.registerSpawnPlacements();
+         // TFC 岩石的沙色改写（需在 TFC 注册完 RockSettings 之后执行）
+         tfcflorae.world.RockSandOverrides.apply();
       });
    }
 }
