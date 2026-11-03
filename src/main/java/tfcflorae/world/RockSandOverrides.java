@@ -1,31 +1,36 @@
 package tfcflorae.world;
 
+import java.lang.reflect.Field;
 import java.util.Locale;
-import java.util.Optional;
+import java.util.Map;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import org.slf4j.Logger;
 
+import com.mojang.logging.LogUtils;
+import net.dries007.tfc.common.blocks.SandstoneBlockType;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.dries007.tfc.common.blocks.rock.Rock;
-import net.dries007.tfc.common.blocks.rock.Rock.BlockType;
 import net.dries007.tfc.common.blocks.soil.SandBlockType;
-import net.dries007.tfc.common.blocks.SandstoneBlockType;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.world.settings.RockSettings;
 
 /**
  * TFC 岩石的沙色改写。
  * <p>
- * TFC 把「岩石 -> 沙色」写死在 {@link Rock} 枚举里（{@code SandBlockType} 字段），无法用数据包修改；
- * 但 {@link RockSettings#register(ResourceLocation, RockSettings)} 的实现是
- * {@code PRESETS.put(id, settings)}（会覆盖），因此可以在所有模组 common setup 结束后
- * 重新注册一份 {@link RockSettings}，把 sand / sandstone 换成目标颜色。
+ * TFC 把「岩石 -> 沙色」写死在 {@link Rock} 枚举里（{@code SandBlockType} 字段），数据包改不了。
+ * 沙块最终由 {@link RockSettings#sand()} 提供，而 {@code RockSettings.register} 的实现是
+ * {@code PRESETS.put(id, settings)}（会覆盖）。
  * <p>
- * 不需要 mixin。
+ * 这里用反射取出 TFC 已注册好的 {@link RockSettings}，只把 sand / sandstone 换成目标颜色，
+ * 其余字段（raw / hardened / gravel / cobble / spike / loose / mossyLoose）原样保留，
+ * 再覆盖回去。不需要 mixin。
  */
 public final class RockSandOverrides
 {
+    private static final Logger LOGGER = LogUtils.getLogger();
+
     private RockSandOverrides()
     {
     }
@@ -43,30 +48,34 @@ public final class RockSandOverrides
         override(Rock.CONGLOMERATE, SandBlockType.YELLOW);
     }
 
-    private static void override(Rock rock, SandBlockType sand)
+    @SuppressWarnings("unchecked")
+    private static void override(Rock rock, SandBlockType sandType)
     {
         final ResourceLocation id = Helpers.identifier(rock.name().toLowerCase(Locale.ROOT));
-        RockSettings.register(id, new RockSettings(
-            block(rock, BlockType.RAW),
-            block(rock, BlockType.HARDENED),
-            block(rock, BlockType.GRAVEL),
-            block(rock, BlockType.COBBLE),
-            TFCBlocks.SAND.get(sand).get(),
-            TFCBlocks.SANDSTONE.get(sand).get(SandstoneBlockType.RAW).get(),
-            required(rock, BlockType.SPIKE),
-            required(rock, BlockType.LOOSE),
-            Optional.empty()
-        ));
-    }
+        final Block sand = TFCBlocks.SAND.get(sandType).get();
+        final Block sandstone = TFCBlocks.SANDSTONE.get(sandType).get(SandstoneBlockType.RAW).get();
 
-    private static Block block(Rock rock, BlockType type)
-    {
-        final java.util.function.Supplier<? extends Block> supplier = rock.getBlock(type);
-        return supplier == null ? null : supplier.get();
-    }
-
-    private static Optional<Block> required(Rock rock, BlockType type)
-    {
-        return Optional.ofNullable(block(rock, type));
+        try
+        {
+            final Field field = RockSettings.class.getDeclaredField("PRESETS");
+            field.setAccessible(true);
+            final Map<ResourceLocation, RockSettings> presets = (Map<ResourceLocation, RockSettings>) field.get(null);
+            final RockSettings old = presets.get(id);
+            if (old == null)
+            {
+                LOGGER.warn("[TFCFlorae] RockSettings 里找不到 {}，跳过沙色改写", id);
+                return;
+            }
+            presets.put(id, new RockSettings(
+                old.raw(), old.hardened(), old.gravel(), old.cobble(),
+                sand, sandstone,
+                old.spike(), old.loose(), old.mossyLoose()
+            ));
+            LOGGER.info("[TFCFlorae] 沙色改写 {} -> {}", id, sandType);
+        }
+        catch (Throwable t)
+        {
+            LOGGER.error("[TFCFlorae] 沙色改写失败 {} -> {}", id, sandType, t);
+        }
     }
 }
