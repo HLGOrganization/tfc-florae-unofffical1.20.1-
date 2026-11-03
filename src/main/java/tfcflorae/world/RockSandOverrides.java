@@ -35,19 +35,32 @@ public final class RockSandOverrides
 
     public static void apply()
     {
-        // 安山岩、英安岩 -> 白沙
+        // 白沙：闪长岩、白垩岩、大理岩、安山岩、英安岩
+        override(Rock.DIORITE, SandBlockType.WHITE);
+        override(Rock.CHALK, SandBlockType.WHITE);
+        override(Rock.MARBLE, SandBlockType.WHITE);
         override(Rock.ANDESITE, SandBlockType.WHITE);
         override(Rock.DACITE, SandBlockType.WHITE);
-        // 流纹岩 -> 黄沙
-        override(Rock.RHYOLITE, SandBlockType.YELLOW);
-        // 玄武岩 -> 棕沙
-        override(Rock.BASALT, SandBlockType.BROWN);
-        // 花岗岩 -> 粉沙
-        override(Rock.GRANITE, SandBlockType.PINK);
-        // 板岩、黏土岩、砾岩 -> 黄沙
+        // 黄沙：石灰岩、板岩、流纹岩、石英岩、片麻岩
+        override(Rock.LIMESTONE, SandBlockType.YELLOW);
         override(Rock.SLATE, SandBlockType.YELLOW);
-        override(Rock.CLAYSTONE, SandBlockType.YELLOW);
-        override(Rock.CONGLOMERATE, SandBlockType.YELLOW);
+        override(Rock.RHYOLITE, SandBlockType.YELLOW);
+        override(Rock.QUARTZITE, SandBlockType.YELLOW);
+        override(Rock.GNEISS, SandBlockType.YELLOW);
+        // 黑沙：辉长岩、页岩、白云岩、玄武岩
+        override(Rock.GABBRO, SandBlockType.BLACK);
+        override(Rock.SHALE, SandBlockType.BLACK);
+        override(Rock.DOLOMITE, SandBlockType.BLACK);
+        override(Rock.BASALT, SandBlockType.BLACK);
+        // 粉沙：硅质岩、花岗岩
+        override(Rock.CHERT, SandBlockType.PINK);
+        override(Rock.GRANITE, SandBlockType.PINK);
+        // 绿沙：砾岩、片岩
+        override(Rock.CONGLOMERATE, SandBlockType.GREEN);
+        override(Rock.SCHIST, SandBlockType.GREEN);
+        // 棕沙：粘土岩、千枚岩
+        override(Rock.CLAYSTONE, SandBlockType.BROWN);
+        override(Rock.PHYLLITE, SandBlockType.BROWN);
     }
 
     @SuppressWarnings("unchecked")

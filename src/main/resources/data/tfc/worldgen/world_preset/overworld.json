@@ -66,8 +66,8 @@
                 "spike": "tfcflorae:rock/spike/boninite",
                 "loose": "tfcflorae:rock/loose/boninite",
                 "mossy_loose": "tfcflorae:rock/mossy_loose/boninite",
-                "sand": "tfc:sand/black",
-                "sandstone": "tfc:raw_sandstone/black"
+                "sand": "tfc:sand/brown",
+                "sandstone": "tfc:raw_sandstone/brown"
               },
               "carbonatite": {
                 "raw": "tfcflorae:rock/raw/carbonatite",
@@ -99,8 +99,8 @@
                 "spike": "tfcflorae:rock/spike/mudstone",
                 "loose": "tfcflorae:rock/loose/mudstone",
                 "mossy_loose": "tfcflorae:rock/mossy_loose/mudstone",
-                "sand": "tfc:sand/white",
-                "sandstone": "tfc:raw_sandstone/white"
+                "sand": "tfc:sand/yellow",
+                "sandstone": "tfc:raw_sandstone/yellow"
               },
               "jaspillite": {
                 "raw": "tfcflorae:rock/raw/jaspillite",
@@ -132,8 +132,8 @@
                 "spike": "tfcflorae:rock/spike/soapstone",
                 "loose": "tfcflorae:rock/loose/soapstone",
                 "mossy_loose": "tfcflorae:rock/mossy_loose/soapstone",
-                "sand": "tfc:sand/white",
-                "sandstone": "tfc:raw_sandstone/white"
+                "sand": "tfc:sand/green",
+                "sandstone": "tfc:raw_sandstone/green"
               }
             },
             "bottom": [
