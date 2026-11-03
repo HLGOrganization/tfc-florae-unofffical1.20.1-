@@ -99,7 +99,6 @@ public final class SandSurfaceStates
                 changed++;
             }
         }
-        LOGGER.info("[TFCFlorae] {}.{} 改写 {} 个", clazz.getSimpleName(), stone ? "SANDSTONE" : "SAND", changed);
     }
 
     private static BlockState sandState(SurfaceBuilderContext context)

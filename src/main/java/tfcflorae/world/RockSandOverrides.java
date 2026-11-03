@@ -86,7 +86,6 @@ public final class RockSandOverrides
                 sand, sandstone,
                 old.spike(), old.loose(), old.mossyLoose()
             ));
-            LOGGER.info("[TFCFlorae] 沙色改写 {} -> {}", id, sandType);
         }
         catch (Throwable t)
         {
