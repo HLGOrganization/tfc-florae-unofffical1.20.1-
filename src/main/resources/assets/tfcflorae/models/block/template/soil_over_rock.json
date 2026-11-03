@@ -1,4 +1,5 @@
 {
+  "render_type": "minecraft:cutout",
   "parent": "block/block",
   "textures": {
     "particle": "#soil",
@@ -9,6 +10,18 @@
     {
       "from": [0, 0, 0],
       "to": [16, 16, 16],
+      "faces": {
+        "down":  { "texture": "#rock", "cullface": "down" },
+        "up":    { "texture": "#rock", "cullface": "up" },
+        "north": { "texture": "#rock", "cullface": "north" },
+        "south": { "texture": "#rock", "cullface": "south" },
+        "west":  { "texture": "#rock", "cullface": "west" },
+        "east":  { "texture": "#rock", "cullface": "east" }
+      }
+    },
+    {
+      "from": [-0.01, -0.01, -0.01],
+      "to": [16.01, 16.01, 16.01],
       "faces": {
         "down":  { "texture": "#soil", "cullface": "down" },
         "up":    { "texture": "#soil", "cullface": "up" },
