@@ -1,0 +1,23 @@
+{
+  "feature": "tfcflorae:plant/reishi_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 12
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 13,
+      "max_temperature": 34,
+      "min_rainfall": 180,
+      "max_rainfall": 500
+    }
+  ]
+}

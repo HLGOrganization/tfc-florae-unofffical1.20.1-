@@ -1,0 +1,23 @@
+{
+  "feature": "tfcflorae:plant/woolly_gomphus_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 12
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": -22,
+      "max_temperature": -6,
+      "min_rainfall": 140,
+      "max_rainfall": 400
+    }
+  ]
+}

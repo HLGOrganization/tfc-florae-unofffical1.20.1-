@@ -1,0 +1,6 @@
+{
+  "type": "tfc:epiphyte_plant",
+  "config": {
+    "block": "tfcflorae:plant/turkey_tail"
+  }
+}

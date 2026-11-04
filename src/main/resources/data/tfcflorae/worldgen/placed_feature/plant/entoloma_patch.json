@@ -1,0 +1,23 @@
+{
+  "feature": "tfcflorae:plant/entoloma_patch",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 8
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "tfc:climate",
+      "min_temperature": 0,
+      "max_temperature": 16,
+      "min_rainfall": 150,
+      "max_rainfall": 450
+    }
+  ]
+}

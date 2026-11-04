@@ -1,0 +1,11 @@
+{
+  "feature": "tfcflorae:plant/shaggy_bracket",
+  "placement": [
+    {
+      "type": "block_predicate_filter",
+      "predicate": {
+        "type": "tfc:air_or_empty_fluid"
+      }
+    }
+  ]
+}

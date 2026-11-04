@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:plant/wood_blewit_patch",
+    "tfcflorae:plant/weeping_milk_cap_patch",
+    "tfcflorae:plant/turkey_tail_patch",
+    "tfcflorae:plant/woolly_gomphus_patch",
+    "tfcflorae:plant/giant_club_patch",
+    "tfcflorae:plant/bitter_oyster_patch",
+    "tfcflorae:plant/devils_tongue_patch",
+    "tfcflorae:plant/amanita_patch",
+    "tfcflorae:plant/birch_polypore_patch",
+    "tfcflorae:plant/boletus_patch",
+    "tfcflorae:plant/chanterelle_patch",
+    "tfcflorae:plant/lions_mane_patch",
+    "tfcflorae:plant/porcini_patch",
+    "tfcflorae:plant/death_cap_patch",
+    "tfcflorae:plant/black_powderpuff_patch",
+    "tfcflorae:plant/stinkhorn_patch",
+    "tfcflorae:plant/dryads_saddle_patch",
+    "tfcflorae:plant/entoloma_patch",
+    "tfcflorae:plant/chlorophos_foxfire_patch",
+    "tfcflorae:plant/shaggy_bracket_patch",
+    "tfcflorae:plant/parasol_mushroom_patch",
+    "tfcflorae:plant/devils_fingers_patch",
+    "tfcflorae:plant/beefsteak_fungus_patch",
+    "tfcflorae:plant/shiitake_patch",
+    "tfcflorae:plant/sulphur_shelf_patch",
+    "tfcflorae:plant/reishi_patch",
+    "tfcflorae:plant/indigo_milk_cap_patch",
+    "tfcflorae:plant/bridal_veil_stinkhorn_patch"
+  ]
+}
