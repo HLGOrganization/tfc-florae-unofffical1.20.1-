@@ -1,8 +1,15 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "variants": {
-    "": {
-      "model": "tfcflorae:block/rock/raw/jaspillite"
-    }
+    "": [
+      {
+        "model": "tfcflorae:block/rock/raw/jaspillite"
+      },
+      {
+        "model": "tfcflorae:block/rock/raw/jaspillite_1"
+      },
+      {
+        "model": "tfcflorae:block/rock/raw/jaspillite_2"
+      }
+    ]
   }
 }
