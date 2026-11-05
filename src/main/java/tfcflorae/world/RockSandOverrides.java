@@ -52,8 +52,8 @@ public final class RockSandOverrides
         override(Rock.SHALE, SandBlockType.BLACK);
         override(Rock.DOLOMITE, SandBlockType.BLACK);
         override(Rock.BASALT, SandBlockType.BLACK);
-        // 粉沙：硅质岩、花岗岩
-        override(Rock.CHERT, SandBlockType.PINK);
+        // 粉沙：花岗岩
+        override(Rock.CHERT, SandBlockType.RED);
         override(Rock.GRANITE, SandBlockType.PINK);
         // 绿沙：砾岩、片岩
         override(Rock.CONGLOMERATE, SandBlockType.GREEN);
