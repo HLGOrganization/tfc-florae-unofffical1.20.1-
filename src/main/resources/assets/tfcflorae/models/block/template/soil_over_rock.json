@@ -2,7 +2,7 @@
   "render_type": "minecraft:cutout",
   "parent": "block/block",
   "textures": {
-    "particle": "#soil",
+    "particle": "#rock",
     "rock": "#rock",
     "soil": "#soil"
   },
@@ -11,24 +11,24 @@
       "from": [0, 0, 0],
       "to": [16, 16, 16],
       "faces": {
-        "down":  { "texture": "#rock", "cullface": "down" },
-        "up":    { "texture": "#rock", "cullface": "up" },
-        "north": { "texture": "#rock", "cullface": "north" },
-        "south": { "texture": "#rock", "cullface": "south" },
-        "west":  { "texture": "#rock", "cullface": "west" },
-        "east":  { "texture": "#rock", "cullface": "east" }
+        "north": { "uv": [0, 0, 16, 16], "texture": "#rock", "cullface": "north" },
+        "east":  { "uv": [0, 0, 16, 16], "texture": "#rock", "cullface": "east" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#rock", "cullface": "south" },
+        "west":  { "uv": [0, 0, 16, 16], "texture": "#rock", "cullface": "west" },
+        "up":    { "uv": [0, 0, 16, 16], "texture": "#rock", "cullface": "up" },
+        "down":  { "uv": [0, 0, 16, 16], "texture": "#rock", "cullface": "down" }
       }
     },
     {
-      "from": [-0.01, -0.01, -0.01],
-      "to": [16.01, 16.01, 16.01],
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
       "faces": {
-        "down":  { "texture": "#soil", "cullface": "down" },
-        "up":    { "texture": "#soil", "cullface": "up" },
-        "north": { "texture": "#soil", "cullface": "north" },
-        "south": { "texture": "#soil", "cullface": "south" },
-        "west":  { "texture": "#soil", "cullface": "west" },
-        "east":  { "texture": "#soil", "cullface": "east" }
+        "north": { "uv": [0, 0, 16, 16], "texture": "#soil", "cullface": "north" },
+        "east":  { "uv": [0, 0, 16, 16], "texture": "#soil", "cullface": "east" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#soil", "cullface": "south" },
+        "west":  { "uv": [0, 0, 16, 16], "texture": "#soil", "cullface": "west" },
+        "up":    { "uv": [0, 0, 16, 16], "texture": "#soil", "cullface": "up" },
+        "down":  { "uv": [0, 0, 16, 16], "texture": "#soil", "cullface": "down" }
       }
     }
   ]
