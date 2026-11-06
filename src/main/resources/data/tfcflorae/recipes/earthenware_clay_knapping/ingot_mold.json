@@ -1,6 +1,6 @@
 {
   "type": "tfc:knapping",
-  "knapping_type": "tfcflorae:earthenware_clay_knapping",
+  "knapping_type": "tfcflorae:earthenware_clay",
   "pattern": [
     "XXXX",
     "X  X",

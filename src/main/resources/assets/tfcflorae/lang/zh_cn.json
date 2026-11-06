@@ -8932,6 +8932,6 @@
   "block.tfcflorae.sand.rocky.red.tuff": "凝灰岩碎砾红砂",
   "block.tfcflorae.sand.rocky.white.tuff": "凝灰岩碎砾白沙",
   "block.tfcflorae.sand.rocky.yellow.tuff": "凝灰岩碎砾黄砂",
-  "tfc.jei.earthenware_clay_knapping_knapping": "陶土敲制配方",
-  "tfc.jei.stoneware_clay_knapping_knapping": "石胎瓷土敲制配方"
+  "tfc.jei.earthenware_clay_knapping": "陶土敲制配方",
+  "tfc.jei.stoneware_clay_knapping": "石胎瓷土敲制配方"
 }

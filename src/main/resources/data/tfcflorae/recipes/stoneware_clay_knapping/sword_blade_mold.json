@@ -1,6 +1,6 @@
 {
   "type": "tfc:knapping",
-  "knapping_type": "tfcflorae:stoneware_clay_knapping",
+  "knapping_type": "tfcflorae:stoneware_clay",
   "outside_slot_required": true,
   "pattern": [
     "  XXX",

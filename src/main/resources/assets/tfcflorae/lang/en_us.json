@@ -8938,6 +8938,6 @@
   "block.tfcflorae.sand.rocky.red.tuff": "Sand Rocky Red Tuff",
   "block.tfcflorae.sand.rocky.white.tuff": "Sand Rocky White Tuff",
   "block.tfcflorae.sand.rocky.yellow.tuff": "Sand Rocky Yellow Tuff",
-  "tfc.jei.earthenware_clay_knapping_knapping": "Earthenware Clay Knapping Recipe",
-  "tfc.jei.stoneware_clay_knapping_knapping": "Stoneware Clay Knapping Recipe"
+  "tfc.jei.earthenware_clay_knapping": "Earthenware Clay Knapping Recipe",
+  "tfc.jei.stoneware_clay_knapping": "Stoneware Clay Knapping Recipe"
 }
