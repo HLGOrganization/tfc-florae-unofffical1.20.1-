@@ -89,7 +89,9 @@ public final class SandSurfaceStates
             {
                 continue;
             }
-            if (!stone && !name.contains("SAND"))
+            // 只替换纯沙状态；SAND_AND_GRAVEL 等混合状态保留 TFE 原实现，
+            // 否则沙滩/河床的砾石会被换成纯沙（表现为沙化）。
+            if (!stone && (!name.contains("SAND") || name.contains("GRAVEL")))
             {
                 continue;
             }
