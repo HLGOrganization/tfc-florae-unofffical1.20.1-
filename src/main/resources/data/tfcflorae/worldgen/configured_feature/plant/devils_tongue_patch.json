@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:random_patch",
-  "config": {
-    "tries": 6,
-    "xz_spread": 12,
-    "y_spread": 1,
-    "feature": "tfcflorae:plant/devils_tongue"
-  }
-}
