@@ -15,7 +15,6 @@
     "minecraft:clay",
     "minecraft:calcite",
     "minecraft:lava",
-    "minecraft:air",
-    "#tfcflorae:rocky_compact_dirt"
+    "minecraft:air"
   ]
 }
