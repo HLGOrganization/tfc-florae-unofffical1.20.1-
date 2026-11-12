@@ -32,8 +32,18 @@ public final class SandSurfaceStates
 {
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    // 只替换「纯沙 / 纯砂岩」字段。绝不能按名字扫描：TFE 的 TOP_GRASS_TO_SAND、MID_DIRT_TO_SAND、
+    // ATOLL_GRASS_TO_*_SAND、SNOWY_SAND 名字里都带 SAND，但其实是 NTESoilSurfaceState 的
+    // 多段气候土壤状态机（大部分段是草/土），替换掉会让 river_valley、buttes、mesas 等
+    // 14 个群系整片变成沙。
     private static final String[] TFC_FIELDS = {
-        "SHORE_SAND", "RARE_SHORE_SAND", "SHORE_SANDSTONE", "RARE_SHORE_SANDSTONE"
+        "SHORE_SAND", "RARE_SHORE_SAND", "SHORE_SANDSTONE", "RARE_SHORE_SANDSTONE", "RIVER_SAND"
+    };
+
+    /** TFE 侧额外多出的纯沙字段。 */
+    private static final String[] TFE_FIELDS = {
+        "SHORE_SAND", "RARE_SHORE_SAND", "SHORE_SANDSTONE", "RARE_SHORE_SANDSTONE",
+        "VOLCANIC_SHORE_SAND", "VOLCANIC_SHORE_SANDSTONE", "RIVER_SAND"
     };
 
     private static Object UNSAFE;
@@ -49,14 +59,22 @@ public final class SandSurfaceStates
     {
         for (final String name : TFC_FIELDS)
         {
-            writeStatic(SurfaceStates.class, name, name.endsWith("SANDSTONE") ? SandSurfaceStates::sandstoneState : SandSurfaceStates::sandState);
+            writeStatic(SurfaceStates.class, name, stateFor(name));
         }
 
-        // TFE 那一套：先换 SANDSTONE 结尾的，再换其余含 SAND 的
-        writeAll(SurfaceStates.class, true);
-        writeAll(SurfaceStates.class, false);
-        writeAll(loadTfe(), true);
-        writeAll(loadTfe(), false);
+        final Class<?> tfe = loadTfe();
+        if (tfe != null)
+        {
+            for (final String name : TFE_FIELDS)
+            {
+                writeStatic(tfe, name, stateFor(name));
+            }
+        }
+    }
+
+    private static SurfaceState stateFor(String name)
+    {
+        return name.endsWith("SANDSTONE") ? SandSurfaceStates::sandstoneState : SandSurfaceStates::sandState;
     }
 
     private static Class<?> loadTfe()
@@ -68,38 +86,6 @@ public final class SandSurfaceStates
         catch (Throwable t)
         {
             return null;
-        }
-    }
-
-    private static void writeAll(Class<?> clazz, boolean stone)
-    {
-        if (clazz == null)
-        {
-            return;
-        }
-        int changed = 0;
-        for (final Field field : clazz.getDeclaredFields())
-        {
-            if (!java.lang.reflect.Modifier.isStatic(field.getModifiers()) || field.getType() != SurfaceState.class)
-            {
-                continue;
-            }
-            final String name = field.getName();
-            if (name.endsWith("SANDSTONE") != stone)
-            {
-                continue;
-            }
-            // 只替换纯沙状态；SAND_AND_GRAVEL 等混合状态保留 TFE 原实现，
-            // 否则沙滩/河床的砾石会被换成纯沙（表现为沙化）。
-            if (!stone && (!name.contains("SAND") || name.contains("GRAVEL")))
-            {
-                continue;
-            }
-            final SurfaceState state = stone ? SandSurfaceStates::sandstoneState : SandSurfaceStates::sandState;
-            if (writeStatic(clazz, name, state))
-            {
-                changed++;
-            }
         }
     }
 
