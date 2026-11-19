@@ -1,7 +1,0 @@
-{
-  "type": "tfc:landslide",
-  "ingredient": [
-    "tfcflorae:wood/fallen_leaves/common_oak"
-  ],
-  "result": "tfcflorae:wood/fallen_leaves/common_oak"
-}

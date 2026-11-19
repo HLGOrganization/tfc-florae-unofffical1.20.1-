@@ -7,8 +7,7 @@
   ],
   "textures": {
     "web_hanging_treasure": "tfcflorae:block/spider_cave/web_hanging_treasure",
-    "web_layer_bottom": "tfcflorae:block/spider_cave/web_layer_bottom",
-    "particle": "tfcflorae:block/wood/planks/common_oak"
+    "web_layer_bottom": "tfcflorae:block/spider_cave/web_layer_bottom"
   },
   "elements": [
     {
