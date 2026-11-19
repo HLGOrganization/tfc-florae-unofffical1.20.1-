@@ -13,12 +13,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import tfcflorae.world.feature.tree.BambooLeavesDecorator;
 import tfcflorae.world.feature.tree.TemplateTreeFeature;
-import tfcflorae.world.feature.tree.joshua.JoshuaTreeFeature;
 
 /**
  * TFC Florae 的 worldgen 注册表。
  * <p>
- * 树木相关注册：{@code joshua_tree}（约书亚树，自定义地物）、{@code template_tree}（模板树）、
+ * 树木相关注册：{@code template_tree}（模板树）、
  * {@code bamboo_leaves}（竹叶装饰器）。普通树木仍然只用 TFC 的 {@code tfc:random_tree}，
  * 形状来自 data/tfcflorae/structures 下的结构模板。
  */
@@ -33,8 +32,6 @@ public final class TFCFFeatures {
         "bamboo_leaves", () -> new TreeDecoratorType<>(BambooLeavesDecorator.CODEC)
     );
 
-    public static final RegistryObject<JoshuaTreeFeature> JOSHUA_TREE =
-        register("joshua_tree", JoshuaTreeFeature::new, JoshuaTreeFeature.CODEC);
 
     public static final RegistryObject<TemplateTreeFeature> TEMPLATE_TREE =
         register("template_tree", TemplateTreeFeature::new, RandomTreeConfig.CODEC);

@@ -10,7 +10,6 @@ public enum TFCFFood {
    GLOW_BERRY(false, true),
    HAWTHORN(false, true),
    JABUTICABA(false, true),
-   JOSHUA_FRUIT(false, false),
    JUNIPER(false, true),
    MEDLAR(false, false),
    MULBERRY(false, true),

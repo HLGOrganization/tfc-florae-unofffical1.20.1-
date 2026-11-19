@@ -244,8 +244,6 @@ public class ClientEventHandler {
       TFCFBlocks.TFCSOIL.get(TFCFSoil.MYCELIUM_DIRT).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.ROOTED_DIRT).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
       TFCFBlocks.TFCFSOIL.get(TFCFSoil.MYCELIUM_DIRT).values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutout));
-      TFCFBlocks.JOSHUA_TRUNK.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
-      TFCFBlocks.JOSHUA_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
       TFCFBlocks.WOODS_SEASONAL_LEAVES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
       TFCFBlocks.ROOT_SPIKES.values().forEach(reg -> ItemBlockRenderTypes.setRenderLayer((Block)reg.get(), cutoutMipped));
       TFCFBlocks.PLANTS.forEach((key, reg) -> {
@@ -473,8 +471,6 @@ public class ClientEventHandler {
          );
       TFCFBlocks.LEAVES_ONLY
          .forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, new Block[]{(Block)reg.get(), (Block)reg.get()}));
-      TFCFBlocks.JOSHUA_LEAVES
-         .forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, new Block[]{(Block)reg.get(), (Block)reg.get()}));
       TFCFBlocks.WOODS_SEASONAL_LEAVES
          .forEach((wood, reg) -> registry.register(wood.isConifer() ? foliageColor : seasonalFoliageColor, new Block[]{(Block)reg.get(), (Block)reg.get()}));
       TFCFBlocks.PLANTS
@@ -523,7 +519,6 @@ public class ClientEventHandler {
          }
       });
       TFCFBlocks.LEAVES_ONLY.forEach((key, value) -> registry.register(foliageColor, new ItemLike[]{(ItemLike)value.get(), (ItemLike)value.get()}));
-      TFCFBlocks.JOSHUA_LEAVES.forEach((key, value) -> registry.register(foliageColor, new ItemLike[]{(ItemLike)value.get(), (ItemLike)value.get()}));
       TFCFBlocks.WOODS_SEASONAL_LEAVES.forEach((key, value) -> registry.register(foliageColor, new ItemLike[]{(ItemLike)value.get(), (ItemLike)value.get()}));
       TFCFBlocks.PLANTS.forEach((plant, reg) -> {
          if (plant.isItemTinted()) {

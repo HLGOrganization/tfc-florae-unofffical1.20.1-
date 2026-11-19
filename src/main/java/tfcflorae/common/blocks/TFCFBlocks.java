@@ -116,8 +116,6 @@ import tfcflorae.common.blocks.spidercave.WebbedChestBlock;
 import tfcflorae.common.blocks.wood.BambooLogBlock;
 import tfcflorae.common.blocks.wood.ChiseledBookshelfBlock;
 import tfcflorae.common.blocks.wood.TFCFFruitingLogBlock;
-import tfcflorae.common.blocks.wood.TFCFJoshuaLeavesBlock;
-import tfcflorae.common.blocks.wood.TFCFJoshuaTrunkBlock;
 import tfcflorae.common.blocks.wood.TFCFLeavesBlock;
 import tfcflorae.common.blocks.wood.TFCFLeavesBlockExt;
 import tfcflorae.common.blocks.wood.TFCFMangroveLeavesBlock;
@@ -835,8 +833,6 @@ public final class TFCFBlocks {
    public static final Map<TFCFWood, Map<Variant, RegistryObject<Block>>> TFC_MUDDY_MANGROVE_ROOTS = TFCmangroveRootsMuddyMapper(TFCFWood.class);
    public static final Map<TFCFWood, Map<TFCFSoil.TFCFVariant, RegistryObject<Block>>> TFCF_MUDDY_MANGROVE_ROOTS = TFCFmangroveRootsMuddyMapper(TFCFWood.class);
    public static final Map<TFCFWood, RegistryObject<Block>> ROOT_SPIKES = woodSpikeMapper(TFCFWood.class);
-   public static final Map<TFCFWood, RegistryObject<Block>> JOSHUA_TRUNK = joshuaTrunkMapper(TFCFWood.class);
-   public static final Map<TFCFWood, RegistryObject<Block>> JOSHUA_LEAVES = joshuaLeavesMapper(TFCFWood.class);
    // ---- TFC 3.2 的「果树」（fruit tree）----
    // TFC 的 FruitBlocks.Tree 是封闭枚举，附属无法扩展；Firmalife 的可可树是直接实例化
    // TFC 的 FruitTree*Block 再自己注册一组方块实现的，这里照做。
@@ -1972,8 +1968,11 @@ public final class TFCFBlocks {
       Map<Wood, RegistryObject<Block>> Map = new HashMap<>();
 
       for (Wood wood : enumClass.getEnumConstants()) {
-         // 红树（TFC 木材）没有 log_wall / wood_wall 的 blockstate 与模型，注册出来是紫黑方块
-         if (wood == Wood.MANGROVE) {
+         // 老的 TFC 木材里只有这两个没有 log_wall / wood_wall 的 blockstate 与模型，注册出来是紫黑方块：
+         //  - MANGROVE：TFC 自身用 roots 系列，没有墙；
+         //  - WHITE_CEDAR：本模组已彻底删除 white_cedar 这种木材，必须一并跳过，
+         //    否则 tfcflorae:wood/{log_wall,wood_wall}/white_cedar 会以"已删木材"的身份残留。
+         if (wood == Wood.MANGROVE || wood == Wood.WHITE_CEDAR) {
             continue;
          }
          Map.put(
@@ -2168,84 +2167,6 @@ public final class TFCFBlocks {
             }
 
             Map.put(wood, soilVariantMap);
-         }
-      }
-
-      return Map;
-   }
-
-   private static Map<TFCFWood, RegistryObject<Block>> joshuaTrunkMapper(Class<TFCFWood> enumClass) {
-      Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
-
-      for (TFCFWood wood : enumClass.getEnumConstants()) {
-         if (wood.isJoshua()) {
-            BiFunction<Block, Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
-            Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Properties());
-            Map.put(
-               wood,
-               register(
-                  ("wood/trunks/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                  () -> TFCFJoshuaTrunkBlock.create(
-                        wood,
-                        net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(MapColor.WOOD)
-                           .randomTicks()
-                           .noOcclusion()
-                           .strength(6.0F)
-                           .sound(SoundType.WOOD)
-                           .requiresCorrectToolForDrops()
-                           .hasPostProcess(TFCFBlocks::always),
-                        ExtendedProperties.of(
-                              net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(MapColor.WOOD)
-                                 .randomTicks()
-                                 .noOcclusion()
-                                 .strength(6.0F)
-                                 .sound(SoundType.WOOD)
-                                 .requiresCorrectToolForDrops()
-                                 .hasPostProcess(TFCFBlocks::always)
-                           )
-                           .flammableLikeLogs(),
-                        TFCBlockStateProperties.FRESH_WATER
-                     ),
-                  blockItem
-               )
-            );
-         }
-      }
-
-      return Map;
-   }
-
-   private static Map<TFCFWood, RegistryObject<Block>> joshuaLeavesMapper(Class<TFCFWood> enumClass) {
-      Map<TFCFWood, RegistryObject<Block>> Map = new HashMap<>();
-
-      for (TFCFWood wood : enumClass.getEnumConstants()) {
-         if (wood.isJoshua()) {
-            BiFunction<Block, Properties, ? extends BlockItem> blockItemFactory = BlockItem::new;
-            Function<Block, BlockItem> blockItem = block -> blockItemFactory.apply(block, new Properties());
-            Map.put(
-               wood,
-               register(
-                  ("wood/leaves_head/" + wood.getSerializedName()).toLowerCase(Locale.ROOT),
-                  () -> TFCFJoshuaLeavesBlock.create(
-                        wood,
-                        ExtendedProperties.of(
-                              net.minecraft.world.level.block.state.BlockBehaviour.Properties.of().mapColor(MapColor.PLANT)
-                                 .strength(0.5F)
-                                 .sound(SoundType.GRASS)
-                                 .randomTicks()
-                                 .noOcclusion()
-                                 .isViewBlocking(TFCFBlocks::never)
-                                 .hasPostProcess(TFCFBlocks::always)
-                           )
-                           .randomTicks()
-                           .flammableLikeLeaves(),
-                        wood.getProductItem(),
-                        wood.getStages(),
-                        TFCFClimateRanges.LARGE_FRUIT_TREES.get(wood)
-                     ),
-                  blockItem
-               )
-            );
          }
       }
 

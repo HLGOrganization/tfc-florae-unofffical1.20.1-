@@ -26,12 +26,11 @@ import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
 public enum TFCFWood implements RegistryWood {
    
-   ALDER(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   ANGELIM(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+   ALDER(false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   ANGELIM(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    ARGYLE_EUCALYPTUS(
       false,
       true,
-      false,
       false,
       false,
       MapColor.COLOR_GREEN,
@@ -56,18 +55,17 @@ public enum TFCFWood implements RegistryWood {
       new Color(255, 255, 239).getRGB()
    ),
    
-   BAMBOO(false, false, false, false, false, MapColor.COLOR_LIGHT_GREEN, MapColor.COLOR_LIGHT_GREEN, 10, 9),
+   BAMBOO(false, false, false, false, MapColor.COLOR_LIGHT_GREEN, MapColor.COLOR_LIGHT_GREEN, 10, 9),
    
    
    
-   COCOBOLO(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+   COCOBOLO(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    
    
-   GHAF(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   GINKGO(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   GREENHEART(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+   GHAF(false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   GINKGO(false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   GREENHEART(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    HAWTHORN(
-      false,
       false,
       false,
       false,
@@ -94,11 +92,10 @@ public enum TFCFWood implements RegistryWood {
       new Color(245, 232, 241).getRGB()
    ),
    
-   IROKO(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+   IROKO(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    JABUTICABEIRA(
       false,
       true,
-      false,
       false,
       true,
       MapColor.COLOR_GREEN,
@@ -128,7 +125,6 @@ public enum TFCFWood implements RegistryWood {
       true,
       false,
       false,
-      false,
       MapColor.COLOR_GREEN,
       MapColor.COLOR_GREEN,
       10,
@@ -153,9 +149,8 @@ public enum TFCFWood implements RegistryWood {
    
    
    
-   LOGWOOD(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   LOGWOOD(false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    MACLURA(
-      false,
       false,
       false,
       false,
@@ -186,7 +181,6 @@ public enum TFCFWood implements RegistryWood {
       false,
       false,
       false,
-      false,
       MapColor.COLOR_GREEN,
       MapColor.COLOR_GREEN,
       10,
@@ -208,9 +202,8 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(241, 190, 61).getRGB()
    ),
-   MARBLEWOOD(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+   MARBLEWOOD(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    MEDLAR(
-      false,
       false,
       false,
       false,
@@ -236,10 +229,9 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(214, 232, 232).getRGB()
    ),
-   MESSMATE(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   MESSMATE(false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    
    MULBERRY(
-      false,
       false,
       false,
       false,
@@ -271,7 +263,6 @@ public enum TFCFWood implements RegistryWood {
       false,
       false,
       false,
-      false,
       MapColor.COLOR_GREEN,
       MapColor.COLOR_GREEN,
       10,
@@ -298,7 +289,6 @@ public enum TFCFWood implements RegistryWood {
       false,
       false,
       false,
-      false,
       MapColor.COLOR_GREEN,
       MapColor.COLOR_GREEN,
       10,
@@ -321,11 +311,10 @@ public enum TFCFWood implements RegistryWood {
       new Color(238, 232, 174).getRGB()
    ),
    
-   POPLAR(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   PURPLEHEART(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+   POPLAR(false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   PURPLEHEART(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    
    PURPLE_JACARANDA(
-      false,
       false,
       false,
       false,
@@ -356,7 +345,6 @@ public enum TFCFWood implements RegistryWood {
       false,
       false,
       false,
-      false,
       MapColor.COLOR_GREEN,
       MapColor.COLOR_GREEN,
       10,
@@ -383,7 +371,6 @@ public enum TFCFWood implements RegistryWood {
       true,
       false,
       false,
-      false,
       MapColor.COLOR_GREEN,
       MapColor.COLOR_GREEN,
       10,
@@ -405,11 +392,10 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(255, 255, 237).getRGB()
    ),
-   RED_CYPRESS(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
+   RED_CYPRESS(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
    
    
    SORB(
-      false,
       false,
       false,
       false,
@@ -441,7 +427,6 @@ public enum TFCFWood implements RegistryWood {
       false,
       false,
       false,
-      false,
       MapColor.COLOR_GREEN,
       MapColor.COLOR_GREEN,
       10,
@@ -463,11 +448,10 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(235, 114, 179).getRGB()
    ),
-   WENGE(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+   WENGE(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    
    
    WHITE_JACARANDA(
-      false,
       false,
       false,
       false,
@@ -493,11 +477,10 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(241, 235, 238).getRGB()
    ),
-   YELLOW_MERANTI(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+   YELLOW_MERANTI(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    YEW(
       false,
       true,
-      false,
       false,
       false,
       MapColor.COLOR_GREEN,
@@ -521,14 +504,13 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(244, 205, 205).getRGB()
    ),
-   ZEBRAWOOD(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29);
+   ZEBRAWOOD(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29);
 
    public static final TFCFWood[] VALUES = values();
    public final String serializedName = this.name().toLowerCase(Locale.ROOT);
    public boolean hasLeavesOnly = false;
    public final boolean conifer;
    public final boolean mangrove;
-   public final boolean joshua;
    public final boolean fruitingLog;
    public final MapColor woodColor;
    public final MapColor barkColor;
@@ -545,14 +527,13 @@ public enum TFCFWood implements RegistryWood {
       boolean hasLeavesOnly,
       boolean conifer,
       boolean mangrove,
-      boolean joshua,
       boolean fruitingLog,
       MapColor woodColor,
       MapColor barkColor,
       int maxDecayDistance,
       int daysToGrow
    ) {
-      this(conifer, mangrove, joshua, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow);
+      this(conifer, mangrove, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow);
       this.hasLeavesOnly = hasLeavesOnly;
       this.floweringLeavesColor = -1;
       this.isPalmTree = false;
@@ -562,7 +543,6 @@ public enum TFCFWood implements RegistryWood {
       boolean hasLeavesOnly,
       boolean conifer,
       boolean mangrove,
-      boolean joshua,
       boolean fruitingLog,
       MapColor woodColor,
       MapColor barkColor,
@@ -572,7 +552,7 @@ public enum TFCFWood implements RegistryWood {
       Lifecycle[] stages,
       int floweringLeavesColor
    ) {
-      this(conifer, mangrove, joshua, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow, productItem, stages, floweringLeavesColor);
+      this(conifer, mangrove, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow, productItem, stages, floweringLeavesColor);
       this.floweringLeavesColor = floweringLeavesColor;
       this.hasLeavesOnly = hasLeavesOnly;
       this.isPalmTree = false;
@@ -581,7 +561,6 @@ public enum TFCFWood implements RegistryWood {
    private TFCFWood(
       boolean conifer,
       boolean mangrove,
-      boolean joshua,
       boolean fruitingLog,
       MapColor woodColor,
       MapColor barkColor,
@@ -591,7 +570,7 @@ public enum TFCFWood implements RegistryWood {
       Lifecycle[] stages,
       int floweringLeavesColor
    ) {
-      this(conifer, mangrove, joshua, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow);
+      this(conifer, mangrove, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow);
       this.hasLeavesOnly = false;
       this.productItem = productItem;
       this.stages = stages;
@@ -603,7 +582,6 @@ public enum TFCFWood implements RegistryWood {
    private TFCFWood(
       boolean conifer,
       boolean mangrove,
-      boolean joshua,
       boolean fruitingLog,
       MapColor woodColor,
       MapColor barkColor,
@@ -614,7 +592,7 @@ public enum TFCFWood implements RegistryWood {
       int floweringLeavesColor,
       boolean isPalmTree
    ) {
-      this(conifer, mangrove, joshua, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow);
+      this(conifer, mangrove, fruitingLog, woodColor, barkColor, maxDecayDistance, daysToGrow);
       this.hasLeavesOnly = false;
       this.productItem = productItem;
       this.stages = stages;
@@ -627,7 +605,6 @@ public enum TFCFWood implements RegistryWood {
    private TFCFWood(
       boolean conifer,
       boolean mangrove,
-      boolean joshua,
       boolean fruitingLog,
       MapColor woodColor,
       MapColor barkColor,
@@ -636,7 +613,6 @@ public enum TFCFWood implements RegistryWood {
    ) {
       this.conifer = conifer;
       this.mangrove = mangrove;
-      this.joshua = joshua;
       this.fruitingLog = fruitingLog;
       this.woodColor = woodColor;
       this.barkColor = barkColor;
@@ -683,9 +659,6 @@ public enum TFCFWood implements RegistryWood {
       return this.mangrove;
    }
 
-   public boolean isJoshua() {
-      return this.joshua;
-   }
 
    public boolean hasFruitingLog() {
       return this.fruitingLog;
