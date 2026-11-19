@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "tfcflorae:wood/log/locust",
-    "tfcflorae:wood/stripped_log/locust",
-    "tfcflorae:wood/stripped_wood/locust",
-    "tfcflorae:wood/wood/locust"
-  ]
-}

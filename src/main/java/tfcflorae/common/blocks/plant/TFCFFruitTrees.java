@@ -38,7 +38,7 @@ import tfcflorae.util.climate.TFCFClimateRanges;
  * 且 {@code createTree} 用的就是 TFC 自己的 {@code TickCounterBlockEntity}），
  * 只把「树种」这一维换成 {@link TFCFWood}。
  *
- * <p>杜松（juniper / red_cedar / white_cedar）不在此列：它们是针叶树，树叶不是阔叶形态，
+ * <p>杜松（juniper / red_cedar）不在此列：它们是针叶树，树叶不是阔叶形态，
  * 套果树叶子的四个生命周期贴图不合适，用户明确要求跳过。
  */
 public final class TFCFFruitTrees
@@ -48,7 +48,6 @@ public final class TFCFFruitTrees
      * <p>
      * <b>11 种</b>。已按用户要求移除三种：
      * <ul>
-     *   <li>{@code JOSHUA}（短叶丝兰）—— 只删果树形态，保留木材形态，所以它仍留在 {@link TFCFWood} 里；</li>
      *   <li>{@code SLOE}（黑刺李）、{@code ROWAN}（花楸）—— 连同 {@link TFCFWood} 常量一起彻底删除。</li>
      * </ul>
      * 剩下这 11 种反过来：<b>只有果树形态</b>，不注册 {@code wood/*} 木材方块

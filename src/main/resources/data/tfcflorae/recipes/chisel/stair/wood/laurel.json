@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/laurel",
-  "result": "tfcflorae:wood/stairs/laurel",
-  "mode": "stair"
-}

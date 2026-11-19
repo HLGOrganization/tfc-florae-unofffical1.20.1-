@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/fever",
-  "result": "tfcflorae:wood/stairs/fever",
-  "mode": "stair"
-}

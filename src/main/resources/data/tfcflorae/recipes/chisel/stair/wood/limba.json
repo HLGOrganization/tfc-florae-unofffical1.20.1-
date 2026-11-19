@@ -1,6 +1,0 @@
-{
-  "type": "tfc:chisel",
-  "ingredient": "tfcflorae:wood/planks/limba",
-  "result": "tfcflorae:wood/stairs/limba",
-  "mode": "stair"
-}

@@ -25,7 +25,7 @@ import tfcflorae.util.TFCFHelpers;
 import net.dries007.tfc.world.feature.tree.TFCTreeGrower;
 
 public enum TFCFWood implements RegistryWood {
-   AFRICAN_PADAUK(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+   
    ALDER(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    ANGELIM(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    ARGYLE_EUCALYPTUS(
@@ -55,14 +55,14 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(255, 255, 239).getRGB()
    ),
-   BALD_CYPRESS(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
+   
    BAMBOO(false, false, false, false, false, MapColor.COLOR_LIGHT_GREEN, MapColor.COLOR_LIGHT_GREEN, 10, 9),
-   BLACK_WILLOW(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   BUTTERNUT(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   BUXUS(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   
+   
+   
    COCOBOLO(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    COMMON_OAK(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   FEVER(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   
    GHAF(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    GINKGO(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    GREENHEART(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
@@ -93,7 +93,7 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(245, 232, 241).getRGB()
    ),
-   HORNBEAM(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   
    IROKO(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    JABUTICABEIRA(
       false,
@@ -122,33 +122,7 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(255, 213, 213).getRGB()
    ),
-   JOSHUA(
-      false,
-      true,
-      false,
-      true,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      8,
-      (Supplier<? extends Item>)TFCFItems.FOOD.get(TFCFFood.JOSHUA_FRUIT),
-      new Lifecycle[]{
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY
-      },
-      new Color(237, 249, 238).getRGB()
-   ),
+   
    JUNIPER(
       false,
       true,
@@ -176,9 +150,9 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(255, 255, 249).getRGB()
    ),
-   LAUREL(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   LIMBA(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   LOCUST(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   
+   
+   
    LOGWOOD(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    MACLURA(
       false,
@@ -263,7 +237,7 @@ public enum TFCFWood implements RegistryWood {
       new Color(214, 232, 232).getRGB()
    ),
    MESSMATE(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   MOUNTAIN_ASH(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
+   
    MULBERRY(
       false,
       false,
@@ -291,7 +265,7 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(255, 162, 221).getRGB()
    ),
-   NORDMANN_FIR(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   
    PEAR(
       false,
       false,
@@ -346,62 +320,10 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(238, 232, 174).getRGB()
    ),
-   PINK_CHERRY_BLOSSOM(
-      false,
-      false,
-      false,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      (Supplier<? extends Item>)TFCItems.FOOD.get(Food.CHERRY),
-      new Lifecycle[]{
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(252, 203, 231).getRGB()
-   ),
+   
    POPLAR(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
    PURPLEHEART(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
-   PURPLE_IPE(
-      false,
-      false,
-      false,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      null,
-      new Lifecycle[]{
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.HEALTHY,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(135, 88, 216).getRGB()
-   ),
+   
    PURPLE_JACARANDA(
       false,
       false,
@@ -484,8 +406,8 @@ public enum TFCFWood implements RegistryWood {
       new Color(255, 255, 237).getRGB()
    ),
    RED_CYPRESS(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
-   RED_ELM(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   RUBBER_FIG(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   
+   
    SORB(
       false,
       false,
@@ -513,7 +435,7 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(255, 238, 158).getRGB()
    ),
-   SWEETGUM(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
+   
    SYZYGIUM(
       false,
       false,
@@ -542,34 +464,8 @@ public enum TFCFWood implements RegistryWood {
       new Color(235, 114, 179).getRGB()
    ),
    WENGE(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
-   WHITE_ELM(false, false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   WHITE_IPE(
-      false,
-      false,
-      false,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      null,
-      new Lifecycle[]{
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.HEALTHY,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(236, 214, 222).getRGB()
-   ),
+   
+   
    WHITE_JACARANDA(
       false,
       false,
@@ -625,34 +521,7 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(244, 205, 205).getRGB()
    ),
-   ZEBRAWOOD(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
-   WHITE_CEDAR(
-      true,
-      true,
-      false,
-      false,
-      false,
-      MapColor.TERRACOTTA_WHITE,
-      MapColor.TERRACOTTA_LIGHT_GRAY,
-      10,
-      7,
-      (Supplier<? extends Item>)TFCFItems.FOOD.get(TFCFFood.JUNIPER),
-      new Lifecycle[]{
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(255, 255, 249).getRGB()
-   );
+   ZEBRAWOOD(false, true, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29);
 
    public static final TFCFWood[] VALUES = values();
    public final String serializedName = this.name().toLowerCase(Locale.ROOT);
