@@ -1,0 +1,20 @@
+{
+  "type": "tfc:forest_entry",
+  "config": {
+    "climate": {
+      "min_temperature": -20,
+      "max_temperature": 50,
+      "min_rainfall": 0,
+      "max_rainfall": 500
+    },
+    "groundcover": [
+      {
+        "block": "tfcflorae:wood/twig/charred_tree"
+      }
+    ],
+    "normal_tree": "tfcflorae:tree/charred_tree",
+    "dead_tree": "tfcflorae:tree/charred_tree_large",
+    "old_growth_tree": "tfcflorae:tree/charred_tree_large",
+    "fallen_log": "tfcflorae:wood/log/charred_tree"
+  }
+}

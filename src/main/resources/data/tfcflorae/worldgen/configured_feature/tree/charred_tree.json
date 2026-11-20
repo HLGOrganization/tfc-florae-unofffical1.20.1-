@@ -1,0 +1,43 @@
+{
+  "type": "tfc:random_tree",
+  "config": {
+    "structures": [
+      "tfcflorae:charred_tree/1",
+      "tfcflorae:charred_tree/2",
+      "tfcflorae:charred_tree/3",
+      "tfcflorae:charred_tree/4",
+      "tfcflorae:charred_tree/5",
+      "tfcflorae:charred_tree/6",
+      "tfcflorae:charred_tree/7",
+      "tfcflorae:charred_tree/8",
+      "tfcflorae:charred_tree/9",
+      "tfcflorae:charred_tree/10",
+      "tfcflorae:charred_tree/11",
+      "tfcflorae:charred_tree/12",
+      "tfcflorae:charred_tree/13",
+      "tfcflorae:charred_tree/14",
+      "tfcflorae:charred_tree/15",
+      "tfcflorae:charred_tree/16",
+      "tfcflorae:charred_tree/17",
+      "tfcflorae:charred_tree/18",
+      "tfcflorae:charred_tree/19",
+      "tfcflorae:charred_tree/20",
+      "tfcflorae:charred_tree/21",
+      "tfcflorae:charred_tree/22",
+      "tfcflorae:charred_tree/23",
+      "tfcflorae:charred_tree/24",
+      "tfcflorae:charred_tree/25",
+      "tfcflorae:charred_tree/26",
+      "tfcflorae:charred_tree/27",
+      "tfcflorae:charred_tree/28",
+      "tfcflorae:charred_tree/29",
+      "tfcflorae:charred_tree/30",
+      "tfcflorae:charred_tree/31"
+    ],
+    "radius": 1,
+    "placement": {
+      "width": 1,
+      "height": 5
+    }
+  }
+}

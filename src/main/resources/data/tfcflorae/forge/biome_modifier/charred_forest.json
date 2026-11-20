@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#tfcflorae:has_charred_forest",
+  "features": "tfcflorae:charred_forest",
+  "step": "vegetal_decoration"
+}
