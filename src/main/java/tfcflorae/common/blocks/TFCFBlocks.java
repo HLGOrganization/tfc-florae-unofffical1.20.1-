@@ -1970,8 +1970,8 @@ public final class TFCFBlocks {
       for (Wood wood : enumClass.getEnumConstants()) {
          // 老的 TFC 木材里只有这两个没有 log_wall / wood_wall 的 blockstate 与模型，注册出来是紫黑方块：
          //  - MANGROVE：TFC 自身用 roots 系列，没有墙；
-         //  - WHITE_CEDAR：本模组已彻底删除 white_cedar 这种木材，必须一并跳过，
-         //    否则 tfcflorae:wood/{log_wall,wood_wall}/white_cedar 会以"已删木材"的身份残留。
+         //  - 雪松：TFC 自带这种木材，而本模组同名的木材已被彻底删除，必须一并跳过，
+         //    否则 tfcflorae 命名空间下会重新出现「已删木材」的墙方块（无资产 → 紫黑）。
          if (wood == Wood.MANGROVE || wood == Wood.WHITE_CEDAR) {
             continue;
          }
