@@ -18,6 +18,7 @@ import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
+import net.minecraftforge.common.Tags.Blocks;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -141,12 +142,13 @@ public abstract class FungiEpiphyteCeilingBlock extends PlantBlock {
    }
 
    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-      // 只允许贴在原木系方块上：TFC 自己的 EpiphytePlantBlock 就是判 #minecraft:logs。
-      // 原判据还允许 #forge:stone / 草方块 / 灌木 / 蘑菇可生长方块，
-      // 于是层孔菌会「长在石头旁边」。BlockTags.LOGS 已涵盖 tfc / afc / tfcflorae 的
-      // wood/log、wood/wood、stripped_log、stripped_wood（与轴朝向无关）。
+      // 本类只有一个使用者：lions_mane（垂枝菌）。它是「挂」在方块下表面的，需要比其它附生菌宽松：
+      // 既接受原木系（#minecraft:logs，涵盖 tfc / afc / tfcflorae 的 log/wood/stripped_*），
+      // 也接受石质方块（#forge:stone，用于洞顶 / 石质天花板），否则只剩「原木正下方」这一种极稀少的情形。
+      // 其余附生菌（FungiEpiphyteBlock / FungiEpiphyteSolidBlock）仍严格只判 #minecraft:logs。
       final BlockState attachedState = level.getBlockState(pos.relative(state.getValue(FACING).getOpposite()));
-      return Helpers.isBlock(attachedState, BlockTags.LOGS) && level.getRawBrightness(pos, 0) < 14;
+      return (Helpers.isBlock(attachedState, BlockTags.LOGS) || Helpers.isBlock(attachedState, Blocks.STONE))
+         && level.getRawBrightness(pos, 0) < 14;
    }
 
    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
