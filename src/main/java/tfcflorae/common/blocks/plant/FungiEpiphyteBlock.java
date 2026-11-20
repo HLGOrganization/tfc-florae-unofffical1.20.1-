@@ -22,7 +22,6 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.common.Tags.Blocks;
 import tfcflorae.client.particle.TFCFParticles;
 
 public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock {
@@ -110,15 +109,11 @@ public abstract class FungiEpiphyteBlock extends EpiphytePlantBlock {
    }
 
    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-      BlockState attachedState = level.getBlockState(pos.relative(((Direction)state.getValue(FACING)).getOpposite()));
-      return (
-            Helpers.isBlock(attachedState, Blocks.STONE)
-               || Helpers.isBlock(attachedState, BlockTags.LOGS)
-               || attachedState.is(BlockTags.MUSHROOM_GROW_BLOCK)
-               || Helpers.isBlock(attachedState.getBlock(), net.dries007.tfc.common.TFCTags.Blocks.SEA_BUSH_PLANTABLE_ON)
-               || Helpers.isBlock(attachedState.getBlock(), net.dries007.tfc.common.TFCTags.Blocks.GRASS_PLANTABLE_ON)
-               || Helpers.isBlock(attachedState.getBlock(), net.dries007.tfc.common.TFCTags.Blocks.BUSH_PLANTABLE_ON)
-         )
-         && level.getRawBrightness(pos, 0) < 14;
+      // 只允许贴在原木系方块上：TFC 自己的 EpiphytePlantBlock 就是判 #minecraft:logs。
+      // 原判据还允许 #forge:stone / 草方块 / 灌木 / 蘑菇可生长方块，
+      // 于是层孔菌会「长在石头旁边」。BlockTags.LOGS 已涵盖 tfc / afc / tfcflorae 的
+      // wood/log、wood/wood、stripped_log、stripped_wood（与轴朝向无关）。
+      final BlockState attachedState = level.getBlockState(pos.relative(state.getValue(FACING).getOpposite()));
+      return Helpers.isBlock(attachedState, BlockTags.LOGS) && level.getRawBrightness(pos, 0) < 14;
    }
 }
