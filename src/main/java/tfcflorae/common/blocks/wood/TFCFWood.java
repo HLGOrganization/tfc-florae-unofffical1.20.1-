@@ -311,8 +311,7 @@ public enum TFCFWood implements RegistryWood {
       new Color(238, 232, 174).getRGB()
    ),
    
-   POPLAR(false, false, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 19),
-   PURPLEHEART(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
+PURPLEHEART(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 29),
    
    PURPLE_JACARANDA(
       false,
@@ -366,33 +365,7 @@ public enum TFCFWood implements RegistryWood {
       },
       new Color(249, 82, 38).getRGB()
    ),
-   RED_CEDAR(
-      false,
-      true,
-      false,
-      false,
-      MapColor.COLOR_GREEN,
-      MapColor.COLOR_GREEN,
-      10,
-      19,
-      (Supplier<? extends Item>)TFCFItems.FOOD.get(TFCFFood.JUNIPER),
-      new Lifecycle[]{
-         Lifecycle.DORMANT,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.HEALTHY,
-         Lifecycle.FLOWERING,
-         Lifecycle.FLOWERING,
-         Lifecycle.FRUITING,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT,
-         Lifecycle.DORMANT
-      },
-      new Color(255, 255, 237).getRGB()
-   ),
-   RED_CYPRESS(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
+RED_CYPRESS(false, true, false, false, MapColor.COLOR_GREEN, MapColor.COLOR_GREEN, 10, 17),
    
    
    SORB(

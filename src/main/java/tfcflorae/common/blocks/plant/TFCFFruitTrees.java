@@ -38,7 +38,7 @@ import tfcflorae.util.climate.TFCFClimateRanges;
  * 且 {@code createTree} 用的就是 TFC 自己的 {@code TickCounterBlockEntity}），
  * 只把「树种」这一维换成 {@link TFCFWood}。
  *
- * <p>杜松（juniper / red_cedar）不在此列：它们是针叶树，树叶不是阔叶形态，
+ * <p>杜松（juniper）在本地：有树干但没有树叶，只做落叶与结果态。
  * 套果树叶子的四个生命周期贴图不合适，用户明确要求跳过。
  */
 public final class TFCFFruitTrees
