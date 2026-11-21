@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:ceramic/earthenware/unfired/mold/axe_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/chisel_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/hammer_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/hoe_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/ingot",
+    "tfcflorae:ceramic/earthenware/unfired/mold/javelin_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/knife_blade",
+    "tfcflorae:ceramic/earthenware/unfired/mold/mace_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/pickaxe_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/propick_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/saw_blade",
+    "tfcflorae:ceramic/earthenware/unfired/mold/scythe_blade",
+    "tfcflorae:ceramic/earthenware/unfired/mold/shovel_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/sword_blade",
+    "tfcflorae:ceramic/stoneware/unfired/mold/axe_head",
+    "tfcflorae:ceramic/stoneware/unfired/mold/chisel_head",
+    "tfcflorae:ceramic/stoneware/unfired/mold/hammer_head",
+    "tfcflorae:ceramic/stoneware/unfired/mold/hoe_head",
+    "tfcflorae:ceramic/stoneware/unfired/mold/ingot",
+    "tfcflorae:ceramic/stoneware/unfired/mold/javelin_head",
+    "tfcflorae:ceramic/stoneware/unfired/mold/knife_blade",
+    "tfcflorae:ceramic/stoneware/unfired/mold/mace_head",
+    "tfcflorae:ceramic/stoneware/unfired/mold/pickaxe_head",
+    "tfcflorae:ceramic/stoneware/unfired/mold/propick_head",
+    "tfcflorae:ceramic/stoneware/unfired/mold/saw_blade",
+    "tfcflorae:ceramic/stoneware/unfired/mold/scythe_blade",
+    "tfcflorae:ceramic/stoneware/unfired/mold/shovel_head",
+    "tfcflorae:ceramic/stoneware/unfired/mold/sword_blade"
+  ]
+}

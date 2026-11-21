@@ -34,6 +34,9 @@
     "tfcflorae:plant/quince_sapling",
     "tfcflorae:plant/sorb_sapling",
     "tfcflorae:plant/syzygium_sapling",
-    "tfcflorae:plant/yew_sapling"
+    "tfcflorae:plant/yew_sapling",
+    "tfcflorae:wood/sapling/blue_bamboo",
+    "tfcflorae:wood/sapling/dragon_bamboo",
+    "tfcflorae:wood/sapling/red_bamboo"
   ]
 }

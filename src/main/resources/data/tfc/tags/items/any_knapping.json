@@ -18,6 +18,8 @@
     "tfcflorae:rock/mossy_loose/porphyry",
     "tfcflorae:rock/mossy_loose/red_granite",
     "tfcflorae:rock/mossy_loose/soapstone",
-    "tfcflorae:rock/mossy_loose/wackestone"
+    "tfcflorae:rock/mossy_loose/wackestone",
+    "#tfcflorae:earthenware_clay_knapping",
+    "#tfcflorae:stoneware_clay_knapping"
   ]
 }

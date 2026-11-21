@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:ceramic/earthenware/fired/large_vessel",
+    "tfcflorae:ceramic/earthenware/unfired/large_vessel",
+    "tfcflorae:ceramic/stoneware/fired/large_vessel",
+    "tfcflorae:ceramic/stoneware/unfired/large_vessel"
+  ]
+}

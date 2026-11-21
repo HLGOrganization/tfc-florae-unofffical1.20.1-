@@ -45,6 +45,16 @@
     "tfcflorae:wood/stripped_wood/wenge",
     "tfcflorae:wood/stripped_wood/white_jacaranda",
     "tfcflorae:wood/stripped_wood/yellow_meranti",
-    "tfcflorae:wood/stripped_wood/zebrawood"
+    "tfcflorae:wood/stripped_wood/zebrawood",
+    "tfcflorae:wood/log/blue_bamboo",
+    "tfcflorae:wood/log/charred_tree",
+    "tfcflorae:wood/log/dragon_bamboo",
+    "tfcflorae:wood/log/red_bamboo",
+    "tfcflorae:wood/stripped_log/blue_bamboo",
+    "tfcflorae:wood/stripped_log/charred_tree",
+    "tfcflorae:wood/stripped_log/dragon_bamboo",
+    "tfcflorae:wood/stripped_log/red_bamboo",
+    "tfcflorae:wood/wood/charred_tree",
+    "tfcflorae:wood/stripped_wood/charred_tree"
   ]
 }
