@@ -14,10 +14,10 @@
           "type": "uniform",
           "value": {
             "min_inclusive": 0,
-            "max_inclusive": 3
+            "max_inclusive": 2
           }
         },
-        "groundcover_count": 15,
+        "groundcover_count": 10,
         "has_spoiler_old_growth": true
       },
       "normal": {
@@ -25,10 +25,10 @@
           "type": "uniform",
           "value": {
             "min_inclusive": 1,
-            "max_inclusive": 4
+            "max_inclusive": 2
           }
         },
-        "groundcover_count": 20,
+        "groundcover_count": 12,
         "allows_old_growth": true
       },
       "old_growth": {
