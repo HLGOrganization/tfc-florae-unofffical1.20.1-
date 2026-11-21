@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:ceramic/earthenware/unfired/jug",
+    "tfcflorae:ceramic/earthenware/unfired/large_vessel",
+    "tfcflorae:ceramic/earthenware/unfired/mold/axe_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/chisel_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/hammer_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/hoe_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/javelin_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/knife_blade",
+    "tfcflorae:ceramic/earthenware/unfired/mold/mace_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/pickaxe_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/propick_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/saw_blade",
+    "tfcflorae:ceramic/earthenware/unfired/mold/scythe_blade",
+    "tfcflorae:ceramic/earthenware/unfired/mold/shovel_head",
+    "tfcflorae:ceramic/earthenware/unfired/mold/sword_blade",
+    "tfcflorae:ceramic/earthenware/unfired/pan",
+    "tfcflorae:ceramic/earthenware/unfired/pot",
+    "tfcflorae:ceramic/earthenware/unfired/spindle_head",
+    "tfcflorae:ceramic/earthenware/unfired/vessel"
+  ]
+}

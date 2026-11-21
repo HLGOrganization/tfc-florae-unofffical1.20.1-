@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tfcflorae:stoneware_clay_recycle_1"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/stoneware/clay",
+    "count": 1
+  }
+}

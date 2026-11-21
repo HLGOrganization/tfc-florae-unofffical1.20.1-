@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "tfcflorae:rock/anvil/boninite",
-    "tfcflorae:rock/anvil/carbonatite",
-    "tfcflorae:rock/anvil/porphyry",
-    "tfcflorae:rock/anvil/red_granite"
-  ]
-}

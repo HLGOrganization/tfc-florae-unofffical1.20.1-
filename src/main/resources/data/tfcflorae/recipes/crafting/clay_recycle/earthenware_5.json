@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "tfcflorae:earthenware_clay_recycle_5"
+    }
+  ],
+  "result": {
+    "item": "tfcflorae:ceramic/earthenware/clay",
+    "count": 5
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfcflorae:ceramic/earthenware/unfired/bowl",
+    "tfcflorae:ceramic/earthenware/unfired/flower_pot",
+    "tfcflorae:ceramic/earthenware/unfired/mold/ingot",
+    "tfcflorae:ceramic/earthenware/unfired_brick"
+  ]
+}
